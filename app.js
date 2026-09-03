@@ -1,20 +1,30 @@
-// LLM Timeline 2026 - Minimal Chronological Horizontal Timeline
+// LLM Timeline 2026 - Minimalist Chronological Horizontal Timeline
 
-let searchQuery = '';
-let activeModalId = null;
+var searchQuery = '';
+var activeModalId = null;
 
-// Initialize on DOM ready
-document.addEventListener('DOMContentLoaded', () => {
+// Initialize robustly regardless of load timing
+function initApp() {
+  if (typeof TIMELINE_DATA === 'undefined') {
+    console.error('TIMELINE_DATA is not loaded.');
+    return;
+  }
   renderTimeline();
   setupScrollInteractions();
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}
 
 // Get filtered models
 function getFilteredModels() {
   if (!searchQuery) return TIMELINE_DATA;
-  const q = searchQuery.toLowerCase();
-  return TIMELINE_DATA.filter(m => {
-    const text = [
+  var q = searchQuery.toLowerCase();
+  return TIMELINE_DATA.filter(function(m) {
+    var text = [
       m.name,
       m.company,
       m.family,
@@ -29,119 +39,102 @@ function getFilteredModels() {
 
 // Render Horizontal Timeline
 function renderTimeline() {
-  const container = document.getElementById('timeline-scroll-container');
-  if (!container) return;
+  var track = document.getElementById('timeline-track-inner');
+  if (!track) return;
 
-  const models = getFilteredModels();
+  var models = getFilteredModels();
 
   if (models.length === 0) {
-    container.innerHTML = `
-      <div class="w-full text-center py-20 text-gray-500 text-sm">
-        검색 결과와 일치하는 모델이 없습니다.
-      </div>
-    `;
+    track.innerHTML = '<div style="padding: 60px; color: #6b7280; font-size: 14px;">일치하는 검색 결과가 없습니다.</div>';
     return;
   }
 
   // Group models by Date
-  const dateGroups = {};
-  models.forEach(m => {
+  var dateGroups = {};
+  models.forEach(function(m) {
     if (!dateGroups[m.date]) {
       dateGroups[m.date] = [];
     }
     dateGroups[m.date].push(m);
   });
 
-  const dates = Object.keys(dateGroups);
+  var dates = Object.keys(dateGroups);
 
   // Build HTML
-  let html = `
-    <!-- Continuous Horizontal Line (가로줄) -->
-    <div class="timeline-axis-line"></div>
-    <div class="flex items-start gap-8 relative z-10">
-  `;
+  // Note: .timeline-axis-line spans the entire length of .timeline-track
+  var html = '<div class="timeline-axis-line"></div>';
 
-  dates.forEach(date => {
-    const groupModels = dateGroups[date];
-    const month = date.slice(0, 7);
+  dates.forEach(function(date) {
+    var groupModels = dateGroups[date];
+    var month = date.slice(0, 7);
 
-    html += `
-      <div class="date-column flex flex-col items-center flex-shrink-0 w-72" id="date-col-${date}" data-month="${month}">
-        <!-- Node on the horizontal line -->
-        <div class="station-node" title="${date}"></div>
+    html += '<div class="date-column" id="date-col-' + date + '" data-month="' + month + '">';
+    html += '  <div class="station-node" title="' + date + '"></div>';
+    html += '  <div class="date-badge">' + date + '</div>';
+    html += '  <div class="date-model-count">' + groupModels.length + '개 모델</div>';
+    html += '  <div class="cards-stack">';
 
-        <!-- Date Header -->
-        <div class="mt-4 text-center">
-          <span class="text-xs font-mono font-bold text-gray-900 bg-gray-100 px-2 py-0.5 rounded border border-gray-200">
-            ${date}
-          </span>
-          <span class="text-[11px] text-gray-400 block mt-0.5">
-            ${groupModels.length}개 모델
-          </span>
-        </div>
+    groupModels.forEach(function(m) {
+      html += renderModelCard(m);
+    });
 
-        <!-- Model Cards for this date -->
-        <div class="mt-4 w-full space-y-3">
-          ${groupModels.map(m => renderModelCard(m)).join('')}
-        </div>
-      </div>
-    `;
+    html += '  </div>';
+    html += '</div>';
   });
 
-  html += `</div>`;
-  container.innerHTML = html;
+  track.innerHTML = html;
 }
 
 // Render Single Model Card
 function renderModelCard(m) {
-  const meta = COMPANY_META[m.company] || { flag: '🌐' };
+  var meta = (typeof COMPANY_META !== 'undefined' && COMPANY_META[m.company]) ? COMPANY_META[m.company] : { flag: '🌐' };
 
-  return `
-    <div class="model-card cursor-pointer" onclick="openModal('${m.id}')">
-      <!-- Company & Type -->
-      <div class="flex items-center justify-between gap-2 mb-1.5">
-        <span class="text-xs text-gray-600 font-medium truncate">
-          ${meta.flag || ''} ${m.company}
-        </span>
-        <span class="clean-tag text-[10px]">
-          ${m.category || m.type}
-        </span>
-      </div>
+  var html = '<div class="model-card" onclick="openModal(\'' + m.id + '\')">';
+  
+  // Top row: Company & Category
+  html += '<div class="card-top">';
+  html += '  <span class="card-company">' + (meta.flag ? meta.flag + ' ' : '') + m.company + '</span>';
+  html += '  <span class="card-tag">' + (m.category || m.type) + '</span>';
+  html += '</div>';
 
-      <!-- Model Name -->
-      <h3 class="text-sm font-bold text-gray-900 leading-snug">
-        ${m.name}
-      </h3>
+  // Title
+  html += '<div class="card-title">' + m.name + '</div>';
 
-      <!-- Parameters or Architecture -->
-      ${m.parameters ? `
-        <div class="mt-2 text-xs text-gray-600 font-mono">
-          <span class="text-gray-400">파라미터:</span> ${m.parameters}
-        </div>
-      ` : ''}
+  // Parameters & Architecture if present
+  if (m.parameters || m.architecture) {
+    html += '<div class="card-meta">';
+    if (m.parameters) {
+      html += '<div><span>파라미터: ' + m.parameters + '</span></div>';
+    }
+    if (m.architecture) {
+      html += '<div><span>아키텍처: ' + m.architecture + '</span></div>';
+    }
+    html += '</div>';
+  }
 
-      ${m.architecture ? `
-        <div class="mt-1 text-xs text-gray-600">
-          <span class="text-gray-400">아키텍처:</span> ${m.architecture}
-        </div>
-      ` : ''}
+  // Bottom row: Family & Status / Open
+  html += '<div class="card-bottom">';
+  html += '  <span>' + m.family + '</span>';
+  if (m.open_weights) {
+    html += '  <span class="card-open-weights">오픈 웨이트</span>';
+  } else if (m.status && m.status !== 'GA') {
+    html += '  <span>' + m.status + '</span>';
+  } else {
+    html += '  <span>상세보기 →</span>';
+  }
+  html += '</div>';
 
-      <!-- Status & Open Weights -->
-      <div class="mt-2.5 pt-2 border-t border-gray-100 flex items-center justify-between text-[11px] text-gray-500">
-        <span>${m.family}</span>
-        ${m.open_weights ? `<span class="text-emerald-700 font-medium">오픈 웨이트</span>` : m.status !== 'GA' ? `<span class="text-amber-700 font-medium">${m.status}</span>` : `<span class="text-gray-400">상세보기 →</span>`}
-      </div>
-    </div>
-  `;
+  html += '</div>';
+  return html;
 }
 
-// Setup Horizontal Scroll Interactions (Mouse wheel & Drag)
+// Setup Horizontal Scroll Interactions
 function setupScrollInteractions() {
-  const container = document.getElementById('timeline-scroll-container');
+  var container = document.getElementById('timeline-scroll-container');
   if (!container) return;
 
-  // Convert vertical mouse wheel to horizontal scroll
-  container.addEventListener('wheel', (e) => {
+  // Mouse wheel horizontal scroll
+  container.addEventListener('wheel', function(e) {
     if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
       e.preventDefault();
       container.scrollLeft += e.deltaY * 1.5;
@@ -149,50 +142,61 @@ function setupScrollInteractions() {
   }, { passive: false });
 
   // Drag-to-scroll
-  let isDown = false;
-  let startX;
-  let scrollLeft;
+  var isDown = false;
+  var startX;
+  var scrollLeft;
 
-  container.addEventListener('mousedown', (e) => {
-    // Avoid interfering with card clicks
+  container.addEventListener('mousedown', function(e) {
     if (e.target.closest('.model-card') || e.target.closest('button')) return;
     isDown = true;
     startX = e.pageX - container.offsetLeft;
     scrollLeft = container.scrollLeft;
   });
 
-  container.addEventListener('mouseleave', () => {
+  container.addEventListener('mouseleave', function() {
     isDown = false;
   });
 
-  container.addEventListener('mouseup', () => {
+  container.addEventListener('mouseup', function() {
     isDown = false;
   });
 
-  container.addEventListener('mousemove', (e) => {
+  container.addEventListener('mousemove', function(e) {
     if (!isDown) return;
     e.preventDefault();
-    const x = e.pageX - container.offsetLeft;
-    const walk = (x - startX) * 1.5;
+    var x = e.pageX - container.offsetLeft;
+    var walk = (x - startX) * 1.5;
     container.scrollLeft = scrollLeft - walk;
   });
 }
 
-// Left / Right Scroll Buttons
+// Navigation Controls
 function scrollTimeline(direction) {
-  const container = document.getElementById('timeline-scroll-container');
+  var container = document.getElementById('timeline-scroll-container');
   if (!container) return;
-  const amount = 560; // scroll ~2 date columns
+  var amount = 580;
   container.scrollBy({ left: direction * amount, behavior: 'smooth' });
 }
 
-// Fast Jump to Month
 function jumpToMonth(month) {
-  const container = document.getElementById('timeline-scroll-container');
+  var container = document.getElementById('timeline-scroll-container');
   if (!container) return;
 
-  // Find first column matching month
-  const targetCol = container.querySelector(`[data-month="${month}"]`);
+  // Update active button
+  document.querySelectorAll('.month-btn').forEach(function(btn) {
+    if (btn.getAttribute('data-month') === month) {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active');
+    }
+  });
+
+  if (month === 'all') {
+    container.scrollTo({ left: 0, behavior: 'smooth' });
+    return;
+  }
+
+  var targetCol = container.querySelector('[data-month="' + month + '"]');
   if (targetCol) {
     targetCol.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
   }
@@ -201,7 +205,7 @@ function jumpToMonth(month) {
 // Search
 function handleSearch(val) {
   searchQuery = val.trim();
-  const clearBtn = document.getElementById('search-clear-btn');
+  var clearBtn = document.getElementById('search-clear-btn');
   if (clearBtn) {
     if (searchQuery) clearBtn.classList.remove('hidden');
     else clearBtn.classList.add('hidden');
@@ -210,107 +214,83 @@ function handleSearch(val) {
 }
 
 function clearSearch() {
-  const input = document.getElementById('search-input');
+  var input = document.getElementById('search-input');
   if (input) input.value = '';
   handleSearch('');
 }
 
-// Modal View
+// Modal
 function openModal(id) {
-  const m = TIMELINE_DATA.find(item => item.id === id);
+  var m = TIMELINE_DATA.find(function(item) { return item.id === id; });
   if (!m) return;
 
   activeModalId = id;
-  const modal = document.getElementById('model-modal');
-  const card = document.getElementById('modal-content-card');
-  const meta = COMPANY_META[m.company] || { flag: '🌐' };
+  var modal = document.getElementById('model-modal');
+  var card = document.getElementById('modal-content-card');
+  var meta = (typeof COMPANY_META !== 'undefined' && COMPANY_META[m.company]) ? COMPANY_META[m.company] : { flag: '🌐' };
 
-  card.innerHTML = `
-    <div class="flex items-start justify-between gap-4 pb-3 border-b border-gray-200">
-      <div>
-        <div class="text-xs text-gray-500 font-medium mb-1">
-          ${meta.flag || ''} ${m.company} · ${m.family}
-        </div>
-        <h2 class="text-xl font-bold text-gray-900">${m.name}</h2>
-        <div class="text-xs font-mono text-gray-500 mt-1">출시일: ${m.date}</div>
-      </div>
-      <button onclick="closeModal()" class="text-gray-400 hover:text-black p-1 text-base">✕</button>
-    </div>
+  var html = '';
+  html += '<div class="modal-header">';
+  html += '  <div>';
+  html += '    <div style="font-size: 12px; color: #6b7280; margin-bottom: 2px;">' + (meta.flag ? meta.flag + ' ' : '') + m.company + ' · ' + m.family + '</div>';
+  html += '    <h2 style="font-size: 18px; font-weight: 700; color: #111827;">' + m.name + '</h2>';
+  html += '    <div style="font-size: 12px; font-family: monospace; color: #6b7280; margin-top: 2px;">출시일: ' + m.date + '</div>';
+  html += '  </div>';
+  html += '  <button class="modal-close" onclick="closeModal()">✕</button>';
+  html += '</div>';
 
-    <div class="space-y-3 text-xs">
-      <div class="grid grid-cols-2 gap-3">
-        <div class="bg-gray-50 p-2.5 rounded border border-gray-200">
-          <span class="text-gray-500 block">유형</span>
-          <span class="font-medium text-gray-900">${m.type}</span>
-        </div>
-        <div class="bg-gray-50 p-2.5 rounded border border-gray-200">
-          <span class="text-gray-500 block">상태</span>
-          <span class="font-medium text-gray-900">${m.status || 'GA'}</span>
-        </div>
-      </div>
+  html += '<div class="modal-body">';
+  
+  html += '  <div class="spec-grid">';
+  html += '    <div class="spec-item"><span class="spec-label">유형</span><div class="spec-value">' + m.type + '</div></div>';
+  html += '    <div class="spec-item"><span class="spec-label">상태</span><div class="spec-value">' + (m.status || 'GA') + '</div></div>';
+  html += '  </div>';
 
-      ${m.parameters ? `
-        <div class="bg-gray-50 p-2.5 rounded border border-gray-200">
-          <span class="text-gray-500 block">파라미터 규격</span>
-          <span class="font-mono font-bold text-gray-900">${m.parameters}</span>
-        </div>
-      ` : ''}
+  if (m.parameters) {
+    html += '  <div class="spec-item"><span class="spec-label">파라미터 규격</span><div class="spec-value" style="font-family: monospace;">' + m.parameters + '</div></div>';
+  }
 
-      ${m.architecture ? `
-        <div class="bg-gray-50 p-2.5 rounded border border-gray-200">
-          <span class="text-gray-500 block">아키텍처</span>
-          <span class="font-medium text-gray-900">${m.architecture}</span>
-        </div>
-      ` : ''}
+  if (m.architecture) {
+    html += '  <div class="spec-item"><span class="spec-label">아키텍처</span><div class="spec-value">' + m.architecture + '</div></div>';
+  }
 
-      ${m.context ? `
-        <div class="bg-gray-50 p-2.5 rounded border border-gray-200">
-          <span class="text-gray-500 block">컨텍스트 윈도우</span>
-          <span class="font-mono text-gray-900">${m.context}</span>
-        </div>
-      ` : ''}
+  if (m.context) {
+    html += '  <div class="spec-item"><span class="spec-label">컨텍스트 윈도우</span><div class="spec-value" style="font-family: monospace;">' + m.context + '</div></div>';
+  }
 
-      ${(m.modalities && m.modalities.length > 0) ? `
-        <div>
-          <span class="text-gray-500 block mb-1">지원 모달리티</span>
-          <div class="flex flex-wrap gap-1">
-            ${m.modalities.map(mod => `<span class="clean-tag">${mod}</span>`).join('')}
-          </div>
-        </div>
-      ` : ''}
+  if (m.modalities && m.modalities.length > 0) {
+    html += '  <div><span class="spec-label" style="margin-bottom: 4px;">지원 모달리티</span><div>';
+    m.modalities.forEach(function(mod) {
+      html += '<span class="card-tag" style="margin-right: 4px;">' + mod + '</span>';
+    });
+    html += '  </div></div>';
+  }
 
-      ${(m.focus && m.focus.length > 0) ? `
-        <div>
-          <span class="text-gray-500 block mb-1">주요 역량 / 포커스</span>
-          <div class="flex flex-wrap gap-1">
-            ${m.focus.map(f => `<span class="clean-tag">${f}</span>`).join('')}
-          </div>
-        </div>
-      ` : ''}
+  if (m.focus && m.focus.length > 0) {
+    html += '  <div><span class="spec-label" style="margin-bottom: 4px;">주요 역량 / 포커스</span><div>';
+    m.focus.forEach(function(f) {
+      html += '<span class="card-tag" style="margin-right: 4px;">' + f + '</span>';
+    });
+    html += '  </div></div>';
+  }
 
-      ${m.note ? `
-        <div class="bg-gray-50 p-3 rounded border border-gray-200 text-gray-700 leading-relaxed">
-          <span class="font-bold text-gray-900 block mb-0.5">비고:</span>
-          ${m.note}
-        </div>
-      ` : ''}
-    </div>
+  if (m.note) {
+    html += '  <div class="modal-note"><strong>비고:</strong> ' + m.note + '</div>';
+  }
 
-    <div class="pt-3 border-t border-gray-200 flex items-center justify-between">
-      <button onclick="copyCitation('${m.id}')" class="px-3 py-1.5 rounded border border-gray-300 text-xs font-medium text-gray-700 hover:bg-gray-50">
-        <span id="btn-copy-text">인용 복사</span>
-      </button>
-      <button onclick="closeModal()" class="px-4 py-1.5 rounded bg-black text-white text-xs font-semibold hover:bg-gray-800">
-        닫기
-      </button>
-    </div>
-  `;
+  html += '</div>';
 
+  html += '<div class="modal-footer">';
+  html += '  <button class="btn-secondary" onclick="copyCitation(\'' + m.id + '\')"><span id="btn-copy-text">인용 복사</span></button>';
+  html += '  <button class="btn-primary" onclick="closeModal()">닫기</button>';
+  html += '</div>';
+
+  card.innerHTML = html;
   modal.classList.remove('hidden');
 }
 
 function closeModal() {
-  const modal = document.getElementById('model-modal');
+  var modal = document.getElementById('model-modal');
   if (modal) modal.classList.add('hidden');
   activeModalId = null;
 }
@@ -320,23 +300,24 @@ function handleModalBackdropClick(e) {
 }
 
 function copyCitation(id) {
-  const m = TIMELINE_DATA.find(item => item.id === id);
+  var m = TIMELINE_DATA.find(function(item) { return item.id === id; });
   if (!m) return;
-  const citation = `- **${m.name}** (${m.company}, ${m.date}) - ${m.type}${m.parameters ? ` [${m.parameters}]` : ''}`;
-  navigator.clipboard.writeText(citation).then(() => {
-    const el = document.getElementById('btn-copy-text');
+  var citation = '- **' + m.name + '** (' + m.company + ', ' + m.date + ') - ' + m.type + (m.parameters ? ' [' + m.parameters + ']' : '');
+  navigator.clipboard.writeText(citation).then(function() {
+    var el = document.getElementById('btn-copy-text');
     if (el) {
       el.textContent = '복사됨!';
-      setTimeout(() => el.textContent = '인용 복사', 2000);
+      setTimeout(function() { el.textContent = '인용 복사'; }, 2000);
     }
   });
 }
 
 // Close on Esc
-window.addEventListener('keydown', (e) => {
+window.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') closeModal();
-  if (e.key === '/' && document.activeElement?.tagName !== 'INPUT') {
+  if (e.key === '/' && document.activeElement && document.activeElement.tagName !== 'INPUT') {
     e.preventDefault();
-    document.getElementById('search-input')?.focus();
+    var input = document.getElementById('search-input');
+    if (input) input.focus();
   }
 });

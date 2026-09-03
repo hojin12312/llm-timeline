@@ -5,98 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LLM 출시 타임라인 (2026)</title>
   <meta name="description" content="2026년 파운데이션 모델 출시 타임라인">
-  
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-white text-gray-900 min-h-screen flex flex-col">
+<body>
 
-  <!-- Minimal Header -->
-  <header class="sticky top-0 z-30 bg-white border-b border-gray-200 px-6 py-4 flex flex-wrap items-center justify-between gap-4">
-    <div>
-      <h1 class="text-xl font-bold tracking-tight text-gray-900">
-        LLM 출시 타임라인 (2026)
-      </h1>
-      <p class="text-xs text-gray-500 mt-0.5">
-        2026년 1월 1일 ~ 9월 4일 주요 모델 115개 출시 순서
-      </p>
+  <!-- Header -->
+  <header class="app-header">
+    <div class="header-title-group">
+      <h1 class="header-title">LLM 출시 타임라인 (2026)</h1>
+      <p class="header-subtitle">2026년 1월 1일 ~ 9월 4일 주요 파운데이션 모델 115개 출시 순서</p>
     </div>
 
-    <!-- Navigation & Quick Search -->
-    <div class="flex items-center gap-3">
-      <!-- Search -->
-      <div class="relative w-56 sm:w-64">
+    <div class="header-controls">
+      <!-- Search Input -->
+      <div class="search-box">
         <input 
           type="text" 
           id="search-input" 
+          class="search-input" 
           placeholder="모델명 또는 기업 검색..." 
-          class="w-full pl-3 pr-8 py-1.5 bg-gray-50 border border-gray-300 rounded-md text-xs text-gray-900 placeholder-gray-400 focus:outline-none focus:border-black focus:bg-white transition-all"
           oninput="handleSearch(this.value)"
         >
-        <button id="search-clear-btn" class="hidden absolute inset-y-0 right-0 pr-2.5 flex items-center text-gray-400 hover:text-gray-700 text-xs" onclick="clearSearch()">✕</button>
+        <button id="search-clear-btn" class="search-clear hidden" onclick="clearSearch()">✕</button>
       </div>
 
       <!-- Left / Right Scroll Buttons -->
-      <div class="flex items-center gap-1 border border-gray-300 rounded-md p-0.5 bg-gray-50">
-        <button onclick="scrollTimeline(-1)" class="px-2.5 py-1 text-xs font-semibold text-gray-700 hover:text-black hover:bg-white rounded transition-colors" title="이전으로 스크롤">
-          ← 이전
-        </button>
-        <div class="w-px h-3 bg-gray-300"></div>
-        <button onclick="scrollTimeline(1)" class="px-2.5 py-1 text-xs font-semibold text-gray-700 hover:text-black hover:bg-white rounded transition-colors" title="다음으로 스크롤">
-          다음 →
-        </button>
+      <div class="nav-button-group">
+        <button class="nav-btn" onclick="scrollTimeline(-1)" title="이전으로 스크롤">← 이전</button>
+        <button class="nav-btn" onclick="scrollTimeline(1)" title="다음으로 스크롤">다음 →</button>
       </div>
 
       <!-- GitHub Link -->
-      <a href="https://github.com/hojin12312/llm-timeline" target="_blank" rel="noopener noreferrer" class="text-xs text-gray-500 hover:text-black transition-colors px-2 py-1 border border-gray-200 rounded-md">
+      <a href="https://github.com/hojin12312/llm-timeline" target="_blank" rel="noopener noreferrer" class="github-link">
         GitHub
       </a>
     </div>
   </header>
 
-  <!-- Timeline Sub-bar: Instructions & Month Shortcuts -->
-  <div class="border-b border-gray-200 bg-gray-50/70 px-6 py-2 flex flex-wrap items-center justify-between gap-2 text-xs text-gray-500">
-    <div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5">
-      <span class="font-medium text-gray-700 shrink-0">월 이동:</span>
-      <button onclick="jumpToMonth('2026-01')" class="px-2 py-0.5 rounded hover:bg-gray-200 text-gray-700 font-medium">1월</button>
-      <button onclick="jumpToMonth('2026-02')" class="px-2 py-0.5 rounded hover:bg-gray-200 text-gray-700 font-medium">2월</button>
-      <button onclick="jumpToMonth('2026-03')" class="px-2 py-0.5 rounded hover:bg-gray-200 text-gray-700 font-medium">3월</button>
-      <button onclick="jumpToMonth('2026-04')" class="px-2 py-0.5 rounded hover:bg-gray-200 text-gray-700 font-medium">4월</button>
-      <button onclick="jumpToMonth('2026-05')" class="px-2 py-0.5 rounded hover:bg-gray-200 text-gray-700 font-medium">5월</button>
-      <button onclick="jumpToMonth('2026-06')" class="px-2 py-0.5 rounded hover:bg-gray-200 text-gray-700 font-medium">6월</button>
-      <button onclick="jumpToMonth('2026-07')" class="px-2 py-0.5 rounded hover:bg-gray-200 text-gray-700 font-medium">7월</button>
-      <button onclick="jumpToMonth('2026-08')" class="px-2 py-0.5 rounded hover:bg-gray-200 text-gray-700 font-medium">8월</button>
-      <button onclick="jumpToMonth('2026-09')" class="px-2 py-0.5 rounded hover:bg-gray-200 text-gray-700 font-medium">9월</button>
+  <!-- Month Navigation Subbar -->
+  <div class="month-subbar">
+    <div class="month-buttons">
+      <button class="month-btn active" data-month="all" onclick="jumpToMonth('all')">전체 (115)</button>
+      <button class="month-btn" data-month="2026-01" onclick="jumpToMonth('2026-01')">1월</button>
+      <button class="month-btn" data-month="2026-02" onclick="jumpToMonth('2026-02')">2월</button>
+      <button class="month-btn" data-month="2026-03" onclick="jumpToMonth('2026-03')">3월</button>
+      <button class="month-btn" data-month="2026-04" onclick="jumpToMonth('2026-04')">4월</button>
+      <button class="month-btn" data-month="2026-05" onclick="jumpToMonth('2026-05')">5월</button>
+      <button class="month-btn" data-month="2026-06" onclick="jumpToMonth('2026-06')">6월</button>
+      <button class="month-btn" data-month="2026-07" onclick="jumpToMonth('2026-07')">7월</button>
+      <button class="month-btn" data-month="2026-08" onclick="jumpToMonth('2026-08')">8월</button>
+      <button class="month-btn" data-month="2026-09" onclick="jumpToMonth('2026-09')">9월</button>
     </div>
 
-    <div class="text-[11px] text-gray-400">
+    <div class="scroll-hint">
       마우스 휠이나 트랙패드로 좌우 스크롤 가능
     </div>
   </div>
 
-  <!-- Horizontal Timeline Main Scroll Canvas -->
-  <main class="flex-1 flex flex-col relative overflow-hidden bg-white">
-    <div id="timeline-scroll-container" class="timeline-scroll-container relative flex-1">
-      <!-- Continuous horizontal line and date columns rendered via app.js -->
+  <!-- Main Horizontal Timeline Viewport -->
+  <main class="timeline-viewport" id="timeline-scroll-container">
+    <div class="timeline-track" id="timeline-track-inner">
+      <!-- Continuous horizontal line & date columns rendered by app.js -->
     </div>
   </main>
 
-  <!-- Minimal Modal for Details -->
-  <div id="model-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/30 backdrop-blur-xs" onclick="handleModalBackdropClick(event)">
-    <div id="modal-content-card" class="bg-white border border-gray-300 rounded-lg max-w-lg w-full max-h-[85vh] overflow-y-auto shadow-xl p-6 space-y-4" onclick="event.stopPropagation()">
-      <!-- Populated via app.js -->
+  <!-- Detail Modal -->
+  <div id="model-modal" class="modal-overlay hidden" onclick="handleModalBackdropClick(event)">
+    <div id="modal-content-card" class="modal-card" onclick="event.stopPropagation()">
+      <!-- Populated dynamically -->
     </div>
   </div>
-
-  <!-- Footer -->
-  <footer class="border-t border-gray-200 px-6 py-3 text-center text-xs text-gray-400 bg-white">
-    <span>출처: 레포지토리 <code class="bg-gray-100 px-1 py-0.5 rounded text-gray-600">조사 자료</code></span>
-    <span class="mx-2">•</span>
-    <span>총 115개 모델 수록</span>
-  </footer>
 
   <!-- Scripts -->
   <script src="data.js"></script>
