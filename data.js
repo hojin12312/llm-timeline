@@ -24,13 +24,58 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 69.0,
+      "MMLU-Pro": 69,
       "GPQA Diamond": 53.3,
       "MATH-500": 81.1,
       "SWE-bench Verified": 33.6,
       "HumanEval": 82.9,
       "LiveCodeBench": 44.9,
       "Chatbot Arena ELO": 1242
+    }
+  },
+  {
+    "id": "model-124",
+    "name": "EXAONE 3.5 32B",
+    "date": "2026-01-15",
+    "sortDate": "2026-01-15",
+    "month": "2026-01",
+    "monthName": "January",
+    "company": "LG AI Research",
+    "family": "EXAONE",
+    "type": "LLM",
+    "category": "General",
+    "status": "GA",
+    "parameters": "32B",
+    "architecture": "Decoder-only Transformer (Bilingual Pre-trained)",
+    "modalities": [
+      "language",
+      "code"
+    ],
+    "focus": [
+      "Korean/English bilingual reasoning",
+      "enterprise domain knowledge",
+      "research synthesis"
+    ],
+    "open_weights": true,
+    "license": "EXAONE AI Model License",
+    "context": "64K",
+    "languages": "Korean, English",
+    "variants": [
+      "32B",
+      "7.8B",
+      "2.4B"
+    ],
+    "reasoning_effort": [],
+    "availability": "Open Weights (Hugging Face / GitHub)",
+    "note": "LG AI연구원의 32B 파라미터급 고성능 한국어/영어 바이링구얼 오픈웨이트 모델. 실용적 엔터프라이즈 환경 및 학술 연구에 최적화.",
+    "benchmarks": {
+      "Chatbot Arena ELO": 1255,
+      "MMLU-Pro": 71.2,
+      "GPQA Diamond": 51.5,
+      "MATH-500": 79.4,
+      "SWE-bench Verified": 35.2,
+      "HumanEval": 84.1,
+      "LiveCodeBench": 46.5
     }
   },
   {
@@ -58,8 +103,8 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 57.0,
-      "GPQA Diamond": 37.0,
+      "MMLU-Pro": 57,
+      "GPQA Diamond": 37,
       "MATH-500": 64.3,
       "SWE-bench Verified": 23.5,
       "HumanEval": 74.5,
@@ -188,7 +233,7 @@ const TIMELINE_DATA = [
       "MATH-500": 81.6,
       "SWE-bench Verified": 39.9,
       "HumanEval": 87.9,
-      "LiveCodeBench": 50.0,
+      "LiveCodeBench": 50,
       "Chatbot Arena ELO": 1279,
       "MMMU (Multimodal)": 65.6
     }
@@ -225,6 +270,40 @@ const TIMELINE_DATA = [
       "HumanEval": 82.3,
       "LiveCodeBench": 43.6,
       "Chatbot Arena ELO": 1224
+    }
+  },
+  {
+    "id": "model-006",
+    "name": "GPT-5.3-Codex",
+    "date": "2026-02-06",
+    "sortDate": "2026-02-06",
+    "month": "2026-02",
+    "monthName": "February",
+    "company": "OpenAI",
+    "family": "GPT",
+    "type": "LLM / agentic coding",
+    "category": "LLM",
+    "status": "GA",
+    "parameters": "",
+    "architecture": "",
+    "modalities": [],
+    "focus": [],
+    "open_weights": null,
+    "license": "",
+    "context": "",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "",
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 75.8,
+      "GPQA Diamond": 54.7,
+      "MATH-500": 82.4,
+      "SWE-bench Verified": 50.1,
+      "HumanEval": 91.4,
+      "LiveCodeBench": 51.3,
+      "Chatbot Arena ELO": 1295
     }
   },
   {
@@ -265,40 +344,6 @@ const TIMELINE_DATA = [
       "LiveCodeBench": 64.5,
       "Chatbot Arena ELO": 1386,
       "MMMU (Multimodal)": 75.3
-    }
-  },
-  {
-    "id": "model-006",
-    "name": "GPT-5.3-Codex",
-    "date": "2026-02-06",
-    "sortDate": "2026-02-06",
-    "month": "2026-02",
-    "monthName": "February",
-    "company": "OpenAI",
-    "family": "GPT",
-    "type": "LLM / agentic coding",
-    "category": "LLM",
-    "status": "GA",
-    "parameters": "",
-    "architecture": "",
-    "modalities": [],
-    "focus": [],
-    "open_weights": null,
-    "license": "",
-    "context": "",
-    "languages": "",
-    "variants": [],
-    "reasoning_effort": [],
-    "availability": "",
-    "note": "",
-    "benchmarks": {
-      "MMLU-Pro": 75.8,
-      "GPQA Diamond": 54.7,
-      "MATH-500": 82.4,
-      "SWE-bench Verified": 50.1,
-      "HumanEval": 91.4,
-      "LiveCodeBench": 51.3,
-      "Chatbot Arena ELO": 1295
     }
   },
   {
@@ -363,7 +408,7 @@ const TIMELINE_DATA = [
       "MMLU-Pro": 56.8,
       "GPQA Diamond": 36.6,
       "MATH-500": 64.1,
-      "SWE-bench Verified": 23.0,
+      "SWE-bench Verified": 23,
       "HumanEval": 74.4,
       "LiveCodeBench": 36.2,
       "Chatbot Arena ELO": 1165
@@ -398,7 +443,7 @@ const TIMELINE_DATA = [
       "GPQA Diamond": 53.7,
       "MATH-500": 81.8,
       "SWE-bench Verified": 40.4,
-      "HumanEval": 88.0,
+      "HumanEval": 88,
       "LiveCodeBench": 50.4,
       "Chatbot Arena ELO": 1284
     }
@@ -470,7 +515,7 @@ const TIMELINE_DATA = [
       "HumanEval": 88.7,
       "LiveCodeBench": 51.8,
       "Chatbot Arena ELO": 1302,
-      "MMMU (Multimodal)": 67.0
+      "MMMU (Multimodal)": 67
     }
   },
   {
@@ -500,7 +545,7 @@ const TIMELINE_DATA = [
     "benchmarks": {
       "MMLU-Pro": 80.8,
       "GPQA Diamond": 61.3,
-      "MATH-500": 88.0,
+      "MATH-500": 88,
       "SWE-bench Verified": 48.2,
       "HumanEval": 92.5,
       "LiveCodeBench": 57.9,
@@ -546,6 +591,33 @@ const TIMELINE_DATA = [
       "LiveCodeBench": 34.8,
       "Chatbot Arena ELO": 1146,
       "Multilingual MGSM": 77.6
+    }
+  },
+  {
+    "id": "model-var-03",
+    "name": "Tiny Aya Global",
+    "date": "2026-02-17",
+    "sortDate": "2026-02-17",
+    "month": "2026-02",
+    "monthName": "February",
+    "company": "Cohere Labs",
+    "family": "Aya",
+    "type": "LLM",
+    "category": "LLM",
+    "status": "GA",
+    "parameters": "3.35B",
+    "architecture": "Multilingual Dense Transformer (70+ Languages)",
+    "open_weights": true,
+    "note": "Cohere Labs 글로벌 다국어 특화 모델",
+    "benchmarks": {
+      "MMLU-Pro": 57.4,
+      "GPQA Diamond": 37.3,
+      "MATH-500": 64.6,
+      "SWE-bench Verified": 23.9,
+      "HumanEval": 74.7,
+      "LiveCodeBench": 36.8,
+      "Chatbot Arena ELO": 1174,
+      "Multilingual MGSM": 79.5
     }
   },
   {
@@ -603,33 +675,6 @@ const TIMELINE_DATA = [
     }
   },
   {
-    "id": "model-var-03",
-    "name": "Tiny Aya Global",
-    "date": "2026-02-17",
-    "sortDate": "2026-02-17",
-    "month": "2026-02",
-    "monthName": "February",
-    "company": "Cohere Labs",
-    "family": "Aya",
-    "type": "LLM",
-    "category": "LLM",
-    "status": "GA",
-    "parameters": "3.35B",
-    "architecture": "Multilingual Dense Transformer (70+ Languages)",
-    "open_weights": true,
-    "note": "Cohere Labs 글로벌 다국어 특화 모델",
-    "benchmarks": {
-      "MMLU-Pro": 57.4,
-      "GPQA Diamond": 37.3,
-      "MATH-500": 64.6,
-      "SWE-bench Verified": 23.9,
-      "HumanEval": 74.7,
-      "LiveCodeBench": 36.8,
-      "Chatbot Arena ELO": 1174,
-      "Multilingual MGSM": 79.5
-    }
-  },
-  {
     "id": "model-var-06",
     "name": "Tiny Aya Water",
     "date": "2026-02-17",
@@ -647,7 +692,7 @@ const TIMELINE_DATA = [
     "note": "Aya 4대 원소 시리즈 (Water variant)",
     "benchmarks": {
       "MMLU-Pro": 56.2,
-      "GPQA Diamond": 36.0,
+      "GPQA Diamond": 36,
       "MATH-500": 63.6,
       "SWE-bench Verified": 22.2,
       "HumanEval": 74.1,
@@ -685,45 +730,10 @@ const TIMELINE_DATA = [
       "GPQA Diamond": 55.9,
       "MATH-500": 83.3,
       "SWE-bench Verified": 43.1,
-      "HumanEval": 89.0,
+      "HumanEval": 89,
       "LiveCodeBench": 52.4,
       "Chatbot Arena ELO": 1311,
       "MMMU (Multimodal)": 67.5
-    }
-  },
-  {
-    "id": "model-017",
-    "name": "Qwen3.5-27B",
-    "date": "2026-02-24",
-    "sortDate": "2026-02-24",
-    "month": "2026-02",
-    "monthName": "February",
-    "company": "Alibaba",
-    "family": "Qwen3.5",
-    "type": "MLLM",
-    "category": "MLLM",
-    "status": "GA",
-    "parameters": "27B (Dense)",
-    "architecture": "Dense Transformer",
-    "modalities": [],
-    "focus": [],
-    "open_weights": true,
-    "license": "",
-    "context": "",
-    "languages": "",
-    "variants": [],
-    "reasoning_effort": [],
-    "availability": "",
-    "note": "",
-    "benchmarks": {
-      "MMLU-Pro": 69.2,
-      "GPQA Diamond": 48.1,
-      "MATH-500": 75.3,
-      "SWE-bench Verified": 34.0,
-      "HumanEval": 83.0,
-      "LiveCodeBench": 45.2,
-      "Chatbot Arena ELO": 1245,
-      "MMMU (Multimodal)": 62.1
     }
   },
   {
@@ -762,18 +772,18 @@ const TIMELINE_DATA = [
     }
   },
   {
-    "id": "model-021",
-    "name": "Qwen3.5-0.8B",
-    "date": "2026-03-02",
-    "sortDate": "2026-03-02",
-    "month": "2026-03",
-    "monthName": "March",
+    "id": "model-017",
+    "name": "Qwen3.5-27B",
+    "date": "2026-02-24",
+    "sortDate": "2026-02-24",
+    "month": "2026-02",
+    "monthName": "February",
     "company": "Alibaba",
     "family": "Qwen3.5",
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "0.8B (Dense)",
+    "parameters": "27B (Dense)",
     "architecture": "Dense Transformer",
     "modalities": [],
     "focus": [],
@@ -786,19 +796,19 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 55.7,
-      "GPQA Diamond": 35.4,
-      "MATH-500": 63.3,
-      "SWE-bench Verified": 21.5,
-      "HumanEval": 73.9,
-      "LiveCodeBench": 35.1,
-      "Chatbot Arena ELO": 1149,
-      "MMMU (Multimodal)": 53.4
+      "MMLU-Pro": 69.2,
+      "GPQA Diamond": 48.1,
+      "MATH-500": 75.3,
+      "SWE-bench Verified": 34,
+      "HumanEval": 83,
+      "LiveCodeBench": 45.2,
+      "Chatbot Arena ELO": 1245,
+      "MMMU (Multimodal)": 62.1
     }
   },
   {
-    "id": "model-020",
-    "name": "Qwen3.5-2B",
+    "id": "model-018",
+    "name": "Qwen3.5-9B",
     "date": "2026-03-02",
     "sortDate": "2026-03-02",
     "month": "2026-03",
@@ -808,7 +818,7 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "2B (Dense)",
+    "parameters": "9B (Dense)",
     "architecture": "Dense Transformer",
     "modalities": [],
     "focus": [],
@@ -821,14 +831,14 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 56.8,
-      "GPQA Diamond": 36.7,
-      "MATH-500": 64.1,
-      "SWE-bench Verified": 23.1,
-      "HumanEval": 74.4,
-      "LiveCodeBench": 36.2,
-      "Chatbot Arena ELO": 1166,
-      "MMMU (Multimodal)": 54.4
+      "MMLU-Pro": 57.5,
+      "GPQA Diamond": 37.5,
+      "MATH-500": 64.7,
+      "SWE-bench Verified": 24.1,
+      "HumanEval": 74.7,
+      "LiveCodeBench": 37,
+      "Chatbot Arena ELO": 1176,
+      "MMMU (Multimodal)": 55
     }
   },
   {
@@ -867,8 +877,8 @@ const TIMELINE_DATA = [
     }
   },
   {
-    "id": "model-018",
-    "name": "Qwen3.5-9B",
+    "id": "model-020",
+    "name": "Qwen3.5-2B",
     "date": "2026-03-02",
     "sortDate": "2026-03-02",
     "month": "2026-03",
@@ -878,7 +888,7 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "9B (Dense)",
+    "parameters": "2B (Dense)",
     "architecture": "Dense Transformer",
     "modalities": [],
     "focus": [],
@@ -891,14 +901,49 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 57.5,
-      "GPQA Diamond": 37.5,
-      "MATH-500": 64.7,
-      "SWE-bench Verified": 24.1,
-      "HumanEval": 74.7,
-      "LiveCodeBench": 37.0,
-      "Chatbot Arena ELO": 1176,
-      "MMMU (Multimodal)": 55.0
+      "MMLU-Pro": 56.8,
+      "GPQA Diamond": 36.7,
+      "MATH-500": 64.1,
+      "SWE-bench Verified": 23.1,
+      "HumanEval": 74.4,
+      "LiveCodeBench": 36.2,
+      "Chatbot Arena ELO": 1166,
+      "MMMU (Multimodal)": 54.4
+    }
+  },
+  {
+    "id": "model-021",
+    "name": "Qwen3.5-0.8B",
+    "date": "2026-03-02",
+    "sortDate": "2026-03-02",
+    "month": "2026-03",
+    "monthName": "March",
+    "company": "Alibaba",
+    "family": "Qwen3.5",
+    "type": "MLLM",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "0.8B (Dense)",
+    "architecture": "Dense Transformer",
+    "modalities": [],
+    "focus": [],
+    "open_weights": true,
+    "license": "",
+    "context": "",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "",
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 55.7,
+      "GPQA Diamond": 35.4,
+      "MATH-500": 63.3,
+      "SWE-bench Verified": 21.5,
+      "HumanEval": 73.9,
+      "LiveCodeBench": 35.1,
+      "Chatbot Arena ELO": 1149,
+      "MMMU (Multimodal)": 53.4
     }
   },
   {
@@ -1007,40 +1052,6 @@ const TIMELINE_DATA = [
     }
   },
   {
-    "id": "model-026",
-    "name": "Sarvam 105B",
-    "date": "2026-03-06",
-    "sortDate": "2026-03-06",
-    "month": "2026-03",
-    "monthName": "March",
-    "company": "Sarvam AI",
-    "family": "Sarvam",
-    "type": "LLM",
-    "category": "LLM",
-    "status": "GA",
-    "parameters": "105B",
-    "architecture": "Indic Dense Transformer",
-    "modalities": [],
-    "focus": [],
-    "open_weights": true,
-    "license": "",
-    "context": "",
-    "languages": "",
-    "variants": [],
-    "reasoning_effort": [],
-    "availability": "",
-    "note": "",
-    "benchmarks": {
-      "MMLU-Pro": 75.0,
-      "GPQA Diamond": 53.6,
-      "MATH-500": 81.7,
-      "SWE-bench Verified": 40.2,
-      "HumanEval": 88.0,
-      "LiveCodeBench": 50.3,
-      "Chatbot Arena ELO": 1282
-    }
-  },
-  {
     "id": "model-025",
     "name": "Sarvam 30B",
     "date": "2026-03-06",
@@ -1075,6 +1086,40 @@ const TIMELINE_DATA = [
     }
   },
   {
+    "id": "model-026",
+    "name": "Sarvam 105B",
+    "date": "2026-03-06",
+    "sortDate": "2026-03-06",
+    "month": "2026-03",
+    "monthName": "March",
+    "company": "Sarvam AI",
+    "family": "Sarvam",
+    "type": "LLM",
+    "category": "LLM",
+    "status": "GA",
+    "parameters": "105B",
+    "architecture": "Indic Dense Transformer",
+    "modalities": [],
+    "focus": [],
+    "open_weights": true,
+    "license": "",
+    "context": "",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "",
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 75,
+      "GPQA Diamond": 53.6,
+      "MATH-500": 81.7,
+      "SWE-bench Verified": 40.2,
+      "HumanEval": 88,
+      "LiveCodeBench": 50.3,
+      "Chatbot Arena ELO": 1282
+    }
+  },
+  {
     "id": "model-027",
     "name": "Nemotron 3 Super",
     "date": "2026-03-10",
@@ -1099,11 +1144,11 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 75.0,
+      "MMLU-Pro": 75,
       "GPQA Diamond": 53.7,
       "MATH-500": 81.8,
       "SWE-bench Verified": 40.4,
-      "HumanEval": 88.0,
+      "HumanEval": 88,
       "LiveCodeBench": 50.4,
       "Chatbot Arena ELO": 1283
     }
@@ -1171,8 +1216,8 @@ const TIMELINE_DATA = [
       "MMLU-Pro": 69.3,
       "GPQA Diamond": 53.6,
       "MATH-500": 81.4,
-      "SWE-bench Verified": 34.0,
-      "HumanEval": 83.0,
+      "SWE-bench Verified": 34,
+      "HumanEval": 83,
       "LiveCodeBench": 45.2,
       "Chatbot Arena ELO": 1246
     }
@@ -1205,7 +1250,7 @@ const TIMELINE_DATA = [
       "MMLU-Pro": 75.5,
       "GPQA Diamond": 54.2,
       "MATH-500": 82.2,
-      "SWE-bench Verified": 41.0,
+      "SWE-bench Verified": 41,
       "HumanEval": 88.2,
       "LiveCodeBench": 50.9,
       "Chatbot Arena ELO": 1290
@@ -1242,11 +1287,11 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 77.0,
-      "GPQA Diamond": 56.0,
+      "MMLU-Pro": 77,
+      "GPQA Diamond": 56,
       "MATH-500": 83.4,
       "SWE-bench Verified": 43.3,
-      "HumanEval": 89.0,
+      "HumanEval": 89,
       "LiveCodeBench": 52.5,
       "Chatbot Arena ELO": 1313,
       "MMMU (Multimodal)": 67.6
@@ -1279,7 +1324,7 @@ const TIMELINE_DATA = [
     "benchmarks": {
       "MMLU-Pro": 80.8,
       "GPQA Diamond": 61.3,
-      "MATH-500": 88.0,
+      "MATH-500": 88,
       "SWE-bench Verified": 48.2,
       "HumanEval": 92.5,
       "LiveCodeBench": 57.9,
@@ -1288,22 +1333,22 @@ const TIMELINE_DATA = [
     }
   },
   {
-    "id": "model-035",
-    "name": "MiMo-V2-Omni",
+    "id": "model-033",
+    "name": "MiniMax M2.7",
     "date": "2026-03-18",
     "sortDate": "2026-03-18",
     "month": "2026-03",
     "monthName": "March",
-    "company": "Xiaomi",
-    "family": "MiMo",
-    "type": "MLLM",
-    "category": "MLLM",
+    "company": "MiniMax",
+    "family": "MiniMax M",
+    "type": "LLM",
+    "category": "LLM",
     "status": "GA",
-    "parameters": "~30B (Omni)",
-    "architecture": "Omni Transformer",
+    "parameters": "~230B MoE",
+    "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
-    "open_weights": true,
+    "open_weights": false,
     "license": "",
     "context": "",
     "languages": "",
@@ -1312,14 +1357,13 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 68.2,
-      "GPQA Diamond": 46.8,
-      "MATH-500": 74.5,
-      "SWE-bench Verified": 32.4,
-      "HumanEval": 82.5,
-      "LiveCodeBench": 44.0,
-      "Chatbot Arena ELO": 1230,
-      "MMMU (Multimodal)": 61.2
+      "MMLU-Pro": 74.8,
+      "GPQA Diamond": 53.4,
+      "MATH-500": 81.6,
+      "SWE-bench Verified": 40,
+      "HumanEval": 87.9,
+      "LiveCodeBench": 50.1,
+      "Chatbot Arena ELO": 1280
     }
   },
   {
@@ -1357,22 +1401,22 @@ const TIMELINE_DATA = [
     }
   },
   {
-    "id": "model-033",
-    "name": "MiniMax M2.7",
+    "id": "model-035",
+    "name": "MiMo-V2-Omni",
     "date": "2026-03-18",
     "sortDate": "2026-03-18",
     "month": "2026-03",
     "monthName": "March",
-    "company": "MiniMax",
-    "family": "MiniMax M",
-    "type": "LLM",
-    "category": "LLM",
+    "company": "Xiaomi",
+    "family": "MiMo",
+    "type": "MLLM",
+    "category": "MLLM",
     "status": "GA",
-    "parameters": "~230B MoE",
-    "architecture": "Sparse MoE",
+    "parameters": "~30B (Omni)",
+    "architecture": "Omni Transformer",
     "modalities": [],
     "focus": [],
-    "open_weights": false,
+    "open_weights": true,
     "license": "",
     "context": "",
     "languages": "",
@@ -1381,13 +1425,59 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 74.8,
-      "GPQA Diamond": 53.4,
-      "MATH-500": 81.6,
-      "SWE-bench Verified": 40.0,
-      "HumanEval": 87.9,
-      "LiveCodeBench": 50.1,
-      "Chatbot Arena ELO": 1280
+      "MMLU-Pro": 68.2,
+      "GPQA Diamond": 46.8,
+      "MATH-500": 74.5,
+      "SWE-bench Verified": 32.4,
+      "HumanEval": 82.5,
+      "LiveCodeBench": 44,
+      "Chatbot Arena ELO": 1230,
+      "MMMU (Multimodal)": 61.2
+    }
+  },
+  {
+    "id": "model-125",
+    "name": "A.X K1",
+    "date": "2026-03-25",
+    "sortDate": "2026-03-25",
+    "month": "2026-03",
+    "monthName": "March",
+    "company": "SK Telecom",
+    "family": "A.X",
+    "type": "LLM",
+    "category": "General",
+    "status": "GA",
+    "parameters": "~500B (500B-class ultra-large foundation model)",
+    "architecture": "Dense Autoregressive Transformer",
+    "modalities": [
+      "language",
+      "code"
+    ],
+    "focus": [
+      "Sovereign AI",
+      "Korean public administration",
+      "enterprise AX",
+      "agent workflows"
+    ],
+    "open_weights": false,
+    "license": "Proprietary / SKT Enterprise API",
+    "context": "128K",
+    "languages": "Korean, English",
+    "variants": [
+      "K1 500B",
+      "K1 Lite"
+    ],
+    "reasoning_effort": [],
+    "availability": "SKT Enterprise API / Sovereign Cloud",
+    "note": "SK텔레콤(SKT)의 소버린 AI 주력 500B급 초거대 언어 모델. 2026 스타트업 AX 챌린지 및 대국민 공공 행정 AI 에이전트 서비스의 기반 파운데이션 모델.",
+    "benchmarks": {
+      "Chatbot Arena ELO": 1318,
+      "MMLU-Pro": 78.5,
+      "GPQA Diamond": 58.2,
+      "MATH-500": 85.6,
+      "SWE-bench Verified": 44.3,
+      "HumanEval": 89.8,
+      "LiveCodeBench": 54.1
     }
   },
   {
@@ -1416,7 +1506,7 @@ const TIMELINE_DATA = [
     "note": "",
     "benchmarks": {
       "MMLU-Pro": 56.2,
-      "GPQA Diamond": 36.0,
+      "GPQA Diamond": 36,
       "MATH-500": 63.7,
       "SWE-bench Verified": 22.3,
       "HumanEval": 74.1,
@@ -1561,42 +1651,52 @@ const TIMELINE_DATA = [
       "HumanEval": 92.7,
       "LiveCodeBench": 58.3,
       "Chatbot Arena ELO": 1345,
-      "MMMU (Multimodal)": 71.0
+      "MMMU (Multimodal)": 71
     }
   },
   {
-    "id": "model-042",
-    "name": "Claude Opus 4.7",
-    "date": "2026-04-16",
-    "sortDate": "2026-04-16",
+    "id": "model-126",
+    "name": "EXAONE 4.5",
+    "date": "2026-04-09",
+    "sortDate": "2026-04-09",
     "month": "2026-04",
     "monthName": "April",
-    "company": "Anthropic",
-    "family": "Claude",
+    "company": "LG AI Research",
+    "family": "EXAONE",
     "type": "MLLM",
-    "category": "MLLM",
+    "category": "Multimodal",
     "status": "GA",
-    "parameters": "",
-    "architecture": "",
-    "modalities": [],
-    "focus": [],
-    "open_weights": null,
-    "license": "",
-    "context": "",
-    "languages": "",
-    "variants": [],
+    "parameters": "32B (Unified Vision-Language)",
+    "architecture": "Unified Vision-Language Transformer (Proprietary Vision Encoder + LLM)",
+    "modalities": [
+      "language",
+      "vision",
+      "document understanding"
+    ],
+    "focus": [
+      "Document understanding",
+      "visual reasoning",
+      "STEM & scientific intelligence"
+    ],
+    "open_weights": true,
+    "license": "EXAONE AI Model License",
+    "context": "128K",
+    "languages": "Korean, English",
+    "variants": [
+      "32B VLM"
+    ],
     "reasoning_effort": [],
-    "availability": "",
-    "note": "",
+    "availability": "Open Weights (Hugging Face)",
+    "note": "LG AI연구원 최초의 오픈웨이트 비전-언어 파운데이션 모델(VLM). 독자 개발 비전 인코더와 LLM을 결합하여 고난도 도표/문서 이해 및 과학 추론에 탁월.",
     "benchmarks": {
-      "MMLU-Pro": 81.1,
-      "GPQA Diamond": 61.7,
-      "MATH-500": 88.2,
-      "SWE-bench Verified": 48.7,
-      "HumanEval": 92.6,
-      "LiveCodeBench": 58.2,
-      "Chatbot Arena ELO": 1344,
-      "MMMU (Multimodal)": 70.9
+      "Chatbot Arena ELO": 1282,
+      "MMLU-Pro": 74.5,
+      "GPQA Diamond": 53.8,
+      "MATH-500": 82.1,
+      "SWE-bench Verified": 38.6,
+      "HumanEval": 86.8,
+      "LiveCodeBench": 49.3,
+      "MMMU (Multimodal)": 67.4
     }
   },
   {
@@ -1635,22 +1735,22 @@ const TIMELINE_DATA = [
     }
   },
   {
-    "id": "model-044",
-    "name": "Kimi K2.6",
-    "date": "2026-04-20",
-    "sortDate": "2026-04-20",
+    "id": "model-042",
+    "name": "Claude Opus 4.7",
+    "date": "2026-04-16",
+    "sortDate": "2026-04-16",
     "month": "2026-04",
     "monthName": "April",
-    "company": "Moonshot AI",
-    "family": "Kimi",
+    "company": "Anthropic",
+    "family": "Claude",
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "~1T MoE",
-    "architecture": "Multimodal MoE",
+    "parameters": "",
+    "architecture": "",
     "modalities": [],
     "focus": [],
-    "open_weights": false,
+    "open_weights": null,
     "license": "",
     "context": "",
     "languages": "",
@@ -1659,48 +1759,14 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 82.6,
-      "GPQA Diamond": 63.5,
-      "MATH-500": 89.4,
-      "SWE-bench Verified": 51.0,
-      "HumanEval": 93.4,
-      "LiveCodeBench": 59.9,
-      "Chatbot Arena ELO": 1367,
-      "MMMU (Multimodal)": 72.3
-    }
-  },
-  {
-    "id": "model-045",
-    "name": "LongCat-2.0 Preview",
-    "date": "2026-04-20",
-    "sortDate": "2026-04-20",
-    "month": "2026-04",
-    "monthName": "April",
-    "company": "Meituan",
-    "family": "LongCat",
-    "type": "LLM",
-    "category": "LLM",
-    "status": "Preview",
-    "parameters": "~1.6T total / ~48B active",
-    "architecture": "Sparse MoE",
-    "modalities": [],
-    "focus": [],
-    "open_weights": true,
-    "license": "",
-    "context": "",
-    "languages": "",
-    "variants": [],
-    "reasoning_effort": [],
-    "availability": "",
-    "note": "",
-    "benchmarks": {
-      "MMLU-Pro": 86.3,
-      "GPQA Diamond": 69.8,
-      "MATH-500": 93.3,
-      "SWE-bench Verified": 58.4,
-      "HumanEval": 96.0,
-      "LiveCodeBench": 66.4,
-      "Chatbot Arena ELO": 1411
+      "MMLU-Pro": 81.1,
+      "GPQA Diamond": 61.7,
+      "MATH-500": 88.2,
+      "SWE-bench Verified": 48.7,
+      "HumanEval": 92.6,
+      "LiveCodeBench": 58.2,
+      "Chatbot Arena ELO": 1344,
+      "MMMU (Multimodal)": 70.9
     }
   },
   {
@@ -1739,6 +1805,75 @@ const TIMELINE_DATA = [
     }
   },
   {
+    "id": "model-044",
+    "name": "Kimi K2.6",
+    "date": "2026-04-20",
+    "sortDate": "2026-04-20",
+    "month": "2026-04",
+    "monthName": "April",
+    "company": "Moonshot AI",
+    "family": "Kimi",
+    "type": "MLLM",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "~1T MoE",
+    "architecture": "Multimodal MoE",
+    "modalities": [],
+    "focus": [],
+    "open_weights": false,
+    "license": "",
+    "context": "",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "",
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 82.6,
+      "GPQA Diamond": 63.5,
+      "MATH-500": 89.4,
+      "SWE-bench Verified": 51,
+      "HumanEval": 93.4,
+      "LiveCodeBench": 59.9,
+      "Chatbot Arena ELO": 1367,
+      "MMMU (Multimodal)": 72.3
+    }
+  },
+  {
+    "id": "model-045",
+    "name": "LongCat-2.0 Preview",
+    "date": "2026-04-20",
+    "sortDate": "2026-04-20",
+    "month": "2026-04",
+    "monthName": "April",
+    "company": "Meituan",
+    "family": "LongCat",
+    "type": "LLM",
+    "category": "LLM",
+    "status": "Preview",
+    "parameters": "~1.6T total / ~48B active",
+    "architecture": "Sparse MoE",
+    "modalities": [],
+    "focus": [],
+    "open_weights": true,
+    "license": "",
+    "context": "",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "",
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 86.3,
+      "GPQA Diamond": 69.8,
+      "MATH-500": 93.3,
+      "SWE-bench Verified": 58.4,
+      "HumanEval": 96,
+      "LiveCodeBench": 66.4,
+      "Chatbot Arena ELO": 1411
+    }
+  },
+  {
     "id": "model-046",
     "name": "Qwen3.6-27B",
     "date": "2026-04-22",
@@ -1764,83 +1899,13 @@ const TIMELINE_DATA = [
     "note": "",
     "benchmarks": {
       "MMLU-Pro": 69.2,
-      "GPQA Diamond": 48.0,
+      "GPQA Diamond": 48,
       "MATH-500": 75.3,
       "SWE-bench Verified": 33.9,
-      "HumanEval": 83.0,
+      "HumanEval": 83,
       "LiveCodeBench": 45.1,
       "Chatbot Arena ELO": 1245,
       "MMMU (Multimodal)": 62.1
-    }
-  },
-  {
-    "id": "model-049",
-    "name": "GPT-5.5",
-    "date": "2026-04-23",
-    "sortDate": "2026-04-23",
-    "month": "2026-04",
-    "monthName": "April",
-    "company": "OpenAI",
-    "family": "GPT",
-    "type": "MLLM",
-    "category": "MLLM",
-    "status": "GA",
-    "parameters": "",
-    "architecture": "",
-    "modalities": [],
-    "focus": [],
-    "open_weights": null,
-    "license": "",
-    "context": "",
-    "languages": "",
-    "variants": [],
-    "reasoning_effort": [],
-    "availability": "",
-    "note": "",
-    "benchmarks": {
-      "MMLU-Pro": 85.4,
-      "GPQA Diamond": 68.7,
-      "MATH-500": 92.5,
-      "SWE-bench Verified": 57.0,
-      "HumanEval": 95.5,
-      "LiveCodeBench": 65.4,
-      "Chatbot Arena ELO": 1397,
-      "MMMU (Multimodal)": 75.9
-    }
-  },
-  {
-    "id": "model-050",
-    "name": "GPT-5.5 Pro",
-    "date": "2026-04-23",
-    "sortDate": "2026-04-23",
-    "month": "2026-04",
-    "monthName": "April",
-    "company": "OpenAI",
-    "family": "GPT",
-    "type": "MLLM",
-    "category": "MLLM",
-    "status": "GA",
-    "parameters": "",
-    "architecture": "",
-    "modalities": [],
-    "focus": [],
-    "open_weights": null,
-    "license": "",
-    "context": "",
-    "languages": "",
-    "variants": [],
-    "reasoning_effort": [],
-    "availability": "",
-    "note": "",
-    "benchmarks": {
-      "MMLU-Pro": 84.8,
-      "GPQA Diamond": 68.0,
-      "MATH-500": 92.0,
-      "SWE-bench Verified": 56.1,
-      "HumanEval": 95.2,
-      "LiveCodeBench": 64.7,
-      "Chatbot Arena ELO": 1388,
-      "MMMU (Multimodal)": 75.4
     }
   },
   {
@@ -1914,6 +1979,76 @@ const TIMELINE_DATA = [
     }
   },
   {
+    "id": "model-049",
+    "name": "GPT-5.5",
+    "date": "2026-04-23",
+    "sortDate": "2026-04-23",
+    "month": "2026-04",
+    "monthName": "April",
+    "company": "OpenAI",
+    "family": "GPT",
+    "type": "MLLM",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "",
+    "architecture": "",
+    "modalities": [],
+    "focus": [],
+    "open_weights": null,
+    "license": "",
+    "context": "",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "",
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 85.4,
+      "GPQA Diamond": 68.7,
+      "MATH-500": 92.5,
+      "SWE-bench Verified": 57,
+      "HumanEval": 95.5,
+      "LiveCodeBench": 65.4,
+      "Chatbot Arena ELO": 1397,
+      "MMMU (Multimodal)": 75.9
+    }
+  },
+  {
+    "id": "model-050",
+    "name": "GPT-5.5 Pro",
+    "date": "2026-04-23",
+    "sortDate": "2026-04-23",
+    "month": "2026-04",
+    "monthName": "April",
+    "company": "OpenAI",
+    "family": "GPT",
+    "type": "MLLM",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "",
+    "architecture": "",
+    "modalities": [],
+    "focus": [],
+    "open_weights": null,
+    "license": "",
+    "context": "",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "",
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 84.8,
+      "GPQA Diamond": 68,
+      "MATH-500": 92,
+      "SWE-bench Verified": 56.1,
+      "HumanEval": 95.2,
+      "LiveCodeBench": 64.7,
+      "Chatbot Arena ELO": 1388,
+      "MMMU (Multimodal)": 75.4
+    }
+  },
+  {
     "id": "model-051",
     "name": "DeepSeek-V4",
     "date": "2026-04-24",
@@ -1942,7 +2077,7 @@ const TIMELINE_DATA = [
       "GPQA Diamond": 67.6,
       "MATH-500": 91.8,
       "SWE-bench Verified": 55.7,
-      "HumanEval": 95.0,
+      "HumanEval": 95,
       "LiveCodeBench": 64.4,
       "Chatbot Arena ELO": 1383
     }
@@ -2010,7 +2145,7 @@ const TIMELINE_DATA = [
       "GPQA Diamond": 73.6,
       "MATH-500": 95.4,
       "SWE-bench Verified": 63.8,
-      "HumanEval": 97.0,
+      "HumanEval": 97,
       "LiveCodeBench": 70.9,
       "Chatbot Arena ELO": 1427
     }
@@ -2045,7 +2180,7 @@ const TIMELINE_DATA = [
       "MATH-500": 64.6,
       "SWE-bench Verified": 24.1,
       "HumanEval": 74.7,
-      "LiveCodeBench": 37.0,
+      "LiveCodeBench": 37,
       "Chatbot Arena ELO": 1175
     }
   },
@@ -2076,7 +2211,7 @@ const TIMELINE_DATA = [
     "benchmarks": {
       "MMLU-Pro": 76.6,
       "GPQA Diamond": 55.6,
-      "MATH-500": 83.0,
+      "MATH-500": 83,
       "SWE-bench Verified": 42.7,
       "HumanEval": 88.8,
       "LiveCodeBench": 52.1,
@@ -2108,7 +2243,7 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 69.0,
+      "MMLU-Pro": 69,
       "GPQA Diamond": 47.7,
       "MATH-500": 75.1,
       "SWE-bench Verified": 33.6,
@@ -2153,6 +2288,41 @@ const TIMELINE_DATA = [
     }
   },
   {
+    "id": "model-058",
+    "name": "Granite 4.1 family",
+    "date": "2026-04-29",
+    "sortDate": "2026-04-29",
+    "month": "2026-04",
+    "monthName": "April",
+    "company": "IBM",
+    "family": "Granite",
+    "type": "LLM + MLLM family",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "1B, 3B, 8B, 34B (Language) & 3B, 8B (Vision)",
+    "architecture": "Mamba2 + Transformer Hybrid",
+    "modalities": [],
+    "focus": [],
+    "open_weights": true,
+    "license": "",
+    "context": "",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "",
+    "note": "speech / embedding / Guardian-only members excluded here",
+    "benchmarks": {
+      "MMLU-Pro": 67.5,
+      "GPQA Diamond": 46,
+      "MATH-500": 73.9,
+      "SWE-bench Verified": 31.3,
+      "HumanEval": 82.2,
+      "LiveCodeBench": 43.2,
+      "Chatbot Arena ELO": 1219,
+      "MMMU (Multimodal)": 60.6
+    }
+  },
+  {
     "id": "model-var-07",
     "name": "Granite 4.1 Language",
     "date": "2026-04-29",
@@ -2172,9 +2342,9 @@ const TIMELINE_DATA = [
       "MMLU-Pro": 67.2,
       "GPQA Diamond": 45.7,
       "MATH-500": 73.7,
-      "SWE-bench Verified": 31.0,
-      "HumanEval": 82.0,
-      "LiveCodeBench": 43.0,
+      "SWE-bench Verified": 31,
+      "HumanEval": 82,
+      "LiveCodeBench": 43,
       "Chatbot Arena ELO": 1215
     }
   },
@@ -2203,41 +2373,6 @@ const TIMELINE_DATA = [
       "LiveCodeBench": 43.1,
       "Chatbot Arena ELO": 1218,
       "MMMU (Multimodal)": 60.5
-    }
-  },
-  {
-    "id": "model-058",
-    "name": "Granite 4.1 family",
-    "date": "2026-04-29",
-    "sortDate": "2026-04-29",
-    "month": "2026-04",
-    "monthName": "April",
-    "company": "IBM",
-    "family": "Granite",
-    "type": "LLM + MLLM family",
-    "category": "MLLM",
-    "status": "GA",
-    "parameters": "1B, 3B, 8B, 34B (Language) & 3B, 8B (Vision)",
-    "architecture": "Mamba2 + Transformer Hybrid",
-    "modalities": [],
-    "focus": [],
-    "open_weights": true,
-    "license": "",
-    "context": "",
-    "languages": "",
-    "variants": [],
-    "reasoning_effort": [],
-    "availability": "",
-    "note": "speech / embedding / Guardian-only members excluded here",
-    "benchmarks": {
-      "MMLU-Pro": 67.5,
-      "GPQA Diamond": 46.0,
-      "MATH-500": 73.9,
-      "SWE-bench Verified": 31.3,
-      "HumanEval": 82.2,
-      "LiveCodeBench": 43.2,
-      "Chatbot Arena ELO": 1219,
-      "MMMU (Multimodal)": 60.6
     }
   },
   {
@@ -2275,6 +2410,50 @@ const TIMELINE_DATA = [
     }
   },
   {
+    "id": "model-127",
+    "name": "A.X Telco LLM",
+    "date": "2026-05-14",
+    "sortDate": "2026-05-14",
+    "month": "2026-05",
+    "monthName": "May",
+    "company": "SK Telecom",
+    "family": "A.X",
+    "type": "LLM",
+    "category": "Reasoning",
+    "status": "GA",
+    "parameters": "70B",
+    "architecture": "Domain-Adapted Autoregressive Transformer",
+    "modalities": [
+      "language",
+      "code"
+    ],
+    "focus": [
+      "Global Telco AI Alliance",
+      "telecom customer operations",
+      "network diagnosis",
+      "multilingual agent"
+    ],
+    "open_weights": false,
+    "license": "Proprietary / Global Telco AI Alliance",
+    "context": "128K",
+    "languages": "Korean, English, Japanese, Arabic, German",
+    "variants": [
+      "70B Telco"
+    ],
+    "reasoning_effort": [],
+    "availability": "GTAA Alliance Cloud / SKT Enterprise",
+    "note": "글로벌 텔코 AI 얼라이언스(GTAA)와 협력하여 통신 도메인 지식, 고객 상담 및 네트워크 인프라 진단에 특화 개발된 통신 전용 70B 모델.",
+    "benchmarks": {
+      "Chatbot Arena ELO": 1268,
+      "MMLU-Pro": 73.2,
+      "GPQA Diamond": 52.4,
+      "MATH-500": 80.8,
+      "SWE-bench Verified": 37.1,
+      "HumanEval": 85.4,
+      "LiveCodeBench": 48
+    }
+  },
+  {
     "id": "model-060",
     "name": "Gemini 3.5 Flash",
     "date": "2026-05-19",
@@ -2307,10 +2486,45 @@ const TIMELINE_DATA = [
       "GPQA Diamond": 62.5,
       "MATH-500": 88.7,
       "SWE-bench Verified": 49.7,
-      "HumanEval": 93.0,
+      "HumanEval": 93,
       "LiveCodeBench": 58.9,
       "Chatbot Arena ELO": 1354,
       "MMMU (Multimodal)": 71.5
+    }
+  },
+  {
+    "id": "model-061",
+    "name": "Qwen3.7-Max",
+    "date": "2026-05-20",
+    "sortDate": "2026-05-20",
+    "month": "2026-05",
+    "monthName": "May",
+    "company": "Alibaba",
+    "family": "Qwen3.7",
+    "type": "MLLM",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "~1T+ (Sparse MoE)",
+    "architecture": "Sparse MoE",
+    "modalities": [],
+    "focus": [],
+    "open_weights": true,
+    "license": "",
+    "context": "",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "",
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 85,
+      "GPQA Diamond": 68.2,
+      "MATH-500": 92.2,
+      "SWE-bench Verified": 56.5,
+      "HumanEval": 95.3,
+      "LiveCodeBench": 65,
+      "Chatbot Arena ELO": 1391,
+      "MMMU (Multimodal)": 75.6
     }
   },
   {
@@ -2341,47 +2555,12 @@ const TIMELINE_DATA = [
     "note": "",
     "benchmarks": {
       "MMLU-Pro": 68.4,
-      "GPQA Diamond": 47.0,
+      "GPQA Diamond": 47,
       "MATH-500": 74.6,
       "SWE-bench Verified": 32.6,
       "HumanEval": 82.6,
       "LiveCodeBench": 44.2,
       "Chatbot Arena ELO": 1232
-    }
-  },
-  {
-    "id": "model-061",
-    "name": "Qwen3.7-Max",
-    "date": "2026-05-20",
-    "sortDate": "2026-05-20",
-    "month": "2026-05",
-    "monthName": "May",
-    "company": "Alibaba",
-    "family": "Qwen3.7",
-    "type": "MLLM",
-    "category": "MLLM",
-    "status": "GA",
-    "parameters": "~1T+ (Sparse MoE)",
-    "architecture": "Sparse MoE",
-    "modalities": [],
-    "focus": [],
-    "open_weights": true,
-    "license": "",
-    "context": "",
-    "languages": "",
-    "variants": [],
-    "reasoning_effort": [],
-    "availability": "",
-    "note": "",
-    "benchmarks": {
-      "MMLU-Pro": 85.0,
-      "GPQA Diamond": 68.2,
-      "MATH-500": 92.2,
-      "SWE-bench Verified": 56.5,
-      "HumanEval": 95.3,
-      "LiveCodeBench": 65.0,
-      "Chatbot Arena ELO": 1391,
-      "MMMU (Multimodal)": 75.6
     }
   },
   {
@@ -2553,9 +2732,9 @@ const TIMELINE_DATA = [
     "note": "",
     "benchmarks": {
       "MMLU-Pro": 55.4,
-      "GPQA Diamond": 35.0,
-      "MATH-500": 63.0,
-      "SWE-bench Verified": 21.0,
+      "GPQA Diamond": 35,
+      "MATH-500": 63,
+      "SWE-bench Verified": 21,
       "HumanEval": 73.7,
       "LiveCodeBench": 34.7,
       "Chatbot Arena ELO": 1145
@@ -2591,7 +2770,7 @@ const TIMELINE_DATA = [
       "MATH-500": 91.6,
       "SWE-bench Verified": 55.2,
       "HumanEval": 94.9,
-      "LiveCodeBench": 64.0,
+      "LiveCodeBench": 64,
       "Chatbot Arena ELO": 1379,
       "MMMU (Multimodal)": 74.9
     }
@@ -2656,7 +2835,7 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 76.0,
+      "MMLU-Pro": 76,
       "GPQA Diamond": 54.8,
       "MATH-500": 82.6,
       "SWE-bench Verified": 50.3,
@@ -2729,8 +2908,8 @@ const TIMELINE_DATA = [
       "GPQA Diamond": 62.6,
       "MATH-500": 88.8,
       "SWE-bench Verified": 49.8,
-      "HumanEval": 93.0,
-      "LiveCodeBench": 59.0,
+      "HumanEval": 93,
+      "LiveCodeBench": 59,
       "Chatbot Arena ELO": 1356
     }
   },
@@ -2837,13 +3016,47 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 75.0,
+      "MMLU-Pro": 75,
       "GPQA Diamond": 53.6,
       "MATH-500": 81.8,
       "SWE-bench Verified": 40.3,
-      "HumanEval": 88.0,
+      "HumanEval": 88,
       "LiveCodeBench": 50.3,
       "Chatbot Arena ELO": 1283
+    }
+  },
+  {
+    "id": "model-076",
+    "name": "LongCat-2.0",
+    "date": "2026-06-30",
+    "sortDate": "2026-06-30",
+    "month": "2026-06",
+    "monthName": "June",
+    "company": "Meituan",
+    "family": "LongCat",
+    "type": "LLM",
+    "category": "LLM",
+    "status": "GA",
+    "parameters": "~1.6T total / ~48B average active",
+    "architecture": "Sparse MoE",
+    "modalities": [],
+    "focus": [],
+    "open_weights": true,
+    "license": "",
+    "context": "",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "",
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 84.6,
+      "GPQA Diamond": 67.8,
+      "MATH-500": 91.9,
+      "SWE-bench Verified": 55.9,
+      "HumanEval": 95.1,
+      "LiveCodeBench": 64.5,
+      "Chatbot Arena ELO": 1386
     }
   },
   {
@@ -2879,40 +3092,6 @@ const TIMELINE_DATA = [
       "LiveCodeBench": 65.3,
       "Chatbot Arena ELO": 1396,
       "MMMU (Multimodal)": 75.9
-    }
-  },
-  {
-    "id": "model-076",
-    "name": "LongCat-2.0",
-    "date": "2026-06-30",
-    "sortDate": "2026-06-30",
-    "month": "2026-06",
-    "monthName": "June",
-    "company": "Meituan",
-    "family": "LongCat",
-    "type": "LLM",
-    "category": "LLM",
-    "status": "GA",
-    "parameters": "~1.6T total / ~48B average active",
-    "architecture": "Sparse MoE",
-    "modalities": [],
-    "focus": [],
-    "open_weights": true,
-    "license": "",
-    "context": "",
-    "languages": "",
-    "variants": [],
-    "reasoning_effort": [],
-    "availability": "",
-    "note": "",
-    "benchmarks": {
-      "MMLU-Pro": 84.6,
-      "GPQA Diamond": 67.8,
-      "MATH-500": 91.9,
-      "SWE-bench Verified": 55.9,
-      "HumanEval": 95.1,
-      "LiveCodeBench": 64.5,
-      "Chatbot Arena ELO": 1386
     }
   },
   {
@@ -2979,19 +3158,19 @@ const TIMELINE_DATA = [
       "MATH-500": 63.9,
       "SWE-bench Verified": 22.7,
       "HumanEval": 74.3,
-      "LiveCodeBench": 36.0,
+      "LiveCodeBench": 36,
       "Chatbot Arena ELO": 1162
     }
   },
   {
-    "id": "model-083",
-    "name": "GPT-5.6 Luna",
+    "id": "model-080",
+    "name": "Muse Spark 1.1",
     "date": "2026-07-09",
     "sortDate": "2026-07-09",
     "month": "2026-07",
     "monthName": "July",
-    "company": "OpenAI",
-    "family": "GPT-5.6",
+    "company": "Meta",
+    "family": "Muse Spark",
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
@@ -3008,14 +3187,14 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 89.1,
-      "GPQA Diamond": 74.8,
-      "MATH-500": 96.2,
-      "SWE-bench Verified": 65.2,
-      "HumanEval": 97.5,
-      "LiveCodeBench": 72.0,
-      "Chatbot Arena ELO": 1442,
-      "MMMU (Multimodal)": 79.9
+      "MMLU-Pro": 80.9,
+      "GPQA Diamond": 61.5,
+      "MATH-500": 88.1,
+      "SWE-bench Verified": 48.4,
+      "HumanEval": 92.5,
+      "LiveCodeBench": 58,
+      "Chatbot Arena ELO": 1342,
+      "MMMU (Multimodal)": 70.7
     }
   },
   {
@@ -3043,7 +3222,7 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 89.0,
+      "MMLU-Pro": 89,
       "GPQA Diamond": 74.7,
       "MATH-500": 96.1,
       "SWE-bench Verified": 65.1,
@@ -3078,7 +3257,7 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 89.0,
+      "MMLU-Pro": 89,
       "GPQA Diamond": 74.7,
       "MATH-500": 96.1,
       "SWE-bench Verified": 65.1,
@@ -3089,14 +3268,14 @@ const TIMELINE_DATA = [
     }
   },
   {
-    "id": "model-080",
-    "name": "Muse Spark 1.1",
+    "id": "model-083",
+    "name": "GPT-5.6 Luna",
     "date": "2026-07-09",
     "sortDate": "2026-07-09",
     "month": "2026-07",
     "monthName": "July",
-    "company": "Meta",
-    "family": "Muse Spark",
+    "company": "OpenAI",
+    "family": "GPT-5.6",
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
@@ -3113,14 +3292,14 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 80.9,
-      "GPQA Diamond": 61.5,
-      "MATH-500": 88.1,
-      "SWE-bench Verified": 48.4,
-      "HumanEval": 92.5,
-      "LiveCodeBench": 58.0,
-      "Chatbot Arena ELO": 1342,
-      "MMMU (Multimodal)": 70.7
+      "MMLU-Pro": 89.1,
+      "GPQA Diamond": 74.8,
+      "MATH-500": 96.2,
+      "SWE-bench Verified": 65.2,
+      "HumanEval": 97.5,
+      "LiveCodeBench": 72,
+      "Chatbot Arena ELO": 1442,
+      "MMMU (Multimodal)": 79.9
     }
   },
   {
@@ -3149,7 +3328,7 @@ const TIMELINE_DATA = [
     "note": "",
     "benchmarks": {
       "MMLU-Pro": 81.4,
-      "GPQA Diamond": 62.0,
+      "GPQA Diamond": 62,
       "MATH-500": 88.5,
       "SWE-bench Verified": 49.1,
       "HumanEval": 92.8,
@@ -3222,7 +3401,7 @@ const TIMELINE_DATA = [
     "note": "",
     "benchmarks": {
       "MMLU-Pro": 81.3,
-      "GPQA Diamond": 62.0,
+      "GPQA Diamond": 62,
       "MATH-500": 88.4,
       "SWE-bench Verified": 49.1,
       "HumanEval": 92.8,
@@ -3302,8 +3481,8 @@ const TIMELINE_DATA = [
     }
   },
   {
-    "id": "model-091",
-    "name": "Gemini 3.5 Flash Cyber",
+    "id": "model-089",
+    "name": "Gemini 3.6 Flash",
     "date": "2026-07-21",
     "sortDate": "2026-07-21",
     "month": "2026-07",
@@ -3316,9 +3495,7 @@ const TIMELINE_DATA = [
     "parameters": "",
     "architecture": "",
     "modalities": [],
-    "focus": [
-      "cybersecurity"
-    ],
+    "focus": [],
     "open_weights": null,
     "license": "",
     "context": "",
@@ -3328,15 +3505,14 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 80.9,
-      "GPQA Diamond": 61.4,
-      "MATH-500": 88.1,
-      "SWE-bench Verified": 48.4,
-      "HumanEval": 92.5,
-      "LiveCodeBench": 58.0,
-      "Chatbot Arena ELO": 1341,
-      "MMMU (Multimodal)": 70.7,
-      "CyberSecBench": 85.9
+      "MMLU-Pro": 84.8,
+      "GPQA Diamond": 68,
+      "MATH-500": 92.1,
+      "SWE-bench Verified": 56.2,
+      "HumanEval": 95.2,
+      "LiveCodeBench": 64.8,
+      "Chatbot Arena ELO": 1389,
+      "MMMU (Multimodal)": 75.5
     }
   },
   {
@@ -3375,8 +3551,8 @@ const TIMELINE_DATA = [
     }
   },
   {
-    "id": "model-089",
-    "name": "Gemini 3.6 Flash",
+    "id": "model-091",
+    "name": "Gemini 3.5 Flash Cyber",
     "date": "2026-07-21",
     "sortDate": "2026-07-21",
     "month": "2026-07",
@@ -3389,7 +3565,9 @@ const TIMELINE_DATA = [
     "parameters": "",
     "architecture": "",
     "modalities": [],
-    "focus": [],
+    "focus": [
+      "cybersecurity"
+    ],
     "open_weights": null,
     "license": "",
     "context": "",
@@ -3399,14 +3577,15 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 84.8,
-      "GPQA Diamond": 68.0,
-      "MATH-500": 92.1,
-      "SWE-bench Verified": 56.2,
-      "HumanEval": 95.2,
-      "LiveCodeBench": 64.8,
-      "Chatbot Arena ELO": 1389,
-      "MMMU (Multimodal)": 75.5
+      "MMLU-Pro": 80.9,
+      "GPQA Diamond": 61.4,
+      "MATH-500": 88.1,
+      "SWE-bench Verified": 48.4,
+      "HumanEval": 92.5,
+      "LiveCodeBench": 58,
+      "Chatbot Arena ELO": 1341,
+      "MMMU (Multimodal)": 70.7,
+      "CyberSecBench": 85.9
     }
   },
   {
@@ -3435,7 +3614,7 @@ const TIMELINE_DATA = [
     "note": "",
     "benchmarks": {
       "MMLU-Pro": 68.4,
-      "GPQA Diamond": 47.0,
+      "GPQA Diamond": 47,
       "MATH-500": 74.6,
       "SWE-bench Verified": 32.6,
       "HumanEval": 82.6,
@@ -3504,12 +3683,58 @@ const TIMELINE_DATA = [
     "benchmarks": {
       "MMLU-Pro": 88.9,
       "GPQA Diamond": 74.5,
-      "MATH-500": 96.0,
+      "MATH-500": 96,
       "SWE-bench Verified": 64.9,
       "HumanEval": 97.3,
       "LiveCodeBench": 71.7,
       "Chatbot Arena ELO": 1439,
       "MMMU (Multimodal)": 79.6
+    }
+  },
+  {
+    "id": "model-128",
+    "name": "A.X K2",
+    "date": "2026-07-28",
+    "sortDate": "2026-07-28",
+    "month": "2026-07",
+    "monthName": "July",
+    "company": "SK Telecom",
+    "family": "A.X",
+    "type": "MLLM",
+    "category": "Omni",
+    "status": "GA",
+    "parameters": "688B (Multi-modal 688B parameters)",
+    "architecture": "Multimodal Agentic Architecture (Omni / Native End-to-End)",
+    "modalities": [
+      "language",
+      "vision",
+      "speech",
+      "agent actions"
+    ],
+    "focus": [
+      "Real-time multimodal conversation",
+      "AI for All national service",
+      "Telco AI Agent"
+    ],
+    "open_weights": false,
+    "license": "Proprietary",
+    "context": "256K",
+    "languages": "Korean, English",
+    "variants": [
+      "K2 688B Omni"
+    ],
+    "reasoning_effort": [],
+    "availability": "SKT A. Service / Government AI for All",
+    "note": "688B 파라미터 규모의 차세대 멀티모달 옴니 파운데이션 모델. 음성·영상·문서를 통합 인식하며 SKT '전국민 AI(AI for All)' 서비스의 핵심 엔진.",
+    "benchmarks": {
+      "Chatbot Arena ELO": 1378,
+      "MMLU-Pro": 83.6,
+      "GPQA Diamond": 66.1,
+      "MATH-500": 90.8,
+      "SWE-bench Verified": 53.4,
+      "HumanEval": 94.2,
+      "LiveCodeBench": 62.4,
+      "MMMU (Multimodal)": 73.8
     }
   },
   {
@@ -3538,7 +3763,7 @@ const TIMELINE_DATA = [
     "note": "",
     "benchmarks": {
       "MMLU-Pro": 80.5,
-      "GPQA Diamond": 61.0,
+      "GPQA Diamond": 61,
       "MATH-500": 87.7,
       "SWE-bench Verified": 47.8,
       "HumanEval": 92.3,
@@ -3574,8 +3799,8 @@ const TIMELINE_DATA = [
     "benchmarks": {
       "MMLU-Pro": 84.7,
       "GPQA Diamond": 67.8,
-      "MATH-500": 92.0,
-      "SWE-bench Verified": 56.0,
+      "MATH-500": 92,
+      "SWE-bench Verified": 56,
       "HumanEval": 95.1,
       "LiveCodeBench": 64.6,
       "Chatbot Arena ELO": 1386
@@ -3677,12 +3902,47 @@ const TIMELINE_DATA = [
     "note": "Technical/public-release dates differ slightly by source.",
     "benchmarks": {
       "MMLU-Pro": 82.1,
-      "GPQA Diamond": 63.0,
+      "GPQA Diamond": 63,
       "MATH-500": 89.1,
       "SWE-bench Verified": 50.3,
       "HumanEval": 93.2,
       "LiveCodeBench": 59.4,
       "Chatbot Arena ELO": 1360
+    }
+  },
+  {
+    "id": "model-100",
+    "name": "Qwen3.8-2.4T-A95B",
+    "date": "2026-08-12",
+    "sortDate": "2026-08-12",
+    "month": "2026-08",
+    "monthName": "August",
+    "company": "Alibaba",
+    "family": "Qwen3.8",
+    "type": "MLLM",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "2.4T total / 95B active (MoE)",
+    "architecture": "Sparse MoE",
+    "modalities": [],
+    "focus": [],
+    "open_weights": true,
+    "license": "",
+    "context": "",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "",
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 89.4,
+      "GPQA Diamond": 75.1,
+      "MATH-500": 96.4,
+      "SWE-bench Verified": 65.7,
+      "HumanEval": 97.6,
+      "LiveCodeBench": 72.3,
+      "Chatbot Arena ELO": 1446,
+      "MMMU (Multimodal)": 80.1
     }
   },
   {
@@ -3729,38 +3989,46 @@ const TIMELINE_DATA = [
     }
   },
   {
-    "id": "model-100",
-    "name": "Qwen3.8-2.4T-A95B",
+    "id": "model-129",
+    "name": "K-EXAONE 2.0",
     "date": "2026-08-12",
     "sortDate": "2026-08-12",
     "month": "2026-08",
     "monthName": "August",
-    "company": "Alibaba",
-    "family": "Qwen3.8",
-    "type": "MLLM",
-    "category": "MLLM",
+    "company": "LG AI Research",
+    "family": "EXAONE",
+    "type": "LLM",
+    "category": "Reasoning",
     "status": "GA",
-    "parameters": "2.4T total / 95B active (MoE)",
-    "architecture": "Sparse MoE",
-    "modalities": [],
-    "focus": [],
+    "parameters": "~260B total / ~28B active (Sparse MoE)",
+    "architecture": "Sparse Mixture-of-Experts (MoE)",
+    "modalities": [
+      "language",
+      "code"
+    ],
+    "focus": [
+      "Sovereign AI",
+      "Korean deep reasoning",
+      "materials science / industrial AI"
+    ],
     "open_weights": true,
-    "license": "",
-    "context": "",
-    "languages": "",
-    "variants": [],
+    "license": "EXAONE Open License",
+    "context": "256K",
+    "languages": "Korean, English",
+    "variants": [
+      "260B MoE"
+    ],
     "reasoning_effort": [],
-    "availability": "",
-    "note": "",
+    "availability": "Open Weights (Research & Sovereign AI)",
+    "note": "한국 정부 독자 소버린 AI 파운데이션 모델 프로젝트의 일환으로 공개된 대규모 MoE 추론 모델. 물질 과학 및 산업 도메인 특화 지식 탑재.",
     "benchmarks": {
-      "MMLU-Pro": 89.4,
-      "GPQA Diamond": 75.1,
-      "MATH-500": 96.4,
-      "SWE-bench Verified": 65.7,
-      "HumanEval": 97.6,
-      "LiveCodeBench": 72.3,
-      "Chatbot Arena ELO": 1446,
-      "MMMU (Multimodal)": 80.1
+      "Chatbot Arena ELO": 1365,
+      "MMLU-Pro": 82.8,
+      "GPQA Diamond": 64.6,
+      "MATH-500": 90.1,
+      "SWE-bench Verified": 51.7,
+      "HumanEval": 93.6,
+      "LiveCodeBench": 60.5
     }
   },
   {
@@ -3788,7 +4056,7 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 88.0,
+      "MMLU-Pro": 88,
       "GPQA Diamond": 73.5,
       "MATH-500": 95.3,
       "SWE-bench Verified": 63.6,
@@ -3837,40 +4105,6 @@ const TIMELINE_DATA = [
     }
   },
   {
-    "id": "model-105",
-    "name": "GLM-5.3",
-    "date": "2026-08-14",
-    "sortDate": "2026-08-14",
-    "month": "2026-08",
-    "monthName": "August",
-    "company": "Z.ai",
-    "family": "GLM",
-    "type": "LLM",
-    "category": "LLM",
-    "status": "GA",
-    "parameters": "~130B (MoE)",
-    "architecture": "Sparse MoE",
-    "modalities": [],
-    "focus": [],
-    "open_weights": true,
-    "license": "",
-    "context": "",
-    "languages": "",
-    "variants": [],
-    "reasoning_effort": [],
-    "availability": "",
-    "note": "",
-    "benchmarks": {
-      "MMLU-Pro": 81.6,
-      "GPQA Diamond": 62.3,
-      "MATH-500": 88.7,
-      "SWE-bench Verified": 49.5,
-      "HumanEval": 92.9,
-      "LiveCodeBench": 58.8,
-      "Chatbot Arena ELO": 1353
-    }
-  },
-  {
     "id": "model-104",
     "name": "Qwen3.8-27B",
     "date": "2026-08-14",
@@ -3906,6 +4140,40 @@ const TIMELINE_DATA = [
     }
   },
   {
+    "id": "model-105",
+    "name": "GLM-5.3",
+    "date": "2026-08-14",
+    "sortDate": "2026-08-14",
+    "month": "2026-08",
+    "monthName": "August",
+    "company": "Z.ai",
+    "family": "GLM",
+    "type": "LLM",
+    "category": "LLM",
+    "status": "GA",
+    "parameters": "~130B (MoE)",
+    "architecture": "Sparse MoE",
+    "modalities": [],
+    "focus": [],
+    "open_weights": true,
+    "license": "",
+    "context": "",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "",
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 81.6,
+      "GPQA Diamond": 62.3,
+      "MATH-500": 88.7,
+      "SWE-bench Verified": 49.5,
+      "HumanEval": 92.9,
+      "LiveCodeBench": 58.8,
+      "Chatbot Arena ELO": 1353
+    }
+  },
+  {
     "id": "model-106",
     "name": "DeepSeek-V4-Flash Vision Exp",
     "date": "2026-08-21",
@@ -3935,9 +4203,43 @@ const TIMELINE_DATA = [
       "MATH-500": 91.5,
       "SWE-bench Verified": 55.1,
       "HumanEval": 94.8,
-      "LiveCodeBench": 64.0,
+      "LiveCodeBench": 64,
       "Chatbot Arena ELO": 1378,
       "MMMU (Multimodal)": 74.8
+    }
+  },
+  {
+    "id": "model-107",
+    "name": "Ling-3.0-tiny",
+    "date": "2026-08-21~22",
+    "sortDate": "2026-08-21",
+    "month": "2026-08",
+    "monthName": "August",
+    "company": "Ant Group / InclusionAI",
+    "family": "Ling 3.0",
+    "type": "LLM",
+    "category": "LLM",
+    "status": "GA",
+    "parameters": "~8B",
+    "architecture": "Dense Linear Attention",
+    "modalities": [],
+    "focus": [],
+    "open_weights": true,
+    "license": "",
+    "context": "",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "",
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 55.5,
+      "GPQA Diamond": 35.1,
+      "MATH-500": 63.1,
+      "SWE-bench Verified": 21.1,
+      "HumanEval": 73.7,
+      "LiveCodeBench": 34.8,
+      "Chatbot Arena ELO": 1146
     }
   },
   {
@@ -3978,40 +4280,6 @@ const TIMELINE_DATA = [
     }
   },
   {
-    "id": "model-107",
-    "name": "Ling-3.0-tiny",
-    "date": "2026-08-21~22",
-    "sortDate": "2026-08-21",
-    "month": "2026-08",
-    "monthName": "August",
-    "company": "Ant Group / InclusionAI",
-    "family": "Ling 3.0",
-    "type": "LLM",
-    "category": "LLM",
-    "status": "GA",
-    "parameters": "~8B",
-    "architecture": "Dense Linear Attention",
-    "modalities": [],
-    "focus": [],
-    "open_weights": true,
-    "license": "",
-    "context": "",
-    "languages": "",
-    "variants": [],
-    "reasoning_effort": [],
-    "availability": "",
-    "note": "",
-    "benchmarks": {
-      "MMLU-Pro": 55.5,
-      "GPQA Diamond": 35.1,
-      "MATH-500": 63.1,
-      "SWE-bench Verified": 21.1,
-      "HumanEval": 73.7,
-      "LiveCodeBench": 34.8,
-      "Chatbot Arena ELO": 1146
-    }
-  },
-  {
     "id": "model-109",
     "name": "Granite 4.2",
     "date": "2026-08-25",
@@ -4041,47 +4309,13 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "speech-only members omitted",
     "benchmarks": {
-      "MMLU-Pro": 76.0,
+      "MMLU-Pro": 76,
       "GPQA Diamond": 54.9,
       "MATH-500": 82.6,
       "SWE-bench Verified": 41.8,
       "HumanEval": 88.5,
       "LiveCodeBench": 51.4,
       "Chatbot Arena ELO": 1298
-    }
-  },
-  {
-    "id": "model-111",
-    "name": "GLM-5.3-Flash",
-    "date": "2026-08-26",
-    "sortDate": "2026-08-26",
-    "month": "2026-08",
-    "monthName": "August",
-    "company": "Z.ai",
-    "family": "GLM",
-    "type": "LLM",
-    "category": "LLM",
-    "status": "GA",
-    "parameters": "~30B / ~3B active",
-    "architecture": "Sparse MoE",
-    "modalities": [],
-    "focus": [],
-    "open_weights": true,
-    "license": "",
-    "context": "",
-    "languages": "",
-    "variants": [],
-    "reasoning_effort": [],
-    "availability": "",
-    "note": "",
-    "benchmarks": {
-      "MMLU-Pro": 81.6,
-      "GPQA Diamond": 62.4,
-      "MATH-500": 88.7,
-      "SWE-bench Verified": 49.5,
-      "HumanEval": 92.9,
-      "LiveCodeBench": 58.8,
-      "Chatbot Arena ELO": 1353
     }
   },
   {
@@ -4117,6 +4351,40 @@ const TIMELINE_DATA = [
       "LiveCodeBench": 59.8,
       "Chatbot Arena ELO": 1366,
       "MMMU (Multimodal)": 72.2
+    }
+  },
+  {
+    "id": "model-111",
+    "name": "GLM-5.3-Flash",
+    "date": "2026-08-26",
+    "sortDate": "2026-08-26",
+    "month": "2026-08",
+    "monthName": "August",
+    "company": "Z.ai",
+    "family": "GLM",
+    "type": "LLM",
+    "category": "LLM",
+    "status": "GA",
+    "parameters": "~30B / ~3B active",
+    "architecture": "Sparse MoE",
+    "modalities": [],
+    "focus": [],
+    "open_weights": true,
+    "license": "",
+    "context": "",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "",
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 81.6,
+      "GPQA Diamond": 62.4,
+      "MATH-500": 88.7,
+      "SWE-bench Verified": 49.5,
+      "HumanEval": 92.9,
+      "LiveCodeBench": 58.8,
+      "Chatbot Arena ELO": 1353
     }
   },
   {
@@ -4179,9 +4447,9 @@ const TIMELINE_DATA = [
     "note": "",
     "benchmarks": {
       "MMLU-Pro": 87.6,
-      "GPQA Diamond": 73.0,
-      "MATH-500": 95.0,
-      "SWE-bench Verified": 63.0,
+      "GPQA Diamond": 73,
+      "MATH-500": 95,
+      "SWE-bench Verified": 63,
       "HumanEval": 96.7,
       "LiveCodeBench": 70.3,
       "Chatbot Arena ELO": 1420,
@@ -4255,7 +4523,7 @@ const TIMELINE_DATA = [
       "HumanEval": 95.5,
       "LiveCodeBench": 65.4,
       "Chatbot Arena ELO": 1398,
-      "MMMU (Multimodal)": 76.0
+      "MMMU (Multimodal)": 76
     }
   }
 ];
@@ -4434,183 +4702,32 @@ const COMPANY_META = {
     "flag": "🇺🇸",
     "color": "from-gray-300 to-slate-400",
     "badge": "bg-slate-400/10 text-slate-300 border-slate-400/30"
+  },
+  "LG AI Research": {
+    "country": "KR",
+    "flag": "🇰🇷",
+    "color": "from-rose-500 to-red-600",
+    "badge": "bg-rose-500/10 text-rose-300 border-rose-500/30"
+  },
+  "LG": {
+    "country": "KR",
+    "flag": "🇰🇷",
+    "color": "from-rose-500 to-red-600",
+    "badge": "bg-rose-500/10 text-rose-300 border-rose-500/30"
+  },
+  "SK Telecom": {
+    "country": "KR",
+    "flag": "🇰🇷",
+    "color": "from-red-500 to-orange-500",
+    "badge": "bg-red-500/10 text-red-300 border-red-500/30"
+  },
+  "SKT": {
+    "country": "KR",
+    "flag": "🇰🇷",
+    "color": "from-red-500 to-orange-500",
+    "badge": "bg-red-500/10 text-red-300 border-red-500/30"
   }
 };
-
-const FAMILY_FLOWS = [
-  {
-    "family": "Qwen",
-    "steps": [
-      "Qwen3.5",
-      "Qwen3.6",
-      "Qwen3.7",
-      "Qwen3.8",
-      "Qwen3.8-Flash-Next"
-    ]
-  },
-  {
-    "family": "DeepSeek",
-    "steps": [
-      "V4 Preview",
-      "V4 Flash",
-      "V4 Pro",
-      "V4 Flash Vision Exp"
-    ]
-  },
-  {
-    "family": "Claude",
-    "steps": [
-      "Opus 4.6",
-      "Sonnet 4.6",
-      "Opus 4.7",
-      "Opus 4.8",
-      "Fable/Mythos 5",
-      "Sonnet 5",
-      "Opus 5",
-      "Fable/Mythos 5.1"
-    ]
-  },
-  {
-    "family": "GPT",
-    "steps": [
-      "GPT-5.3",
-      "GPT-5.4",
-      "GPT-5.5",
-      "GPT-5.6"
-    ]
-  },
-  {
-    "family": "Gemini",
-    "steps": [
-      "Gemini 3.5 Flash",
-      "Gemini 3.6 Flash",
-      "Gemini 3.7 Flash"
-    ]
-  },
-  {
-    "family": "Grok",
-    "steps": [
-      "Grok 4.5",
-      "Grok 4.6"
-    ]
-  },
-  {
-    "family": "GLM",
-    "steps": [
-      "GLM-5",
-      "GLM-5.1",
-      "GLM-5.2",
-      "GLM-5.3"
-    ]
-  },
-  {
-    "family": "Kimi",
-    "steps": [
-      "K2.5",
-      "K2.6",
-      "K2.7 Code",
-      "K3"
-    ]
-  },
-  {
-    "family": "Muse Spark",
-    "steps": [
-      "Spark",
-      "1.1",
-      "1.2",
-      "1.3"
-    ]
-  },
-  {
-    "family": "Ling / Ring",
-    "steps": [
-      "Ling-2.6-1T / Ring-2.6-1T",
-      "Ling-3.0-tiny / Ling-3.0-flash"
-    ]
-  },
-  {
-    "family": "ERNIE",
-    "steps": [
-      "ERNIE 5.0",
-      "ERNIE 5.1"
-    ]
-  },
-  {
-    "family": "LongCat",
-    "steps": [
-      "Flash-Thinking",
-      "Flash-Lite",
-      "Flash-Omni",
-      "LongCat 2.0"
-    ]
-  },
-  {
-    "family": "MiMo",
-    "steps": [
-      "V2-Pro / V2-Omni",
-      "V2.5 / V2.5-Pro"
-    ]
-  },
-  {
-    "family": "MiniMax",
-    "steps": [
-      "M2.5",
-      "M2.7",
-      "M3"
-    ]
-  },
-  {
-    "family": "Mistral",
-    "steps": [
-      "Small 4",
-      "Medium 3.5"
-    ]
-  },
-  {
-    "family": "Granite",
-    "steps": [
-      "Granite 4.1",
-      "Granite 4.2"
-    ]
-  },
-  {
-    "family": "Motif",
-    "steps": [
-      "Motif 3 Beta",
-      "Motif 3"
-    ]
-  },
-  {
-    "family": "Laguna",
-    "steps": [
-      "M.1 / XS.2",
-      "XS 2.1 / S 2.1"
-    ]
-  }
-];
-
-const UNCONFIRMED_DATA = [
-  {
-    "name": "Microsoft / Phi",
-    "description": "No major new 2026 Phi LLM/MLLM release confidently identified yet. Do not automatically count Phi models released in 2025."
-  },
-  {
-    "name": "Ai2 / OLMo",
-    "description": "No major general-purpose OLMo LLM release confidently identified yet for 2026-01-01 ~ 2026-09-04 in this pass."
-  },
-  {
-    "name": "OlmoEarth",
-    "description": "excluded because it is an Earth-observation representation model, not a general LLM/MLLM."
-  },
-  {
-    "name": "MolmoMotion",
-    "description": "excluded because it is a specialized vision/action prediction model rather than a general-purpose LLM/MLLM."
-  },
-  {
-    "name": "Nanbeige",
-    "description": "Nanbeige 4.x / 4.1 requires a more exact primary-source release-date verification before inserting it into the dated master timeline."
-  }
-];
 
 const SCOPE_DATA = {
   "period": "2026-01-01 ~ 2026-09-04",

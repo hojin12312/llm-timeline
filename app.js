@@ -13,6 +13,10 @@ function initApp() {
     console.error('TIMELINE_DATA is not loaded.');
     return;
   }
+  var sub = document.getElementById('header-subtitle');
+  if (sub) {
+    sub.textContent = '2026년 1월 1일 ~ 9월 4일 주요 파운데이션 모델 ' + TIMELINE_DATA.length + '개 출시 순서';
+  }
   renderMonthButtons();
   renderTimeline();
   setupScrollInteractions();
@@ -81,6 +85,12 @@ function getFilteredModels() {
   if (!searchQuery) return TIMELINE_DATA;
   var q = searchQuery.toLowerCase();
   return TIMELINE_DATA.filter(function(m) {
+    var aliases = '';
+    if (m.company.includes('LG') || m.family.includes('EXAONE')) aliases += ' lg 엘지 exaone 엑사원';
+    if (m.company.includes('SK') || m.family.includes('A.X')) aliases += ' sk skt 에스케이 a.x 에이닷';
+    if (m.company.includes('NAVER') || m.name.includes('HyperCLOVA')) aliases += ' naver 네이버 clova 클로바';
+    if (m.company.includes('Upstage') || m.name.includes('Solar')) aliases += ' upstage 업스테이지 solar 솔라';
+
     var text = [
       m.name,
       m.company,
@@ -88,7 +98,9 @@ function getFilteredModels() {
       m.parameters,
       m.architecture,
       m.type,
-      m.date
+      m.date,
+      m.note || '',
+      aliases
     ].join(' ').toLowerCase();
     return text.includes(q);
   });
