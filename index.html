@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ko" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026 LLM & MLLM Release Timeline | 파운데이션 모델 출시 타임라인</title>
+  <meta name="description" content="2026년 1월 1일부터 9월 4일까지 출시된 주요 LLM, MLLM, Omni 파운데이션 모델(115개)의 종합 출시 타임라인 및 세대별 진화 흐름">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              400: '#818cf8',
+              500: '#6366f1',
+              600: '#4f46e5',
+              900: '#312e81',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%3E<text y=%2226%22 font-size=%2226%22>⚡</text></svg>">
+</head>
+<body class="bg-[#090d16] text-slate-100 antialiased selection:bg-indigo-500 selection:text-white pb-20">
+
+  <!-- ================= TOP NAVIGATION BAR ================= -->
+  <header class="sticky top-0 z-40 w-full border-b border-slate-800/80 bg-[#090d16]/85 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      
+      <!-- Brand & Title -->
+      <div class="flex items-center gap-3">
+        <a href="#" class="flex items-center gap-2.5 group">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 via-purple-600 to-pink-500 flex items-center justify-center shadow-lg shadow-indigo-500/25 group-hover:scale-105 transition-transform">
+            <span class="text-base font-bold text-white">⚡</span>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="font-bold text-base tracking-tight text-white group-hover:text-indigo-300 transition-colors">LLM Timeline 2026</span>
+              <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-indigo-500/15 text-indigo-300 border border-indigo-500/30">2026.01 - 2026.09</span>
+            </div>
+            <p class="text-[11px] text-slate-400 hidden sm:block">2026 주요 LLM / MLLM 출시 타임라인</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Navigation Views -->
+      <nav class="hidden md:flex items-center gap-1 bg-slate-900/90 p-1 rounded-xl border border-slate-800">
+        <button id="tab-timeline" class="view-tab-btn active px-3.5 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all text-white bg-indigo-600 shadow-sm" onclick="switchView('timeline')">
+          <span>⏱️</span>
+          <span>타임라인</span>
+        </button>
+        <button id="tab-flow" class="view-tab-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all text-slate-400 hover:text-slate-200 hover:bg-slate-800/60" onclick="switchView('flow')">
+          <span>🧬</span>
+          <span>세대별 계보</span>
+        </button>
+        <button id="tab-grid" class="view-tab-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all text-slate-400 hover:text-slate-200 hover:bg-slate-800/60" onclick="switchView('grid')">
+          <span>🗂️</span>
+          <span>모델 카드</span>
+        </button>
+        <button id="tab-matrix" class="view-tab-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all text-slate-400 hover:text-slate-200 hover:bg-slate-800/60" onclick="switchView('matrix')">
+          <span>📊</span>
+          <span>데이터 매트릭스</span>
+        </button>
+        <button id="tab-scope" class="view-tab-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all text-slate-400 hover:text-slate-200 hover:bg-slate-800/60" onclick="switchView('scope')">
+          <span>📑</span>
+          <span>수집 기준</span>
+        </button>
+      </nav>
+
+      <!-- Right Action & GitHub -->
+      <div class="flex items-center gap-2">
+        <button onclick="document.getElementById('search-input').focus()" title="검색 단축키: /" class="hidden sm:flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-400 bg-slate-900 border border-slate-800 hover:border-slate-700 hover:text-slate-300 transition-colors">
+          <span>🔍</span>
+          <span>검색</span>
+          <kbd class="px-1.5 py-0.5 text-[10px] bg-slate-800 text-slate-400 rounded border border-slate-700 font-mono">/</kbd>
+        </button>
+
+        <a href="https://github.com/hojin12312/llm-timeline" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 bg-slate-900/90 border border-slate-800 hover:bg-slate-800 hover:text-white transition-all">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+          <span class="hidden xs:inline">GitHub</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Mobile View Bar -->
+    <div class="flex md:hidden overflow-x-auto px-4 py-2 gap-1.5 border-t border-slate-800/80 bg-[#090d16]">
+      <button class="mobile-tab-btn active whitespace-nowrap px-3 py-1 rounded-lg text-xs font-semibold bg-indigo-600 text-white" onclick="switchView('timeline')">⏱️ 타임라인</button>
+      <button class="mobile-tab-btn whitespace-nowrap px-3 py-1 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300" onclick="switchView('flow')">🧬 계보</button>
+      <button class="mobile-tab-btn whitespace-nowrap px-3 py-1 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300" onclick="switchView('grid')">🗂️ 카드</button>
+      <button class="mobile-tab-btn whitespace-nowrap px-3 py-1 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300" onclick="switchView('matrix')">📊 매트릭스</button>
+      <button class="mobile-tab-btn whitespace-nowrap px-3 py-1 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300" onclick="switchView('scope')">📑 기준</button>
+    </div>
+  </header>
+
+  <!-- ================= HERO HEADER & KPI METRICS ================= -->
+  <section class="relative overflow-hidden pt-10 pb-8 border-b border-slate-800/80">
+    <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-950/40 via-transparent to-transparent"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <!-- Title & Badges -->
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 mb-3">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>기간: 2026-01-01 ~ 2026-09-04 (기준 시점)</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          2026 주요 <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-400">LLM & MLLM</span> 출시 타임라인
+        </h1>
+        <p class="mt-3 text-sm sm:text-base text-slate-400 leading-relaxed">
+          글로벌 27개 주요 AI 연구소 및 빅테크 기업에서 공개한 115개 핵심 파운데이션 모델의 릴리즈 내역, 아키텍처 사양, 멀티모달 역량 및 세대별 진화 흐름을 한눈에 탐색하세요.
+        </p>
+      </div>
+
+      <!-- KPI Stat Cards -->
+      <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
+        
+        <div class="glass-panel p-4 border-slate-800/80 hover:border-indigo-500/30 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-medium text-slate-400">총 릴리즈 모델</span>
+            <span class="text-base">🚀</span>
+          </div>
+          <div class="mt-2 flex items-baseline gap-1.5">
+            <span class="text-2xl sm:text-3xl font-bold text-white tracking-tight" id="stat-total-models">115</span>
+            <span class="text-xs font-semibold text-indigo-400">개</span>
+          </div>
+          <p class="mt-1 text-[11px] text-slate-500">LLM 및 MLLM 모델</p>
+        </div>
+
+        <div class="glass-panel p-4 border-slate-800/80 hover:border-purple-500/30 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-medium text-slate-400">주요 AI 기업/연구소</span>
+            <span class="text-base">🏢</span>
+          </div>
+          <div class="mt-2 flex items-baseline gap-1.5">
+            <span class="text-2xl sm:text-3xl font-bold text-white tracking-tight" id="stat-total-companies">27</span>
+            <span class="text-xs font-semibold text-purple-400">개사</span>
+          </div>
+          <p class="mt-1 text-[11px] text-slate-500">OpenAI, Anthropic, NAVER 등</p>
+        </div>
+
+        <div class="glass-panel p-4 border-slate-800/80 hover:border-pink-500/30 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-medium text-slate-400">멀티모달 / Omni 비율</span>
+            <span class="text-base">👁️</span>
+          </div>
+          <div class="mt-2 flex items-baseline gap-1.5">
+            <span class="text-2xl sm:text-3xl font-bold text-white tracking-tight" id="stat-mllm-ratio">53%</span>
+            <span class="text-xs font-semibold text-pink-400">(61개)</span>
+          </div>
+          <p class="mt-1 text-[11px] text-slate-500">텍스트→옴니 파운데이션 전환</p>
+        </div>
+
+        <div class="glass-panel p-4 border-slate-800/80 hover:border-emerald-500/30 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-medium text-slate-400">세대별 패밀리 계보</span>
+            <span class="text-base">🧬</span>
+          </div>
+          <div class="mt-2 flex items-baseline gap-1.5">
+            <span class="text-2xl sm:text-3xl font-bold text-white tracking-tight" id="stat-families">18</span>
+            <span class="text-xs font-semibold text-emerald-400">계열</span>
+          </div>
+          <p class="mt-1 text-[11px] text-slate-500">Qwen, Claude, GPT, GLM 등</p>
+        </div>
+
+        <div class="glass-panel p-4 border-slate-800/80 hover:border-amber-500/30 transition-all col-span-2 sm:col-span-1">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-medium text-slate-400">국내 대표 모델 포함</span>
+            <span class="text-base">🇰🇷</span>
+          </div>
+          <div class="mt-2 flex items-baseline gap-1.5">
+            <span class="text-lg sm:text-xl font-bold text-emerald-300 tracking-tight">NAVER · Upstage</span>
+          </div>
+          <p class="mt-1 text-[11px] text-slate-500">SEED 4B / Solar Open 2</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SEARCH & INTERACTIVE FILTER BAR ================= -->
+  <section class="sticky top-16 z-30 bg-[#090d16]/95 backdrop-blur-md border-b border-slate-800/90 py-3.5 shadow-xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
+      
+      <!-- Upper Filter Row: Search & Dropdowns -->
+      <div class="flex flex-wrap items-center gap-2.5">
+        
+        <!-- Search Input Box -->
+        <div class="relative flex-1 min-w-[240px]">
+          <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400 text-sm">🔍</span>
+          <input 
+            type="text" 
+            id="search-input" 
+            placeholder="모델명, 기업명, 아키텍처(MoE, MLA), 파라미터 검색..." 
+            class="w-full pl-9 pr-9 py-2 bg-slate-900 border border-slate-800 rounded-xl text-xs sm:text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+            oninput="handleSearch(this.value)"
+          >
+          <button id="search-clear-btn" class="hidden absolute inset-y-0 right-0 pr-3 flex items-center text-slate-500 hover:text-slate-300 text-sm" onclick="clearSearch()">✕</button>
+        </div>
+
+        <!-- Company Select Filter -->
+        <div class="relative">
+          <select 
+            id="filter-company" 
+            class="appearance-none bg-slate-900 border border-slate-800 rounded-xl py-2 pl-3 pr-8 text-xs sm:text-sm text-slate-300 font-medium hover:border-slate-700 focus:outline-none focus:border-indigo-500 cursor-pointer transition-colors"
+            onchange="handleFilterCompany(this.value)"
+          >
+            <option value="all">🏢 전체 기업 / 연구소 (27)</option>
+            <!-- Generated dynamically -->
+          </select>
+          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-400 text-xs">▼</div>
+        </div>
+
+        <!-- Category Filter -->
+        <div class="relative">
+          <select 
+            id="filter-category" 
+            class="appearance-none bg-slate-900 border border-slate-800 rounded-xl py-2 pl-3 pr-8 text-xs sm:text-sm text-slate-300 font-medium hover:border-slate-700 focus:outline-none focus:border-indigo-500 cursor-pointer transition-colors"
+            onchange="handleFilterCategory(this.value)"
+          >
+            <option value="all">📦 전체 모델 유형</option>
+            <option value="MLLM">👁️ MLLM / 멀티모달</option>
+            <option value="Omni">🌐 Omni 통합 모델</option>
+            <option value="LLM">📝 순수 텍스트 LLM</option>
+            <option value="Reasoning">🧠 추론/사고 모델 (Reasoning)</option>
+          </select>
+          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-400 text-xs">▼</div>
+        </div>
+
+        <!-- Open Weights Toggle -->
+        <button 
+          id="btn-open-weights" 
+          class="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs sm:text-sm font-medium border border-slate-800 bg-slate-900 text-slate-400 hover:text-slate-200 hover:border-slate-700 transition-all"
+          onclick="toggleOpenWeights()"
+        >
+          <span class="w-2 h-2 rounded-full bg-slate-600" id="open-weights-dot"></span>
+          <span>오픈 웨이트만</span>
+        </button>
+
+        <!-- Status Filter -->
+        <div class="relative">
+          <select 
+            id="filter-status" 
+            class="appearance-none bg-slate-900 border border-slate-800 rounded-xl py-2 pl-3 pr-8 text-xs sm:text-sm text-slate-300 font-medium hover:border-slate-700 focus:outline-none focus:border-indigo-500 cursor-pointer transition-colors"
+            onchange="handleFilterStatus(this.value)"
+          >
+            <option value="all">🏷️ 전체 상태</option>
+            <option value="GA">정식 출시 (GA)</option>
+            <option value="Preview">프리뷰 (Preview)</option>
+            <option value="Beta">베타 (Beta)</option>
+            <option value="Experimental">실험적 (Exp)</option>
+          </select>
+          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-400 text-xs">▼</div>
+        </div>
+
+        <!-- Reset Button -->
+        <button 
+          id="btn-reset-filters" 
+          class="hidden px-3 py-2 rounded-xl text-xs font-semibold text-rose-400 bg-rose-500/10 border border-rose-500/20 hover:bg-rose-500/20 transition-all items-center gap-1"
+          onclick="resetAllFilters()"
+        >
+          <span>↺</span>
+          <span>초기화</span>
+        </button>
+
+      </div>
+
+      <!-- Lower Filter Row: Month Selector Chips -->
+      <div class="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar text-xs">
+        <span class="text-slate-400 font-medium mr-1 shrink-0">월별 선택:</span>
+        <button class="month-chip active shrink-0 px-2.5 py-1 rounded-lg font-semibold bg-indigo-600 text-white transition-colors" data-month="all" onclick="handleFilterMonth('all')">
+          전체 (115)
+        </button>
+        <button class="month-chip shrink-0 px-2.5 py-1 rounded-lg font-medium bg-slate-900 text-slate-400 hover:text-slate-200 hover:bg-slate-800 border border-slate-800 transition-colors" data-month="2026-01" onclick="handleFilterMonth('2026-01')">
+          1월 (3)
+        </button>
+        <button class="month-chip shrink-0 px-2.5 py-1 rounded-lg font-medium bg-slate-900 text-slate-400 hover:text-slate-200 hover:bg-slate-800 border border-slate-800 transition-colors" data-month="2026-02" onclick="handleFilterMonth('2026-02')">
+          2월 (14)
+        </button>
+        <button class="month-chip shrink-0 px-2.5 py-1 rounded-lg font-medium bg-slate-900 text-slate-400 hover:text-slate-200 hover:bg-slate-800 border border-slate-800 transition-colors" data-month="2026-03" onclick="handleFilterMonth('2026-03')">
+          3월 (17)
+        </button>
+        <button class="month-chip shrink-0 px-2.5 py-1 rounded-lg font-medium bg-slate-900 text-slate-400 hover:text-slate-200 hover:bg-slate-800 border border-slate-800 transition-colors" data-month="2026-04" onclick="handleFilterMonth('2026-04')">
+          4월 (20)
+        </button>
+        <button class="month-chip shrink-0 px-2.5 py-1 rounded-lg font-medium bg-slate-900 text-slate-400 hover:text-slate-200 hover:bg-slate-800 border border-slate-800 transition-colors" data-month="2026-05" onclick="handleFilterMonth('2026-05')">
+          5월 (5)
+        </button>
+        <button class="month-chip shrink-0 px-2.5 py-1 rounded-lg font-medium bg-slate-900 text-slate-400 hover:text-slate-200 hover:bg-slate-800 border border-slate-800 transition-colors" data-month="2026-06" onclick="handleFilterMonth('2026-06')">
+          6월 (15)
+        </button>
+        <button class="month-chip shrink-0 px-2.5 py-1 rounded-lg font-medium bg-slate-900 text-slate-400 hover:text-slate-200 hover:bg-slate-800 border border-slate-800 transition-colors" data-month="2026-07" onclick="handleFilterMonth('2026-07')">
+          7월 (18)
+        </button>
+        <button class="month-chip shrink-0 px-2.5 py-1 rounded-lg font-medium bg-slate-900 text-slate-400 hover:text-slate-200 hover:bg-slate-800 border border-slate-800 transition-colors" data-month="2026-08" onclick="handleFilterMonth('2026-08')">
+          8월 (20)
+        </button>
+        <button class="month-chip shrink-0 px-2.5 py-1 rounded-lg font-medium bg-slate-900 text-slate-400 hover:text-slate-200 hover:bg-slate-800 border border-slate-800 transition-colors" data-month="2026-09" onclick="handleFilterMonth('2026-09')">
+          9월 (3)
+        </button>
+      </div>
+
+      <!-- Active Filter Status Indicator -->
+      <div class="flex items-center justify-between text-xs text-slate-400 pt-1">
+        <div id="results-count-text">
+          <span class="text-slate-300 font-semibold" id="count-number">115</span>개 모델 표시 중
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-[11px] text-slate-500">카드 클릭 시 상세 사양 모달 제공</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= MAIN VIEWS CONTAINER ================= -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+
+    <!-- VIEW 1: TIMELINE VIEW -->
+    <div id="view-timeline" class="view-content space-y-12">
+      <!-- Generated via app.js -->
+    </div>
+
+    <!-- VIEW 2: GENERATIONAL FLOW VIEW -->
+    <div id="view-flow" class="view-content hidden space-y-8">
+      <div class="glass-panel p-6 border-slate-800/80 bg-slate-900/60">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">🧬</span>
+          <div>
+            <h2 class="text-xl font-bold text-white">2026 주요 모델 세대별 진화 계보 (Generational Flow)</h2>
+            <p class="text-xs sm:text-sm text-slate-400">동일 패밀리 라인업 내에서 2026년 상반기부터 9월 4일까지 진행된 세대별 버전 진화 및 분기 경로 (총 18개 핵심 패밀리)</p>
+          </div>
+        </div>
+      </div>
+      
+      <div id="flow-cards-container" class="grid grid-cols-1 gap-5">
+        <!-- Generated via app.js -->
+      </div>
+    </div>
+
+    <!-- VIEW 3: CATALOG (GRID) VIEW -->
+    <div id="view-grid" class="view-content hidden">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-lg font-bold text-white">모델 카탈로그 그리드</h2>
+        <div class="flex items-center gap-2 text-xs">
+          <span class="text-slate-400">정렬:</span>
+          <select id="grid-sort-select" class="bg-slate-900 border border-slate-800 rounded-lg px-2.5 py-1 text-slate-300 text-xs" onchange="handleGridSort(this.value)">
+            <option value="date-desc">최신순 (날짜 내림차순)</option>
+            <option value="date-asc">과거순 (날짜 오름차순)</option>
+            <option value="name-asc">이름순 (A-Z)</option>
+            <option value="company-asc">기업명순</option>
+          </select>
+        </div>
+      </div>
+      <div id="grid-cards-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- Generated via app.js -->
+      </div>
+    </div>
+
+    <!-- VIEW 4: DATA MATRIX VIEW -->
+    <div id="view-matrix" class="view-content hidden space-y-4">
+      <div class="glass-panel p-4 border-slate-800 flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <h2 class="text-lg font-bold text-white">2026 모델 데이터 매트릭스</h2>
+          <p class="text-xs text-slate-400">전체 115개 모델의 규격과 아키텍처 사양을 한눈에 비교하고 정렬할 수 있는 테이블 뷰</p>
+        </div>
+        <button class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 transition-colors flex items-center gap-1.5" onclick="exportDataAsCSV()">
+          <span>📥</span>
+          <span>CSV 다운로드</span>
+        </button>
+      </div>
+
+      <div class="overflow-x-auto rounded-xl border border-slate-800 glass-panel">
+        <table class="w-full text-left text-xs text-slate-300">
+          <thead class="bg-slate-900/90 text-slate-400 uppercase tracking-wider font-semibold border-b border-slate-800">
+            <tr>
+              <th class="px-4 py-3 cursor-pointer hover:text-white" onclick="sortMatrix('date')">출시일 ↕</th>
+              <th class="px-4 py-3 cursor-pointer hover:text-white" onclick="sortMatrix('name')">모델명 ↕</th>
+              <th class="px-4 py-3 cursor-pointer hover:text-white" onclick="sortMatrix('company')">기업 / 연구소 ↕</th>
+              <th class="px-4 py-3">패밀리</th>
+              <th class="px-4 py-3">유형</th>
+              <th class="px-4 py-3">파라미터 / 아키텍처</th>
+              <th class="px-4 py-3">상태</th>
+              <th class="px-4 py-3">오픈 여부</th>
+              <th class="px-4 py-3 text-right">상세</th>
+            </tr>
+          </thead>
+          <tbody id="matrix-tbody" class="divide-y divide-slate-800/60 font-sans">
+            <!-- Generated via app.js -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- VIEW 5: SCOPE & UNCONFIRMED VIEW -->
+    <div id="view-scope" class="view-content hidden space-y-8">
+      
+      <!-- Scope Definition Panel -->
+      <div class="glass-panel p-6 border-slate-800/80">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-2xl">📋</span>
+          <h2 class="text-xl font-bold text-white">데이터 수집 기준 및 범위 (Scope & Inclusions)</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs sm:text-sm">
+          <div class="space-y-3">
+            <h3 class="font-semibold text-emerald-400 flex items-center gap-1.5">
+              <span>✓</span> 포함 대상 (In-Scope)
+            </h3>
+            <ul class="space-y-2 text-slate-300">
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5">•</span>
+                <span><strong>LLM</strong> (Large Language Models, 대규모 언어 파운데이션 모델)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5">•</span>
+                <span><strong>MLLM / VLM / Omni</strong> (Vision-Language 및 Text·Image·Audio·Video를 통합 처리하는 옴니 파운데이션 모델)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5">•</span>
+                <span><strong>수집 기간:</strong> 2026-01-01부터 2026-09-04까지 확인된 주요 릴리즈</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="space-y-3">
+            <h3 class="font-semibold text-rose-400 flex items-center gap-1.5">
+              <span>✕</span> 제외 대상 (Excluded)
+            </h3>
+            <ul class="space-y-1.5 text-slate-400">
+              <li class="flex items-start gap-2"><span class="text-rose-400 mt-0.5">•</span><span>이미지 단독 생성 모델 (Image-generation-only)</span></li>
+              <li class="flex items-start gap-2"><span class="text-rose-400 mt-0.5">•</span><span>비디오 단독 생성 모델 (Video-generation-only, 예: ByteDance Seedance)</span></li>
+              <li class="flex items-start gap-2"><span class="text-rose-400 mt-0.5">•</span><span>OCR 전용 모델 / ASR 및 TTS 단독 모델</span></li>
+              <li class="flex items-start gap-2"><span class="text-rose-400 mt-0.5">•</span><span>임베딩 및 리랭커 모델 (Embedding / Reranker)</span></li>
+              <li class="flex items-start gap-2"><span class="text-rose-400 mt-0.5">•</span><span>가드레일 / 보상 단독 모델 (Reward / Guard-only)</span></li>
+              <li class="flex items-start gap-2"><span class="text-rose-400 mt-0.5">•</span><span>단순 양자화 변형 (FP8, NVFP4, INT4, GGUF 등)</span></li>
+              <li class="flex items-start gap-2"><span class="text-rose-400 mt-0.5">•</span><span>독립 제품군을 대표하지 않는 중간/베이스 체크포인트</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unconfirmed / Pending Examination Panel -->
+      <div class="glass-panel p-6 border-slate-800/80">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-2xl">⚠️</span>
+          <div>
+            <h2 class="text-xl font-bold text-white">미포함 및 1차 검증 보류 모델 설명</h2>
+            <p class="text-xs sm:text-sm text-slate-400">문서 조사 과정에서 언급되었으나 해당 기간 내 확정 릴리즈로 포함되지 않은 모델 및 그 사유</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="unconfirmed-container">
+          <!-- Generated via app.js -->
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ================= MODEL DETAIL MODAL ================= -->
+  <div id="model-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm" onclick="handleModalBackdropClick(event)">
+    <div id="modal-content-card" class="bg-[#0f172a] border border-slate-700/80 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl modal-enter p-6 space-y-6" onclick="event.stopPropagation()">
+      <!-- Populated via app.js -->
+    </div>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="mt-20 border-t border-slate-800/80 py-10 bg-[#090d16]/90 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 space-y-3">
+      <div class="flex items-center justify-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+        <span class="font-medium text-slate-400">GitHub Pages Automated Deployment</span>
+        <span>•</span>
+        <span>레포지토리: <a href="https://github.com/hojin12312/llm-timeline" class="text-indigo-400 hover:underline">hojin12312/llm-timeline</a></span>
+      </div>
+      <p class="text-slate-500">
+        본 타임라인 웹 페이지는 레포지토리의 <code class="bg-slate-900 px-1.5 py-0.5 rounded text-slate-400">조사 자료</code> 문서를 기반으로 100% 정밀 파싱 및 구조화하여 제작되었습니다.
+      </p>
+      <p class="text-[11px] text-slate-600">
+        데이터 수집 기준 기간: 2026-01-01 ~ 2026-09-04 • 총 115개 파운데이션 모델 수록
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
