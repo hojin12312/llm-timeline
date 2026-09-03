@@ -2,6 +2,7 @@
 
 var searchQuery = '';
 var activeModalId = null;
+var sortOrder = 'desc'; // Default: Newest first (9월 -> 1월)
 
 // Initialize robustly regardless of load timing
 function initApp() {
@@ -9,6 +10,7 @@ function initApp() {
     console.error('TIMELINE_DATA is not loaded.');
     return;
   }
+  renderMonthButtons();
   renderTimeline();
   setupScrollInteractions();
 }
@@ -17,6 +19,41 @@ if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initApp);
 } else {
   initApp();
+}
+
+// Render Month Buttons in sync with sort order
+function renderMonthButtons() {
+  var container = document.querySelector('.month-buttons');
+  if (!container) return;
+  var months = ['2026-01', '2026-02', '2026-03', '2026-04', '2026-05', '2026-06', '2026-07', '2026-08', '2026-09'];
+  if (sortOrder === 'desc') {
+    months.reverse();
+  }
+  var html = '<button class="month-btn active" data-month="all" onclick="jumpToMonth(\'all\')">전체 (' + TIMELINE_DATA.length + ')</button>';
+  months.forEach(function(m) {
+    var monthNum = parseInt(m.slice(5), 10);
+    html += '<button class="month-btn" data-month="' + m + '" onclick="jumpToMonth(\'' + m + '\')">' + monthNum + '월</button>';
+  });
+  container.innerHTML = html;
+}
+
+// Toggle Sort Order (최신순 ⇄ 과거순)
+function toggleSortOrder() {
+  sortOrder = (sortOrder === 'desc') ? 'asc' : 'desc';
+  var icon = document.getElementById('sort-toggle-icon');
+  var label = document.getElementById('sort-toggle-label');
+  if (label) {
+    label.textContent = (sortOrder === 'desc') ? '최신순 (9월→1월)' : '과거순 (1월→9월)';
+  }
+  if (icon) {
+    icon.textContent = (sortOrder === 'desc') ? '↓' : '↑';
+  }
+  renderMonthButtons();
+  renderTimeline();
+  var container = document.getElementById('timeline-scroll-container');
+  if (container) {
+    container.scrollTo({ left: 0, behavior: 'smooth' });
+  }
 }
 
 // Get filtered models
@@ -58,7 +95,11 @@ function renderTimeline() {
     dateGroups[m.date].push(m);
   });
 
+  // Sort dates by sortOrder (desc: 9월 -> 1월 / asc: 1월 -> 9월)
   var dates = Object.keys(dateGroups);
+  dates.sort(function(a, b) {
+    return (sortOrder === 'desc') ? b.localeCompare(a) : a.localeCompare(b);
+  });
 
   // Build HTML
   // Note: .timeline-axis-line spans the entire length of .timeline-track

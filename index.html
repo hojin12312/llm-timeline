@@ -29,6 +29,12 @@
         <button id="search-clear-btn" class="search-clear hidden" onclick="clearSearch()">✕</button>
       </div>
 
+      <!-- Sort Order Toggle Button -->
+      <button id="sort-toggle-btn" class="nav-btn" onclick="toggleSortOrder()" style="border: 1px solid #d1d5db; border-radius: 6px; padding: 6px 12px; font-weight: 600; display: inline-flex; align-items: center; gap: 4px; background: #f9fafb;" title="출시 순서 전환 (최신순 ⇄ 과거순)">
+        <span id="sort-toggle-icon">↓</span>
+        <span id="sort-toggle-label">최신순 (9월→1월)</span>
+      </button>
+
       <!-- Left / Right Scroll Buttons -->
       <div class="nav-button-group">
         <button class="nav-btn" onclick="scrollTimeline(-1)" title="이전으로 스크롤">← 이전</button>
