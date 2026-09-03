@@ -1,0 +1,1297 @@
+# ========================================================================
+# 2026 MAJOR LLM / MLLM RELEASE TIMELINE
+# ========================================================================
+# Period: 2026-01-01 ~ 2026-09-04
+#
+# Scope:
+#   - LLM
+#   - MLLM / VLM / Omni foundation models
+#
+# Excluded:
+#   - image-generation-only
+#   - video-generation-only
+#   - OCR-only
+#   - ASR/TTS-only
+#   - embedding/reranker
+#   - reward/guard-only models
+#   - simple quantized variants (FP8, NVFP4, INT4, GGUF, etc.)
+#   - intermediate/base checkpoints unless they represent a distinct product
+#
+# Companies / families covered:
+#   Alibaba / Qwen
+#   DeepSeek
+#   Meta / Muse Spark / Llama
+#   Z.ai / GLM
+#   Moonshot AI / Kimi
+#   OpenAI / GPT
+#   Anthropic / Claude
+#   Poolside / Laguna
+#   Thinking Machines Lab / Inkling
+#   Upstage / Solar Open
+#   NVIDIA / Nemotron
+#   Tencent / Hy (Hunyuan)
+#   Meituan / LongCat
+#   Xiaomi / MiMo
+#   MiniMax
+#   Motif Technologies / Motif
+#   Google DeepMind / Gemini
+#   xAI / Grok
+#   StepFun / Step
+#   Ant Group / InclusionAI / Ling / Ring
+#   ByteDance / Seed / Doubao
+#   Baidu / ERNIE
+#   Mistral AI
+#   Arcee AI / Trinity
+#   Cohere / Command / Aya / North
+#   Sarvam AI
+#   Nanbeige
+#   IBM / Granite
+#   Microsoft / Phi
+#   Ai2 / OLMo
+#   NAVER / HyperCLOVA X
+#
+# ========================================================================
+
+
+# ------------------------------------------------------------------------
+# JANUARY 2026
+# ------------------------------------------------------------------------
+
+2026-01-14
+  LongCat-Flash-Thinking-2601
+  - Company: Meituan
+  - Family: LongCat
+  - Type: LLM
+
+
+2026-01-27
+  Kimi K2.5
+  - Company: Moonshot AI
+  - Family: Kimi
+  - Type: MLLM
+
+  Trinity Large
+  - Company: Arcee AI
+  - Family: Trinity
+  - Type: LLM
+  - Architecture: Sparse MoE
+  - Parameters: 400B total / 13B active
+  - Release variants:
+      Trinity-Large-Preview
+      Trinity-Large-Base
+      Trinity-Large-TrueBase
+
+
+# ------------------------------------------------------------------------
+# FEBRUARY 2026
+# ------------------------------------------------------------------------
+
+2026-02-05
+  Claude Opus 4.6
+  - Company: Anthropic
+  - Family: Claude
+  - Type: MLLM
+
+  LongCat-Flash-Lite
+  - Company: Meituan
+  - Family: LongCat
+  - Type: LLM
+
+
+2026-02-06
+  GPT-5.3-Codex
+  - Company: OpenAI
+  - Family: GPT
+  - Type: LLM / agentic coding
+
+
+2026-02-06
+  ERNIE 5.0
+  - Company: Baidu
+  - Family: ERNIE
+  - Type: MLLM / unified omni model
+  - Parameters: 2.4T
+  - Modalities:
+      text
+      image
+      video
+      audio
+
+
+2026-02-11
+  GLM-5
+  - Company: Z.ai
+  - Family: GLM
+  - Type: LLM
+
+
+2026-02-12
+  MiniMax M2.5
+  - Company: MiniMax
+  - Family: MiniMax M
+  - Type: LLM
+
+  Step-3.5-Flash
+  - Company: StepFun
+  - Family: Step
+  - Type: LLM
+  - Parameters: ~196B
+
+
+2026-02-14
+  Seed 2.0
+  - Company: ByteDance
+  - Family: Seed / Doubao
+  - Type: MLLM / agentic foundation model
+
+
+2026-02-16
+  Qwen3.5-397B-A17B
+  - Company: Alibaba
+  - Family: Qwen3.5
+  - Type: MLLM
+
+
+2026-02-17
+  Claude Sonnet 4.6
+  - Company: Anthropic
+  - Family: Claude
+  - Type: MLLM
+
+  Tiny Aya
+  - Company: Cohere Labs
+  - Family: Aya
+  - Type: LLM
+  - Parameters: 3.35B
+  - Languages: 70+
+  - Variants:
+      Tiny Aya Global
+      Tiny Aya Earth
+      Tiny Aya Fire
+      Tiny Aya Water
+
+
+2026-02-24
+  Qwen3.5-122B-A10B
+  Qwen3.5-35B-A3B
+  Qwen3.5-27B
+  - Company: Alibaba
+  - Family: Qwen3.5
+  - Type: MLLM
+
+
+# ------------------------------------------------------------------------
+# MARCH 2026
+# ------------------------------------------------------------------------
+
+2026-03-02
+  Qwen3.5-9B
+  Qwen3.5-4B
+  Qwen3.5-2B
+  Qwen3.5-0.8B
+  - Company: Alibaba
+  - Family: Qwen3.5
+  - Type: MLLM
+
+
+2026-03-03
+  GPT-5.3 Instant
+  - Company: OpenAI
+  - Family: GPT
+  - Type: MLLM
+
+
+2026-03-05
+  GPT-5.4
+  GPT-5.4 Pro
+  - Company: OpenAI
+  - Family: GPT
+  - Type: MLLM
+
+
+2026-03-06
+  Sarvam 30B
+  Sarvam 105B
+  - Company: Sarvam AI
+  - Family: Sarvam
+  - Type: LLM
+  - Open weights: Yes
+
+
+2026-03-10
+  Nemotron 3 Super
+  - Company: NVIDIA
+  - Family: Nemotron 3
+  - Type: LLM
+  - Parameters: 120B total / ~12B active
+
+
+2026-03-11
+  LongCat-Flash-Omni-2603
+  - Company: Meituan
+  - Family: LongCat
+  - Type: MLLM
+
+
+2026-03-12
+  LongCat-Flash-Thinking
+  - Company: Meituan
+  - Family: LongCat
+  - Type: LLM
+  - Note: major 2026 revision
+
+
+2026-03-15
+  GLM-5-Turbo
+  - Company: Z.ai
+  - Family: GLM
+  - Type: LLM
+
+
+2026-03-16
+  Mistral Small 4
+  - Company: Mistral AI
+  - Family: Mistral Small
+  - Type: MLLM
+  - Open weights: Yes
+  - License: Apache 2.0
+  - Capabilities:
+      general chat
+      configurable reasoning
+      coding
+      agents
+      text + image input
+
+
+2026-03-18
+  GPT-5.4 mini
+  - Company: OpenAI
+  - Family: GPT
+  - Type: MLLM
+
+  MiniMax M2.7
+  - Company: MiniMax
+  - Family: MiniMax M
+  - Type: LLM
+
+  MiMo-V2-Pro
+  - Company: Xiaomi
+  - Family: MiMo
+  - Type: LLM
+
+  MiMo-V2-Omni
+  - Company: Xiaomi
+  - Family: MiMo
+  - Type: MLLM
+
+
+2026-03-30
+  Qwen3.5-Omni
+  - Company: Alibaba
+  - Family: Qwen3.5
+  - Type: MLLM / omni
+
+
+# ------------------------------------------------------------------------
+# APRIL 2026
+# ------------------------------------------------------------------------
+
+2026-04-01
+  GLM-5V-Turbo
+  - Company: Z.ai
+  - Family: GLM
+  - Type: MLLM
+
+
+2026-04-02
+  Qwen3.6-Plus
+  - Company: Alibaba
+  - Family: Qwen3.6
+  - Type: MLLM
+
+
+2026-04-07
+  GLM-5.1
+  - Company: Z.ai
+  - Family: GLM
+  - Type: LLM
+
+
+2026-04-08
+  Muse Spark
+  - Company: Meta
+  - Family: Muse Spark
+  - Type: MLLM
+
+
+2026-04-16
+  Qwen3.6-35B-A3B
+  - Company: Alibaba
+  - Family: Qwen3.6
+  - Type: MLLM
+
+  Claude Opus 4.7
+  - Company: Anthropic
+  - Family: Claude
+  - Type: MLLM
+
+
+2026-04-20
+  Qwen3.6-Max Preview
+  - Company: Alibaba
+  - Family: Qwen3.6
+  - Type: MLLM
+  - Status: Preview
+
+  Kimi K2.6
+  - Company: Moonshot AI
+  - Family: Kimi
+  - Type: MLLM
+
+  LongCat-2.0 Preview
+  - Company: Meituan
+  - Family: LongCat
+  - Type: LLM
+  - Status: Preview
+
+
+2026-04-22
+  Qwen3.6-27B
+  - Company: Alibaba
+  - Family: Qwen3.6
+  - Type: MLLM
+
+
+2026-04-23
+  MiMo-V2.5
+  - Company: Xiaomi
+  - Family: MiMo
+  - Type: MLLM
+
+  MiMo-V2.5-Pro
+  - Company: Xiaomi
+  - Family: MiMo
+  - Type: MLLM
+
+  GPT-5.5
+  GPT-5.5 Pro
+  - Company: OpenAI
+  - Family: GPT
+  - Type: MLLM
+
+
+2026-04-24
+  DeepSeek-V4
+  - Company: DeepSeek
+  - Family: DeepSeek V4
+  - Type: LLM
+
+  DeepSeek-V4-Flash-Preview
+  - Company: DeepSeek
+  - Family: DeepSeek V4
+  - Type: LLM
+  - Status: Preview
+
+  DeepSeek-V4-Pro-Preview
+  - Company: DeepSeek
+  - Family: DeepSeek V4
+  - Type: LLM
+  - Status: Preview
+
+  Hy3 Preview
+  - Company: Tencent
+  - Family: Hy / Hunyuan
+  - Type: LLM
+  - Status: Preview
+  - Parameters: ~295B total / ~21B active
+
+
+2026-04-28
+  Laguna M.1
+  - Company: Poolside
+  - Family: Laguna
+  - Type: LLM
+  - Parameters: ~225B / ~23B active
+
+  Laguna XS.2
+  - Company: Poolside
+  - Family: Laguna
+  - Type: LLM
+  - Parameters: ~33B / ~3B active
+
+  Nemotron 3 Nano Omni
+  - Company: NVIDIA
+  - Family: Nemotron
+  - Type: MLLM
+
+
+2026-04-29
+  Granite 4.1 family
+  - Company: IBM
+  - Family: Granite
+  - Type: LLM + MLLM family
+  - Includes:
+      Granite 4.1 language models
+      Granite 4.1 vision models
+  - Note:
+      speech / embedding / Guardian-only members excluded here
+
+
+# ------------------------------------------------------------------------
+# MAY 2026
+# ------------------------------------------------------------------------
+
+2026-05-09
+  ERNIE 5.1
+  - Company: Baidu
+  - Family: ERNIE
+  - Type: LLM / agentic foundation model
+  - Note:
+      Reduced model size relative to ERNIE 5.0
+      Improved reasoning and agent capabilities
+
+
+2026-05-19
+  Gemini 3.5 Flash
+  - Company: Google DeepMind
+  - Family: Gemini
+  - Type: MLLM
+  - Focus:
+      agents
+      coding
+      multimodal reasoning
+
+
+2026-05-20
+  Qwen3.7-Max
+  - Company: Alibaba
+  - Family: Qwen3.7
+  - Type: MLLM
+
+  Command A+
+  - Company: Cohere
+  - Family: Command
+  - Type: LLM
+  - Focus: sovereign / agentic enterprise AI
+
+
+2026-05-22
+  Mistral Medium 3.5
+  - Company: Mistral AI
+  - Family: Mistral Medium
+  - Type: LLM
+  - Focus:
+      agents
+      coding
+      knowledge work
+
+
+2026-05-28
+  Claude Opus 4.8
+  - Company: Anthropic
+  - Family: Claude
+  - Type: MLLM
+
+
+# ------------------------------------------------------------------------
+# JUNE 2026
+# ------------------------------------------------------------------------
+
+2026-06-01
+  MiniMax M3
+  - Company: MiniMax
+  - Family: MiniMax M
+  - Type: MLLM
+
+
+2026-06-02
+  Qwen3.7-Plus
+  - Company: Alibaba
+  - Family: Qwen3.7
+  - Type: MLLM
+
+
+2026-06-04
+  Nemotron 3 Ultra
+  - Company: NVIDIA
+  - Family: Nemotron 3
+  - Type: LLM
+
+
+2026-06-09
+  Claude Fable 5
+  - Company: Anthropic
+  - Family: Claude
+  - Type: MLLM
+
+  Claude Mythos 5
+  - Company: Anthropic
+  - Family: Claude
+  - Type: MLLM
+  - Availability: restricted / vetted users
+
+  North Mini Code
+  - Company: Cohere
+  - Family: North
+  - Type: LLM / coding
+  - Parameters: 30B total / 3B active
+  - Open weights: Yes
+  - License: Apache 2.0
+
+
+2026-06-12
+  Kimi K2.7 Code
+  - Company: Moonshot AI
+  - Family: Kimi
+  - Type: MLLM / coding
+
+
+2026-06-13~21
+  Ling-2.6-1T
+  - Company: Ant Group / InclusionAI
+  - Family: Ling
+  - Type: LLM
+  - Parameters: ~1T
+  - Architecture:
+      MLA + Linear Attention hybrid
+
+  Ring-2.6-1T
+  - Company: Ant Group / InclusionAI
+  - Family: Ring
+  - Type: reasoning LLM
+  - Parameters: ~1T
+  - Reasoning Effort:
+      high
+      xhigh
+
+  Note:
+      Technical report published June 13.
+      Public model repositories appeared around the following week.
+
+
+2026-06-15
+  HyperCLOVA X SEED 4B
+  - Company: NAVER Cloud
+  - Family: HyperCLOVA X SEED
+  - Type: MLLM / lightweight omni
+  - Parameters: 4B
+  - Modalities:
+      language
+      vision
+      audio
+  - Focus:
+      edge / on-device / defense environments
+
+
+2026-06-16
+  GLM-5.2
+  - Company: Z.ai
+  - Family: GLM
+  - Type: LLM
+
+
+2026-06-30
+  LongCat-2.0
+  - Company: Meituan
+  - Family: LongCat
+  - Type: LLM
+  - Parameters:
+      ~1.6T total
+      ~48B average active
+
+  Claude Sonnet 5
+  - Company: Anthropic
+  - Family: Claude
+  - Type: MLLM
+
+
+# ------------------------------------------------------------------------
+# JULY 2026
+# ------------------------------------------------------------------------
+
+2026-07-02
+  Laguna XS 2.1
+  - Company: Poolside
+  - Family: Laguna
+  - Type: LLM
+
+
+2026-07-06
+  Hy3
+  - Company: Tencent
+  - Family: Hy / Hunyuan
+  - Type: LLM
+  - Status: Stable
+  - Parameters: ~295B total / ~21B active
+
+
+2026-07-09
+  Muse Spark 1.1
+  - Company: Meta
+  - Family: Muse Spark
+  - Type: MLLM
+
+  GPT-5.6 Sol
+  GPT-5.6 Terra
+  GPT-5.6 Luna
+  - Company: OpenAI
+  - Family: GPT-5.6
+  - Type: MLLM
+
+
+2026-07-14
+  Motif 3 Beta
+  - Company: Motif Technologies
+  - Family: Motif
+  - Type: LLM
+  - Status: Beta
+
+
+2026-07-15
+  Inkling
+  - Company: Thinking Machines Lab
+  - Family: Inkling
+  - Type: MLLM
+  - Parameters: ~975B total / ~41B active
+  - Native multimodal:
+      text
+      image
+      audio
+
+
+2026-07-16
+  Grok 4.5
+  - Company: xAI / SpaceXAI
+  - Family: Grok
+  - Type: MLLM
+  - Focus:
+      coding
+      agents
+      knowledge work
+
+
+2026-07-17
+  Kimi K3
+  - Company: Moonshot AI
+  - Family: Kimi
+  - Type: MLLM
+  - Parameters: ~2.8T
+  - Context: ~1M
+
+
+2026-07-19
+  Qwen3.8-Max Preview
+  - Company: Alibaba
+  - Family: Qwen3.8
+  - Type: MLLM
+  - Status: Preview
+
+
+2026-07-21
+  Gemini 3.6 Flash
+  - Company: Google DeepMind
+  - Family: Gemini
+  - Type: MLLM
+
+  Gemini 3.5 Flash-Lite
+  - Company: Google DeepMind
+  - Family: Gemini
+  - Type: MLLM
+
+  Gemini 3.5 Flash Cyber
+  - Company: Google DeepMind
+  - Family: Gemini
+  - Type: MLLM
+  - Focus: cybersecurity
+
+  Laguna S 2.1
+  - Company: Poolside
+  - Family: Laguna
+  - Type: LLM
+
+
+2026-07-22
+  Solar Open 2
+  - Company: Upstage
+  - Family: Solar Open
+  - Type: LLM
+  - Parameters: ~250B total / ~15B active
+  - Context: ~1M
+  - Open weights: Yes
+
+
+2026-07-24
+  Claude Opus 5
+  - Company: Anthropic
+  - Family: Claude
+  - Type: MLLM
+
+
+2026-07-30
+  Inkling-Small
+  - Company: Thinking Machines Lab
+  - Family: Inkling
+  - Type: MLLM
+  - Parameters: ~276B total / ~12B active
+
+
+2026-07-31
+  DeepSeek-V4-Flash
+  - Company: DeepSeek
+  - Family: DeepSeek V4
+  - Type: LLM
+  - Status: Public beta / official Flash release
+
+
+# ------------------------------------------------------------------------
+# AUGUST 2026
+# ------------------------------------------------------------------------
+
+2026-08-03
+  Qwen3.8-Max
+  - Company: Alibaba
+  - Family: Qwen3.8
+  - Type: MLLM
+
+
+2026-08-05
+  Muse Spark 1.2
+  - Company: Meta
+  - Family: Muse Spark
+  - Type: MLLM
+
+
+2026-08-10~12
+  Motif 3
+  - Company: Motif Technologies
+  - Family: Motif
+  - Type: LLM
+  - Parameters: ~314B total / ~13.2B active
+  - Architecture:
+      MoE
+      GDLA
+      MTP
+  - Note:
+      Technical/public-release dates differ slightly by source.
+
+
+2026-08-12
+  Qwen3.8-2.4T-A95B
+  - Company: Alibaba
+  - Family: Qwen3.8
+  - Type: MLLM
+
+  Grok 4.6
+  - Company: xAI / SpaceXAI
+  - Family: Grok
+  - Type: MLLM
+  - Modalities:
+      text
+      image
+  - Focus:
+      long-running agents
+      coding
+      visual work
+      knowledge work
+
+
+2026-08-13
+  DeepSeek-V4-Pro
+  - Company: DeepSeek
+  - Family: DeepSeek V4
+  - Type: LLM
+  - Status: GA
+
+  Gemini 3.7 Flash
+  - Company: Google DeepMind
+  - Family: Gemini
+  - Type: MLLM
+  - Focus:
+      coding
+      agents
+      knowledge work
+
+
+2026-08-14
+  Qwen3.8-27B
+  - Company: Alibaba
+  - Family: Qwen3.8
+  - Type: MLLM
+
+  GLM-5.3
+  - Company: Z.ai
+  - Family: GLM
+  - Type: LLM
+
+
+2026-08-21
+  DeepSeek-V4-Flash Vision Exp
+  - Company: DeepSeek
+  - Family: DeepSeek V4
+  - Type: MLLM
+  - Status: Experimental
+
+
+2026-08-21~22
+  Ling-3.0-tiny
+  - Company: Ant Group / InclusionAI
+  - Family: Ling 3.0
+  - Type: LLM
+  - Parameters: ~8B
+
+  Ling-3.0-flash
+  - Company: Ant Group / InclusionAI
+  - Family: Ling 3.0
+  - Type: LLM
+  - Parameters:
+      124B total
+      5.1B active
+  - Architecture:
+      KDA + MLA hybrid linear attention
+      sparse MoE
+  - Context:
+      256K native
+      expandable toward 1M
+
+
+2026-08-25
+  Granite 4.2
+  - Company: IBM
+  - Family: Granite
+  - Type: LLM family
+  - Focus:
+      native reasoning
+      coding
+      tool use
+      agents
+  - Note:
+      speech-only members omitted
+
+
+2026-08-26
+  Qwen3.8-Flash-Next
+  - Company: Alibaba
+  - Family: Qwen3.8
+  - Type: MLLM
+  - Architecture:
+      next-generation hybrid / efficient architecture
+
+  GLM-5.3-Flash
+  - Company: Z.ai
+  - Family: GLM
+  - Type: LLM
+
+
+2026-08-28
+  Hy4 Preview
+  - Company: Tencent
+  - Family: Hy / Hunyuan
+  - Type: LLM
+  - Status: Preview
+  - Parameters:
+      ~770B total
+      ~49B active
+  - Context: >1M
+
+
+# ------------------------------------------------------------------------
+# SEPTEMBER 2026
+# ------------------------------------------------------------------------
+
+2026-09-01
+  Claude Fable 5.1
+  - Company: Anthropic
+  - Family: Claude
+  - Type: MLLM
+
+  Claude Mythos 5.1
+  - Company: Anthropic
+  - Family: Claude
+  - Type: MLLM
+  - Availability: restricted
+
+
+2026-09-02
+  Muse Spark 1.3
+  - Company: Meta
+  - Family: Muse Spark
+  - Type: MLLM
+
+
+# ========================================================================
+# FAMILY-BY-FAMILY SUMMARY
+# ========================================================================
+
+
+Alibaba / Qwen
+---------------
+2026-02-16  Qwen3.5-397B-A17B
+2026-02-24  Qwen3.5-122B-A10B
+2026-02-24  Qwen3.5-35B-A3B
+2026-02-24  Qwen3.5-27B
+2026-03-02  Qwen3.5-9B
+2026-03-02  Qwen3.5-4B
+2026-03-02  Qwen3.5-2B
+2026-03-02  Qwen3.5-0.8B
+2026-03-30  Qwen3.5-Omni
+2026-04-02  Qwen3.6-Plus
+2026-04-16  Qwen3.6-35B-A3B
+2026-04-20  Qwen3.6-Max Preview
+2026-04-22  Qwen3.6-27B
+2026-05-20  Qwen3.7-Max
+2026-06-02  Qwen3.7-Plus
+2026-07-19  Qwen3.8-Max Preview
+2026-08-03  Qwen3.8-Max
+2026-08-12  Qwen3.8-2.4T-A95B
+2026-08-14  Qwen3.8-27B
+2026-08-26  Qwen3.8-Flash-Next
+
+
+DeepSeek
+--------
+2026-04-24  DeepSeek-V4
+2026-04-24  DeepSeek-V4-Flash-Preview
+2026-04-24  DeepSeek-V4-Pro-Preview
+2026-07-31  DeepSeek-V4-Flash
+2026-08-13  DeepSeek-V4-Pro
+2026-08-21  DeepSeek-V4-Flash Vision Exp
+
+
+Meta
+----
+2026-04-08  Muse Spark
+2026-07-09  Muse Spark 1.1
+2026-08-05  Muse Spark 1.2
+2026-09-02  Muse Spark 1.3
+
+Llama:
+  No clearly confirmed major new 2026 Llama generation identified
+  in this pass before 2026-09-04.
+  Do not count 2025 Llama releases as 2026 releases.
+
+
+Z.ai / GLM
+----------
+2026-02-11  GLM-5
+2026-03-15  GLM-5-Turbo
+2026-04-01  GLM-5V-Turbo
+2026-04-07  GLM-5.1
+2026-06-16  GLM-5.2
+2026-08-14  GLM-5.3
+2026-08-26  GLM-5.3-Flash
+
+
+Moonshot AI / Kimi
+------------------
+2026-01-27  Kimi K2.5
+2026-04-20  Kimi K2.6
+2026-06-12  Kimi K2.7 Code
+2026-07-17  Kimi K3
+
+
+OpenAI / GPT
+------------
+2026-02-06  GPT-5.3-Codex
+2026-03-03  GPT-5.3 Instant
+2026-03-05  GPT-5.4
+2026-03-05  GPT-5.4 Pro
+2026-03-18  GPT-5.4 mini
+2026-04-23  GPT-5.5
+2026-04-23  GPT-5.5 Pro
+2026-07-09  GPT-5.6 Sol
+2026-07-09  GPT-5.6 Terra
+2026-07-09  GPT-5.6 Luna
+
+
+Anthropic / Claude
+------------------
+2026-02-05  Claude Opus 4.6
+2026-02-17  Claude Sonnet 4.6
+2026-04-16  Claude Opus 4.7
+2026-05-28  Claude Opus 4.8
+2026-06-09  Claude Fable 5
+2026-06-09  Claude Mythos 5
+2026-06-30  Claude Sonnet 5
+2026-07-24  Claude Opus 5
+2026-09-01  Claude Fable 5.1
+2026-09-01  Claude Mythos 5.1
+
+
+Google DeepMind / Gemini
+------------------------
+2026-05-19  Gemini 3.5 Flash
+2026-07-21  Gemini 3.6 Flash
+2026-07-21  Gemini 3.5 Flash-Lite
+2026-07-21  Gemini 3.5 Flash Cyber
+2026-08-13  Gemini 3.7 Flash
+
+
+xAI / Grok
+----------
+2026-07-16  Grok 4.5
+2026-08-12  Grok 4.6
+
+
+Poolside / Laguna
+-----------------
+2026-04-28  Laguna M.1
+2026-04-28  Laguna XS.2
+2026-07-02  Laguna XS 2.1
+2026-07-21  Laguna S 2.1
+
+
+Thinking Machines Lab / Inkling
+-------------------------------
+2026-07-15  Inkling
+2026-07-30  Inkling-Small
+
+
+Upstage / Solar
+---------------
+2026-07-22  Solar Open 2
+
+
+NVIDIA / Nemotron
+-----------------
+2026-03-10  Nemotron 3 Super
+2026-04-28  Nemotron 3 Nano Omni
+2026-06-04  Nemotron 3 Ultra
+
+
+Tencent / Hy
+------------
+2026-04-24  Hy3 Preview
+2026-07-06  Hy3
+2026-08-28  Hy4 Preview
+
+
+Meituan / LongCat
+-----------------
+2026-01-14  LongCat-Flash-Thinking-2601
+2026-02-05  LongCat-Flash-Lite
+2026-03-11  LongCat-Flash-Omni-2603
+2026-03-12  LongCat-Flash-Thinking revision
+2026-04-20  LongCat-2.0 Preview
+2026-06-30  LongCat-2.0
+
+
+Xiaomi / MiMo
+-------------
+2026-03-18  MiMo-V2-Pro
+2026-03-18  MiMo-V2-Omni
+2026-04-23  MiMo-V2.5
+2026-04-23  MiMo-V2.5-Pro
+
+
+MiniMax
+-------
+2026-02-12  MiniMax M2.5
+2026-03-18  MiniMax M2.7
+2026-06-01  MiniMax M3
+
+
+Motif Technologies
+------------------
+2026-07-14      Motif 3 Beta
+2026-08-10~12   Motif 3
+
+
+Mistral AI
+----------
+2026-03-16  Mistral Small 4
+2026-05-22  Mistral Medium 3.5
+
+
+StepFun
+-------
+2026-02-12  Step-3.5-Flash
+
+
+Ant Group / InclusionAI
+-----------------------
+2026-06       Ling-2.6-1T
+2026-06       Ring-2.6-1T
+2026-08       Ling-3.0-tiny
+2026-08       Ling-3.0-flash
+
+
+ByteDance / Seed / Doubao
+-------------------------
+2026-02-14  Seed 2.0
+
+Note:
+  Seedance models are NOT included because they are primarily
+  video-generation models rather than LLM/MLLM assistants.
+
+
+Baidu / ERNIE
+-------------
+2026-02-06  ERNIE 5.0
+2026-05-09  ERNIE 5.1
+
+
+Arcee AI
+--------
+2026-01-27  Trinity Large
+
+
+Cohere
+------
+2026-02-17  Tiny Aya
+2026-05-20  Command A+
+2026-06-09  North Mini Code
+
+Tiny Aya variants:
+  Tiny Aya Global
+  Tiny Aya Earth
+  Tiny Aya Fire
+  Tiny Aya Water
+
+
+Sarvam AI
+---------
+2026-03-06  Sarvam 30B
+2026-03-06  Sarvam 105B
+
+
+IBM
+---
+2026-04-29  Granite 4.1 family
+2026-08-25  Granite 4.2 family
+
+
+NAVER
+-----
+2026-06-15  HyperCLOVA X SEED 4B
+            lightweight omni / MLLM
+
+
+# ========================================================================
+# MENTIONED COMPANIES WHERE A QUALIFYING 2026 RELEASE
+# WAS NOT CONFIDENTLY IDENTIFIED IN THIS PASS
+# ========================================================================
+
+Microsoft / Phi
+---------------
+No major new 2026 Phi LLM/MLLM release confidently identified yet.
+Do not automatically count Phi models released in 2025.
+
+
+Ai2 / OLMo
+----------
+No major general-purpose OLMo LLM release confidently identified yet
+for 2026-01-01 ~ 2026-09-04 in this pass.
+
+OlmoEarth:
+  excluded because it is an Earth-observation representation model,
+  not a general LLM/MLLM.
+
+MolmoMotion:
+  excluded because it is a specialized vision/action prediction model
+  rather than a general-purpose LLM/MLLM.
+
+
+Nanbeige
+--------
+Nanbeige 4.x / 4.1 requires a more exact primary-source release-date
+verification before inserting it into the dated master timeline.
+
+
+# ========================================================================
+# CURRENT HIGH-LEVEL GENERATIONAL FLOW
+# ========================================================================
+
+Qwen:
+  Qwen3.5
+    -> Qwen3.6
+    -> Qwen3.7
+    -> Qwen3.8
+    -> Qwen3.8-Flash-Next
+
+DeepSeek:
+  V4 Preview
+    -> V4 Flash
+    -> V4 Pro
+    -> V4 Flash Vision Exp
+
+Claude:
+  Opus 4.6
+    -> Sonnet 4.6
+    -> Opus 4.7
+    -> Opus 4.8
+    -> Fable/Mythos 5
+    -> Sonnet 5
+    -> Opus 5
+    -> Fable/Mythos 5.1
+
+GPT:
+  GPT-5.3
+    -> GPT-5.4
+    -> GPT-5.5
+    -> GPT-5.6
+
+Gemini:
+  Gemini 3.5 Flash
+    -> Gemini 3.6 Flash
+    -> Gemini 3.7 Flash
+
+Grok:
+  Grok 4.5
+    -> Grok 4.6
+
+GLM:
+  GLM-5
+    -> GLM-5.1
+    -> GLM-5.2
+    -> GLM-5.3
+
+Kimi:
+  K2.5
+    -> K2.6
+    -> K2.7 Code
+    -> K3
+
+Muse Spark:
+  Spark
+    -> 1.1
+    -> 1.2
+    -> 1.3
+
+Ling / Ring:
+  Ling-2.6-1T / Ring-2.6-1T
+    -> Ling-3.0-tiny / Ling-3.0-flash
+
+ERNIE:
+  ERNIE 5.0
+    -> ERNIE 5.1
+
+LongCat:
+  Flash-Thinking
+    -> Flash-Lite
+    -> Flash-Omni
+    -> LongCat 2.0
+
+MiMo:
+  V2-Pro / V2-Omni
+    -> V2.5 / V2.5-Pro
+
+MiniMax:
+  M2.5
+    -> M2.7
+    -> M3
+
+Mistral:
+  Small 4
+    -> Medium 3.5
+
+Granite:
+  Granite 4.1
+    -> Granite 4.2
+
+Motif:
+  Motif 3 Beta
+    -> Motif 3
+
+Laguna:
+  M.1 / XS.2
+    -> XS 2.1 / S 2.1
