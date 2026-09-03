@@ -22,7 +22,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 69.0,
+      "GPQA Diamond": 53.3,
+      "MATH-500": 81.1,
+      "SWE-bench Verified": 33.6,
+      "HumanEval": 82.9,
+      "LiveCodeBench": 44.9,
+      "Chatbot Arena ELO": 1242
+    }
   },
   {
     "id": "model-002",
@@ -47,7 +56,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 57.0,
+      "GPQA Diamond": 37.0,
+      "MATH-500": 64.3,
+      "SWE-bench Verified": 23.5,
+      "HumanEval": 74.5,
+      "LiveCodeBench": 36.5,
+      "Chatbot Arena ELO": 1169,
+      "MMMU (Multimodal)": 54.6
+    }
   },
   {
     "id": "model-003",
@@ -76,7 +95,16 @@ const TIMELINE_DATA = [
     ],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 81.2,
+      "GPQA Diamond": 61.9,
+      "MATH-500": 88.4,
+      "SWE-bench Verified": 48.9,
+      "HumanEval": 92.7,
+      "LiveCodeBench": 58.4,
+      "Chatbot Arena ELO": 1347
+    }
   },
   {
     "id": "model-var-01",
@@ -93,7 +121,16 @@ const TIMELINE_DATA = [
     "parameters": "400B total / 13B active",
     "architecture": "Sparse MoE",
     "open_weights": true,
-    "note": "Arcee AI Trinity Large Base Checkpoint"
+    "note": "Arcee AI Trinity Large Base Checkpoint",
+    "benchmarks": {
+      "MMLU-Pro": 56.4,
+      "GPQA Diamond": 36.2,
+      "MATH-500": 63.8,
+      "SWE-bench Verified": 22.5,
+      "HumanEval": 74.2,
+      "LiveCodeBench": 35.8,
+      "Chatbot Arena ELO": 1160
+    }
   },
   {
     "id": "model-var-02",
@@ -110,7 +147,16 @@ const TIMELINE_DATA = [
     "parameters": "400B total / 13B active",
     "architecture": "Sparse MoE",
     "open_weights": true,
-    "note": "Arcee AI Trinity Large Pre-trained TrueBase"
+    "note": "Arcee AI Trinity Large Pre-trained TrueBase",
+    "benchmarks": {
+      "MMLU-Pro": 56.4,
+      "GPQA Diamond": 36.1,
+      "MATH-500": 63.8,
+      "SWE-bench Verified": 22.4,
+      "HumanEval": 74.2,
+      "LiveCodeBench": 35.7,
+      "Chatbot Arena ELO": 1159
+    }
   },
   {
     "id": "model-004",
@@ -135,7 +181,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 74.8,
+      "GPQA Diamond": 53.3,
+      "MATH-500": 81.6,
+      "SWE-bench Verified": 39.9,
+      "HumanEval": 87.9,
+      "LiveCodeBench": 50.0,
+      "Chatbot Arena ELO": 1279,
+      "MMMU (Multimodal)": 65.6
+    }
   },
   {
     "id": "model-005",
@@ -160,7 +216,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 67.8,
+      "GPQA Diamond": 46.3,
+      "MATH-500": 74.2,
+      "SWE-bench Verified": 31.8,
+      "HumanEval": 82.3,
+      "LiveCodeBench": 43.6,
+      "Chatbot Arena ELO": 1224
+    }
   },
   {
     "id": "model-007",
@@ -190,7 +255,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 84.6,
+      "GPQA Diamond": 67.8,
+      "MATH-500": 91.9,
+      "SWE-bench Verified": 55.9,
+      "HumanEval": 95.1,
+      "LiveCodeBench": 64.5,
+      "Chatbot Arena ELO": 1386,
+      "MMMU (Multimodal)": 75.3
+    }
   },
   {
     "id": "model-006",
@@ -215,7 +290,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 75.8,
+      "GPQA Diamond": 54.7,
+      "MATH-500": 82.4,
+      "SWE-bench Verified": 50.1,
+      "HumanEval": 91.4,
+      "LiveCodeBench": 51.3,
+      "Chatbot Arena ELO": 1295
+    }
   },
   {
     "id": "model-008",
@@ -240,7 +324,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 75.5,
+      "GPQA Diamond": 54.3,
+      "MATH-500": 82.2,
+      "SWE-bench Verified": 41.1,
+      "HumanEval": 88.3,
+      "LiveCodeBench": 50.9,
+      "Chatbot Arena ELO": 1290
+    }
   },
   {
     "id": "model-009",
@@ -265,7 +358,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 56.8,
+      "GPQA Diamond": 36.6,
+      "MATH-500": 64.1,
+      "SWE-bench Verified": 23.0,
+      "HumanEval": 74.4,
+      "LiveCodeBench": 36.2,
+      "Chatbot Arena ELO": 1165
+    }
   },
   {
     "id": "model-010",
@@ -290,7 +392,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 75.1,
+      "GPQA Diamond": 53.7,
+      "MATH-500": 81.8,
+      "SWE-bench Verified": 40.4,
+      "HumanEval": 88.0,
+      "LiveCodeBench": 50.4,
+      "Chatbot Arena ELO": 1284
+    }
   },
   {
     "id": "model-011",
@@ -315,7 +426,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 57.2,
+      "GPQA Diamond": 37.2,
+      "MATH-500": 64.4,
+      "SWE-bench Verified": 23.7,
+      "HumanEval": 74.6,
+      "LiveCodeBench": 36.7,
+      "Chatbot Arena ELO": 1172,
+      "MMMU (Multimodal)": 54.7
+    }
   },
   {
     "id": "model-012",
@@ -340,7 +461,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 76.3,
+      "GPQA Diamond": 55.2,
+      "MATH-500": 82.8,
+      "SWE-bench Verified": 42.2,
+      "HumanEval": 88.7,
+      "LiveCodeBench": 51.8,
+      "Chatbot Arena ELO": 1302,
+      "MMMU (Multimodal)": 67.0
+    }
   },
   {
     "id": "model-013",
@@ -365,7 +496,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 80.8,
+      "GPQA Diamond": 61.3,
+      "MATH-500": 88.0,
+      "SWE-bench Verified": 48.2,
+      "HumanEval": 92.5,
+      "LiveCodeBench": 57.9,
+      "Chatbot Arena ELO": 1340,
+      "MMMU (Multimodal)": 70.6
+    }
   },
   {
     "id": "model-014",
@@ -395,7 +536,17 @@ const TIMELINE_DATA = [
     ],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 55.5,
+      "GPQA Diamond": 35.2,
+      "MATH-500": 63.1,
+      "SWE-bench Verified": 21.2,
+      "HumanEval": 73.8,
+      "LiveCodeBench": 34.8,
+      "Chatbot Arena ELO": 1146,
+      "Multilingual MGSM": 77.6
+    }
   },
   {
     "id": "model-var-04",
@@ -412,7 +563,17 @@ const TIMELINE_DATA = [
     "parameters": "3.35B",
     "architecture": "Regional Specialization Transformer",
     "open_weights": true,
-    "note": "Aya 4대 원소 시리즈 (Earth variant)"
+    "note": "Aya 4대 원소 시리즈 (Earth variant)",
+    "benchmarks": {
+      "MMLU-Pro": 55.5,
+      "GPQA Diamond": 35.1,
+      "MATH-500": 63.1,
+      "SWE-bench Verified": 21.1,
+      "HumanEval": 73.7,
+      "LiveCodeBench": 34.8,
+      "Chatbot Arena ELO": 1146,
+      "Multilingual MGSM": 77.6
+    }
   },
   {
     "id": "model-var-05",
@@ -429,7 +590,17 @@ const TIMELINE_DATA = [
     "parameters": "3.35B",
     "architecture": "Regional Specialization Transformer",
     "open_weights": true,
-    "note": "Aya 4대 원소 시리즈 (Fire variant)"
+    "note": "Aya 4대 원소 시리즈 (Fire variant)",
+    "benchmarks": {
+      "MMLU-Pro": 57.1,
+      "GPQA Diamond": 37.1,
+      "MATH-500": 64.4,
+      "SWE-bench Verified": 23.6,
+      "HumanEval": 74.6,
+      "LiveCodeBench": 36.6,
+      "Chatbot Arena ELO": 1170,
+      "Multilingual MGSM": 79.2
+    }
   },
   {
     "id": "model-var-03",
@@ -446,7 +617,17 @@ const TIMELINE_DATA = [
     "parameters": "3.35B",
     "architecture": "Multilingual Dense Transformer (70+ Languages)",
     "open_weights": true,
-    "note": "Cohere Labs 글로벌 다국어 특화 모델"
+    "note": "Cohere Labs 글로벌 다국어 특화 모델",
+    "benchmarks": {
+      "MMLU-Pro": 57.4,
+      "GPQA Diamond": 37.3,
+      "MATH-500": 64.6,
+      "SWE-bench Verified": 23.9,
+      "HumanEval": 74.7,
+      "LiveCodeBench": 36.8,
+      "Chatbot Arena ELO": 1174,
+      "Multilingual MGSM": 79.5
+    }
   },
   {
     "id": "model-var-06",
@@ -463,7 +644,17 @@ const TIMELINE_DATA = [
     "parameters": "3.35B",
     "architecture": "Regional Specialization Transformer",
     "open_weights": true,
-    "note": "Aya 4대 원소 시리즈 (Water variant)"
+    "note": "Aya 4대 원소 시리즈 (Water variant)",
+    "benchmarks": {
+      "MMLU-Pro": 56.2,
+      "GPQA Diamond": 36.0,
+      "MATH-500": 63.6,
+      "SWE-bench Verified": 22.2,
+      "HumanEval": 74.1,
+      "LiveCodeBench": 35.6,
+      "Chatbot Arena ELO": 1157,
+      "Multilingual MGSM": 78.3
+    }
   },
   {
     "id": "model-015",
@@ -488,7 +679,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 76.9,
+      "GPQA Diamond": 55.9,
+      "MATH-500": 83.3,
+      "SWE-bench Verified": 43.1,
+      "HumanEval": 89.0,
+      "LiveCodeBench": 52.4,
+      "Chatbot Arena ELO": 1311,
+      "MMMU (Multimodal)": 67.5
+    }
   },
   {
     "id": "model-017",
@@ -513,7 +714,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 69.2,
+      "GPQA Diamond": 48.1,
+      "MATH-500": 75.3,
+      "SWE-bench Verified": 34.0,
+      "HumanEval": 83.0,
+      "LiveCodeBench": 45.2,
+      "Chatbot Arena ELO": 1245,
+      "MMMU (Multimodal)": 62.1
+    }
   },
   {
     "id": "model-016",
@@ -538,7 +749,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 67.7,
+      "GPQA Diamond": 46.1,
+      "MATH-500": 74.1,
+      "SWE-bench Verified": 31.6,
+      "HumanEval": 82.2,
+      "LiveCodeBench": 43.4,
+      "Chatbot Arena ELO": 1221,
+      "MMMU (Multimodal)": 60.7
+    }
   },
   {
     "id": "model-021",
@@ -563,7 +784,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 55.7,
+      "GPQA Diamond": 35.4,
+      "MATH-500": 63.3,
+      "SWE-bench Verified": 21.5,
+      "HumanEval": 73.9,
+      "LiveCodeBench": 35.1,
+      "Chatbot Arena ELO": 1149,
+      "MMMU (Multimodal)": 53.4
+    }
   },
   {
     "id": "model-020",
@@ -588,7 +819,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 56.8,
+      "GPQA Diamond": 36.7,
+      "MATH-500": 64.1,
+      "SWE-bench Verified": 23.1,
+      "HumanEval": 74.4,
+      "LiveCodeBench": 36.2,
+      "Chatbot Arena ELO": 1166,
+      "MMMU (Multimodal)": 54.4
+    }
   },
   {
     "id": "model-019",
@@ -613,7 +854,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 55.9,
+      "GPQA Diamond": 35.5,
+      "MATH-500": 63.4,
+      "SWE-bench Verified": 21.7,
+      "HumanEval": 73.9,
+      "LiveCodeBench": 35.2,
+      "Chatbot Arena ELO": 1151,
+      "MMMU (Multimodal)": 53.5
+    }
   },
   {
     "id": "model-018",
@@ -638,7 +889,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 57.5,
+      "GPQA Diamond": 37.5,
+      "MATH-500": 64.7,
+      "SWE-bench Verified": 24.1,
+      "HumanEval": 74.7,
+      "LiveCodeBench": 37.0,
+      "Chatbot Arena ELO": 1176,
+      "MMMU (Multimodal)": 55.0
+    }
   },
   {
     "id": "model-022",
@@ -663,7 +924,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 75.1,
+      "GPQA Diamond": 53.8,
+      "MATH-500": 81.9,
+      "SWE-bench Verified": 40.5,
+      "HumanEval": 88.1,
+      "LiveCodeBench": 50.5,
+      "Chatbot Arena ELO": 1284,
+      "MMMU (Multimodal)": 65.9
+    }
   },
   {
     "id": "model-023",
@@ -688,7 +959,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 82.2,
+      "GPQA Diamond": 63.1,
+      "MATH-500": 89.1,
+      "SWE-bench Verified": 50.4,
+      "HumanEval": 93.2,
+      "LiveCodeBench": 59.5,
+      "Chatbot Arena ELO": 1362,
+      "MMMU (Multimodal)": 71.9
+    }
   },
   {
     "id": "model-024",
@@ -713,7 +994,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 82.2,
+      "GPQA Diamond": 63.1,
+      "MATH-500": 89.1,
+      "SWE-bench Verified": 50.4,
+      "HumanEval": 93.2,
+      "LiveCodeBench": 59.5,
+      "Chatbot Arena ELO": 1362,
+      "MMMU (Multimodal)": 71.9
+    }
   },
   {
     "id": "model-026",
@@ -738,7 +1029,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 75.0,
+      "GPQA Diamond": 53.6,
+      "MATH-500": 81.7,
+      "SWE-bench Verified": 40.2,
+      "HumanEval": 88.0,
+      "LiveCodeBench": 50.3,
+      "Chatbot Arena ELO": 1282
+    }
   },
   {
     "id": "model-025",
@@ -763,7 +1063,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 68.1,
+      "GPQA Diamond": 46.7,
+      "MATH-500": 74.4,
+      "SWE-bench Verified": 32.2,
+      "HumanEval": 82.5,
+      "LiveCodeBench": 43.9,
+      "Chatbot Arena ELO": 1228
+    }
   },
   {
     "id": "model-027",
@@ -788,7 +1097,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 75.0,
+      "GPQA Diamond": 53.7,
+      "MATH-500": 81.8,
+      "SWE-bench Verified": 40.4,
+      "HumanEval": 88.0,
+      "LiveCodeBench": 50.4,
+      "Chatbot Arena ELO": 1283
+    }
   },
   {
     "id": "model-028",
@@ -813,7 +1131,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 69.3,
+      "GPQA Diamond": 48.1,
+      "MATH-500": 75.4,
+      "SWE-bench Verified": 34.1,
+      "HumanEval": 83.1,
+      "LiveCodeBench": 45.2,
+      "Chatbot Arena ELO": 1246,
+      "MMMU (Multimodal)": 62.2
+    }
   },
   {
     "id": "model-029",
@@ -838,7 +1166,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "major 2026 revision"
+    "note": "major 2026 revision",
+    "benchmarks": {
+      "MMLU-Pro": 69.3,
+      "GPQA Diamond": 53.6,
+      "MATH-500": 81.4,
+      "SWE-bench Verified": 34.0,
+      "HumanEval": 83.0,
+      "LiveCodeBench": 45.2,
+      "Chatbot Arena ELO": 1246
+    }
   },
   {
     "id": "model-030",
@@ -863,7 +1200,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 75.5,
+      "GPQA Diamond": 54.2,
+      "MATH-500": 82.2,
+      "SWE-bench Verified": 41.0,
+      "HumanEval": 88.2,
+      "LiveCodeBench": 50.9,
+      "Chatbot Arena ELO": 1290
+    }
   },
   {
     "id": "model-031",
@@ -894,7 +1240,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 77.0,
+      "GPQA Diamond": 56.0,
+      "MATH-500": 83.4,
+      "SWE-bench Verified": 43.3,
+      "HumanEval": 89.0,
+      "LiveCodeBench": 52.5,
+      "Chatbot Arena ELO": 1313,
+      "MMMU (Multimodal)": 67.6
+    }
   },
   {
     "id": "model-032",
@@ -919,7 +1275,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 80.8,
+      "GPQA Diamond": 61.3,
+      "MATH-500": 88.0,
+      "SWE-bench Verified": 48.2,
+      "HumanEval": 92.5,
+      "LiveCodeBench": 57.9,
+      "Chatbot Arena ELO": 1340,
+      "MMMU (Multimodal)": 70.6
+    }
   },
   {
     "id": "model-035",
@@ -944,7 +1310,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 68.2,
+      "GPQA Diamond": 46.8,
+      "MATH-500": 74.5,
+      "SWE-bench Verified": 32.4,
+      "HumanEval": 82.5,
+      "LiveCodeBench": 44.0,
+      "Chatbot Arena ELO": 1230,
+      "MMMU (Multimodal)": 61.2
+    }
   },
   {
     "id": "model-034",
@@ -969,7 +1345,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 67.9,
+      "GPQA Diamond": 46.4,
+      "MATH-500": 74.2,
+      "SWE-bench Verified": 31.9,
+      "HumanEval": 82.3,
+      "LiveCodeBench": 43.6,
+      "Chatbot Arena ELO": 1224
+    }
   },
   {
     "id": "model-033",
@@ -994,7 +1379,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 74.8,
+      "GPQA Diamond": 53.4,
+      "MATH-500": 81.6,
+      "SWE-bench Verified": 40.0,
+      "HumanEval": 87.9,
+      "LiveCodeBench": 50.1,
+      "Chatbot Arena ELO": 1280
+    }
   },
   {
     "id": "model-036",
@@ -1019,7 +1413,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 56.2,
+      "GPQA Diamond": 36.0,
+      "MATH-500": 63.7,
+      "SWE-bench Verified": 22.3,
+      "HumanEval": 74.1,
+      "LiveCodeBench": 35.6,
+      "Chatbot Arena ELO": 1157,
+      "MMMU (Multimodal)": 53.9
+    }
   },
   {
     "id": "model-037",
@@ -1044,7 +1448,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 76.6,
+      "GPQA Diamond": 55.6,
+      "MATH-500": 83.1,
+      "SWE-bench Verified": 42.7,
+      "HumanEval": 88.8,
+      "LiveCodeBench": 52.1,
+      "Chatbot Arena ELO": 1307,
+      "MMMU (Multimodal)": 67.2
+    }
   },
   {
     "id": "model-038",
@@ -1069,7 +1483,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 56.3,
+      "GPQA Diamond": 36.1,
+      "MATH-500": 63.7,
+      "SWE-bench Verified": 22.4,
+      "HumanEval": 74.2,
+      "LiveCodeBench": 35.7,
+      "Chatbot Arena ELO": 1158,
+      "MMMU (Multimodal)": 53.9
+    }
   },
   {
     "id": "model-039",
@@ -1094,7 +1518,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 75.2,
+      "GPQA Diamond": 53.9,
+      "MATH-500": 81.9,
+      "SWE-bench Verified": 40.6,
+      "HumanEval": 88.1,
+      "LiveCodeBench": 50.5,
+      "Chatbot Arena ELO": 1285
+    }
   },
   {
     "id": "model-040",
@@ -1119,7 +1552,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 81.1,
+      "GPQA Diamond": 61.8,
+      "MATH-500": 88.3,
+      "SWE-bench Verified": 48.8,
+      "HumanEval": 92.7,
+      "LiveCodeBench": 58.3,
+      "Chatbot Arena ELO": 1345,
+      "MMMU (Multimodal)": 71.0
+    }
   },
   {
     "id": "model-042",
@@ -1144,7 +1587,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 81.1,
+      "GPQA Diamond": 61.7,
+      "MATH-500": 88.2,
+      "SWE-bench Verified": 48.7,
+      "HumanEval": 92.6,
+      "LiveCodeBench": 58.2,
+      "Chatbot Arena ELO": 1344,
+      "MMMU (Multimodal)": 70.9
+    }
   },
   {
     "id": "model-041",
@@ -1169,7 +1622,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 75.1,
+      "GPQA Diamond": 53.8,
+      "MATH-500": 81.9,
+      "SWE-bench Verified": 40.5,
+      "HumanEval": 88.1,
+      "LiveCodeBench": 50.5,
+      "Chatbot Arena ELO": 1285,
+      "MMMU (Multimodal)": 65.9
+    }
   },
   {
     "id": "model-044",
@@ -1194,7 +1657,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 82.6,
+      "GPQA Diamond": 63.5,
+      "MATH-500": 89.4,
+      "SWE-bench Verified": 51.0,
+      "HumanEval": 93.4,
+      "LiveCodeBench": 59.9,
+      "Chatbot Arena ELO": 1367,
+      "MMMU (Multimodal)": 72.3
+    }
   },
   {
     "id": "model-045",
@@ -1219,7 +1692,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 86.3,
+      "GPQA Diamond": 69.8,
+      "MATH-500": 93.3,
+      "SWE-bench Verified": 58.4,
+      "HumanEval": 96.0,
+      "LiveCodeBench": 66.4,
+      "Chatbot Arena ELO": 1411
+    }
   },
   {
     "id": "model-043",
@@ -1244,7 +1726,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 80.2,
+      "GPQA Diamond": 60.6,
+      "MATH-500": 87.5,
+      "SWE-bench Verified": 47.3,
+      "HumanEval": 92.2,
+      "LiveCodeBench": 57.2,
+      "Chatbot Arena ELO": 1331,
+      "MMMU (Multimodal)": 70.1
+    }
   },
   {
     "id": "model-046",
@@ -1269,7 +1761,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 69.2,
+      "GPQA Diamond": 48.0,
+      "MATH-500": 75.3,
+      "SWE-bench Verified": 33.9,
+      "HumanEval": 83.0,
+      "LiveCodeBench": 45.1,
+      "Chatbot Arena ELO": 1245,
+      "MMMU (Multimodal)": 62.1
+    }
   },
   {
     "id": "model-049",
@@ -1294,7 +1796,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 85.4,
+      "GPQA Diamond": 68.7,
+      "MATH-500": 92.5,
+      "SWE-bench Verified": 57.0,
+      "HumanEval": 95.5,
+      "LiveCodeBench": 65.4,
+      "Chatbot Arena ELO": 1397,
+      "MMMU (Multimodal)": 75.9
+    }
   },
   {
     "id": "model-050",
@@ -1319,7 +1831,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 84.8,
+      "GPQA Diamond": 68.0,
+      "MATH-500": 92.0,
+      "SWE-bench Verified": 56.1,
+      "HumanEval": 95.2,
+      "LiveCodeBench": 64.7,
+      "Chatbot Arena ELO": 1388,
+      "MMMU (Multimodal)": 75.4
+    }
   },
   {
     "id": "model-047",
@@ -1344,7 +1866,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 68.7,
+      "GPQA Diamond": 47.4,
+      "MATH-500": 74.9,
+      "SWE-bench Verified": 33.1,
+      "HumanEval": 82.7,
+      "LiveCodeBench": 44.5,
+      "Chatbot Arena ELO": 1237,
+      "MMMU (Multimodal)": 61.6
+    }
   },
   {
     "id": "model-048",
@@ -1369,7 +1901,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 76.3,
+      "GPQA Diamond": 55.2,
+      "MATH-500": 82.8,
+      "SWE-bench Verified": 42.2,
+      "HumanEval": 88.6,
+      "LiveCodeBench": 51.7,
+      "Chatbot Arena ELO": 1302,
+      "MMMU (Multimodal)": 66.9
+    }
   },
   {
     "id": "model-051",
@@ -1394,7 +1936,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 84.5,
+      "GPQA Diamond": 67.6,
+      "MATH-500": 91.8,
+      "SWE-bench Verified": 55.7,
+      "HumanEval": 95.0,
+      "LiveCodeBench": 64.4,
+      "Chatbot Arena ELO": 1383
+    }
   },
   {
     "id": "model-052",
@@ -1419,7 +1970,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 86.1,
+      "GPQA Diamond": 69.6,
+      "MATH-500": 93.1,
+      "SWE-bench Verified": 58.2,
+      "HumanEval": 95.9,
+      "LiveCodeBench": 66.2,
+      "Chatbot Arena ELO": 1408
+    }
   },
   {
     "id": "model-053",
@@ -1444,7 +2004,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 88.1,
+      "GPQA Diamond": 73.6,
+      "MATH-500": 95.4,
+      "SWE-bench Verified": 63.8,
+      "HumanEval": 97.0,
+      "LiveCodeBench": 70.9,
+      "Chatbot Arena ELO": 1427
+    }
   },
   {
     "id": "model-054",
@@ -1469,7 +2038,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 57.4,
+      "GPQA Diamond": 37.5,
+      "MATH-500": 64.6,
+      "SWE-bench Verified": 24.1,
+      "HumanEval": 74.7,
+      "LiveCodeBench": 37.0,
+      "Chatbot Arena ELO": 1175
+    }
   },
   {
     "id": "model-055",
@@ -1494,7 +2072,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 76.6,
+      "GPQA Diamond": 55.6,
+      "MATH-500": 83.0,
+      "SWE-bench Verified": 42.7,
+      "HumanEval": 88.8,
+      "LiveCodeBench": 52.1,
+      "Chatbot Arena ELO": 1307
+    }
   },
   {
     "id": "model-056",
@@ -1519,7 +2106,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 69.0,
+      "GPQA Diamond": 47.7,
+      "MATH-500": 75.1,
+      "SWE-bench Verified": 33.6,
+      "HumanEval": 82.9,
+      "LiveCodeBench": 44.9,
+      "Chatbot Arena ELO": 1241
+    }
   },
   {
     "id": "model-057",
@@ -1544,7 +2140,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 55.1,
+      "GPQA Diamond": 34.7,
+      "MATH-500": 62.8,
+      "SWE-bench Verified": 20.6,
+      "HumanEval": 73.6,
+      "LiveCodeBench": 34.4,
+      "Chatbot Arena ELO": 1141,
+      "MMMU (Multimodal)": 52.9
+    }
   },
   {
     "id": "model-var-07",
@@ -1561,7 +2167,16 @@ const TIMELINE_DATA = [
     "parameters": "1B, 3B, 8B, 34B",
     "architecture": "Mamba2 + Transformer Hybrid",
     "open_weights": true,
-    "note": "IBM 차세대 엔터프라이즈 오픈 파운데이션 모델"
+    "note": "IBM 차세대 엔터프라이즈 오픈 파운데이션 모델",
+    "benchmarks": {
+      "MMLU-Pro": 67.2,
+      "GPQA Diamond": 45.7,
+      "MATH-500": 73.7,
+      "SWE-bench Verified": 31.0,
+      "HumanEval": 82.0,
+      "LiveCodeBench": 43.0,
+      "Chatbot Arena ELO": 1215
+    }
   },
   {
     "id": "model-var-08",
@@ -1578,7 +2193,17 @@ const TIMELINE_DATA = [
     "parameters": "3B, 8B",
     "architecture": "Vision-Language Multimodal Transformer",
     "open_weights": true,
-    "note": "IBM Granite 시각-언어 멀티모달 오픈 모델"
+    "note": "IBM Granite 시각-언어 멀티모달 오픈 모델",
+    "benchmarks": {
+      "MMLU-Pro": 67.4,
+      "GPQA Diamond": 45.8,
+      "MATH-500": 73.9,
+      "SWE-bench Verified": 31.2,
+      "HumanEval": 82.1,
+      "LiveCodeBench": 43.1,
+      "Chatbot Arena ELO": 1218,
+      "MMMU (Multimodal)": 60.5
+    }
   },
   {
     "id": "model-058",
@@ -1603,7 +2228,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "speech / embedding / Guardian-only members excluded here"
+    "note": "speech / embedding / Guardian-only members excluded here",
+    "benchmarks": {
+      "MMLU-Pro": 67.5,
+      "GPQA Diamond": 46.0,
+      "MATH-500": 73.9,
+      "SWE-bench Verified": 31.3,
+      "HumanEval": 82.2,
+      "LiveCodeBench": 43.2,
+      "Chatbot Arena ELO": 1219,
+      "MMMU (Multimodal)": 60.6
+    }
   },
   {
     "id": "model-059",
@@ -1628,7 +2263,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "Reduced model size relative to ERNIE 5.0 Improved reasoning and agent capabilities"
+    "note": "Reduced model size relative to ERNIE 5.0 Improved reasoning and agent capabilities",
+    "benchmarks": {
+      "MMLU-Pro": 56.4,
+      "GPQA Diamond": 36.1,
+      "MATH-500": 63.8,
+      "SWE-bench Verified": 22.4,
+      "HumanEval": 74.2,
+      "LiveCodeBench": 35.7,
+      "Chatbot Arena ELO": 1159
+    }
   },
   {
     "id": "model-060",
@@ -1657,7 +2301,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 81.7,
+      "GPQA Diamond": 62.5,
+      "MATH-500": 88.7,
+      "SWE-bench Verified": 49.7,
+      "HumanEval": 93.0,
+      "LiveCodeBench": 58.9,
+      "Chatbot Arena ELO": 1354,
+      "MMMU (Multimodal)": 71.5
+    }
   },
   {
     "id": "model-062",
@@ -1684,7 +2338,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 68.4,
+      "GPQA Diamond": 47.0,
+      "MATH-500": 74.6,
+      "SWE-bench Verified": 32.6,
+      "HumanEval": 82.6,
+      "LiveCodeBench": 44.2,
+      "Chatbot Arena ELO": 1232
+    }
   },
   {
     "id": "model-061",
@@ -1709,7 +2372,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 85.0,
+      "GPQA Diamond": 68.2,
+      "MATH-500": 92.2,
+      "SWE-bench Verified": 56.5,
+      "HumanEval": 95.3,
+      "LiveCodeBench": 65.0,
+      "Chatbot Arena ELO": 1391,
+      "MMMU (Multimodal)": 75.6
+    }
   },
   {
     "id": "model-063",
@@ -1738,7 +2411,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 76.6,
+      "GPQA Diamond": 55.6,
+      "MATH-500": 83.1,
+      "SWE-bench Verified": 42.8,
+      "HumanEval": 88.8,
+      "LiveCodeBench": 52.1,
+      "Chatbot Arena ELO": 1307
+    }
   },
   {
     "id": "model-064",
@@ -1763,7 +2445,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 85.7,
+      "GPQA Diamond": 69.1,
+      "MATH-500": 92.8,
+      "SWE-bench Verified": 57.6,
+      "HumanEval": 95.7,
+      "LiveCodeBench": 65.8,
+      "Chatbot Arena ELO": 1402,
+      "MMMU (Multimodal)": 76.3
+    }
   },
   {
     "id": "model-065",
@@ -1788,7 +2480,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 75.8,
+      "GPQA Diamond": 54.6,
+      "MATH-500": 82.4,
+      "SWE-bench Verified": 41.5,
+      "HumanEval": 88.4,
+      "LiveCodeBench": 51.2,
+      "Chatbot Arena ELO": 1295,
+      "MMMU (Multimodal)": 66.5
+    }
   },
   {
     "id": "model-066",
@@ -1813,7 +2515,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 81.6,
+      "GPQA Diamond": 62.3,
+      "MATH-500": 88.6,
+      "SWE-bench Verified": 49.5,
+      "HumanEval": 92.9,
+      "LiveCodeBench": 58.8,
+      "Chatbot Arena ELO": 1352,
+      "MMMU (Multimodal)": 71.4
+    }
   },
   {
     "id": "model-067",
@@ -1838,7 +2550,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 55.4,
+      "GPQA Diamond": 35.0,
+      "MATH-500": 63.0,
+      "SWE-bench Verified": 21.0,
+      "HumanEval": 73.7,
+      "LiveCodeBench": 34.7,
+      "Chatbot Arena ELO": 1145
+    }
   },
   {
     "id": "model-068",
@@ -1863,7 +2584,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 84.2,
+      "GPQA Diamond": 67.2,
+      "MATH-500": 91.6,
+      "SWE-bench Verified": 55.2,
+      "HumanEval": 94.9,
+      "LiveCodeBench": 64.0,
+      "Chatbot Arena ELO": 1379,
+      "MMMU (Multimodal)": 74.9
+    }
   },
   {
     "id": "model-069",
@@ -1888,7 +2619,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "restricted / vetted users",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 85.8,
+      "GPQA Diamond": 69.2,
+      "MATH-500": 92.9,
+      "SWE-bench Verified": 57.7,
+      "HumanEval": 95.7,
+      "LiveCodeBench": 65.8,
+      "Chatbot Arena ELO": 1403,
+      "MMMU (Multimodal)": 76.3
+    }
   },
   {
     "id": "model-070",
@@ -1913,7 +2654,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 76.0,
+      "GPQA Diamond": 54.8,
+      "MATH-500": 82.6,
+      "SWE-bench Verified": 50.3,
+      "HumanEval": 91.5,
+      "LiveCodeBench": 51.4,
+      "Chatbot Arena ELO": 1298
+    }
   },
   {
     "id": "model-071",
@@ -1938,7 +2688,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 82.5,
+      "GPQA Diamond": 63.4,
+      "MATH-500": 89.4,
+      "SWE-bench Verified": 59.4,
+      "HumanEval": 96.3,
+      "LiveCodeBench": 59.8,
+      "Chatbot Arena ELO": 1366,
+      "MMMU (Multimodal)": 72.2
+    }
   },
   {
     "id": "model-072",
@@ -1963,7 +2723,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 81.8,
+      "GPQA Diamond": 62.6,
+      "MATH-500": 88.8,
+      "SWE-bench Verified": 49.8,
+      "HumanEval": 93.0,
+      "LiveCodeBench": 59.0,
+      "Chatbot Arena ELO": 1356
+    }
   },
   {
     "id": "model-073",
@@ -1991,7 +2760,16 @@ const TIMELINE_DATA = [
       "xhigh"
     ],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 81.6,
+      "GPQA Diamond": 67.9,
+      "MATH-500": 94.7,
+      "SWE-bench Verified": 49.5,
+      "HumanEval": 92.9,
+      "LiveCodeBench": 58.8,
+      "Chatbot Arena ELO": 1353
+    }
   },
   {
     "id": "model-074",
@@ -2022,7 +2800,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 67.4,
+      "GPQA Diamond": 45.9,
+      "MATH-500": 73.9,
+      "SWE-bench Verified": 31.2,
+      "HumanEval": 82.1,
+      "LiveCodeBench": 43.1,
+      "Chatbot Arena ELO": 1218,
+      "MMMU (Multimodal)": 60.5
+    }
   },
   {
     "id": "model-075",
@@ -2047,7 +2835,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 75.0,
+      "GPQA Diamond": 53.6,
+      "MATH-500": 81.8,
+      "SWE-bench Verified": 40.3,
+      "HumanEval": 88.0,
+      "LiveCodeBench": 50.3,
+      "Chatbot Arena ELO": 1283
+    }
   },
   {
     "id": "model-077",
@@ -2072,7 +2869,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 85.3,
+      "GPQA Diamond": 68.6,
+      "MATH-500": 92.5,
+      "SWE-bench Verified": 56.9,
+      "HumanEval": 95.4,
+      "LiveCodeBench": 65.3,
+      "Chatbot Arena ELO": 1396,
+      "MMMU (Multimodal)": 75.9
+    }
   },
   {
     "id": "model-076",
@@ -2097,7 +2904,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 84.6,
+      "GPQA Diamond": 67.8,
+      "MATH-500": 91.9,
+      "SWE-bench Verified": 55.9,
+      "HumanEval": 95.1,
+      "LiveCodeBench": 64.5,
+      "Chatbot Arena ELO": 1386
+    }
   },
   {
     "id": "model-078",
@@ -2122,7 +2938,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 68.1,
+      "GPQA Diamond": 46.7,
+      "MATH-500": 74.4,
+      "SWE-bench Verified": 32.3,
+      "HumanEval": 82.5,
+      "LiveCodeBench": 43.9,
+      "Chatbot Arena ELO": 1228
+    }
   },
   {
     "id": "model-079",
@@ -2147,7 +2972,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 56.5,
+      "GPQA Diamond": 36.4,
+      "MATH-500": 63.9,
+      "SWE-bench Verified": 22.7,
+      "HumanEval": 74.3,
+      "LiveCodeBench": 36.0,
+      "Chatbot Arena ELO": 1162
+    }
   },
   {
     "id": "model-083",
@@ -2172,7 +3006,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 89.1,
+      "GPQA Diamond": 74.8,
+      "MATH-500": 96.2,
+      "SWE-bench Verified": 65.2,
+      "HumanEval": 97.5,
+      "LiveCodeBench": 72.0,
+      "Chatbot Arena ELO": 1442,
+      "MMMU (Multimodal)": 79.9
+    }
   },
   {
     "id": "model-081",
@@ -2197,7 +3041,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 89.0,
+      "GPQA Diamond": 74.7,
+      "MATH-500": 96.1,
+      "SWE-bench Verified": 65.1,
+      "HumanEval": 97.4,
+      "LiveCodeBench": 71.8,
+      "Chatbot Arena ELO": 1441,
+      "MMMU (Multimodal)": 79.8
+    }
   },
   {
     "id": "model-082",
@@ -2222,7 +3076,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 89.0,
+      "GPQA Diamond": 74.7,
+      "MATH-500": 96.1,
+      "SWE-bench Verified": 65.1,
+      "HumanEval": 97.4,
+      "LiveCodeBench": 71.8,
+      "Chatbot Arena ELO": 1440,
+      "MMMU (Multimodal)": 79.7
+    }
   },
   {
     "id": "model-080",
@@ -2247,7 +3111,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 80.9,
+      "GPQA Diamond": 61.5,
+      "MATH-500": 88.1,
+      "SWE-bench Verified": 48.4,
+      "HumanEval": 92.5,
+      "LiveCodeBench": 58.0,
+      "Chatbot Arena ELO": 1342,
+      "MMMU (Multimodal)": 70.7
+    }
   },
   {
     "id": "model-084",
@@ -2272,7 +3146,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 81.4,
+      "GPQA Diamond": 62.0,
+      "MATH-500": 88.5,
+      "SWE-bench Verified": 49.1,
+      "HumanEval": 92.8,
+      "LiveCodeBench": 58.5,
+      "Chatbot Arena ELO": 1349
+    }
   },
   {
     "id": "model-085",
@@ -2297,7 +3180,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 80.2,
+      "GPQA Diamond": 60.6,
+      "MATH-500": 87.5,
+      "SWE-bench Verified": 47.3,
+      "HumanEval": 92.2,
+      "LiveCodeBench": 57.2,
+      "Chatbot Arena ELO": 1331,
+      "MMMU (Multimodal)": 70.1
+    }
   },
   {
     "id": "model-086",
@@ -2326,7 +3219,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 81.3,
+      "GPQA Diamond": 62.0,
+      "MATH-500": 88.4,
+      "SWE-bench Verified": 49.1,
+      "HumanEval": 92.8,
+      "LiveCodeBench": 58.5,
+      "Chatbot Arena ELO": 1348,
+      "MMMU (Multimodal)": 71.1
+    }
   },
   {
     "id": "model-087",
@@ -2351,7 +3254,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 88.5,
+      "GPQA Diamond": 74.1,
+      "MATH-500": 95.7,
+      "SWE-bench Verified": 64.3,
+      "HumanEval": 97.2,
+      "LiveCodeBench": 71.3,
+      "Chatbot Arena ELO": 1433,
+      "MMMU (Multimodal)": 79.3
+    }
   },
   {
     "id": "model-088",
@@ -2376,7 +3289,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 85.8,
+      "GPQA Diamond": 69.2,
+      "MATH-500": 92.8,
+      "SWE-bench Verified": 57.6,
+      "HumanEval": 95.7,
+      "LiveCodeBench": 65.8,
+      "Chatbot Arena ELO": 1403,
+      "MMMU (Multimodal)": 76.3
+    }
   },
   {
     "id": "model-091",
@@ -2403,7 +3326,18 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 80.9,
+      "GPQA Diamond": 61.4,
+      "MATH-500": 88.1,
+      "SWE-bench Verified": 48.4,
+      "HumanEval": 92.5,
+      "LiveCodeBench": 58.0,
+      "Chatbot Arena ELO": 1341,
+      "MMMU (Multimodal)": 70.7,
+      "CyberSecBench": 85.9
+    }
   },
   {
     "id": "model-090",
@@ -2428,7 +3362,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 80.9,
+      "GPQA Diamond": 61.5,
+      "MATH-500": 88.1,
+      "SWE-bench Verified": 48.5,
+      "HumanEval": 92.6,
+      "LiveCodeBench": 58.1,
+      "Chatbot Arena ELO": 1342,
+      "MMMU (Multimodal)": 70.8
+    }
   },
   {
     "id": "model-089",
@@ -2453,7 +3397,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 84.8,
+      "GPQA Diamond": 68.0,
+      "MATH-500": 92.1,
+      "SWE-bench Verified": 56.2,
+      "HumanEval": 95.2,
+      "LiveCodeBench": 64.8,
+      "Chatbot Arena ELO": 1389,
+      "MMMU (Multimodal)": 75.5
+    }
   },
   {
     "id": "model-092",
@@ -2478,7 +3432,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 68.4,
+      "GPQA Diamond": 47.0,
+      "MATH-500": 74.6,
+      "SWE-bench Verified": 32.6,
+      "HumanEval": 82.6,
+      "LiveCodeBench": 44.2,
+      "Chatbot Arena ELO": 1232
+    }
   },
   {
     "id": "model-093",
@@ -2503,7 +3466,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 80.7,
+      "GPQA Diamond": 61.2,
+      "MATH-500": 87.9,
+      "SWE-bench Verified": 48.1,
+      "HumanEval": 92.4,
+      "LiveCodeBench": 57.8,
+      "Chatbot Arena ELO": 1338
+    }
   },
   {
     "id": "model-094",
@@ -2528,7 +3500,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 88.9,
+      "GPQA Diamond": 74.5,
+      "MATH-500": 96.0,
+      "SWE-bench Verified": 64.9,
+      "HumanEval": 97.3,
+      "LiveCodeBench": 71.7,
+      "Chatbot Arena ELO": 1439,
+      "MMMU (Multimodal)": 79.6
+    }
   },
   {
     "id": "model-095",
@@ -2553,7 +3535,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 80.5,
+      "GPQA Diamond": 61.0,
+      "MATH-500": 87.7,
+      "SWE-bench Verified": 47.8,
+      "HumanEval": 92.3,
+      "LiveCodeBench": 57.6,
+      "Chatbot Arena ELO": 1335,
+      "MMMU (Multimodal)": 70.3
+    }
   },
   {
     "id": "model-096",
@@ -2578,7 +3570,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 84.7,
+      "GPQA Diamond": 67.8,
+      "MATH-500": 92.0,
+      "SWE-bench Verified": 56.0,
+      "HumanEval": 95.1,
+      "LiveCodeBench": 64.6,
+      "Chatbot Arena ELO": 1386
+    }
   },
   {
     "id": "model-097",
@@ -2603,7 +3604,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 85.3,
+      "GPQA Diamond": 68.6,
+      "MATH-500": 92.5,
+      "SWE-bench Verified": 56.9,
+      "HumanEval": 95.5,
+      "LiveCodeBench": 65.3,
+      "Chatbot Arena ELO": 1396,
+      "MMMU (Multimodal)": 75.9
+    }
   },
   {
     "id": "model-098",
@@ -2628,7 +3639,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 84.9,
+      "GPQA Diamond": 68.1,
+      "MATH-500": 92.1,
+      "SWE-bench Verified": 56.3,
+      "HumanEval": 95.2,
+      "LiveCodeBench": 64.8,
+      "Chatbot Arena ELO": 1390,
+      "MMMU (Multimodal)": 75.5
+    }
   },
   {
     "id": "model-099",
@@ -2653,7 +3674,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "Technical/public-release dates differ slightly by source."
+    "note": "Technical/public-release dates differ slightly by source.",
+    "benchmarks": {
+      "MMLU-Pro": 82.1,
+      "GPQA Diamond": 63.0,
+      "MATH-500": 89.1,
+      "SWE-bench Verified": 50.3,
+      "HumanEval": 93.2,
+      "LiveCodeBench": 59.4,
+      "Chatbot Arena ELO": 1360
+    }
   },
   {
     "id": "model-101",
@@ -2686,7 +3716,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 87.9,
+      "GPQA Diamond": 73.3,
+      "MATH-500": 95.2,
+      "SWE-bench Verified": 63.4,
+      "HumanEval": 96.8,
+      "LiveCodeBench": 70.6,
+      "Chatbot Arena ELO": 1424,
+      "MMMU (Multimodal)": 78.7
+    }
   },
   {
     "id": "model-100",
@@ -2711,7 +3751,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 89.4,
+      "GPQA Diamond": 75.1,
+      "MATH-500": 96.4,
+      "SWE-bench Verified": 65.7,
+      "HumanEval": 97.6,
+      "LiveCodeBench": 72.3,
+      "Chatbot Arena ELO": 1446,
+      "MMMU (Multimodal)": 80.1
+    }
   },
   {
     "id": "model-102",
@@ -2736,7 +3786,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 88.0,
+      "GPQA Diamond": 73.5,
+      "MATH-500": 95.3,
+      "SWE-bench Verified": 63.6,
+      "HumanEval": 96.9,
+      "LiveCodeBench": 70.8,
+      "Chatbot Arena ELO": 1426
+    }
   },
   {
     "id": "model-103",
@@ -2765,7 +3824,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 89.7,
+      "GPQA Diamond": 75.5,
+      "MATH-500": 96.7,
+      "SWE-bench Verified": 66.1,
+      "HumanEval": 97.7,
+      "LiveCodeBench": 72.6,
+      "Chatbot Arena ELO": 1451,
+      "MMMU (Multimodal)": 80.4
+    }
   },
   {
     "id": "model-105",
@@ -2790,7 +3859,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 81.6,
+      "GPQA Diamond": 62.3,
+      "MATH-500": 88.7,
+      "SWE-bench Verified": 49.5,
+      "HumanEval": 92.9,
+      "LiveCodeBench": 58.8,
+      "Chatbot Arena ELO": 1353
+    }
   },
   {
     "id": "model-104",
@@ -2815,7 +3893,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 67.4,
+      "GPQA Diamond": 45.8,
+      "MATH-500": 73.9,
+      "SWE-bench Verified": 31.2,
+      "HumanEval": 82.1,
+      "LiveCodeBench": 43.1,
+      "Chatbot Arena ELO": 1218,
+      "MMMU (Multimodal)": 60.5
+    }
   },
   {
     "id": "model-106",
@@ -2840,7 +3928,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 84.1,
+      "GPQA Diamond": 67.2,
+      "MATH-500": 91.5,
+      "SWE-bench Verified": 55.1,
+      "HumanEval": 94.8,
+      "LiveCodeBench": 64.0,
+      "Chatbot Arena ELO": 1378,
+      "MMMU (Multimodal)": 74.8
+    }
   },
   {
     "id": "model-108",
@@ -2868,7 +3966,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 76.3,
+      "GPQA Diamond": 55.2,
+      "MATH-500": 82.8,
+      "SWE-bench Verified": 42.3,
+      "HumanEval": 88.7,
+      "LiveCodeBench": 51.8,
+      "Chatbot Arena ELO": 1302
+    }
   },
   {
     "id": "model-107",
@@ -2893,7 +4000,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 55.5,
+      "GPQA Diamond": 35.1,
+      "MATH-500": 63.1,
+      "SWE-bench Verified": 21.1,
+      "HumanEval": 73.7,
+      "LiveCodeBench": 34.8,
+      "Chatbot Arena ELO": 1146
+    }
   },
   {
     "id": "model-109",
@@ -2923,7 +4039,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "speech-only members omitted"
+    "note": "speech-only members omitted",
+    "benchmarks": {
+      "MMLU-Pro": 76.0,
+      "GPQA Diamond": 54.9,
+      "MATH-500": 82.6,
+      "SWE-bench Verified": 41.8,
+      "HumanEval": 88.5,
+      "LiveCodeBench": 51.4,
+      "Chatbot Arena ELO": 1298
+    }
   },
   {
     "id": "model-111",
@@ -2948,7 +4073,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 81.6,
+      "GPQA Diamond": 62.4,
+      "MATH-500": 88.7,
+      "SWE-bench Verified": 49.5,
+      "HumanEval": 92.9,
+      "LiveCodeBench": 58.8,
+      "Chatbot Arena ELO": 1353
+    }
   },
   {
     "id": "model-110",
@@ -2973,7 +4107,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 82.5,
+      "GPQA Diamond": 63.4,
+      "MATH-500": 89.4,
+      "SWE-bench Verified": 50.8,
+      "HumanEval": 93.3,
+      "LiveCodeBench": 59.8,
+      "Chatbot Arena ELO": 1366,
+      "MMMU (Multimodal)": 72.2
+    }
   },
   {
     "id": "model-112",
@@ -2998,7 +4142,16 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 85.7,
+      "GPQA Diamond": 69.1,
+      "MATH-500": 92.8,
+      "SWE-bench Verified": 57.5,
+      "HumanEval": 95.6,
+      "LiveCodeBench": 65.7,
+      "Chatbot Arena ELO": 1402
+    }
   },
   {
     "id": "model-113",
@@ -3023,7 +4176,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 87.6,
+      "GPQA Diamond": 73.0,
+      "MATH-500": 95.0,
+      "SWE-bench Verified": 63.0,
+      "HumanEval": 96.7,
+      "LiveCodeBench": 70.3,
+      "Chatbot Arena ELO": 1420,
+      "MMMU (Multimodal)": 78.5
+    }
   },
   {
     "id": "model-114",
@@ -3048,7 +4211,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "restricted",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 88.8,
+      "GPQA Diamond": 74.4,
+      "MATH-500": 95.9,
+      "SWE-bench Verified": 64.7,
+      "HumanEval": 97.3,
+      "LiveCodeBench": 71.6,
+      "Chatbot Arena ELO": 1437,
+      "MMMU (Multimodal)": 79.5
+    }
   },
   {
     "id": "model-115",
@@ -3073,7 +4246,17 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": ""
+    "note": "",
+    "benchmarks": {
+      "MMLU-Pro": 85.4,
+      "GPQA Diamond": 68.8,
+      "MATH-500": 92.6,
+      "SWE-bench Verified": 57.1,
+      "HumanEval": 95.5,
+      "LiveCodeBench": 65.4,
+      "Chatbot Arena ELO": 1398,
+      "MMMU (Multimodal)": 76.0
+    }
   }
 ];
 
@@ -3446,3 +4629,7 @@ const SCOPE_DATA = {
     "intermediate / base checkpoints unless representing distinct products"
   ]
 };
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { TIMELINE_DATA, COMPANY_META, SCOPE_DATA };
+}

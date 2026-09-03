@@ -29,6 +29,12 @@
         <button id="search-clear-btn" class="search-clear hidden" onclick="clearSearch()">✕</button>
       </div>
 
+      <!-- Comparison Launch Button -->
+      <button class="nav-btn" onclick="openCompareModal()" style="border: 1px solid #111827; background: #111827; color: #ffffff; border-radius: 6px; padding: 6px 12px; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;" title="두 모델 벤치마크 및 스펙 직접 비교">
+        <span>⚖️</span>
+        <span>두 모델 비교</span>
+      </button>
+
       <!-- Sort Order Toggle Button -->
       <button id="sort-toggle-btn" class="nav-btn" onclick="toggleSortOrder()" style="border: 1px solid #d1d5db; border-radius: 6px; padding: 6px 12px; font-weight: 600; display: inline-flex; align-items: center; gap: 4px; background: #f9fafb;" title="출시 순서 전환 (최신순 ⇄ 과거순)">
         <span id="sort-toggle-icon">↓</span>
@@ -64,7 +70,7 @@
     </div>
 
     <div class="scroll-hint">
-      마우스 휠이나 트랙패드로 좌우 스크롤 가능
+      마우스 휠이나 트랙패드로 좌우 스크롤 가능 · 카드의 <strong>[+ 비교]</strong>로 두 모델 선택 가능
     </div>
   </div>
 
@@ -75,9 +81,24 @@
     </div>
   </main>
 
+  <!-- Floating Comparison Dock -->
+  <div id="compare-dock" class="compare-dock hidden">
+    <span style="font-size: 12px; font-weight: 700; color: #111827;">⚖️ 비교할 모델 (<span id="compare-count">0</span>/2):</span>
+    <div id="compare-dock-items" style="display: flex; gap: 8px;"></div>
+    <button class="btn-primary" onclick="openCompareModal()" id="btn-dock-compare" disabled style="opacity: 0.5;">상호 비교하기</button>
+    <button class="nav-btn" onclick="clearCompareList()" style="font-size: 11px;">초기화</button>
+  </div>
+
   <!-- Detail Modal -->
   <div id="model-modal" class="modal-overlay hidden" onclick="handleModalBackdropClick(event)">
     <div id="modal-content-card" class="modal-card" onclick="event.stopPropagation()">
+      <!-- Populated dynamically -->
+    </div>
+  </div>
+
+  <!-- Model Benchmark Comparison Modal -->
+  <div id="compare-modal" class="modal-overlay hidden" onclick="handleCompareBackdropClick(event)">
+    <div id="compare-modal-content" class="compare-modal-card" onclick="event.stopPropagation()">
       <!-- Populated dynamically -->
     </div>
   </div>
