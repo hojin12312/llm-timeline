@@ -128,29 +128,61 @@ function renderModelCard(m) {
   return html;
 }
 
-// Setup Horizontal Scroll Interactions
+// Setup Horizontal Scroll Interactions (Smoother & Faster Physics)
 function setupScrollInteractions() {
   var container = document.getElementById('timeline-scroll-container');
   if (!container) return;
 
-  // Mouse wheel horizontal scroll
+  var targetScrollLeft = container.scrollLeft;
+  var isAnimating = false;
+
+  // Smooth lerp animation loop
+  function smoothScrollLoop() {
+    var diff = targetScrollLeft - container.scrollLeft;
+    if (Math.abs(diff) > 0.5) {
+      container.scrollLeft += diff * 0.18; // smooth easing
+      requestAnimationFrame(smoothScrollLoop);
+      isAnimating = true;
+    } else {
+      container.scrollLeft = targetScrollLeft;
+      isAnimating = false;
+    }
+  }
+
+  // Mouse wheel horizontal scroll with momentum
   container.addEventListener('wheel', function(e) {
-    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+    var delta = Math.abs(e.deltaY) >= Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
+    if (delta !== 0) {
       e.preventDefault();
-      container.scrollLeft += e.deltaY * 1.5;
+      // Faster multiplier: 2.2x for swift movement with silky deceleration
+      var multiplier = (e.deltaMode === 1) ? 45 : 2.2;
+      var maxScroll = container.scrollWidth - container.clientWidth;
+      targetScrollLeft = Math.max(0, Math.min(maxScroll, targetScrollLeft + delta * multiplier));
+      
+      if (!isAnimating) {
+        smoothScrollLoop();
+      }
     }
   }, { passive: false });
+
+  // Sync target position on native scroll events (drag / touch)
+  container.addEventListener('scroll', function() {
+    if (!isAnimating) {
+      targetScrollLeft = container.scrollLeft;
+    }
+  });
 
   // Drag-to-scroll
   var isDown = false;
   var startX;
-  var scrollLeft;
+  var startScrollLeft;
 
   container.addEventListener('mousedown', function(e) {
     if (e.target.closest('.model-card') || e.target.closest('button')) return;
     isDown = true;
     startX = e.pageX - container.offsetLeft;
-    scrollLeft = container.scrollLeft;
+    startScrollLeft = container.scrollLeft;
+    targetScrollLeft = container.scrollLeft;
   });
 
   container.addEventListener('mouseleave', function() {
@@ -165,16 +197,18 @@ function setupScrollInteractions() {
     if (!isDown) return;
     e.preventDefault();
     var x = e.pageX - container.offsetLeft;
-    var walk = (x - startX) * 1.5;
-    container.scrollLeft = scrollLeft - walk;
+    var walk = (x - startX) * 1.8; // slightly faster drag
+    var maxScroll = container.scrollWidth - container.clientWidth;
+    container.scrollLeft = Math.max(0, Math.min(maxScroll, startScrollLeft - walk));
+    targetScrollLeft = container.scrollLeft;
   });
 }
 
-// Navigation Controls
+// Navigation Controls (Buttons)
 function scrollTimeline(direction) {
   var container = document.getElementById('timeline-scroll-container');
   if (!container) return;
-  var amount = 580;
+  var amount = 750; // faster jump per click
   container.scrollBy({ left: direction * amount, behavior: 'smooth' });
 }
 
