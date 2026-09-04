@@ -400,7 +400,7 @@ function openModal(id) {
       var val = entry[1];
       var unit = '%';
       if (key.includes('ELO')) unit = ' ELO';
-      else if (key.includes('Index') || key.includes('AAII')) unit = '점';
+      else if (key.includes('Index') || key.includes('AAII') || key.includes('CodeArena')) unit = '점';
       else if (key === 'MT-Bench') unit = ' / 10';
       html += '      <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 6px; padding: 8px 10px;">';
       html += '        <div style="font-size: 11px; color: #6b7280;">' + key + '</div>';
@@ -679,6 +679,8 @@ function renderCompareModalContent() {
   // 2. Benchmarks Side-by-Side Comparison
   var BENCH_META = {
     'Chatbot Arena ELO': { label: 'Chatbot Arena ELO', desc: '인간 블라인드 선호도 평가', unit: ' ELO', priority: 1 },
+    'CodeArena WebDev': { label: 'CodeArena WebDev', desc: '웹 개발 및 에이전트 코딩 블라인드 평가', unit: '점', priority: 1.5 },
+    'Web Dev Arena ELO': { label: 'Web Dev Arena ELO', desc: '웹 개발 특화 블라인드 아레나', unit: ' ELO', priority: 1.6 },
     'SWE-bench Verified': { label: 'SWE-bench Verified', desc: '실제 GitHub 이슈 해결율 (소프트웨어 엔지니어링)', unit: '%', priority: 2 },
     'SWE-bench Pro': { label: 'SWE-bench Pro', desc: '고난도 오염 방지 소프트웨어 엔지니어링 벤치마크', unit: '%', priority: 3 },
     'Terminal-Bench 2.1': { label: 'Terminal-Bench 2.1', desc: '터미널 및 CLI 자율 실행 엔지니어링 능력', unit: '%', priority: 4 },

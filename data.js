@@ -3035,18 +3035,27 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "~2.8T",
-    "architecture": "Long-Context (1M) MoE",
-    "modalities": [],
-    "focus": [],
-    "open_weights": false,
-    "license": "",
-    "context": "~1M",
+    "parameters": "2.8T total / 16 active of 896 experts (MoE)",
+    "architecture": "Stable LatentMoE with KDA (Kimi Delta Attention) & Attention Residuals (AttnRes)",
+    "modalities": [
+      "text",
+      "image",
+      "video"
+    ],
+    "focus": [
+      "Long-Context Reasoning",
+      "Multimodal",
+      "Code & Math",
+      "MoE Efficiency"
+    ],
+    "open_weights": true,
+    "license": "Kimi K3 License (Open Weights)",
+    "context": "1M (1,000,000 tokens)",
     "languages": "",
     "variants": [],
     "reasoning_effort": [],
-    "availability": "",
-    "note": "",
+    "availability": "Hugging Face (moonshotai/Kimi-K3), Kimi API",
+    "note": "문샷 AI(Moonshot AI)의 2.8조(2.8T) 파라미터급 초대형 오픈웨이트 MLLM. 오픈웨이트 모델 최초 3T 클래스 도달. 896개 전문가 중 토큰당 16개 활성화(Stable LatentMoE), KDA(Kimi Delta Attention) 및 Attention Residuals 도입. Hugging Face에 1.56TB 가중치 전면 공개.",
     "benchmarks": {
       "SWE-bench Verified": 76.8,
       "AIME 2025": 96.1,
@@ -4022,6 +4031,49 @@ const TIMELINE_DATA = [
     "benchmarks": {
       "Chatbot Arena ELO": 1530,
       "AA Intelligence Index": 63
+    }
+  },
+  {
+    "id": "model-130",
+    "name": "Qwen3.8-Max-0902",
+    "date": "2026-09-02",
+    "sortDate": "2026-09-02",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "Alibaba",
+    "family": "Qwen3.8",
+    "type": "MLLM",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "",
+    "architecture": "2.4T MoE Foundation with SFT/RL for Coding & Agentic Cowork",
+    "modalities": [
+      "text",
+      "image",
+      "video"
+    ],
+    "focus": [
+      "Agentic Coding",
+      "Cowork",
+      "Multimodal",
+      "Tool Use"
+    ],
+    "open_weights": false,
+    "license": "Proprietary Commercial API (QwenCloud)",
+    "context": "1M (1,000,000 tokens)",
+    "languages": "Multilingual",
+    "variants": [
+      "qwen3.8-max-0902"
+    ],
+    "reasoning_effort": [],
+    "availability": "QwenCloud API (qwen3.8-max-0902), DashScope",
+    "note": "알리바바(Alibaba)의 플래그십 Qwen3.8-Max 9월 2일자 사후 학습 업그레이드 스냅샷. 코드 생성 및 자율 협업(Cowork) 특화 강화학습을 거쳐 CodeArena WebDev 리더보드 1위(1,691점) 달성. 1M 토큰 컨텍스트 지원.",
+    "benchmarks": {
+      "Chatbot Arena ELO": 1458,
+      "CodeArena WebDev": 1691,
+      "SWE-bench Pro": 68.5,
+      "GPQA Diamond": 92.8,
+      "MMLU-Pro": 88.7
     }
   }
 ];
