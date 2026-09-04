@@ -90,6 +90,7 @@ function getFilteredModels() {
     if (m.company.includes('SK') || m.family.includes('A.X')) aliases += ' sk skt 에스케이 a.x 에이닷';
     if (m.company.includes('NAVER') || m.name.includes('HyperCLOVA')) aliases += ' naver 네이버 clova 클로바';
     if (m.company.includes('Upstage') || m.name.includes('Solar')) aliases += ' upstage 업스테이지 solar 솔라';
+    if (m.company.includes('Tencent') || m.family.includes('Hunyuan')) aliases += ' tencent 텐센트 hunyuan 훈위안 혼원 hy4 hy3';
 
     var text = [
       m.name,
