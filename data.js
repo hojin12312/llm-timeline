@@ -508,14 +508,13 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 76.3,
-      "GPQA Diamond": 55.2,
-      "MATH-500": 82.8,
-      "SWE-bench Verified": 42.2,
-      "HumanEval": 88.7,
-      "LiveCodeBench": 51.8,
-      "Chatbot Arena ELO": 1302,
-      "MMMU (Multimodal)": 67
+      "Chatbot Arena ELO": 1318,
+      "MMLU-Pro": 78.2,
+      "GPQA Diamond": 57.8,
+      "MATH-500": 85.2,
+      "SWE-bench Verified": 44.1,
+      "HumanEval": 89.8,
+      "LiveCodeBench": 53.8
     }
   },
   {
@@ -726,14 +725,13 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 76.9,
-      "GPQA Diamond": 55.9,
-      "MATH-500": 83.3,
-      "SWE-bench Verified": 43.1,
-      "HumanEval": 89,
-      "LiveCodeBench": 52.4,
-      "Chatbot Arena ELO": 1311,
-      "MMMU (Multimodal)": 67.5
+      "Chatbot Arena ELO": 1292,
+      "MMLU-Pro": 75.6,
+      "GPQA Diamond": 54.2,
+      "MATH-500": 82.2,
+      "SWE-bench Verified": 40.8,
+      "HumanEval": 88.1,
+      "LiveCodeBench": 50.5
     }
   },
   {
@@ -761,14 +759,13 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 67.7,
-      "GPQA Diamond": 46.1,
-      "MATH-500": 74.1,
-      "SWE-bench Verified": 31.6,
-      "HumanEval": 82.2,
-      "LiveCodeBench": 43.4,
-      "Chatbot Arena ELO": 1221,
-      "MMMU (Multimodal)": 60.7
+      "Chatbot Arena ELO": 1252,
+      "MMLU-Pro": 70.8,
+      "GPQA Diamond": 49.8,
+      "MATH-500": 77.8,
+      "SWE-bench Verified": 34.8,
+      "HumanEval": 84.2,
+      "LiveCodeBench": 45.2
     }
   },
   {
@@ -796,14 +793,13 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 69.2,
-      "GPQA Diamond": 48.1,
-      "MATH-500": 75.3,
-      "SWE-bench Verified": 34,
-      "HumanEval": 83,
-      "LiveCodeBench": 45.2,
-      "Chatbot Arena ELO": 1245,
-      "MMMU (Multimodal)": 62.1
+      "Chatbot Arena ELO": 1242,
+      "MMLU-Pro": 69.5,
+      "GPQA Diamond": 48.5,
+      "MATH-500": 76.5,
+      "SWE-bench Verified": 33.5,
+      "HumanEval": 83.2,
+      "LiveCodeBench": 44
     }
   },
   {
@@ -831,14 +827,13 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 57.5,
-      "GPQA Diamond": 37.5,
-      "MATH-500": 64.7,
-      "SWE-bench Verified": 24.1,
-      "HumanEval": 74.7,
-      "LiveCodeBench": 37,
-      "Chatbot Arena ELO": 1176,
-      "MMMU (Multimodal)": 55
+      "Chatbot Arena ELO": 1198,
+      "MMLU-Pro": 64.2,
+      "GPQA Diamond": 42.5,
+      "MATH-500": 70.5,
+      "SWE-bench Verified": 27.2,
+      "HumanEval": 79.5,
+      "LiveCodeBench": 39.8
     }
   },
   {
@@ -866,14 +861,13 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 55.9,
-      "GPQA Diamond": 35.5,
-      "MATH-500": 63.4,
-      "SWE-bench Verified": 21.7,
-      "HumanEval": 73.9,
-      "LiveCodeBench": 35.2,
-      "Chatbot Arena ELO": 1151,
-      "MMMU (Multimodal)": 53.5
+      "Chatbot Arena ELO": 1165,
+      "MMLU-Pro": 58.5,
+      "GPQA Diamond": 37.5,
+      "MATH-500": 65.2,
+      "SWE-bench Verified": 23.5,
+      "HumanEval": 75.5,
+      "LiveCodeBench": 36.5
     }
   },
   {
@@ -901,14 +895,13 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 56.8,
-      "GPQA Diamond": 36.7,
-      "MATH-500": 64.1,
-      "SWE-bench Verified": 23.1,
-      "HumanEval": 74.4,
-      "LiveCodeBench": 36.2,
-      "Chatbot Arena ELO": 1166,
-      "MMMU (Multimodal)": 54.4
+      "Chatbot Arena ELO": 1145,
+      "MMLU-Pro": 54.8,
+      "GPQA Diamond": 34,
+      "MATH-500": 61.5,
+      "SWE-bench Verified": 20.8,
+      "HumanEval": 72.8,
+      "LiveCodeBench": 33.8
     }
   },
   {
@@ -936,14 +929,13 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 55.7,
-      "GPQA Diamond": 35.4,
-      "MATH-500": 63.3,
-      "SWE-bench Verified": 21.5,
-      "HumanEval": 73.9,
-      "LiveCodeBench": 35.1,
-      "Chatbot Arena ELO": 1149,
-      "MMMU (Multimodal)": 53.4
+      "Chatbot Arena ELO": 1115,
+      "MMLU-Pro": 49.5,
+      "GPQA Diamond": 29.5,
+      "MATH-500": 56,
+      "SWE-bench Verified": 16.5,
+      "HumanEval": 68.5,
+      "LiveCodeBench": 29.5
     }
   },
   {
@@ -1006,14 +998,14 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 82.2,
-      "GPQA Diamond": 63.1,
-      "MATH-500": 89.1,
-      "SWE-bench Verified": 50.4,
-      "HumanEval": 93.2,
-      "LiveCodeBench": 59.5,
-      "Chatbot Arena ELO": 1362,
-      "MMMU (Multimodal)": 71.9
+      "Chatbot Arena ELO": 1358,
+      "MMLU-Pro": 82,
+      "GPQA Diamond": 63.2,
+      "MATH-500": 88.5,
+      "SWE-bench Verified": 49,
+      "HumanEval": 92.5,
+      "LiveCodeBench": 59,
+      "MMMU (Multimodal)": 71.5
     }
   },
   {
@@ -1041,14 +1033,14 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 82.2,
-      "GPQA Diamond": 63.1,
-      "MATH-500": 89.1,
-      "SWE-bench Verified": 50.4,
-      "HumanEval": 93.2,
-      "LiveCodeBench": 59.5,
-      "Chatbot Arena ELO": 1362,
-      "MMMU (Multimodal)": 71.9
+      "Chatbot Arena ELO": 1370,
+      "MMLU-Pro": 83.1,
+      "GPQA Diamond": 65,
+      "MATH-500": 89.8,
+      "SWE-bench Verified": 51.5,
+      "HumanEval": 93.5,
+      "LiveCodeBench": 61.2,
+      "MMMU (Multimodal)": 73
     }
   },
   {
@@ -1322,14 +1314,14 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 80.8,
-      "GPQA Diamond": 61.3,
-      "MATH-500": 88,
-      "SWE-bench Verified": 48.2,
-      "HumanEval": 92.5,
-      "LiveCodeBench": 57.9,
-      "Chatbot Arena ELO": 1340,
-      "MMMU (Multimodal)": 70.6
+      "Chatbot Arena ELO": 1320,
+      "MMLU-Pro": 78.8,
+      "GPQA Diamond": 58.5,
+      "MATH-500": 85.8,
+      "SWE-bench Verified": 44.5,
+      "HumanEval": 90,
+      "LiveCodeBench": 54.5,
+      "MMMU (Multimodal)": 68
     }
   },
   {
@@ -2003,14 +1995,14 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 85.4,
-      "GPQA Diamond": 68.7,
-      "MATH-500": 92.5,
-      "SWE-bench Verified": 57,
-      "HumanEval": 95.5,
-      "LiveCodeBench": 65.4,
-      "Chatbot Arena ELO": 1397,
-      "MMMU (Multimodal)": 75.9
+      "Chatbot Arena ELO": 1391,
+      "MMLU-Pro": 85.1,
+      "GPQA Diamond": 68.4,
+      "MATH-500": 92,
+      "SWE-bench Verified": 56.2,
+      "HumanEval": 95,
+      "LiveCodeBench": 65,
+      "MMMU (Multimodal)": 75.8
     }
   },
   {
@@ -2038,14 +2030,14 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 84.8,
-      "GPQA Diamond": 68,
-      "MATH-500": 92,
-      "SWE-bench Verified": 56.1,
-      "HumanEval": 95.2,
-      "LiveCodeBench": 64.7,
-      "Chatbot Arena ELO": 1388,
-      "MMMU (Multimodal)": 75.4
+      "Chatbot Arena ELO": 1408,
+      "MMLU-Pro": 86.2,
+      "GPQA Diamond": 70.1,
+      "MATH-500": 93.4,
+      "SWE-bench Verified": 58.6,
+      "HumanEval": 95.8,
+      "LiveCodeBench": 66.8,
+      "MMMU (Multimodal)": 77.1
     }
   },
   {
@@ -3222,14 +3214,14 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 89,
-      "GPQA Diamond": 74.7,
-      "MATH-500": 96.1,
-      "SWE-bench Verified": 65.1,
-      "HumanEval": 97.4,
-      "LiveCodeBench": 71.8,
-      "Chatbot Arena ELO": 1441,
-      "MMMU (Multimodal)": 79.8
+      "Chatbot Arena ELO": 1445,
+      "MMLU-Pro": 89.5,
+      "GPQA Diamond": 75.2,
+      "MATH-500": 96.5,
+      "SWE-bench Verified": 65.8,
+      "HumanEval": 97.8,
+      "LiveCodeBench": 72.5,
+      "MMMU (Multimodal)": 80.2
     }
   },
   {
@@ -3257,14 +3249,14 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 89,
-      "GPQA Diamond": 74.7,
-      "MATH-500": 96.1,
-      "SWE-bench Verified": 65.1,
-      "HumanEval": 97.4,
-      "LiveCodeBench": 71.8,
-      "Chatbot Arena ELO": 1440,
-      "MMMU (Multimodal)": 79.7
+      "Chatbot Arena ELO": 1392,
+      "MMLU-Pro": 85.2,
+      "GPQA Diamond": 68.8,
+      "MATH-500": 92.2,
+      "SWE-bench Verified": 56.8,
+      "HumanEval": 95.2,
+      "LiveCodeBench": 65.2,
+      "MMMU (Multimodal)": 76.2
     }
   },
   {
@@ -3292,14 +3284,14 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 89.1,
-      "GPQA Diamond": 74.8,
-      "MATH-500": 96.2,
-      "SWE-bench Verified": 65.2,
-      "HumanEval": 97.5,
-      "LiveCodeBench": 72,
-      "Chatbot Arena ELO": 1442,
-      "MMMU (Multimodal)": 79.9
+      "Chatbot Arena ELO": 1335,
+      "MMLU-Pro": 80.5,
+      "GPQA Diamond": 60.5,
+      "MATH-500": 87.2,
+      "SWE-bench Verified": 46.8,
+      "HumanEval": 91.8,
+      "LiveCodeBench": 56.5,
+      "MMMU (Multimodal)": 69.8
     }
   },
   {
