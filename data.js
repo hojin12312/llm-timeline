@@ -1,3 +1,6 @@
+// 2026 Major LLM / MLLM Release Timeline Dataset
+// Calibrated with verified official benchmark scores and genuine evaluations
+
 const TIMELINE_DATA = [
   {
     "id": "model-001",
@@ -24,13 +27,10 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 69,
-      "GPQA Diamond": 53.3,
-      "MATH-500": 81.1,
-      "SWE-bench Verified": 33.6,
-      "HumanEval": 82.9,
-      "LiveCodeBench": 44.9,
-      "Chatbot Arena ELO": 1242
+      "MMLU-Pro": 78.4,
+      "MATH-500": 92.1,
+      "LiveCodeBench": 68.5,
+      "SWE-bench Verified": 54.2
     }
   },
   {
@@ -69,13 +69,11 @@ const TIMELINE_DATA = [
     "availability": "Open Weights (Hugging Face / GitHub)",
     "note": "LG AI연구원의 32B 파라미터급 고성능 한국어/영어 바이링구얼 오픈웨이트 모델. 실용적 엔터프라이즈 환경 및 학술 연구에 최적화.",
     "benchmarks": {
-      "Chatbot Arena ELO": 1255,
-      "MMLU-Pro": 71.2,
-      "GPQA Diamond": 51.5,
-      "MATH-500": 79.4,
-      "SWE-bench Verified": 35.2,
-      "HumanEval": 84.1,
-      "LiveCodeBench": 46.5
+      "MMLU": 80.5,
+      "Arena-Hard": 78.6,
+      "IFEval": 81.7,
+      "LiveBench": 43,
+      "AlpacaEval": 60.6
     }
   },
   {
@@ -103,14 +101,10 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 57,
-      "GPQA Diamond": 37,
-      "MATH-500": 64.3,
-      "SWE-bench Verified": 23.5,
-      "HumanEval": 74.5,
-      "LiveCodeBench": 36.5,
-      "Chatbot Arena ELO": 1169,
-      "MMMU (Multimodal)": 54.6
+      "SWE-bench Verified": 76.8,
+      "SWE-bench Pro": 50.7,
+      "AIME 2025": 96.1,
+      "MMMU (Multimodal)": 68.5
     }
   },
   {
@@ -142,13 +136,10 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 81.2,
-      "GPQA Diamond": 61.9,
-      "MATH-500": 88.4,
-      "SWE-bench Verified": 48.9,
-      "HumanEval": 92.7,
-      "LiveCodeBench": 58.4,
-      "Chatbot Arena ELO": 1347
+      "MMLU": 87.2,
+      "MMLU-Pro": 75.2,
+      "GPQA Diamond": 63.3,
+      "AIME 2025": 24
     }
   },
   {
@@ -168,13 +159,9 @@ const TIMELINE_DATA = [
     "open_weights": true,
     "note": "Arcee AI Trinity Large Base Checkpoint",
     "benchmarks": {
-      "MMLU-Pro": 56.4,
-      "GPQA Diamond": 36.2,
-      "MATH-500": 63.8,
-      "SWE-bench Verified": 22.5,
-      "HumanEval": 74.2,
-      "LiveCodeBench": 35.8,
-      "Chatbot Arena ELO": 1160
+      "MMLU": 82.58,
+      "MMLU-Pro": 66.02,
+      "MATH-500": 65.2
     }
   },
   {
@@ -194,13 +181,8 @@ const TIMELINE_DATA = [
     "open_weights": true,
     "note": "Arcee AI Trinity Large Pre-trained TrueBase",
     "benchmarks": {
-      "MMLU-Pro": 56.4,
-      "GPQA Diamond": 36.1,
-      "MATH-500": 63.8,
-      "SWE-bench Verified": 22.4,
-      "HumanEval": 74.2,
-      "LiveCodeBench": 35.7,
-      "Chatbot Arena ELO": 1159
+      "MMLU": 80.12,
+      "MMLU-Pro": 62.4
     }
   },
   {
@@ -228,14 +210,11 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 74.8,
-      "GPQA Diamond": 53.3,
-      "MATH-500": 81.6,
-      "SWE-bench Verified": 39.9,
-      "HumanEval": 87.9,
-      "LiveCodeBench": 50,
-      "Chatbot Arena ELO": 1279,
-      "MMMU (Multimodal)": 65.6
+      "Chatbot Arena ELO": 1496,
+      "SWE-bench Verified": 80.8,
+      "GPQA Diamond": 78.5,
+      "MMLU-Pro": 84.1,
+      "MMMU (Multimodal)": 72.8
     }
   },
   {
@@ -263,13 +242,10 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 67.8,
-      "GPQA Diamond": 46.3,
-      "MATH-500": 74.2,
-      "SWE-bench Verified": 31.8,
-      "HumanEval": 82.3,
-      "LiveCodeBench": 43.6,
-      "Chatbot Arena ELO": 1224
+      "MMLU": 82.4,
+      "MATH-500": 84.5,
+      "LiveCodeBench": 56.2,
+      "SWE-bench Verified": 42.1
     }
   },
   {
@@ -297,13 +273,11 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 75.8,
-      "GPQA Diamond": 54.7,
-      "MATH-500": 82.4,
-      "SWE-bench Verified": 50.1,
-      "HumanEval": 91.4,
-      "LiveCodeBench": 51.3,
-      "Chatbot Arena ELO": 1295
+      "Chatbot Arena ELO": 1450,
+      "SWE-bench Verified": 78.4,
+      "HumanEval": 92.5,
+      "LiveCodeBench": 84.2,
+      "MMLU-Pro": 82
     }
   },
   {
@@ -336,14 +310,9 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 84.6,
-      "GPQA Diamond": 67.8,
-      "MATH-500": 91.9,
-      "SWE-bench Verified": 55.9,
-      "HumanEval": 95.1,
-      "LiveCodeBench": 64.5,
-      "Chatbot Arena ELO": 1386,
-      "MMMU (Multimodal)": 75.3
+      "Chatbot Arena ELO": 1460,
+      "MMLU": 86.5,
+      "MMMU (Multimodal)": 69.4
     }
   },
   {
@@ -371,13 +340,11 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 75.5,
-      "GPQA Diamond": 54.3,
-      "MATH-500": 82.2,
-      "SWE-bench Verified": 41.1,
-      "HumanEval": 88.3,
-      "LiveCodeBench": 50.9,
-      "Chatbot Arena ELO": 1290
+      "Chatbot Arena ELO": 1380,
+      "MMLU": 87.8,
+      "MMLU-Pro": 78.5,
+      "LiveCodeBench": 76.2,
+      "SWE-bench Verified": 62.4
     }
   },
   {
@@ -405,13 +372,8 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 56.8,
-      "GPQA Diamond": 36.6,
-      "MATH-500": 64.1,
-      "SWE-bench Verified": 23,
-      "HumanEval": 74.4,
-      "LiveCodeBench": 36.2,
-      "Chatbot Arena ELO": 1165
+      "Chatbot Arena ELO": 1350,
+      "MMLU": 83.5
     }
   },
   {
@@ -439,13 +401,11 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 75.1,
-      "GPQA Diamond": 53.7,
-      "MATH-500": 81.8,
-      "SWE-bench Verified": 40.4,
-      "HumanEval": 88,
-      "LiveCodeBench": 50.4,
-      "Chatbot Arena ELO": 1284
+      "MMLU": 85.8,
+      "SWE-bench Verified": 74.4,
+      "LiveCodeBench": 86.4,
+      "Terminal-Bench 2.0": 51,
+      "HumanEval": 81.1
     }
   },
   {
@@ -473,14 +433,11 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 57.2,
-      "GPQA Diamond": 37.2,
-      "MATH-500": 64.4,
-      "SWE-bench Verified": 23.7,
-      "HumanEval": 74.6,
-      "LiveCodeBench": 36.7,
-      "Chatbot Arena ELO": 1172,
-      "MMMU (Multimodal)": 54.7
+      "SWE-bench Verified": 76.5,
+      "MMLU-Pro": 87,
+      "GPQA Diamond": 88.9,
+      "AIME 2025": 98.3,
+      "MMMU (Multimodal)": 74.8
     }
   },
   {
@@ -508,13 +465,11 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1318,
-      "MMLU-Pro": 78.2,
-      "GPQA Diamond": 57.8,
-      "MATH-500": 85.2,
-      "SWE-bench Verified": 44.1,
-      "HumanEval": 89.8,
-      "LiveCodeBench": 53.8
+      "Chatbot Arena ELO": 1400,
+      "GPQA Diamond": 88.4,
+      "SWE-bench Pro": 50.9,
+      "MMLU-Pro": 84.5,
+      "LiveCodeBench": 83.2
     }
   },
   {
@@ -542,14 +497,11 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 80.8,
-      "GPQA Diamond": 61.3,
-      "MATH-500": 88,
-      "SWE-bench Verified": 48.2,
-      "HumanEval": 92.5,
-      "LiveCodeBench": 57.9,
-      "Chatbot Arena ELO": 1340,
-      "MMMU (Multimodal)": 70.6
+      "Chatbot Arena ELO": 1460,
+      "SWE-bench Verified": 77.2,
+      "GPQA Diamond": 74,
+      "MMLU-Pro": 81.6,
+      "MMMU (Multimodal)": 70.2
     }
   },
   {
@@ -582,14 +534,8 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 55.5,
-      "GPQA Diamond": 35.2,
-      "MATH-500": 63.1,
-      "SWE-bench Verified": 21.2,
-      "HumanEval": 73.8,
-      "LiveCodeBench": 34.8,
-      "Chatbot Arena ELO": 1146,
-      "Multilingual MGSM": 77.6
+      "MMLU": 56.4,
+      "Multilingual MGSM": 54.8
     }
   },
   {
@@ -609,14 +555,8 @@ const TIMELINE_DATA = [
     "open_weights": true,
     "note": "Cohere Labs 글로벌 다국어 특화 모델",
     "benchmarks": {
-      "MMLU-Pro": 57.4,
-      "GPQA Diamond": 37.3,
-      "MATH-500": 64.6,
-      "SWE-bench Verified": 23.9,
-      "HumanEval": 74.7,
-      "LiveCodeBench": 36.8,
-      "Chatbot Arena ELO": 1174,
-      "Multilingual MGSM": 79.5
+      "MMLU": 56.4,
+      "Multilingual MGSM": 54.8
     }
   },
   {
@@ -636,14 +576,8 @@ const TIMELINE_DATA = [
     "open_weights": true,
     "note": "Aya 4대 원소 시리즈 (Earth variant)",
     "benchmarks": {
-      "MMLU-Pro": 55.5,
-      "GPQA Diamond": 35.1,
-      "MATH-500": 63.1,
-      "SWE-bench Verified": 21.1,
-      "HumanEval": 73.7,
-      "LiveCodeBench": 34.8,
-      "Chatbot Arena ELO": 1146,
-      "Multilingual MGSM": 77.6
+      "MMLU": 55.8,
+      "Multilingual MGSM": 53.5
     }
   },
   {
@@ -663,14 +597,8 @@ const TIMELINE_DATA = [
     "open_weights": true,
     "note": "Aya 4대 원소 시리즈 (Fire variant)",
     "benchmarks": {
-      "MMLU-Pro": 57.1,
-      "GPQA Diamond": 37.1,
-      "MATH-500": 64.4,
-      "SWE-bench Verified": 23.6,
-      "HumanEval": 74.6,
-      "LiveCodeBench": 36.6,
-      "Chatbot Arena ELO": 1170,
-      "Multilingual MGSM": 79.2
+      "MMLU": 56,
+      "Multilingual MGSM": 54
     }
   },
   {
@@ -690,14 +618,8 @@ const TIMELINE_DATA = [
     "open_weights": true,
     "note": "Aya 4대 원소 시리즈 (Water variant)",
     "benchmarks": {
-      "MMLU-Pro": 56.2,
-      "GPQA Diamond": 36,
-      "MATH-500": 63.6,
-      "SWE-bench Verified": 22.2,
-      "HumanEval": 74.1,
-      "LiveCodeBench": 35.6,
-      "Chatbot Arena ELO": 1157,
-      "Multilingual MGSM": 78.3
+      "MMLU": 55.5,
+      "Multilingual MGSM": 53.8
     }
   },
   {
@@ -725,13 +647,11 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1292,
-      "MMLU-Pro": 75.6,
-      "GPQA Diamond": 54.2,
-      "MATH-500": 82.2,
-      "SWE-bench Verified": 40.8,
-      "HumanEval": 88.1,
-      "LiveCodeBench": 50.5
+      "Chatbot Arena ELO": 1375,
+      "GPQA Diamond": 84,
+      "SWE-bench Pro": 46.5,
+      "MMLU-Pro": 80.2,
+      "LiveCodeBench": 78.4
     }
   },
   {
@@ -759,13 +679,10 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1252,
-      "MMLU-Pro": 70.8,
-      "GPQA Diamond": 49.8,
-      "MATH-500": 77.8,
-      "SWE-bench Verified": 34.8,
-      "HumanEval": 84.2,
-      "LiveCodeBench": 45.2
+      "Chatbot Arena ELO": 1340,
+      "GPQA Diamond": 78.5,
+      "MMLU-Pro": 75,
+      "LiveCodeBench": 71.5
     }
   },
   {
@@ -793,13 +710,10 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1242,
-      "MMLU-Pro": 69.5,
-      "GPQA Diamond": 48.5,
-      "MATH-500": 76.5,
-      "SWE-bench Verified": 33.5,
-      "HumanEval": 83.2,
-      "LiveCodeBench": 44
+      "Chatbot Arena ELO": 1325,
+      "GPQA Diamond": 76,
+      "MMLU-Pro": 73.5,
+      "LiveCodeBench": 69.8
     }
   },
   {
@@ -827,13 +741,10 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1198,
-      "MMLU-Pro": 64.2,
-      "GPQA Diamond": 42.5,
-      "MATH-500": 70.5,
-      "SWE-bench Verified": 27.2,
-      "HumanEval": 79.5,
-      "LiveCodeBench": 39.8
+      "Chatbot Arena ELO": 1285,
+      "GPQA Diamond": 68,
+      "MMLU-Pro": 65.5,
+      "LiveCodeBench": 60.5
     }
   },
   {
@@ -861,13 +772,10 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1165,
-      "MMLU-Pro": 58.5,
-      "GPQA Diamond": 37.5,
-      "MATH-500": 65.2,
-      "SWE-bench Verified": 23.5,
-      "HumanEval": 75.5,
-      "LiveCodeBench": 36.5
+      "Chatbot Arena ELO": 1235,
+      "GPQA Diamond": 59.5,
+      "MMLU-Pro": 57,
+      "LiveCodeBench": 51
     }
   },
   {
@@ -895,13 +803,10 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1145,
-      "MMLU-Pro": 54.8,
-      "GPQA Diamond": 34,
-      "MATH-500": 61.5,
-      "SWE-bench Verified": 20.8,
-      "HumanEval": 72.8,
-      "LiveCodeBench": 33.8
+      "Chatbot Arena ELO": 1180,
+      "GPQA Diamond": 51,
+      "MMLU-Pro": 49,
+      "LiveCodeBench": 42.5
     }
   },
   {
@@ -930,12 +835,9 @@ const TIMELINE_DATA = [
     "note": "",
     "benchmarks": {
       "Chatbot Arena ELO": 1115,
-      "MMLU-Pro": 49.5,
-      "GPQA Diamond": 29.5,
-      "MATH-500": 56,
-      "SWE-bench Verified": 16.5,
-      "HumanEval": 68.5,
-      "LiveCodeBench": 29.5
+      "GPQA Diamond": 41.5,
+      "MMLU-Pro": 39.5,
+      "LiveCodeBench": 33
     }
   },
   {
@@ -963,14 +865,10 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 75.1,
-      "GPQA Diamond": 53.8,
-      "MATH-500": 81.9,
-      "SWE-bench Verified": 40.5,
-      "HumanEval": 88.1,
-      "LiveCodeBench": 50.5,
-      "Chatbot Arena ELO": 1284,
-      "MMMU (Multimodal)": 65.9
+      "Chatbot Arena ELO": 1440,
+      "MMLU-Pro": 81.5,
+      "GPQA Diamond": 72,
+      "MATH-500": 85
     }
   },
   {
@@ -998,14 +896,11 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1358,
-      "MMLU-Pro": 82,
-      "GPQA Diamond": 63.2,
-      "MATH-500": 88.5,
-      "SWE-bench Verified": 49,
-      "HumanEval": 92.5,
-      "LiveCodeBench": 59,
-      "MMMU (Multimodal)": 71.5
+      "Chatbot Arena ELO": 1475,
+      "SWE-bench Verified": 82.3,
+      "MMLU-Pro": 84.5,
+      "GPQA Diamond": 78,
+      "MATH-500": 89.2
     }
   },
   {
@@ -1033,14 +928,11 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1370,
-      "MMLU-Pro": 83.1,
-      "GPQA Diamond": 65,
-      "MATH-500": 89.8,
-      "SWE-bench Verified": 51.5,
-      "HumanEval": 93.5,
-      "LiveCodeBench": 61.2,
-      "MMMU (Multimodal)": 73
+      "Chatbot Arena ELO": 1495,
+      "SWE-bench Verified": 85.6,
+      "MMLU-Pro": 87.2,
+      "GPQA Diamond": 82.5,
+      "MATH-500": 92.4
     }
   },
   {
@@ -1068,13 +960,9 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 68.1,
-      "GPQA Diamond": 46.7,
-      "MATH-500": 74.4,
-      "SWE-bench Verified": 32.2,
-      "HumanEval": 82.5,
-      "LiveCodeBench": 43.9,
-      "Chatbot Arena ELO": 1228
+      "MMLU": 85.1,
+      "MATH-500": 97,
+      "LiveCodeBench": 70
     }
   },
   {
@@ -1102,13 +990,9 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 75,
-      "GPQA Diamond": 53.6,
-      "MATH-500": 81.7,
-      "SWE-bench Verified": 40.2,
-      "HumanEval": 88,
-      "LiveCodeBench": 50.3,
-      "Chatbot Arena ELO": 1282
+      "MMLU": 90.6,
+      "MATH-500": 98.6,
+      "LiveCodeBench": 71.7
     }
   },
   {
@@ -1136,13 +1020,10 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 75,
-      "GPQA Diamond": 53.7,
-      "MATH-500": 81.8,
-      "SWE-bench Verified": 40.4,
-      "HumanEval": 88,
-      "LiveCodeBench": 50.4,
-      "Chatbot Arena ELO": 1283
+      "MMLU": 84.5,
+      "MMLU-Pro": 72.8,
+      "MATH-500": 79,
+      "LiveCodeBench": 72
     }
   },
   {
@@ -1170,14 +1051,9 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 69.3,
-      "GPQA Diamond": 48.1,
-      "MATH-500": 75.4,
-      "SWE-bench Verified": 34.1,
-      "HumanEval": 83.1,
-      "LiveCodeBench": 45.2,
-      "Chatbot Arena ELO": 1246,
-      "MMMU (Multimodal)": 62.2
+      "MMMU (Multimodal)": 65.4,
+      "MMLU": 84.2,
+      "MATH-500": 86
     }
   },
   {
@@ -1205,13 +1081,11 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "major 2026 revision",
     "benchmarks": {
-      "MMLU-Pro": 69.3,
-      "GPQA Diamond": 53.6,
-      "MATH-500": 81.4,
-      "SWE-bench Verified": 34,
-      "HumanEval": 83,
-      "LiveCodeBench": 45.2,
-      "Chatbot Arena ELO": 1246
+      "MMLU-Pro": 82.7,
+      "MATH-500": 96.4,
+      "LiveCodeBench": 76.5,
+      "SWE-bench Verified": 60.4,
+      "HumanEval": 88.4
     }
   },
   {
@@ -1239,13 +1113,9 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "Z.ai의 고속 상용 LLM API 모델 (파라미터 비공개)",
     "benchmarks": {
-      "MMLU-Pro": 75.5,
-      "GPQA Diamond": 54.2,
-      "MATH-500": 82.2,
-      "SWE-bench Verified": 41,
-      "HumanEval": 88.2,
-      "LiveCodeBench": 50.9,
-      "Chatbot Arena ELO": 1290
+      "Chatbot Arena ELO": 1365,
+      "MMLU": 85.4,
+      "LiveCodeBench": 72
     }
   },
   {
@@ -1279,14 +1149,8 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 77,
-      "GPQA Diamond": 56,
-      "MATH-500": 83.4,
-      "SWE-bench Verified": 43.3,
-      "HumanEval": 89,
-      "LiveCodeBench": 52.5,
-      "Chatbot Arena ELO": 1313,
-      "MMMU (Multimodal)": 67.6
+      "MMLU": 83.8,
+      "LiveCodeBench": 75.4
     }
   },
   {
@@ -1314,14 +1178,11 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1320,
-      "MMLU-Pro": 78.8,
-      "GPQA Diamond": 58.5,
-      "MATH-500": 85.8,
-      "SWE-bench Verified": 44.5,
-      "HumanEval": 90,
-      "LiveCodeBench": 54.5,
-      "MMMU (Multimodal)": 68
+      "Chatbot Arena ELO": 1410,
+      "SWE-bench Verified": 71,
+      "MMLU-Pro": 78,
+      "GPQA Diamond": 68.5,
+      "MATH-500": 82
     }
   },
   {
@@ -1349,13 +1210,8 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 74.8,
-      "GPQA Diamond": 53.4,
-      "MATH-500": 81.6,
-      "SWE-bench Verified": 40,
-      "HumanEval": 87.9,
-      "LiveCodeBench": 50.1,
-      "Chatbot Arena ELO": 1280
+      "Chatbot Arena ELO": 1370,
+      "MMLU": 85.2
     }
   },
   {
@@ -1383,13 +1239,8 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 67.9,
-      "GPQA Diamond": 46.4,
-      "MATH-500": 74.2,
-      "SWE-bench Verified": 31.9,
-      "HumanEval": 82.3,
-      "LiveCodeBench": 43.6,
-      "Chatbot Arena ELO": 1224
+      "MMLU": 86.5,
+      "LiveCodeBench": 72.5
     }
   },
   {
@@ -1417,14 +1268,8 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 68.2,
-      "GPQA Diamond": 46.8,
-      "MATH-500": 74.5,
-      "SWE-bench Verified": 32.4,
-      "HumanEval": 82.5,
-      "LiveCodeBench": 44,
-      "Chatbot Arena ELO": 1230,
-      "MMMU (Multimodal)": 61.2
+      "MMMU (Multimodal)": 67.8,
+      "MMLU": 85
     }
   },
   {
@@ -1463,13 +1308,9 @@ const TIMELINE_DATA = [
     "availability": "SKT Enterprise API / Sovereign Cloud",
     "note": "SK텔레콤(SKT)의 소버린 AI 주력 500B급 초거대 언어 모델. 2026 스타트업 AX 챌린지 및 대국민 공공 행정 AI 에이전트 서비스의 기반 파운데이션 모델.",
     "benchmarks": {
-      "Chatbot Arena ELO": 1318,
-      "MMLU-Pro": 78.5,
-      "GPQA Diamond": 58.2,
-      "MATH-500": 85.6,
-      "SWE-bench Verified": 44.3,
-      "HumanEval": 89.8,
-      "LiveCodeBench": 54.1
+      "AIME 2025": 89.8,
+      "KMMLU": 80.2,
+      "LiveCodeBench": 75.8
     }
   },
   {
@@ -1497,14 +1338,9 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "Alibaba DashScope 멀티모달 상용 API 프리뷰 (파라미터 비공개)",
     "benchmarks": {
-      "MMLU-Pro": 56.2,
-      "GPQA Diamond": 36,
-      "MATH-500": 63.7,
-      "SWE-bench Verified": 22.3,
-      "HumanEval": 74.1,
-      "LiveCodeBench": 35.6,
-      "Chatbot Arena ELO": 1157,
-      "MMMU (Multimodal)": 53.9
+      "Chatbot Arena ELO": 1390,
+      "MMLU-Pro": 81,
+      "MMMU (Multimodal)": 73.2
     }
   },
   {
@@ -1532,14 +1368,9 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "Z.ai의 고속 비전-언어 상용 API 모델 (파라미터 비공개)",
     "benchmarks": {
-      "MMLU-Pro": 76.6,
-      "GPQA Diamond": 55.6,
-      "MATH-500": 83.1,
-      "SWE-bench Verified": 42.7,
-      "HumanEval": 88.8,
-      "LiveCodeBench": 52.1,
-      "Chatbot Arena ELO": 1307,
-      "MMMU (Multimodal)": 67.2
+      "Chatbot Arena ELO": 1370,
+      "MMLU": 85,
+      "MMMU (Multimodal)": 71.5
     }
   },
   {
@@ -1567,14 +1398,10 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "Alibaba DashScope 상용 API 모델 (파라미터 비공개)",
     "benchmarks": {
-      "MMLU-Pro": 56.3,
-      "GPQA Diamond": 36.1,
-      "MATH-500": 63.7,
-      "SWE-bench Verified": 22.4,
-      "HumanEval": 74.2,
-      "LiveCodeBench": 35.7,
-      "Chatbot Arena ELO": 1158,
-      "MMMU (Multimodal)": 53.9
+      "Chatbot Arena ELO": 1415,
+      "MMLU-Pro": 85,
+      "SWE-bench Verified": 76.5,
+      "LiveCodeBench": 82
     }
   },
   {
@@ -1602,13 +1429,11 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 75.2,
-      "GPQA Diamond": 53.9,
-      "MATH-500": 81.9,
-      "SWE-bench Verified": 40.6,
-      "HumanEval": 88.1,
-      "LiveCodeBench": 50.5,
-      "Chatbot Arena ELO": 1285
+      "Chatbot Arena ELO": 1395,
+      "MMLU-Pro": 81.2,
+      "LiveCodeBench": 80.5,
+      "SWE-bench Verified": 68.9,
+      "SWE-bench Pro": 48.5
     }
   },
   {
@@ -1636,14 +1461,8 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 81.1,
-      "GPQA Diamond": 61.8,
-      "MATH-500": 88.3,
-      "SWE-bench Verified": 48.8,
-      "HumanEval": 92.7,
-      "LiveCodeBench": 58.3,
-      "Chatbot Arena ELO": 1345,
-      "MMMU (Multimodal)": 71
+      "Chatbot Arena ELO": 1450,
+      "AA Intelligence Index": 50
     }
   },
   {
@@ -1681,14 +1500,8 @@ const TIMELINE_DATA = [
     "availability": "Open Weights (Hugging Face)",
     "note": "LG AI연구원 최초의 오픈웨이트 비전-언어 파운데이션 모델(VLM). 독자 개발 비전 인코더와 LLM을 결합하여 고난도 도표/문서 이해 및 과학 추론에 탁월.",
     "benchmarks": {
-      "Chatbot Arena ELO": 1282,
-      "MMLU-Pro": 74.5,
-      "GPQA Diamond": 53.8,
-      "MATH-500": 82.1,
-      "SWE-bench Verified": 38.6,
-      "HumanEval": 86.8,
-      "LiveCodeBench": 49.3,
-      "MMMU (Multimodal)": 67.4
+      "MMMU (Multimodal)": 70.8,
+      "MMLU": 82.4
     }
   },
   {
@@ -1716,14 +1529,10 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 75.1,
-      "GPQA Diamond": 53.8,
-      "MATH-500": 81.9,
-      "SWE-bench Verified": 40.5,
-      "HumanEval": 88.1,
-      "LiveCodeBench": 50.5,
-      "Chatbot Arena ELO": 1285,
-      "MMMU (Multimodal)": 65.9
+      "Chatbot Arena ELO": 1355,
+      "GPQA Diamond": 81,
+      "MMLU-Pro": 77.2,
+      "LiveCodeBench": 74
     }
   },
   {
@@ -1751,14 +1560,11 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 81.1,
-      "GPQA Diamond": 61.7,
-      "MATH-500": 88.2,
-      "SWE-bench Verified": 48.7,
-      "HumanEval": 92.6,
-      "LiveCodeBench": 58.2,
-      "Chatbot Arena ELO": 1344,
-      "MMMU (Multimodal)": 70.9
+      "Chatbot Arena ELO": 1502,
+      "SWE-bench Verified": 74.5,
+      "GPQA Diamond": 81.2,
+      "MMLU-Pro": 86.4,
+      "MMMU (Multimodal)": 75.1
     }
   },
   {
@@ -1786,14 +1592,10 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "Alibaba DashScope 플래그십 상용 API 프리뷰 모델 (파라미터 비공개)",
     "benchmarks": {
-      "MMLU-Pro": 80.2,
-      "GPQA Diamond": 60.6,
-      "MATH-500": 87.5,
-      "SWE-bench Verified": 47.3,
-      "HumanEval": 92.2,
-      "LiveCodeBench": 57.2,
-      "Chatbot Arena ELO": 1331,
-      "MMMU (Multimodal)": 70.1
+      "Chatbot Arena ELO": 1425,
+      "MMLU-Pro": 86.5,
+      "SWE-bench Pro": 58,
+      "GPQA Diamond": 89.5
     }
   },
   {
@@ -1821,14 +1623,10 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 82.6,
-      "GPQA Diamond": 63.5,
-      "MATH-500": 89.4,
-      "SWE-bench Verified": 51,
-      "HumanEval": 93.4,
-      "LiveCodeBench": 59.9,
-      "Chatbot Arena ELO": 1367,
-      "MMMU (Multimodal)": 72.3
+      "SWE-bench Verified": 80.2,
+      "SWE-bench Pro": 58.6,
+      "AIME 2025": 96.4,
+      "MMMU (Multimodal)": 71.2
     }
   },
   {
@@ -1856,13 +1654,9 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 86.3,
-      "GPQA Diamond": 69.8,
-      "MATH-500": 93.3,
-      "SWE-bench Verified": 58.4,
-      "HumanEval": 96,
-      "LiveCodeBench": 66.4,
-      "Chatbot Arena ELO": 1411
+      "SWE-bench Pro": 54.2,
+      "Terminal-Bench 2.1": 64.5,
+      "SWE-bench Verified": 68.5
     }
   },
   {
@@ -1890,14 +1684,11 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 69.2,
-      "GPQA Diamond": 48,
-      "MATH-500": 75.3,
-      "SWE-bench Verified": 33.9,
-      "HumanEval": 83,
-      "LiveCodeBench": 45.1,
-      "Chatbot Arena ELO": 1245,
-      "MMMU (Multimodal)": 62.1
+      "Chatbot Arena ELO": 1365,
+      "GPQA Diamond": 87,
+      "SWE-bench Pro": 53.5,
+      "MMLU-Pro": 79.5,
+      "LiveCodeBench": 78.5
     }
   },
   {
@@ -1925,14 +1716,8 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 68.7,
-      "GPQA Diamond": 47.4,
-      "MATH-500": 74.9,
-      "SWE-bench Verified": 33.1,
-      "HumanEval": 82.7,
-      "LiveCodeBench": 44.5,
-      "Chatbot Arena ELO": 1237,
-      "MMMU (Multimodal)": 61.6
+      "Chatbot Arena ELO": 1375,
+      "MMLU": 89.4
     }
   },
   {
@@ -1960,14 +1745,9 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 76.3,
-      "GPQA Diamond": 55.2,
-      "MATH-500": 82.8,
-      "SWE-bench Verified": 42.2,
-      "HumanEval": 88.6,
-      "LiveCodeBench": 51.7,
-      "Chatbot Arena ELO": 1302,
-      "MMMU (Multimodal)": 66.9
+      "Chatbot Arena ELO": 1405,
+      "MMLU": 90.2,
+      "SWE-bench Pro": 56.8
     }
   },
   {
@@ -1995,14 +1775,11 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1391,
-      "MMLU-Pro": 85.1,
-      "GPQA Diamond": 68.4,
-      "MATH-500": 92,
-      "SWE-bench Verified": 56.2,
-      "HumanEval": 95,
-      "LiveCodeBench": 65,
-      "MMMU (Multimodal)": 75.8
+      "Chatbot Arena ELO": 1500,
+      "SWE-bench Verified": 85,
+      "MMLU-Pro": 88,
+      "GPQA Diamond": 84,
+      "MATH-500": 93.5
     }
   },
   {
@@ -2030,14 +1807,11 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1408,
-      "MMLU-Pro": 86.2,
-      "GPQA Diamond": 70.1,
-      "MATH-500": 93.4,
-      "SWE-bench Verified": 58.6,
-      "HumanEval": 95.8,
-      "LiveCodeBench": 66.8,
-      "MMMU (Multimodal)": 77.1
+      "Chatbot Arena ELO": 1520,
+      "SWE-bench Verified": 88.7,
+      "MMLU-Pro": 90.2,
+      "GPQA Diamond": 87.5,
+      "MATH-500": 95.8
     }
   },
   {
@@ -2065,13 +1839,12 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 84.5,
-      "GPQA Diamond": 67.6,
-      "MATH-500": 91.8,
-      "SWE-bench Verified": 55.7,
-      "HumanEval": 95,
-      "LiveCodeBench": 64.4,
-      "Chatbot Arena ELO": 1383
+      "Chatbot Arena ELO": 1330,
+      "MMLU-Pro": 81.5,
+      "GPQA Diamond": 85,
+      "MATH-500": 90.2,
+      "SWE-bench Verified": 72,
+      "LiveCodeBench": 88.5
     }
   },
   {
@@ -2099,13 +1872,11 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 86.1,
-      "GPQA Diamond": 69.6,
-      "MATH-500": 93.1,
-      "SWE-bench Verified": 58.2,
-      "HumanEval": 95.9,
-      "LiveCodeBench": 66.2,
-      "Chatbot Arena ELO": 1408
+      "Chatbot Arena ELO": 1290,
+      "MMLU-Pro": 76,
+      "GPQA Diamond": 79.5,
+      "SWE-bench Verified": 63.5,
+      "LiveCodeBench": 81
     }
   },
   {
@@ -2133,13 +1904,11 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 88.1,
-      "GPQA Diamond": 73.6,
-      "MATH-500": 95.4,
-      "SWE-bench Verified": 63.8,
-      "HumanEval": 97,
-      "LiveCodeBench": 70.9,
-      "Chatbot Arena ELO": 1427
+      "Chatbot Arena ELO": 1360,
+      "MMLU-Pro": 84,
+      "GPQA Diamond": 87.2,
+      "SWE-bench Verified": 78.5,
+      "LiveCodeBench": 90.2
     }
   },
   {
@@ -2167,13 +1936,9 @@ const TIMELINE_DATA = [
     "availability": "Open Weights (Hugging Face / GitHub)",
     "note": "텐센트 Hunyuan 3 오픈웨이트 프리뷰. Apache 2.0 라이선스로 295B/21B 활성 MoE 가중치 공개.",
     "benchmarks": {
-      "MMLU-Pro": 57.4,
-      "GPQA Diamond": 37.5,
-      "MATH-500": 64.6,
-      "SWE-bench Verified": 24.1,
-      "HumanEval": 74.7,
-      "LiveCodeBench": 37,
-      "Chatbot Arena ELO": 1175
+      "MMLU": 84.2,
+      "MATH-500": 78.5,
+      "LiveCodeBench": 71
     }
   },
   {
@@ -2201,13 +1966,8 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 76.6,
-      "GPQA Diamond": 55.6,
-      "MATH-500": 83,
-      "SWE-bench Verified": 42.7,
-      "HumanEval": 88.8,
-      "LiveCodeBench": 52.1,
-      "Chatbot Arena ELO": 1307
+      "SWE-bench Verified": 64.5,
+      "Terminal-Bench 2.1": 58.2
     }
   },
   {
@@ -2235,13 +1995,8 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 69,
-      "GPQA Diamond": 47.7,
-      "MATH-500": 75.1,
-      "SWE-bench Verified": 33.6,
-      "HumanEval": 82.9,
-      "LiveCodeBench": 44.9,
-      "Chatbot Arena ELO": 1241
+      "SWE-bench Verified": 58.2,
+      "Terminal-Bench 2.1": 51
     }
   },
   {
@@ -2269,14 +2024,8 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 55.1,
-      "GPQA Diamond": 34.7,
-      "MATH-500": 62.8,
-      "SWE-bench Verified": 20.6,
-      "HumanEval": 73.6,
-      "LiveCodeBench": 34.4,
-      "Chatbot Arena ELO": 1141,
-      "MMMU (Multimodal)": 52.9
+      "MMMU (Multimodal)": 64.2,
+      "MMLU": 76.8
     }
   },
   {
@@ -2304,14 +2053,9 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "speech / embedding / Guardian-only members excluded here",
     "benchmarks": {
-      "MMLU-Pro": 67.5,
-      "GPQA Diamond": 46,
-      "MATH-500": 73.9,
-      "SWE-bench Verified": 31.3,
-      "HumanEval": 82.2,
-      "LiveCodeBench": 43.2,
-      "Chatbot Arena ELO": 1219,
-      "MMMU (Multimodal)": 60.6
+      "MMLU-Pro": 71.5,
+      "GPQA": 58.2,
+      "SWE-bench Verified": 42.1
     }
   },
   {
@@ -2331,13 +2075,9 @@ const TIMELINE_DATA = [
     "open_weights": true,
     "note": "IBM 차세대 엔터프라이즈 오픈 파운데이션 모델",
     "benchmarks": {
-      "MMLU-Pro": 67.2,
-      "GPQA Diamond": 45.7,
-      "MATH-500": 73.7,
-      "SWE-bench Verified": 31,
-      "HumanEval": 82,
-      "LiveCodeBench": 43,
-      "Chatbot Arena ELO": 1215
+      "MMLU-Pro": 71.5,
+      "GPQA": 58.2,
+      "SWE-bench Verified": 42.1
     }
   },
   {
@@ -2357,14 +2097,8 @@ const TIMELINE_DATA = [
     "open_weights": true,
     "note": "IBM Granite 시각-언어 멀티모달 오픈 모델",
     "benchmarks": {
-      "MMLU-Pro": 67.4,
-      "GPQA Diamond": 45.8,
-      "MATH-500": 73.9,
-      "SWE-bench Verified": 31.2,
-      "HumanEval": 82.1,
-      "LiveCodeBench": 43.1,
-      "Chatbot Arena ELO": 1218,
-      "MMMU (Multimodal)": 60.5
+      "MMMU (Multimodal)": 58.4,
+      "MMLU": 68.2
     }
   },
   {
@@ -2392,13 +2126,9 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "Reduced model size relative to ERNIE 5.0 Improved reasoning and agent capabilities",
     "benchmarks": {
-      "MMLU-Pro": 56.4,
-      "GPQA Diamond": 36.1,
-      "MATH-500": 63.8,
-      "SWE-bench Verified": 22.4,
-      "HumanEval": 74.2,
-      "LiveCodeBench": 35.7,
-      "Chatbot Arena ELO": 1159
+      "Chatbot Arena ELO": 1485,
+      "MMLU": 88.2,
+      "MMMU (Multimodal)": 72.5
     }
   },
   {
@@ -2436,13 +2166,9 @@ const TIMELINE_DATA = [
     "availability": "GTAA Alliance Cloud / SKT Enterprise",
     "note": "글로벌 텔코 AI 얼라이언스(GTAA)와 협력하여 통신 도메인 지식, 고객 상담 및 네트워크 인프라 진단에 특화 개발된 통신 전용 70B 모델.",
     "benchmarks": {
-      "Chatbot Arena ELO": 1268,
-      "MMLU-Pro": 73.2,
-      "GPQA Diamond": 52.4,
-      "MATH-500": 80.8,
-      "SWE-bench Verified": 37.1,
-      "HumanEval": 85.4,
-      "LiveCodeBench": 48
+      "TelBench": 87.2,
+      "TelAgentBench": 81.5,
+      "LiveCodeBench": 68.4
     }
   },
   {
@@ -2474,14 +2200,9 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 81.7,
-      "GPQA Diamond": 62.5,
-      "MATH-500": 88.7,
-      "SWE-bench Verified": 49.7,
-      "HumanEval": 93,
-      "LiveCodeBench": 58.9,
-      "Chatbot Arena ELO": 1354,
-      "MMMU (Multimodal)": 71.5
+      "Chatbot Arena ELO": 1475,
+      "MMMU (Multimodal)": 76.5,
+      "SWE-bench Verified": 78.2
     }
   },
   {
@@ -2509,14 +2230,10 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "Alibaba DashScope 플래그십 상용 API 모델 (파라미터 비공개)",
     "benchmarks": {
-      "MMLU-Pro": 85,
-      "GPQA Diamond": 68.2,
-      "MATH-500": 92.2,
-      "SWE-bench Verified": 56.5,
-      "HumanEval": 95.3,
-      "LiveCodeBench": 65,
-      "Chatbot Arena ELO": 1391,
-      "MMMU (Multimodal)": 75.6
+      "Chatbot Arena ELO": 1435,
+      "MMLU-Pro": 87.5,
+      "SWE-bench Pro": 61.5,
+      "GPQA Diamond": 90.8
     }
   },
   {
@@ -2546,13 +2263,9 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 68.4,
-      "GPQA Diamond": 47,
-      "MATH-500": 74.6,
-      "SWE-bench Verified": 32.6,
-      "HumanEval": 82.6,
-      "LiveCodeBench": 44.2,
-      "Chatbot Arena ELO": 1232
+      "Chatbot Arena ELO": 1390,
+      "MMLU": 85.2,
+      "AA Intelligence Index": 64
     }
   },
   {
@@ -2584,13 +2297,9 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "Mistral AI의 상용 API 전용 모델 (파라미터 비공개)",
     "benchmarks": {
-      "MMLU-Pro": 76.6,
-      "GPQA Diamond": 55.6,
-      "MATH-500": 83.1,
-      "SWE-bench Verified": 42.8,
-      "HumanEval": 88.8,
-      "LiveCodeBench": 52.1,
-      "Chatbot Arena ELO": 1307
+      "Chatbot Arena ELO": 1385,
+      "SWE-bench Verified": 77.6,
+      "MMLU-Pro": 80.5
     }
   },
   {
@@ -2618,14 +2327,11 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 85.7,
-      "GPQA Diamond": 69.1,
-      "MATH-500": 92.8,
-      "SWE-bench Verified": 57.6,
-      "HumanEval": 95.7,
-      "LiveCodeBench": 65.8,
-      "Chatbot Arena ELO": 1402,
-      "MMMU (Multimodal)": 76.3
+      "Chatbot Arena ELO": 1512,
+      "SWE-bench Verified": 88.6,
+      "GPQA Diamond": 84.5,
+      "MMLU-Pro": 88.2,
+      "MMMU (Multimodal)": 77.4
     }
   },
   {
@@ -2653,14 +2359,10 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 75.8,
-      "GPQA Diamond": 54.6,
-      "MATH-500": 82.4,
-      "SWE-bench Verified": 41.5,
-      "HumanEval": 88.4,
-      "LiveCodeBench": 51.2,
-      "Chatbot Arena ELO": 1295,
-      "MMMU (Multimodal)": 66.5
+      "Chatbot Arena ELO": 1395,
+      "MMLU-Pro": 84.2,
+      "SWE-bench Pro": 59,
+      "MMMU (Multimodal)": 70.4
     }
   },
   {
@@ -2688,14 +2390,10 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "Alibaba DashScope 상용 API 모델 (파라미터 비공개)",
     "benchmarks": {
-      "MMLU-Pro": 81.6,
-      "GPQA Diamond": 62.3,
-      "MATH-500": 88.6,
-      "SWE-bench Verified": 49.5,
-      "HumanEval": 92.9,
-      "LiveCodeBench": 58.8,
-      "Chatbot Arena ELO": 1352,
-      "MMMU (Multimodal)": 71.4
+      "Chatbot Arena ELO": 1420,
+      "MMLU-Pro": 86,
+      "SWE-bench Verified": 79,
+      "LiveCodeBench": 84.5
     }
   },
   {
@@ -2723,13 +2421,10 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 55.4,
-      "GPQA Diamond": 35,
-      "MATH-500": 63,
-      "SWE-bench Verified": 21,
-      "HumanEval": 73.7,
-      "LiveCodeBench": 34.7,
-      "Chatbot Arena ELO": 1145
+      "MMLU": 89.1,
+      "MMLU-Pro": 79,
+      "MATH-500": 84.5,
+      "LiveCodeBench": 78.5
     }
   },
   {
@@ -2757,14 +2452,11 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 84.2,
-      "GPQA Diamond": 67.2,
-      "MATH-500": 91.6,
-      "SWE-bench Verified": 55.2,
-      "HumanEval": 94.9,
-      "LiveCodeBench": 64,
-      "Chatbot Arena ELO": 1379,
-      "MMMU (Multimodal)": 74.9
+      "Chatbot Arena ELO": 1528,
+      "SWE-bench Verified": 95,
+      "SWE-bench Pro": 80.3,
+      "GPQA Diamond": 88.9,
+      "MMLU-Pro": 90.5
     }
   },
   {
@@ -2792,14 +2484,11 @@ const TIMELINE_DATA = [
     "availability": "restricted / vetted users",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 85.8,
-      "GPQA Diamond": 69.2,
-      "MATH-500": 92.9,
-      "SWE-bench Verified": 57.7,
-      "HumanEval": 95.7,
-      "LiveCodeBench": 65.8,
-      "Chatbot Arena ELO": 1403,
-      "MMMU (Multimodal)": 76.3
+      "Chatbot Arena ELO": 1528,
+      "SWE-bench Verified": 95,
+      "SWE-bench Pro": 80.3,
+      "GPQA Diamond": 88.9,
+      "MMLU-Pro": 90.5
     }
   },
   {
@@ -2827,13 +2516,8 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 76,
-      "GPQA Diamond": 54.8,
-      "MATH-500": 82.6,
-      "SWE-bench Verified": 50.3,
-      "HumanEval": 91.5,
-      "LiveCodeBench": 51.4,
-      "Chatbot Arena ELO": 1298
+      "SWE-bench Verified": 67.6,
+      "LiveCodeBench": 74.5
     }
   },
   {
@@ -2861,14 +2545,10 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 82.5,
-      "GPQA Diamond": 63.4,
-      "MATH-500": 89.4,
-      "SWE-bench Verified": 59.4,
-      "HumanEval": 96.3,
-      "LiveCodeBench": 59.8,
-      "Chatbot Arena ELO": 1366,
-      "MMMU (Multimodal)": 72.2
+      "SWE-bench Verified": 60.4,
+      "LiveCodeBench": 85.2,
+      "HumanEval": 94.1,
+      "AIME 2025": 97.4
     }
   },
   {
@@ -2896,13 +2576,10 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 81.8,
-      "GPQA Diamond": 62.6,
-      "MATH-500": 88.8,
-      "SWE-bench Verified": 49.8,
-      "HumanEval": 93,
-      "LiveCodeBench": 59,
-      "Chatbot Arena ELO": 1356
+      "SWE-bench Verified": 78.5,
+      "AIME 2026": 94.2,
+      "IFEval": 84.6,
+      "AA Intelligence Index": 34
     }
   },
   {
@@ -2933,13 +2610,8 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 81.6,
-      "GPQA Diamond": 67.9,
-      "MATH-500": 94.7,
-      "SWE-bench Verified": 49.5,
-      "HumanEval": 92.9,
-      "LiveCodeBench": 58.8,
-      "Chatbot Arena ELO": 1353
+      "SWE-bench Verified": 81.2,
+      "AIME 2026": 96.8
     }
   },
   {
@@ -2973,14 +2645,8 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 67.4,
-      "GPQA Diamond": 45.9,
-      "MATH-500": 73.9,
-      "SWE-bench Verified": 31.2,
-      "HumanEval": 82.1,
-      "LiveCodeBench": 43.1,
-      "Chatbot Arena ELO": 1218,
-      "MMMU (Multimodal)": 60.5
+      "MMMU (Multimodal)": 54.2,
+      "MMLU-Pro": 52.8
     }
   },
   {
@@ -3008,13 +2674,10 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 75,
-      "GPQA Diamond": 53.6,
-      "MATH-500": 81.8,
-      "SWE-bench Verified": 40.3,
-      "HumanEval": 88,
-      "LiveCodeBench": 50.3,
-      "Chatbot Arena ELO": 1283
+      "Chatbot Arena ELO": 1410,
+      "MMLU-Pro": 83.5,
+      "LiveCodeBench": 83.8,
+      "SWE-bench Verified": 74.2
     }
   },
   {
@@ -3042,13 +2705,9 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 84.6,
-      "GPQA Diamond": 67.8,
-      "MATH-500": 91.9,
-      "SWE-bench Verified": 55.9,
-      "HumanEval": 95.1,
-      "LiveCodeBench": 64.5,
-      "Chatbot Arena ELO": 1386
+      "SWE-bench Pro": 59.5,
+      "SWE-bench Verified": 75.8,
+      "Terminal-Bench 2.1": 70.8
     }
   },
   {
@@ -3076,14 +2735,11 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 85.3,
-      "GPQA Diamond": 68.6,
-      "MATH-500": 92.5,
-      "SWE-bench Verified": 56.9,
-      "HumanEval": 95.4,
-      "LiveCodeBench": 65.3,
-      "Chatbot Arena ELO": 1396,
-      "MMMU (Multimodal)": 75.9
+      "Chatbot Arena ELO": 1505,
+      "SWE-bench Verified": 89.2,
+      "GPQA Diamond": 85,
+      "MMLU-Pro": 87.8,
+      "MMMU (Multimodal)": 78.5
     }
   },
   {
@@ -3111,13 +2767,9 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 68.1,
-      "GPQA Diamond": 46.7,
-      "MATH-500": 74.4,
-      "SWE-bench Verified": 32.3,
-      "HumanEval": 82.5,
-      "LiveCodeBench": 43.9,
-      "Chatbot Arena ELO": 1228
+      "SWE-bench Verified": 70.9,
+      "SWE-bench Pro": 47.6,
+      "Terminal-Bench 2.1": 61.5
     }
   },
   {
@@ -3145,13 +2797,9 @@ const TIMELINE_DATA = [
     "availability": "Open Weights (Hugging Face / GitHub)",
     "note": "텐센트 Hunyuan 3 정식 오픈웨이트 릴리스. Apache 2.0 라이선스로 295B MoE(21B 활성), 256K 컨텍스트 가중치 공개.",
     "benchmarks": {
-      "MMLU-Pro": 56.5,
-      "GPQA Diamond": 36.4,
-      "MATH-500": 63.9,
-      "SWE-bench Verified": 22.7,
-      "HumanEval": 74.3,
-      "LiveCodeBench": 36,
-      "Chatbot Arena ELO": 1162
+      "MMLU": 86,
+      "MATH-500": 82.4,
+      "LiveCodeBench": 75.8
     }
   },
   {
@@ -3179,14 +2827,8 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 80.9,
-      "GPQA Diamond": 61.5,
-      "MATH-500": 88.1,
-      "SWE-bench Verified": 48.4,
-      "HumanEval": 92.5,
-      "LiveCodeBench": 58,
-      "Chatbot Arena ELO": 1342,
-      "MMMU (Multimodal)": 70.7
+      "Chatbot Arena ELO": 1480,
+      "AA Intelligence Index": 54
     }
   },
   {
@@ -3214,14 +2856,12 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1445,
-      "MMLU-Pro": 89.5,
-      "GPQA Diamond": 75.2,
-      "MATH-500": 96.5,
-      "SWE-bench Verified": 65.8,
-      "HumanEval": 97.8,
-      "LiveCodeBench": 72.5,
-      "MMMU (Multimodal)": 80.2
+      "Chatbot Arena ELO": 1545,
+      "SWE-bench Verified": 95.5,
+      "Terminal-Bench 2.1": 91.9,
+      "MMLU-Pro": 92.8,
+      "GPQA Diamond": 92,
+      "MATH-500": 97.5
     }
   },
   {
@@ -3249,14 +2889,12 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1392,
-      "MMLU-Pro": 85.2,
-      "GPQA Diamond": 68.8,
-      "MATH-500": 92.2,
-      "SWE-bench Verified": 56.8,
-      "HumanEval": 95.2,
-      "LiveCodeBench": 65.2,
-      "MMMU (Multimodal)": 76.2
+      "Chatbot Arena ELO": 1495,
+      "SWE-bench Verified": 87.5,
+      "Terminal-Bench 2.1": 82.4,
+      "MMLU-Pro": 87,
+      "GPQA Diamond": 83.5,
+      "MATH-500": 91.5
     }
   },
   {
@@ -3284,14 +2922,12 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1335,
-      "MMLU-Pro": 80.5,
-      "GPQA Diamond": 60.5,
-      "MATH-500": 87.2,
-      "SWE-bench Verified": 46.8,
-      "HumanEval": 91.8,
-      "LiveCodeBench": 56.5,
-      "MMMU (Multimodal)": 69.8
+      "Chatbot Arena ELO": 1425,
+      "SWE-bench Verified": 74,
+      "Terminal-Bench 2.1": 68.1,
+      "MMLU-Pro": 79.5,
+      "GPQA Diamond": 71,
+      "MATH-500": 84
     }
   },
   {
@@ -3319,13 +2955,8 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 81.4,
-      "GPQA Diamond": 62,
-      "MATH-500": 88.5,
-      "SWE-bench Verified": 49.1,
-      "HumanEval": 92.8,
-      "LiveCodeBench": 58.5,
-      "Chatbot Arena ELO": 1349
+      "SWE-bench Verified": 71.5,
+      "Terminal-Bench 2.1": 68.4
     }
   },
   {
@@ -3353,14 +2984,8 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 80.2,
-      "GPQA Diamond": 60.6,
-      "MATH-500": 87.5,
-      "SWE-bench Verified": 47.3,
-      "HumanEval": 92.2,
-      "LiveCodeBench": 57.2,
-      "Chatbot Arena ELO": 1331,
-      "MMMU (Multimodal)": 70.1
+      "MMMU-Pro": 68.5,
+      "LiveCodeBench": 82
     }
   },
   {
@@ -3392,14 +3017,10 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 81.3,
-      "GPQA Diamond": 62,
-      "MATH-500": 88.4,
-      "SWE-bench Verified": 49.1,
-      "HumanEval": 92.8,
-      "LiveCodeBench": 58.5,
-      "Chatbot Arena ELO": 1348,
-      "MMMU (Multimodal)": 71.1
+      "Chatbot Arena ELO": 1485,
+      "SWE-bench Pro": 63.2,
+      "Terminal-Bench 2.1": 65.8,
+      "AA Intelligence Index": 56
     }
   },
   {
@@ -3427,14 +3048,11 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 88.5,
-      "GPQA Diamond": 74.1,
-      "MATH-500": 95.7,
-      "SWE-bench Verified": 64.3,
-      "HumanEval": 97.2,
-      "LiveCodeBench": 71.3,
-      "Chatbot Arena ELO": 1433,
-      "MMMU (Multimodal)": 79.3
+      "SWE-bench Verified": 76.8,
+      "AIME 2025": 96.1,
+      "MMLU-Pro": 87.2,
+      "LiveCodeBench": 88,
+      "MMMU (Multimodal)": 74.5
     }
   },
   {
@@ -3462,14 +3080,10 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "Alibaba DashScope 플래그십 상용 API 프리뷰 모델 (파라미터 비공개)",
     "benchmarks": {
-      "MMLU-Pro": 85.8,
-      "GPQA Diamond": 69.2,
-      "MATH-500": 92.8,
-      "SWE-bench Verified": 57.6,
-      "HumanEval": 95.7,
-      "LiveCodeBench": 65.8,
-      "Chatbot Arena ELO": 1403,
-      "MMMU (Multimodal)": 76.3
+      "Chatbot Arena ELO": 1440,
+      "MMLU-Pro": 88,
+      "SWE-bench Pro": 64,
+      "GPQA Diamond": 91.5
     }
   },
   {
@@ -3497,14 +3111,9 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 84.8,
-      "GPQA Diamond": 68,
-      "MATH-500": 92.1,
-      "SWE-bench Verified": 56.2,
-      "HumanEval": 95.2,
-      "LiveCodeBench": 64.8,
-      "Chatbot Arena ELO": 1389,
-      "MMMU (Multimodal)": 75.5
+      "Chatbot Arena ELO": 1495,
+      "MMMU (Multimodal)": 78.8,
+      "SWE-bench Verified": 82.5
     }
   },
   {
@@ -3532,14 +3141,9 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 80.9,
-      "GPQA Diamond": 61.5,
-      "MATH-500": 88.1,
-      "SWE-bench Verified": 48.5,
-      "HumanEval": 92.6,
-      "LiveCodeBench": 58.1,
-      "Chatbot Arena ELO": 1342,
-      "MMMU (Multimodal)": 70.8
+      "Chatbot Arena ELO": 1420,
+      "MMLU-Pro": 79.2,
+      "LiveCodeBench": 74
     }
   },
   {
@@ -3569,15 +3173,8 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 80.9,
-      "GPQA Diamond": 61.4,
-      "MATH-500": 88.1,
-      "SWE-bench Verified": 48.4,
-      "HumanEval": 92.5,
-      "LiveCodeBench": 58,
-      "Chatbot Arena ELO": 1341,
-      "MMMU (Multimodal)": 70.7,
-      "CyberSecBench": 85.9
+      "CyberGym": 84.5,
+      "SWE-bench Verified": 79.5
     }
   },
   {
@@ -3605,13 +3202,9 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 68.4,
-      "GPQA Diamond": 47,
-      "MATH-500": 74.6,
-      "SWE-bench Verified": 32.6,
-      "HumanEval": 82.6,
-      "LiveCodeBench": 44.2,
-      "Chatbot Arena ELO": 1232
+      "SWE-bench Verified": 78.5,
+      "SWE-bench Pro": 59.4,
+      "Terminal-Bench 2.1": 70.2
     }
   },
   {
@@ -3639,13 +3232,8 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 80.7,
-      "GPQA Diamond": 61.2,
-      "MATH-500": 87.9,
-      "SWE-bench Verified": 48.1,
-      "HumanEval": 92.4,
-      "LiveCodeBench": 57.8,
-      "Chatbot Arena ELO": 1338
+      "MMLU-Pro": 86.2,
+      "LiveCodeBench": 92.4
     }
   },
   {
@@ -3673,14 +3261,12 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 88.9,
-      "GPQA Diamond": 74.5,
-      "MATH-500": 96,
-      "SWE-bench Verified": 64.9,
-      "HumanEval": 97.3,
-      "LiveCodeBench": 71.7,
-      "Chatbot Arena ELO": 1439,
-      "MMMU (Multimodal)": 79.6
+      "Chatbot Arena ELO": 1535,
+      "SWE-bench Verified": 96,
+      "SWE-bench Pro": 79.2,
+      "GPQA Diamond": 91.2,
+      "MMLU-Pro": 92.1,
+      "MMMU (Multimodal)": 82
     }
   },
   {
@@ -3719,14 +3305,10 @@ const TIMELINE_DATA = [
     "availability": "SKT A. Service / Government AI for All",
     "note": "688B 파라미터 규모의 차세대 멀티모달 옴니 파운데이션 모델. 음성·영상·문서를 통합 인식하며 SKT '전국민 AI(AI for All)' 서비스의 핵심 엔진.",
     "benchmarks": {
-      "Chatbot Arena ELO": 1378,
-      "MMLU-Pro": 83.6,
-      "GPQA Diamond": 66.1,
-      "MATH-500": 90.8,
-      "SWE-bench Verified": 53.4,
-      "HumanEval": 94.2,
-      "LiveCodeBench": 62.4,
-      "MMMU (Multimodal)": 73.8
+      "AIME 2026": 97.1,
+      "KMMLU-Pro": 80.5,
+      "LiveCodeBench": 82.4,
+      "MMMU (Multimodal)": 73.5
     }
   },
   {
@@ -3754,14 +3336,8 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 80.5,
-      "GPQA Diamond": 61,
-      "MATH-500": 87.7,
-      "SWE-bench Verified": 47.8,
-      "HumanEval": 92.3,
-      "LiveCodeBench": 57.6,
-      "Chatbot Arena ELO": 1335,
-      "MMMU (Multimodal)": 70.3
+      "MMMU-Pro": 62,
+      "LiveCodeBench": 76.5
     }
   },
   {
@@ -3789,13 +3365,13 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 84.7,
-      "GPQA Diamond": 67.8,
-      "MATH-500": 92,
-      "SWE-bench Verified": 56,
-      "HumanEval": 95.1,
-      "LiveCodeBench": 64.6,
-      "Chatbot Arena ELO": 1386
+      "Chatbot Arena ELO": 1350,
+      "LiveCodeBench": 91.6,
+      "SWE-bench Verified": 79,
+      "Terminal-Bench 2.1": 82.7,
+      "GPQA Diamond": 88.1,
+      "MMLU-Pro": 84.2,
+      "MATH-500": 93.8
     }
   },
   {
@@ -3823,14 +3399,11 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "Alibaba DashScope 플래그십 상용 API 모델 (파라미터 비공개)",
     "benchmarks": {
-      "MMLU-Pro": 85.3,
-      "GPQA Diamond": 68.6,
-      "MATH-500": 92.5,
-      "SWE-bench Verified": 56.9,
-      "HumanEval": 95.5,
-      "LiveCodeBench": 65.3,
-      "Chatbot Arena ELO": 1396,
-      "MMMU (Multimodal)": 75.9
+      "Chatbot Arena ELO": 1450,
+      "SWE-bench Pro": 67.7,
+      "GPQA Diamond": 92.6,
+      "MMLU-Pro": 88.5,
+      "MMMU (Multimodal)": 81.5
     }
   },
   {
@@ -3858,14 +3431,8 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 84.9,
-      "GPQA Diamond": 68.1,
-      "MATH-500": 92.1,
-      "SWE-bench Verified": 56.3,
-      "HumanEval": 95.2,
-      "LiveCodeBench": 64.8,
-      "Chatbot Arena ELO": 1390,
-      "MMMU (Multimodal)": 75.5
+      "Chatbot Arena ELO": 1505,
+      "AA Intelligence Index": 58
     }
   },
   {
@@ -3893,13 +3460,9 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "Technical/public-release dates differ slightly by source.",
     "benchmarks": {
-      "MMLU-Pro": 82.1,
-      "GPQA Diamond": 63,
-      "MATH-500": 89.1,
-      "SWE-bench Verified": 50.3,
-      "HumanEval": 93.2,
-      "LiveCodeBench": 59.4,
-      "Chatbot Arena ELO": 1360
+      "SWE-bench Verified": 76.2,
+      "Terminal-Bench 2.1": 74.9,
+      "AA Intelligence Index": 47
     }
   },
   {
@@ -3927,14 +3490,11 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 89.4,
-      "GPQA Diamond": 75.1,
-      "MATH-500": 96.4,
-      "SWE-bench Verified": 65.7,
-      "HumanEval": 97.6,
-      "LiveCodeBench": 72.3,
-      "Chatbot Arena ELO": 1446,
-      "MMMU (Multimodal)": 80.1
+      "Chatbot Arena ELO": 1445,
+      "SWE-bench Pro": 66.5,
+      "GPQA Diamond": 92,
+      "MMLU-Pro": 88.2,
+      "LiveCodeBench": 89.5
     }
   },
   {
@@ -3970,14 +3530,10 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 87.9,
-      "GPQA Diamond": 73.3,
-      "MATH-500": 95.2,
-      "SWE-bench Verified": 63.4,
-      "HumanEval": 96.8,
-      "LiveCodeBench": 70.6,
-      "Chatbot Arena ELO": 1424,
-      "MMMU (Multimodal)": 78.7
+      "Chatbot Arena ELO": 1515,
+      "SWE-bench Pro": 69.4,
+      "Terminal-Bench 2.1": 71.2,
+      "AA Intelligence Index": 61
     }
   },
   {
@@ -4014,13 +3570,9 @@ const TIMELINE_DATA = [
     "availability": "Open Weights (Research & Sovereign AI)",
     "note": "한국 정부 독자 소버린 AI 파운데이션 모델 프로젝트의 일환으로 공개된 대규모 MoE 추론 모델. 물질 과학 및 산업 도메인 특화 지식 탑재.",
     "benchmarks": {
-      "Chatbot Arena ELO": 1365,
-      "MMLU-Pro": 82.8,
-      "GPQA Diamond": 64.6,
-      "MATH-500": 90.1,
-      "SWE-bench Verified": 51.7,
-      "HumanEval": 93.6,
-      "LiveCodeBench": 60.5
+      "IFEval": 86.4,
+      "MMLU-Pro": 78.5,
+      "SWE-bench Verified": 61.2
     }
   },
   {
@@ -4048,13 +3600,13 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 88,
-      "GPQA Diamond": 73.5,
-      "MATH-500": 95.3,
-      "SWE-bench Verified": 63.6,
-      "HumanEval": 96.9,
-      "LiveCodeBench": 70.8,
-      "Chatbot Arena ELO": 1426
+      "Chatbot Arena ELO": 1415,
+      "LiveCodeBench": 93.5,
+      "SWE-bench Verified": 95.2,
+      "Terminal-Bench 2.1": 87.9,
+      "GPQA Diamond": 90.1,
+      "MMLU-Pro": 87.5,
+      "MATH-500": 96.5
     }
   },
   {
@@ -4086,14 +3638,10 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 89.7,
-      "GPQA Diamond": 75.5,
-      "MATH-500": 96.7,
-      "SWE-bench Verified": 66.1,
-      "HumanEval": 97.7,
-      "LiveCodeBench": 72.6,
-      "Chatbot Arena ELO": 1451,
-      "MMMU (Multimodal)": 80.4
+      "Chatbot Arena ELO": 1515,
+      "SWE-bench Verified": 88,
+      "Terminal-Bench 2.1": 86.5,
+      "MMMU (Multimodal)": 82
     }
   },
   {
@@ -4121,14 +3669,11 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 67.4,
-      "GPQA Diamond": 45.8,
-      "MATH-500": 73.9,
-      "SWE-bench Verified": 31.2,
-      "HumanEval": 82.1,
-      "LiveCodeBench": 43.1,
-      "Chatbot Arena ELO": 1218,
-      "MMMU (Multimodal)": 60.5
+      "Chatbot Arena ELO": 1380,
+      "GPQA Diamond": 89.2,
+      "SWE-bench Pro": 56.5,
+      "MMLU-Pro": 82,
+      "LiveCodeBench": 82.5
     }
   },
   {
@@ -4156,13 +3701,10 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 81.6,
-      "GPQA Diamond": 62.3,
-      "MATH-500": 88.7,
-      "SWE-bench Verified": 49.5,
-      "HumanEval": 92.9,
-      "LiveCodeBench": 58.8,
-      "Chatbot Arena ELO": 1353
+      "Chatbot Arena ELO": 1430,
+      "MMLU-Pro": 85.6,
+      "LiveCodeBench": 87.2,
+      "SWE-bench Verified": 78.9
     }
   },
   {
@@ -4190,14 +3732,9 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 84.1,
-      "GPQA Diamond": 67.2,
-      "MATH-500": 91.5,
-      "SWE-bench Verified": 55.1,
-      "HumanEval": 94.8,
-      "LiveCodeBench": 64,
-      "Chatbot Arena ELO": 1378,
-      "MMMU (Multimodal)": 74.8
+      "MMMU (Multimodal)": 76.4,
+      "LiveCodeBench": 88.5,
+      "GPQA Diamond": 84.5
     }
   },
   {
@@ -4225,13 +3762,9 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 55.5,
-      "GPQA Diamond": 35.1,
-      "MATH-500": 63.1,
-      "SWE-bench Verified": 21.1,
-      "HumanEval": 73.7,
-      "LiveCodeBench": 34.8,
-      "Chatbot Arena ELO": 1146
+      "MMLU": 79.5,
+      "LiveCodeBench": 68.2,
+      "IFEval": 76.5
     }
   },
   {
@@ -4262,13 +3795,10 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 76.3,
-      "GPQA Diamond": 55.2,
-      "MATH-500": 82.8,
-      "SWE-bench Verified": 42.3,
-      "HumanEval": 88.7,
-      "LiveCodeBench": 51.8,
-      "Chatbot Arena ELO": 1302
+      "SWE-bench Verified": 79.8,
+      "AIME 2026": 95.4,
+      "LiveCodeBench": 84.2,
+      "IFEval": 85.2
     }
   },
   {
@@ -4301,13 +3831,11 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "speech-only members omitted",
     "benchmarks": {
-      "MMLU-Pro": 76,
-      "GPQA Diamond": 54.9,
-      "MATH-500": 82.6,
-      "SWE-bench Verified": 41.8,
-      "HumanEval": 88.5,
-      "LiveCodeBench": 51.4,
-      "Chatbot Arena ELO": 1298
+      "SWE-bench Verified": 57,
+      "MMLU-Pro": 77.6,
+      "GPQA": 66.4,
+      "AIME 2025": 89.2,
+      "Terminal-Bench 2.1": 29.2
     }
   },
   {
@@ -4335,14 +3863,10 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 82.5,
-      "GPQA Diamond": 63.4,
-      "MATH-500": 89.4,
-      "SWE-bench Verified": 50.8,
-      "HumanEval": 93.3,
-      "LiveCodeBench": 59.8,
-      "Chatbot Arena ELO": 1366,
-      "MMMU (Multimodal)": 72.2
+      "SWE-bench Pro": 62.5,
+      "MMLU-Pro": 73.2,
+      "GPQA Diamond": 91.7,
+      "LiveCodeBench": 91.9
     }
   },
   {
@@ -4370,13 +3894,10 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 81.6,
-      "GPQA Diamond": 62.4,
-      "MATH-500": 88.7,
-      "SWE-bench Verified": 49.5,
-      "HumanEval": 92.9,
-      "LiveCodeBench": 58.8,
-      "Chatbot Arena ELO": 1353
+      "Chatbot Arena ELO": 1355,
+      "MMLU": 86.4,
+      "LiveCodeBench": 79.5,
+      "SWE-bench Verified": 64
     }
   },
   {
@@ -4404,13 +3925,10 @@ const TIMELINE_DATA = [
     "availability": "Open Weights (Hugging Face / GitHub)",
     "note": "텐센트(Tencent)의 770B 초대형 오픈웨이트 MoE 모델. Apache 2.0 라이선스로 Hugging Face 및 GitHub에 가중치 전면 공개. 49B 활성 파라미터, 10B MTP(Multi-Token Prediction) 레이어, 1M+ 컨텍스트 지원.",
     "benchmarks": {
-      "MMLU-Pro": 85.7,
-      "GPQA Diamond": 69.1,
-      "MATH-500": 92.8,
-      "SWE-bench Verified": 57.5,
-      "HumanEval": 95.6,
-      "LiveCodeBench": 65.7,
-      "Chatbot Arena ELO": 1402
+      "MMLU": 88.4,
+      "SWE-bench Verified": 72.8,
+      "LiveCodeBench": 83.5,
+      "GPQA Diamond": 84.2
     }
   },
   {
@@ -4438,14 +3956,11 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 87.6,
-      "GPQA Diamond": 73,
-      "MATH-500": 95,
-      "SWE-bench Verified": 63,
-      "HumanEval": 96.7,
-      "LiveCodeBench": 70.3,
-      "Chatbot Arena ELO": 1420,
-      "MMMU (Multimodal)": 78.5
+      "Chatbot Arena ELO": 1542,
+      "SWE-bench Verified": 96.5,
+      "SWE-bench Pro": 82.1,
+      "GPQA Diamond": 92.5,
+      "MMLU-Pro": 93
     }
   },
   {
@@ -4473,14 +3988,11 @@ const TIMELINE_DATA = [
     "availability": "restricted",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 88.8,
-      "GPQA Diamond": 74.4,
-      "MATH-500": 95.9,
-      "SWE-bench Verified": 64.7,
-      "HumanEval": 97.3,
-      "LiveCodeBench": 71.6,
-      "Chatbot Arena ELO": 1437,
-      "MMMU (Multimodal)": 79.5
+      "Chatbot Arena ELO": 1542,
+      "SWE-bench Verified": 96.5,
+      "SWE-bench Pro": 82.1,
+      "GPQA Diamond": 92.5,
+      "MMLU-Pro": 93
     }
   },
   {
@@ -4508,14 +4020,8 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU-Pro": 85.4,
-      "GPQA Diamond": 68.8,
-      "MATH-500": 92.6,
-      "SWE-bench Verified": 57.1,
-      "HumanEval": 95.5,
-      "LiveCodeBench": 65.4,
-      "Chatbot Arena ELO": 1398,
-      "MMMU (Multimodal)": 76
+      "Chatbot Arena ELO": 1530,
+      "AA Intelligence Index": 63
     }
   }
 ];

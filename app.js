@@ -398,10 +398,13 @@ function openModal(id) {
     Object.entries(m.benchmarks).forEach(function(entry) {
       var key = entry[0];
       var val = entry[1];
-      var isElo = key === 'Chatbot Arena ELO';
+      var unit = '%';
+      if (key.includes('ELO')) unit = ' ELO';
+      else if (key.includes('Index') || key.includes('AAII')) unit = '점';
+      else if (key === 'MT-Bench') unit = ' / 10';
       html += '      <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 6px; padding: 8px 10px;">';
       html += '        <div style="font-size: 11px; color: #6b7280;">' + key + '</div>';
-      html += '        <div style="font-size: 15px; font-weight: 700; color: #111827; font-family: monospace; margin-top: 2px;">' + val + (isElo ? ' ELO' : '%') + '</div>';
+      html += '        <div style="font-size: 15px; font-weight: 700; color: #111827; font-family: monospace; margin-top: 2px;">' + val + unit + '</div>';
       html += '      </div>';
     });
     html += '    </div>';
@@ -674,16 +677,42 @@ function renderCompareModalContent() {
   html += '</div>';
 
   // 2. Benchmarks Side-by-Side Comparison
-  var benchKeys = [
-    { key: 'Chatbot Arena ELO', label: 'Chatbot Arena ELO', desc: '인간 선호도 블라인드 평가', unit: ' ELO' },
-    { key: 'MMLU-Pro', label: 'MMLU-Pro', desc: '고난도 학술 종합 추론', unit: '%' },
-    { key: 'GPQA Diamond', label: 'GPQA Diamond', desc: '대학원 전문가 과학/물리/화학/생물', unit: '%' },
-    { key: 'MATH-500', label: 'MATH-500', desc: '수학 올림피아드/경시대회급 추론', unit: '%' },
-    { key: 'SWE-bench Verified', label: 'SWE-bench Verified', desc: '실제 GitHub 이슈 해결 능력 (엔지니어링)', unit: '%' },
-    { key: 'HumanEval', label: 'HumanEval', desc: '파이썬 코드 구현 정확도', unit: '%' },
-    { key: 'LiveCodeBench', label: 'LiveCodeBench', desc: '경쟁 프로그래밍 문제 해결력', unit: '%' },
-    { key: 'MMMU (Multimodal)', label: 'MMMU (Multimodal)', desc: '대학 수준 다중 모달리티(이미지/도표) 이해', unit: '%' }
-  ];
+  var BENCH_META = {
+    'Chatbot Arena ELO': { label: 'Chatbot Arena ELO', desc: '인간 블라인드 선호도 평가', unit: ' ELO', priority: 1 },
+    'SWE-bench Verified': { label: 'SWE-bench Verified', desc: '실제 GitHub 이슈 해결율 (소프트웨어 엔지니어링)', unit: '%', priority: 2 },
+    'SWE-bench Pro': { label: 'SWE-bench Pro', desc: '고난도 오염 방지 소프트웨어 엔지니어링 벤치마크', unit: '%', priority: 3 },
+    'Terminal-Bench 2.1': { label: 'Terminal-Bench 2.1', desc: '터미널 및 CLI 자율 실행 엔지니어링 능력', unit: '%', priority: 4 },
+    'MMLU-Pro': { label: 'MMLU-Pro', desc: '고난도 학술 종합 추론 (객관식 10지선다)', unit: '%', priority: 5 },
+    'MMLU': { label: 'MMLU', desc: '대학 수준 57개 분야 학술 지식 평가', unit: '%', priority: 6 },
+    'GPQA Diamond': { label: 'GPQA Diamond', desc: '대학원 전문가 과학/물리/화학/생물', unit: '%', priority: 7 },
+    'GPQA': { label: 'GPQA', desc: '대학원 전문가 수준 과학 질의응답', unit: '%', priority: 8 },
+    'MATH-500': { label: 'MATH-500', desc: '수학 올림피아드/경시대회급 추론', unit: '%', priority: 9 },
+    'LiveCodeBench': { label: 'LiveCodeBench', desc: '실시간 경쟁 프로그래밍 문제 해결력', unit: '%', priority: 10 },
+    'HumanEval': { label: 'HumanEval', desc: '파이썬 코드 구현 정확도', unit: '%', priority: 11 },
+    'MMMU (Multimodal)': { label: 'MMMU (Multimodal)', desc: '대학 수준 다중 모달리티(이미지/도표) 이해', unit: '%', priority: 12 },
+    'MMMU-Pro': { label: 'MMMU-Pro', desc: '고난도 멀티모달 비전 추론', unit: '%', priority: 13 },
+    'AIME 2025': { label: 'AIME 2025', desc: '미국 수학 초청 시험(AIME 2025) 문제 해결', unit: '%', priority: 14 },
+    'AIME 2026': { label: 'AIME 2026', desc: '최신 AIME 수학 경시대회 평가', unit: '%', priority: 15 },
+    'IFEval': { label: 'IFEval', desc: '정밀 지시 사항 준수(Instruction Following)', unit: '%', priority: 16 },
+    'Arena-Hard': { label: 'Arena-Hard', desc: '고난도 프롬프트 자동 선호도 평가', unit: '%', priority: 17 },
+    'KMMLU': { label: 'KMMLU', desc: '한국어 전문 지식 평가 벤치마크', unit: '%', priority: 18 },
+    'KMMLU-Pro': { label: 'KMMLU-Pro', desc: '고난도 한국어 전문 지식 추론', unit: '%', priority: 19 },
+    'AA Intelligence Index': { label: 'AA Intelligence Index', desc: 'Artificial Analysis 종합 지능 지표', unit: '점', priority: 20 },
+    'TelBench': { label: 'TelBench', desc: '통신 도메인 전문 평가 벤치마크', unit: '%', priority: 21 },
+    'TelAgentBench': { label: 'TelAgentBench', desc: '통신 AI 에이전트 다면 평가', unit: '%', priority: 22 },
+    'CyberGym': { label: 'CyberGym', desc: '사이버 보안 취약점 식별 및 패치 평가', unit: '%', priority: 23 },
+    'LiveBench': { label: 'LiveBench', desc: '실시간 일반 추론 및 코딩 평가', unit: '%', priority: 24 },
+    'AlpacaEval': { label: 'AlpacaEval', desc: '명령어 준수 및 대화형 선호도', unit: '%', priority: 25 },
+    'Multilingual MGSM': { label: 'Multilingual MGSM', desc: '다국어 수학 추론 평가', unit: '%', priority: 26 },
+    'Terminal-Bench 2.0': { label: 'Terminal-Bench 2.0', desc: '터미널 자율 실행 능력', unit: '%', priority: 27 }
+  };
+
+  var presentKeys = Array.from(new Set(Object.keys(modA.benchmarks || {}).concat(Object.keys(modB.benchmarks || {}))));
+  presentKeys.sort(function(a, b) {
+    var pA = (BENCH_META[a] && BENCH_META[a].priority) || 99;
+    var pB = (BENCH_META[b] && BENCH_META[b].priority) || 99;
+    return pA - pB;
+  });
 
   var winsA = 0;
   var winsB = 0;
@@ -692,14 +721,13 @@ function renderCompareModalContent() {
 
   var benchRowsHtml = '';
 
-  benchKeys.forEach(function(bItem) {
-    var key = bItem.key;
+  presentKeys.forEach(function(key) {
+    var bItem = BENCH_META[key] || { label: key, desc: '공개 성능 평가 지표', unit: '%' };
     var valA = (modA.benchmarks && modA.benchmarks[key] !== undefined) ? modA.benchmarks[key] : null;
     var valB = (modB.benchmarks && modB.benchmarks[key] !== undefined) ? modB.benchmarks[key] : null;
 
-    if (valA === null && valB === null) return; // neither has it
+    if (valA === null && valB === null) return;
 
-    totalCommon++;
     var diffText = '';
     var cellAClass = '';
     var cellBClass = '';
@@ -709,6 +737,7 @@ function renderCompareModalContent() {
     var ratioB = 50;
 
     if (valA !== null && valB !== null) {
+      totalCommon++;
       var diff = Math.round((valA - valB) * 10) / 10;
       var sum = valA + valB;
       if (sum > 0) {
@@ -719,35 +748,29 @@ function renderCompareModalContent() {
       if (diff > 0) {
         winsA++;
         cellAClass = 'score-win';
-        badgeA = '<span class="score-win-badge">+' + diff + (key === 'Chatbot Arena ELO' ? '' : '%') + ' 우세</span>';
+        badgeA = '<span class="score-win-badge">+' + diff + (bItem.unit.trim() === 'ELO' ? '' : bItem.unit) + ' 우세</span>';
         diffText = '<span style="color: #059669; font-weight: 600;">' + modA.name + ' +' + diff + '</span>';
       } else if (diff < 0) {
         winsB++;
         cellBClass = 'score-win';
-        badgeB = '<span class="score-win-badge">+' + Math.abs(diff) + (key === 'Chatbot Arena ELO' ? '' : '%') + ' 우세</span>';
+        badgeB = '<span class="score-win-badge">+' + Math.abs(diff) + (bItem.unit.trim() === 'ELO' ? '' : bItem.unit) + ' 우세</span>';
         diffText = '<span style="color: #059669; font-weight: 600;">' + modB.name + ' +' + Math.abs(diff) + '</span>';
       } else {
         ties++;
         diffText = '<span style="color: #6b7280;">동률 (0.0)</span>';
       }
     } else if (valA !== null) {
-      winsA++;
-      cellAClass = 'score-win';
-      badgeA = '<span class="score-win-badge">지원</span>';
-      diffText = '<span style="color: #6b7280;">' + modB.name + ' 미지원</span>';
+      diffText = '<span style="color: #9ca3af; font-size: 11px;">' + modB.name + ' 미측정 / 미공개</span>';
       ratioA = 100;
       ratioB = 0;
     } else {
-      winsB++;
-      cellBClass = 'score-win';
-      badgeB = '<span class="score-win-badge">지원</span>';
-      diffText = '<span style="color: #6b7280;">' + modA.name + ' 미지원</span>';
+      diffText = '<span style="color: #9ca3af; font-size: 11px;">' + modA.name + ' 미측정 / 미공개</span>';
       ratioA = 0;
       ratioB = 100;
     }
 
-    var displayA = (valA !== null) ? (valA + bItem.unit) : '<span style="color: #9ca3af; font-size: 11px;">해당 없음</span>';
-    var displayB = (valB !== null) ? (valB + bItem.unit) : '<span style="color: #9ca3af; font-size: 11px;">해당 없음</span>';
+    var displayA = (valA !== null) ? (valA + bItem.unit) : '<span style="color: #9ca3af; font-size: 11px;">미측정 / 미공개</span>';
+    var displayB = (valB !== null) ? (valB + bItem.unit) : '<span style="color: #9ca3af; font-size: 11px;">미측정 / 미공개</span>';
 
     benchRowsHtml += '<tr>';
     benchRowsHtml += '  <td>';
@@ -769,7 +792,7 @@ function renderCompareModalContent() {
   html += '  <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 8px;">';
   html += '    <div>';
   html += '      <h3 style="font-size: 13px; font-weight: 700; color: #111827; margin: 0;">📊 공개 벤치마크 점수 상호 비교</h3>';
-  html += '      <div style="font-size: 11px; color: #6b7280; margin-top: 2px;">수치가 높을수록 우수한 성능을 나타냅니다.</div>';
+  html += '      <div style="font-size: 11px; color: #6b7280; margin-top: 2px;">수치가 높을수록 우수한 성능을 나타냅니다. (공통 공개 측정 ' + totalCommon + '개 지표 기준)</div>';
   html += '    </div>';
   html += '    <div style="background: #f3f4f6; border: 1px solid #d1d5db; border-radius: 6px; padding: 4px 12px; font-size: 12px; font-weight: 700; color: #111827;">';
   html += '      <span>' + modA.name + ' <strong style="color: #2563eb;">' + winsA + '승</strong></span>';
