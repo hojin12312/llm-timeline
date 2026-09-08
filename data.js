@@ -1,21 +1,21 @@
 // 2026 Major LLM / MLLM Release Timeline Dataset
-// Calibrated with verified official benchmark scores and genuine evaluations
+// Auto-generated from models_catalog.json. Do not hand-edit data.js.
 
 const TIMELINE_DATA = [
   {
-    "id": "model-001",
-    "name": "LongCat-Flash-Thinking-2601",
-    "date": "2026-01-14",
-    "sortDate": "2026-01-14",
+    "id": "model-034",
+    "name": "MiMo-V2-Flash",
+    "date": "2026-01-06",
+    "sortDate": "2026-01-06",
     "month": "2026-01",
     "monthName": "January",
-    "company": "Meituan",
-    "family": "LongCat",
+    "company": "Xiaomi",
+    "family": "MiMo",
     "type": "LLM",
-    "category": "Reasoning",
+    "category": "LLM",
     "status": "GA",
-    "parameters": "~30B",
-    "architecture": "Thinking / Reasoning LLM",
+    "parameters": "309B total / 15B active (MoE)",
+    "architecture": "Sparse MoE with hybrid attention",
     "modalities": [],
     "focus": [],
     "open_weights": true,
@@ -25,55 +25,162 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "",
+    "note": "Corrected from the repository’s non-official “MiMo-V2-Pro” label to Xiaomi’s official MiMo-V2-Flash release.",
     "benchmarks": {
-      "MMLU-Pro": 78.4,
-      "MATH-500": 92.1,
-      "LiveCodeBench": 68.5,
-      "SWE-bench Verified": 54.2
+      "MMLU-Pro": 84.9,
+      "GPQA Diamond": 83.7,
+      "LiveCodeBench v6": 80.6,
+      "SWE-bench AgentLess": 30.8,
+      "SWE-bench Verified": 73.4,
+      "SWE-bench Multilingual": 71.7,
+      "Terminal-Bench 2.0": 38.5,
+      "BrowseComp": 45.4,
+      "τ²-Bench": 80.3
+    },
+    "official_id": "XiaomiMiMo/MiMo-V2-Flash",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash"
+      },
+      {
+        "label": "공식 출시 발표",
+        "url": "https://huggingface.co/papers/2601.02780"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/papers/2601.02780",
+    "parameter_source": "https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash",
+    "benchmark_sources": {
+      "MMLU-Pro": "https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash",
+      "GPQA Diamond": "https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash",
+      "LiveCodeBench v6": "https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash",
+      "SWE-bench AgentLess": "https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash",
+      "SWE-bench Verified": "https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash",
+      "SWE-bench Multilingual": "https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash",
+      "Terminal-Bench 2.0": "https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash",
+      "BrowseComp": "https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash",
+      "τ²-Bench": "https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash"
+    },
+    "benchmark_note": "Xiaomi MiMo 공식 기술 보고서/모델 카드 수치입니다. AgentLess와 일반 agent benchmark는 설정이 다릅니다.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
-    "id": "model-124",
-    "name": "EXAONE 3.5 32B",
-    "date": "2026-01-15",
-    "sortDate": "2026-01-15",
+    "id": "model-125",
+    "name": "A.X K1",
+    "date": "2026-01-07",
+    "sortDate": "2026-01-07",
     "month": "2026-01",
     "monthName": "January",
-    "company": "LG AI Research",
-    "family": "EXAONE",
+    "company": "SK Telecom",
+    "family": "A.X",
     "type": "LLM",
-    "category": "General",
+    "category": "Reasoning",
     "status": "GA",
-    "parameters": "32B",
-    "architecture": "Decoder-only Transformer (Bilingual Pre-trained)",
+    "parameters": "519B total / 33B active (MoE)",
+    "architecture": "Decoder-only Transformer + sparse MoE (MLA)",
     "modalities": [
       "language",
       "code"
     ],
     "focus": [
-      "Korean/English bilingual reasoning",
-      "enterprise domain knowledge",
-      "research synthesis"
+      "Sovereign AI",
+      "Korean public administration",
+      "enterprise AX",
+      "agent workflows"
     ],
     "open_weights": true,
-    "license": "EXAONE AI Model License",
-    "context": "64K",
+    "license": "Apache 2.0",
+    "context": "131,072",
     "languages": "Korean, English",
-    "variants": [
-      "32B",
-      "7.8B",
-      "2.4B"
-    ],
+    "variants": [],
     "reasoning_effort": [],
-    "availability": "Open Weights (Hugging Face / GitHub)",
-    "note": "LG AI연구원의 32B 파라미터급 고성능 한국어/영어 바이링구얼 오픈웨이트 모델. 실용적 엔터프라이즈 환경 및 학술 연구에 최적화.",
+    "availability": "Open Weights (Hugging Face)",
+    "note": "Official SK Telecom model card reports 519B total / 33B active parameters; the model card is released under Apache 2.0.",
+    "benchmarks": {},
+    "official_id": "skt/A.X-K1",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/skt/A.X-K1"
+      },
+      {
+        "label": "공식 출시 발표",
+        "url": "https://news.sktelecom.com/218112"
+      }
+    ],
+    "release_date_source": "https://news.sktelecom.com/218112",
+    "parameter_source": "https://huggingface.co/skt/A.X-K1",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-001",
+    "name": "LongCat-Flash-Thinking-2601",
+    "date": "2026-01-20",
+    "sortDate": "2026-01-20",
+    "month": "2026-01",
+    "monthName": "January",
+    "company": "Meituan",
+    "family": "LongCat",
+    "type": "LLM",
+    "category": "Reasoning",
+    "status": "GA",
+    "parameters": "560B total / 27B average active (MoE; 18.6–31.3B dynamic)",
+    "architecture": "Sparse MoE with dynamic activation",
+    "modalities": [],
+    "focus": [],
+    "open_weights": true,
+    "license": "",
+    "context": "",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "",
+    "note": "MoE; publisher reports 560B total and dynamic activation of 18.6–31.3B (about 27B average).",
     "benchmarks": {
-      "MMLU": 80.5,
-      "Arena-Hard": 78.6,
-      "IFEval": 81.7,
-      "LiveBench": 43,
-      "AlpacaEval": 60.6
+      "LiveCodeBench": 82.8,
+      "AIME 2025": 100.0,
+      "IMOAnswerBench": 86.8,
+      "τ²-Bench": 88.2,
+      "BrowseComp": 73.1
+    },
+    "official_id": "meituan-longcat/LongCat-Flash-Thinking-2601",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/meituan-longcat/LongCat-Flash-Thinking-2601"
+      },
+      {
+        "label": "공식 벤치마크 발표",
+        "url": "https://tech.meituan.com/2026/01/20/LongCat-Flash-Thinking-2601.html"
+      }
+    ],
+    "release_date_source": "https://tech.meituan.com/2026/01/20/LongCat-Flash-Thinking-2601.html",
+    "parameter_source": "https://tech.meituan.com/2026/01/20/LongCat-Flash-Thinking-2601.html",
+    "benchmark_sources": {
+      "LiveCodeBench": "https://tech.meituan.com/2026/01/20/LongCat-Flash-Thinking-2601.html",
+      "AIME 2025": "https://tech.meituan.com/2026/01/20/LongCat-Flash-Thinking-2601.html",
+      "IMOAnswerBench": "https://tech.meituan.com/2026/01/20/LongCat-Flash-Thinking-2601.html",
+      "τ²-Bench": "https://tech.meituan.com/2026/01/20/LongCat-Flash-Thinking-2601.html",
+      "BrowseComp": "https://tech.meituan.com/2026/01/20/LongCat-Flash-Thinking-2601.html"
+    },
+    "benchmark_note": "AIME-25는 Heavy Thinking Mode 결과(공식 발표 표의 Avg@16 계열)이며, LCB/BrowseComp 등은 발표문 수치입니다.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -88,28 +195,64 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "~1T MoE",
-    "architecture": "Multimodal MoE",
-    "modalities": [],
+    "parameters": "1T total / 32B active (MoE)",
+    "architecture": "Native multimodal sparse MoE",
+    "modalities": [
+      "text",
+      "image",
+      "video"
+    ],
     "focus": [],
-    "open_weights": false,
+    "open_weights": true,
     "license": "",
     "context": "",
     "languages": "",
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "",
+    "note": "Native multimodal MoE; publisher reports 1T total and 32B active.",
     "benchmarks": {
       "SWE-bench Verified": 76.8,
       "SWE-bench Pro": 50.7,
+      "SWE-bench Multilingual": 73.0,
+      "Terminal-Bench 2.0": 50.8,
+      "LiveCodeBench v6": 85.0,
       "AIME 2025": 96.1,
-      "MMMU (Multimodal)": 68.5
+      "GPQA Diamond": 87.6,
+      "MMLU-Pro": 87.1,
+      "MMMU-Pro": 78.5
+    },
+    "official_id": "moonshotai/Kimi-K2.5",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/moonshotai/Kimi-K2.5"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/moonshotai/Kimi-K2.5",
+    "parameter_source": "https://huggingface.co/moonshotai/Kimi-K2.5",
+    "benchmark_sources": {
+      "SWE-bench Verified": "https://huggingface.co/moonshotai/Kimi-K2.5",
+      "SWE-bench Pro": "https://huggingface.co/moonshotai/Kimi-K2.5",
+      "SWE-bench Multilingual": "https://huggingface.co/moonshotai/Kimi-K2.5",
+      "Terminal-Bench 2.0": "https://huggingface.co/moonshotai/Kimi-K2.5",
+      "LiveCodeBench v6": "https://huggingface.co/moonshotai/Kimi-K2.5",
+      "AIME 2025": "https://huggingface.co/moonshotai/Kimi-K2.5",
+      "GPQA Diamond": "https://huggingface.co/moonshotai/Kimi-K2.5",
+      "MMLU-Pro": "https://huggingface.co/moonshotai/Kimi-K2.5",
+      "MMMU-Pro": "https://huggingface.co/moonshotai/Kimi-K2.5"
+    },
+    "benchmark_note": "공식 모델 카드 자기 보고 수치. 도구 사용 여부와 reasoning 설정은 원문 조건이 benchmark마다 다릅니다.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
     "id": "model-003",
-    "name": "Trinity Large",
+    "name": "Trinity-Large-Preview",
     "date": "2026-01-27",
     "sortDate": "2026-01-27",
     "month": "2026-01",
@@ -119,7 +262,7 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "GA",
-    "parameters": "400B total / 13B active",
+    "parameters": "398B total / ~13B active (MoE)",
     "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
@@ -134,12 +277,34 @@ const TIMELINE_DATA = [
     ],
     "reasoning_effort": [],
     "availability": "",
-    "note": "",
+    "note": "Sparse MoE; the publisher describes the active count as approximately 13B.",
     "benchmarks": {
       "MMLU": 87.2,
       "MMLU-Pro": 75.2,
       "GPQA Diamond": 63.3,
-      "AIME 2025": 24
+      "AIME 2025": 24.0
+    },
+    "official_id": "arcee-ai/Trinity-Large-Preview",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/arcee-ai/Trinity-Large-Preview"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/arcee-ai/Trinity-Large-Preview",
+    "parameter_source": "https://huggingface.co/arcee-ai/Trinity-Large-Preview",
+    "benchmark_sources": {
+      "MMLU": "https://huggingface.co/arcee-ai/Trinity-Large-Preview",
+      "MMLU-Pro": "https://huggingface.co/arcee-ai/Trinity-Large-Preview",
+      "GPQA Diamond": "https://huggingface.co/arcee-ai/Trinity-Large-Preview",
+      "AIME 2025": "https://huggingface.co/arcee-ai/Trinity-Large-Preview"
+    },
+    "benchmark_note": "수치는 모델 제공자가 공식 모델 카드·기술 보고서·공식 발표문에 직접 명시한 자기 보고 값만 수록했습니다. 원문 설정이 다른 수치는 직접적인 순위 비교에 사용하지 마세요.",
+    "parameter_status": "publisher-approximate",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -154,14 +319,37 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "Base",
-    "parameters": "400B total / 13B active",
+    "parameters": "398B total / 13B active (MoE)",
     "architecture": "Sparse MoE",
     "open_weights": true,
-    "note": "Arcee AI Trinity Large Base Checkpoint",
+    "note": "Sparse MoE pretraining checkpoint.",
     "benchmarks": {
+      "MATH-500": 65.2,
       "MMLU": 82.58,
       "MMLU-Pro": 66.02,
-      "MATH-500": 65.2
+      "GPQA Diamond": 43.94
+    },
+    "official_id": "arcee-ai/Trinity-Large-Base",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/arcee-ai/Trinity-Large-Base"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/arcee-ai/Trinity-Large-Base",
+    "parameter_source": "https://huggingface.co/arcee-ai/Trinity-Large-Base",
+    "benchmark_sources": {
+      "MATH-500": "https://huggingface.co/arcee-ai/Trinity-Large-Base",
+      "MMLU": "https://huggingface.co/arcee-ai/Trinity-Large-Base",
+      "MMLU-Pro": "https://huggingface.co/arcee-ai/Trinity-Large-Base",
+      "GPQA Diamond": "https://huggingface.co/arcee-ai/Trinity-Large-Base"
+    },
+    "benchmark_note": "수치는 모델 제공자가 공식 모델 카드·기술 보고서·공식 발표문에 직접 명시한 자기 보고 값만 수록했습니다. 원문 설정이 다른 수치는 직접적인 순위 비교에 사용하지 마세요.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -176,13 +364,37 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "TrueBase",
-    "parameters": "400B total / 13B active",
+    "parameters": "398B total / 13B active (MoE)",
     "architecture": "Sparse MoE",
     "open_weights": true,
-    "note": "Arcee AI Trinity Large Pre-trained TrueBase",
+    "note": "Sparse MoE pre-anneal pretraining checkpoint.",
     "benchmarks": {
-      "MMLU": 80.12,
-      "MMLU-Pro": 62.4
+      "MATH-500": 48.2,
+      "MMLU": 78.45,
+      "MMLU-Pro": 51.6,
+      "GPQA Diamond": 40.91
+    },
+    "official_id": "arcee-ai/Trinity-Large-TrueBase",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/arcee-ai/Trinity-Large-TrueBase"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/arcee-ai/Trinity-Large-TrueBase",
+    "parameter_source": "https://huggingface.co/arcee-ai/Trinity-Large-TrueBase",
+    "benchmark_sources": {
+      "MATH-500": "https://huggingface.co/arcee-ai/Trinity-Large-TrueBase",
+      "MMLU": "https://huggingface.co/arcee-ai/Trinity-Large-TrueBase",
+      "MMLU-Pro": "https://huggingface.co/arcee-ai/Trinity-Large-TrueBase",
+      "GPQA Diamond": "https://huggingface.co/arcee-ai/Trinity-Large-TrueBase"
+    },
+    "benchmark_note": "수치는 모델 제공자가 공식 모델 카드·기술 보고서·공식 발표문에 직접 명시한 자기 보고 값만 수록했습니다. 원문 설정이 다른 수치는 직접적인 순위 비교에 사용하지 마세요.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -197,11 +409,11 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "",
     "modalities": [],
     "focus": [],
-    "open_weights": null,
+    "open_weights": false,
     "license": "",
     "context": "",
     "languages": "",
@@ -210,11 +422,32 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1496,
       "SWE-bench Verified": 80.8,
-      "GPQA Diamond": 78.5,
-      "MMLU-Pro": 84.1,
-      "MMMU (Multimodal)": 72.8
+      "Terminal-Bench 2.0": 65.4,
+      "GPQA Diamond": 91.3,
+      "MMLU": 91.1
+    },
+    "official_id": "6a5fa276ac68b9aeb0c8b6af5fa36326e0e166dd.pdf",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://www-cdn.anthropic.com/6a5fa276ac68b9aeb0c8b6af5fa36326e0e166dd.pdf"
+      }
+    ],
+    "release_date_source": "https://www-cdn.anthropic.com/6a5fa276ac68b9aeb0c8b6af5fa36326e0e166dd.pdf",
+    "parameter_source": "https://www-cdn.anthropic.com/6a5fa276ac68b9aeb0c8b6af5fa36326e0e166dd.pdf",
+    "benchmark_sources": {
+      "SWE-bench Verified": "https://www-cdn.anthropic.com/6a5fa276ac68b9aeb0c8b6af5fa36326e0e166dd.pdf",
+      "Terminal-Bench 2.0": "https://www-cdn.anthropic.com/6a5fa276ac68b9aeb0c8b6af5fa36326e0e166dd.pdf",
+      "GPQA Diamond": "https://www-cdn.anthropic.com/6a5fa276ac68b9aeb0c8b6af5fa36326e0e166dd.pdf",
+      "MMLU": "https://www-cdn.anthropic.com/6a5fa276ac68b9aeb0c8b6af5fa36326e0e166dd.pdf"
+    },
+    "benchmark_note": "Anthropic System Card의 제공자 측 평가 수치만 수록했습니다.",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -229,8 +462,8 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "GA",
-    "parameters": "~14B",
-    "architecture": "Lightweight Dense Transformer",
+    "parameters": "68.5B total / 2.9–4.5B active (MoE + N-gram embedding; >30B embedding)",
+    "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
     "open_weights": true,
@@ -240,12 +473,40 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "",
+    "note": "공식 카드의 활성 파라미터 표기 범위(2.9B~4.5B)를 보존했습니다.",
     "benchmarks": {
-      "MMLU": 82.4,
-      "MATH-500": 84.5,
-      "LiveCodeBench": 56.2,
-      "SWE-bench Verified": 42.1
+      "SWE-bench Verified": 54.4,
+      "Terminal-Bench 2.0": 33.75,
+      "SWE-bench Multilingual": 38.1,
+      "GPQA Diamond": 66.78,
+      "MMLU": 85.52,
+      "MMLU-Pro": 78.29,
+      "MATH-500": 96.8
+    },
+    "official_id": "meituan-longcat/LongCat-Flash-Lite",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/meituan-longcat/LongCat-Flash-Lite"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/meituan-longcat/LongCat-Flash-Lite",
+    "parameter_source": "https://huggingface.co/meituan-longcat/LongCat-Flash-Lite",
+    "benchmark_sources": {
+      "SWE-bench Verified": "https://huggingface.co/meituan-longcat/LongCat-Flash-Lite",
+      "Terminal-Bench 2.0": "https://huggingface.co/meituan-longcat/LongCat-Flash-Lite",
+      "SWE-bench Multilingual": "https://huggingface.co/meituan-longcat/LongCat-Flash-Lite",
+      "GPQA Diamond": "https://huggingface.co/meituan-longcat/LongCat-Flash-Lite",
+      "MMLU": "https://huggingface.co/meituan-longcat/LongCat-Flash-Lite",
+      "MMLU-Pro": "https://huggingface.co/meituan-longcat/LongCat-Flash-Lite",
+      "MATH-500": "https://huggingface.co/meituan-longcat/LongCat-Flash-Lite"
+    },
+    "benchmark_note": "공식 모델 카드 자기 보고 수치이며, 각 benchmark의 shot/tool 조건은 카드 원문을 따릅니다.",
+    "parameter_status": "publisher-approximate",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -260,11 +521,11 @@ const TIMELINE_DATA = [
     "type": "LLM / agentic coding",
     "category": "LLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "",
     "modalities": [],
     "focus": [],
-    "open_weights": null,
+    "open_weights": false,
     "license": "",
     "context": "",
     "languages": "",
@@ -273,11 +534,32 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1450,
-      "SWE-bench Verified": 78.4,
-      "HumanEval": 92.5,
-      "LiveCodeBench": 84.2,
-      "MMLU-Pro": 82
+      "SWE-bench Pro": 56.8,
+      "Terminal-Bench 2.0": 77.3,
+      "OSWorld-Verified": 64.7,
+      "Cyber CTF": 77.6
+    },
+    "official_id": "introducing-gpt-5-3-codex",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://openai.com/index/introducing-gpt-5-3-codex/"
+      }
+    ],
+    "release_date_source": "https://openai.com/index/introducing-gpt-5-3-codex/",
+    "parameter_source": "https://openai.com/index/introducing-gpt-5-3-codex/",
+    "benchmark_sources": {
+      "SWE-bench Pro": "https://openai.com/index/introducing-gpt-5-3-codex/",
+      "Terminal-Bench 2.0": "https://openai.com/index/introducing-gpt-5-3-codex/",
+      "OSWorld-Verified": "https://openai.com/index/introducing-gpt-5-3-codex/",
+      "Cyber CTF": "https://openai.com/index/introducing-gpt-5-3-codex/"
+    },
+    "benchmark_note": "OpenAI 공식 발표의 공개 평가 표 수치입니다. SWE-Bench Pro는 Public Dataset 조건입니다.",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -292,7 +574,7 @@ const TIMELINE_DATA = [
     "type": "MLLM / unified omni model",
     "category": "Omni",
     "status": "GA",
-    "parameters": "2.4T",
+    "parameters": "2.4T total",
     "architecture": "Unified Omni Model",
     "modalities": [
       "text",
@@ -309,10 +591,23 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1460,
-      "MMLU": 86.5,
-      "MMMU (Multimodal)": 69.4
+    "benchmarks": {},
+    "official_id": "ernie5.0",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://ernie.baidu.com/blog/posts/ernie5.0/"
+      }
+    ],
+    "release_date_source": "https://ernie.baidu.com/blog/posts/ernie5.0/",
+    "parameter_source": "https://ernie.baidu.com/blog/posts/ernie5.0/",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -327,7 +622,66 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "GA",
-    "parameters": "744B total / ~40B active (MoE)",
+    "parameters": "744B total / 40B active (MoE)",
+    "architecture": "Sparse MoE",
+    "modalities": [],
+    "focus": [],
+    "open_weights": true,
+    "license": "",
+    "context": "",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "",
+    "note": "Sparse MoE; publisher model card reports 744B total and 40B active.",
+    "benchmarks": {
+      "SWE-bench Verified": 77.8,
+      "SWE-bench Multilingual": 73.3,
+      "Terminal-Bench 2.0": 60.7,
+      "GPQA Diamond": 86.0,
+      "AIME 2026": 92.7,
+      "HLE": 30.5,
+      "BrowseComp": 62.0
+    },
+    "official_id": "zai-org/GLM-5",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/zai-org/GLM-5"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/zai-org/GLM-5",
+    "parameter_source": "https://huggingface.co/zai-org/GLM-5",
+    "benchmark_sources": {
+      "SWE-bench Verified": "https://huggingface.co/zai-org/GLM-5",
+      "SWE-bench Multilingual": "https://huggingface.co/zai-org/GLM-5",
+      "Terminal-Bench 2.0": "https://huggingface.co/zai-org/GLM-5",
+      "GPQA Diamond": "https://huggingface.co/zai-org/GLM-5",
+      "AIME 2026": "https://huggingface.co/zai-org/GLM-5",
+      "HLE": "https://huggingface.co/zai-org/GLM-5",
+      "BrowseComp": "https://huggingface.co/zai-org/GLM-5"
+    },
+    "benchmark_note": "Z.ai 공식 모델 카드의 자기 보고 수치입니다. GLM-5.2/5.3의 수치를 이 레코드에 섞지 않았습니다.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-009",
+    "name": "MiniMax-M2.5",
+    "date": "2026-02-12",
+    "sortDate": "2026-02-12",
+    "month": "2026-02",
+    "monthName": "February",
+    "company": "MiniMax",
+    "family": "MiniMax M",
+    "type": "LLM",
+    "category": "LLM",
+    "status": "GA",
+    "parameters": "정확한 수치 미공개",
     "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
@@ -340,45 +694,37 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1380,
-      "MMLU": 87.8,
-      "MMLU-Pro": 78.5,
-      "LiveCodeBench": 76.2,
-      "SWE-bench Verified": 62.4
-    }
-  },
-  {
-    "id": "model-009",
-    "name": "MiniMax M2.5",
-    "date": "2026-02-12",
-    "sortDate": "2026-02-12",
-    "month": "2026-02",
-    "monthName": "February",
-    "company": "MiniMax",
-    "family": "MiniMax M",
-    "type": "LLM",
-    "category": "LLM",
-    "status": "GA",
-    "parameters": "",
-    "architecture": "Sparse MoE",
-    "modalities": [],
-    "focus": [],
-    "open_weights": false,
-    "license": "",
-    "context": "",
-    "languages": "",
-    "variants": [],
-    "reasoning_effort": [],
-    "availability": "",
-    "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1350,
-      "MMLU": 83.5
+      "SWE-bench Verified": 80.2,
+      "BrowseComp": 76.3,
+      "AIME 2025": 86.3,
+      "GPQA Diamond": 85.2
+    },
+    "official_id": "MiniMaxAI/MiniMax-M2.5",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.5"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/MiniMaxAI/MiniMax-M2.5",
+    "parameter_source": "https://huggingface.co/MiniMaxAI/MiniMax-M2.5",
+    "benchmark_sources": {
+      "SWE-bench Verified": "https://huggingface.co/MiniMaxAI/MiniMax-M2.5",
+      "BrowseComp": "https://huggingface.co/MiniMaxAI/MiniMax-M2.5",
+      "AIME 2025": "https://huggingface.co/MiniMaxAI/MiniMax-M2.5",
+      "GPQA Diamond": "https://huggingface.co/MiniMaxAI/MiniMax-M2.5"
+    },
+    "benchmark_note": "MiniMax 공식 모델 카드의 자기 보고 수치입니다.",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
     "id": "model-010",
-    "name": "Step-3.5-Flash",
+    "name": "Step 3.5 Flash",
     "date": "2026-02-12",
     "sortDate": "2026-02-12",
     "month": "2026-02",
@@ -388,24 +734,51 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "196.81B total / ~11B active (MoE)",
     "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
-    "open_weights": false,
+    "open_weights": true,
     "license": "",
     "context": "",
     "languages": "",
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "",
+    "note": "Sparse MoE; official model card reports 196.81B total and about 11B active.",
     "benchmarks": {
-      "MMLU": 85.8,
+      "AIME 2025": 97.3,
+      "IMOAnswerBench": 85.4,
+      "LiveCodeBench v6": 86.4,
       "SWE-bench Verified": 74.4,
-      "LiveCodeBench": 86.4,
-      "Terminal-Bench 2.0": 51,
-      "HumanEval": 81.1
+      "Terminal-Bench 2.0": 51.0
+    },
+    "official_id": "stepfun-ai/Step-3.5-Flash",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/stepfun-ai/Step-3.5-Flash"
+      },
+      {
+        "label": "공식 벤치마크 발표",
+        "url": "https://static.stepfun.com/blog/step-3.5-flash/"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/stepfun-ai/Step-3.5-Flash",
+    "parameter_source": "https://huggingface.co/stepfun-ai/Step-3.5-Flash",
+    "benchmark_sources": {
+      "AIME 2025": "https://static.stepfun.com/blog/step-3.5-flash/",
+      "IMOAnswerBench": "https://static.stepfun.com/blog/step-3.5-flash/",
+      "LiveCodeBench v6": "https://static.stepfun.com/blog/step-3.5-flash/",
+      "SWE-bench Verified": "https://static.stepfun.com/blog/step-3.5-flash/",
+      "Terminal-Bench 2.0": "https://static.stepfun.com/blog/step-3.5-flash/"
+    },
+    "benchmark_note": "StepFun 공식 발표/모델 카드 수치입니다.",
+    "parameter_status": "publisher-approximate",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -420,11 +793,11 @@ const TIMELINE_DATA = [
     "type": "MLLM / agentic foundation model",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "",
     "modalities": [],
     "focus": [],
-    "open_weights": null,
+    "open_weights": false,
     "license": "",
     "context": "",
     "languages": "",
@@ -432,12 +805,23 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "SWE-bench Verified": 76.5,
-      "MMLU-Pro": 87,
-      "GPQA Diamond": 88.9,
-      "AIME 2025": 98.3,
-      "MMMU (Multimodal)": 74.8
+    "benchmarks": {},
+    "official_id": "seed2-0-%25E6%25AD%25A3%25E5%BC%258F%25E5%25B8%2583",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://seed.bytedance.com/en/blog/seed2-0-%25E6%25AD%25A3%25E5%BC%258F%25E5%25B8%2583"
+      }
+    ],
+    "release_date_source": "https://seed.bytedance.com/en/blog/seed2-0-%25E6%25AD%25A3%25E5%BC%258F%25E5%25B8%2583",
+    "parameter_source": "https://seed.bytedance.com/en/blog/seed2-0-%25E6%25AD%25A3%25E5%BC%258F%25E5%25B8%2583",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -465,11 +849,32 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1400,
-      "GPQA Diamond": 88.4,
-      "SWE-bench Pro": 50.9,
-      "MMLU-Pro": 84.5,
-      "LiveCodeBench": 83.2
+      "MMLU-Pro": 87.8,
+      "MMLU-Redux": 94.9,
+      "SuperGPQA": 70.4,
+      "IFEval": 92.6
+    },
+    "official_id": "Qwen/Qwen3.5-397B-A17B",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B",
+    "parameter_source": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B",
+    "benchmark_sources": {
+      "MMLU-Pro": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B",
+      "MMLU-Redux": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B",
+      "SuperGPQA": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B",
+      "IFEval": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B"
+    },
+    "benchmark_note": "Qwen 공식 모델 카드의 Qwen3.5-397B-A17B 열 수치입니다.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -484,11 +889,11 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "",
     "modalities": [],
     "focus": [],
-    "open_weights": null,
+    "open_weights": false,
     "license": "",
     "context": "",
     "languages": "",
@@ -497,11 +902,34 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1460,
-      "SWE-bench Verified": 77.2,
-      "GPQA Diamond": 74,
-      "MMLU-Pro": 81.6,
-      "MMMU (Multimodal)": 70.2
+      "SWE-bench Verified": 79.6,
+      "SWE-bench Multilingual": 75.9,
+      "Terminal-Bench 2.0": 59.1,
+      "GPQA Diamond": 89.9,
+      "MMLU": 89.3
+    },
+    "official_id": "78073f739564e986ff3e28522761a7a0b4484f84.pdf",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf"
+      }
+    ],
+    "release_date_source": "https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf",
+    "parameter_source": "https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf",
+    "benchmark_sources": {
+      "SWE-bench Verified": "https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf",
+      "SWE-bench Multilingual": "https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf",
+      "Terminal-Bench 2.0": "https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf",
+      "GPQA Diamond": "https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf",
+      "MMLU": "https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf"
+    },
+    "benchmark_note": "Anthropic System Card의 제공자 측 평가 수치만 수록했습니다.",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -533,9 +961,23 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "MMLU": 56.4,
-      "Multilingual MGSM": 54.8
+    "benchmarks": {},
+    "official_id": "CohereLabs/tiny-aya-base",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/CohereLabs/tiny-aya-base"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/CohereLabs/tiny-aya-base",
+    "parameter_source": "https://huggingface.co/CohereLabs/tiny-aya-base",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -553,10 +995,24 @@ const TIMELINE_DATA = [
     "parameters": "3.35B",
     "architecture": "Multilingual Dense Transformer (70+ Languages)",
     "open_weights": true,
-    "note": "Cohere Labs 글로벌 다국어 특화 모델",
-    "benchmarks": {
-      "MMLU": 56.4,
-      "Multilingual MGSM": 54.8
+    "note": "",
+    "benchmarks": {},
+    "official_id": "CohereLabs/tiny-aya-global",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/CohereLabs/tiny-aya-global"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/CohereLabs/tiny-aya-global",
+    "parameter_source": "https://huggingface.co/CohereLabs/tiny-aya-global",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -574,10 +1030,24 @@ const TIMELINE_DATA = [
     "parameters": "3.35B",
     "architecture": "Regional Specialization Transformer",
     "open_weights": true,
-    "note": "Aya 4대 원소 시리즈 (Earth variant)",
-    "benchmarks": {
-      "MMLU": 55.8,
-      "Multilingual MGSM": 53.5
+    "note": "",
+    "benchmarks": {},
+    "official_id": "CohereLabs/tiny-aya-earth",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/CohereLabs/tiny-aya-earth"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/CohereLabs/tiny-aya-earth",
+    "parameter_source": "https://huggingface.co/CohereLabs/tiny-aya-earth",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -595,10 +1065,24 @@ const TIMELINE_DATA = [
     "parameters": "3.35B",
     "architecture": "Regional Specialization Transformer",
     "open_weights": true,
-    "note": "Aya 4대 원소 시리즈 (Fire variant)",
-    "benchmarks": {
-      "MMLU": 56,
-      "Multilingual MGSM": 54
+    "note": "",
+    "benchmarks": {},
+    "official_id": "CohereLabs/tiny-aya-fire",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/CohereLabs/tiny-aya-fire"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/CohereLabs/tiny-aya-fire",
+    "parameter_source": "https://huggingface.co/CohereLabs/tiny-aya-fire",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -616,10 +1100,24 @@ const TIMELINE_DATA = [
     "parameters": "3.35B",
     "architecture": "Regional Specialization Transformer",
     "open_weights": true,
-    "note": "Aya 4대 원소 시리즈 (Water variant)",
-    "benchmarks": {
-      "MMLU": 55.5,
-      "Multilingual MGSM": 53.8
+    "note": "",
+    "benchmarks": {},
+    "official_id": "CohereLabs/tiny-aya-water",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/CohereLabs/tiny-aya-water"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/CohereLabs/tiny-aya-water",
+    "parameter_source": "https://huggingface.co/CohereLabs/tiny-aya-water",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -647,11 +1145,32 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1375,
-      "GPQA Diamond": 84,
-      "SWE-bench Pro": 46.5,
-      "MMLU-Pro": 80.2,
-      "LiveCodeBench": 78.4
+      "MMLU-Pro": 86.7,
+      "GPQA Diamond": 86.6,
+      "SWE-bench Verified": 72.0,
+      "Terminal-Bench 2.0": 49.4
+    },
+    "official_id": "Qwen/Qwen3.5-122B-A10B",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B",
+    "parameter_source": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B",
+    "benchmark_sources": {
+      "MMLU-Pro": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B",
+      "GPQA Diamond": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B",
+      "SWE-bench Verified": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B",
+      "Terminal-Bench 2.0": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B"
+    },
+    "benchmark_note": "Qwen 공식 모델 카드의 122B 모델 열 수치입니다.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -679,10 +1198,32 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1340,
-      "GPQA Diamond": 78.5,
-      "MMLU-Pro": 75,
-      "LiveCodeBench": 71.5
+      "SWE-bench Verified": 69.2,
+      "SWE-bench Multilingual": 60.3,
+      "SWE-bench Pro": 44.6,
+      "Terminal-Bench 2.0": 40.5
+    },
+    "official_id": "Qwen/Qwen3.5-35B-A3B",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/Qwen/Qwen3.5-35B-A3B"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/Qwen/Qwen3.5-35B-A3B",
+    "parameter_source": "https://huggingface.co/Qwen/Qwen3.5-35B-A3B",
+    "benchmark_sources": {
+      "SWE-bench Verified": "https://huggingface.co/Qwen/Qwen3.5-35B-A3B",
+      "SWE-bench Multilingual": "https://huggingface.co/Qwen/Qwen3.5-35B-A3B",
+      "SWE-bench Pro": "https://huggingface.co/Qwen/Qwen3.5-35B-A3B",
+      "Terminal-Bench 2.0": "https://huggingface.co/Qwen/Qwen3.5-35B-A3B"
+    },
+    "benchmark_note": "Qwen 공식 Qwen3.5-35B-A3B 발표/카드 수치입니다.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -697,7 +1238,7 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "27B (Dense)",
+    "parameters": "27B dense",
     "architecture": "Dense Transformer",
     "modalities": [],
     "focus": [],
@@ -709,11 +1250,23 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1325,
-      "GPQA Diamond": 76,
-      "MMLU-Pro": 73.5,
-      "LiveCodeBench": 69.8
+    "benchmarks": {},
+    "official_id": "Qwen/Qwen3.5-27B",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/Qwen/Qwen3.5-27B"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/Qwen/Qwen3.5-27B",
+    "parameter_source": "https://huggingface.co/Qwen/Qwen3.5-27B",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -728,7 +1281,7 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "9B (Dense)",
+    "parameters": "9B dense",
     "architecture": "Dense Transformer",
     "modalities": [],
     "focus": [],
@@ -740,11 +1293,23 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1285,
-      "GPQA Diamond": 68,
-      "MMLU-Pro": 65.5,
-      "LiveCodeBench": 60.5
+    "benchmarks": {},
+    "official_id": "Qwen/Qwen3.5-9B",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/Qwen/Qwen3.5-9B"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/Qwen/Qwen3.5-9B",
+    "parameter_source": "https://huggingface.co/Qwen/Qwen3.5-9B",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -759,7 +1324,7 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "4B (Dense)",
+    "parameters": "4B dense",
     "architecture": "Dense Transformer",
     "modalities": [],
     "focus": [],
@@ -771,11 +1336,23 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1235,
-      "GPQA Diamond": 59.5,
-      "MMLU-Pro": 57,
-      "LiveCodeBench": 51
+    "benchmarks": {},
+    "official_id": "Qwen/Qwen3.5-4B",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/Qwen/Qwen3.5-4B"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/Qwen/Qwen3.5-4B",
+    "parameter_source": "https://huggingface.co/Qwen/Qwen3.5-4B",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -790,7 +1367,7 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "2B (Dense)",
+    "parameters": "2B dense",
     "architecture": "Dense Transformer",
     "modalities": [],
     "focus": [],
@@ -802,11 +1379,23 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1180,
-      "GPQA Diamond": 51,
-      "MMLU-Pro": 49,
-      "LiveCodeBench": 42.5
+    "benchmarks": {},
+    "official_id": "Qwen/Qwen3.5-2B",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/Qwen/Qwen3.5-2B"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/Qwen/Qwen3.5-2B",
+    "parameter_source": "https://huggingface.co/Qwen/Qwen3.5-2B",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -821,7 +1410,7 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "0.8B (Dense)",
+    "parameters": "0.8B dense",
     "architecture": "Dense Transformer",
     "modalities": [],
     "focus": [],
@@ -833,11 +1422,23 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1115,
-      "GPQA Diamond": 41.5,
-      "MMLU-Pro": 39.5,
-      "LiveCodeBench": 33
+    "benchmarks": {},
+    "official_id": "Qwen/Qwen3.5-0.8B",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/Qwen/Qwen3.5-0.8B"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+    "parameter_source": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -852,11 +1453,11 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "",
     "modalities": [],
     "focus": [],
-    "open_weights": null,
+    "open_weights": false,
     "license": "",
     "context": "",
     "languages": "",
@@ -864,11 +1465,23 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1440,
-      "MMLU-Pro": 81.5,
-      "GPQA Diamond": 72,
-      "MATH-500": 85
+    "benchmarks": {},
+    "official_id": "gpt-5-3-instant.pdf",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://deploymentsafety.openai.com/gpt-5-3-instant/gpt-5-3-instant.pdf"
+      }
+    ],
+    "release_date_source": "https://deploymentsafety.openai.com/gpt-5-3-instant/gpt-5-3-instant.pdf",
+    "parameter_source": "https://deploymentsafety.openai.com/gpt-5-3-instant/gpt-5-3-instant.pdf",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -883,11 +1496,11 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "",
     "modalities": [],
     "focus": [],
-    "open_weights": null,
+    "open_weights": false,
     "license": "",
     "context": "",
     "languages": "",
@@ -895,12 +1508,23 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1475,
-      "SWE-bench Verified": 82.3,
-      "MMLU-Pro": 84.5,
-      "GPQA Diamond": 78,
-      "MATH-500": 89.2
+    "benchmarks": {},
+    "official_id": "introducing-gpt-5-4",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://openai.com/index/introducing-gpt-5-4/"
+      }
+    ],
+    "release_date_source": "https://openai.com/index/introducing-gpt-5-4/",
+    "parameter_source": "https://openai.com/index/introducing-gpt-5-4/",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -915,11 +1539,11 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "",
     "modalities": [],
     "focus": [],
-    "open_weights": null,
+    "open_weights": false,
     "license": "",
     "context": "",
     "languages": "",
@@ -927,17 +1551,28 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1495,
-      "SWE-bench Verified": 85.6,
-      "MMLU-Pro": 87.2,
-      "GPQA Diamond": 82.5,
-      "MATH-500": 92.4
+    "benchmarks": {},
+    "official_id": "introducing-gpt-5-4",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://openai.com/index/introducing-gpt-5-4/"
+      }
+    ],
+    "release_date_source": "https://openai.com/index/introducing-gpt-5-4/",
+    "parameter_source": "https://openai.com/index/introducing-gpt-5-4/",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
     "id": "model-025",
-    "name": "Sarvam 30B",
+    "name": "Sarvam-30B",
     "date": "2026-03-06",
     "sortDate": "2026-03-06",
     "month": "2026-03",
@@ -947,8 +1582,8 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "GA",
-    "parameters": "30B",
-    "architecture": "Indic Dense Transformer",
+    "parameters": "30B total / 2.4B active (non-embedding)",
+    "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
     "open_weights": true,
@@ -958,16 +1593,49 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "",
+    "note": "Official card distinguishes non-embedding active parameters.",
     "benchmarks": {
+      "MATH-500": 97.0,
+      "HumanEval": 92.1,
+      "MBPP": 92.7,
+      "LiveCodeBench": 70.0,
       "MMLU": 85.1,
-      "MATH-500": 97,
-      "LiveCodeBench": 70
+      "MMLU-Pro": 80.0,
+      "GPQA Diamond": 66.5,
+      "SWE-bench Verified": 34.0,
+      "BrowseComp": 35.5
+    },
+    "official_id": "sarvamai/sarvam-30b",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/sarvamai/sarvam-30b"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/sarvamai/sarvam-30b",
+    "parameter_source": "https://huggingface.co/sarvamai/sarvam-30b",
+    "benchmark_sources": {
+      "MATH-500": "https://huggingface.co/sarvamai/sarvam-30b",
+      "HumanEval": "https://huggingface.co/sarvamai/sarvam-30b",
+      "MBPP": "https://huggingface.co/sarvamai/sarvam-30b",
+      "LiveCodeBench": "https://huggingface.co/sarvamai/sarvam-30b",
+      "MMLU": "https://huggingface.co/sarvamai/sarvam-30b",
+      "MMLU-Pro": "https://huggingface.co/sarvamai/sarvam-30b",
+      "GPQA Diamond": "https://huggingface.co/sarvamai/sarvam-30b",
+      "SWE-bench Verified": "https://huggingface.co/sarvamai/sarvam-30b",
+      "BrowseComp": "https://huggingface.co/sarvamai/sarvam-30b"
+    },
+    "benchmark_note": "수치는 모델 제공자가 공식 모델 카드·기술 보고서·공식 발표문에 직접 명시한 자기 보고 값만 수록했습니다. 원문 설정이 다른 수치는 직접적인 순위 비교에 사용하지 마세요.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
     "id": "model-026",
-    "name": "Sarvam 105B",
+    "name": "Sarvam-105B",
     "date": "2026-03-06",
     "sortDate": "2026-03-06",
     "month": "2026-03",
@@ -977,7 +1645,7 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "GA",
-    "parameters": "105B",
+    "parameters": "105B total / 10.3B active",
     "architecture": "Indic Dense Transformer",
     "modalities": [],
     "focus": [],
@@ -990,9 +1658,40 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMLU": 90.6,
       "MATH-500": 98.6,
-      "LiveCodeBench": 71.7
+      "LiveCodeBench": 71.7,
+      "MMLU": 90.6,
+      "MMLU-Pro": 81.7,
+      "IFEval": 84.8,
+      "GPQA Diamond": 78.7,
+      "SWE-bench Verified": 45.0,
+      "BrowseComp": 49.5
+    },
+    "official_id": "sarvamai/sarvam-105b",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/sarvamai/sarvam-105b"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/sarvamai/sarvam-105b",
+    "parameter_source": "https://huggingface.co/sarvamai/sarvam-105b",
+    "benchmark_sources": {
+      "MATH-500": "https://huggingface.co/sarvamai/sarvam-105b",
+      "LiveCodeBench": "https://huggingface.co/sarvamai/sarvam-105b",
+      "MMLU": "https://huggingface.co/sarvamai/sarvam-105b",
+      "MMLU-Pro": "https://huggingface.co/sarvamai/sarvam-105b",
+      "IFEval": "https://huggingface.co/sarvamai/sarvam-105b",
+      "GPQA Diamond": "https://huggingface.co/sarvamai/sarvam-105b",
+      "SWE-bench Verified": "https://huggingface.co/sarvamai/sarvam-105b",
+      "BrowseComp": "https://huggingface.co/sarvamai/sarvam-105b"
+    },
+    "benchmark_note": "수치는 모델 제공자가 공식 모델 카드·기술 보고서·공식 발표문에 직접 명시한 자기 보고 값만 수록했습니다. 원문 설정이 다른 수치는 직접적인 순위 비교에 사용하지 마세요.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -1007,7 +1706,7 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "GA",
-    "parameters": "120B total / ~12B active",
+    "parameters": "120B total / 12B active (MoE)",
     "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
@@ -1018,17 +1717,39 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "",
+    "note": "Official model title is Nemotron-3-Super-120B-A12B.",
     "benchmarks": {
-      "MMLU": 84.5,
-      "MMLU-Pro": 72.8,
-      "MATH-500": 79,
-      "LiveCodeBench": 72
+      "MMLU-Pro": 83.73,
+      "GPQA Diamond": 79.23,
+      "LiveCodeBench": 81.19,
+      "Terminal-Bench Core 2.0": 31.0
+    },
+    "official_id": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16",
+    "parameter_source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16",
+    "benchmark_sources": {
+      "MMLU-Pro": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16",
+      "GPQA Diamond": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16",
+      "LiveCodeBench": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16",
+      "Terminal-Bench Core 2.0": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16"
+    },
+    "benchmark_note": "수치는 모델 제공자가 공식 모델 카드·기술 보고서·공식 발표문에 직접 명시한 자기 보고 값만 수록했습니다. 원문 설정이 다른 수치는 직접적인 순위 비교에 사용하지 마세요.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
     "id": "model-028",
-    "name": "LongCat-Flash-Omni-2603",
+    "name": "LongCat-Flash-Omni",
     "date": "2026-03-11",
     "sortDate": "2026-03-11",
     "month": "2026-03",
@@ -1038,8 +1759,8 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "~30B (Omni)",
-    "architecture": "Multimodal Omni",
+    "parameters": "560B total / 27B active (MoE)",
+    "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
     "open_weights": true,
@@ -1049,43 +1770,24 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "",
-    "benchmarks": {
-      "MMMU (Multimodal)": 65.4,
-      "MMLU": 84.2,
-      "MATH-500": 86
-    }
-  },
-  {
-    "id": "model-029",
-    "name": "LongCat-Flash-Thinking",
-    "date": "2026-03-12",
-    "sortDate": "2026-03-12",
-    "month": "2026-03",
-    "monthName": "March",
-    "company": "Meituan",
-    "family": "LongCat",
-    "type": "LLM",
-    "category": "Reasoning",
-    "status": "GA",
-    "parameters": "~30B",
-    "architecture": "Thinking / Reasoning LLM (Major Revision)",
-    "modalities": [],
-    "focus": [],
-    "open_weights": true,
-    "license": "",
-    "context": "",
-    "languages": "",
-    "variants": [],
-    "reasoning_effort": [],
-    "availability": "",
-    "note": "major 2026 revision",
-    "benchmarks": {
-      "MMLU-Pro": 82.7,
-      "MATH-500": 96.4,
-      "LiveCodeBench": 76.5,
-      "SWE-bench Verified": 60.4,
-      "HumanEval": 88.4
+    "note": "LongCat-Flash-Omni official card; do not confuse with an unofficial “2603” suffix.",
+    "benchmarks": {},
+    "official_id": "meituan-longcat/LongCat-Flash-Omni",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/meituan-longcat/LongCat-Flash-Omni"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/meituan-longcat/LongCat-Flash-Omni",
+    "parameter_source": "https://huggingface.co/meituan-longcat/LongCat-Flash-Omni",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -1100,7 +1802,7 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
@@ -1111,16 +1813,29 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "Z.ai의 고속 상용 LLM API 모델 (파라미터 비공개)",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1365,
-      "MMLU": 85.4,
-      "LiveCodeBench": 72
+    "note": "",
+    "benchmarks": {},
+    "official_id": "glm-5-turbo",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://docs.z.ai/guides/llm/glm-5-turbo"
+      }
+    ],
+    "release_date_source": "https://docs.z.ai/guides/llm/glm-5-turbo",
+    "parameter_source": "https://docs.z.ai/guides/llm/glm-5-turbo",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
     "id": "model-031",
-    "name": "Mistral Small 4",
+    "name": "Mistral Small 4 119B A6B",
     "date": "2026-03-16",
     "sortDate": "2026-03-16",
     "month": "2026-03",
@@ -1130,8 +1845,8 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "24B",
-    "architecture": "Dense Transformer",
+    "parameters": "119B total / 6.5B active (MoE)",
+    "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [
       "general chat",
@@ -1147,15 +1862,29 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "",
-    "benchmarks": {
-      "MMLU": 83.8,
-      "LiveCodeBench": 75.4
+    "note": "Official model title includes 119B A6B; 6.5B is the activated count.",
+    "benchmarks": {},
+    "official_id": "mistralai/Mistral-Small-4-119B-2603",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/mistralai/Mistral-Small-4-119B-2603"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/mistralai/Mistral-Small-4-119B-2603",
+    "parameter_source": "https://huggingface.co/mistralai/Mistral-Small-4-119B-2603",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
     "id": "model-032",
-    "name": "GPT-5.4 mini",
+    "name": "GPT-5.4 Mini",
     "date": "2026-03-18",
     "sortDate": "2026-03-18",
     "month": "2026-03",
@@ -1165,11 +1894,11 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "",
     "modalities": [],
     "focus": [],
-    "open_weights": null,
+    "open_weights": false,
     "license": "",
     "context": "",
     "languages": "",
@@ -1177,17 +1906,28 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1410,
-      "SWE-bench Verified": 71,
-      "MMLU-Pro": 78,
-      "GPQA Diamond": 68.5,
-      "MATH-500": 82
+    "benchmarks": {},
+    "official_id": "gpt-5.4-mini",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://developers.openai.com/api/docs/models/gpt-5.4-mini"
+      }
+    ],
+    "release_date_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+    "parameter_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
     "id": "model-033",
-    "name": "MiniMax M2.7",
+    "name": "MiniMax-M2.7",
     "date": "2026-03-18",
     "sortDate": "2026-03-18",
     "month": "2026-03",
@@ -1197,11 +1937,11 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
-    "open_weights": false,
+    "open_weights": true,
     "license": "",
     "context": "",
     "languages": "",
@@ -1209,113 +1949,28 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1370,
-      "MMLU": 85.2
-    }
-  },
-  {
-    "id": "model-034",
-    "name": "MiMo-V2-Pro",
-    "date": "2026-03-18",
-    "sortDate": "2026-03-18",
-    "month": "2026-03",
-    "monthName": "March",
-    "company": "Xiaomi",
-    "family": "MiMo",
-    "type": "LLM",
-    "category": "LLM",
-    "status": "GA",
-    "parameters": "",
-    "architecture": "Dense Transformer",
-    "modalities": [],
-    "focus": [],
-    "open_weights": false,
-    "license": "",
-    "context": "",
-    "languages": "",
-    "variants": [],
-    "reasoning_effort": [],
-    "availability": "",
-    "note": "",
-    "benchmarks": {
-      "MMLU": 86.5,
-      "LiveCodeBench": 72.5
-    }
-  },
-  {
-    "id": "model-035",
-    "name": "MiMo-V2-Omni",
-    "date": "2026-03-18",
-    "sortDate": "2026-03-18",
-    "month": "2026-03",
-    "monthName": "March",
-    "company": "Xiaomi",
-    "family": "MiMo",
-    "type": "MLLM",
-    "category": "MLLM",
-    "status": "GA",
-    "parameters": "",
-    "architecture": "Omni Transformer",
-    "modalities": [],
-    "focus": [],
-    "open_weights": false,
-    "license": "",
-    "context": "",
-    "languages": "",
-    "variants": [],
-    "reasoning_effort": [],
-    "availability": "",
-    "note": "",
-    "benchmarks": {
-      "MMMU (Multimodal)": 67.8,
-      "MMLU": 85
-    }
-  },
-  {
-    "id": "model-125",
-    "name": "A.X K1",
-    "date": "2026-03-25",
-    "sortDate": "2026-03-25",
-    "month": "2026-03",
-    "monthName": "March",
-    "company": "SK Telecom",
-    "family": "A.X",
-    "type": "LLM",
-    "category": "General",
-    "status": "GA",
-    "parameters": "~500B (500B-class ultra-large foundation model)",
-    "architecture": "Dense Autoregressive Transformer",
-    "modalities": [
-      "language",
-      "code"
+    "benchmarks": {},
+    "official_id": "MiniMaxAI/MiniMax-M2.7",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.7"
+      }
     ],
-    "focus": [
-      "Sovereign AI",
-      "Korean public administration",
-      "enterprise AX",
-      "agent workflows"
-    ],
-    "open_weights": false,
-    "license": "Proprietary / SKT Enterprise API",
-    "context": "128K",
-    "languages": "Korean, English",
-    "variants": [
-      "K1 500B",
-      "K1 Lite"
-    ],
-    "reasoning_effort": [],
-    "availability": "SKT Enterprise API / Sovereign Cloud",
-    "note": "SK텔레콤(SKT)의 소버린 AI 주력 500B급 초거대 언어 모델. 2026 스타트업 AX 챌린지 및 대국민 공공 행정 AI 에이전트 서비스의 기반 파운데이션 모델.",
-    "benchmarks": {
-      "AIME 2025": 89.8,
-      "KMMLU": 80.2,
-      "LiveCodeBench": 75.8
+    "release_date_source": "https://huggingface.co/MiniMaxAI/MiniMax-M2.7",
+    "parameter_source": "https://huggingface.co/MiniMaxAI/MiniMax-M2.7",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
     "id": "model-036",
-    "name": "Qwen3.5-Omni",
+    "name": "Qwen3.5-Omni-Flash",
     "date": "2026-03-30",
     "sortDate": "2026-03-30",
     "month": "2026-03",
@@ -1325,9 +1980,14 @@ const TIMELINE_DATA = [
     "type": "MLLM / omni",
     "category": "Omni",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개 (공식 기술 보고서: 수백B급)",
     "architecture": "Multimodal Omni MoE",
-    "modalities": [],
+    "modalities": [
+      "text",
+      "image",
+      "audio",
+      "video"
+    ],
     "focus": [],
     "open_weights": false,
     "license": "",
@@ -1336,11 +1996,24 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "Alibaba DashScope 멀티모달 상용 API 프리뷰 (파라미터 비공개)",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1390,
-      "MMLU-Pro": 81,
-      "MMMU (Multimodal)": 73.2
+    "note": "QwenCloud and the technical report identify the product, but do not disclose an exact count.",
+    "benchmarks": {},
+    "official_id": "qwen3.5-omni-flash",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://www.qwencloud.com/models/qwen3.5-omni-flash"
+      }
+    ],
+    "release_date_source": "https://www.qwencloud.com/models/qwen3.5-omni-flash",
+    "parameter_source": "https://www.qwencloud.com/models/qwen3.5-omni-flash",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -1355,7 +2028,7 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "Vision-Language MoE",
     "modalities": [],
     "focus": [],
@@ -1366,11 +2039,24 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "Z.ai의 고속 비전-언어 상용 API 모델 (파라미터 비공개)",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1370,
-      "MMLU": 85,
-      "MMMU (Multimodal)": 71.5
+    "note": "",
+    "benchmarks": {},
+    "official_id": "glm-5v-turbo",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://docs.z.ai/guides/vlm/glm-5v-turbo"
+      }
+    ],
+    "release_date_source": "https://docs.z.ai/guides/vlm/glm-5v-turbo",
+    "parameter_source": "https://docs.z.ai/guides/vlm/glm-5v-turbo",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -1385,7 +2071,7 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
@@ -1396,12 +2082,24 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "Alibaba DashScope 상용 API 모델 (파라미터 비공개)",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1415,
-      "MMLU-Pro": 85,
-      "SWE-bench Verified": 76.5,
-      "LiveCodeBench": 82
+    "note": "",
+    "benchmarks": {},
+    "official_id": "qwen3.6-plus",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://www.qwencloud.com/models/qwen3.6-plus"
+      }
+    ],
+    "release_date_source": "https://www.qwencloud.com/models/qwen3.6-plus",
+    "parameter_source": "https://www.qwencloud.com/models/qwen3.6-plus",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -1416,7 +2114,7 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "GA",
-    "parameters": "744B total / ~40B active (MoE)",
+    "parameters": "정확한 수치 미공개 (공식 카드에는 754B model size만 표기; 총/활성 파라미터 미공개)",
     "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
@@ -1427,13 +2125,38 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "",
+    "note": "공식 카드의 model size를 총 파라미터 수로 간주하지 않습니다.",
     "benchmarks": {
-      "Chatbot Arena ELO": 1395,
-      "MMLU-Pro": 81.2,
-      "LiveCodeBench": 80.5,
-      "SWE-bench Verified": 68.9,
-      "SWE-bench Pro": 48.5
+      "SWE-bench Pro": 58.4,
+      "NL2Repo": 42.7,
+      "Terminal-Bench 2.0": 63.5,
+      "BrowseComp": 68.0,
+      "GPQA Diamond": 86.2,
+      "AIME 2025": 95.3
+    },
+    "official_id": "zai-org/GLM-5.1",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/zai-org/GLM-5.1"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/zai-org/GLM-5.1",
+    "parameter_source": "https://huggingface.co/zai-org/GLM-5.1",
+    "benchmark_sources": {
+      "SWE-bench Pro": "https://huggingface.co/zai-org/GLM-5.1",
+      "NL2Repo": "https://huggingface.co/zai-org/GLM-5.1",
+      "Terminal-Bench 2.0": "https://huggingface.co/zai-org/GLM-5.1",
+      "BrowseComp": "https://huggingface.co/zai-org/GLM-5.1",
+      "GPQA Diamond": "https://huggingface.co/zai-org/GLM-5.1",
+      "AIME 2025": "https://huggingface.co/zai-org/GLM-5.1"
+    },
+    "benchmark_note": "GLM-5.1 공식 카드 수치이며, active parameter 미공개 사실을 유지했습니다.",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -1448,11 +2171,11 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "",
     "modalities": [],
     "focus": [],
-    "open_weights": null,
+    "open_weights": false,
     "license": "",
     "context": "",
     "languages": "",
@@ -1460,9 +2183,23 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1450,
-      "AA Intelligence Index": 50
+    "benchmarks": {},
+    "official_id": "introducing-muse-spark-msl",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://ai.meta.com/blog/introducing-muse-spark-msl/"
+      }
+    ],
+    "release_date_source": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+    "parameter_source": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -1477,12 +2214,11 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "Multimodal",
     "status": "GA",
-    "parameters": "32B (Unified Vision-Language)",
-    "architecture": "Unified Vision-Language Transformer (Proprietary Vision Encoder + LLM)",
+    "parameters": "33B total / 33B active (31.7B language + 1.29B vision)",
+    "architecture": "Unified vision-language model",
     "modalities": [
-      "language",
-      "vision",
-      "document understanding"
+      "text",
+      "image"
     ],
     "focus": [
       "Document understanding",
@@ -1498,10 +2234,24 @@ const TIMELINE_DATA = [
     ],
     "reasoning_effort": [],
     "availability": "Open Weights (Hugging Face)",
-    "note": "LG AI연구원 최초의 오픈웨이트 비전-언어 파운데이션 모델(VLM). 독자 개발 비전 인코더와 LLM을 결합하여 고난도 도표/문서 이해 및 과학 추론에 탁월.",
-    "benchmarks": {
-      "MMMU (Multimodal)": 70.8,
-      "MMLU": 82.4
+    "note": "Official model card and LG AI Research materials call this model EXAONE 4.5; the 33B designation is retained in the official model ID and parameter specification.",
+    "benchmarks": {},
+    "official_id": "LGAI-EXAONE/EXAONE-4.5-33B",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B",
+    "parameter_source": "https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -1521,18 +2271,46 @@ const TIMELINE_DATA = [
     "modalities": [],
     "focus": [],
     "open_weights": true,
-    "license": "",
-    "context": "",
+    "license": "Apache 2.0",
+    "context": "262,144",
     "languages": "",
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1355,
-      "GPQA Diamond": 81,
-      "MMLU-Pro": 77.2,
-      "LiveCodeBench": 74
+      "SWE-bench Verified": 73.4,
+      "SWE-bench Multilingual": 67.2,
+      "SWE-bench Pro": 49.5,
+      "Terminal-Bench 2.0": 51.5,
+      "NL2Repo": 29.4
+    },
+    "official_id": "Qwen/Qwen3.6-35B-A3B",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B"
+      },
+      {
+        "label": "공식 출시 발표",
+        "url": "https://qwen.ai/blog?id=qwen3.6-35b-a3b"
+      }
+    ],
+    "release_date_source": "https://qwen.ai/blog?id=qwen3.6-35b-a3b",
+    "parameter_source": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B",
+    "benchmark_sources": {
+      "SWE-bench Verified": "https://qwen.ai/blog?id=qwen3.6-35b-a3b",
+      "SWE-bench Multilingual": "https://qwen.ai/blog?id=qwen3.6-35b-a3b",
+      "SWE-bench Pro": "https://qwen.ai/blog?id=qwen3.6-35b-a3b",
+      "Terminal-Bench 2.0": "https://qwen.ai/blog?id=qwen3.6-35b-a3b",
+      "NL2Repo": "https://qwen.ai/blog?id=qwen3.6-35b-a3b"
+    },
+    "benchmark_note": "Qwen 공식 발표 표 수치입니다.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -1547,11 +2325,11 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "",
     "modalities": [],
     "focus": [],
-    "open_weights": null,
+    "open_weights": false,
     "license": "",
     "context": "",
     "languages": "",
@@ -1559,17 +2337,28 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1502,
-      "SWE-bench Verified": 74.5,
-      "GPQA Diamond": 81.2,
-      "MMLU-Pro": 86.4,
-      "MMMU (Multimodal)": 75.1
+    "benchmarks": {},
+    "official_id": "Claude%20Opus%204.7%20System%20Card.pdf",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf"
+      }
+    ],
+    "release_date_source": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf",
+    "parameter_source": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
     "id": "model-043",
-    "name": "Qwen3.6-Max Preview",
+    "name": "Qwen3.6-Max-Preview",
     "date": "2026-04-20",
     "sortDate": "2026-04-20",
     "month": "2026-04",
@@ -1579,7 +2368,7 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "Preview",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
@@ -1590,12 +2379,28 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "Alibaba DashScope 플래그십 상용 API 프리뷰 모델 (파라미터 비공개)",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1425,
-      "MMLU-Pro": 86.5,
-      "SWE-bench Pro": 58,
-      "GPQA Diamond": 89.5
+    "note": "",
+    "benchmarks": {},
+    "official_id": "qwen3.6-max-preview",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://www.qwencloud.com/models/qwen3.6-max-preview"
+      },
+      {
+        "label": "공식 출시 발표",
+        "url": "https://qwen.ai/blog?id=qwen3.6-max-preview"
+      }
+    ],
+    "release_date_source": "https://qwen.ai/blog?id=qwen3.6-max-preview",
+    "parameter_source": "https://www.qwencloud.com/models/qwen3.6-max-preview",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -1610,38 +2415,7 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "~1T MoE",
-    "architecture": "Multimodal MoE",
-    "modalities": [],
-    "focus": [],
-    "open_weights": false,
-    "license": "",
-    "context": "",
-    "languages": "",
-    "variants": [],
-    "reasoning_effort": [],
-    "availability": "",
-    "note": "",
-    "benchmarks": {
-      "SWE-bench Verified": 80.2,
-      "SWE-bench Pro": 58.6,
-      "AIME 2025": 96.4,
-      "MMMU (Multimodal)": 71.2
-    }
-  },
-  {
-    "id": "model-045",
-    "name": "LongCat-2.0 Preview",
-    "date": "2026-04-20",
-    "sortDate": "2026-04-20",
-    "month": "2026-04",
-    "monthName": "April",
-    "company": "Meituan",
-    "family": "LongCat",
-    "type": "LLM",
-    "category": "LLM",
-    "status": "Preview",
-    "parameters": "~1.6T total / ~48B active",
+    "parameters": "1T total / 32B active (MoE)",
     "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
@@ -1654,9 +2428,40 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "SWE-bench Pro": 54.2,
-      "Terminal-Bench 2.1": 64.5,
-      "SWE-bench Verified": 68.5
+      "SWE-bench Verified": 80.2,
+      "SWE-bench Multilingual": 76.7,
+      "SWE-bench Pro": 58.6,
+      "Terminal-Bench 2.0": 66.7,
+      "LiveCodeBench v6": 89.6,
+      "AIME 2026": 96.4,
+      "GPQA Diamond": 90.5,
+      "MMMU-Pro": 79.4
+    },
+    "official_id": "moonshotai/Kimi-K2.6",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/moonshotai/Kimi-K2.6"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/moonshotai/Kimi-K2.6",
+    "parameter_source": "https://huggingface.co/moonshotai/Kimi-K2.6",
+    "benchmark_sources": {
+      "SWE-bench Verified": "https://huggingface.co/moonshotai/Kimi-K2.6",
+      "SWE-bench Multilingual": "https://huggingface.co/moonshotai/Kimi-K2.6",
+      "SWE-bench Pro": "https://huggingface.co/moonshotai/Kimi-K2.6",
+      "Terminal-Bench 2.0": "https://huggingface.co/moonshotai/Kimi-K2.6",
+      "LiveCodeBench v6": "https://huggingface.co/moonshotai/Kimi-K2.6",
+      "AIME 2026": "https://huggingface.co/moonshotai/Kimi-K2.6",
+      "GPQA Diamond": "https://huggingface.co/moonshotai/Kimi-K2.6",
+      "MMMU-Pro": "https://huggingface.co/moonshotai/Kimi-K2.6"
+    },
+    "benchmark_note": "Kimi K2.6 공식 모델 카드 수치입니다.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -1671,24 +2476,51 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "27B (Dense)",
+    "parameters": "27B dense",
     "architecture": "Dense Transformer",
     "modalities": [],
     "focus": [],
     "open_weights": true,
-    "license": "",
-    "context": "",
+    "license": "Apache 2.0",
+    "context": "262,144",
     "languages": "",
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1365,
-      "GPQA Diamond": 87,
       "SWE-bench Pro": 53.5,
-      "MMLU-Pro": 79.5,
-      "LiveCodeBench": 78.5
+      "SWE-bench Multilingual": 71.3,
+      "Terminal-Bench 2.0": 59.3,
+      "NL2Repo": 36.2,
+      "MMLU-Pro": 86.2
+    },
+    "official_id": "Qwen/Qwen3.6-27B",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/Qwen/Qwen3.6-27B"
+      },
+      {
+        "label": "공식 출시 발표",
+        "url": "https://qwen.ai/blog?id=qwen3.6-27b"
+      }
+    ],
+    "release_date_source": "https://qwen.ai/blog?id=qwen3.6-27b",
+    "parameter_source": "https://huggingface.co/Qwen/Qwen3.6-27B",
+    "benchmark_sources": {
+      "SWE-bench Pro": "https://qwen.ai/blog?id=qwen3.6-27b",
+      "SWE-bench Multilingual": "https://qwen.ai/blog?id=qwen3.6-27b",
+      "Terminal-Bench 2.0": "https://qwen.ai/blog?id=qwen3.6-27b",
+      "NL2Repo": "https://qwen.ai/blog?id=qwen3.6-27b",
+      "MMLU-Pro": "https://qwen.ai/blog?id=qwen3.6-27b"
+    },
+    "benchmark_note": "Qwen 공식 발표 표 수치입니다.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -1703,11 +2535,11 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
-    "architecture": "Dense Transformer",
+    "parameters": "310B total / 15B active (MoE)",
+    "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
-    "open_weights": false,
+    "open_weights": true,
     "license": "",
     "context": "",
     "languages": "",
@@ -1715,9 +2547,23 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1375,
-      "MMLU": 89.4
+    "benchmarks": {},
+    "official_id": "XiaomiMiMo/MiMo-V2.5",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5",
+    "parameter_source": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -1732,11 +2578,11 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
-    "architecture": "Dense Transformer",
+    "parameters": "1.02T total / 42B active (MoE)",
+    "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
-    "open_weights": false,
+    "open_weights": true,
     "license": "",
     "context": "",
     "languages": "",
@@ -1745,9 +2591,32 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1405,
-      "MMLU": 90.2,
-      "SWE-bench Pro": 56.8
+      "MMLU-Pro": 68.5,
+      "GPQA Diamond": 66.7,
+      "AIME 2025": 37.3,
+      "SWE-bench AgentLess": 35.7
+    },
+    "official_id": "XiaomiMiMo/MiMo-V2.5-Pro",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5-Pro"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5-Pro",
+    "parameter_source": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5-Pro",
+    "benchmark_sources": {
+      "MMLU-Pro": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5-Pro",
+      "GPQA Diamond": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5-Pro",
+      "AIME 2025": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5-Pro",
+      "SWE-bench AgentLess": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5-Pro"
+    },
+    "benchmark_note": "MiMo-V2.5-Pro 공식 모델 카드 수치입니다.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -1762,11 +2631,11 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "",
     "modalities": [],
     "focus": [],
-    "open_weights": null,
+    "open_weights": false,
     "license": "",
     "context": "",
     "languages": "",
@@ -1775,11 +2644,34 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1500,
-      "SWE-bench Verified": 85,
-      "MMLU-Pro": 88,
-      "GPQA Diamond": 84,
-      "MATH-500": 93.5
+      "SWE-bench Pro": 58.6,
+      "Terminal-Bench 2.0": 82.7,
+      "OSWorld-Verified": 78.7,
+      "BrowseComp": 84.4,
+      "CyberGym": 81.8
+    },
+    "official_id": "introducing-gpt-5-5",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://openai.com/index/introducing-gpt-5-5/"
+      }
+    ],
+    "release_date_source": "https://openai.com/index/introducing-gpt-5-5/",
+    "parameter_source": "https://openai.com/index/introducing-gpt-5-5/",
+    "benchmark_sources": {
+      "SWE-bench Pro": "https://openai.com/index/introducing-gpt-5-5/",
+      "Terminal-Bench 2.0": "https://openai.com/index/introducing-gpt-5-5/",
+      "OSWorld-Verified": "https://openai.com/index/introducing-gpt-5-5/",
+      "BrowseComp": "https://openai.com/index/introducing-gpt-5-5/",
+      "CyberGym": "https://openai.com/index/introducing-gpt-5-5/"
+    },
+    "benchmark_note": "OpenAI GPT-5.5 공식 발표의 자기 보고/공식 평가 표 수치입니다.",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -1794,11 +2686,11 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "",
     "modalities": [],
     "focus": [],
-    "open_weights": null,
+    "open_weights": false,
     "license": "",
     "context": "",
     "languages": "",
@@ -1807,16 +2699,33 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1520,
-      "SWE-bench Verified": 88.7,
-      "MMLU-Pro": 90.2,
-      "GPQA Diamond": 87.5,
-      "MATH-500": 95.8
+      "BrowseComp": 90.1,
+      "GDPval": 82.3
+    },
+    "official_id": "introducing-gpt-5-5",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://openai.com/index/introducing-gpt-5-5/"
+      }
+    ],
+    "release_date_source": "https://openai.com/index/introducing-gpt-5-5/",
+    "parameter_source": "https://openai.com/index/introducing-gpt-5-5/",
+    "benchmark_sources": {
+      "BrowseComp": "https://openai.com/index/introducing-gpt-5-5/",
+      "GDPval": "https://openai.com/index/introducing-gpt-5-5/"
+    },
+    "benchmark_note": "GPT-5.5 Pro 공식 발표에서 명시한 수치입니다.",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
     "id": "model-051",
-    "name": "DeepSeek-V4",
+    "name": "DeepSeek-V4 Preview",
     "date": "2026-04-24",
     "sortDate": "2026-04-24",
     "month": "2026-04",
@@ -1826,30 +2735,40 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "GA",
-    "parameters": "~1T total / ~37B active (MoE)",
-    "architecture": "MLA + Sparse MoE",
+    "parameters": "Pro 1.6T / 49B active; Flash 284B / 13B active (preview family)",
+    "architecture": "Sparse MoE family",
     "modalities": [],
     "focus": [],
-    "open_weights": true,
+    "open_weights": false,
     "license": "",
     "context": "",
     "languages": "",
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1330,
-      "MMLU-Pro": 81.5,
-      "GPQA Diamond": 85,
-      "MATH-500": 90.2,
-      "SWE-bench Verified": 72,
-      "LiveCodeBench": 88.5
+    "note": "A family announcement, not an additional third checkpoint; the two published sizes are listed explicitly.",
+    "benchmarks": {},
+    "official_id": "v4-preview",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://deepseek.com/en/news/v4-preview/"
+      }
+    ],
+    "release_date_source": "https://deepseek.com/en/news/v4-preview/",
+    "parameter_source": "https://deepseek.com/en/news/v4-preview/",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
     "id": "model-052",
-    "name": "DeepSeek-V4-Flash-Preview",
+    "name": "DeepSeek-V4-Flash",
     "date": "2026-04-24",
     "sortDate": "2026-04-24",
     "month": "2026-04",
@@ -1859,7 +2778,7 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "Preview",
-    "parameters": "~27B / ~3B active (MoE)",
+    "parameters": "284B total / 13B active (MoE)",
     "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
@@ -1872,16 +2791,35 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1290,
-      "MMLU-Pro": 76,
-      "GPQA Diamond": 79.5,
-      "SWE-bench Verified": 63.5,
-      "LiveCodeBench": 81
+      "MMLU-Pro": 68.3
+    },
+    "official_id": "deepseek-ai/DeepSeek-V4-Flash",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash"
+      },
+      {
+        "label": "공식 출시 발표",
+        "url": "https://deepseek.com/en/news/v4-preview/"
+      }
+    ],
+    "release_date_source": "https://deepseek.com/en/news/v4-preview/",
+    "parameter_source": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+    "benchmark_sources": {
+      "MMLU-Pro": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash"
+    },
+    "benchmark_note": "DeepSeek-V4 기술 보고서의 Flash preview base 열 수치입니다.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
     "id": "model-053",
-    "name": "DeepSeek-V4-Pro-Preview",
+    "name": "DeepSeek-V4-Pro",
     "date": "2026-04-24",
     "sortDate": "2026-04-24",
     "month": "2026-04",
@@ -1891,8 +2829,8 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "Preview",
-    "parameters": "~1T total / ~37B active (MoE)",
-    "architecture": "MLA + Sparse MoE",
+    "parameters": "1.6T total / 49B active (MoE)",
+    "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
     "open_weights": true,
@@ -1904,16 +2842,35 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1360,
-      "MMLU-Pro": 84,
-      "GPQA Diamond": 87.2,
-      "SWE-bench Verified": 78.5,
-      "LiveCodeBench": 90.2
+      "MMLU-Pro": 73.5
+    },
+    "official_id": "deepseek-ai/DeepSeek-V4-Pro",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
+      },
+      {
+        "label": "공식 출시 발표",
+        "url": "https://deepseek.com/en/news/v4-preview/"
+      }
+    ],
+    "release_date_source": "https://deepseek.com/en/news/v4-preview/",
+    "parameter_source": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+    "benchmark_sources": {
+      "MMLU-Pro": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
+    },
+    "benchmark_note": "DeepSeek-V4 기술 보고서의 Pro preview base 열 수치입니다.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
     "id": "model-054",
-    "name": "Hy3 Preview",
+    "name": "Hy3-preview",
     "date": "2026-04-24",
     "sortDate": "2026-04-24",
     "month": "2026-04",
@@ -1923,7 +2880,7 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "Preview",
-    "parameters": "295B total / 21B active (MoE)",
+    "parameters": "295B total / 21B active + 3.8B MTP (MoE)",
     "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
@@ -1934,11 +2891,24 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "Open Weights (Hugging Face / GitHub)",
-    "note": "텐센트 Hunyuan 3 오픈웨이트 프리뷰. Apache 2.0 라이선스로 295B/21B 활성 MoE 가중치 공개.",
-    "benchmarks": {
-      "MMLU": 84.2,
-      "MATH-500": 78.5,
-      "LiveCodeBench": 71
+    "note": "MTP is reported separately from the 295B backbone.",
+    "benchmarks": {},
+    "official_id": "tencent/Hy3-preview",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/tencent/Hy3-preview"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/tencent/Hy3-preview",
+    "parameter_source": "https://huggingface.co/tencent/Hy3-preview",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -1953,21 +2923,45 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "GA",
-    "parameters": "~225B / ~23B active",
-    "architecture": "Code MoE",
+    "parameters": "225B total / 23B active (MoE)",
+    "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
-    "open_weights": false,
+    "open_weights": true,
     "license": "",
     "context": "",
     "languages": "",
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "",
+    "note": "Official model card reports 225B total / 23B activated.",
     "benchmarks": {
-      "SWE-bench Verified": 64.5,
-      "Terminal-Bench 2.1": 58.2
+      "SWE-bench Verified": 74.6,
+      "SWE-bench Multilingual": 63.1,
+      "SWE-bench Pro": 49.2,
+      "Terminal-Bench 2.0": 45.8
+    },
+    "official_id": "poolside/Laguna-M.1",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/poolside/Laguna-M.1"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/poolside/Laguna-M.1",
+    "parameter_source": "https://huggingface.co/poolside/Laguna-M.1",
+    "benchmark_sources": {
+      "SWE-bench Verified": "https://huggingface.co/poolside/Laguna-M.1",
+      "SWE-bench Multilingual": "https://huggingface.co/poolside/Laguna-M.1",
+      "SWE-bench Pro": "https://huggingface.co/poolside/Laguna-M.1",
+      "Terminal-Bench 2.0": "https://huggingface.co/poolside/Laguna-M.1"
+    },
+    "benchmark_note": "Poolside 공식 모델 카드 자기 평가(동일 harness/조건) 수치입니다.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -1982,37 +2976,8 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "GA",
-    "parameters": "~33B / ~3B active",
-    "architecture": "Code MoE",
-    "modalities": [],
-    "focus": [],
-    "open_weights": false,
-    "license": "",
-    "context": "",
-    "languages": "",
-    "variants": [],
-    "reasoning_effort": [],
-    "availability": "",
-    "note": "",
-    "benchmarks": {
-      "SWE-bench Verified": 58.2,
-      "Terminal-Bench 2.1": 51
-    }
-  },
-  {
-    "id": "model-057",
-    "name": "Nemotron 3 Nano Omni",
-    "date": "2026-04-28",
-    "sortDate": "2026-04-28",
-    "month": "2026-04",
-    "monthName": "April",
-    "company": "NVIDIA",
-    "family": "Nemotron",
-    "type": "MLLM",
-    "category": "MLLM",
-    "status": "GA",
-    "parameters": "~8B",
-    "architecture": "Edge Omni Transformer",
+    "parameters": "33B total / 3B active (MoE)",
+    "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
     "open_weights": true,
@@ -2024,13 +2989,80 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMMU (Multimodal)": 64.2,
-      "MMLU": 76.8
+      "SWE-bench Verified": 69.9,
+      "SWE-bench Multilingual": 57.7,
+      "SWE-bench Pro": 46.3,
+      "Terminal-Bench 2.0": 35.7
+    },
+    "official_id": "poolside/Laguna-XS.2",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/poolside/Laguna-XS.2"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/poolside/Laguna-XS.2",
+    "parameter_source": "https://huggingface.co/poolside/Laguna-XS.2",
+    "benchmark_sources": {
+      "SWE-bench Verified": "https://huggingface.co/poolside/Laguna-XS.2",
+      "SWE-bench Multilingual": "https://huggingface.co/poolside/Laguna-XS.2",
+      "SWE-bench Pro": "https://huggingface.co/poolside/Laguna-XS.2",
+      "Terminal-Bench 2.0": "https://huggingface.co/poolside/Laguna-XS.2"
+    },
+    "benchmark_note": "Poolside 공식 모델 카드 자기 평가(동일 harness/조건) 수치입니다.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-057",
+    "name": "Nemotron-3-Nano-Omni-30B-A3B-Reasoning",
+    "date": "2026-04-28",
+    "sortDate": "2026-04-28",
+    "month": "2026-04",
+    "monthName": "April",
+    "company": "NVIDIA",
+    "family": "Nemotron",
+    "type": "MLLM",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "31B backbone / ~3B active (30B-A3B model class)",
+    "architecture": "Sparse MoE",
+    "modalities": [],
+    "focus": [],
+    "open_weights": true,
+    "license": "",
+    "context": "",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "",
+    "note": "The official checkpoint title says 30B-A3B; the card’s backbone metadata is about 31B.",
+    "benchmarks": {},
+    "official_id": "nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-FP8",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-FP8"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-FP8",
+    "parameter_source": "https://huggingface.co/nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-FP8",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "publisher-approximate",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
     "id": "model-058",
-    "name": "Granite 4.1 family",
+    "name": "Granite 4.1",
     "date": "2026-04-29",
     "sortDate": "2026-04-29",
     "month": "2026-04",
@@ -2040,7 +3072,7 @@ const TIMELINE_DATA = [
     "type": "LLM + MLLM family",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "1B, 3B, 8B, 34B (Language) & 3B, 8B (Vision)",
+    "parameters": "Language: 3B, 8B, 30B dense; Vision: 4B (3.4B LLM + 0.6B vision encoder/projectors)",
     "architecture": "Mamba2 + Transformer Hybrid",
     "modalities": [],
     "focus": [],
@@ -2051,11 +3083,32 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "speech / embedding / Guardian-only members excluded here",
-    "benchmarks": {
-      "MMLU-Pro": 71.5,
-      "GPQA": 58.2,
-      "SWE-bench Verified": 42.1
+    "note": "Family row intentionally lists the official language and vision sizes instead of inventing one size.",
+    "benchmarks": {},
+    "official_id": "ibm-granite/granite-4.1-30b",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/ibm-granite/granite-4.1-30b"
+      },
+      {
+        "label": "공식 비전 모델 카드",
+        "url": "https://huggingface.co/ibm-granite/granite-vision-4.1-4b"
+      },
+      {
+        "label": "공식 모델 컬렉션",
+        "url": "https://huggingface.co/collections/ibm-granite/granite-41-language-models"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/ibm-granite/granite-4.1-30b",
+    "parameter_source": "https://huggingface.co/collections/ibm-granite/granite-41-language-models",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -2070,19 +3123,36 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "GA",
-    "parameters": "1B, 3B, 8B, 34B",
+    "parameters": "3B, 8B, 30B dense language variants",
     "architecture": "Mamba2 + Transformer Hybrid",
     "open_weights": true,
-    "note": "IBM 차세대 엔터프라이즈 오픈 파운데이션 모델",
-    "benchmarks": {
-      "MMLU-Pro": 71.5,
-      "GPQA": 58.2,
-      "SWE-bench Verified": 42.1
+    "note": "",
+    "benchmarks": {},
+    "official_id": "ibm-granite/granite-4.1-30b",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/ibm-granite/granite-4.1-30b"
+      },
+      {
+        "label": "공식 모델 컬렉션",
+        "url": "https://huggingface.co/collections/ibm-granite/granite-41-language-models"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/ibm-granite/granite-4.1-30b",
+    "parameter_source": "https://huggingface.co/collections/ibm-granite/granite-41-language-models",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
     "id": "model-var-08",
-    "name": "Granite 4.1 Vision",
+    "name": "Granite-Vision-4.1-4B",
     "date": "2026-04-29",
     "sortDate": "2026-04-29",
     "month": "2026-04",
@@ -2092,13 +3162,27 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "3B, 8B",
-    "architecture": "Vision-Language Multimodal Transformer",
+    "parameters": "4B total (3.4B LLM + 0.6B vision encoder/projectors)",
+    "architecture": "Vision-language model",
     "open_weights": true,
-    "note": "IBM Granite 시각-언어 멀티모달 오픈 모델",
-    "benchmarks": {
-      "MMMU (Multimodal)": 58.4,
-      "MMLU": 68.2
+    "note": "",
+    "benchmarks": {},
+    "official_id": "ibm-granite/granite-vision-4.1-4b",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/ibm-granite/granite-vision-4.1-4b"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/ibm-granite/granite-vision-4.1-4b",
+    "parameter_source": "https://huggingface.co/ibm-granite/granite-vision-4.1-4b",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -2113,7 +3197,7 @@ const TIMELINE_DATA = [
     "type": "LLM / agentic foundation model",
     "category": "LLM",
     "status": "GA",
-    "parameters": "~1.2T",
+    "parameters": "정확한 수치 미공개 (공식 발표는 5.0 대비 상대 규모만 제시)",
     "architecture": "Agentic Foundation Model",
     "modalities": [],
     "focus": [],
@@ -2124,51 +3208,24 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "Reduced model size relative to ERNIE 5.0 Improved reasoning and agent capabilities",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1485,
-      "MMLU": 88.2,
-      "MMMU (Multimodal)": 72.5
-    }
-  },
-  {
-    "id": "model-127",
-    "name": "A.X Telco LLM",
-    "date": "2026-05-14",
-    "sortDate": "2026-05-14",
-    "month": "2026-05",
-    "monthName": "May",
-    "company": "SK Telecom",
-    "family": "A.X",
-    "type": "LLM",
-    "category": "Reasoning",
-    "status": "GA",
-    "parameters": "70B",
-    "architecture": "Domain-Adapted Autoregressive Transformer",
-    "modalities": [
-      "language",
-      "code"
+    "note": "Relative size language is not converted into an invented absolute parameter count.",
+    "benchmarks": {},
+    "official_id": "ernie-5.1-0508-release",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://ernie.baidu.com/blog/posts/ernie-5.1-0508-release/"
+      }
     ],
-    "focus": [
-      "Global Telco AI Alliance",
-      "telecom customer operations",
-      "network diagnosis",
-      "multilingual agent"
-    ],
-    "open_weights": false,
-    "license": "Proprietary / Global Telco AI Alliance",
-    "context": "128K",
-    "languages": "Korean, English, Japanese, Arabic, German",
-    "variants": [
-      "70B Telco"
-    ],
-    "reasoning_effort": [],
-    "availability": "GTAA Alliance Cloud / SKT Enterprise",
-    "note": "글로벌 텔코 AI 얼라이언스(GTAA)와 협력하여 통신 도메인 지식, 고객 상담 및 네트워크 인프라 진단에 특화 개발된 통신 전용 70B 모델.",
-    "benchmarks": {
-      "TelBench": 87.2,
-      "TelAgentBench": 81.5,
-      "LiveCodeBench": 68.4
+    "release_date_source": "https://ernie.baidu.com/blog/posts/ernie-5.1-0508-release/",
+    "parameter_source": "https://ernie.baidu.com/blog/posts/ernie-5.1-0508-release/",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -2183,7 +3240,7 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "",
     "modalities": [],
     "focus": [
@@ -2191,7 +3248,7 @@ const TIMELINE_DATA = [
       "coding",
       "multimodal reasoning"
     ],
-    "open_weights": null,
+    "open_weights": false,
     "license": "",
     "context": "",
     "languages": "",
@@ -2199,10 +3256,23 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1475,
-      "MMMU (Multimodal)": 76.5,
-      "SWE-bench Verified": 78.2
+    "benchmarks": {},
+    "official_id": "gemini-3-5-flash",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/"
+      }
+    ],
+    "release_date_source": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+    "parameter_source": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -2217,7 +3287,7 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
@@ -2228,12 +3298,24 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "Alibaba DashScope 플래그십 상용 API 모델 (파라미터 비공개)",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1435,
-      "MMLU-Pro": 87.5,
-      "SWE-bench Pro": 61.5,
-      "GPQA Diamond": 90.8
+    "note": "",
+    "benchmarks": {},
+    "official_id": "qwen3.7-max",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://www.qwencloud.com/models/qwen3.7-max"
+      }
+    ],
+    "release_date_source": "https://www.qwencloud.com/models/qwen3.7-max",
+    "parameter_source": "https://www.qwencloud.com/models/qwen3.7-max",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -2248,29 +3330,42 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "GA",
-    "parameters": "",
-    "architecture": "",
+    "parameters": "218B total / 25B active (MoE)",
+    "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [
       "sovereign / agentic enterprise AI"
     ],
-    "open_weights": null,
+    "open_weights": true,
     "license": "",
     "context": "",
     "languages": "",
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1390,
-      "MMLU": 85.2,
-      "AA Intelligence Index": 64
+    "note": "Official model card reports 218B total and 25B active.",
+    "benchmarks": {},
+    "official_id": "CohereLabs/command-a-plus-05-2026-bf16",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/CohereLabs/command-a-plus-05-2026-bf16"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/CohereLabs/command-a-plus-05-2026-bf16",
+    "parameter_source": "https://huggingface.co/CohereLabs/command-a-plus-05-2026-bf16",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
     "id": "model-063",
-    "name": "Mistral Medium 3.5",
+    "name": "Mistral Medium 3.5 128B",
     "date": "2026-05-22",
     "sortDate": "2026-05-22",
     "month": "2026-05",
@@ -2280,7 +3375,7 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "128B dense",
     "architecture": "Dense Transformer",
     "modalities": [],
     "focus": [
@@ -2288,18 +3383,37 @@ const TIMELINE_DATA = [
       "coding",
       "knowledge work"
     ],
-    "open_weights": false,
+    "open_weights": true,
     "license": "",
     "context": "",
     "languages": "",
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "Mistral AI의 상용 API 전용 모델 (파라미터 비공개)",
+    "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1385,
       "SWE-bench Verified": 77.6,
-      "MMLU-Pro": 80.5
+      "τ³-Telecom": 91.4
+    },
+    "official_id": "mistralai/Mistral-Medium-3.5-128B",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B",
+    "parameter_source": "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B",
+    "benchmark_sources": {
+      "SWE-bench Verified": "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B",
+      "τ³-Telecom": "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B"
+    },
+    "benchmark_note": "Mistral 공식 모델 카드의 제공자 측 평가 수치입니다.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -2314,40 +3428,8 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "",
-    "modalities": [],
-    "focus": [],
-    "open_weights": null,
-    "license": "",
-    "context": "",
-    "languages": "",
-    "variants": [],
-    "reasoning_effort": [],
-    "availability": "",
-    "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1512,
-      "SWE-bench Verified": 88.6,
-      "GPQA Diamond": 84.5,
-      "MMLU-Pro": 88.2,
-      "MMMU (Multimodal)": 77.4
-    }
-  },
-  {
-    "id": "model-065",
-    "name": "MiniMax M3",
-    "date": "2026-06-01",
-    "sortDate": "2026-06-01",
-    "month": "2026-06",
-    "monthName": "June",
-    "company": "MiniMax",
-    "family": "MiniMax M",
-    "type": "MLLM",
-    "category": "MLLM",
-    "status": "GA",
-    "parameters": "",
-    "architecture": "Multimodal MoE",
     "modalities": [],
     "focus": [],
     "open_weights": false,
@@ -2358,11 +3440,66 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1395,
-      "MMLU-Pro": 84.2,
-      "SWE-bench Pro": 59,
-      "MMMU (Multimodal)": 70.4
+    "benchmarks": {},
+    "official_id": "0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf"
+      }
+    ],
+    "release_date_source": "https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf",
+    "parameter_source": "https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-065",
+    "name": "MiniMax-M3",
+    "date": "2026-06-01",
+    "sortDate": "2026-06-01",
+    "month": "2026-06",
+    "monthName": "June",
+    "company": "MiniMax",
+    "family": "MiniMax M",
+    "type": "MLLM",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "428B total / ~23B active (MoE)",
+    "architecture": "Sparse MoE",
+    "modalities": [],
+    "focus": [],
+    "open_weights": true,
+    "license": "",
+    "context": "",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "",
+    "note": "Official model card uses approximately 23B for activation.",
+    "benchmarks": {},
+    "official_id": "MiniMaxAI/MiniMax-M3",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/MiniMaxAI/MiniMax-M3",
+    "parameter_source": "https://huggingface.co/MiniMaxAI/MiniMax-M3",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "publisher-approximate",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -2377,7 +3514,7 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
@@ -2388,12 +3525,24 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "Alibaba DashScope 상용 API 모델 (파라미터 비공개)",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1420,
-      "MMLU-Pro": 86,
-      "SWE-bench Verified": 79,
-      "LiveCodeBench": 84.5
+    "note": "",
+    "benchmarks": {},
+    "official_id": "qwen3.7-plus",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://www.qwencloud.com/models/qwen3.7-plus"
+      }
+    ],
+    "release_date_source": "https://www.qwencloud.com/models/qwen3.7-plus",
+    "parameter_source": "https://www.qwencloud.com/models/qwen3.7-plus",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -2408,7 +3557,7 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "GA",
-    "parameters": "~500B",
+    "parameters": "550B total / 55B active (MoE)",
     "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
@@ -2419,12 +3568,38 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "",
+    "note": "Official model title is Nemotron-3-Ultra-550B-A55B.",
     "benchmarks": {
-      "MMLU": 89.1,
-      "MMLU-Pro": 79,
-      "MATH-500": 84.5,
-      "LiveCodeBench": 78.5
+      "Terminal-Bench 2.1": 56.4,
+      "SWE-bench Verified": 70.7,
+      "SWE-bench Multilingual": 67.7,
+      "LiveCodeBench v6": 89.0,
+      "GPQA Diamond": 87.0,
+      "MMLU-Pro": 86.8
+    },
+    "official_id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+    "parameter_source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+    "benchmark_sources": {
+      "Terminal-Bench 2.1": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+      "SWE-bench Verified": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+      "SWE-bench Multilingual": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+      "LiveCodeBench v6": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+      "GPQA Diamond": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+      "MMLU-Pro": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16"
+    },
+    "benchmark_note": "NVIDIA 공식 모델 카드의 자기 보고 수치입니다.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -2439,11 +3614,11 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "",
     "modalities": [],
     "focus": [],
-    "open_weights": null,
+    "open_weights": false,
     "license": "",
     "context": "",
     "languages": "",
@@ -2451,12 +3626,23 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1528,
-      "SWE-bench Verified": 95,
-      "SWE-bench Pro": 80.3,
-      "GPQA Diamond": 88.9,
-      "MMLU-Pro": 90.5
+    "benchmarks": {},
+    "official_id": "claude-fable-5-mythos-5",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5"
+      }
+    ],
+    "release_date_source": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+    "parameter_source": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -2471,11 +3657,11 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "",
     "modalities": [],
     "focus": [],
-    "open_weights": null,
+    "open_weights": false,
     "license": "",
     "context": "",
     "languages": "",
@@ -2483,12 +3669,23 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "restricted / vetted users",
     "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1528,
-      "SWE-bench Verified": 95,
-      "SWE-bench Pro": 80.3,
-      "GPQA Diamond": 88.9,
-      "MMLU-Pro": 90.5
+    "benchmarks": {},
+    "official_id": "claude-fable-5-mythos-5",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5"
+      }
+    ],
+    "release_date_source": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+    "parameter_source": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -2503,8 +3700,8 @@ const TIMELINE_DATA = [
     "type": "LLM / coding",
     "category": "LLM",
     "status": "GA",
-    "parameters": "30B total / 3B active",
-    "architecture": "Code MoE Transformer",
+    "parameters": "30B total / 3B active (MoE)",
+    "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
     "open_weights": true,
@@ -2515,9 +3712,23 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "SWE-bench Verified": 67.6,
-      "LiveCodeBench": 74.5
+    "benchmarks": {},
+    "official_id": "CohereLabs/North-Mini-Code-1.0",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/CohereLabs/North-Mini-Code-1.0"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/CohereLabs/North-Mini-Code-1.0",
+    "parameter_source": "https://huggingface.co/CohereLabs/North-Mini-Code-1.0",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -2532,11 +3743,11 @@ const TIMELINE_DATA = [
     "type": "MLLM / coding",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "~1T MoE",
+    "parameters": "정확한 수치 미공개",
     "architecture": "Code Multimodal MoE",
     "modalities": [],
     "focus": [],
-    "open_weights": false,
+    "open_weights": true,
     "license": "",
     "context": "",
     "languages": "",
@@ -2544,11 +3755,23 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "SWE-bench Verified": 60.4,
-      "LiveCodeBench": 85.2,
-      "HumanEval": 94.1,
-      "AIME 2025": 97.4
+    "benchmarks": {},
+    "official_id": "moonshotai/Kimi-K2.7-Code",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/moonshotai/Kimi-K2.7-Code"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/moonshotai/Kimi-K2.7-Code",
+    "parameter_source": "https://huggingface.co/moonshotai/Kimi-K2.7-Code",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -2563,8 +3786,8 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "GA",
-    "parameters": "~1T",
-    "architecture": "MLA + Linear Attention hybrid",
+    "parameters": "1T total (active count 미공개)",
+    "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
     "open_weights": true,
@@ -2574,12 +3797,24 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "",
-    "benchmarks": {
-      "SWE-bench Verified": 78.5,
-      "AIME 2026": 94.2,
-      "IFEval": 84.6,
-      "AA Intelligence Index": 34
+    "note": "The official card names the 1T family but does not state active parameters.",
+    "benchmarks": {},
+    "official_id": "inclusionAI/Ling-2.6-1T",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/inclusionAI/Ling-2.6-1T"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/inclusionAI/Ling-2.6-1T",
+    "parameter_source": "https://huggingface.co/inclusionAI/Ling-2.6-1T",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "publisher-partial",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -2594,8 +3829,8 @@ const TIMELINE_DATA = [
     "type": "reasoning LLM",
     "category": "Reasoning",
     "status": "GA",
-    "parameters": "~1T",
-    "architecture": "Reasoning LLM (MLA + Linear Attention)",
+    "parameters": "1T total (active count 미공개)",
+    "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
     "open_weights": true,
@@ -2608,10 +3843,32 @@ const TIMELINE_DATA = [
       "xhigh"
     ],
     "availability": "",
-    "note": "",
+    "note": "The official card names the 1T family but does not state active parameters.",
     "benchmarks": {
-      "SWE-bench Verified": 81.2,
-      "AIME 2026": 96.8
+      "GPQA Diamond": 88.27,
+      "AIME 2026": 95.83,
+      "τ²-Telecom": 95.32
+    },
+    "official_id": "inclusionAI/Ring-2.6-1T",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/inclusionAI/Ring-2.6-1T"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/inclusionAI/Ring-2.6-1T",
+    "parameter_source": "https://huggingface.co/inclusionAI/Ring-2.6-1T",
+    "benchmark_sources": {
+      "GPQA Diamond": "https://huggingface.co/inclusionAI/Ring-2.6-1T",
+      "AIME 2026": "https://huggingface.co/inclusionAI/Ring-2.6-1T",
+      "τ²-Telecom": "https://huggingface.co/inclusionAI/Ring-2.6-1T"
+    },
+    "benchmark_note": "Ring-2.6-1T 공식 모델 카드 자기 보고 수치입니다.",
+    "parameter_status": "publisher-partial",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -2626,7 +3883,7 @@ const TIMELINE_DATA = [
     "type": "MLLM / lightweight omni",
     "category": "Omni",
     "status": "GA",
-    "parameters": "4B",
+    "parameters": "4B backbone (8B teacher에서 pruning/distillation)",
     "architecture": "Lightweight Omni (Edge/Defense)",
     "modalities": [
       "language",
@@ -2636,17 +3893,31 @@ const TIMELINE_DATA = [
     "focus": [
       "edge / on-device / defense environments"
     ],
-    "open_weights": true,
+    "open_weights": false,
     "license": "",
     "context": "",
     "languages": "",
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "",
-    "benchmarks": {
-      "MMMU (Multimodal)": 54.2,
-      "MMLU-Pro": 52.8
+    "note": "The 8B figure is the teacher/reference model, not the released SEED checkpoint.",
+    "benchmarks": {},
+    "official_id": "pressReleasesDetail?seq=10034395",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034395"
+      }
+    ],
+    "release_date_source": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034395",
+    "parameter_source": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034395",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -2661,7 +3932,7 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "GA",
-    "parameters": "744B total / ~40B active (MoE)",
+    "parameters": "정확한 수치 미공개 (공식 카드에는 753B model size만 표기; 총/활성 파라미터 미공개)",
     "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
@@ -2672,12 +3943,38 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "",
+    "note": "공식 카드의 model size를 총 파라미터 수로 간주하지 않습니다.",
     "benchmarks": {
-      "Chatbot Arena ELO": 1410,
-      "MMLU-Pro": 83.5,
-      "LiveCodeBench": 83.8,
-      "SWE-bench Verified": 74.2
+      "AIME 2026": 99.2,
+      "GPQA Diamond": 91.2,
+      "SWE-bench Pro": 62.1,
+      "Terminal-Bench 2.1": 81.0,
+      "NL2Repo": 48.9,
+      "DeepSWE": 46.2
+    },
+    "official_id": "zai-org/GLM-5.2",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/zai-org/GLM-5.2"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/zai-org/GLM-5.2",
+    "parameter_source": "https://huggingface.co/zai-org/GLM-5.2",
+    "benchmark_sources": {
+      "AIME 2026": "https://huggingface.co/zai-org/GLM-5.2",
+      "GPQA Diamond": "https://huggingface.co/zai-org/GLM-5.2",
+      "SWE-bench Pro": "https://huggingface.co/zai-org/GLM-5.2",
+      "Terminal-Bench 2.1": "https://huggingface.co/zai-org/GLM-5.2",
+      "NL2Repo": "https://huggingface.co/zai-org/GLM-5.2",
+      "DeepSWE": "https://huggingface.co/zai-org/GLM-5.2"
+    },
+    "benchmark_note": "GLM-5.2 공식 모델 카드 수치입니다.",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -2692,7 +3989,7 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "GA",
-    "parameters": "~1.6T total / ~48B average active",
+    "parameters": "1.6T total / ~48B average active (MoE; 33–56B dynamic)",
     "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
@@ -2705,9 +4002,38 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
+      "SWE-bench Multilingual": 77.3,
       "SWE-bench Pro": 59.5,
-      "SWE-bench Verified": 75.8,
-      "Terminal-Bench 2.1": 70.8
+      "Terminal-Bench 2.1": 70.8,
+      "BrowseComp": 79.9,
+      "GPQA Diamond": 88.9
+    },
+    "official_id": "meituan-longcat/LongCat-2.0",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/meituan-longcat/LongCat-2.0"
+      },
+      {
+        "label": "공식 출시 발표",
+        "url": "https://tech.meituan.com/2026/06/30/LongCat2.0.html"
+      }
+    ],
+    "release_date_source": "https://tech.meituan.com/2026/06/30/LongCat2.0.html",
+    "parameter_source": "https://tech.meituan.com/2026/06/30/LongCat2.0.html",
+    "benchmark_sources": {
+      "SWE-bench Multilingual": "https://huggingface.co/meituan-longcat/LongCat-2.0",
+      "SWE-bench Pro": "https://huggingface.co/meituan-longcat/LongCat-2.0",
+      "Terminal-Bench 2.1": "https://huggingface.co/meituan-longcat/LongCat-2.0",
+      "BrowseComp": "https://huggingface.co/meituan-longcat/LongCat-2.0",
+      "GPQA Diamond": "https://huggingface.co/meituan-longcat/LongCat-2.0"
+    },
+    "benchmark_note": "LongCat-2.0 공식 모델 카드 수치입니다.",
+    "parameter_status": "publisher-approximate",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -2722,11 +4048,11 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "",
     "modalities": [],
     "focus": [],
-    "open_weights": null,
+    "open_weights": false,
     "license": "",
     "context": "",
     "languages": "",
@@ -2734,12 +4060,23 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1505,
-      "SWE-bench Verified": 89.2,
-      "GPQA Diamond": 85,
-      "MMLU-Pro": 87.8,
-      "MMMU (Multimodal)": 78.5
+    "benchmarks": {},
+    "official_id": "claude-sonnet-5",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://www.anthropic.com/news/claude-sonnet-5"
+      }
+    ],
+    "release_date_source": "https://www.anthropic.com/news/claude-sonnet-5",
+    "parameter_source": "https://www.anthropic.com/news/claude-sonnet-5",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -2754,11 +4091,11 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "GA",
-    "parameters": "~33B / ~3B active",
-    "architecture": "Code MoE",
+    "parameters": "33B total / 3B active (MoE)",
+    "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
-    "open_weights": false,
+    "open_weights": true,
     "license": "",
     "context": "",
     "languages": "",
@@ -2768,8 +4105,31 @@ const TIMELINE_DATA = [
     "note": "",
     "benchmarks": {
       "SWE-bench Verified": 70.9,
+      "SWE-bench Multilingual": 63.1,
       "SWE-bench Pro": 47.6,
-      "Terminal-Bench 2.1": 61.5
+      "Terminal-Bench 2.0": 37.5
+    },
+    "official_id": "poolside/Laguna-XS-2.1",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/poolside/Laguna-XS-2.1"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/poolside/Laguna-XS-2.1",
+    "parameter_source": "https://huggingface.co/poolside/Laguna-XS-2.1",
+    "benchmark_sources": {
+      "SWE-bench Verified": "https://huggingface.co/poolside/Laguna-XS-2.1",
+      "SWE-bench Multilingual": "https://huggingface.co/poolside/Laguna-XS-2.1",
+      "SWE-bench Pro": "https://huggingface.co/poolside/Laguna-XS-2.1",
+      "Terminal-Bench 2.0": "https://huggingface.co/poolside/Laguna-XS-2.1"
+    },
+    "benchmark_note": "Poolside 공식 모델 카드에 기재된 자기 평가 수치입니다.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -2784,7 +4144,7 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "Stable",
-    "parameters": "295B total / 21B active (MoE)",
+    "parameters": "295B total / 21B active + 3.8B MTP (MoE)",
     "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
@@ -2795,11 +4155,139 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "Open Weights (Hugging Face / GitHub)",
-    "note": "텐센트 Hunyuan 3 정식 오픈웨이트 릴리스. Apache 2.0 라이선스로 295B MoE(21B 활성), 256K 컨텍스트 가중치 공개.",
-    "benchmarks": {
-      "MMLU": 86,
-      "MATH-500": 82.4,
-      "LiveCodeBench": 75.8
+    "note": "",
+    "benchmarks": {},
+    "official_id": "tencent/Hy3",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/tencent/Hy3"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/tencent/Hy3",
+    "parameter_source": "https://huggingface.co/tencent/Hy3",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-137",
+    "name": "GPT-Live-1",
+    "date": "2026-07-08",
+    "sortDate": "2026-07-08",
+    "month": "2026-07",
+    "monthName": "July",
+    "company": "OpenAI",
+    "family": "GPT-Live",
+    "type": "MLLM / omni (full-duplex voice)",
+    "category": "Omni",
+    "status": "GA",
+    "parameters": "정확한 수치 미공개",
+    "architecture": "Full-duplex voice model (continuous listen + speak), delegates search/reasoning to GPT-5.5",
+    "modalities": [
+      "audio",
+      "text"
+    ],
+    "focus": [
+      "Realtime voice",
+      "Full-duplex dialogue",
+      "Delegated reasoning"
+    ],
+    "open_weights": false,
+    "license": "Proprietary (ChatGPT Voice)",
+    "context": "",
+    "languages": "",
+    "variants": [
+      "GPT-Live-1 instant",
+      "GPT-Live-1 Medium",
+      "GPT-Live-1 High"
+    ],
+    "reasoning_effort": [
+      "instant",
+      "medium",
+      "high (delegated GPT-5.5 effort)"
+    ],
+    "availability": "ChatGPT Voice 전 세계 롤아웃(Go/Plus/Pro 기본 음성), API는 발표 당시 예정",
+    "note": "ASR→LLM→TTS 캐스케이드가 아닌 단일 full-duplex 음성 모델이라 'ASR/TTS 음성 전용 제외' 규정에 해당하지 않는다고 판단해 수록했습니다. 검색·추론은 백그라운드에서 GPT-5.5에 위임합니다. 공식 발표문·시스템 카드에 수치 점수는 없고 인간 평점 선호도(Advanced Voice Mode 대비)와 내부 τ3-Voice Telecom 결과만 텍스트로 명시되어 점수 칸은 비워 두었습니다.",
+    "benchmarks": {},
+    "official_id": "introducing-gpt-live",
+    "official_sources": [
+      {
+        "label": "OpenAI 공식 발표문",
+        "url": "https://openai.com/index/introducing-gpt-live/"
+      },
+      {
+        "label": "GPT-Live System Card",
+        "url": "https://deploymentsafety.openai.com/gpt-live"
+      }
+    ],
+    "release_date_source": "https://openai.com/index/introducing-gpt-live/",
+    "parameter_source": "https://openai.com/index/introducing-gpt-live/",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-08",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-138",
+    "name": "GPT-Live-1 mini",
+    "date": "2026-07-08",
+    "sortDate": "2026-07-08",
+    "month": "2026-07",
+    "monthName": "July",
+    "company": "OpenAI",
+    "family": "GPT-Live",
+    "type": "MLLM / omni (full-duplex voice)",
+    "category": "Omni",
+    "status": "GA",
+    "parameters": "정확한 수치 미공개",
+    "architecture": "Full-duplex voice model (small tier), delegates to GPT-5.5 Instant",
+    "modalities": [
+      "audio",
+      "text"
+    ],
+    "focus": [
+      "Realtime voice",
+      "Full-duplex dialogue"
+    ],
+    "open_weights": false,
+    "license": "Proprietary (ChatGPT Voice)",
+    "context": "",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "ChatGPT Voice Free 사용자 기본 음성",
+    "note": "GPT-Live-1과 같은 발표(2026-07-08)로 공개된 소형 티어이며 ChatGPT Voice Free 기본 모델입니다. GPT-Live-1 (instant)와 마찬가지로 백그라운드 추론에 GPT-5.5 Instant를 사용합니다. 공식 자료에 수치 점수가 없습니다.",
+    "benchmarks": {},
+    "official_id": "introducing-gpt-live",
+    "official_sources": [
+      {
+        "label": "OpenAI 공식 발표문",
+        "url": "https://openai.com/index/introducing-gpt-live/"
+      },
+      {
+        "label": "GPT-Live System Card",
+        "url": "https://deploymentsafety.openai.com/gpt-live"
+      }
+    ],
+    "release_date_source": "https://openai.com/index/introducing-gpt-live/",
+    "parameter_source": "https://openai.com/index/introducing-gpt-live/",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-08",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -2814,11 +4302,11 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "",
     "modalities": [],
     "focus": [],
-    "open_weights": null,
+    "open_weights": false,
     "license": "",
     "context": "",
     "languages": "",
@@ -2826,9 +4314,23 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1480,
-      "AA Intelligence Index": 54
+    "benchmarks": {},
+    "official_id": "introducing-muse-spark-meta-model-api",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/"
+      }
+    ],
+    "release_date_source": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/",
+    "parameter_source": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -2843,11 +4345,11 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "",
     "modalities": [],
     "focus": [],
-    "open_weights": null,
+    "open_weights": false,
     "license": "",
     "context": "",
     "languages": "",
@@ -2856,12 +4358,32 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1545,
-      "SWE-bench Verified": 95.5,
-      "Terminal-Bench 2.1": 91.9,
-      "MMLU-Pro": 92.8,
-      "GPQA Diamond": 92,
-      "MATH-500": 97.5
+      "SWE-bench Pro": 64.6,
+      "Terminal-Bench 2.1": 88.8,
+      "BrowseComp": 90.4,
+      "DeepSWE": 72.7
+    },
+    "official_id": "gpt-5-6",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://openai.com/index/gpt-5-6/"
+      }
+    ],
+    "release_date_source": "https://openai.com/index/gpt-5-6/",
+    "parameter_source": "https://openai.com/index/gpt-5-6/",
+    "benchmark_sources": {
+      "SWE-bench Pro": "https://openai.com/index/gpt-5-6/",
+      "Terminal-Bench 2.1": "https://openai.com/index/gpt-5-6/",
+      "BrowseComp": "https://openai.com/index/gpt-5-6/",
+      "DeepSWE": "https://openai.com/index/gpt-5-6/"
+    },
+    "benchmark_note": "OpenAI GPT-5.6 공식 발표의 Sol 열 수치입니다.",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -2876,11 +4398,11 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "",
     "modalities": [],
     "focus": [],
-    "open_weights": null,
+    "open_weights": false,
     "license": "",
     "context": "",
     "languages": "",
@@ -2889,12 +4411,32 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1495,
-      "SWE-bench Verified": 87.5,
-      "Terminal-Bench 2.1": 82.4,
-      "MMLU-Pro": 87,
-      "GPQA Diamond": 83.5,
-      "MATH-500": 91.5
+      "SWE-bench Pro": 63.4,
+      "Terminal-Bench 2.1": 87.4,
+      "BrowseComp": 87.5,
+      "DeepSWE": 69.6
+    },
+    "official_id": "gpt-5-6",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://openai.com/index/gpt-5-6/"
+      }
+    ],
+    "release_date_source": "https://openai.com/index/gpt-5-6/",
+    "parameter_source": "https://openai.com/index/gpt-5-6/",
+    "benchmark_sources": {
+      "SWE-bench Pro": "https://openai.com/index/gpt-5-6/",
+      "Terminal-Bench 2.1": "https://openai.com/index/gpt-5-6/",
+      "BrowseComp": "https://openai.com/index/gpt-5-6/",
+      "DeepSWE": "https://openai.com/index/gpt-5-6/"
+    },
+    "benchmark_note": "OpenAI GPT-5.6 공식 발표의 Terra 열 수치입니다.",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -2909,11 +4451,11 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "",
     "modalities": [],
     "focus": [],
-    "open_weights": null,
+    "open_weights": false,
     "license": "",
     "context": "",
     "languages": "",
@@ -2922,17 +4464,80 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1425,
-      "SWE-bench Verified": 74,
-      "Terminal-Bench 2.1": 68.1,
-      "MMLU-Pro": 79.5,
-      "GPQA Diamond": 71,
-      "MATH-500": 84
+      "SWE-bench Pro": 62.7,
+      "Terminal-Bench 2.1": 84.7,
+      "BrowseComp": 83.3,
+      "DeepSWE": 67.2
+    },
+    "official_id": "gpt-5-6",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://openai.com/index/gpt-5-6/"
+      }
+    ],
+    "release_date_source": "https://openai.com/index/gpt-5-6/",
+    "parameter_source": "https://openai.com/index/gpt-5-6/",
+    "benchmark_sources": {
+      "SWE-bench Pro": "https://openai.com/index/gpt-5-6/",
+      "Terminal-Bench 2.1": "https://openai.com/index/gpt-5-6/",
+      "BrowseComp": "https://openai.com/index/gpt-5-6/",
+      "DeepSWE": "https://openai.com/index/gpt-5-6/"
+    },
+    "benchmark_note": "OpenAI GPT-5.6 공식 발표의 Luna 열 수치입니다.",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-139",
+    "name": "GPT-5.6 Sol Pro",
+    "date": "2026-07-09",
+    "sortDate": "2026-07-09",
+    "month": "2026-07",
+    "monthName": "July",
+    "company": "OpenAI",
+    "family": "GPT",
+    "type": "MLLM",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "정확한 수치 미공개",
+    "architecture": "",
+    "modalities": [],
+    "focus": [],
+    "open_weights": false,
+    "license": "",
+    "context": "",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "ChatGPT Pro / Enterprise 전용",
+    "note": "GPT-5.6 공식 발표문 Availability 절에 \"Pro and Enterprise users can also select GPT-5.6 Sol Pro\"로 명시된 상위 티어입니다. 발표문 벤치마크 표는 Sol / Sol Ultra / Terra / Luna 열로만 공개되어 Sol Pro 고유 점수는 기록하지 않았습니다. 표의 'Sol Ultra'는 별도 모델이 아니라 ultra effort(멀티에이전트) 설정으로 판단해 레코드로 만들지 않았습니다.",
+    "benchmarks": {},
+    "official_id": "gpt-5-6",
+    "official_sources": [
+      {
+        "label": "OpenAI GPT-5.6 공식 발표문",
+        "url": "https://openai.com/index/gpt-5-6/"
+      }
+    ],
+    "release_date_source": "https://openai.com/index/gpt-5-6/",
+    "parameter_source": "https://openai.com/index/gpt-5-6/",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-08",
+      "policy": "official-primary-only"
     }
   },
   {
     "id": "model-084",
-    "name": "Motif 3 Beta",
+    "name": "Motif-3-Beta",
     "date": "2026-07-14",
     "sortDate": "2026-07-14",
     "month": "2026-07",
@@ -2942,8 +4547,8 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "Beta",
-    "parameters": "~314B total / ~13.2B active",
-    "architecture": "MoE + GDLA + MTP",
+    "parameters": "~314B total / ~13B active (MoE)",
+    "architecture": "Sparse MoE with GDLA/MTP",
     "modalities": [],
     "focus": [],
     "open_weights": true,
@@ -2954,9 +4559,23 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "SWE-bench Verified": 71.5,
-      "Terminal-Bench 2.1": 68.4
+    "benchmarks": {},
+    "official_id": "Motif-Technologies/Motif-3-Beta",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/Motif-Technologies/Motif-3-Beta"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/Motif-Technologies/Motif-3-Beta",
+    "parameter_source": "https://huggingface.co/Motif-Technologies/Motif-3-Beta",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "publisher-approximate",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -2971,9 +4590,13 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "~975B total / ~41B active",
-    "architecture": "Native Multimodal MoE",
-    "modalities": [],
+    "parameters": "975B total / 41B active (MoE)",
+    "architecture": "Native multimodal sparse MoE",
+    "modalities": [
+      "text",
+      "image",
+      "audio"
+    ],
     "focus": [],
     "open_weights": true,
     "license": "",
@@ -2983,9 +4606,23 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "MMMU-Pro": 68.5,
-      "LiveCodeBench": 82
+    "benchmarks": {},
+    "official_id": "inkling",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://thinkingmachines.ai/model-card/inkling/"
+      }
+    ],
+    "release_date_source": "https://thinkingmachines.ai/model-card/inkling/",
+    "parameter_source": "https://thinkingmachines.ai/model-card/inkling/",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -3000,7 +4637,7 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "",
     "modalities": [],
     "focus": [
@@ -3008,7 +4645,7 @@ const TIMELINE_DATA = [
       "agents",
       "knowledge work"
     ],
-    "open_weights": null,
+    "open_weights": false,
     "license": "",
     "context": "",
     "languages": "",
@@ -3017,10 +4654,32 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1485,
-      "SWE-bench Pro": 63.2,
-      "Terminal-Bench 2.1": 65.8,
-      "AA Intelligence Index": 56
+      "SWE-bench Pro": 64.7,
+      "Terminal-Bench 2.1": 83.3,
+      "DeepSWE": 53.0,
+      "SWE-Marathon": 29.0
+    },
+    "official_id": "grok-4-5",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://x.ai/news/grok-4-5"
+      }
+    ],
+    "release_date_source": "https://x.ai/news/grok-4-5",
+    "parameter_source": "https://x.ai/news/grok-4-5",
+    "benchmark_sources": {
+      "SWE-bench Pro": "https://x.ai/news/grok-4-5",
+      "Terminal-Bench 2.1": "https://x.ai/news/grok-4-5",
+      "DeepSWE": "https://x.ai/news/grok-4-5",
+      "SWE-Marathon": "https://x.ai/news/grok-4-5"
+    },
+    "benchmark_note": "xAI 공식 Grok 4.5 발표에서 Grok 열에 직접 제시한 수치만 수록했습니다.",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -3035,12 +4694,11 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "2.8T total / 16 active of 896 experts (MoE)",
-    "architecture": "Stable LatentMoE with KDA (Kimi Delta Attention) & Attention Residuals (AttnRes)",
+    "parameters": "2.8T total / 104B active + 401M vision encoder (MoE)",
+    "architecture": "Sparse MoE with KDA and gated MLA",
     "modalities": [
       "text",
-      "image",
-      "video"
+      "image"
     ],
     "focus": [
       "Long-Context Reasoning",
@@ -3055,18 +4713,41 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "Hugging Face (moonshotai/Kimi-K3), Kimi API",
-    "note": "문샷 AI(Moonshot AI)의 2.8조(2.8T) 파라미터급 초대형 오픈웨이트 MLLM. 오픈웨이트 모델 최초 3T 클래스 도달. 896개 전문가 중 토큰당 16개 활성화(Stable LatentMoE), KDA(Kimi Delta Attention) 및 Attention Residuals 도입. Hugging Face에 1.56TB 가중치 전면 공개.",
+    "note": "Official Kimi K3 model summary reports 2.8T total, 104B active, and a 401M vision encoder.",
     "benchmarks": {
-      "SWE-bench Verified": 76.8,
-      "AIME 2025": 96.1,
-      "MMLU-Pro": 87.2,
-      "LiveCodeBench": 88,
-      "MMMU (Multimodal)": 74.5
+      "GPQA Diamond": 93.5,
+      "DeepSWE": 67.5,
+      "Terminal-Bench 2.1": 88.3,
+      "FrontierSWE": 81.2,
+      "SWE-Marathon": 42.0
+    },
+    "official_id": "moonshotai/Kimi-K3",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/moonshotai/Kimi-K3"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/moonshotai/Kimi-K3",
+    "parameter_source": "https://huggingface.co/moonshotai/Kimi-K3",
+    "benchmark_sources": {
+      "GPQA Diamond": "https://huggingface.co/moonshotai/Kimi-K3",
+      "DeepSWE": "https://huggingface.co/moonshotai/Kimi-K3",
+      "Terminal-Bench 2.1": "https://huggingface.co/moonshotai/Kimi-K3",
+      "FrontierSWE": "https://huggingface.co/moonshotai/Kimi-K3",
+      "SWE-Marathon": "https://huggingface.co/moonshotai/Kimi-K3"
+    },
+    "benchmark_note": "Kimi K3 공식 모델 카드 수치입니다. 카드가 외부 leaderboard를 인용한 행은 제외했습니다.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
     "id": "model-088",
-    "name": "Qwen3.8-Max Preview",
+    "name": "Qwen3.8-Max-Preview",
     "date": "2026-07-19",
     "sortDate": "2026-07-19",
     "month": "2026-07",
@@ -3076,7 +4757,7 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "Preview",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개 (preview ID에 별도 파라미터 공개 없음)",
     "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
@@ -3087,12 +4768,24 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "Alibaba DashScope 플래그십 상용 API 프리뷰 모델 (파라미터 비공개)",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1440,
-      "MMLU-Pro": 88,
-      "SWE-bench Pro": 64,
-      "GPQA Diamond": 91.5
+    "note": "",
+    "benchmarks": {},
+    "official_id": "qwen3.8-max-preview",
+    "official_sources": [
+      {
+        "label": "공식 API 문서",
+        "url": "https://docs.qwencloud.com/token-plan/personal/token-plan-personal-overview"
+      }
+    ],
+    "release_date_source": "https://docs.qwencloud.com/token-plan/personal/token-plan-personal-overview",
+    "parameter_source": "https://docs.qwencloud.com/token-plan/personal/token-plan-personal-overview",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -3107,11 +4800,11 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "",
     "modalities": [],
     "focus": [],
-    "open_weights": null,
+    "open_weights": false,
     "license": "",
     "context": "",
     "languages": "",
@@ -3119,10 +4812,23 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1495,
-      "MMMU (Multimodal)": 78.8,
-      "SWE-bench Verified": 82.5
+    "benchmarks": {},
+    "official_id": "gemini-3-6-flash",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/"
+      }
+    ],
+    "release_date_source": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+    "parameter_source": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -3137,11 +4843,11 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "",
     "modalities": [],
     "focus": [],
-    "open_weights": null,
+    "open_weights": false,
     "license": "",
     "context": "",
     "languages": "",
@@ -3149,10 +4855,23 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1420,
-      "MMLU-Pro": 79.2,
-      "LiveCodeBench": 74
+    "benchmarks": {},
+    "official_id": "gemini-3-5-flash-lite",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://deepmind.google/models/model-cards/gemini-3-5-flash-lite/"
+      }
+    ],
+    "release_date_source": "https://deepmind.google/models/model-cards/gemini-3-5-flash-lite/",
+    "parameter_source": "https://deepmind.google/models/model-cards/gemini-3-5-flash-lite/",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -3167,13 +4886,13 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "",
     "modalities": [],
     "focus": [
       "cybersecurity"
     ],
-    "open_weights": null,
+    "open_weights": false,
     "license": "",
     "context": "",
     "languages": "",
@@ -3181,9 +4900,23 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "CyberGym": 84.5,
-      "SWE-bench Verified": 79.5
+    "benchmarks": {},
+    "official_id": "introducing-gemini-3-5-flash-cyber",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/"
+      }
+    ],
+    "release_date_source": "https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/",
+    "parameter_source": "https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -3198,22 +4931,47 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "GA",
-    "parameters": "~70B",
-    "architecture": "Code Dense/MoE",
+    "parameters": "118B total / ~8B active (MoE)",
+    "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
-    "open_weights": false,
+    "open_weights": true,
     "license": "",
     "context": "",
     "languages": "",
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "",
+    "note": "Official model card reports 118B total and about 8B activated.",
     "benchmarks": {
-      "SWE-bench Verified": 78.5,
+      "Terminal-Bench 2.1": 70.2,
+      "SWE-bench Multilingual": 78.5,
       "SWE-bench Pro": 59.4,
-      "Terminal-Bench 2.1": 70.2
+      "DeepSWE": 40.4,
+      "Toolathlon Verified": 49.7
+    },
+    "official_id": "poolside/Laguna-S-2.1",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/poolside/Laguna-S-2.1"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/poolside/Laguna-S-2.1",
+    "parameter_source": "https://huggingface.co/poolside/Laguna-S-2.1",
+    "benchmark_sources": {
+      "Terminal-Bench 2.1": "https://huggingface.co/poolside/Laguna-S-2.1",
+      "SWE-bench Multilingual": "https://huggingface.co/poolside/Laguna-S-2.1",
+      "SWE-bench Pro": "https://huggingface.co/poolside/Laguna-S-2.1",
+      "DeepSWE": "https://huggingface.co/poolside/Laguna-S-2.1",
+      "Toolathlon Verified": "https://huggingface.co/poolside/Laguna-S-2.1"
+    },
+    "benchmark_note": "Poolside 공식 모델 카드 자기 평가 수치입니다.",
+    "parameter_status": "publisher-approximate",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -3228,7 +4986,7 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "GA",
-    "parameters": "~250B total / ~15B active",
+    "parameters": "250B total / 15B active (MoE)",
     "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
@@ -3239,10 +4997,36 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "",
+    "note": "Official model card title is Solar Open 2; 250B-A15B is the official repository/model variant identifier.",
     "benchmarks": {
       "MMLU-Pro": 86.2,
-      "LiveCodeBench": 92.4
+      "GPQA Diamond": 86.3,
+      "LiveCodeBench v6": 92.4,
+      "AIME 2026": 95.7,
+      "SWE-bench Verified": 70.4
+    },
+    "official_id": "upstage/Solar-Open2-250B",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/upstage/Solar-Open2-250B"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/upstage/Solar-Open2-250B",
+    "parameter_source": "https://huggingface.co/upstage/Solar-Open2-250B",
+    "benchmark_sources": {
+      "MMLU-Pro": "https://huggingface.co/upstage/Solar-Open2-250B",
+      "GPQA Diamond": "https://huggingface.co/upstage/Solar-Open2-250B",
+      "LiveCodeBench v6": "https://huggingface.co/upstage/Solar-Open2-250B",
+      "AIME 2026": "https://huggingface.co/upstage/Solar-Open2-250B",
+      "SWE-bench Verified": "https://huggingface.co/upstage/Solar-Open2-250B"
+    },
+    "benchmark_note": "Upstage 공식 모델 카드 수치입니다.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -3257,11 +5041,11 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "",
     "modalities": [],
     "focus": [],
-    "open_weights": null,
+    "open_weights": false,
     "license": "",
     "context": "",
     "languages": "",
@@ -3269,55 +5053,80 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1535,
-      "SWE-bench Verified": 96,
-      "SWE-bench Pro": 79.2,
-      "GPQA Diamond": 91.2,
-      "MMLU-Pro": 92.1,
-      "MMMU (Multimodal)": 82
+    "benchmarks": {},
+    "official_id": "claude-opus-5",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://www.anthropic.com/news/claude-opus-5"
+      }
+    ],
+    "release_date_source": "https://www.anthropic.com/news/claude-opus-5",
+    "parameter_source": "https://www.anthropic.com/news/claude-opus-5",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
     "id": "model-128",
     "name": "A.X K2",
-    "date": "2026-07-28",
-    "sortDate": "2026-07-28",
+    "date": "2026-07-29",
+    "sortDate": "2026-07-29",
     "month": "2026-07",
     "monthName": "July",
     "company": "SK Telecom",
     "family": "A.X",
-    "type": "MLLM",
-    "category": "Omni",
+    "type": "LLM",
+    "category": "Reasoning",
     "status": "GA",
-    "parameters": "688B (Multi-modal 688B parameters)",
-    "architecture": "Multimodal Agentic Architecture (Omni / Native End-to-End)",
+    "parameters": "688B total / 33B active (MoE)",
+    "architecture": "Decoder-only Transformer + sparse MoE (MLA/SGA)",
     "modalities": [
-      "language",
-      "vision",
-      "speech",
-      "agent actions"
+      "text"
     ],
     "focus": [
-      "Real-time multimodal conversation",
-      "AI for All national service",
-      "Telco AI Agent"
+      "Agent workflows",
+      "Korean language and culture",
+      "Sovereign AI"
     ],
-    "open_weights": false,
-    "license": "Proprietary",
-    "context": "256K",
+    "open_weights": true,
+    "license": "Apache 2.0",
+    "context": "262,144",
     "languages": "Korean, English",
-    "variants": [
-      "K2 688B Omni"
-    ],
+    "variants": [],
     "reasoning_effort": [],
-    "availability": "SKT A. Service / Government AI for All",
-    "note": "688B 파라미터 규모의 차세대 멀티모달 옴니 파운데이션 모델. 음성·영상·문서를 통합 인식하며 SKT '전국민 AI(AI for All)' 서비스의 핵심 엔진.",
+    "availability": "Open Weights (Hugging Face)",
+    "note": "Official SK Telecom model card reports 688B total / 33B active parameters. The related vision/audio models are separate releases.",
     "benchmarks": {
-      "AIME 2026": 97.1,
-      "KMMLU-Pro": 80.5,
-      "LiveCodeBench": 82.4,
-      "MMMU (Multimodal)": 73.5
+      "AIME 2026": 97.1
+    },
+    "official_id": "skt/A.X-K2",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/skt/A.X-K2"
+      },
+      {
+        "label": "공식 출시 발표",
+        "url": "https://news.sktelecom.com/228501"
+      }
+    ],
+    "release_date_source": "https://news.sktelecom.com/228501",
+    "parameter_source": "https://huggingface.co/skt/A.X-K2",
+    "benchmark_sources": {
+      "AIME 2026": "https://huggingface.co/skt/A.X-K2"
+    },
+    "benchmark_note": "SK Telecom 공식 A.X K2 모델 카드의 자기 보고 수치입니다.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -3332,9 +5141,13 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "~276B total / ~12B active",
-    "architecture": "Native Multimodal MoE",
-    "modalities": [],
+    "parameters": "276B total / 12B active (MoE)",
+    "architecture": "Native multimodal sparse MoE",
+    "modalities": [
+      "text",
+      "image",
+      "audio"
+    ],
     "focus": [],
     "open_weights": true,
     "license": "",
@@ -3345,13 +5158,33 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "MMMU-Pro": 62,
-      "LiveCodeBench": 76.5
+      "SWE-bench Verified": 80.2,
+      "SWE-bench Pro": 55.9
+    },
+    "official_id": "inkling-small",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://thinkingmachines.ai/model-card/inkling-small/"
+      }
+    ],
+    "release_date_source": "https://thinkingmachines.ai/model-card/inkling-small/",
+    "parameter_source": "https://thinkingmachines.ai/model-card/inkling-small/",
+    "benchmark_sources": {
+      "SWE-bench Verified": "https://thinkingmachines.ai/model-card/inkling-small/",
+      "SWE-bench Pro": "https://thinkingmachines.ai/model-card/inkling-small/"
+    },
+    "benchmark_note": "Thinking Machines Lab 공식 model card의 Inkling-Small/자기 평가 열 수치입니다.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
     "id": "model-096",
-    "name": "DeepSeek-V4-Flash",
+    "name": "DeepSeek-V4-Flash-0731",
     "date": "2026-07-31",
     "sortDate": "2026-07-31",
     "month": "2026-07",
@@ -3361,8 +5194,8 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "Public beta / official Flash release",
-    "parameters": "~27B / ~3B active (MoE)",
-    "architecture": "Sparse MoE",
+    "parameters": "정확한 수치 미공개 (0731 snapshot 공식 카드에 총/활성 파라미터 별도 표기 없음)",
+    "architecture": "Sparse MoE with CSA/HCA",
     "modalities": [],
     "focus": [],
     "open_weights": true,
@@ -3374,13 +5207,88 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1350,
-      "LiveCodeBench": 91.6,
-      "SWE-bench Verified": 79,
       "Terminal-Bench 2.1": 82.7,
-      "GPQA Diamond": 88.1,
-      "MMLU-Pro": 84.2,
-      "MATH-500": 93.8
+      "NL2Repo": 54.2,
+      "CyberGym": 76.7,
+      "DeepSWE": 54.4,
+      "Toolathlon Verified": 70.3
+    },
+    "official_id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731",
+    "parameter_source": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731",
+    "benchmark_sources": {
+      "Terminal-Bench 2.1": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731",
+      "NL2Repo": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731",
+      "CyberGym": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731",
+      "DeepSWE": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731",
+      "Toolathlon Verified": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731"
+    },
+    "benchmark_note": "DeepSeek 공식 0731 모델 카드의 자기 보고 수치입니다.",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-129",
+    "name": "K-EXAONE 2.0",
+    "date": "2026-07-31",
+    "sortDate": "2026-07-31",
+    "month": "2026-07",
+    "monthName": "July",
+    "company": "LG AI Research",
+    "family": "EXAONE",
+    "type": "LLM",
+    "category": "Reasoning",
+    "status": "GA",
+    "parameters": "750B total / 37B active (MoE)",
+    "architecture": "Sparse MoE",
+    "modalities": [
+      "language",
+      "code"
+    ],
+    "focus": [
+      "Sovereign AI",
+      "Korean deep reasoning",
+      "materials science / industrial AI"
+    ],
+    "open_weights": true,
+    "license": "Apache 2.0",
+    "context": "262,144",
+    "languages": "Korean, English",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "Open Weights (Hugging Face / Sovereign AI)",
+    "note": "Corrected from the unsupported ~260B/~28B estimate. The official model card reports 750B total / 37B active parameters.",
+    "benchmarks": {},
+    "official_id": "LGAI-EXAONE/K-EXAONE-2.0-750B-A37B",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B"
+      },
+      {
+        "label": "공식 출시 발표",
+        "url": "https://www.lgresearch.ai/news/view?seq=678"
+      }
+    ],
+    "release_date_source": "https://www.lgresearch.ai/news/view?seq=678",
+    "parameter_source": "https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -3395,7 +5303,7 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "2.4T total (active count 미공개)",
     "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
@@ -3406,17 +5314,28 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "Alibaba DashScope 플래그십 상용 API 모델 (파라미터 비공개)",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1450,
-      "SWE-bench Pro": 67.7,
-      "GPQA Diamond": 92.6,
-      "MMLU-Pro": 88.5,
-      "MMMU (Multimodal)": 81.5
+    "note": "",
+    "benchmarks": {},
+    "official_id": "document-2021044032125272064",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://www.alibabagroup.com/en-US/document-2021044032125272064"
+      }
+    ],
+    "release_date_source": "https://www.alibabagroup.com/en-US/document-2021044032125272064",
+    "parameter_source": "https://www.alibabagroup.com/en-US/document-2021044032125272064",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "publisher-partial",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
-    "id": "model-098",
+    "id": "model-136",
     "name": "Muse Spark 1.2",
     "date": "2026-08-05",
     "sortDate": "2026-08-05",
@@ -3424,30 +5343,56 @@ const TIMELINE_DATA = [
     "monthName": "August",
     "company": "Meta",
     "family": "Muse Spark",
-    "type": "MLLM",
+    "type": "MLLM / coding",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
-    "architecture": "",
-    "modalities": [],
-    "focus": [],
-    "open_weights": null,
-    "license": "",
+    "parameters": "정확한 수치 미공개",
+    "architecture": "Hosted coding-focused model (Muse Code beta의 구동 모델)",
+    "modalities": [
+      "text",
+      "image",
+      "video"
+    ],
+    "focus": [
+      "Agentic Coding",
+      "Complex debugging",
+      "Codebase understanding"
+    ],
+    "open_weights": false,
+    "license": "Proprietary (Muse Code / Meta Model API)",
     "context": "",
     "languages": "",
     "variants": [],
     "reasoning_effort": [],
-    "availability": "",
-    "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1505,
-      "AA Intelligence Index": 58
+    "availability": "Muse Code (macOS/Linux beta), Meta Model API",
+    "note": "2026-09-04 감사에서는 \"공식 발표문을 확인하지 못한다\"며 제외 원장(model-098)에 보류됐습니다. Meta AI Research 블로그(research.meta.ai)의 'Introducing Muse Code and Muse Spark 1.2'(2026-08-05)를 확인해 활성 레코드로 이관하고 구 model-098 제외 항목을 삭제했습니다. 모달리티 중 video는 Muse Code 데모(동영상 입력 해석) 근거이며, 파라미터는 1차 자료에 없습니다. 발표문 자체에 수치 점수가 없어 별도 평가 리포트의 값은 기록하지 않았습니다.",
+    "benchmarks": {},
+    "official_id": "introducing-muse-code-and-muse-spark-1-2",
+    "official_sources": [
+      {
+        "label": "Meta AI Research 공식 발표문",
+        "url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2"
+      },
+      {
+        "label": "Meta 평가·기술 포스트",
+        "url": "https://research.meta.ai/blog/multimodal-intelligence-of-muse-spark-1-2"
+      }
+    ],
+    "release_date_source": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+    "parameter_source": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-08",
+      "policy": "official-primary-only"
     }
   },
   {
     "id": "model-099",
-    "name": "Motif 3",
-    "date": "2026-08-10~12",
+    "name": "Motif-3",
+    "date": "2026-08-10",
     "sortDate": "2026-08-10",
     "month": "2026-08",
     "monthName": "August",
@@ -3456,7 +5401,7 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "GA",
-    "parameters": "~314B total / ~13.2B active",
+    "parameters": "~314B total / ~13.2B active (MoE)",
     "architecture": "MoE, GDLA, MTP",
     "modalities": [],
     "focus": [],
@@ -3467,11 +5412,237 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "Technical/public-release dates differ slightly by source.",
+    "note": "The technical report/model card uses approximate values.",
+    "benchmarks": {},
+    "official_id": "Motif-Technologies/Motif-3",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/Motif-Technologies/Motif-3"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/Motif-Technologies/Motif-3",
+    "parameter_source": "https://huggingface.co/Motif-Technologies/Motif-3",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "publisher-approximate",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-140",
+    "name": "GPT-5.6-Cyber",
+    "date": "2026-08-10",
+    "sortDate": "2026-08-10",
+    "month": "2026-08",
+    "monthName": "August",
+    "company": "OpenAI",
+    "family": "GPT",
+    "type": "MLLM",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "정확한 수치 미공개",
+    "architecture": "GPT-5.6 Sol 기반 사이버 업무 특화 파인튜닝",
+    "modalities": [],
+    "focus": [
+      "Cybersecurity",
+      "Zero-day discovery",
+      "Exploit development"
+    ],
+    "open_weights": false,
+    "license": "Proprietary (Daybreak Red 접근 제한)",
+    "context": "",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "Daybreak Red 승인 기관 전용",
+    "note": "Daybreak Blue/Red 이원화 발표(2026-08-10)와 함께 공개된 방어자 전용 사이버 모델입니다. Preparedness Framework 사이버 평가에서 High(기존 GPT-5.5-Cyber·Sol과 동일한 수준)로 판단되어 Critical에는 도달하지 않았습니다. Gemini 3.5/3.8 Flash Cyber와 동일한 '제한 접근 사이버 전용 변형' 기준으로 수록했습니다.",
     "benchmarks": {
-      "SWE-bench Verified": 76.2,
-      "Terminal-Bench 2.1": 74.9,
-      "AA Intelligence Index": 47
+      "Advanced Cybersecurity Completion Rate (internal)": 95.0
+    },
+    "official_id": "expanding-daybreak-as-the-cyber-defense-window-narrows",
+    "official_sources": [
+      {
+        "label": "OpenAI Daybreak 확장 공식 발표문",
+        "url": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/"
+      }
+    ],
+    "release_date_source": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/",
+    "parameter_source": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/",
+    "benchmark_sources": {
+      "Advanced Cybersecurity Completion Rate (internal)": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/"
+    },
+    "benchmark_note": "OpenAI가 같은 발표문에 명시한 내부 평가 값입니다(고급 사이버 요청 완수율: GPT-5.6-Cyber 95.0%, GPT-5.6 Sol 1.5%, Daybreak Blue 2.0%, GPT-5.5-Cyber 57.3%). ExploitGym·ExploitBench는 'Sol 및 5.5-Cyber보다 우수'라는 서술만 있고 수치가 없어 기록하지 않았습니다.",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-08",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-141",
+    "name": "Muse Glimmer",
+    "date": "2026-08-10",
+    "sortDate": "2026-08-10",
+    "month": "2026-08",
+    "monthName": "August",
+    "company": "Meta",
+    "family": "Muse Glimmer",
+    "type": "MLLM / agentic foundation model",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "총 29.6B dense (~1.8B ViT-G/14 perception encoder 포함)",
+    "architecture": "Dense causal transformer + frozen ViT-G/14 perception encoder, Muse Spark logit distillation",
+    "modalities": [
+      "text",
+      "image"
+    ],
+    "focus": [
+      "Local agents",
+      "Tool use",
+      "Agentic Coding",
+      "On-device inference"
+    ],
+    "open_weights": true,
+    "license": "Apache 2.0",
+    "context": "131,072+",
+    "languages": "100개 이상 언어",
+    "variants": [
+      "BF16",
+      "K-Quant-Dynamic (32GB)",
+      "K-Quant-17GB (24GB)",
+      "DFlash drafter"
+    ],
+    "reasoning_effort": [
+      "low",
+      "medium",
+      "high",
+      "xhigh"
+    ],
+    "availability": "Hugging Face meta-models/Muse-Glimmer-30B, llama.cpp / MLX / ExecuTorch / vLLM / SGLang / Ollama / LM Studio / OpenRouter 등",
+    "note": "Meta가 Llama 4 이후 처음 공개한 오픈웨이트 모델이며 24/32GB 소비자 GPU 구동을 전제로 양자화·DFlash 스펙큘러 드코딩까지 함께 배포합니다. 벤치마크는 Hugging Face 공식 모델 카드의 Muse Glimmer-30B High Reasoning 열 값입니다. 카드에 함께 실린 AA 접미 지표(GPQA Diamond (AA), HLE Text (AA), AA-LCR, GDPVal-AA v2)는 제3자 지표 정책상 뺐고, audio 입출력은 미지원입니다.",
+    "benchmarks": {
+      "MCP Atlas (Public)": 75.5,
+      "DeepSearch QA": 74.6,
+      "SWE-Bench Pro": 51.2,
+      "SWE-Bench Verified": 76.0,
+      "TerminalBench 2.1": 51.7,
+      "Charxiv Reasoning": 78.8,
+      "IFBench": 77.0,
+      "AIME 2026": 94.7,
+      "WMDP (Bio)": 86.5
+    },
+    "official_id": "meta-models/Muse-Glimmer-30B",
+    "official_sources": [
+      {
+        "label": "Meta AI Research 공식 발표문",
+        "url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model"
+      },
+      {
+        "label": "공식 모델 카드",
+        "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B"
+      }
+    ],
+    "release_date_source": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
+    "parameter_source": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+    "benchmark_sources": {
+      "MCP Atlas (Public)": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+      "DeepSearch QA": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+      "SWE-Bench Pro": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+      "SWE-Bench Verified": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+      "TerminalBench 2.1": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+      "Charxiv Reasoning": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+      "IFBench": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+      "AIME 2026": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+      "WMDP (Bio)": "https://huggingface.co/meta-models/Muse-Glimmer-30B"
+    },
+    "benchmark_note": "Meta 공식 Hugging Face 모델 카드의 High Reasoning 설정 점수입니다.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-08",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-142",
+    "name": "Nemotron-3.5-Lightning-30B-A3B",
+    "date": "2026-08-11",
+    "sortDate": "2026-08-11",
+    "month": "2026-08",
+    "monthName": "August",
+    "company": "NVIDIA",
+    "family": "Nemotron",
+    "type": "LLM / reasoning",
+    "category": "Reasoning",
+    "status": "GA",
+    "parameters": "30B total / 3B active (MoE; BF16·NVFP4 체크포인트)",
+    "architecture": "Hybrid MoE — interleaved Mamba-2 + MoE + Attention layers, MTP",
+    "modalities": [
+      "text"
+    ],
+    "focus": [
+      "Long-running agents",
+      "High-throughput execution",
+      "Low latency"
+    ],
+    "open_weights": true,
+    "license": "OpenMDW-1.1",
+    "context": "Up to 1M tokens",
+    "languages": "English (+coding), Spanish, French, German, Italian, Japanese",
+    "variants": [
+      "BF16",
+      "NVFP4",
+      "DSpark draft",
+      "DFlash draft",
+      "GGUF"
+    ],
+    "reasoning_effort": [
+      "enable_thinking on/off (chat template)"
+    ],
+    "availability": "Hugging Face, ModelScope, OpenRouter, build.nvidia.com NIM, OCI 등",
+    "note": "Nemotron 3 Nano 30B-A3B의 후속으로, 상시 실행 에이전트의 실행 레이어를 겨냥한 효율 모델입니다. 벤치마크는 NVFP4 공식 체크포인트 기준 값입니다. 카드의 AA-* 지표(AA-Omniscience, GDPval-AA-V2, AA-LCR)는 제3자 지표 정책상 제외했습니다.",
+    "benchmarks": {
+      "MMLU Pro": 81.62,
+      "GPQA Diamond (no tools)": 75.57,
+      "HLE (text-only, no tools)": 10.47,
+      "SciCode": 31.38,
+      "SWE-bench Verified": 52.8,
+      "Terminal-Bench 2.1": 23.46,
+      "PinchBench": 83.43,
+      "BrowseComp": 36.81,
+      "IFBench (loose)": 72.88
+    },
+    "official_id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
+    "official_sources": [
+      {
+        "label": "공식 모델 카드",
+        "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
+    "parameter_source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
+    "benchmark_sources": {
+      "MMLU Pro": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
+      "GPQA Diamond (no tools)": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
+      "HLE (text-only, no tools)": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
+      "SciCode": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
+      "SWE-bench Verified": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
+      "Terminal-Bench 2.1": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
+      "PinchBench": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
+      "BrowseComp": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
+      "IFBench (loose)": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4"
+    },
+    "benchmark_note": "NVIDIA가 NeMo Gym / NeMo Evaluator 하네스로 측정한 공식 표의 NVFP4 열 값입니다 (BF16 열은 별도).",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-08",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -3497,13 +5668,24 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1445,
-      "SWE-bench Pro": 66.5,
-      "GPQA Diamond": 92,
-      "MMLU-Pro": 88.2,
-      "LiveCodeBench": 89.5
+    "note": "Official open checkpoint is Qwen3.8-2.4T-A95B.",
+    "benchmarks": {},
+    "official_id": "Qwen/Qwen3.8-2.4T-A95B",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+    "parameter_source": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -3518,7 +5700,7 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "",
     "modalities": [
       "text",
@@ -3530,7 +5712,7 @@ const TIMELINE_DATA = [
       "visual work",
       "knowledge work"
     ],
-    "open_weights": null,
+    "open_weights": false,
     "license": "",
     "context": "",
     "languages": "",
@@ -3538,55 +5720,28 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1515,
-      "SWE-bench Pro": 69.4,
-      "Terminal-Bench 2.1": 71.2,
-      "AA Intelligence Index": 61
-    }
-  },
-  {
-    "id": "model-129",
-    "name": "K-EXAONE 2.0",
-    "date": "2026-08-12",
-    "sortDate": "2026-08-12",
-    "month": "2026-08",
-    "monthName": "August",
-    "company": "LG AI Research",
-    "family": "EXAONE",
-    "type": "LLM",
-    "category": "Reasoning",
-    "status": "GA",
-    "parameters": "~260B total / ~28B active (Sparse MoE)",
-    "architecture": "Sparse Mixture-of-Experts (MoE)",
-    "modalities": [
-      "language",
-      "code"
+    "benchmarks": {},
+    "official_id": "grok-4-6",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://x.ai/news/grok-4-6"
+      }
     ],
-    "focus": [
-      "Sovereign AI",
-      "Korean deep reasoning",
-      "materials science / industrial AI"
-    ],
-    "open_weights": true,
-    "license": "EXAONE Open License",
-    "context": "256K",
-    "languages": "Korean, English",
-    "variants": [
-      "260B MoE"
-    ],
-    "reasoning_effort": [],
-    "availability": "Open Weights (Research & Sovereign AI)",
-    "note": "한국 정부 독자 소버린 AI 파운데이션 모델 프로젝트의 일환으로 공개된 대규모 MoE 추론 모델. 물질 과학 및 산업 도메인 특화 지식 탑재.",
-    "benchmarks": {
-      "IFEval": 86.4,
-      "MMLU-Pro": 78.5,
-      "SWE-bench Verified": 61.2
+    "release_date_source": "https://x.ai/news/grok-4-6",
+    "parameter_source": "https://x.ai/news/grok-4-6",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
     "id": "model-102",
-    "name": "DeepSeek-V4-Pro",
+    "name": "DeepSeek-V4-Pro-0813",
     "date": "2026-08-13",
     "sortDate": "2026-08-13",
     "month": "2026-08",
@@ -3596,8 +5751,8 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "GA",
-    "parameters": "~1T total / ~37B active (MoE)",
-    "architecture": "MLA + Sparse MoE",
+    "parameters": "정확한 수치 미공개 (0813 snapshot 공식 카드에 총/활성 파라미터 별도 표기 없음)",
+    "architecture": "Sparse MoE with CSA/HCA",
     "modalities": [],
     "focus": [],
     "open_weights": true,
@@ -3609,13 +5764,34 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1415,
-      "LiveCodeBench": 93.5,
-      "SWE-bench Verified": 95.2,
       "Terminal-Bench 2.1": 87.9,
-      "GPQA Diamond": 90.1,
-      "MMLU-Pro": 87.5,
-      "MATH-500": 96.5
+      "NL2Repo": 61.5,
+      "CyberGym": 83.3,
+      "DeepSWE": 62.7,
+      "Toolathlon Verified": 74.1
+    },
+    "official_id": "deepseek-ai/DeepSeek-V4-Pro-0813",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813",
+    "parameter_source": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813",
+    "benchmark_sources": {
+      "Terminal-Bench 2.1": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813",
+      "NL2Repo": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813",
+      "CyberGym": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813",
+      "DeepSWE": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813",
+      "Toolathlon Verified": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813"
+    },
+    "benchmark_note": "DeepSeek 공식 0813 모델 카드의 자기 보고 수치입니다.",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -3630,7 +5806,7 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "",
     "modalities": [],
     "focus": [
@@ -3638,7 +5814,7 @@ const TIMELINE_DATA = [
       "agents",
       "knowledge work"
     ],
-    "open_weights": null,
+    "open_weights": false,
     "license": "",
     "context": "",
     "languages": "",
@@ -3646,11 +5822,23 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1515,
-      "SWE-bench Verified": 88,
-      "Terminal-Bench 2.1": 86.5,
-      "MMMU (Multimodal)": 82
+    "benchmarks": {},
+    "official_id": "gemini-3-7-flash",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/"
+      }
+    ],
+    "release_date_source": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "parameter_source": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -3665,7 +5853,7 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "27B (Dense)",
+    "parameters": "27B dense",
     "architecture": "Dense Transformer",
     "modalities": [],
     "focus": [],
@@ -3678,11 +5866,30 @@ const TIMELINE_DATA = [
     "availability": "",
     "note": "",
     "benchmarks": {
-      "Chatbot Arena ELO": 1380,
-      "GPQA Diamond": 89.2,
-      "SWE-bench Pro": 56.5,
-      "MMLU-Pro": 82,
-      "LiveCodeBench": 82.5
+      "SWE-bench Pro": 61.7,
+      "Terminal-Bench 2.1": 73.0,
+      "DeepSWE": 42.2
+    },
+    "official_id": "Qwen/Qwen3.8-27B",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/Qwen/Qwen3.8-27B",
+    "parameter_source": "https://huggingface.co/Qwen/Qwen3.8-27B",
+    "benchmark_sources": {
+      "SWE-bench Pro": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "Terminal-Bench 2.1": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "DeepSWE": "https://huggingface.co/Qwen/Qwen3.8-27B"
+    },
+    "benchmark_note": "Qwen 공식 Qwen3.8-27B 모델 카드 수치입니다.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -3697,7 +5904,7 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "GA",
-    "parameters": "744B total / ~40B active (MoE)",
+    "parameters": "정확한 수치 미공개 (공식 카드에는 753B model size만 표기; 총/활성 파라미터 미공개)",
     "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
@@ -3708,17 +5915,29 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1430,
-      "MMLU-Pro": 85.6,
-      "LiveCodeBench": 87.2,
-      "SWE-bench Verified": 78.9
+    "note": "GLM-5.2 계열이라는 이유로 GLM-5의 744B/40B 수치를 복사하지 않았습니다. 공식 카드의 model size도 총 파라미터 수로 간주하지 않습니다.",
+    "benchmarks": {},
+    "official_id": "zai-org/GLM-5.3",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/zai-org/GLM-5.3"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/zai-org/GLM-5.3",
+    "parameter_source": "https://huggingface.co/zai-org/GLM-5.3",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
     "id": "model-106",
-    "name": "DeepSeek-V4-Flash Vision Exp",
+    "name": "DeepSeek-V4-Flash-Vision-Exp",
     "date": "2026-08-21",
     "sortDate": "2026-08-21",
     "month": "2026-08",
@@ -3728,8 +5947,8 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "Experimental",
-    "parameters": "~27B (MLLM MoE)",
-    "architecture": "Vision-Language MoE",
+    "parameters": "정확한 수치 미공개 (Flash backbone·vision module을 합산한 총/활성 수치 공식 별도 표기 없음)",
+    "architecture": "Vision-language sparse MoE",
     "modalities": [],
     "focus": [],
     "open_weights": true,
@@ -3739,11 +5958,36 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "",
+    "note": "Vision experiment is tracked against the V4 Flash backbone; vision modules are not folded into the backbone count.",
     "benchmarks": {
-      "MMMU (Multimodal)": 76.4,
-      "LiveCodeBench": 88.5,
-      "GPQA Diamond": 84.5
+      "Terminal-Bench 2.1": 83.9,
+      "NL2Repo": 57.7,
+      "CyberGym": 75.3,
+      "DeepSWE": 59.3,
+      "Toolathlon Verified": 75.9
+    },
+    "official_id": "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+    "parameter_source": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+    "benchmark_sources": {
+      "Terminal-Bench 2.1": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+      "NL2Repo": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+      "CyberGym": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+      "DeepSWE": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+      "Toolathlon Verified": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp"
+    },
+    "benchmark_note": "DeepSeek 공식 vision experiment 모델 카드 수치입니다.",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -3758,7 +6002,7 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "GA",
-    "parameters": "~8B",
+    "parameters": "7.9B total / 1.3B active (MoE)",
     "architecture": "Dense Linear Attention",
     "modalities": [],
     "focus": [],
@@ -3770,10 +6014,23 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "MMLU": 79.5,
-      "LiveCodeBench": 68.2,
-      "IFEval": 76.5
+    "benchmarks": {},
+    "official_id": "inclusionAI/Ling-3.0-tiny",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/inclusionAI/Ling-3.0-tiny"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/inclusionAI/Ling-3.0-tiny",
+    "parameter_source": "https://huggingface.co/inclusionAI/Ling-3.0-tiny",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -3788,8 +6045,8 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "GA",
-    "parameters": "124B total / 5.1B active",
-    "architecture": "KDA + MLA hybrid linear attention, sparse MoE",
+    "parameters": "124B total / 5.1B active (MoE)",
+    "architecture": "Sparse MoE with KDA/MLA hybrid attention",
     "modalities": [],
     "focus": [],
     "open_weights": true,
@@ -3803,11 +6060,23 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "SWE-bench Verified": 79.8,
-      "AIME 2026": 95.4,
-      "LiveCodeBench": 84.2,
-      "IFEval": 85.2
+    "benchmarks": {},
+    "official_id": "inclusionAI/Ling-3.0-flash",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/inclusionAI/Ling-3.0-flash",
+    "parameter_source": "https://huggingface.co/inclusionAI/Ling-3.0-flash",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -3822,7 +6091,7 @@ const TIMELINE_DATA = [
     "type": "LLM family",
     "category": "LLM",
     "status": "GA",
-    "parameters": "3B, 8B, 34B",
+    "parameters": "3B, 8B, 30B dense language variants",
     "architecture": "Reasoning & Agentic Transformer",
     "modalities": [],
     "focus": [
@@ -3838,13 +6107,28 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "speech-only members omitted",
-    "benchmarks": {
-      "SWE-bench Verified": 57,
-      "MMLU-Pro": 77.6,
-      "GPQA": 66.4,
-      "AIME 2025": 89.2,
-      "Terminal-Bench 2.1": 29.2
+    "note": "",
+    "benchmarks": {},
+    "official_id": "ibm-granite/granite-4.2-30b",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/ibm-granite/granite-4.2-30b"
+      },
+      {
+        "label": "공식 모델 컬렉션",
+        "url": "https://huggingface.co/collections/ibm-granite/granite-42-language-models"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/ibm-granite/granite-4.2-30b",
+    "parameter_source": "https://huggingface.co/collections/ibm-granite/granite-42-language-models",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -3859,8 +6143,8 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "125B A6B + 51B N-gram",
-    "architecture": "next-generation hybrid / efficient architecture",
+    "parameters": "125B main / 6B active + 51B N-gram embedding + 4B MTP",
+    "architecture": "Hybrid sparse architecture with N-gram embedding",
     "modalities": [],
     "focus": [],
     "open_weights": true,
@@ -3870,12 +6154,36 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "",
+    "note": "The N-gram embedding and MTP are reported separately by the official card.",
     "benchmarks": {
+      "DeepSWE": 58.7,
       "SWE-bench Pro": 62.5,
-      "MMLU-Pro": 73.2,
-      "GPQA Diamond": 91.7,
-      "LiveCodeBench": 91.9
+      "SWE-bench Multilingual": 81.0,
+      "NL2Repo": 48.1,
+      "Toolathlon Verified": 73.5
+    },
+    "official_id": "Qwen/Qwen3.8-Flash-Next",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+    "parameter_source": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+    "benchmark_sources": {
+      "DeepSWE": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+      "SWE-bench Pro": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+      "SWE-bench Multilingual": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+      "NL2Repo": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+      "Toolathlon Verified": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next"
+    },
+    "benchmark_note": "Qwen 공식 Qwen3.8-Flash-Next 모델 카드의 자기 보고 수치입니다.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -3890,7 +6198,7 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "GA",
-    "parameters": "~30B / ~3B active",
+    "parameters": "320B total / 18B active (MoE)",
     "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
@@ -3901,17 +6209,29 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "",
-    "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1355,
-      "MMLU": 86.4,
-      "LiveCodeBench": 79.5,
-      "SWE-bench Verified": 64
+    "note": "Corrected from the erroneous ~30B/~3B entry: the official card reports 320B total / 18B active.",
+    "benchmarks": {},
+    "official_id": "zai-org/GLM-5.3-Flash",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/zai-org/GLM-5.3-Flash"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+    "parameter_source": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
     "id": "model-112",
-    "name": "Hy4 Preview",
+    "name": "Hy4-preview",
     "date": "2026-08-28",
     "sortDate": "2026-08-28",
     "month": "2026-08",
@@ -3921,7 +6241,7 @@ const TIMELINE_DATA = [
     "type": "LLM",
     "category": "LLM",
     "status": "Preview",
-    "parameters": "770B total / 49B active (MoE) + 10B MTP",
+    "parameters": "770B backbone / 49B active + 10B MTP total / 0.7B MTP active (MoE)",
     "architecture": "Sparse MoE",
     "modalities": [],
     "focus": [],
@@ -3932,12 +6252,24 @@ const TIMELINE_DATA = [
     "variants": [],
     "reasoning_effort": [],
     "availability": "Open Weights (Hugging Face / GitHub)",
-    "note": "텐센트(Tencent)의 770B 초대형 오픈웨이트 MoE 모델. Apache 2.0 라이선스로 Hugging Face 및 GitHub에 가중치 전면 공개. 49B 활성 파라미터, 10B MTP(Multi-Token Prediction) 레이어, 1M+ 컨텍스트 지원.",
-    "benchmarks": {
-      "MMLU": 88.4,
-      "SWE-bench Verified": 72.8,
-      "LiveCodeBench": 83.5,
-      "GPQA Diamond": 84.2
+    "note": "Backbone and MTP counts are reported separately in the official model card.",
+    "benchmarks": {},
+    "official_id": "tencent/Hy4-preview",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://huggingface.co/tencent/Hy4-preview"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/tencent/Hy4-preview",
+    "parameter_source": "https://huggingface.co/tencent/Hy4-preview",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -3952,11 +6284,11 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "",
     "modalities": [],
     "focus": [],
-    "open_weights": null,
+    "open_weights": false,
     "license": "",
     "context": "",
     "languages": "",
@@ -3964,12 +6296,23 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "",
     "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1542,
-      "SWE-bench Verified": 96.5,
-      "SWE-bench Pro": 82.1,
-      "GPQA Diamond": 92.5,
-      "MMLU-Pro": 93
+    "benchmarks": {},
+    "official_id": "fable",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://www.anthropic.com/claude/fable"
+      }
+    ],
+    "release_date_source": "https://www.anthropic.com/claude/fable",
+    "parameter_source": "https://www.anthropic.com/claude/fable",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -3984,11 +6327,11 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
+    "parameters": "정확한 수치 미공개",
     "architecture": "",
     "modalities": [],
     "focus": [],
-    "open_weights": null,
+    "open_weights": false,
     "license": "",
     "context": "",
     "languages": "",
@@ -3996,41 +6339,23 @@ const TIMELINE_DATA = [
     "reasoning_effort": [],
     "availability": "restricted",
     "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1542,
-      "SWE-bench Verified": 96.5,
-      "SWE-bench Pro": 82.1,
-      "GPQA Diamond": 92.5,
-      "MMLU-Pro": 93
-    }
-  },
-  {
-    "id": "model-115",
-    "name": "Muse Spark 1.3",
-    "date": "2026-09-02",
-    "sortDate": "2026-09-02",
-    "month": "2026-09",
-    "monthName": "September",
-    "company": "Meta",
-    "family": "Muse Spark",
-    "type": "MLLM",
-    "category": "MLLM",
-    "status": "GA",
-    "parameters": "",
-    "architecture": "",
-    "modalities": [],
-    "focus": [],
-    "open_weights": null,
-    "license": "",
-    "context": "",
-    "languages": "",
-    "variants": [],
-    "reasoning_effort": [],
-    "availability": "",
-    "note": "",
-    "benchmarks": {
-      "Chatbot Arena ELO": 1530,
-      "AA Intelligence Index": 63
+    "benchmarks": {},
+    "official_id": "mythos",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://www.anthropic.com/claude/mythos"
+      }
+    ],
+    "release_date_source": "https://www.anthropic.com/claude/mythos",
+    "parameter_source": "https://www.anthropic.com/claude/mythos",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
     }
   },
   {
@@ -4045,8 +6370,8 @@ const TIMELINE_DATA = [
     "type": "MLLM",
     "category": "MLLM",
     "status": "GA",
-    "parameters": "",
-    "architecture": "2.4T MoE Foundation with SFT/RL for Coding & Agentic Cowork",
+    "parameters": "정확한 수치 미공개 (0902 snapshot 페이지에 별도 파라미터 공개 없음)",
+    "architecture": "Hosted multimodal model",
     "modalities": [
       "text",
       "image",
@@ -4067,13 +6392,838 @@ const TIMELINE_DATA = [
     ],
     "reasoning_effort": [],
     "availability": "QwenCloud API (qwen3.8-max-0902), DashScope",
-    "note": "알리바바(Alibaba)의 플래그십 Qwen3.8-Max 9월 2일자 사후 학습 업그레이드 스냅샷. 코드 생성 및 자율 협업(Cowork) 특화 강화학습을 거쳐 CodeArena WebDev 리더보드 1위(1,691점) 달성. 1M 토큰 컨텍스트 지원.",
+    "note": "공식 QwenCloud 페이지의 0902 snapshot/API ID를 별도 레코드로 기록했습니다. Qwen3.8-Max 본체의 2.4T 수치를 이 snapshot에 자동 전이하지 않습니다.",
+    "benchmarks": {},
+    "official_id": "qwen3.8-max-0902",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://www.qwencloud.com/models/qwen3.8-max-0902"
+      }
+    ],
+    "release_date_source": "https://www.qwencloud.com/models/qwen3.8-max-0902",
+    "parameter_source": "https://www.qwencloud.com/models/qwen3.8-max-0902",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-04",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-131",
+    "name": "Muse Spark 1.3",
+    "date": "2026-09-02",
+    "sortDate": "2026-09-02",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "Meta",
+    "family": "Muse Spark",
+    "type": "MLLM",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "정확한 수치 미공개",
+    "architecture": "Hosted agentic/coding model (Muse Code, Meta Model API)",
+    "modalities": [
+      "text",
+      "image"
+    ],
+    "focus": [
+      "Agentic Coding",
+      "Long-horizon agents",
+      "Multitasking"
+    ],
+    "open_weights": false,
+    "license": "Proprietary Commercial API (Meta Model API)",
+    "context": "",
+    "languages": "",
+    "variants": [
+      "muse-spark-1.3"
+    ],
+    "reasoning_effort": [
+      "xhigh (max reasoning added 2026-09-04)"
+    ],
+    "availability": "Muse Code, Meta Model API",
+    "note": "공식 발표문은 reasoning mode 중 max가 추가 안전 테스트 이후 제공된다고 명시했습니다 (max reasoning 실제 제공일은 2026-09-04). 총/활성 파라미터와 컨텍스트 윈도우는 1차 자료에 숫자로 명시되지 않아 비워 두었습니다. 이 모델은 2026-09-04 감사에서 '공식 발표문 미확인'으로 제외 원장(model-115)에 보류됐었으나, 2026-09-08에 Meta AI Research 블로그에서 1차 발표문을 확인해 활성 레코드로 되돌렸습니다 (구 model-115 제외 항목은 삭제).",
+    "benchmarks": {},
+    "official_id": "introducing-muse-spark-1-3",
+    "official_sources": [
+      {
+        "label": "Meta AI Research 공식 발표문",
+        "url": "https://research.meta.ai/blog/introducing-muse-spark-1-3"
+      }
+    ],
+    "release_date_source": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+    "parameter_source": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-08",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-132",
+    "name": "Gemini 3.8 Flash",
+    "date": "2026-09-02",
+    "sortDate": "2026-09-02",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "Google DeepMind",
+    "family": "Gemini",
+    "type": "MLLM",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "정확한 수치 미공개",
+    "architecture": "Based on Gemini 3.7 Flash (official model card)",
+    "modalities": [
+      "text",
+      "image",
+      "audio",
+      "video"
+    ],
+    "focus": [
+      "coding",
+      "agents",
+      "knowledge work",
+      "cybersecurity-trained core"
+    ],
+    "open_weights": false,
+    "license": "Proprietary Commercial API",
+    "context": "1M 입력 / 64K 출력 (공식 모델 카드)",
+    "languages": "",
+    "variants": [
+      "gemini-3-8-flash"
+    ],
+    "reasoning_effort": [
+      "customizable effort levels"
+    ],
+    "availability": "Gemini app, AI Mode, Gemini API (gemini-3-8-flash), Vertex AI, introductory $0.75/$3.75 per 1M (2026-12-31까지)",
+    "note": "3주 만의 3.7 Flash 후속이며 6주 사이 세 번째 Flash 릴리스입니다. 공식 모델 카드에는 벤치마크 수치 표가 채워져 있지 않아(2026-09-08 확인), 숫자는 공식 블로그에 텍스트로 명시된 값만 기록했습니다.",
     "benchmarks": {
-      "Chatbot Arena ELO": 1458,
-      "CodeArena WebDev": 1691,
-      "SWE-bench Pro": 68.5,
-      "GPQA Diamond": 92.8,
-      "MMLU-Pro": 88.7
+      "HLE-Verified": 54.9
+    },
+    "official_id": "gemini-3-8-flash",
+    "official_sources": [
+      {
+        "label": "공식 모델 카드",
+        "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/"
+      },
+      {
+        "label": "Google 공식 발표문",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
+      },
+      {
+        "label": "Vertex AI 모델 문서",
+        "url": "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/3-8-flash"
+      }
+    ],
+    "release_date_source": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+    "parameter_source": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+    "benchmark_sources": {
+      "HLE-Verified": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
+    },
+    "benchmark_note": "Google 공식 발표문에 텍스트로 명시된 HLE-Verified 값입니다. 차트 이미지만 공개된 지표는 기록하지 않았습니다.",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-08",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-133",
+    "name": "Gemini 3.8 Flash Cyber",
+    "date": "2026-09-02",
+    "sortDate": "2026-09-02",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "Google DeepMind",
+    "family": "Gemini",
+    "type": "MLLM",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "정확한 수치 미공개",
+    "architecture": "Same shared core as Gemini 3.8 Flash, cyber-permissive mitigations",
+    "modalities": [],
+    "focus": [
+      "cybersecurity",
+      "vulnerability discovery",
+      "automated patching"
+    ],
+    "open_weights": false,
+    "license": "Proprietary (Fairwind Program gated access)",
+    "context": "",
+    "languages": "",
+    "variants": [
+      "gemini-3-8-flash-cyber"
+    ],
+    "reasoning_effort": [],
+    "availability": "Fairwind Program 승인 방어를 통한 제한 제공",
+    "note": "Gemini 3.5 Flash Cyber와 같이 제한 접근 사이버 방어 전용 변형입니다. 2026-09-08 기준 deepmind.google 모델 카드가 없는 404이며, Google/Fairwind 페이지 기준으로 기록했습니다.",
+    "benchmarks": {
+      "CWE-Bench (pass@1)": 47.2
+    },
+    "official_id": "3-8-flash-and-3-8-flash-cyber",
+    "official_sources": [
+      {
+        "label": "Google 공식 발표문",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
+      },
+      {
+        "label": "Fairwind Program",
+        "url": "https://deepmind.google/fairwind-program/"
+      }
+    ],
+    "release_date_source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+    "parameter_source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+    "benchmark_sources": {
+      "CWE-Bench (pass@1)": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
+    },
+    "benchmark_note": "Google 공식 발표문에 텍스트로 명시된 CWE-Bench pass@1 값입니다(Collinear 운영 벤치마크).",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-08",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-134",
+    "name": "GPT-6 Astra",
+    "date": "2026-09-03",
+    "sortDate": "2026-09-03",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "OpenAI",
+    "family": "GPT",
+    "type": "MLLM",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "정확한 수치 미공개",
+    "architecture": "Hosted frontier multimodal model (text + image input, text output)",
+    "modalities": [
+      "text",
+      "image"
+    ],
+    "focus": [
+      "Computer Use",
+      "Browsing",
+      "Agentic Coding",
+      "Cybersecurity",
+      "Science",
+      "Professional Work"
+    ],
+    "open_weights": false,
+    "license": "Proprietary Commercial API",
+    "context": "1,050,000 (max output 128,000)",
+    "languages": "Multilingual",
+    "variants": [
+      "gpt-6-astra"
+    ],
+    "reasoning_effort": [
+      "low",
+      "medium",
+      "high",
+      "xhigh",
+      "max"
+    ],
+    "availability": "2026-09-03 Daybreak 기관 대상 우선 출시 후 ChatGPT Plus/Pro/Business/Enterprise, OpenAI API(gpt-6-astra), Azure, AWS Bedrock으로 확대; $10/$50 per 1M",
+    "note": "GPT-5.6(Sol/Terra/Luna)와 별도 세대인 GPT-6 계열 첫 모델이며 Pre-Preparedness Framework 사이버 Critical 임계점에 도달한 첫 모델입니다. API 모델 gpt-6-astra는 2026-09-04 공개. openai.com 발표문은 봇 차단(403)으로 미러 렌더링으로 전문을 확인했고, 수치는 전부 해당 발표문의 공식 평가 표에 인쇄된 값입니다.",
+    "benchmarks": {
+      "Terminal-Bench 4.0": 57.9,
+      "DeepSWE v1.1": 74.1,
+      "FrontierCode 1.1 Extended": 64.5,
+      "FrontierMath Tier 4 (v2)": 97.6,
+      "GPQA Diamond": 96.0,
+      "Humanity's Last Exam (w/ tools)": 57.2,
+      "ARC-AGI-3": 99.9,
+      "ARC-AGI-2": 95.0,
+      "BrowseComp": 91.5,
+      "Agents' Last Exam": 59.3,
+      "OSWorld 2.0": 72.6,
+      "ScreenSpot-Pro": 92.7,
+      "Terminal-Bench Science 0.1": 64.6,
+      "BenchCAD": 95.9,
+      "ExploitBench": 100.0,
+      "ExploitGym": 42.4,
+      "SRE-Bench": 88.0,
+      "HealthBench Professional": 63.4
+    },
+    "official_id": "gpt-6-astra",
+    "official_sources": [
+      {
+        "label": "OpenAI 공식 발표문",
+        "url": "https://openai.com/index/gpt-6-astra/"
+      },
+      {
+        "label": "OpenAI API 모델 문서",
+        "url": "https://developers.openai.com/api/docs/models/gpt-6-astra"
+      },
+      {
+        "label": "GPT-6 Astra System Card",
+        "url": "https://deploymentsafety.openai.com/gpt-6-astra"
+      }
+    ],
+    "release_date_source": "https://openai.com/index/gpt-6-astra/",
+    "parameter_source": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+    "benchmark_sources": {
+      "Terminal-Bench 4.0": "https://openai.com/index/gpt-6-astra/",
+      "DeepSWE v1.1": "https://openai.com/index/gpt-6-astra/",
+      "FrontierCode 1.1 Extended": "https://openai.com/index/gpt-6-astra/",
+      "FrontierMath Tier 4 (v2)": "https://openai.com/index/gpt-6-astra/",
+      "GPQA Diamond": "https://openai.com/index/gpt-6-astra/",
+      "Humanity's Last Exam (w/ tools)": "https://openai.com/index/gpt-6-astra/",
+      "ARC-AGI-3": "https://openai.com/index/gpt-6-astra/",
+      "ARC-AGI-2": "https://openai.com/index/gpt-6-astra/",
+      "BrowseComp": "https://openai.com/index/gpt-6-astra/",
+      "Agents' Last Exam": "https://openai.com/index/gpt-6-astra/",
+      "OSWorld 2.0": "https://openai.com/index/gpt-6-astra/",
+      "ScreenSpot-Pro": "https://openai.com/index/gpt-6-astra/",
+      "Terminal-Bench Science 0.1": "https://openai.com/index/gpt-6-astra/",
+      "BenchCAD": "https://openai.com/index/gpt-6-astra/",
+      "ExploitBench": "https://openai.com/index/gpt-6-astra/",
+      "ExploitGym": "https://openai.com/index/gpt-6-astra/",
+      "SRE-Bench": "https://openai.com/index/gpt-6-astra/",
+      "HealthBench Professional": "https://openai.com/index/gpt-6-astra/"
+    },
+    "benchmark_note": "OpenAI GPT-6 Astra 공식 발표문의 공식 평가 표(Astra 열) 수치이며, 발표문 기준 '모든 effort 중 최대' 점수입니다. ARC-AGI-3는 OpenAI responses API 하네스, OSWorld 2.0/Agents' Last Exam/SRE-Bench/ExploitBench는 에이전트·하네스 포함 측정이고 ExploitBench·ExploitGym은 프로덕션 세이프가드 없이 측정했습니다. 발표문에 함께 실린 Artificial Analysis 지수 표는 제3자 지표 정책상 기록하지 않았습니다.",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-08",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-135",
+    "name": "GPT-6 Astra Pro",
+    "date": "2026-09-03",
+    "sortDate": "2026-09-03",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "OpenAI",
+    "family": "GPT",
+    "type": "MLLM",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "정확한 수치 미공개",
+    "architecture": "Hosted frontier model (pro-tier reasoning)",
+    "modalities": [
+      "text",
+      "image"
+    ],
+    "focus": [
+      "Professional Work",
+      "Agentic Coding",
+      "Research"
+    ],
+    "open_weights": false,
+    "license": "Proprietary Commercial Subscription",
+    "context": "",
+    "languages": "",
+    "variants": [
+      "gpt-6-astra-pro (ChatGPT Pro/Business/Enterprise tier)"
+    ],
+    "reasoning_effort": [],
+    "availability": "ChatGPT Pro / Business / Enterprise 전용",
+    "note": "공식 발표문 Availability 절에 명시된 상위 변형입니다. 2026-09-08 기준으로 개발자 문서의 API 모델 목록에는 gpt-6-astra만 노출되어 개별 API 모델 ID와 고유 사양·점수는 기록하지 않았습니다.",
+    "benchmarks": {},
+    "official_id": "gpt-6-astra",
+    "official_sources": [
+      {
+        "label": "OpenAI 공식 발표문",
+        "url": "https://openai.com/index/gpt-6-astra/"
+      }
+    ],
+    "release_date_source": "https://openai.com/index/gpt-6-astra/",
+    "parameter_source": "https://openai.com/index/gpt-6-astra/",
+    "benchmark_sources": {},
+    "benchmark_note": "",
+    "parameter_status": "undisclosed",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-08",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-143",
+    "name": "K2-Horizon-375B-A23B",
+    "date": "2026-09-03",
+    "sortDate": "2026-09-03",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "Institute of Foundation Models",
+    "family": "K2 Horizon",
+    "type": "LLM",
+    "category": "LLM",
+    "status": "GA",
+    "parameters": "375B total / ~23B active (sparse MoE)",
+    "architecture": "Sparse MoE, shared core architecture/vocabulary across the fleet",
+    "modalities": [
+      "text"
+    ],
+    "focus": [
+      "Agentic tool use",
+      "Terminal workflows",
+      "Enterprise reasoning"
+    ],
+    "open_weights": true,
+    "license": "Apache 2.0 (모델·코드), 학습 데이터셋은 ODC-BY 등 개별 라이선스",
+    "context": "524,288 (512K)",
+    "languages": "영어 중심(카드 language: en)",
+    "variants": [
+      "BF16",
+      "FP8"
+    ],
+    "reasoning_effort": [],
+    "availability": "Hugging Face IFM org, vLLM / SGLang / Ollama 출시 당일(day-0) 지원, Cerebras 하드웨어",
+    "note": "K2 Horizon 함대의 플래그십. IFM(구 LLM360 계열)이 프리트레인~에이전틱 포스트트레인 전체 라이프사이클(중간 체크포인트·학습 데이터 또는 구성 레시피·혼합비·코드·설정·로그·평가)까지 공개한 완전 오픈 릴리스입니다. 공식 블로그 기준 프리트레인은 약 10조 합성 토큰 규모이며, 병렬 토큰 생성 'diffusion distillation'으로 응답 품질을 유지하면서 약 3배 가속했다고 명시했습니다.",
+    "benchmarks": {
+      "tau3-Banking": 34.0,
+      "Toolathlon Verified": 65.3,
+      "Automation Bench Public": 25.3,
+      "Apex-Agents (pass@1)": 24.8,
+      "MCPMark": 67.7,
+      "BrowseComp": 72.8,
+      "WildClawBench": 50.9,
+      "Terminal-Bench 2.1": 70.2,
+      "SciCode": 42.7,
+      "SWE-Atlas-QnA (strict)": 48.4,
+      "SWE Bench Pro (strict)": 42.6,
+      "Humanity's Last Exam (without tools)": 32.0,
+      "GPQA Diamond": 87.3,
+      "CritPt": 8.6
+    },
+    "official_id": "IFM/K2-Horizon-375B-A23B",
+    "official_sources": [
+      {
+        "label": "IFM 공식 발표문",
+        "url": "https://ifm.ai/blog/k2/"
+      },
+      {
+        "label": "IFM 공식 프레스 릴리스",
+        "url": "https://ifm.ai/k2/press-release/"
+      },
+      {
+        "label": "공식 모델 카드",
+        "url": "https://huggingface.co/IFM/K2-Horizon-375B-A23B"
+      }
+    ],
+    "release_date_source": "https://ifm.ai/blog/k2/",
+    "parameter_source": "https://huggingface.co/IFM/K2-Horizon-375B-A23B",
+    "benchmark_sources": {
+      "tau3-Banking": "https://huggingface.co/IFM/K2-Horizon-375B-A23B",
+      "Toolathlon Verified": "https://huggingface.co/IFM/K2-Horizon-375B-A23B",
+      "Automation Bench Public": "https://huggingface.co/IFM/K2-Horizon-375B-A23B",
+      "Apex-Agents (pass@1)": "https://huggingface.co/IFM/K2-Horizon-375B-A23B",
+      "MCPMark": "https://huggingface.co/IFM/K2-Horizon-375B-A23B",
+      "BrowseComp": "https://huggingface.co/IFM/K2-Horizon-375B-A23B",
+      "WildClawBench": "https://huggingface.co/IFM/K2-Horizon-375B-A23B",
+      "Terminal-Bench 2.1": "https://huggingface.co/IFM/K2-Horizon-375B-A23B",
+      "SciCode": "https://huggingface.co/IFM/K2-Horizon-375B-A23B",
+      "SWE-Atlas-QnA (strict)": "https://huggingface.co/IFM/K2-Horizon-375B-A23B",
+      "SWE Bench Pro (strict)": "https://huggingface.co/IFM/K2-Horizon-375B-A23B",
+      "Humanity's Last Exam (without tools)": "https://huggingface.co/IFM/K2-Horizon-375B-A23B",
+      "GPQA Diamond": "https://huggingface.co/IFM/K2-Horizon-375B-A23B",
+      "CritPt": "https://huggingface.co/IFM/K2-Horizon-375B-A23B"
+    },
+    "benchmark_note": "IFM 공식 모델 카드 표의 K2-Horizon-375B-A23B 열 값(%)입니다. 카드에 함께 실린 GDPVal-AA(Elo)·AA-LCR·AA-Omniscience는 제3자 지표 정책상 제외했습니다. 단, Terminal-Bench 2.1 70.2는 IFM 스스로 공개한 보상 해킹 감사에서 712 트라이얼 중 24개가 플래그되어 이를 제외하면 **66.9%**로 낮아집니다(공식 블로그에 감사 절차와 함께 명시). 카드 주석: SWE-Atlas-QnA/SWE Bench Pro strict = 인터넷 없음, BrowseComp는 DeepSeek-V3.2 제안 Discard-all@95k 컨텍스트 프로토콜, WildClawBench·Apex-Agents는 영어 텍스트 모달리티 부분집합.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-08",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-144",
+    "name": "K2-Horizon-MoVA-36B-A4B",
+    "date": "2026-09-03",
+    "sortDate": "2026-09-03",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "Institute of Foundation Models",
+    "family": "K2 Horizon",
+    "type": "LLM",
+    "category": "LLM",
+    "status": "GA",
+    "parameters": "36B total / ~4B active (sparse MoE)",
+    "architecture": "Sparse MoE + Mixture-of-Value Attention (MoVA), 신규 아키텍처",
+    "modalities": [
+      "text"
+    ],
+    "focus": [
+      "Local hosting",
+      "Cost-efficient agents",
+      "Active-parameter efficiency"
+    ],
+    "open_weights": true,
+    "license": "Apache 2.0 (모델·코드), 학습 데이터셋은 ODC-BY 등 개별 라이선스",
+    "context": "524,288 (512K)",
+    "languages": "영어 중심(카드 language: en)",
+    "variants": [
+      "BF16",
+      "FP8",
+      "GGUF"
+    ],
+    "reasoning_effort": [],
+    "availability": "Hugging Face IFM org, vLLM / SGLang / Ollama 출시 당일(day-0) 지원, Cerebras 하드웨어",
+    "note": "IFM이 새로 공개한 Mixture-of-Value Attention(MoVA) 적용 모델로,attention 단계에 expert routing을 넣어 활성화 파라미터를 4B로 줄이면서 더 큰 모델을 넘보는 성능을 목표했습니다. 공식 발표문은 로컬 호스팅용 가성비 모델로 위치づけ했습니다.",
+    "benchmarks": {
+      "tau3-Banking": 26.8,
+      "Terminal-Bench 2.1": 58.6,
+      "SciCode": 38.9,
+      "Humanity's Last Exam (without tools)": 25.2,
+      "GPQA Diamond": 80.8,
+      "CritPt": 2.1
+    },
+    "official_id": "IFM/K2-Horizon-MoVA-36B-A4B",
+    "official_sources": [
+      {
+        "label": "IFM 공식 발표문",
+        "url": "https://ifm.ai/blog/k2/"
+      },
+      {
+        "label": "IFM 공식 프레스 릴리스",
+        "url": "https://ifm.ai/k2/press-release/"
+      },
+      {
+        "label": "공식 모델 카드",
+        "url": "https://huggingface.co/IFM/K2-Horizon-MoVA-36B-A4B"
+      }
+    ],
+    "release_date_source": "https://ifm.ai/blog/k2/",
+    "parameter_source": "https://huggingface.co/IFM/K2-Horizon-MoVA-36B-A4B",
+    "benchmark_sources": {
+      "tau3-Banking": "https://huggingface.co/IFM/K2-Horizon-MoVA-36B-A4B",
+      "Terminal-Bench 2.1": "https://huggingface.co/IFM/K2-Horizon-MoVA-36B-A4B",
+      "SciCode": "https://huggingface.co/IFM/K2-Horizon-MoVA-36B-A4B",
+      "Humanity's Last Exam (without tools)": "https://huggingface.co/IFM/K2-Horizon-MoVA-36B-A4B",
+      "GPQA Diamond": "https://huggingface.co/IFM/K2-Horizon-MoVA-36B-A4B",
+      "CritPt": "https://huggingface.co/IFM/K2-Horizon-MoVA-36B-A4B"
+    },
+    "benchmark_note": "IFM 공식 모델 카드 표의 K2-Horizon-MoVA-36B-A4B 열 값(%)입니다. 카드 주석: \"Scores in %, Bold marks the best score in each row\". AA-* 계열 지표는 정책상 제외했습니다.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-08",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-145",
+    "name": "K2-Horizon-32B",
+    "date": "2026-09-03",
+    "sortDate": "2026-09-03",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "Institute of Foundation Models",
+    "family": "K2 Horizon",
+    "type": "LLM",
+    "category": "LLM",
+    "status": "Preview",
+    "parameters": "32B dense",
+    "architecture": "Dense decoder-only, 공유 어휘·인터페이스",
+    "modalities": [
+      "text"
+    ],
+    "focus": [
+      "Local hosting",
+      "On-premise servers",
+      "Laptop deployment"
+    ],
+    "open_weights": true,
+    "license": "Apache 2.0 (모델·코드), 학습 데이터셋은 ODC-BY 등 개별 라이선스",
+    "context": "524,288 (512K)",
+    "languages": "영어 중심(카드 language: en)",
+    "variants": [
+      "BF16",
+      "FP8",
+      "GGUF"
+    ],
+    "reasoning_effort": [],
+    "availability": "Hugging Face IFM org, vLLM / SGLang / Ollama 출시 당일(day-0) 지원, Cerebras 하드웨어",
+    "note": "공식 모델 카드가 본 문서를 **K2-Horizon-32B-Stage1**으로 표기하고 \"final checkpoint to be released\" 경고를 붉은 색으로 명시했습니다. 그래서 상태를 Preview로 두고, 이후 최종 체크포인트가 올라오면 상태를 GA로 올려야 합니다. Hugging Face 저장소 이름은 K2-Horizon-32B입니다.",
+    "benchmarks": {
+      "tau3-Banking": 22.5,
+      "Terminal-Bench 2.1": 36.6,
+      "SciCode": 30.2,
+      "Humanity's Last Exam (without tools)": 22.8,
+      "GPQA Diamond": 82.3,
+      "CritPt": 1.4
+    },
+    "official_id": "IFM/K2-Horizon-32B",
+    "official_sources": [
+      {
+        "label": "IFM 공식 발표문",
+        "url": "https://ifm.ai/blog/k2/"
+      },
+      {
+        "label": "IFM 공식 프레스 릴리스",
+        "url": "https://ifm.ai/k2/press-release/"
+      },
+      {
+        "label": "공식 모델 카드",
+        "url": "https://huggingface.co/IFM/K2-Horizon-32B"
+      }
+    ],
+    "release_date_source": "https://ifm.ai/blog/k2/",
+    "parameter_source": "https://huggingface.co/IFM/K2-Horizon-32B",
+    "benchmark_sources": {
+      "tau3-Banking": "https://huggingface.co/IFM/K2-Horizon-32B",
+      "Terminal-Bench 2.1": "https://huggingface.co/IFM/K2-Horizon-32B",
+      "SciCode": "https://huggingface.co/IFM/K2-Horizon-32B",
+      "Humanity's Last Exam (without tools)": "https://huggingface.co/IFM/K2-Horizon-32B",
+      "GPQA Diamond": "https://huggingface.co/IFM/K2-Horizon-32B",
+      "CritPt": "https://huggingface.co/IFM/K2-Horizon-32B"
+    },
+    "benchmark_note": "IFM 공식 모델 카드(Stage 1 체크포인트 기준) 표의 자기 열 값(%). 최종 체크포인트 기준이 아니므로 재확인 필요합니다.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-08",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-146",
+    "name": "K2-Horizon-7B",
+    "date": "2026-09-03",
+    "sortDate": "2026-09-03",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "Institute of Foundation Models",
+    "family": "K2 Horizon",
+    "type": "LLM",
+    "category": "LLM",
+    "status": "GA",
+    "parameters": "7B dense (7B-core)",
+    "architecture": "Dense decoder-only",
+    "modalities": [
+      "text"
+    ],
+    "focus": [
+      "On-device agents",
+      "Software engineering",
+      "Deep research"
+    ],
+    "open_weights": true,
+    "license": "Apache 2.0 (모델·코드), 학습 데이터셋은 ODC-BY 등 개별 라이선스",
+    "context": "524,288 (512K)",
+    "languages": "영어 중심(카드 language: en)",
+    "variants": [
+      "BF16",
+      "FP8",
+      "GGUF",
+      "7B-Uno adapter"
+    ],
+    "reasoning_effort": [],
+    "availability": "Hugging Face IFM org, vLLM / SGLang / Ollama 출시 당일(day-0) 지원, Cerebras 하드웨어",
+    "note": "IFM이 '10B 미만 최고 성능'을 주장한 온디바이스 모델로, 스마트폰 구동을 명시했습니다. 같은 발표에서 7B는 SWE-bench·BrowseComp 중심의 소프트웨어 엔지니어링·딥 리서치 강점을 강조됐습니다. 카드에 multimodal 어댑터(7B-Uno)가 함께 올라오지만 어댑터는 별도 레코드로 만들지 않았습니다.",
+    "benchmarks": {
+      "HMMT Feb 2026": 73.3,
+      "SWE-bench Verified": 70.6,
+      "HLE": 18.6,
+      "SciCode": 31.6,
+      "Terminal-Bench 2.1": 39.1,
+      "tau3-Banking": 25.8,
+      "BrowseComp": 59.0
+    },
+    "official_id": "IFM/K2-Horizon-7B",
+    "official_sources": [
+      {
+        "label": "IFM 공식 발표문",
+        "url": "https://ifm.ai/blog/k2/"
+      },
+      {
+        "label": "IFM 공식 프레스 릴리스",
+        "url": "https://ifm.ai/k2/press-release/"
+      },
+      {
+        "label": "공식 모델 카드",
+        "url": "https://huggingface.co/IFM/K2-Horizon-7B"
+      }
+    ],
+    "release_date_source": "https://ifm.ai/blog/k2/",
+    "parameter_source": "https://huggingface.co/IFM/K2-Horizon-7B",
+    "benchmark_sources": {
+      "HMMT Feb 2026": "https://huggingface.co/IFM/K2-Horizon-7B",
+      "SWE-bench Verified": "https://huggingface.co/IFM/K2-Horizon-7B",
+      "HLE": "https://huggingface.co/IFM/K2-Horizon-7B",
+      "SciCode": "https://huggingface.co/IFM/K2-Horizon-7B",
+      "Terminal-Bench 2.1": "https://huggingface.co/IFM/K2-Horizon-7B",
+      "tau3-Banking": "https://huggingface.co/IFM/K2-Horizon-7B",
+      "BrowseComp": "https://huggingface.co/IFM/K2-Horizon-7B"
+    },
+    "benchmark_note": "IFM 공식 모델 카드 표의 자기 열 값(%). 카드 주석: BrowseComp는 DeepSeek-V3.2 제안 Discard-all@95k 컨텍스트 프로토콜 기준이며 비교 모델은 다른 하네스를 쓸 수 있음.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-08",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-147",
+    "name": "K2-Horizon-3.7B",
+    "date": "2026-09-03",
+    "sortDate": "2026-09-03",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "Institute of Foundation Models",
+    "family": "K2 Horizon",
+    "type": "LLM",
+    "category": "LLM",
+    "status": "GA",
+    "parameters": "3.7B dense (3.7B-core)",
+    "architecture": "Dense decoder-only",
+    "modalities": [
+      "text"
+    ],
+    "focus": [
+      "Fine-tuning base",
+      "On-device reasoning",
+      "Phone deployment"
+    ],
+    "open_weights": true,
+    "license": "Apache 2.0 (모델·코드), 학습 데이터셋은 ODC-BY 등 개별 라이선스",
+    "context": "524,288 (512K)",
+    "languages": "영어 중심(카드 language: en)",
+    "variants": [
+      "BF16",
+      "GGUF"
+    ],
+    "reasoning_effort": [],
+    "availability": "Hugging Face IFM org, vLLM / SGLang / Ollama 출시 당일(day-0) 지원, Cerebras 하드웨어",
+    "note": "IFM이 '4B 미만 최고 추론'을 주장한 파인튜닝 친화 사이즈. 프레스 릴리스는 개발자·연구자용 파인튜닝 베이스이며 더 큰 모델과 동등 이상의 추론을 낸다고 설명했습니다.",
+    "benchmarks": {
+      "HMMT Feb 2026": 70.5,
+      "SWE-bench Verified": 68.6,
+      "GPQA Diamond": 65.4,
+      "HLE": 12.9,
+      "SciCode": 25.9,
+      "Terminal-Bench 2.1": 25.1,
+      "tau3-Banking": 17.7,
+      "BFCL v4": 50.9
+    },
+    "official_id": "IFM/K2-Horizon-3.7B",
+    "official_sources": [
+      {
+        "label": "IFM 공식 발표문",
+        "url": "https://ifm.ai/blog/k2/"
+      },
+      {
+        "label": "IFM 공식 프레스 릴리스",
+        "url": "https://ifm.ai/k2/press-release/"
+      },
+      {
+        "label": "공식 모델 카드",
+        "url": "https://huggingface.co/IFM/K2-Horizon-3.7B"
+      }
+    ],
+    "release_date_source": "https://ifm.ai/blog/k2/",
+    "parameter_source": "https://huggingface.co/IFM/K2-Horizon-3.7B",
+    "benchmark_sources": {
+      "HMMT Feb 2026": "https://huggingface.co/IFM/K2-Horizon-3.7B",
+      "SWE-bench Verified": "https://huggingface.co/IFM/K2-Horizon-3.7B",
+      "GPQA Diamond": "https://huggingface.co/IFM/K2-Horizon-3.7B",
+      "HLE": "https://huggingface.co/IFM/K2-Horizon-3.7B",
+      "SciCode": "https://huggingface.co/IFM/K2-Horizon-3.7B",
+      "Terminal-Bench 2.1": "https://huggingface.co/IFM/K2-Horizon-3.7B",
+      "tau3-Banking": "https://huggingface.co/IFM/K2-Horizon-3.7B",
+      "BFCL v4": "https://huggingface.co/IFM/K2-Horizon-3.7B"
+    },
+    "benchmark_note": "IFM 공식 모델 카드 표의 자기 열 값(%). 카드 주석: \"Baseline protocols may differ\".",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-08",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-148",
+    "name": "K2-Horizon-0.9B",
+    "date": "2026-09-03",
+    "sortDate": "2026-09-03",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "Institute of Foundation Models",
+    "family": "K2 Horizon",
+    "type": "LLM",
+    "category": "LLM",
+    "status": "GA",
+    "parameters": "~0.9B dense (0.9B-class)",
+    "architecture": "Dense decoder-only, 함대 중 축약된 어휘 사용",
+    "modalities": [
+      "text"
+    ],
+    "focus": [
+      "Wearables",
+      "Edge",
+      "Tool use on tiny models"
+    ],
+    "open_weights": true,
+    "license": "Apache 2.0 (모델·코드), 학습 데이터셋은 ODC-BY 등 개별 라이선스",
+    "context": "131,072 (128K)",
+    "languages": "영어 중심(카드 language: en), 0.9B는 축약 어휘",
+    "variants": [
+      "BF16",
+      "GGUF",
+      "0.9B-Uno adapter"
+    ],
+    "reasoning_effort": [],
+    "availability": "Hugging Face IFM org, vLLM / SGLang / Ollama 출시 당일(day-0) 지원, Cerebras 하드웨어",
+    "note": "시계·안경 같은 초저전력 디바이스를 겨냥한 함대 최 소형. IFM은 이 크기급에서 수학·추론·툴 유스 SOTA를 주장했습니다. 카드 기준 0.9B는 함대와 다른 축약 어휘를 사용합니다.",
+    "benchmarks": {
+      "AIME 2025": 41.7,
+      "AIME 2026": 48.5,
+      "HMMT Feb 2026": 25.8,
+      "GPQA Diamond": 27.3,
+      "HumanEval+": 79.9,
+      "MBPP+": 68.0,
+      "LiveCodeBench v6": 37.4,
+      "BFCL v4": 28.0
+    },
+    "official_id": "IFM/K2-Horizon-0.9B",
+    "official_sources": [
+      {
+        "label": "IFM 공식 발표문",
+        "url": "https://ifm.ai/blog/k2/"
+      },
+      {
+        "label": "IFM 공식 프레스 릴리스",
+        "url": "https://ifm.ai/k2/press-release/"
+      },
+      {
+        "label": "공식 모델 카드",
+        "url": "https://huggingface.co/IFM/K2-Horizon-0.9B"
+      }
+    ],
+    "release_date_source": "https://ifm.ai/blog/k2/",
+    "parameter_source": "https://huggingface.co/IFM/K2-Horizon-0.9B",
+    "benchmark_sources": {
+      "AIME 2025": "https://huggingface.co/IFM/K2-Horizon-0.9B",
+      "AIME 2026": "https://huggingface.co/IFM/K2-Horizon-0.9B",
+      "HMMT Feb 2026": "https://huggingface.co/IFM/K2-Horizon-0.9B",
+      "GPQA Diamond": "https://huggingface.co/IFM/K2-Horizon-0.9B",
+      "HumanEval+": "https://huggingface.co/IFM/K2-Horizon-0.9B",
+      "MBPP+": "https://huggingface.co/IFM/K2-Horizon-0.9B",
+      "LiveCodeBench v6": "https://huggingface.co/IFM/K2-Horizon-0.9B",
+      "BFCL v4": "https://huggingface.co/IFM/K2-Horizon-0.9B"
+    },
+    "benchmark_note": "IFM 공식 모델 카드 표의 자기 열 값(%). 카드 주석: K2-Horizon-0.9B 강조, Qwen3.5-2B를 더 큰 참조 모델로 포함, 프로토콜·출처는 카드의 Technical Appendix.",
+    "parameter_status": "verified",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-08",
+      "policy": "official-primary-only"
     }
   }
 ];
@@ -4276,27 +7426,218 @@ const COMPANY_META = {
     "flag": "🇰🇷",
     "color": "from-red-500 to-orange-500",
     "badge": "bg-red-500/10 text-red-300 border-red-500/30"
+  },
+  "Institute of Foundation Models": {
+    "country": "AE",
+    "flag": "🇦🇪",
+    "color": "from-teal-500 to-emerald-500",
+    "badge": "bg-teal-500/10 text-teal-300 border-teal-500/30"
   }
 };
 
+const FAMILY_FLOWS = [
+  {
+    "family": "Qwen",
+    "steps": [
+      "Qwen3.5",
+      "Qwen3.6",
+      "Qwen3.7",
+      "Qwen3.8",
+      "Qwen3.8-Flash-Next"
+    ]
+  },
+  {
+    "family": "DeepSeek",
+    "steps": [
+      "DeepSeek-V4 Preview",
+      "DeepSeek-V4-Flash-0731",
+      "DeepSeek-V4-Pro-0813",
+      "DeepSeek-V4-Flash-Vision-Exp"
+    ]
+  },
+  {
+    "family": "Claude",
+    "steps": [
+      "Opus 4.6",
+      "Sonnet 4.6",
+      "Opus 4.7",
+      "Opus 4.8",
+      "Fable/Mythos 5",
+      "Sonnet 5",
+      "Opus 5",
+      "Fable/Mythos 5.1"
+    ]
+  },
+  {
+    "family": "GPT",
+    "steps": [
+      "GPT-5.3",
+      "GPT-5.4",
+      "GPT-5.5",
+      "GPT-5.6",
+      "GPT-6 Astra",
+      "GPT-6 Astra Pro"
+    ]
+  },
+  {
+    "family": "Gemini",
+    "steps": [
+      "Gemini 3.5 Flash",
+      "Gemini 3.6 Flash",
+      "Gemini 3.7 Flash",
+      "Gemini 3.8 Flash"
+    ]
+  },
+  {
+    "family": "GLM",
+    "steps": [
+      "GLM-5",
+      "GLM-5.1",
+      "GLM-5.2",
+      "GLM-5.3",
+      "GLM-5.3-Flash"
+    ]
+  },
+  {
+    "family": "Kimi",
+    "steps": [
+      "Kimi K2.5",
+      "Kimi K2.6",
+      "Kimi K2.7 Code",
+      "Kimi K3"
+    ]
+  },
+  {
+    "family": "LongCat",
+    "steps": [
+      "LongCat-Flash-Thinking-2601",
+      "LongCat-Flash-Lite",
+      "LongCat-Flash-Omni",
+      "LongCat-2.0"
+    ]
+  },
+  {
+    "family": "MiMo",
+    "steps": [
+      "MiMo-V2-Flash",
+      "MiMo-V2.5",
+      "MiMo-V2.5-Pro"
+    ]
+  },
+  {
+    "family": "Nemotron",
+    "steps": [
+      "Nemotron-3-Super-120B-A12B",
+      "Nemotron-3-Nano-Omni-30B-A3B-Reasoning",
+      "Nemotron-3-Ultra-550B-A55B",
+      "Nemotron-3.5-Lightning-30B-A3B"
+    ]
+  },
+  {
+    "family": "Granite",
+    "steps": [
+      "Granite 4.1",
+      "Granite 4.2"
+    ]
+  },
+  {
+    "family": "Laguna",
+    "steps": [
+      "Laguna M.1",
+      "Laguna XS.2",
+      "Laguna XS 2.1",
+      "Laguna S 2.1"
+    ]
+  },
+  {
+    "family": "Muse Spark",
+    "steps": [
+      "Muse Spark",
+      "Muse Spark 1.1",
+      "Muse Spark 1.2",
+      "Muse Spark 1.3"
+    ]
+  },
+  {
+    "family": "K2 Horizon",
+    "steps": [
+      "K2-Horizon-0.9B",
+      "K2-Horizon-3.7B",
+      "K2-Horizon-7B",
+      "K2-Horizon-32B",
+      "K2-Horizon-MoVA-36B-A4B",
+      "K2-Horizon-375B-A23B"
+    ]
+  }
+];
+
+const UNCONFIRMED_DATA = [];
+
 const SCOPE_DATA = {
-  "period": "2026-01-01 ~ 2026-09-04",
+  "period": "2026-01-01 ~ 2026-09-08",
   "scope": [
     "LLM (Large Language Models)",
     "MLLM / VLM / Omni foundation models"
   ],
   "excluded": [
     "image-generation-only models",
-    "video-generation-only models (e.g. Seedance)",
+    "video-generation-only models",
     "OCR-only models",
     "ASR/TTS-only models",
     "embedding / reranker models",
     "reward / guard-only models",
-    "simple quantized variants (FP8, NVFP4, INT4, GGUF, etc.)",
-    "intermediate / base checkpoints unless representing distinct products"
-  ]
+    "simple quantized variants",
+    "intermediate/base checkpoints unless representing distinct products"
+  ],
+  "benchmark_policy": "공식 모델 카드·기술 보고서·개발사 공식 발표문에 모델 제공자가 직접 명시한 점수만 수록. Chatbot Arena/ELO, Artificial Analysis, 제3자 leaderboard, 추정·역산 점수는 제외.",
+  "parameter_policy": "개발사가 명시한 총/활성 파라미터만 사용. 공개하지 않은 값은 정확한 수치 미공개로 표시하고, 모델 크기·가중치 파일 용량·양자화 크기를 파라미터 수로 대체하지 않음.",
+  "reviewed_on": "2026-09-08"
 };
 
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { TIMELINE_DATA, COMPANY_META, SCOPE_DATA };
-}
+const AUDIT_EXCLUDED = [
+  {
+    "id": "model-045",
+    "name": "LongCat-2.0 Preview",
+    "original_name": "LongCat-2.0 Preview",
+    "reason": "공식 발표는 정식 LongCat-2.0 출시 전 preview 접근이 있었다고만 설명하며, 별도의 공식 모델 ID·출시일을 제시하지 않음. 정식 2026-06-30 모델과 같은 체크포인트를 별도 모델로 중복 집계하지 않음.",
+    "source": "https://tech.meituan.com/2026/06/30/LongCat2.0.html"
+  },
+  {
+    "id": "model-124",
+    "name": "EXAONE 3.5 32B",
+    "original_name": "EXAONE 3.5 32B",
+    "reason": "공식 자료상 2026 출시가 아니라 기존 2024/2025 세대 모델이며, 현재 타임라인의 2026-01-15 항목을 뒷받침하는 공식 발표를 확인할 수 없음.",
+    "source": "https://huggingface.co/LGAI-EXAONE"
+  },
+  {
+    "id": "model-029",
+    "name": "LongCat-Flash-Thinking",
+    "original_name": "LongCat-Flash-Thinking",
+    "reason": "공식 출시 발표일이 2025-09-22인 이전 세대 모델. 2026 타임라인의 별도 신규 출시로 중복 집계하지 않음.",
+    "source": "https://tech.meituan.com/2025/09/22/LongCat-Flash-Thinking.html"
+  },
+  {
+    "id": "model-035",
+    "name": "MiMo-V2-Omni",
+    "original_name": "MiMo-V2-Omni",
+    "reason": "Xiaomi MiMo 공식 모델 목록과 공식 모델 카드에서 해당 제품명을 확인하지 못함. 비공식 명칭을 다른 공식 모델로 추정해 대체하지 않음.",
+    "source": "https://huggingface.co/XiaomiMiMo/models"
+  },
+  {
+    "id": "model-127",
+    "name": "A.X Telco LLM",
+    "original_name": "A.X Telco LLM",
+    "reason": "정확한 공식 제품명·모델 카드·출시 발표를 1차 자료에서 확인하지 못함.",
+    "source": "https://news.sktelecom.com/"
+  },
+  {
+    "id": "excluded-2026-09-08-1",
+    "name": "Spark X2.5 (星火 X2.5)",
+    "original_name": "iFLYTEK Spark X2.5 / Spark X2.5-4B / Spark X2.5-1.7B",
+    "date": "2026-09-07",
+    "company": "iFLYTEK",
+    "reason": "2026-09-07 플래그십(호출 293B-A30B MoE·256K 컨텍스트)과 09-01 오픈웨이트로 공개된 엔드디바이스 모델 2종(Spark-X2.5-4B/1.7B, 1M 컨텍스트)이 보도됐으나 1차 출처에서 사양을 확정하지 못해 보류합니다. 讯飞의 공식 제품·API 카탈로그 페이지(xinghuo.xfyun.cn/sparkapi, xhspdup.xfyun.cn/sparkapi)는 서버에서 텍스트를 렌더링하지 않아(JavaScript 셸만 응답) 파라미터·컨텍스트·출시일을 인용할 수 없었고, 293B-A30B / 256K 수치는 IT之家·sina 등 2차 보도에서만 확인됐습니다. Hugging Face `XHToken`(표기 'SparkLLM Team') 저장소가 Apache 2.0으로 같은 사양(1M 컨텍스트·200+ 언어)을 공개했지만 해당 조직이 科大讯飞(iFLYTEK)의 공식 조직임을 카드 어디서도 확인하지 못해 '개발사 본인 페이지' 요건을 판정할 수 없었습니다. 조직 편입 여부와 함께 재검토할 항목입니다.",
+    "source": "https://xinghuo.xfyun.cn/sparkapi",
+    "reviewed_on": "2026-09-08"
+  }
+];
