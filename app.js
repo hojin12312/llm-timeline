@@ -7,16 +7,34 @@ var compareList = [];   // Array of up to 2 model IDs: [idA, idB]
 var activeCompareA = null;
 var activeCompareB = null;
 
+function isMobileLayout() {
+  return typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(max-width: 760px)').matches;
+}
+
+// The audit window lives in SCOPE_DATA.period (models_catalog.json -> data.js),
+// so the header subtitle cannot drift from the SSOT when releases are added.
+function auditPeriodLabel() {
+  var period = (typeof SCOPE_DATA !== 'undefined' && SCOPE_DATA.period) ? SCOPE_DATA.period : '';
+  var end = (period.split('~')[1] || '2026-09-08').trim().split('-');
+  if (end.length !== 3) return '9월 8일';
+  return parseInt(end[1], 10) + '월 ' + parseInt(end[2], 10) + '일';
+}
+
+function updateHeaderSubtitle() {
+  var sub = document.getElementById('header-subtitle');
+  if (!sub || typeof TIMELINE_DATA === 'undefined') return;
+  sub.textContent = isMobileLayout()
+    ? '2026년 출시 ' + TIMELINE_DATA.length + '개 모델 · 공식 1차 출처 감사'
+    : '2026년 1월 1일 ~ ' + auditPeriodLabel() + ' 주요 파운데이션 모델 ' + TIMELINE_DATA.length + '개 출시 순서 · 공식 1차 출처 감사';
+}
+
 // Initialize robustly regardless of load timing
 function initApp() {
   if (typeof TIMELINE_DATA === 'undefined') {
     console.error('TIMELINE_DATA is not loaded.');
     return;
   }
-  var sub = document.getElementById('header-subtitle');
-  if (sub) {
-    sub.textContent = '2026년 1월 1일 ~ 9월 4일 주요 파운데이션 모델 ' + TIMELINE_DATA.length + '개 출시 순서';
-  }
+  updateHeaderSubtitle();
   renderMonthButtons();
   renderTimeline();
   setupScrollInteractions();
@@ -45,6 +63,11 @@ if (document.readyState === 'loading') {
   initApp();
 }
 
+window.addEventListener('resize', function() {
+  updateHeaderSubtitle();
+  renderMonthButtons();
+});
+
 // Render Month Buttons in sync with sort order
 function renderMonthButtons() {
   var container = document.querySelector('.month-buttons');
@@ -53,7 +76,8 @@ function renderMonthButtons() {
   if (sortOrder === 'desc') {
     months.reverse();
   }
-  var html = '<button class="month-btn active" data-month="all" onclick="jumpToMonth(\'all\')">전체 (' + TIMELINE_DATA.length + ')</button>';
+  var allLabel = isMobileLayout() ? '전체' : '전체 (' + TIMELINE_DATA.length + ')';
+  var html = '<button class="month-btn active" data-month="all" onclick="jumpToMonth(\'all\')">' + allLabel + '</button>';
   months.forEach(function(m) {
     var monthNum = parseInt(m.slice(5), 10);
     html += '<button class="month-btn" data-month="' + m + '" onclick="jumpToMonth(\'' + m + '\')">' + monthNum + '월</button>';
@@ -71,6 +95,14 @@ function toggleSortOrder() {
   }
   if (icon) {
     icon.textContent = (sortOrder === 'desc') ? '↓' : '↑';
+  }
+  var mobileLabel = document.getElementById('mobile-sort-label');
+  var mobileIcon = document.getElementById('mobile-sort-icon');
+  if (mobileLabel) {
+    mobileLabel.textContent = (sortOrder === 'desc') ? '최신순' : '과거순';
+  }
+  if (mobileIcon) {
+    mobileIcon.textContent = (sortOrder === 'desc') ? '↓' : '↑';
   }
   renderMonthButtons();
   renderTimeline();
@@ -228,6 +260,9 @@ function setupScrollInteractions() {
 
   // Mouse wheel horizontal scroll with momentum
   container.addEventListener('wheel', function(e) {
+    // Mobile switches to a vertical timeline. Do not cancel the page's
+    // vertical wheel/touch scrolling when there is no horizontal canvas.
+    if (container.scrollWidth <= container.clientWidth + 1) return;
     var delta = Math.abs(e.deltaY) >= Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
     if (delta !== 0) {
       e.preventDefault();
@@ -328,6 +363,13 @@ function clearSearch() {
   handleSearch('');
 }
 
+function focusSearchInput() {
+  var input = document.getElementById('search-input');
+  if (!input) return;
+  input.focus();
+  input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
 // Modal (Single Model Details)
 function openModal(id) {
   var m = TIMELINE_DATA.find(function(item) { return item.id === id; });
@@ -356,7 +398,12 @@ function openModal(id) {
   html += '  </div>';
 
   if (m.parameters) {
-    html += '  <div class="spec-item"><span class="spec-label">파라미터 규격</span><div class="spec-value" style="font-family: monospace;">' + m.parameters + '</div></div>';
+    html += '  <div class="spec-item"><span class="spec-label">파라미터 규격</span><div class="spec-value" style="font-family: monospace;">' + m.parameters + '</div>';
+    if (m.parameter_status) {
+      var parameterStatus = m.parameter_status === 'undisclosed' ? '공식 수치 미공개' : (m.parameter_status === 'publisher-approximate' ? '공식 발표의 근사값' : (m.parameter_status === 'publisher-partial' ? '공식 발표의 부분 공개' : '공식 발표값'));
+      html += '<div style="font-size: 10px; color: #6b7280; margin-top: 3px;">' + parameterStatus + '</div>';
+    }
+    html += '</div>';
   }
 
   if (m.architecture) {
@@ -389,25 +436,37 @@ function openModal(id) {
 
   // Benchmark scores section
   if (m.benchmarks && Object.keys(m.benchmarks).length > 0) {
-    html += '  <div style="margin-top: 8px; border-top: 1px solid #e5e7eb; padding-top: 12px;">';
-    html += '    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">';
+    html += '  <div class="benchmark-section" style="margin-top: 8px; border-top: 1px solid #e5e7eb; padding-top: 12px;">';
+    html += '    <div class="benchmark-heading" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">';
     html += '      <span class="spec-label" style="font-weight: 700; color: #111827; font-size: 12px;">📊 주요 공개 벤치마크 점수</span>';
-    html += '      <span style="font-size: 11px; color: #6b7280;">공식 보고서 / 리더보드 기준</span>';
+    html += '      <span style="font-size: 11px; color: #6b7280;">개발사 공식 카드·보고서·발표문 직접 기재</span>';
     html += '    </div>';
-    html += '    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;">';
+    html += '    <div class="benchmark-score-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;">';
     Object.entries(m.benchmarks).forEach(function(entry) {
       var key = entry[0];
       var val = entry[1];
       var unit = '%';
-      if (key.includes('ELO')) unit = ' ELO';
-      else if (key.includes('Index') || key.includes('AAII') || key.includes('CodeArena')) unit = '점';
-      else if (key === 'MT-Bench') unit = ' / 10';
       html += '      <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 6px; padding: 8px 10px;">';
       html += '        <div style="font-size: 11px; color: #6b7280;">' + key + '</div>';
       html += '        <div style="font-size: 15px; font-weight: 700; color: #111827; font-family: monospace; margin-top: 2px;">' + val + unit + '</div>';
+      var benchmarkSource = (m.benchmark_sources || {})[key];
+      if (benchmarkSource) {
+        html += '        <a href="' + benchmarkSource + '" target="_blank" rel="noopener noreferrer" style="font-size: 10px; color: #2563eb; display: inline-block; margin-top: 3px;">공식 출처 ↗</a>';
+      }
       html += '      </div>';
     });
     html += '    </div>';
+    html += '  </div>';
+  } else {
+    html += '  <div style="margin-top: 8px; border-top: 1px solid #e5e7eb; padding-top: 12px; font-size: 11px; color: #6b7280;">이 감사 원장에 기록된 공식 공개 벤치마크 점수 없음 (추정치·제3자 점수는 표시하지 않음)</div>';
+  }
+
+  if (m.official_sources && m.official_sources.length > 0) {
+    html += '  <div style="margin-top: 10px; border-top: 1px solid #e5e7eb; padding-top: 10px;">';
+    html += '    <div class="spec-label" style="margin-bottom: 4px;">검증된 공식 출처</div>';
+    m.official_sources.forEach(function(source) {
+      html += '    <a href="' + source.url + '" target="_blank" rel="noopener noreferrer" style="display: block; font-size: 11px; color: #2563eb; line-height: 1.6;">' + source.label + ' ↗</a>';
+    });
     html += '  </div>';
   }
 
@@ -427,12 +486,17 @@ function openModal(id) {
 
   card.innerHTML = html;
   modal.classList.remove('hidden');
+  document.body.classList.add('modal-open');
 }
 
 function closeModal() {
   var modal = document.getElementById('model-modal');
   if (modal) modal.classList.add('hidden');
   activeModalId = null;
+  var compareModal = document.getElementById('compare-modal');
+  if (!compareModal || compareModal.classList.contains('hidden')) {
+    document.body.classList.remove('modal-open');
+  }
 }
 
 function handleModalBackdropClick(e) {
@@ -443,6 +507,16 @@ function copyCitation(id) {
   var m = TIMELINE_DATA.find(function(item) { return item.id === id; });
   if (!m) return;
   var citation = '- **' + m.name + '** (' + m.company + ', ' + m.date + ') - ' + m.type + (m.parameters ? ' [' + m.parameters + ']' : '');
+  if (m.official_sources && m.official_sources.length > 0) {
+    citation += '\n  - 공식 출처: ' + m.official_sources.map(function(source) { return '[' + source.label + '](' + source.url + ')'; }).join(', ');
+  }
+  if (m.benchmarks && Object.keys(m.benchmarks).length > 0) {
+    citation += '\n  - 공식 발표 점수: ' + Object.keys(m.benchmarks).map(function(key) {
+      var scoreSource = (m.benchmark_sources || {})[key];
+      var sourceSuffix = scoreSource ? ' — [공식](' + scoreSource + ')' : '';
+      return key + ' ' + m.benchmarks[key] + '%' + sourceSuffix;
+    }).join(', ');
+  }
   navigator.clipboard.writeText(citation).then(function() {
     var el = document.getElementById('btn-copy-text');
     if (el) {
@@ -562,11 +636,16 @@ function openCompareModal(idA, idB) {
 
   renderCompareModalContent();
   modal.classList.remove('hidden');
+  document.body.classList.add('modal-open');
 }
 
 function closeCompareModal() {
   var modal = document.getElementById('compare-modal');
   if (modal) modal.classList.add('hidden');
+  var modelModal = document.getElementById('model-modal');
+  if (!modelModal || modelModal.classList.contains('hidden')) {
+    document.body.classList.remove('modal-open');
+  }
 }
 
 function handleCompareBackdropClick(e) {
@@ -642,6 +721,7 @@ function renderCompareModalContent() {
   html += '  <h3 style="font-size: 13px; font-weight: 700; color: #111827; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">';
   html += '    <span>📋 기본 사양 및 아키텍처 비교</span>';
   html += '  </h3>';
+  html += '  <div class="comparison-table-scroll">';
   html += '  <table class="comparison-table">';
   html += '    <thead>';
   html += '      <tr>';
@@ -674,39 +754,48 @@ function renderCompareModalContent() {
 
   html += '    </tbody>';
   html += '  </table>';
+  html += '  </div>';
   html += '</div>';
 
   // 2. Benchmarks Side-by-Side Comparison
   var BENCH_META = {
-    'Chatbot Arena ELO': { label: 'Chatbot Arena ELO', desc: '인간 블라인드 선호도 평가', unit: ' ELO', priority: 1 },
-    'CodeArena WebDev': { label: 'CodeArena WebDev', desc: '웹 개발 및 에이전트 코딩 블라인드 평가', unit: '점', priority: 1.5 },
-    'Web Dev Arena ELO': { label: 'Web Dev Arena ELO', desc: '웹 개발 특화 블라인드 아레나', unit: ' ELO', priority: 1.6 },
-    'SWE-bench Verified': { label: 'SWE-bench Verified', desc: '실제 GitHub 이슈 해결율 (소프트웨어 엔지니어링)', unit: '%', priority: 2 },
-    'SWE-bench Pro': { label: 'SWE-bench Pro', desc: '고난도 오염 방지 소프트웨어 엔지니어링 벤치마크', unit: '%', priority: 3 },
-    'Terminal-Bench 2.1': { label: 'Terminal-Bench 2.1', desc: '터미널 및 CLI 자율 실행 엔지니어링 능력', unit: '%', priority: 4 },
-    'MMLU-Pro': { label: 'MMLU-Pro', desc: '고난도 학술 종합 추론 (객관식 10지선다)', unit: '%', priority: 5 },
-    'MMLU': { label: 'MMLU', desc: '대학 수준 57개 분야 학술 지식 평가', unit: '%', priority: 6 },
-    'GPQA Diamond': { label: 'GPQA Diamond', desc: '대학원 전문가 과학/물리/화학/생물', unit: '%', priority: 7 },
-    'GPQA': { label: 'GPQA', desc: '대학원 전문가 수준 과학 질의응답', unit: '%', priority: 8 },
-    'MATH-500': { label: 'MATH-500', desc: '수학 올림피아드/경시대회급 추론', unit: '%', priority: 9 },
-    'LiveCodeBench': { label: 'LiveCodeBench', desc: '실시간 경쟁 프로그래밍 문제 해결력', unit: '%', priority: 10 },
-    'HumanEval': { label: 'HumanEval', desc: '파이썬 코드 구현 정확도', unit: '%', priority: 11 },
-    'MMMU (Multimodal)': { label: 'MMMU (Multimodal)', desc: '대학 수준 다중 모달리티(이미지/도표) 이해', unit: '%', priority: 12 },
-    'MMMU-Pro': { label: 'MMMU-Pro', desc: '고난도 멀티모달 비전 추론', unit: '%', priority: 13 },
-    'AIME 2025': { label: 'AIME 2025', desc: '미국 수학 초청 시험(AIME 2025) 문제 해결', unit: '%', priority: 14 },
-    'AIME 2026': { label: 'AIME 2026', desc: '최신 AIME 수학 경시대회 평가', unit: '%', priority: 15 },
-    'IFEval': { label: 'IFEval', desc: '정밀 지시 사항 준수(Instruction Following)', unit: '%', priority: 16 },
-    'Arena-Hard': { label: 'Arena-Hard', desc: '고난도 프롬프트 자동 선호도 평가', unit: '%', priority: 17 },
-    'KMMLU': { label: 'KMMLU', desc: '한국어 전문 지식 평가 벤치마크', unit: '%', priority: 18 },
-    'KMMLU-Pro': { label: 'KMMLU-Pro', desc: '고난도 한국어 전문 지식 추론', unit: '%', priority: 19 },
-    'AA Intelligence Index': { label: 'AA Intelligence Index', desc: 'Artificial Analysis 종합 지능 지표', unit: '점', priority: 20 },
-    'TelBench': { label: 'TelBench', desc: '통신 도메인 전문 평가 벤치마크', unit: '%', priority: 21 },
-    'TelAgentBench': { label: 'TelAgentBench', desc: '통신 AI 에이전트 다면 평가', unit: '%', priority: 22 },
-    'CyberGym': { label: 'CyberGym', desc: '사이버 보안 취약점 식별 및 패치 평가', unit: '%', priority: 23 },
-    'LiveBench': { label: 'LiveBench', desc: '실시간 일반 추론 및 코딩 평가', unit: '%', priority: 24 },
-    'AlpacaEval': { label: 'AlpacaEval', desc: '명령어 준수 및 대화형 선호도', unit: '%', priority: 25 },
-    'Multilingual MGSM': { label: 'Multilingual MGSM', desc: '다국어 수학 추론 평가', unit: '%', priority: 26 },
-    'Terminal-Bench 2.0': { label: 'Terminal-Bench 2.0', desc: '터미널 자율 실행 능력', unit: '%', priority: 27 }
+    'SWE-bench Verified': { label: 'SWE-bench Verified', desc: '실제 GitHub 이슈 해결율', unit: '%', priority: 1 },
+    'SWE-bench Multilingual': { label: 'SWE-bench Multilingual', desc: '다국어 소프트웨어 엔지니어링 이슈 해결율', unit: '%', priority: 2 },
+    'SWE-bench Pro': { label: 'SWE-bench Pro', desc: '고난도 소프트웨어 엔지니어링 평가', unit: '%', priority: 3 },
+    'Terminal-Bench 2.1': { label: 'Terminal-Bench 2.1', desc: '터미널 및 CLI 에이전트 실행 평가', unit: '%', priority: 4 },
+    'Terminal-Bench 2.0': { label: 'Terminal-Bench 2.0', desc: '터미널 자율 실행 평가', unit: '%', priority: 5 },
+    'Terminal-Bench Core 2.0': { label: 'Terminal-Bench Core 2.0', desc: 'Terminal-Bench Core 공개 태스크 평가', unit: '%', priority: 6 },
+    'DeepSWE': { label: 'DeepSWE', desc: '장기 소프트웨어 엔지니어링 에이전트 평가', unit: '%', priority: 7 },
+    'SWE-Marathon': { label: 'SWE-Marathon', desc: '장기 소프트웨어 엔지니어링 에이전트 평가', unit: '%', priority: 8 },
+    'NL2Repo': { label: 'NL2Repo', desc: '자연어 요구사항의 저장소 구현 평가', unit: '%', priority: 9 },
+    'FrontierSWE': { label: 'FrontierSWE', desc: '프런티어 소프트웨어 엔지니어링 평가', unit: '%', priority: 10 },
+    'SWE-bench AgentLess': { label: 'SWE-bench AgentLess', desc: '에이전트 프레임워크 없이 측정한 SWE-Bench 변형', unit: '%', priority: 11 },
+    'LiveCodeBench': { label: 'LiveCodeBench', desc: '실시간 경쟁 프로그래밍 평가', unit: '%', priority: 12 },
+    'LiveCodeBench v6': { label: 'LiveCodeBench v6', desc: 'LiveCodeBench 버전 6 평가', unit: '%', priority: 13 },
+    'HumanEval': { label: 'HumanEval', desc: '코드 구현 정확도', unit: '%', priority: 14 },
+    'MBPP': { label: 'MBPP', desc: '파이썬 프로그램 합성 평가', unit: '%', priority: 15 },
+    'MMLU': { label: 'MMLU', desc: '대학 수준 학술 지식 평가', unit: '%', priority: 16 },
+    'MMLU-Pro': { label: 'MMLU-Pro', desc: '고난도 학술 종합 추론', unit: '%', priority: 17 },
+    'MMLU-Redux': { label: 'MMLU-Redux', desc: '오염 보정 학술 지식 평가', unit: '%', priority: 18 },
+    'GPQA Diamond': { label: 'GPQA Diamond', desc: '대학원 전문가 과학 질의응답', unit: '%', priority: 19 },
+    'SuperGPQA': { label: 'SuperGPQA', desc: '고난도 대학원 수준 지식 평가', unit: '%', priority: 20 },
+    'HLE': { label: 'HLE', desc: 'Humanity\'s Last Exam', unit: '%', priority: 21 },
+    'MATH-500': { label: 'MATH-500', desc: '수학 추론 평가', unit: '%', priority: 22 },
+    'AIME 2025': { label: 'AIME 2025', desc: 'AIME 2025 수학 경시 평가', unit: '%', priority: 23 },
+    'AIME 2026': { label: 'AIME 2026', desc: 'AIME 2026 수학 경시 평가', unit: '%', priority: 24 },
+    'IMOAnswerBench': { label: 'IMOAnswerBench', desc: '국제수학올림피아드 답안 평가', unit: '%', priority: 25 },
+    'IFEval': { label: 'IFEval', desc: '정밀 지시사항 준수 평가', unit: '%', priority: 26 },
+    'MMMU': { label: 'MMMU', desc: '대학 수준 멀티모달 이해 평가', unit: '%', priority: 27 },
+    'MMMU-Pro': { label: 'MMMU-Pro', desc: '고난도 멀티모달 추론 평가', unit: '%', priority: 28 },
+    'BrowseComp': { label: 'BrowseComp', desc: '웹 검색·탐색 에이전트 평가', unit: '%', priority: 29 },
+    'OSWorld-Verified': { label: 'OSWorld-Verified', desc: '컴퓨터 사용 에이전트 평가', unit: '%', priority: 30 },
+    'Toolathlon Verified': { label: 'Toolathlon Verified', desc: '도구 사용 에이전트 평가', unit: '%', priority: 31 },
+    'CyberGym': { label: 'CyberGym', desc: '사이버 보안 취약점 식별·패치 평가', unit: '%', priority: 32 },
+    'Cyber CTF': { label: 'Cyber CTF', desc: '사이버 보안 문제 해결 평가', unit: '%', priority: 33 },
+    'MCP-Atlas': { label: 'MCP-Atlas', desc: 'MCP 도구 사용 평가', unit: '%', priority: 34 },
+    'GDPval': { label: 'GDPval', desc: '지식 노동 업무 수행 평가', unit: '%', priority: 35 },
+    'τ²-Bench': { label: 'τ²-Bench', desc: '도구 사용 에이전트 평가', unit: '%', priority: 36 },
+    'τ²-Telecom': { label: 'τ²-Telecom', desc: '통신 도메인 도구 사용 평가', unit: '%', priority: 37 }
   };
 
   var presentKeys = Array.from(new Set(Object.keys(modA.benchmarks || {}).concat(Object.keys(modB.benchmarks || {}))));
@@ -750,12 +839,12 @@ function renderCompareModalContent() {
       if (diff > 0) {
         winsA++;
         cellAClass = 'score-win';
-        badgeA = '<span class="score-win-badge">+' + diff + (bItem.unit.trim() === 'ELO' ? '' : bItem.unit) + ' 우세</span>';
+        badgeA = '<span class="score-win-badge">+' + diff + bItem.unit + ' 우세</span>';
         diffText = '<span style="color: #059669; font-weight: 600;">' + modA.name + ' +' + diff + '</span>';
       } else if (diff < 0) {
         winsB++;
         cellBClass = 'score-win';
-        badgeB = '<span class="score-win-badge">+' + Math.abs(diff) + (bItem.unit.trim() === 'ELO' ? '' : bItem.unit) + ' 우세</span>';
+        badgeB = '<span class="score-win-badge">+' + Math.abs(diff) + bItem.unit + ' 우세</span>';
         diffText = '<span style="color: #059669; font-weight: 600;">' + modB.name + ' +' + Math.abs(diff) + '</span>';
       } else {
         ties++;
@@ -806,6 +895,7 @@ function renderCompareModalContent() {
   html += '    </div>';
   html += '  </div>';
 
+  html += '  <div class="comparison-table-scroll">';
   html += '  <table class="comparison-table">';
   html += '    <thead>';
   html += '      <tr>';
@@ -819,6 +909,7 @@ function renderCompareModalContent() {
   html += benchRowsHtml;
   html += '    </tbody>';
   html += '  </table>';
+  html += '  </div>';
   html += '</div>';
 
   html += '</div>'; // End body
@@ -844,6 +935,7 @@ function copyComparisonMarkdown(idA, idB) {
   md += '| 제조사 / 출시일 | ' + modA.company + ' (' + modA.date + ') | ' + modB.company + ' (' + modB.date + ') |\n';
   md += '| 파라미터 / 아키텍처 | ' + (modA.parameters || '-') + ' / ' + (modA.architecture || '-') + ' | ' + (modB.parameters || '-') + ' / ' + (modB.architecture || '-') + ' |\n';
   md += '| 오픈 웨이트 여부 | ' + (modA.open_weights ? 'Open' : 'Closed') + ' | ' + (modB.open_weights ? 'Open' : 'Closed') + ' |\n';
+  md += '| 공식 출처 | ' + ((modA.official_sources && modA.official_sources.length) ? modA.official_sources.map(function(source) { return '[' + source.label + '](' + source.url + ')'; }).join(', ') : '-') + ' | ' + ((modB.official_sources && modB.official_sources.length) ? modB.official_sources.map(function(source) { return '[' + source.label + '](' + source.url + ')'; }).join(', ') : '-') + ' |\n';
 
   if (modA.benchmarks && modB.benchmarks) {
     md += '\n#### 주요 벤치마크 점수 비교\n\n';
@@ -855,7 +947,9 @@ function copyComparisonMarkdown(idA, idB) {
       var sB = modB.benchmarks[k] !== undefined ? modB.benchmarks[k] : '-';
       var diff = (typeof sA === 'number' && typeof sB === 'number') ? (Math.round((sA - sB) * 10) / 10) : '-';
       var diffStr = diff > 0 ? ('+' + diff + ' (' + modA.name + ' 우세)') : diff < 0 ? ('+' + Math.abs(diff) + ' (' + modB.name + ' 우세)') : '동률';
-      md += '| ' + k + ' | ' + sA + ' | ' + sB + ' | ' + diffStr + ' |\n';
+      var sourceA = (modA.benchmark_sources && modA.benchmark_sources[k]) ? ' ([공식](' + modA.benchmark_sources[k] + '))' : '';
+      var sourceB = (modB.benchmark_sources && modB.benchmark_sources[k]) ? ' ([공식](' + modB.benchmark_sources[k] + '))' : '';
+      md += '| ' + k + ' | ' + sA + sourceA + ' | ' + sB + sourceB + ' | ' + diffStr + ' |\n';
     });
   }
 

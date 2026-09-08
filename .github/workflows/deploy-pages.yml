@@ -24,6 +24,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Validate audited model catalog
+        run: python3 validate_data.py
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
