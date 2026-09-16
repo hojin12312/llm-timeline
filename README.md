@@ -1,9 +1,15 @@
 # ⚡ 2026 LLM & MLLM Release Timeline
 
 > **2026년 주요 LLM / MLLM 파운데이션 모델 출시 타임라인 및 세대별 진화 계보**  
-> 기준 기간: **2026-01-01 ~ 2026-09-08** | 수록 모델: **141개** | 표기 조직: **32개**
+> 기준 기간: **2026-01-01 ~ 2026-09-16** | 수록 모델: **154개** | 표기 조직: **37개**
 
 본 레포지토리는 2026년에 발표된 전 세계 주요 LLM, MLLM, Omni 파운데이션 모델의 릴리즈 내역을 공식 1차 자료와 함께 구조화하여 인터랙티브한 웹 타임라인으로 제공하는 **GitHub Pages** 프로젝트입니다.
+
+**2026-09-16 감사 추가분 (13개):**
+- 신규 릴리스(11): Tencent **Gander**(9/9, 9B 옴니 인터랙션), DeepSeek **DeepSeek-V4.1-Flash**(9/10, 552B CED MoE·1M 컨텍스트), Ant Group/InclusionAI **Ling-3.0-flash-VL**(9/10, 124B-A5.5B), Cohere **North Small Translate**(9/10, 218B-A25B 번역 특화), Cognition **SWE-2**(9/10, Kimi K3 포스트트레인 코딩 모델), Shanghai AI Lab **Atria-Dawn-Preview**(9/11, 744B MoE), Google DeepMind **Gemini 3.8 Live · 3.8 Live Extended Thinking**(9/15), Salesforce **Koa**(9/15, Nemotron 3 Super 포스트트레인 CRM 추론), Accio-Lab **Occamy-1.0**(9/15, 35B-A3B co-work), Gensyn **open-1b**(9/15, 전 학습 과정 검증 가능 1.61B)
+- 기간 내 누락 정정(2): ByteDance **Seed2.1 Pro · Seed2.1 Turbo**(6/23) — 이전 감사에서 누락된 플래그십 패밀리를 소급 수록
+- 이번 감사는 각 모델이 공식 카드·기술 보고서·발표문에 인쇄한 벤치마크 점수를 전부 수록하는 것을 기준으로 했습니다(신규 124개 점수 포함, 누적 444개). Elo·달러·레이팅 등 % 척도가 아닌 지표와 제3자 지표(AA 지수, Arena 순위)는 감사 원장 메모에 기록만 하고 점수 표에는 넣지 않았습니다.
+- 제외 원장 신규 기록(3): **Gemini Omni 1.1 Flash**(비디오 생성 전용), **GPT-Live-1 API 확장**(기존 모델의 배포 확장), **Gemini 3.5 Transcribe**(전사 전용)
 
 **2026-09-08 감사 추가분 (18개):**
 - 신규 릴리스(5): OpenAI **GPT-6 Astra · GPT-6 Astra Pro**(9/3), Google DeepMind **Gemini 3.8 Flash · 3.8 Flash Cyber**(9/2), Meta **Muse Spark 1.3**(9/2)
@@ -37,7 +43,7 @@
 4. **⚖️ 두 모델 상호 비교 모달**
    - 카드·모달에서 최대 2개 선택, 스펙과 공식 벤치마크를 병합한 비교표 제공, 비교 결과를 Markdown으로 복사
 5. **🧬 패밀리 계보 데이터 (UI 미구현)**
-   - `data.js`의 `FAMILY_FLOWS`와 감사 원장에 14개 대표 패밀리(Qwen, DeepSeek, Claude, GPT, Gemini, GLM, Kimi, Muse Spark, K2 Horizon 등)의 세대 교체·분기 경로(step)가 데이터로 들어 있습니다
+   - `data.js`의 `FAMILY_FLOWS`와 감사 원장에 16개 대표 패밀리(Qwen, DeepSeek, Claude, GPT, Gemini, GLM, Kimi, Muse Spark, K2 Horizon, Seed/Doubao, Ling 3.0 등)의 세대 교체·분기 경로(step)가 데이터로 들어 있습니다
    - 다만 현재 `index.html`·`app.js`에는 이 데이터를 그리는 뷰가 없습니다. 이 절에 이전 버전에서 적혀 있던 **Generational Flow View · Card Grid View · Matrix Table View · CSV 내보내기 · 기업/유형/상태/오픈웨이트 필터**는 실제 구현과 다르므로 정리했습니다 — 해당 뷰와 필터는 구현 과제 목록으로 남겨 둡니다. 타임라인·카드·모달에서는 `family`·`company` 필드로 패밀리 정보를 표시합니다.
 
 ### 📱 모바일 UI
@@ -56,7 +62,7 @@
 - **공식 벤치마크:** 모델 제공자가 공식 모델 카드·기술 보고서·공식 발표문에 직접 공개한 점수만 기록합니다. Chatbot Arena/ELO, Artificial Analysis, 제3자 리더보드, 역산·추정 점수는 표시하지 않습니다.
 - **조건 보존:** benchmark 버전, 데이터셋, 모드, 평가 조건이 공식 자료에 기재된 경우 모델별 감사 원장의 메모에 보존합니다. 서로 다른 프로토콜의 점수는 동일 순위로 비교하지 않습니다.
 - **출처 연결:** 출시일·파라미터·각 점수에 공식 1차 출처 URL을 따로 연결합니다. 공식 URL에 해당 수치가 직접 기재되지 않은 경우 그 수치는 넣지 않습니다.
-- **1차 도메인 목록:** `validate_data.py`의 `OFFICIAL_HOSTS`에 등록된 개발사 자체 도메인만 공식 출처로 인정합니다. 2026-09-08에 Meta AI Research 블로그(`research.meta.ai`)와 Google 공식 블로그(`blog.google`)를 추가했습니다 — Muse Spark 1.3과 Gemini 3.8 Flash Cyber는 `ai.meta.com`·`deepmind.google`이 아니라 그곳에만 1차 발표문이 있습니다. 같은 날 IFM(MBZUAI) 편입으로 `ifm.ai`를 추가했습니다.
+- **1차 도메인 목록:** `validate_data.py`의 `OFFICIAL_HOSTS`에 등록된 개발사 자체 도메인만 공식 출처로 인정합니다. 2026-09-08에 Meta AI Research 블로그(`research.meta.ai`)와 Google 공식 블로그(`blog.google`)를 추가했습니다 — Muse Spark 1.3과 Gemini 3.8 Flash Cyber는 `ai.meta.com`·`deepmind.google`이 아니라 그곳에만 1차 발표문이 있습니다. 같은 날 IFM(MBZUAI) 편입으로 `ifm.ai`를 추가했습니다. 2026-09-16에는 `cognition.com`(SWE-2), `salesforce.com`(Koa), `gensyn.ai`(open-1b 검증 레코드), `ai.google.dev`(Gemini Live API 모델 ID)를 추가했습니다.
 - **재현 가능한 검증:** `validate_data.py`가 모든 점수의 출처·범위·금지된 제3자 지표·생성 파일의 SSOT 일치를 검사합니다.
 
 - **포함 대상:**
@@ -70,14 +76,14 @@
   - 보상/가드레일 전용 모델
   - 단순 양자화 체크포인트 (FP8, NVFP4, INT4, GGUF 등)
   - 독립 제품을 대표하지 않는 중간/베이스 체크포인트
-- **포함 기업 (32개 표기 조직):**
-   - **미국 (US):** OpenAI, Anthropic, Google DeepMind, Meta, xAI, NVIDIA, IBM, Poolside, Thinking Machines Lab, Arcee AI, Motif Technologies
+- **포함 기업 (37개 표기 조직):**
+   - **미국 (US):** OpenAI, Anthropic, Google DeepMind, Meta, xAI, NVIDIA, IBM, Poolside, Thinking Machines Lab, Arcee AI, Motif Technologies, Cognition (SWE), Salesforce (Koa), Gensyn (open-1b), Accio-Lab (Occamy)
    - **한국 (KR):** NAVER Cloud (HyperCLOVA X SEED 4B), Upstage (Solar Open 2), LG AI Research (EXAONE / K-EXAONE), SK Telecom (A.X)
-  - **중국 (CN):** Alibaba (Qwen), DeepSeek, Baidu (ERNIE), ByteDance (Seed), Moonshot AI (Kimi), Z.ai (GLM), MiniMax, StepFun, Meituan (LongCat), Xiaomi (MiMo), Ant Group (Ling/Ring), Tencent (Hy)
+  - **중국 (CN):** Alibaba (Qwen), DeepSeek, Baidu (ERNIE), ByteDance (Seed), Moonshot AI (Kimi), Z.ai (GLM), MiniMax, StepFun, Meituan (LongCat), Xiaomi (MiMo), Ant Group (Ling/Ring), Tencent (Hy), Shanghai Artificial Intelligence Laboratory (Atria)
    - **중동 (AE):** Institute of Foundation Models / MBZUAI (K2 Horizon)
    - **유럽/기타:** Mistral AI (프랑스), Cohere/Cohere Labs (캐나다), Sarvam AI (인도)
 
-공식 점수가 확인되지 않은 모델은 빈 점수로 표시합니다. 이는 누락이 아니라 공식 발표 점수만 제공한다는 감사 정책의 결과입니다. 원래 목록에서 공식 출시 시점·공식 제품명·별도 모델 ID가 확인되지 않거나 중복인 5개 항목과, 2026-09-08 감사에서 1차 출처 미확보로 보류한 1개 항목(iFLYTEK Spark X2.5)까지 **6개 항목**은 [`조사 자료`](조사%20자료)의 제외 원장에 보존했습니다.
+공식 점수가 확인되지 않은 모델은 빈 점수로 표시합니다. 이는 누락이 아니라 공식 발표 점수만 제공한다는 감사 정책의 결과입니다. 원래 목록에서 공식 출시 시점·공식 제품명·별도 모델 ID가 확인되지 않거나 중복인 5개 항목과, 2026-09-08 감사에서 1차 출처 미확보로 보류한 1개 항목(iFLYTEK Spark X2.5), 2026-09-16 감사에서 범위 제외로 판정한 3개 항목(Gemini Omni 1.1 Flash · GPT-Live-1 API 확장 · Gemini 3.5 Transcribe)까지 **9개 항목**은 [`조사 자료`](조사%20자료)의 제외 원장에 보존했습니다.
 
 > **2026-09-08 제외 원장 되돌림:** 2026-09-04 감사에서 "공식 발표문을 확인하지 못했다"며 보류했던 **Muse Spark 1.2**(구 `model-098`)와 **Muse Spark 1.3**(구 `model-115`)은, Meta의 1차 발표문이 `ai.meta.com`이 아니라 **Meta AI Research 블로그(`research.meta.ai`)** 에 있음을 확인하고 활성 레코드(`model-136`, `model-131`)로 이관했습니다. 제외 원장에서 두 항목을 삭제했고, 그 경위는 각 모델의 감사 원장 메모에 남아 있습니다.
 
@@ -122,7 +128,7 @@ python3 -m http.server 8000
 llm-timeline/
 ├── index.html                       # 메인 인터랙티브 대시보드 웹 애플리케이션
 ├── models_catalog.json               # 모델명·파라미터·공식 점수·출처 SSOT
-├── data.js                          # SSOT에서 생성된 141개 모델 데이터셋
+├── data.js                          # SSOT에서 생성된 154개 모델 데이터셋
 ├── app.js                           # 검색, 다차원 필터, 뷰 전환, 모달 동작 로직
 ├── style.css                        # 글래스모피즘, 타임라인 스파인, 펄스 애니메이션
 ├── build_data.py                    # models_catalog.json → data.js 생성기
@@ -130,7 +136,7 @@ llm-timeline/
 ├── .nojekyll                        # GitHub Pages 정적 자산 로딩 보장
 ├── .github/workflows/
 │   └── deploy-pages.yml             # GitHub Actions 자동 배포 워크플로우
-├── 조사 자료                         # 141개 모델별 공식 출처 감사 원장 (Markdown)
+├── 조사 자료                         # 154개 모델별 공식 출처 감사 원장 (Markdown)
 └── README.md                        # 프로젝트 설명 및 배포 안내 문서
 ```
 
@@ -145,5 +151,5 @@ python3 validate_data.py --check-urls
 `data.js`는 직접 편집하지 않습니다. 새 모델이나 정정 사항은 `models_catalog.json`과 감사 원장에 반영하고, 구조 검증을 통과한 뒤 생성 파일을 커밋합니다.
 
 `--check-urls`는 출처 서버에 예의를 지키도록 발행사(host) 단위로 직렬화하고 짧게 대기한 뒤 재시도합니다. 그리고 결과를 두 갈래로 나눕니다.
-- **경고(실패 아님):** 429·503 같은 rate limit, 그리고 `BOT_PROTECTED_HOSTS`(현재 `ifm.ai`)의 지속 403 — 자동 요청에 간헐적으로 JavaScript 챌린지를 돌려보내는 사이트로, 해당 페이지는 2026-09-08에 내용을 직접 열어 확인했습니다.
+- **경고(실패 아님):** 429·503 같은 rate limit, 그리고 `BOT_PROTECTED_HOSTS`(현재 `ifm.ai`, `openai.com`)의 지속 403 — 자동 요청에 간헐적으로 JavaScript 챌린지를 돌려보내는 사이트로, 해당 페이지는 각각 2026-09-08·2026-09-16에 내용을 직접 열어 확인했습니다.
 - **실패:** 404·410 등 실제로 사라진 출처, 그리고 보호 목록에 없는 호스트의 지속 403.

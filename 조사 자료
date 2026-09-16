@@ -1,6 +1,6 @@
 # 조사 자료 — 2026 LLM / MLLM 공개 기록 감사 원장
 
-> 최종 감사일: **2026-09-08** | 활성 레코드: **141개** | 제외 원장: **6개** | 공식 점수가 확인된 모델: **62개** | 공식 점수: **320개**
+> 최종 감사일: **2026-09-16** | 활성 레코드: **154개** | 제외 원장: **9개** | 공식 점수가 확인된 모델: **72개** | 공식 점수: **444개**
 >
 > 이 문서는 `models_catalog.json`에서 생성된 사람 검토용 감사 원장입니다. 브라우저용 `data.js`를 직접 수정하지 말고 SSOT를 수정한 뒤 `python3 build_data.py`로 재생성하세요.
 
@@ -3074,6 +3074,390 @@
 - 모델 메모: 시계·안경 같은 초저전력 디바이스를 겨냥한 함대 최 소형. IFM은 이 크기급에서 수학·추론·툴 유스 SOTA를 주장했습니다. 카드 기준 0.9B는 함대와 다른 축약 어휘를 사용합니다.
 - 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-08`
 
+### 142. 2026-06-23 — Seed2.1 Pro
+
+- 레코드 ID: `model-149`
+- **공식 모델명:** `Seed2.1 Pro`
+- 제공사 / 패밀리: `ByteDance` / `Seed / Doubao`
+- 모델 유형 / 상태: `MLLM / agentic foundation model` / `GA`
+- 공개일(레포 기준): `2026-06-23` — [출시일 공식 출처](https://seed.bytedance.com/en/blog/seed2-1-officially-released-advancing-ai-productivity)
+- **파라미터:** `정확한 수치 미공개` — 공식 수치 미공개
+- 파라미터 출처: [공식 파라미터 출처](https://seed.bytedance.com/en/seed2_1)
+- 아키텍처: `차세대 에이전트 지향 모델(공식 카드에 구조 세부 미공개)`
+- 공식 모델 ID: `Doubao-Seed-2.1-Pro`
+- 오픈 웨이트: `아니오/호스팅`
+- 공식 모델 출처: [공식 1차 출처](https://seed.bytedance.com/en/seed2_1), [공식 1차 출처](https://seed.bytedance.com/en/blog/seed2-1-officially-released-advancing-ai-productivity)
+
+#### 공식 발표 벤치마크 점수
+
+- `KINA`: **48.3%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `SuperGPQA`: **70.8%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `BeyondAIME`: **87.0%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `Workspace Bench`: **53.0%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `Agent Startup Bench`: **68.8%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `xDailyBench`: **61.0%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `NL2Repo-Bench`: **47.0%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `ProgramBench`: **50.3%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `Terminal Bench 2.1`: **71.0%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `SWE-Atlas`: **35.2%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `MathVision (w. Tool)`: **92.6%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `MMMU-Pro (w. Tool)`: **81.6%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `WorldVQA`: **53.0%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `ZEROBench (w. Tool)`: **18.0%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `BabyVision`: **73.7%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `CharXiv-RQ (w. Tool)`: **85.4%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `ERQA`: **72.0%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `MMLongBench-128K`: **78.3%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `VideoMME`: **89.2%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `TOMATO`: **79.5%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `Minerva`: **70.7%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `OVOBench`: **80.7%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `VideoSimpleQA`: **76.4%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- 점수 메모: Seed2.1 공식 페이지(seed.bytedance.com/en/seed2_1) 평가 표의 해당 모델 열 값(%)입니다. ProgramBench는 공식 표가 'All@1/Almost@1/Score' 형태의 3중 값(Pro '0/1/50.3', Turbo '0/0/49.4')으로 표기해 최종 Score만 수록했습니다. 괄호로 병기된 보조 수치(Pro: MathVision 94.5, MMMU-Pro 82.7, ZEROBench 22.0, CharXiv-RQ 86.4 / Turbo: 92.7, 82.2, 20.0, 83.6)는 별도 설정 값으로 기본값만 수록했습니다. 본문의 GDPVal 언급은 정량 점수 없이 질적 SOTA 주장이라 수록하지 않았습니다.
+- 모델 메모: Seed2.1 패밀리의 플래그십 Pro. 공식 페이지는 Pro와 Turbo 두 모델을 함께 공개했으며, 실세계 생산성(에이전트·코딩·멀티모달 이해)에 초점을 둡니다. 직전 감사 주기(9/8)에서 누락되어 이번에 소급 수록합니다.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
+
+### 143. 2026-06-23 — Seed2.1 Turbo
+
+- 레코드 ID: `model-150`
+- **공식 모델명:** `Seed2.1 Turbo`
+- 제공사 / 패밀리: `ByteDance` / `Seed / Doubao`
+- 모델 유형 / 상태: `MLLM / agentic foundation model` / `GA`
+- 공개일(레포 기준): `2026-06-23` — [출시일 공식 출처](https://seed.bytedance.com/en/blog/seed2-1-officially-released-advancing-ai-productivity)
+- **파라미터:** `정확한 수치 미공개` — 공식 수치 미공개
+- 파라미터 출처: [공식 파라미터 출처](https://seed.bytedance.com/en/seed2_1)
+- 아키텍처: `차세대 에이전트 지향 모델(공식 카드에 구조 세부 미공개)`
+- 공식 모델 ID: `Doubao-Seed-2.1-Turbo`
+- 오픈 웨이트: `아니오/호스팅`
+- 공식 모델 출처: [공식 1차 출처](https://seed.bytedance.com/en/seed2_1), [공식 1차 출처](https://seed.bytedance.com/en/blog/seed2-1-officially-released-advancing-ai-productivity)
+
+#### 공식 발표 벤치마크 점수
+
+- `KINA`: **46.6%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `SuperGPQA`: **67.4%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `BeyondAIME`: **88.0%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `Workspace Bench`: **54.7%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `Agent Startup Bench`: **54.0%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `xDailyBench`: **56.4%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `NL2Repo-Bench`: **43.7%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `ProgramBench`: **49.4%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `Terminal Bench 2.1`: **67.6%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `SWE-Atlas`: **30.6%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `MathVision (w. Tool)`: **90.1%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `MMMU-Pro (w. Tool)`: **80.1%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `WorldVQA`: **48.6%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `ZEROBench (w. Tool)`: **11.0%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `BabyVision`: **62.9%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `CharXiv-RQ (w. Tool)`: **82.5%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `ERQA`: **71.3%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `MMLongBench-128K`: **76.9%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `VideoMME`: **89.0%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `TOMATO`: **56.8%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `Minerva`: **65.9%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `OVOBench`: **79.2%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- `VideoSimpleQA`: **71.4%** — [공식 출처](https://seed.bytedance.com/en/seed2_1)
+- 점수 메모: Seed2.1 공식 페이지(seed.bytedance.com/en/seed2_1) 평가 표의 해당 모델 열 값(%)입니다. ProgramBench는 공식 표가 'All@1/Almost@1/Score' 형태의 3중 값(Pro '0/1/50.3', Turbo '0/0/49.4')으로 표기해 최종 Score만 수록했습니다. 괄호로 병기된 보조 수치(Pro: MathVision 94.5, MMMU-Pro 82.7, ZEROBench 22.0, CharXiv-RQ 86.4 / Turbo: 92.7, 82.2, 20.0, 83.6)는 별도 설정 값으로 기본값만 수록했습니다. 본문의 GDPVal 언급은 정량 점수 없이 질적 SOTA 주장이라 수록하지 않았습니다.
+- 모델 메모: Seed2.1 패밀리의 경량 Turbo. Pro와 동일한 공식 평가 표로 발표되었으며 일부 항목(BeyondAIME, Workspace Bench)에서 Pro를 상회합니다.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
+
+### 144. 2026-09-09 — Gander
+
+- 레코드 ID: `model-151`
+- **공식 모델명:** `Gander`
+- 제공사 / 패밀리: `Tencent` / `Gander`
+- 모델 유형 / 상태: `MLLM / omni (full-duplex audio-visual)` / `GA`
+- 공개일(레포 기준): `2026-09-09` — [출시일 공식 출처](https://huggingface.co/Gander-Omni/Gander)
+- **파라미터:** `9B` — 공식 수치 확인
+- 파라미터 출처: [공식 파라미터 출처](https://huggingface.co/papers/2609.08977)
+- 아키텍처: `Brain–Cerebellum 프레임워크 + 스트리밍 Thinker-Talker(MiniCPM-o-4.5 기반), 1초 단위의 인과적 시간 유닛`
+- 공식 모델 ID: `Gander-Omni/Gander`
+- 오픈 웨이트: `예`
+- 공식 모델 출처: [공식 1차 출처](https://huggingface.co/Gander-Omni/Gander), [공식 1차 출처](https://huggingface.co/papers/2609.08977)
+
+#### 공식 발표 벤치마크 점수
+
+- `Full-Duplex-Bench v3 (ToolSel F1)`: **75.9%** — [공식 출처](https://huggingface.co/papers/2609.08977)
+- `Full-Duplex-Bench v3 (ArgAcc)`: **50.3%** — [공식 출처](https://huggingface.co/papers/2609.08977)
+- `Full-Duplex-Bench v3 (RespQual)`: **49.0%** — [공식 출처](https://huggingface.co/papers/2609.08977)
+- `Full-Duplex-Bench v3 (Pass@1)`: **40.0%** — [공식 출처](https://huggingface.co/papers/2609.08977)
+- `Full-Duplex-Bench v3 (Take-turn)`: **100.0%** — [공식 출처](https://huggingface.co/papers/2609.08977)
+- `Full-Duplex-Bench v3 (Interrupt)`: **8.0%** — [공식 출처](https://huggingface.co/papers/2609.08977)
+- `Full-Duplex-Bench v3 (Filler)`: **51.6%** — [공식 출처](https://huggingface.co/papers/2609.08977)
+- `SpokenQA Llama Questions`: **75.6%** — [공식 출처](https://huggingface.co/papers/2609.08977)
+- `SpokenQA Web Questions`: **59.3%** — [공식 출처](https://huggingface.co/papers/2609.08977)
+- `VoiceBench AlpacaEval (1-5)`: **3.96%** — [공식 출처](https://huggingface.co/papers/2609.08977)
+- `VoiceBench SD-QA`: **46.84%** — [공식 출처](https://huggingface.co/papers/2609.08977)
+- `WorldSense (AV)`: **49.62%** — [공식 출처](https://huggingface.co/papers/2609.08977)
+- `Daily-Omni (AV)`: **78.53%** — [공식 출처](https://huggingface.co/papers/2609.08977)
+- 점수 메모: 기술 보고서(arXiv:2609.08977, HF Papers 게재본) Table 3~5의 Gander 열 값입니다. Full-Duplex-Bench v3의 앞 4개 지표는 보고서 원문이 0~1 분수(ToolSel 0.759, ArgAcc 0.503, RespQual 0.490, Pass@1 0.400)로 표기해 %로 환산했습니다. Interrupt는 낮을수록 좋은 지표, Filler는 상호작용 특성 지표입니다. AlpacaEval은 1–5 척도. WorldSense/Daily-Omni는 audio-visual 조건 값이며, back-brain-only 행(Pass@1 0.520 등)은 프론트 체계가 아닌 별도 조건이라 제외했습니다.
+- 모델 메모: Tencent Hunyuan Speech Team·Zhejiang Univ. 등의 옴니 인터랙션 에이전트(arXiv:2609.08977). 음성·영상 스트림을 1초 유닛으로 처리하며 장기 실행 태스크를 백그라운드 Brain(기본 Codex/GPT-5.6 워커)에 위임합니다. 모델 카드에는 총 파라미터 표기가 없고 기술 보고서 Table 4의 '9B' 표기를 따릅니다.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
+
+### 145. 2026-09-10 — DeepSeek-V4.1-Flash
+
+- 레코드 ID: `model-152`
+- **공식 모델명:** `DeepSeek-V4.1-Flash`
+- 제공사 / 패밀리: `DeepSeek` / `DeepSeek V4`
+- 모델 유형 / 상태: `MLLM` / `GA`
+- 공개일(레포 기준): `2026-09-10` — [출시일 공식 출처](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash)
+- **파라미터:** `552B backbone / 8B active(prefill)·16B active(decode), Engram 메모리 196B 별도 희소 접근` — 공식 수치 확인
+- 파라미터 출처: [공식 파라미터 출처](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash)
+- 아키텍처: `CED(20층 인과 인코더+20층 디코더) MoE — 384 routed+1 shared expert, 토큰당 6 routed 활성; CSA2+FP4 KV 캐시(토큰당 890B), DeepSeek-ViT 비전 인코더`
+- 공식 모델 ID: `deepseek-ai/DeepSeek-V4.1-Flash`
+- 오픈 웨이트: `예`
+- 공식 모델 출처: [공식 1차 출처](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash)
+
+#### 공식 발표 벤치마크 점수
+
+- `GPQA Diamond (Pass@1)`: **90.9%** — [공식 출처](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash)
+- `HLE (Pass@1)`: **36.8%** — [공식 출처](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash)
+- `MathArena Apex (Pass@1)`: **65.6%** — [공식 출처](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash)
+- `Terminal-Bench 2.1 (Pass@1)`: **90.6%** — [공식 출처](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash)
+- `Terminal-Bench 3.0 (Pass@1)`: **30.0%** — [공식 출처](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash)
+- `Terminal-Bench 4.0 (Pass@1)`: **31.2%** — [공식 출처](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash)
+- `DeepSWE v1.1 (Resolved)`: **74.2%** — [공식 출처](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash)
+- `ProgramBench (Almost@1)`: **20.3%** — [공식 출처](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash)
+- `NL2Repo-Bench (Score)`: **64.0%** — [공식 출처](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash)
+- `CyberGym (Pass@1)`: **88.1%** — [공식 출처](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash)
+- `SEC-Bench Pro (Pass@1)`: **62.8%** — [공식 출처](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash)
+- `ExploitGym (Pass@1)`: **15.3%** — [공식 출처](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash)
+- `HLE w/ tools (Pass@1)`: **63.9%** — [공식 출처](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash)
+- `AutomationBench (Pass@1)`: **54.8%** — [공식 출처](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash)
+- `Agent's Last Exam (Pass@1)`: **31.8%** — [공식 출처](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash)
+- `Chartography w/ tools (Pass@1)`: **78.9%** — [공식 출처](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash)
+- `BabyVision w/ tools (Pass@1)`: **89.6%** — [공식 출처](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash)
+- `ZeroBench-main w/ tools (Pass@5)`: **49.0%** — [공식 출처](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash)
+- 점수 메모: 공식 카드(기술 보고서)의 instruct 비교 표 DS-V4.1-Flash 열 값입니다(모두 reasoning_effort=100, temperature=1.0, top_p=0.95). HLE 36.8은 전체 세트이며 괄호의 39.1†은 텍스트 전용 부분집합입니다. Codeforces(3471 rating)는 % 척도가 아니라 제외했습니다. 별도 'Performance across agent scaffolds' 표(DeepSWE v1.1·Terminal-Bench 2.1을 8개 하니스로 측정)는 동일 벤치마크의 프로토콜 변형이라 수록하지 않고, DeepSWE v1.1 74.2는 mini-SWE 하니스, 기타 코드 에이전트 지표는 DSH Minimal 기준입니다. Base 모델 표는 미배포 DeepSeek-V4.1-Flash-Base 기준이라 이 레코드에 포함하지 않았습니다.
+- 모델 메모: V4-Flash 후속. CED 아키텍처로 prefill 8B/decode 16B 활성화, KV 캐시를 V4-Flash 대비 약 1/4로 축소. 45T 토큰 멀티모달 사전학습, 1M 컨텍스트. Jinja 채팅 템플릿 대신 encoding.py·deepseek-recipe 제공.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
+
+### 146. 2026-09-10 — Ling-3.0-flash-VL
+
+- 레코드 ID: `model-153`
+- **공식 모델명:** `Ling-3.0-flash-VL`
+- 제공사 / 패밀리: `Ant Group / InclusionAI` / `Ling 3.0`
+- 모델 유형 / 상태: `MLLM` / `GA`
+- 공개일(레포 기준): `2026-09-10` — [출시일 공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash-VL)
+- **파라미터:** `124B total / 5.5B active (MoE)` — 공식 수치 확인
+- 파라미터 출처: [공식 파라미터 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash-VL)
+- 아키텍처: `Sparse MoE + 42층 KDA/Gated-MLA 하이브리드(5:1), ViT 인코더 + 2층 MLP 프로젝터, VideoRoPE`
+- 공식 모델 ID: `inclusionAI/Ling-3.0-flash-VL`
+- 오픈 웨이트: `예`
+- 공식 모델 출처: [공식 1차 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash-VL)
+
+#### 공식 발표 벤치마크 점수
+
+- `CountBench`: **97.33%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash-VL)
+- `WorldVQA`: **45.67%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash-VL)
+- `MMMU-Pro`: **79.0%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash-VL)
+- `MathVision`: **84.87%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash-VL)
+- `Humanity's Last Exam-MM`: **19.88%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash-VL)
+- `OmniDocBench1.5`: **91.35%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash-VL)
+- `CharXiv_RQ`: **81.3%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash-VL)
+- `MMSearch`: **79.0%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash-VL)
+- `ClawEval-MM`: **59.9%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash-VL)
+- `WebVoyager`: **90.83%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash-VL)
+- `Vision2Web`: **57.69%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash-VL)
+- `AntBench-Medical`: **0.96%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash-VL)
+- 점수 메모: 공식 모델 카드 벤치마크 표(이미지)의 Ling-3.0-flash-VL 열 값입니다. AntBench-Medical은 사내 벤치마크로 카드가 '0.96 / 0.93' 두 지표를 병기해 첫 값을 수록했습니다. Artificial Analysis Intelligence Index 42는 제3자 지표 정책상 제외했습니다. 카드 주석: *는 공식 테스트 설정의 API 수집 값, 밑줄은 Python 툴 호출 없는 환경 값.
+- 모델 메모: Ling-3.0-flash의 언어·추론·장문 능력에 네이티브 이미지/비디오 이해를 결합한 비전-언어 MoE. 카드가 명시한 컨텍스트는 최대 256K입니다.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
+
+### 147. 2026-09-10 — North Small Translate
+
+- 레코드 ID: `model-154`
+- **공식 모델명:** `North Small Translate`
+- 제공사 / 패밀리: `Cohere` / `North`
+- 모델 유형 / 상태: `LLM / translation-specialized` / `GA`
+- 공개일(레포 기준): `2026-09-10` — [출시일 공식 출처](https://cohere.com/blog/north-small-translate)
+- **파라미터:** `218B total / 25B active (MoE)` — 공식 수치 확인
+- 파라미터 출처: [공식 파라미터 출처](https://cohere.com/blog/north-small-translate)
+- 아키텍처: `Sparse MoE`
+- 공식 모델 ID: `North-Small-Translate-1.0`
+- 오픈 웨이트: `예`
+- 공식 모델 출처: [공식 1차 출처](https://cohere.com/blog/north-small-translate)
+
+#### 공식 발표 벤치마크 점수
+
+- `WMT26 (all-language)`: **83.6%** — [공식 출처](https://cohere.com/blog/north-small-translate)
+- 점수 메모: Cohere 공식 발표문에 명시된 유일한 정량 점수(WMT26 전체 언어 점수 83.6)입니다.
+- 모델 메모: Cohere의 번역 특화 MoE. 단일 목적 모델이지만 LLM 계열로 분류해 수록합니다(범위 제외 항목에 해당하지 않음).
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
+
+### 148. 2026-09-10 — SWE-2
+
+- 레코드 ID: `model-155`
+- **공식 모델명:** `SWE-2`
+- 제공사 / 패밀리: `Cognition` / `SWE`
+- 모델 유형 / 상태: `LLM / agentic coding` / `GA`
+- 공개일(레포 기준): `2026-09-10` — [출시일 공식 출처](https://cognition.com/blog/swe-2)
+- **파라미터:** `2.8T (Kimi K3 베이스 포스트트레인 — SWE-2 자체 수치는 별도 표기 없음)` — 개발사 공식 부분 공개
+- 파라미터 출처: [공식 파라미터 출처](https://cognition.com/blog/swe-2)
+- 아키텍처: `Kimi K3(2.8T) 포스트트레인, 단일 RL 런으로 전 노력 수준 학습(비용 페널티 R=S−λe·C)`
+- 공식 모델 ID: `swe-2`
+- 오픈 웨이트: `아니오/호스팅`
+- 공식 모델 출처: [공식 1차 출처](https://cognition.com/blog/swe-2)
+
+#### 공식 발표 벤치마크 점수
+
+- `FrontierCode 1.1 Main`: **50.0%** — [공식 출처](https://cognition.com/blog/swe-2)
+- `DeepSWE 1.1`: **73.0%** — [공식 출처](https://cognition.com/blog/swe-2)
+- `Terminal-Bench 2.1`: **92.8%** — [공식 출처](https://cognition.com/blog/swe-2)
+- `Terminal-Bench 4`: **27.3%** — [공식 출처](https://cognition.com/blog/swe-2)
+- 점수 메모: Cognition 공식 발표의 코딩 벤치마크 표 SWE-2 열 값(%) 4개 전체를 수록했습니다.
+- 모델 메모: Cognition의 최신 코딩 모델. SWE-1.7 인프라 위에서 멀티-조(兆) 파라미터 규모 RL을 처음 적용했고, FrontierCode 1.1 Main 50.0%로 Fable 5.1과 1pt 이내이면서 64% 저렴하다고 공식 발표했습니다. 호스티드 전용(가중치 미공개).
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
+
+### 149. 2026-09-11 — Atria-Dawn-Preview
+
+- 레코드 ID: `model-156`
+- **공식 모델명:** `Atria-Dawn-Preview`
+- 제공사 / 패밀리: `Shanghai Artificial Intelligence Laboratory` / `Atria`
+- 모델 유형 / 상태: `LLM / agentic foundation model` / `Preview`
+- 공개일(레포 기준): `2026-09-11` — [출시일 공식 출처](https://huggingface.co/internlm/Atria-Dawn-Preview)
+- **파라미터:** `744B (GLM-5.2 MoE 파운데이션 기반)` — 공식 수치 확인
+- 파라미터 출처: [공식 파라미터 출처](https://huggingface.co/internlm/Atria-Dawn-Preview)
+- 아키텍처: `GLM-5.2 MoE 파운데이션 위 에이전틱 모델(glm_moe_dsa)`
+- 공식 모델 ID: `internlm/Atria-Dawn-Preview`
+- 오픈 웨이트: `예`
+- 공식 모델 출처: [공식 1차 출처](https://huggingface.co/internlm/Atria-Dawn-Preview)
+
+#### 공식 발표 벤치마크 점수
+
+- `DeepSearchQA`: **96.0%** — [공식 출처](https://huggingface.co/internlm/Atria-Dawn-Preview)
+- `BrowseComp`: **92.5%** — [공식 출처](https://huggingface.co/internlm/Atria-Dawn-Preview)
+- `WideSearch`: **81.9%** — [공식 출처](https://huggingface.co/internlm/Atria-Dawn-Preview)
+- `DeepResearch Bench II`: **51.1%** — [공식 출처](https://huggingface.co/internlm/Atria-Dawn-Preview)
+- `MLE-bench Lite`: **86.2%** — [공식 출처](https://huggingface.co/internlm/Atria-Dawn-Preview)
+- `SWE-bench Pro`: **59.6%** — [공식 출처](https://huggingface.co/internlm/Atria-Dawn-Preview)
+- `Terminal-Bench 2.1`: **78.3%** — [공식 출처](https://huggingface.co/internlm/Atria-Dawn-Preview)
+- `BFCL v4`: **77.0%** — [공식 출처](https://huggingface.co/internlm/Atria-Dawn-Preview)
+- `AutomationBench`: **53.8%** — [공식 출처](https://huggingface.co/internlm/Atria-Dawn-Preview)
+- `SkillsBench`: **66.4%** — [공식 출처](https://huggingface.co/internlm/Atria-Dawn-Preview)
+- `τ³-Bench Banking`: **41.2%** — [공식 출처](https://huggingface.co/internlm/Atria-Dawn-Preview)
+- `Workspace-Bench`: **65.0%** — [공식 출처](https://huggingface.co/internlm/Atria-Dawn-Preview)
+- `Workspace-Bench-Lite`: **68.2%** — [공식 출처](https://huggingface.co/internlm/Atria-Dawn-Preview)
+- `JobBench`: **50.3%** — [공식 출처](https://huggingface.co/internlm/Atria-Dawn-Preview)
+- `CyberGym`: **86.5%** — [공식 출처](https://huggingface.co/internlm/Atria-Dawn-Preview)
+- 점수 메모: 공식 모델 카드 평가 표의 Atria Dawn Preview 열 값 15개입니다. GDPval(1583)은 Elo 척도라 정책상 제외했습니다.
+- 모델 메모: Shanghai AI Lab의 차세대 에이전틱 모델 프리뷰. Discovery·Creation·Delivery·Cybersecurity 4개 차원의 종단 간 딜리버리를 목표로 합니다.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
+
+### 150. 2026-09-15 — Occamy-1.0
+
+- 레코드 ID: `model-157`
+- **공식 모델명:** `Occamy-1.0`
+- 제공사 / 패밀리: `Accio-Lab` / `Occamy`
+- 모델 유형 / 상태: `MLLM / agentic` / `GA`
+- 공개일(레포 기준): `2026-09-15` — [출시일 공식 출처](https://huggingface.co/Accio-Lab/occamy-1.0)
+- **파라미터:** `35B total / 3B active (MoE)` — 공식 수치 확인
+- 파라미터 출처: [공식 파라미터 출처](https://huggingface.co/Accio-Lab/occamy-1.0)
+- 아키텍처: `Qwen3.6-35B-A3B 포스트트레인(40층, 256 experts·8 routed+1 shared, 비전 인코더 동결) — Marathon/Sprint 전문가 SFT+HDPO 후 uniform merge+SAO`
+- 공식 모델 ID: `Accio-Lab/occamy-1.0`
+- 오픈 웨이트: `예`
+- 공식 모델 출처: [공식 1차 출처](https://huggingface.co/Accio-Lab/occamy-1.0), [공식 1차 출처](https://huggingface.co/papers/2609.11977)
+
+#### 공식 발표 벤치마크 점수
+
+- `Claw-Eval (average)`: **82.2%** — [공식 출처](https://huggingface.co/Accio-Lab/occamy-1.0)
+- `Claw-Eval (Pass³)`: **71.4%** — [공식 출처](https://huggingface.co/Accio-Lab/occamy-1.0)
+- `WildClawBench`: **49.16%** — [공식 출처](https://huggingface.co/Accio-Lab/occamy-1.0)
+- `CommerceAgentBench`: **37.38%** — [공식 출처](https://huggingface.co/Accio-Lab/occamy-1.0)
+- `OfficeQA Pro`: **48.1%** — [공식 출처](https://huggingface.co/Accio-Lab/occamy-1.0)
+- `τ³-Bench (Banking)`: **37.1%** — [공식 출처](https://huggingface.co/Accio-Lab/occamy-1.0)
+- `AutomationBench (Pass¹)`: **27.6%** — [공식 출처](https://huggingface.co/Accio-Lab/occamy-1.0)
+- `AutomationBench (partial)`: **69.1%** — [공식 출처](https://huggingface.co/Accio-Lab/occamy-1.0)
+- `BFCL v4`: **65.4%** — [공식 출처](https://huggingface.co/Accio-Lab/occamy-1.0)
+- `VitaBench`: **41.75%** — [공식 출처](https://huggingface.co/Accio-Lab/occamy-1.0)
+- `Terminal-Bench 2.1`: **59.0%** — [공식 출처](https://huggingface.co/Accio-Lab/occamy-1.0)
+- `IFEval`: **91.53%** — [공식 출처](https://huggingface.co/Accio-Lab/occamy-1.0)
+- 점수 메모: 공식 모델 카드 Full Evaluation 표의 Occamy-1.0 열 값입니다. Business Arena($79,868, 통화 지표)와 GDPval(1,128, Elo)는 % 척도가 아니라 제외했습니다. 카드 주석상 * 표시는 공식 카드·제3자 인용 값, †는 공개 태스크 재현 값.
+- 모델 메모: Accio-Lab의 co-work 특화 에이전틱 모델(arXiv:2609.11977). 기술 보고서는 9/4 공개, HF 카드·체크포인트 공개와 보도는 9/15 기준이라 릴리스일을 9/15로 잡았습니다. RL 인프라 Dressage를 함께 오픈소스화했습니다.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
+
+### 151. 2026-09-15 — Gemini 3.8 Live
+
+- 레코드 ID: `model-158`
+- **공식 모델명:** `Gemini 3.8 Live`
+- 제공사 / 패밀리: `Google DeepMind` / `Gemini`
+- 모델 유형 / 상태: `MLLM / omni (live voice)` / `GA`
+- 공개일(레포 기준): `2026-09-15` — [출시일 공식 출처](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/)
+- **파라미터:** `정확한 수치 미공개` — 공식 수치 미공개
+- 파라미터 출처: [공식 파라미터 출처](https://deepmind.google/models/model-cards/gemini-3-8-audio/)
+- 아키텍처: `라이브 대화 모델 — 근실시간 시각 입력, 백그라운드 툴 실행, 97개 언어 자동 전환`
+- 공식 모델 ID: `gemini-3.8-live`
+- 오픈 웨이트: `아니오/호스팅`
+- 공식 모델 출처: [공식 1차 출처](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/), [공식 1차 출처](https://deepmind.google/models/model-cards/gemini-3-8-audio/), [공식 1차 출처](https://ai.google.dev/gemini-api/docs/live-api)
+
+#### 공식 발표 벤치마크 점수
+
+- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- 모델 메모: 규모·비용 효율에 초점을 둔 라이브 대화 모델. 공식 발표는 이 모델의 정량 벤치마크 수치를 제시하지 않았습니다(Speech Agent Arena 2위 언급만 있어 제3자 순위라 미수록). 오디오 출력에는 SynthID 워터마크.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
+
+### 152. 2026-09-15 — Gemini 3.8 Live Extended Thinking
+
+- 레코드 ID: `model-159`
+- **공식 모델명:** `Gemini 3.8 Live Extended Thinking`
+- 제공사 / 패밀리: `Google DeepMind` / `Gemini`
+- 모델 유형 / 상태: `MLLM / omni (live voice)` / `GA`
+- 공개일(레포 기준): `2026-09-15` — [출시일 공식 출처](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/)
+- **파라미터:** `정확한 수치 미공개` — 공식 수치 미공개
+- 파라미터 출처: [공식 파라미터 출처](https://deepmind.google/models/model-cards/gemini-3-8-audio/)
+- 아키텍처: `3.8 Live에 다단계 추론을 더한 상위 모델 — 말하면서 동시에 추론, 라이브 진행 상황 내레이션`
+- 공식 모델 ID: `gemini-3.8-live-extended-thinking`
+- 오픈 웨이트: `아니오/호스팅`
+- 공식 모델 출처: [공식 1차 출처](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/), [공식 1차 출처](https://deepmind.google/models/model-cards/gemini-3-8-audio/), [공식 1차 출처](https://ai.google.dev/gemini-api/docs/live-api)
+
+#### 공식 발표 벤치마크 점수
+
+- `τ-Voice`: **68.6%** — [공식 출처](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/)
+- `τ-Voice-banking`: **35.1%** — [공식 출처](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/)
+- `Big Bench Audio`: **97.7%** — [공식 출처](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/)
+- 점수 메모: Google 공식 발표문에 인쇄된 수치 3개(τ-Voice 68.6%, Sierra τ-Voice-banking 35.1%, Big Bench Audio 97.7%)입니다. 발표문이 인용한 Artificial Analysis Speech-to-Speech Quality Index(82.6)와 Speech Agent Arena 2위는 제3자 지표·순위라 수록하지 않았습니다.
+- 모델 메모: 고복잡도 태스크용 라이브 대화 모델. EVA-Bench(ServiceNow) 파레토 개선은 차트만 제시되어 수치 미수록.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
+
+### 153. 2026-09-15 — Koa
+
+- 레코드 ID: `model-160`
+- **공식 모델명:** `Koa`
+- 제공사 / 패밀리: `Salesforce` / `Koa`
+- 모델 유형 / 상태: `LLM / reasoning (CRM)` / `Preview`
+- 공개일(레포 기준): `2026-09-15` — [출시일 공식 출처](https://www.salesforce.com/au/news/stories/koa-reasoning-model/)
+- **파라미터:** `정확한 수치 미공개 (NVIDIA Nemotron 3 Super 포스트트레인)` — 공식 수치 미공개
+- 파라미터 출처: [공식 파라미터 출처](https://www.salesforce.com/au/news/stories/koa-reasoning-model/)
+- 아키텍처: `NVIDIA Nemotron 3 Super 포스트트레인 — 합성 CRM 시나리오 학습(고객 데이터 미사용)`
+- 공식 모델 ID: `koa`
+- 오픈 웨이트: `아니오/호스팅`
+- 공식 모델 출처: [공식 1차 출처](https://www.salesforce.com/au/news/stories/koa-reasoning-model/)
+
+#### 공식 발표 벤치마크 점수
+
+- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- 모델 메모: Salesforce의 첫 자체 추론 모델. 기술 보고서는 arXiv:2609.15066(비공식 호스트라 출처 미등록). 공식 발표는 'Salesforce CRM 벤치마크에서 선도 모델과 동등 이상, 오류 1/3 수준'이라고만 명시하고 정량 점수를 공개하지 않아 benchmarks는 비워 둡니다.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
+
+### 154. 2026-09-15 — Gensyn open-1b
+
+- 레코드 ID: `model-161`
+- **공식 모델명:** `Gensyn open-1b`
+- 제공사 / 패밀리: `Gensyn` / `open-1b`
+- 모델 유형 / 상태: `LLM` / `GA`
+- 공개일(레포 기준): `2026-09-15` — [출시일 공식 출처](https://huggingface.co/Gensyn/open-1b-sft)
+- **파라미터:** `1.61B total (1.08B non-embedding)` — 공식 수치 확인
+- 파라미터 출처: [공식 파라미터 출처](https://huggingface.co/Gensyn/open-1b-sft)
+- 아키텍처: `Decoder-only Transformer — 전 학습 과정 검증 가능(100스텝 간격 체크포인트·스텝별 상태 해시)`
+- 공식 모델 ID: `Gensyn/open-1b-sft`
+- 오픈 웨이트: `예`
+- 공식 모델 출처: [공식 1차 출처](https://huggingface.co/Gensyn/open-1b-sft), [공식 1차 출처](https://open1b.gensyn.ai)
+
+#### 공식 발표 벤치마크 점수
+
+- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- 모델 메모: 학습 과정 전체를 독립 검증할 수 있는 첫 LM — 400B 토큰·80,957 옵티마이저 스텝의 데이터·코드·중간 체크포인트·스텝별 해시를 공개했습니다. 수록 레코드는 채팅 가능한 SFT 제품 모델이며 base/midtrained 체크포인트는 변형으로 묶습니다. 공식 카드에 벤치마크 점수는 없습니다.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
+
 ## 제외·보류한 기존 레코드
 
 ### `model-045` — LongCat-2.0 Preview
@@ -3112,13 +3496,31 @@
 - 제외 사유: 2026-09-07 플래그십(호출 293B-A30B MoE·256K 컨텍스트)과 09-01 오픈웨이트로 공개된 엔드디바이스 모델 2종(Spark-X2.5-4B/1.7B, 1M 컨텍스트)이 보도됐으나 1차 출처에서 사양을 확정하지 못해 보류합니다. 讯飞의 공식 제품·API 카탈로그 페이지(xinghuo.xfyun.cn/sparkapi, xhspdup.xfyun.cn/sparkapi)는 서버에서 텍스트를 렌더링하지 않아(JavaScript 셸만 응답) 파라미터·컨텍스트·출시일을 인용할 수 없었고, 293B-A30B / 256K 수치는 IT之家·sina 등 2차 보도에서만 확인됐습니다. Hugging Face `XHToken`(표기 'SparkLLM Team') 저장소가 Apache 2.0으로 같은 사양(1M 컨텍스트·200+ 언어)을 공개했지만 해당 조직이 科大讯飞(iFLYTEK)의 공식 조직임을 카드 어디서도 확인하지 못해 '개발사 본인 페이지' 요건을 판정할 수 없었습니다. 조직 편입 여부와 함께 재검토할 항목입니다.
 - 확인 출처: [공식 1차 출처](https://xinghuo.xfyun.cn/sparkapi)
 
+### `model-162` — Gemini Omni 1.1 Flash
+
+- 원래 이름: `Gemini Omni 1.1 Flash`
+- 제외 사유: 영상 생성 전용 모델(씬 확장·4K 업스케일 등)로 수록 범위의 video-generation-only 제외 항목에 해당.
+- 확인 출처: [공식 1차 출처](https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/)
+
+### `model-163` — GPT-Live-1 API 확장
+
+- 원래 이름: `GPT-Live-1 in the API`
+- 제외 사유: 2026-09-10 발표는 기존 model-137 GPT-Live-1의 API 배포 확장으로 신규 모델이 아니므로 중복 집계하지 않음.
+- 확인 출처: [공식 1차 출처](https://openai.com/index/introducing-gpt-live-1-in-the-api/)
+
+### `model-164` — Gemini 3.5 Transcribe
+
+- 원래 이름: `Gemini 3.5 Transcribe`
+- 제외 사유: 전사(transcription) 전용 모델로 ASR/TTS-only 제외 항목에 해당.
+- 확인 출처: [공식 1차 출처](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/)
+
 ## 패밀리 흐름
 
 - **Qwen:** `Qwen3.5` → `Qwen3.6` → `Qwen3.7` → `Qwen3.8` → `Qwen3.8-Flash-Next`
-- **DeepSeek:** `DeepSeek-V4 Preview` → `DeepSeek-V4-Flash-0731` → `DeepSeek-V4-Pro-0813` → `DeepSeek-V4-Flash-Vision-Exp`
+- **DeepSeek:** `DeepSeek-V4 Preview` → `DeepSeek-V4-Flash-0731` → `DeepSeek-V4-Pro-0813` → `DeepSeek-V4-Flash-Vision-Exp` → `DeepSeek-V4.1-Flash`
 - **Claude:** `Opus 4.6` → `Sonnet 4.6` → `Opus 4.7` → `Opus 4.8` → `Fable/Mythos 5` → `Sonnet 5` → `Opus 5` → `Fable/Mythos 5.1`
 - **GPT:** `GPT-5.3` → `GPT-5.4` → `GPT-5.5` → `GPT-5.6` → `GPT-6 Astra` → `GPT-6 Astra Pro`
-- **Gemini:** `Gemini 3.5 Flash` → `Gemini 3.6 Flash` → `Gemini 3.7 Flash` → `Gemini 3.8 Flash`
+- **Gemini:** `Gemini 3.5 Flash` → `Gemini 3.6 Flash` → `Gemini 3.7 Flash` → `Gemini 3.8 Flash` → `Gemini 3.8 Live` → `Gemini 3.8 Live Extended Thinking`
 - **GLM:** `GLM-5` → `GLM-5.1` → `GLM-5.2` → `GLM-5.3` → `GLM-5.3-Flash`
 - **Kimi:** `Kimi K2.5` → `Kimi K2.6` → `Kimi K2.7 Code` → `Kimi K3`
 - **LongCat:** `LongCat-Flash-Thinking-2601` → `LongCat-Flash-Lite` → `LongCat-Flash-Omni` → `LongCat-2.0`
@@ -3128,6 +3530,8 @@
 - **Laguna:** `Laguna M.1` → `Laguna XS.2` → `Laguna XS 2.1` → `Laguna S 2.1`
 - **Muse Spark:** `Muse Spark` → `Muse Spark 1.1` → `Muse Spark 1.2` → `Muse Spark 1.3`
 - **K2 Horizon:** `K2-Horizon-0.9B` → `K2-Horizon-3.7B` → `K2-Horizon-7B` → `K2-Horizon-32B` → `K2-Horizon-MoVA-36B-A4B` → `K2-Horizon-375B-A23B`
+- **Seed / Doubao:** `Seed 2.0` → `Seed2.1 Pro` → `Seed2.1 Turbo`
+- **Ling 3.0:** `Ling-3.0-tiny` → `Ling-3.0-flash` → `Ling-3.0-flash-VL`
 
 ## 재현 명령
 

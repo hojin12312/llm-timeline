@@ -21,6 +21,7 @@ CATALOG = ROOT / "models_catalog.json"
 DATA_JS = ROOT / "data.js"
 
 OFFICIAL_HOSTS = {
+    "ai.google.dev",
     "ai.meta.com",
     "alibabagroup.com",
     "anthropic.com",
@@ -30,6 +31,8 @@ OFFICIAL_HOSTS = {
     # Flash Cyber are only announced there, not on ai.meta.com/deepmind.google.
     "blog.google",
     "cohere.com",
+    # Cognition (SWE-2 launch post) — added 2026-09-16.
+    "cognition.com",
     "deepai.google",
     "deepmind.google",
     "deepseek.com",
@@ -38,6 +41,8 @@ OFFICIAL_HOSTS = {
     "docs.cloud.google.com",
     "docs.z.ai",
     "ernie.baidu.com",
+    # Gensyn open-1b verification record. Added 2026-09-16.
+    "gensyn.ai",
     "huggingface.co",
     # IFM / MBZUAI launch pages (K2 Horizon). Added 2026-09-08; the site serves a
     # JS challenge to HEAD requests but answers the validator's GET with HTTP 200.
@@ -51,6 +56,8 @@ OFFICIAL_HOSTS = {
     "qwen.ai",
     "qwencloud.com",
     "research.meta.ai",
+    # Salesforce newsroom (Koa reasoning model announcement). Added 2026-09-16.
+    "salesforce.com",
     "sarvam.ai",
     "seed.bytedance.com",
     "static.stepfun.com",
@@ -68,6 +75,12 @@ FORBIDDEN_BENCHMARK_TERMS = (
     "codearena",
 )
 
+# Exact-name exceptions to the forbidden substrings. "MathArena Apex" is a fixed
+# evaluation suite published as a benchmark (not a crowdsourced leaderboard or
+# rating), so the bare "arena" substring must not block it. Added 2026-09-16 for
+# DeepSeek-V4.1-Flash's official model card.
+ALLOWED_BENCHMARK_NAMES = {"matharena apex (pass@1)"}
+
 STALE_TEXT = (
     "~30B",
     "LongCat-Flash-Omni-2603",
@@ -78,11 +91,13 @@ STALE_TEXT = (
 # Publishers whose pages answer an automated GET inconsistently because of a
 # JavaScript bot challenge. ifm.ai returned HTTP 200 for 6/6 sequential requests on
 # 2026-09-08 yet 403s partway through a 158-URL sweep, and its launch post and press
-# release were opened and read manually the same day. A persistent 403 from these
-# hosts is reported as a warning so the sweep stays deterministic while the URL
-# remains in the catalog as evidence; every other host still fails on a persistent
-# 403, and any host fails on 404/410.
-BOT_PROTECTED_HOSTS = {"ifm.ai"}
+# release were opened and read manually the same day. openai.com began answering
+# the audit UA with Cloudflare 403 challenges on 2026-09-16 (the same URLs verified
+# manually in a browser). A persistent 403 from these hosts is reported as a
+# warning so the sweep stays deterministic while the URL remains in the catalog as
+# evidence; every other host still fails on a persistent 403, and any host fails
+# on 404/410.
+BOT_PROTECTED_HOSTS = {"ifm.ai", "openai.com"}
 
 
 def error(errors: list[str], message: str) -> None:
@@ -189,7 +204,10 @@ def validate_catalog(catalog: dict) -> list[str]:
             error(errors, f"{prefix} {name}: benchmarks and benchmark_sources must be objects")
             continue
         for benchmark, value in benchmarks.items():
-            if any(term in benchmark.lower() for term in FORBIDDEN_BENCHMARK_TERMS):
+            if (
+                benchmark.lower() not in ALLOWED_BENCHMARK_NAMES
+                and any(term in benchmark.lower() for term in FORBIDDEN_BENCHMARK_TERMS)
+            ):
                 error(errors, f"{prefix} {name}: prohibited non-publisher metric {benchmark!r}")
             if not isinstance(value, (int, float)) or isinstance(value, bool) or not math.isfinite(value):
                 error(errors, f"{prefix} {name}: non-numeric score for {benchmark!r}")
@@ -326,8 +344,8 @@ def check_urls(catalog: dict) -> list[str]:
         if last_code == 403 and (urlparse(url).hostname or "") in BOT_PROTECTED_HOSTS:
             print(
                 f"WARN: {url} is bot-protected; HTTP 403 for the automated sweep. "
-                "Page content was verified manually on 2026-09-08 - re-check in a browser "
-                "if this record is audited again.",
+                "Page content was verified manually (ifm.ai 2026-09-08, openai.com "
+                "2026-09-16) - re-check in a browser if this record is audited again.",
                 file=sys.stderr,
             )
             return None
