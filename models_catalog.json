@@ -10065,7 +10065,7 @@
         "EgoLife (w/ memory)": "https://qwen.ai/blog?id=qwen3.8",
         "VideoDR (w/ search)": "https://qwen.ai/blog?id=qwen3.8"
       },
-      "benchmark_note": "공식 HF 모델 카드 비교표의 Qwen3.8-Max 열 값(= 2.4T-A95B 오픈 체크포인트의 API 명칭). QwenReactBench 1724·QwenSVGBench 1713은 레이팅 척도(>100)라 제외. 추가: 동일 모델(Qwen3.8-Max = 2.4T-A95B 오픈웨이트)의 qwen.ai 발표 블로그 멀티모달 표 전체 수치(비전·문서·공간·비디오)를 블로그 출처로 병기 — 텍스트 표 값은 HF 카드와 동일 확인. 추가: 동일 모델(Qwen3.8-Max = 2.4T-A95B 오픈웨이트)의 qwen.ai 발표 블로그 멀티모달 표 전체 수치(비전·문서·공간·비디오)를 블로그 출처로 병기 — 텍스트 표 값은 HF 카드와 동일 확인. 추가: 동일 모델(Qwen3.8-Max = 2.4T-A95B 오픈웨이트)의 qwen.ai 발표 블로그 멀티모달 표 전체 수치(비전·문서·공간·비디오)를 블로그 출처로 병기 — 텍스트 표 값은 HF 카드와 동일 확인.",
+      "benchmark_note": "공식 HF 모델 카드 비교표의 Qwen3.8-Max 열 값(= 2.4T-A95B 오픈 체크포인트의 API 명칭). QwenReactBench 1724·QwenSVGBench 1713은 레이팅 척도(>100)라 제외. 추가: 동일 모델(Qwen3.8-Max = 2.4T-A95B 오픈웨이트)의 qwen.ai 발표 블로그 멀티모달 표 전체 수치(비전·문서·공간·비디오)를 블로그 출처로 병기 — 텍스트 표 값은 HF 카드와 동일 확인.",
       "parameter_status": "verified",
       "verification": {
         "status": "reviewed",
@@ -11534,7 +11534,7 @@
         "Impossible ExploitGym": "https://openai.com/index/gpt-6-astra/",
         "Internal hallucination (↓)": "https://openai.com/index/gpt-6-astra/"
       },
-      "benchmark_note": "OpenAI GPT-6 Astra 공식 발표문의 공식 평가 표(Astra 열) 수치이며, 발표문 기준 '모든 effort 중 최대' 점수입니다. ARC-AGI-3는 OpenAI responses API 하네스, OSWorld 2.0/Agents' Last Exam/SRE-Bench/ExploitBench는 에이전트·하네스 포함 측정이고 ExploitBench·ExploitGym은 프로덕션 세이프가드 없이 측정했습니다. 발표문에 함께 실린 Artificial Analysis 지수 표는 제3자 지표 정책상 기록하지 않았습니다. 보강: 동일 발표 페이지의 나머지 행 전체(컴퓨터 사용·전문직·과학/헬스·사이버·장문맥·추론·내부 안전 평가)를 추가했습니다. OpenScore String Quartets는 0.84(0~1 척도)를 %로 환산. 내부 안전 지표는 낮을수록 좋은 값이라 (↓) 표기. Artificial Analysis Intelligence Index는 제3자 지표라 제외. Astra Pro 열은 미게재 — model-135 참조. 보강: 동일 발표 페이지의 나머지 행 전체(컴퓨터 사용·전문직·과학/헬스·사이버·장문맥·추론·내부 안전 평가)를 추가했습니다. OpenScore String Quartets는 0.84(0~1 척도)를 %로 환산. 내부 안전 지표는 낮을수록 좋은 값이라 (↓) 표기. Artificial Analysis Intelligence Index는 제3자 지표라 제외. Astra Pro 열은 미게재 — model-135 참조. 보강: 동일 발표 페이지의 나머지 행 전체(컴퓨터 사용·전문직·과학/헬스·사이버·장문맥·추론·내부 안전 평가)를 추가했습니다. OpenScore String Quartets는 0.84(0~1 척도)를 %로 환산. 내부 안전 지표는 낮을수록 좋은 값이라 (↓) 표기. Artificial Analysis Intelligence Index는 제3자 지표라 제외. Astra Pro 열은 미게재 — model-135 참조.",
+      "benchmark_note": "OpenAI GPT-6 Astra 공식 발표문의 공식 평가 표(Astra 열) 수치이며, 발표문 기준 '모든 effort 중 최대' 점수입니다. ARC-AGI-3는 OpenAI responses API 하네스, OSWorld 2.0/Agents' Last Exam/SRE-Bench/ExploitBench는 에이전트·하네스 포함 측정이고 ExploitBench·ExploitGym은 프로덕션 세이프가드 없이 측정했습니다. 발표문에 함께 실린 Artificial Analysis 지수 표는 제3자 지표 정책상 기록하지 않았습니다. 보강: 동일 발표 페이지의 나머지 행 전체(컴퓨터 사용·전문직·과학/헬스·사이버·장문맥·추론·내부 안전 평가)를 추가했습니다. OpenScore String Quartets는 0.84(0~1 척도)를 %로 환산. 내부 안전 지표는 낮을수록 좋은 값이라 (↓) 표기. Artificial Analysis Intelligence Index는 제3자 지표라 제외. Astra Pro 열은 미게재 — model-135 참조.",
       "parameter_status": "undisclosed",
       "verification": {
         "status": "reviewed",
