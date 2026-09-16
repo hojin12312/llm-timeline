@@ -25,6 +25,10 @@ OFFICIAL_HOSTS = {
     "ai.meta.com",
     "alibabagroup.com",
     "anthropic.com",
+    # ByteDance static CDN — hosts the official Seed2.0 model-card PDF.
+    "bytednsdoc.com",
+    # NAVER CLOVA tech blog — official HyperCLOVA X SEED 4B benchmarks.
+    "clova.ai",
     "api-docs.deepseek.com",
     # 1st-party vendor research/newsroom domains (Meta AI Research blog, Google
     # official blog). Added 2026-09-08 because Muse Spark 1.3 and Gemini 3.8
@@ -87,6 +91,15 @@ ALLOWED_BENCHMARK_NAMES = {
     # 고정 평가 스위트(리더보드가 아닌 수치 평가) — 정확 명칭 예외
     "matharena apex",
     "matharena apex 2025",
+    # MathArena Apex fixed-suite variants from the Seed2.0 card and the
+    # DeepSeek-V4 tech report (shortlist split + per-thinking-mode columns).
+    "matharena apex (shortlist)",
+    "matharena apex (non-think)",
+    "matharena apex (think-high)",
+    "matharena apex (think-max)",
+    "matharena apex shortlist (non-think)",
+    "matharena apex shortlist (think-high)",
+    "matharena apex shortlist (think-max)",
     "arena hard (instruct)",
     "arena hard (reasoning)",
     "arena-hard-v2 (3b)",

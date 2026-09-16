@@ -1,7 +1,7 @@
 # ⚡ 2026 LLM & MLLM Release Timeline
 
 > **2026년 주요 LLM / MLLM 파운데이션 모델 출시 타임라인 및 세대별 진화 계보**  
-> 기준 기간: **2026-01-01 ~ 2026-09-16** | 수록 모델: **154개** | 표기 조직: **37개**
+> 기준 기간: **2026-01-01 ~ 2026-09-16** | 수록 모델: **155개** | 표기 조직: **37개**
 
 본 레포지토리는 2026년에 발표된 전 세계 주요 LLM, MLLM, Omni 파운데이션 모델의 릴리즈 내역을 공식 1차 자료와 함께 구조화하여 인터랙티브한 웹 타임라인으로 제공하는 **GitHub Pages** 프로젝트입니다.
 
@@ -10,7 +10,8 @@
 - 기간 내 누락 정정(2): ByteDance **Seed2.1 Pro · Seed2.1 Turbo**(6/23) — 이전 감사에서 누락된 플래그십 패밀리를 소급 수록
 - 이번 감사는 각 모델이 공식 카드·기술 보고서·발표문에 인쇄한 벤치마크 점수를 전부 수록하는 것을 기준으로 했습니다(신규 124개 점수 포함, 누적 444개). Elo·달러·레이팅 등 % 척도가 아닌 지표와 제3자 지표(AA 지수, Arena 순위)는 감사 원장 메모에 기록만 하고 점수 표에는 넣지 않았습니다.
 - 제외 원장 신규 기록(3): **Gemini Omni 1.1 Flash**(비디오 생성 전용), **GPT-Live-1 API 확장**(기존 모델의 배포 확장), **Gemini 3.5 Transcribe**(전사 전용)
-- **벤치마크 전면 감사(9/16):** 공식 점수가 비어 있던 모델의 1차 출처(모델 카드 표·기술 보고서·발표문 차트·SVG/이미지 표·arXiv 논문)를 일제 재확인해 **42개 모델에 1,400여 개 점수를 추가 수록**했습니다 — 누적 **128개 모델·1,854개 점수**. 대상: Anthropic 전 플래그십(Fable 5/5.1, Mythos 5, Opus 5/4.8/4.7, Sonnet 5), OpenAI(GPT-5.4/Pro), Meta Muse Spark 전 세대(1.1~1.3), Qwen3.5 전 변형·Qwen3.6-Max-Preview·Qwen3.8-2.4T-A95B, GLM-5.3/Flash, Granite 4.1/4.2, EXAONE 4.5·K-EXAONE 2.0, Motif-3, LongCat-Flash-Omni, Nemotron-3-Nano-Omni, Kimi K2.7 Code, MiniMax-M2.7/M3, MiMo-V2.5, Ling-2.6-1T/3.0-tiny/3.0-flash, Tencent Hy3/Hy3-preview/Hy4-preview, Mistral Small 4, North Mini Code, Tiny Aya 변형군, ERNIE 5.0/5.1, Grok 4.6, Inkling, Gemini 3.5/3.6/3.7 Flash·Flash-Lite, A.X K1. 수치가 아예 미공개이거나 출처가 사망(Seed 2.0 404)·게이트·이미지 한정 판독 불가인 모델은 빈 점수 사유를 각 원장 메모에 기록했습니다.
+- **벤치마크 전면 감사(9/16):** 공식 점수가 비어 있던 모델의 1차 출처(모델 카드 표·기술 보고서·발표문 차트·SVG/이미지 표·arXiv 논문)를 일제 재확인해 **42개 모델에 1,400여 개 점수를 추가 수록**했습니다 — 누적 **128개 모델·1,854개 점수**. 대상: Anthropic 전 플래그십(Fable 5/5.1, Mythos 5, Opus 5/4.8/4.7, Sonnet 5), OpenAI(GPT-5.4/Pro), Meta Muse Spark 전 세대(1.1~1.3), Qwen3.5 전 변형·Qwen3.6-Max-Preview·Qwen3.8-2.4T-A95B, GLM-5.3/Flash, Granite 4.1/4.2, EXAONE 4.5·K-EXAONE 2.0, Motif-3, LongCat-Flash-Omni, Nemotron-3-Nano-Omni, Kimi K2.7 Code, MiniMax-M2.7/M3, MiMo-V2.5, Ling-2.6-1T/3.0-tiny/3.0-flash, Tencent Hy3/Hy3-preview/Hy4-preview, Mistral Small 4, North Mini Code, Tiny Aya 변형군, ERNIE 5.0/5.1, Grok 4.6, Inkling, Gemini 3.5/3.6/3.7 Flash·Flash-Lite, A.X K1. 수치가 아예 미공개이거나 출처가 사망·게이트·이미지 한정 판독 불가인 모델은 빈 점수 사유를 각 원장 메모에 기록했습니다.
+- **빈 벤치마크 전수 재조사(9/16, 2차):** 1차 감사 후 남은 빈 점수 26개 레코드를 모두 재검증해 **16개 모델에 860여 개 점수를 추가**하고 **GPT-5.4 nano**(3/17, `model-165`)를 신규 수록했습니다 — 누적 **144개 모델·2,717개 점수**. 대상: Seed 2.0(공식 모델카드 PDF 전체 표 — 기존 404 링크 대신 ByteDance CDN 카드로 대체), GPT-5.3 Instant·GPT-Live-1/mini(배포 안전 문서의 공식 안전·HealthBench 표), GLM-5-Turbo/GLM-5V-Turbo(GLM-5V 문서 비교 표), Qwen3.5-Omni-Flash(기술 보고서 Flash 열), Qwen3.6-Plus/3.7-Max/3.7-Plus(qwen.ai 3.7 발표 표), DeepSeek-V4-Flash/Pro(HF 카드 기반·instruct 표), HyperCLOVA X SEED 4B(CLOVA 기술 블로그), Gemini 3.5 Flash Cyber(datavis 인코딩 차트 데이터), Qwen3.8-Max(qwen.ai 8/3 발표 전체 표), Gemini 3.8 Live(τ-Voice 평가 차트), GPT-5.6·GPT-6 Astra(발표 표 누락분 보강). Qwen3.8-Max-Preview/0902 스냅샷, Command A+, Motif-3-Beta, GPT-6 Astra Pro, GPT-5.6 Sol Pro, Koa, Gensyn open-1b, Tiny Aya base는 1차 출처에 수치가 없음을 재확인하고 사유를 원장에 기록했습니다.
 
 **2026-09-08 감사 추가분 (18개):**
 - 신규 릴리스(5): OpenAI **GPT-6 Astra · GPT-6 Astra Pro**(9/3), Google DeepMind **Gemini 3.8 Flash · 3.8 Flash Cyber**(9/2), Meta **Muse Spark 1.3**(9/2)
@@ -129,7 +130,7 @@ python3 -m http.server 8000
 llm-timeline/
 ├── index.html                       # 메인 인터랙티브 대시보드 웹 애플리케이션
 ├── models_catalog.json               # 모델명·파라미터·공식 점수·출처 SSOT
-├── data.js                          # SSOT에서 생성된 154개 모델 데이터셋
+├── data.js                          # SSOT에서 생성된 155개 모델 데이터셋
 ├── app.js                           # 검색, 다차원 필터, 뷰 전환, 모달 동작 로직
 ├── style.css                        # 글래스모피즘, 타임라인 스파인, 펄스 애니메이션
 ├── build_data.py                    # models_catalog.json → data.js 생성기
@@ -137,7 +138,7 @@ llm-timeline/
 ├── .nojekyll                        # GitHub Pages 정적 자산 로딩 보장
 ├── .github/workflows/
 │   └── deploy-pages.yml             # GitHub Actions 자동 배포 워크플로우
-├── 조사 자료                         # 154개 모델별 공식 출처 감사 원장 (Markdown)
+├── 조사 자료                         # 155개 모델별 공식 출처 감사 원장 (Markdown)
 └── README.md                        # 프로젝트 설명 및 배포 안내 문서
 ```
 
