@@ -1,6 +1,6 @@
 # 조사 자료 — 2026 LLM / MLLM 공개 기록 감사 원장
 
-> 최종 감사일: **2026-09-16** | 활성 레코드: **154개** | 제외 원장: **9개** | 공식 점수가 확인된 모델: **72개** | 공식 점수: **444개**
+> 최종 감사일: **2026-09-16** | 활성 레코드: **154개** | 제외 원장: **9개** | 공식 점수가 확인된 모델: **128개** | 공식 점수: **1854개**
 >
 > 이 문서는 `models_catalog.json`에서 생성된 사람 검토용 감사 원장입니다. 브라우저용 `data.js`를 직접 수정하지 말고 SSOT를 수정한 뒤 `python3 build_data.py`로 재생성하세요.
 
@@ -59,9 +59,40 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- `KMMLU (thinking)`: **80.2%** — [공식 출처](https://huggingface.co/skt/A.X-K1)
+- `KMMLU-Redux (thinking)`: **77.9%** — [공식 출처](https://huggingface.co/skt/A.X-K1)
+- `KMMLU-Pro (thinking)`: **68.1%** — [공식 출처](https://huggingface.co/skt/A.X-K1)
+- `CLIcK (thinking)`: **84.9%** — [공식 출처](https://huggingface.co/skt/A.X-K1)
+- `KoBALT (thinking)`: **48.8%** — [공식 출처](https://huggingface.co/skt/A.X-K1)
+- `MMLU-Pro (thinking)`: **81.5%** — [공식 출처](https://huggingface.co/skt/A.X-K1)
+- `GPQA-Diamond (thinking)`: **74.0%** — [공식 출처](https://huggingface.co/skt/A.X-K1)
+- `IFBench (prompt-loose) (thinking)`: **64.7%** — [공식 출처](https://huggingface.co/skt/A.X-K1)
+- `IFEval (prompt-strict) (thinking)`: **80.4%** — [공식 출처](https://huggingface.co/skt/A.X-K1)
+- `IFEval-ko (prompt-strict) (thinking)`: **81.0%** — [공식 출처](https://huggingface.co/skt/A.X-K1)
+- `AIME25 (thinking)`: **89.8%** — [공식 출처](https://huggingface.co/skt/A.X-K1)
+- `AIME25-ko (thinking)`: **86.9%** — [공식 출처](https://huggingface.co/skt/A.X-K1)
+- `HRM8K (thinking)`: **89.4%** — [공식 출처](https://huggingface.co/skt/A.X-K1)
+- `KMO25 (thinking)`: **93.0%** — [공식 출처](https://huggingface.co/skt/A.X-K1)
+- `LiveCodeBench v6 (25.2.1–25.5.1) (thinking)`: **75.8%** — [공식 출처](https://huggingface.co/skt/A.X-K1)
+- `LiveCodeBench-ko (thinking)`: **73.1%** — [공식 출처](https://huggingface.co/skt/A.X-K1)
+- `HumanEval+ (thinking)`: **87.2%** — [공식 출처](https://huggingface.co/skt/A.X-K1)
+- `HumanEval+ ko (thinking)`: **90.2%** — [공식 출처](https://huggingface.co/skt/A.X-K1)
+- `MBPP+ (thinking)`: **93.0%** — [공식 출처](https://huggingface.co/skt/A.X-K1)
+- `SciCode (thinking)`: **32.4%** — [공식 출처](https://huggingface.co/skt/A.X-K1)
+- `Humanity’s Last Exam (thinking)`: **8.6%** — [공식 출처](https://huggingface.co/skt/A.X-K1)
+- `τ² Telecom (thinking)`: **58.1%** — [공식 출처](https://huggingface.co/skt/A.X-K1)
+- `KMMLU (non-thinking)`: **73.0%** — [공식 출처](https://huggingface.co/skt/A.X-K1)
+- `KMMLU-Redux (non-thinking)`: **68.3%** — [공식 출처](https://huggingface.co/skt/A.X-K1)
+- `KMMLU-Pro (non-thinking)`: **60.3%** — [공식 출처](https://huggingface.co/skt/A.X-K1)
+- `CLIcK (non-thinking)`: **77.2%** — [공식 출처](https://huggingface.co/skt/A.X-K1)
+- `IFBench (non-thinking)`: **44.3%** — [공식 출처](https://huggingface.co/skt/A.X-K1)
+- `IFEval (non-thinking)`: **78.6%** — [공식 출처](https://huggingface.co/skt/A.X-K1)
+- `HumanEval+ (non-thinking)`: **79.9%** — [공식 출처](https://huggingface.co/skt/A.X-K1)
+- `HumanEval+ ko (non-thinking)`: **75.6%** — [공식 출처](https://huggingface.co/skt/A.X-K1)
+- `MBPP+ (non-thinking)`: **85.7%** — [공식 출처](https://huggingface.co/skt/A.X-K1)
+- 점수 메모: 공식 HF 모델 카드의 Thinking Mode / Non-Thinking Mode 두 표 전부 수록. AA-LCR(제3자 지표)은 제외.
 - 모델 메모: Official SK Telecom model card reports 519B total / 33B active parameters; the model card is released under Apache 2.0.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 003. 2026-01-20 — LongCat-Flash-Thinking-2601
 
@@ -274,12 +305,59 @@
 - 아키텍처: `Unified Omni Model`
 - 공식 모델 ID: `ernie5.0`
 - 오픈 웨이트: `아니오/호스팅`
-- 공식 모델 출처: [공식 1차 출처](https://ernie.baidu.com/blog/posts/ernie5.0/)
+- 공식 모델 출처: [공식 1차 출처](https://ernie.baidu.com/blog/posts/ernie5.0/), [기술 보고서 (arXiv)](https://arxiv.org/abs/2602.04705)
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `SimpleQA`: **74.01%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `ChineseSimpleQA`: **86.03%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `MMLU-Pro`: **83.8%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `HLE`: **25.81%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `GPQA-Diamond`: **86.36%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `AIME 2025`: **89.06%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `HMMT 2025`: **79.58%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `LiveCodeBench v6`: **76.21%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `HumanEval+`: **94.48%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `MBPP+`: **82.54%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `ZebraLogic`: **96.5%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `BBEH`: **66.63%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `IFEval`: **93.35%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `MultiChallenge`: **65.98%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `Multi-IF`: **85.56%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `TAU2-Bench`: **78.79%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `ACEBench-en`: **87.7%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `ACEBench-zh`: **89.6%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `BFCL v4`: **66.47%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `BrowseComp-zh`: **64.71%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `SpreadSheetBench`: **40.08%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `MMMU-Pro`: **68.63%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `MathVista`: **84.8%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `MathVerse`: **85.13%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `MathVision`: **74.34%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `VisualPuzzle`: **64.82%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `VisuLogic`: **32.0%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `VLMAreBlind`: **91.38%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `ChartQA`: **87.8%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `AI2D`: **96.89%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `DocVQA`: **95.45%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `ChartXiv-RQ`: **67.1%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `ChartXiv-DQ`: **89.05%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `SimpleVQA`: **67.64%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `HallusionBench`: **63.87%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `MMStar`: **75.54%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `BLINK`: **70.02%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `CV-Bench`: **87.19%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `CountBench`: **96.54%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `VideoMME`: **81.35%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `Video-MMMU`: **81.11%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `MMVU`: **72.24%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `MMAU`: **80.8%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `TUT2017`: **61.42%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `CochlScene`: **74.6%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `ClothoAQA`: **74.41%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- `VocalSound`: **92.01%** — [공식 출처](https://arxiv.org/abs/2602.04705)
+- 점수 메모: 공식 기술 보고서(arXiv:2602.04705)의 사후학습(instruct)·멀티모달·오디오 표 값. 프리트레인(Base) 표는 별도 체크포인트라 미수록(보고서 참조). OCRBench 878은 0-1000 척도라 % 점수표에서 제외. 오디오 표 중 비% 지표(WER·BLEU 성격)는 제외하고 정확도형만 수록.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 012. 2026-02-11 — GLM-5
 
@@ -373,7 +451,8 @@
 #### 공식 발표 벤치마크 점수
 
 - 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 점수 메모: 공식 출처(seed.bytedance.com 블로그 링크)가 현재 404로 사망 — 검증 가능한 공식 벤치마크 수치를 확보하지 못해 점수 미수록. 링크는 참고용으로 유지.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 016. 2026-02-16 — Qwen3.5-397B-A17B
 
@@ -439,7 +518,8 @@
 #### 공식 발표 벤치마크 점수
 
 - 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 점수 메모: HF 카드가 gated(접근 제한)라 공식 논문(arXiv:2603.11510) 기준 — 베이스 체크포인트 자체 평가 표는 없고 Global/Earth/Fire/Water 변형 평가만 게재 — 점수 미수록.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 019. 2026-02-17 — Tiny Aya Global
 
@@ -453,12 +533,29 @@
 - 아키텍처: `Multilingual Dense Transformer (70+ Languages)`
 - 공식 모델 ID: `CohereLabs/tiny-aya-global`
 - 오픈 웨이트: `예`
-- 공식 모델 출처: [공식 1차 출처](https://huggingface.co/CohereLabs/tiny-aya-global)
+- 공식 모델 출처: [공식 1차 출처](https://huggingface.co/CohereLabs/tiny-aya-global), [공식 논문 (arXiv)](https://arxiv.org/abs/2603.11510)
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `Global MMLU`: **44.9%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- `INCLUDE`: **45.1%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- `Global PIQA`: **68.3%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- `mDolly (66 langs)`: **86.9%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- `mArenaHard-v2 (66 langs)`: **67.4%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- `GlobalMGSM (35 langs)`: **52.8%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- `Flores (66 langs, ChrF)`: **43.5%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- `WMT24++ (55 langs, ChrF)`: **46.0%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- `mDolly language-consistency pass rate`: **97.4%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- `mArenaHard language-consistency pass rate`: **91.4%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- `GlobalMGSM language-consistency pass rate`: **96.9%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- `MultiJail min safe rate (10 langs)`: **87.0%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- `MultiJail mean safe rate`: **91.1%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- `XSTest over-refusal (lower=better)`: **10.4%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- `XSTest under-refusal (lower=better)`: **15.5%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- `BLEnD SQA avg (source-lang prompts)`: **32.33%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- `BLEnD SQA avg (English prompts)`: **38.59%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- 점수 메모: 공식 arXiv 논문(2603.11510) 표 4·5·6·7·19·20 값. 표 5·6 값은 ±표준편차 병기(예: mDolly 86.9±6.2). 표 6은 언어 일관성 line-level pass rate. mArenaHard는 고정 평가 스위트(mArenaHard-v2). XSTest는 과잉거부율 — 낮을수록 좋음. NormAd는 지역별 값만 게재돼 종합값 미수록. HF 카드는 gated라 논문을 1차 출처로 사용.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 020. 2026-02-17 — Tiny Aya Earth
 
@@ -472,12 +569,18 @@
 - 아키텍처: `Regional Specialization Transformer`
 - 공식 모델 ID: `CohereLabs/tiny-aya-earth`
 - 오픈 웨이트: `예`
-- 공식 모델 출처: [공식 1차 출처](https://huggingface.co/CohereLabs/tiny-aya-earth)
+- 공식 모델 출처: [공식 1차 출처](https://huggingface.co/CohereLabs/tiny-aya-earth), [공식 논문 (arXiv)](https://arxiv.org/abs/2603.11510)
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `MultiJail min safe rate (10 langs)`: **77.5%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- `MultiJail mean safe rate`: **87.8%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- `XSTest over-refusal (lower=better)`: **10.4%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- `XSTest under-refusal (lower=better)`: **19.0%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- `BLEnD SQA avg (source-lang prompts)`: **31.94%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- `BLEnD SQA avg (English prompts)`: **40.09%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- 점수 메모: 공식 arXiv 논문(2603.11510)의 Tiny Aya Earth 행(표 7 안전 평가·표 19/20 BLEnD SQA 평균). XSTest·refusal 지표는 낮을수록 좋음. 지역별 NormAd 정확도는 표 16/17 참조(종합 미게재).
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 021. 2026-02-17 — Tiny Aya Fire
 
@@ -491,12 +594,18 @@
 - 아키텍처: `Regional Specialization Transformer`
 - 공식 모델 ID: `CohereLabs/tiny-aya-fire`
 - 오픈 웨이트: `예`
-- 공식 모델 출처: [공식 1차 출처](https://huggingface.co/CohereLabs/tiny-aya-fire)
+- 공식 모델 출처: [공식 1차 출처](https://huggingface.co/CohereLabs/tiny-aya-fire), [공식 논문 (arXiv)](https://arxiv.org/abs/2603.11510)
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `MultiJail min safe rate (10 langs)`: **78.1%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- `MultiJail mean safe rate`: **90.0%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- `XSTest over-refusal (lower=better)`: **10.4%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- `XSTest under-refusal (lower=better)`: **15.0%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- `BLEnD SQA avg (source-lang prompts)`: **33.31%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- `BLEnD SQA avg (English prompts)`: **41.0%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- 점수 메모: 공식 arXiv 논문(2603.11510)의 Tiny Aya Fire 행(표 7 안전 평가·표 19/20 BLEnD SQA 평균). XSTest·refusal 지표는 낮을수록 좋음. 지역별 NormAd 정확도는 표 16/17 참조(종합 미게재).
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 022. 2026-02-17 — Tiny Aya Water
 
@@ -510,12 +619,18 @@
 - 아키텍처: `Regional Specialization Transformer`
 - 공식 모델 ID: `CohereLabs/tiny-aya-water`
 - 오픈 웨이트: `예`
-- 공식 모델 출처: [공식 1차 출처](https://huggingface.co/CohereLabs/tiny-aya-water)
+- 공식 모델 출처: [공식 1차 출처](https://huggingface.co/CohereLabs/tiny-aya-water), [공식 논문 (arXiv)](https://arxiv.org/abs/2603.11510)
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `MultiJail min safe rate (10 langs)`: **82.9%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- `MultiJail mean safe rate`: **89.7%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- `XSTest over-refusal (lower=better)`: **10.0%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- `XSTest under-refusal (lower=better)`: **19.5%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- `BLEnD SQA avg (source-lang prompts)`: **32.39%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- `BLEnD SQA avg (English prompts)`: **39.57%** — [공식 출처](https://arxiv.org/abs/2603.11510)
+- 점수 메모: 공식 arXiv 논문(2603.11510)의 Tiny Aya Water 행(표 7 안전 평가·표 19/20 BLEnD SQA 평균). XSTest·refusal 지표는 낮을수록 좋음. 지역별 NormAd 정확도는 표 16/17 참조(종합 미게재).
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 023. 2026-02-24 — Qwen3.5-122B-A10B
 
@@ -579,8 +694,91 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `MMLU-Pro`: **86.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `MMLU-Redux`: **93.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `C-Eval`: **90.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `SuperGPQA`: **65.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `IFEval`: **95.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `IFBench`: **76.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `MultiChallenge`: **60.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `LongBench v2`: **60.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `HLE w/ CoT`: **24.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `GPQA Diamond`: **85.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `HMMT Feb 25`: **92.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `HMMT Nov 25`: **89.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `SWE-bench Verified`: **72.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `Terminal Bench 2`: **41.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `LiveCodeBench v6`: **80.7%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `OJBench`: **40.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `FullStackBench en`: **60.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `FullStackBench zh`: **57.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `BFCL-V4`: **68.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `TAU2-Bench`: **79.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `VITA-Bench`: **41.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `DeepPlanning`: **22.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `HLE w/ tool`: **48.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `Browsecomp`: **61.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `Browsecomp-zh`: **62.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `WideSearch`: **61.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `Seal-0`: **47.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `MMMLU`: **85.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `MMLU-ProX`: **82.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `NOVA-63`: **58.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `INCLUDE`: **81.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `Global PIQA`: **87.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `PolyMATH`: **71.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `WMT24++`: **77.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `MAXIFE`: **88.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `MMMU`: **82.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `MMMU-Pro`: **75.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `MathVision`: **86.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `Mathvista(mini)`: **87.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `DynaMath`: **87.7%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `ZEROBench`: **10.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `ZEROBench_sub`: **36.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `VlmsAreBlind`: **96.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `BabyVision (thinking)`: **44.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `BabyVision (non-thinking)`: **34.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `RealWorldQA`: **83.7%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `MMStar`: **81.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `MMBench EN-DEV-v1.1`: **92.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `SimpleVQA`: **56.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `HallusionBench`: **70.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `OmniDocBench1.5`: **88.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `CharXiv(RQ)`: **79.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `MMLongBench-Doc`: **60.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `CC-OCR`: **81.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `AI2D_TEST`: **92.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `OCRBench`: **89.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `ERQA`: **60.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `CountBench`: **97.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `RefCOCO(avg)`: **90.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `ODInW13`: **41.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `EmbSpatialBench`: **84.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `RefSpatialBench`: **67.7%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `LingoQA`: **82.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `Hypersim`: **13.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `SUNRGBD`: **35.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `Nuscene`: **15.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `VideoMME (w sub.)`: **87.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `VideoMME (w/o sub.)`: **82.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `VideoMMMU`: **82.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `MLVU`: **85.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `MVBench`: **74.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `LVBench`: **73.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `MMVU`: **73.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `ScreenSpot Pro`: **70.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `OSWorld-Verified`: **56.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `AndroidWorld`: **64.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `TIR-Bench (thinking)`: **59.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `TIR-Bench (non-thinking)`: **42.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `V* (thinking)`: **93.7%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `V* (non-thinking)`: **89.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `SLAKE`: **80.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `PMC-VQA`: **62.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- `MedXpertQA-MM`: **62.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-27B)
+- 점수 메모: 공식 HF 모델 카드 표 기준. 지식/언어 표는 Thinking 단일 모드, 비전 표의 'a/b' 값은 Thinking/Non-thinking 순(카드 각주). AA-LCR(Artificial Analysis 장문맥 지표) 66.1과 Codeforces 레이팅 1899는 제3자 지표·비% 척도라 점수표에서 제외.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 026. 2026-03-02 — Qwen3.5-9B
 
@@ -598,8 +796,80 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `MMLU-Pro`: **82.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `MMLU-Redux`: **91.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `C-Eval`: **88.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `SuperGPQA`: **58.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `GPQA Diamond`: **81.7%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `IFEval`: **91.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `IFBench`: **64.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `MultiChallenge`: **54.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `LongBench v2`: **55.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `HMMT Feb 25`: **83.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `HMMT Nov 25`: **82.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `LiveCodeBench v6`: **65.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `OJBench`: **29.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `BFCL-V4`: **66.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `TAU2-Bench`: **79.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `VITA-Bench`: **29.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `DeepPlanning`: **18.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `MMMLU`: **81.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `MMLU-ProX`: **76.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `NOVA-63`: **55.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `INCLUDE`: **75.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `Global PIQA`: **83.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `PolyMATH`: **57.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `WMT24++`: **72.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `MAXIFE`: **83.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `MMMU`: **78.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `MMMU-Pro`: **70.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `MathVision`: **78.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `Mathvista(mini)`: **85.7%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `We-Math`: **75.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `DynaMath`: **83.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `ZEROBench`: **3.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `ZEROBench_sub`: **31.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `VlmsAreBlind`: **93.7%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `BabyVision (thinking)`: **28.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `BabyVision (non-thinking)`: **25.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `RealWorldQA`: **80.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `MMStar`: **79.7%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `MMBench EN-DEV-v1.1`: **90.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `SimpleVQA`: **51.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `HallusionBench`: **69.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `OmniDocBench1.5`: **87.7%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `CharXiv(RQ)`: **73.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `MMLongBench-Doc`: **57.7%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `CC-OCR`: **79.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `AI2D_TEST`: **90.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `OCRBench`: **89.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `ERQA`: **55.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `CountBench`: **97.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `RefCOCO(avg)`: **89.7%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `EmbSpatialBench`: **83.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `RefSpatialBench`: **58.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `LingoQA`: **80.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `Hypersim`: **13.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `Nuscene`: **11.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `VideoMME (w sub.)`: **84.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `VideoMME (w/o sub.)`: **78.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `VideoMMMU`: **78.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `MLVU`: **84.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `MVBench`: **74.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `LVBench`: **70.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `MMVU`: **67.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `ScreenSpot Pro`: **65.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `OSWorld-Verified`: **41.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `AndroidWorld`: **57.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `TIR-Bench (thinking)`: **45.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `TIR-Bench (non-thinking)`: **31.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `V* (thinking)`: **90.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `V* (non-thinking)`: **88.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `SLAKE`: **79.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `PMC-VQA`: **57.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- `MedXpertQA-MM`: **49.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-9B)
+- 점수 메모: 공식 HF 모델 카드 표 기준(Qwen3.5-9B 열). 언어 표는 Thinking 모드 값. 비전 표 'a/b' 값은 Thinking/Non-thinking 순. AA-LCR 63.0은 제3자 지표라 제외.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 027. 2026-03-02 — Qwen3.5-4B
 
@@ -617,8 +887,80 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `MMLU-Pro`: **79.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `MMLU-Redux`: **88.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `C-Eval`: **85.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `SuperGPQA`: **52.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `GPQA Diamond`: **76.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `IFEval`: **89.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `IFBench`: **59.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `MultiChallenge`: **49.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `LongBench v2`: **50.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `HMMT Feb 25`: **74.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `HMMT Nov 25`: **76.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `LiveCodeBench v6`: **55.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `OJBench`: **24.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `BFCL-V4`: **50.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `TAU2-Bench`: **79.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `VITA-Bench`: **22.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `DeepPlanning`: **17.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `MMMLU`: **76.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `MMLU-ProX`: **71.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `NOVA-63`: **54.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `INCLUDE`: **71.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `Global PIQA`: **78.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `PolyMATH`: **51.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `WMT24++`: **66.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `MAXIFE`: **78.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `MMMU`: **77.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `MMMU-Pro`: **66.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `MathVision`: **74.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `Mathvista(mini)`: **85.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `We-Math`: **75.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `DynaMath`: **83.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `ZEROBench`: **3.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `ZEROBench_sub`: **26.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `VlmsAreBlind`: **92.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `BabyVision (thinking)`: **16.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `BabyVision (non-thinking)`: **19.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `RealWorldQA`: **79.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `MMStar`: **78.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `MMBench EN-DEV-v1.1`: **89.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `SimpleVQA`: **43.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `HallusionBench`: **65.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `OmniDocBench1.5`: **86.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `CharXiv(RQ)`: **70.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `MMLongBench-Doc`: **54.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `CC-OCR`: **76.7%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `AI2D_TEST`: **89.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `OCRBench`: **85.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `ERQA`: **54.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `CountBench`: **96.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `RefCOCO(avg)`: **88.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `EmbSpatialBench`: **81.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `RefSpatialBench`: **54.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `LingoQA`: **74.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `Hypersim`: **12.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `Nuscene`: **9.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `VideoMME (w sub.)`: **83.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `VideoMME (w/o sub.)`: **76.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `VideoMMMU`: **74.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `MLVU`: **82.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `MVBench`: **71.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `LVBench`: **66.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `MMVU`: **64.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `ScreenSpot Pro`: **60.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `OSWorld-Verified`: **35.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `AndroidWorld`: **58.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `TIR-Bench (thinking)`: **38.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `TIR-Bench (non-thinking)`: **29.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `V* (thinking)`: **84.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `V* (non-thinking)`: **86.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `SLAKE`: **76.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `PMC-VQA`: **55.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- `MedXpertQA-MM`: **42.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-4B)
+- 점수 메모: 공식 HF 모델 카드 표 기준(Qwen3.5-4B 열). 언어 표는 Thinking 모드 값. 비전 표 'a/b' 값은 Thinking/Non-thinking 순. AA-LCR 57.0은 제3자 지표라 제외.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 028. 2026-03-02 — Qwen3.5-2B
 
@@ -636,8 +978,95 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `MMLU-Pro (non-thinking)`: **55.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `MMLU-Redux (non-thinking)`: **69.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `C-Eval (non-thinking)`: **65.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `SuperGPQA (non-thinking)`: **30.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `IFEval (non-thinking)`: **61.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `MMMLU (non-thinking)`: **56.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `MMLU-Pro (thinking)`: **66.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `MMLU-Redux (thinking)`: **79.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `C-Eval (thinking)`: **73.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `SuperGPQA (thinking)`: **37.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `GPQA (thinking)`: **51.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `IFEval (thinking)`: **78.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `IFBench (thinking)`: **41.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `MultiChallenge (thinking)`: **33.7%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `LongBench v2 (thinking)`: **38.7%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `HMMT Feb 25 (thinking)`: **22.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `HMMT Nov 25 (thinking)`: **19.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `BFCL-V4 (thinking)`: **43.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `TAU2-Bench (thinking)`: **48.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `MMMLU (thinking)`: **63.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `MMLU-ProX (thinking)`: **52.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `NOVA-63 (thinking)`: **46.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `INCLUDE (thinking)`: **55.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `Global PIQA (thinking)`: **69.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `PolyMATH (thinking)`: **26.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `WMT24++ (thinking)`: **45.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `MAXIFE (thinking)`: **60.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `MMMU (thinking)`: **64.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `MMMU (non-thinking)`: **64.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `MMMU-Pro (thinking)`: **50.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `MMMU-Pro (non-thinking)`: **47.7%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `Mathvista(mini) (thinking)`: **76.7%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `Mathvista(mini) (non-thinking)`: **73.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `DynaMath (thinking)`: **73.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `DynaMath (non-thinking)`: **69.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `ZEROBench (thinking)`: **1.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `ZEROBench (non-thinking)`: **0.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `ZEROBench_sub (thinking)`: **17.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `ZEROBench_sub (non-thinking)`: **18.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `VlmsAreBlind (thinking)`: **75.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `VlmsAreBlind (non-thinking)`: **74.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `RealWorldQA (thinking)`: **74.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `RealWorldQA (non-thinking)`: **71.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `MMStar (thinking)`: **71.7%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `MMStar (non-thinking)`: **68.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `MMBench EN-DEV-v1.1 (thinking)`: **83.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `MMBench EN-DEV-v1.1 (non-thinking)`: **81.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `SimpleVQA (thinking)`: **38.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `SimpleVQA (non-thinking)`: **39.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `HallusionBench (thinking)`: **58.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `HallusionBench (non-thinking)`: **51.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `MMLongBench-Doc (thinking)`: **45.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `MMLongBench-Doc (non-thinking)`: **38.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `AI2D_TEST (thinking)`: **83.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `AI2D_TEST (non-thinking)`: **81.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `CC-OCR (thinking)`: **72.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `CC-OCR (non-thinking)`: **75.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `OmniDocBench1.5 (thinking)`: **79.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `OmniDocBench1.5 (non-thinking)`: **80.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `CharXiv(RQ) (thinking)`: **58.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `CharXiv(RQ) (non-thinking)`: **52.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `OCRBench (thinking)`: **84.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `OCRBench (non-thinking)`: **85.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `RefCOCO(avg) (thinking)`: **84.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `RefCOCO(avg) (non-thinking)`: **84.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `CountBench (thinking)`: **91.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `CountBench (non-thinking)`: **86.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `ODInW13 (thinking)`: **35.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `ODInW13 (non-thinking)`: **40.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `ERQA (thinking)`: **43.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `ERQA (non-thinking)`: **33.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `EmbSpatialBench (thinking)`: **77.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `EmbSpatialBench (non-thinking)`: **66.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `RefSpatialBench (thinking)`: **32.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `RefSpatialBench (non-thinking)`: **30.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `Hypersim (thinking)`: **12.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `Hypersim (non-thinking)`: **12.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `SUNRGBD (thinking)`: **28.7%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `SUNRGBD (non-thinking)`: **25.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `Nuscene (thinking)`: **6.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `Nuscene (non-thinking)`: **8.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `SLAKE (thinking)`: **74.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `SLAKE (non-thinking)`: **67.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `PMC-VQA (thinking)`: **48.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `PMC-VQA (non-thinking)`: **54.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `MedXpertQA-MM (thinking)`: **26.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- `MedXpertQA-MM (non-thinking)`: **19.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-2B)
+- 점수 메모: 공식 HF 모델 카드 표 기준(Qwen3.5-2B 열). 언어 표는 모드별(Thinking/Non-thinking) 구분 표기. 비전 표 'a/b' 값은 Thinking/Non-thinking 순. AA-LCR 25.6은 제3자 지표라 제외.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 029. 2026-03-02 — Qwen3.5-0.8B
 
@@ -655,8 +1084,93 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `MMLU-Pro (non-thinking)`: **29.7%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `MMLU-Redux (non-thinking)`: **48.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `C-Eval (non-thinking)`: **46.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `SuperGPQA (non-thinking)`: **16.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `IFEval (non-thinking)`: **52.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `MMMLU (non-thinking)`: **34.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `MMLU-Pro (thinking)`: **42.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `MMLU-Redux (thinking)`: **59.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `C-Eval (thinking)`: **50.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `SuperGPQA (thinking)`: **21.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `GPQA (thinking)`: **11.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `IFEval (thinking)`: **44.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `IFBench (thinking)`: **21.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `MultiChallenge (thinking)`: **18.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `LongBench v2 (thinking)`: **26.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `BFCL-V4 (thinking)`: **25.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `TAU2-Bench (thinking)`: **11.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `MMMLU (thinking)`: **44.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `MMLU-ProX (thinking)`: **34.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `NOVA-63 (thinking)`: **42.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `INCLUDE (thinking)`: **40.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `Global PIQA (thinking)`: **59.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `PolyMATH (thinking)`: **8.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `WMT24++ (thinking)`: **27.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `MAXIFE (thinking)`: **39.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `MMMU (thinking)`: **49.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `MMMU (non-thinking)`: **47.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `MMMU-Pro (thinking)`: **31.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `MMMU-Pro (non-thinking)`: **31.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `Mathvista(mini) (thinking)`: **62.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `Mathvista(mini) (non-thinking)`: **58.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `DynaMath (thinking)`: **49.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `DynaMath (non-thinking)`: **46.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `ZEROBench (thinking)`: **0.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `ZEROBench (non-thinking)`: **0.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `ZEROBench_sub (thinking)`: **12.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `ZEROBench_sub (non-thinking)`: **11.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `VlmsAreBlind (thinking)`: **59.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `VlmsAreBlind (non-thinking)`: **57.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `RealWorldQA (thinking)`: **63.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `RealWorldQA (non-thinking)`: **61.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `MMStar (thinking)`: **58.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `MMStar (non-thinking)`: **55.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `MMBench EN-DEV-v1.1 (thinking)`: **69.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `MMBench EN-DEV-v1.1 (non-thinking)`: **68.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `SimpleVQA (thinking)`: **31.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `SimpleVQA (non-thinking)`: **30.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `HallusionBench (thinking)`: **53.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `HallusionBench (non-thinking)`: **46.7%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `MMLongBench-Doc (thinking)`: **33.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `MMLongBench-Doc (non-thinking)`: **28.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `AI2D_TEST (thinking)`: **69.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `AI2D_TEST (non-thinking)`: **68.7%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `CC-OCR (thinking)`: **63.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `CC-OCR (non-thinking)`: **66.7%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `OmniDocBench1.5 (thinking)`: **61.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `OmniDocBench1.5 (non-thinking)`: **70.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `CharXiv(RQ) (thinking)`: **41.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `CharXiv(RQ) (non-thinking)`: **38.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `OCRBench (thinking)`: **74.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `OCRBench (non-thinking)`: **79.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `RefCOCO(avg) (thinking)`: **79.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `RefCOCO(avg) (non-thinking)`: **77.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `CountBench (thinking)`: **77.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `CountBench (non-thinking)`: **68.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `ODInW13 (thinking)`: **31.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `ODInW13 (non-thinking)`: **33.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `ERQA (thinking)`: **34.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `ERQA (non-thinking)`: **23.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `EmbSpatialBench (thinking)`: **68.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `EmbSpatialBench (non-thinking)`: **54.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `RefSpatialBench (thinking)`: **23.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `RefSpatialBench (non-thinking)`: **21.7%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `Hypersim (thinking)`: **11.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `Hypersim (non-thinking)`: **11.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `SUNRGBD (thinking)`: **26.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `SUNRGBD (non-thinking)`: **23.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `Nuscene (thinking)`: **5.7%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `Nuscene (non-thinking)`: **7.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `SLAKE (thinking)`: **62.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `SLAKE (non-thinking)`: **59.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `PMC-VQA (thinking)`: **40.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `PMC-VQA (non-thinking)`: **45.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `MedXpertQA-MM (thinking)`: **17.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- `MedXpertQA-MM (non-thinking)`: **25.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+- 점수 메모: 공식 HF 모델 카드 표 기준(Qwen3.5-0.8B 열). 언어 표는 모드별 구분. 비전 표 'a/b' 값은 Thinking/Non-thinking 순. AA-LCR 4.7은 제3자 지표라 제외.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 030. 2026-03-03 — GPT-5.3 Instant
 
@@ -675,7 +1189,8 @@
 #### 공식 발표 벤치마크 점수
 
 - 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 점수 메모: 공식 출처가 배포 안전(deploymentsafety) 문서뿐이며 능력 벤치마크 미게재 — 점수 미수록.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 031. 2026-03-05 — GPT-5.4
 
@@ -693,8 +1208,44 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `GDPval`: **83.0%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `FinanceAgent v1.1`: **56.0%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `Investment Banking Modeling Tasks (Internal)`: **87.3%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `OfficeQA`: **68.1%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `SWE-bench Pro`: **57.7%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `Terminal-Bench 2.0`: **75.1%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `OSWorld-Verified`: **75.0%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `WebArena-Verified`: **67.3%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `Online-Mind2Web`: **92.8%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `MMMU-Pro (no tools)`: **81.2%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `MMMU-Pro (w/ tools)`: **82.1%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `BrowseComp`: **82.7%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `MCP-Atlas`: **67.2%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `Toolathlon`: **54.6%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `Tau2-bench Telecom`: **98.9%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `Tau2-bench Telecom (no reasoning)`: **64.3%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `Frontier Science Research`: **33.0%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `FrontierMath Tier 1-3`: **47.6%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `FrontierMath Tier 4`: **27.1%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `GPQA Diamond`: **92.8%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `Humanity's Last Exam (without tools)`: **39.8%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `Humanity's Last Exam (w/ tools)`: **52.1%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `GraphWalks BFS 0-128K`: **93.0%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `GraphWalks BFS 256K-1M`: **21.4%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `GraphWalks Parents 0-128K`: **89.8%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `GraphWalks Parents 256K-1M`: **32.4%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `OpenAI MRCR v2 8-needle 4K-8K`: **97.3%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `OpenAI MRCR v2 8-needle 8K-16K`: **91.4%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `OpenAI MRCR v2 8-needle 16K-32K`: **97.2%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `OpenAI MRCR v2 8-needle 32K-64K`: **90.5%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `OpenAI MRCR v2 8-needle 64K-128K`: **86.0%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `OpenAI MRCR v2 8-needle 128K-256K`: **79.3%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `OpenAI MRCR v2 8-needle 256K-512K`: **57.5%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `OpenAI MRCR v2 8-needle 512K-1M`: **36.6%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `ARC-AGI-1 (Verified)`: **93.7%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `ARC-AGI-2 (Verified)`: **73.3%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- 점수 메모: OpenAI 공식 발표문 Evaluations 표 전수 수록(기본 xhigh 리즈닝, 명시된 경우 별도 표기). OSWorld-Verified 75.0%는 인간 성능 72.4% 상회(각주). BrowseComp는 벤치마크 답변 사이트 블록리스트 적용. 비% 지표는 제외·메모 기록: OmniDocBench 정규화 편집거리 0.109(no reasoning, 낮을수록 우수), 발표 본문의 '프레젠테이션 선호도 68.0%'·'스프레드시트 87.3%'는 Investment Banking Modeling Tasks와 동일 항목.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 032. 2026-03-05 — GPT-5.4 Pro
 
@@ -712,8 +1263,20 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `GDPval`: **82.0%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `FinanceAgent v1.1`: **61.5%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `Investment Banking Modeling Tasks (Internal)`: **83.6%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `BrowseComp`: **89.3%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `Frontier Science Research`: **36.7%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `FrontierMath Tier 1-3`: **50.0%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `FrontierMath Tier 4`: **38.0%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `GPQA Diamond`: **94.4%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `Humanity's Last Exam (without tools)`: **42.7%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `Humanity's Last Exam (w/ tools)`: **58.7%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `ARC-AGI-1 (Verified)`: **94.5%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- `ARC-AGI-2 (Verified)`: **83.3%** — [공식 출처](https://openai.com/index/introducing-gpt-5-4/)
+- 점수 메모: OpenAI 공식 발표문 Evaluations 표의 GPT-5.4 Pro 컬럼(xhigh 리즈닝). BrowseComp 89.3%는 당시 SOTA로 명시. 나머지 행(코딩·컴퓨터 사용·롱컨텍스트 등)은 Pro 컬럼이 '—'로 미게시.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 033. 2026-03-06 — Sarvam-30B
 
@@ -811,9 +1374,87 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- `OmniBench`: **61.38%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `WorldSense`: **60.89%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `DailyOmni`: **82.38%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `UNO-Bench`: **49.9%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `MMBench-ENtest`: **87.5%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `MMBench-ZHtest`: **88.7%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `RealWorldQA`: **74.8%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `MMStar`: **70.9%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `MathVistamini`: **77.9%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `MMMUval`: **70.7%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `MMVet`: **69.0%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `BLINK`: **63.1%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `MuirBench`: **77.1%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `Mantis`: **84.8%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `ChartQA`: **87.6%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `DocVQA`: **91.8%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `OCRBench`: **84.9%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `RefCOCO-avg`: **92.3%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `CountBench`: **92.4%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `VisualWebBench`: **78.7%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `ScreenSpot-v2`: **91.2%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `AndroidControllow`: **91.2%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `AndroidControlhigh`: **75.6%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `MVBench`: **75.2%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `NextQA`: **86.2%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `TempCompass`: **82.2%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `VideoMME (w/o audio)`: **76.2%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `VideoMME (w/ audio)`: **78.2%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `LongVideoBench`: **69.3%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `MMVU`: **67.1%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `Video-MMMU`: **67.5%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `MMAU`: **75.9%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `VocalSound`: **92.76%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `TUT2017`: **65.43%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `ClothoAQA`: **72.83%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `Nonspeech7k`: **93.79%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `CochlScene`: **70.02%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `MELD`: **54.6%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `LibriSpeech test-clean (WER, lower=better)`: **1.57%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `LibriSpeech test-other (WER, lower=better)`: **4.01%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `AISHELL-1 (WER, lower=better)`: **0.63%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `AISHELL-2 (WER, lower=better)`: **2.78%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `Fleurs zh (WER, lower=better)`: **3.99%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `Fleurs en (WER, lower=better)`: **5.02%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `CommonVoice 15 zh (WER, lower=better)`: **4.98%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `CommonVoice 15 en (WER, lower=better)`: **13.59%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `WenetSpeech test-meeting (WER, lower=better)`: **6.69%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `WenetSpeech test-net (WER, lower=better)`: **6.09%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `CoVost2 en→zh (BLEU)`: **47.23%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `CoVost2 zh→en (BLEU)`: **27.32%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `OpenAudioBench LlamaQuestions`: **83.33%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `OpenAudioBench ReasoningQA`: **79.71%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `OpenAudioBench TriviaQA`: **86.2%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `OpenAudioBench Webquestions`: **76.0%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `VoiceBench OpenBookQA`: **93.41%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `VoiceBench SDQA`: **82.46%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `VoiceBench MMSU`: **81.95%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `VoiceBench AdvBench`: **100.0%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `VoiceBench IFEval`: **77.99%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `MMLU(acc)`: **90.3%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `MMLU-Pro(acc)`: **82.73%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `CEval(acc)`: **91.68%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `CMMLU(acc)`: **89.39%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `IFEval(acc)`: **82.44%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `COLLIE(acc)`: **45.69%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `Meeseeks-zh(acc)`: **39.05%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `MATH500(acc)`: **97.6%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `AIME24(avg@10)`: **72.92%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `BeyondAIME(avg@10)`: **47.4%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `GPQA-diamond(acc)`: **74.41%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `DROP(f1)`: **83.53%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `ZebraLogic(acc)`: **86.0%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `GraphWalks-128k(precision)`: **56.0%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `LiveCodeBench(pass@1)`: **52.64%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `Humaneval+(pass@1)`: **90.85%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `MBPP+(pass@1)`: **80.16%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `OmniDocBench EN (edit distance, lower=better)`: **22.8%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- `OmniDocBench ZH (edit distance, lower=better)`: **29.0%** — [공식 출처](https://huggingface.co/meituan-longcat/LongCat-Flash-Omni)
+- 점수 메모: 공식 HF 모델 카드 표의 LongCat-Flash-Omni Instruct 열 값. ASR(WER)과 OmniDocBench(편집거리)는 낮을수록 좋은 지표 — 이름에 명기. VoiceBench AlpacaEval/CommonEval(0-5점 척도)은 % 아니라 제외.
 - 모델 메모: LongCat-Flash-Omni official card; do not confuse with an unofficial “2603” suffix.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 037. 2026-03-15 — GLM-5-Turbo
 
@@ -832,7 +1473,8 @@
 #### 공식 발표 벤치마크 점수
 
 - 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 점수 메모: 공식 문서 페이지에 ZClawBench 등 OpenClaw 시나리오 레이더 차트가 이미지로만 게재돼 수치 추출 불가 — 정성적 개선 주장만 확인, 점수 미수록.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 038. 2026-03-16 — Mistral Small 4 119B A6B
 
@@ -850,9 +1492,22 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- `GPQA Diamond (instruct)`: **59.1%** — [공식 출처](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603)
+- `GPQA Diamond (reasoning)`: **71.2%** — [공식 출처](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603)
+- `MMLU Pro (instruct)`: **73.5%** — [공식 출처](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603)
+- `MMLU Pro (reasoning)`: **78.0%** — [공식 출처](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603)
+- `IFBench (instruct)`: **35.7%** — [공식 출처](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603)
+- `IFBench (reasoning)`: **48.0%** — [공식 출처](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603)
+- `Arena Hard (instruct)`: **55.8%** — [공식 출처](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603)
+- `Arena Hard (reasoning)`: **58.3%** — [공식 출처](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603)
+- `MMMU-Pro (instruct)`: **46.3%** — [공식 출처](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603)
+- `MMMU-Pro (reasoning)`: **60.0%** — [공식 출처](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603)
+- `AIME25 (reasoning)`: **83.8%** — [공식 출처](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603)
+- `Collie (reasoning)`: **62.9%** — [공식 출처](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603)
+- `LiveCodeBench (reasoning)`: **63.6%** — [공식 출처](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603)
+- 점수 메모: 공식 HF 모델 카드의 internal benchmark 이미지 값(Instruct/Reasoning 모드 구분). 카드의 비교 차트(LCR·LiveCodeBench·AIME25)는 Reasoning 모드 값만 수록. AA LCR 71.2는 제3자 지표라 제외.
 - 모델 메모: Official model title includes 119B A6B; 6.5B is the activated count.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 039. 2026-03-18 — GPT-5.4 Mini
 
@@ -871,7 +1526,8 @@
 #### 공식 발표 벤치마크 점수
 
 - 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 점수 메모: 공식 개발자 문서는 사양/가격 정보만 제공, 벤치마크 미게재 — 점수 미수록.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 040. 2026-03-18 — MiniMax-M2.7
 
@@ -889,8 +1545,14 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `SWE-Bench Pro`: **56.2%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M2.7)
+- `Multi-SWE Bench`: **52.7%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M2.7)
+- `VIBE-Pro`: **55.6%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M2.7)
+- `MLE-Bench Lite`: **66.6%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M2.7)
+- `Toolathlon`: **46.3%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M2.7)
+- `MM-ClawBench`: **62.7%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M2.7)
+- 점수 메모: 공식 HF 모델 카드의 benchmark_overview 차트 이미지 값. 카드의 GDPval-AA(50)·'Artificial Analysis'(50) 지표는 제3자 지표라 제외.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 041. 2026-03-30 — Qwen3.5-Omni-Flash
 
@@ -909,8 +1571,9 @@
 #### 공식 발표 벤치마크 점수
 
 - 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- 점수 메모: 공식 QwenCloud 모델 페이지는 사양/가격 정보만 제공, 벤치마크 미게재 — 점수 미수록.
 - 모델 메모: QwenCloud and the technical report identify the product, but do not disclose an exact count.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 042. 2026-04-01 — GLM-5V-Turbo
 
@@ -929,7 +1592,8 @@
 #### 공식 발표 벤치마크 점수
 
 - 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 점수 메모: 공식 문서 페이지의 VBVR-Bench·PinchBench·ClawEval·ZClawBench 차트가 이미지로만 게재돼 정확한 수치 판독 불가 — 점수 미수록.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 043. 2026-04-02 — Qwen3.6-Plus
 
@@ -948,7 +1612,8 @@
 #### 공식 발표 벤치마크 점수
 
 - 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 점수 메모: 공식 QwenCloud 모델 페이지는 사양/가격 정보만 제공, 벤치마크 미게재 — 점수 미수록.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 044. 2026-04-07 — GLM-5.1
 
@@ -992,8 +1657,10 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `Humanity's Last Exam (Contemplating)`: **58.0%** — [공식 출처](https://ai.meta.com/blog/introducing-muse-spark-msl/)
+- `Frontier Science Research (Contemplating)`: **38.0%** — [공식 출처](https://ai.meta.com/blog/introducing-muse-spark-msl/)
+- 점수 메모: 공식 발표문에 수치로 명시된 점수는 Contemplating 모드(멀티에이전트 병렬 오케스트레이션) 2개뿐. 발표문의 평가 차트·methodology 문서는 능력 점수를 이미지·정성 방식으로만 게시. 안전 평가(Scaling Framework)는 Safety & Preparedness Report로 분리 — 능력 벤치마크 아님.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 046. 2026-04-09 — EXAONE 4.5
 
@@ -1011,9 +1678,40 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- `MMMU`: **78.7%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B)
+- `MMMU-Pro`: **68.6%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B)
+- `MedXpertQA-MM`: **42.1%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B)
+- `MathVision`: **75.2%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B)
+- `MathVista (mini)`: **85.0%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B)
+- `WeMath`: **79.1%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B)
+- `LogicVista`: **73.8%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B)
+- `BabyVision`: **18.8%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B)
+- `AI2D`: **89.0%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B)
+- `ChartQAPro`: **62.2%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B)
+- `CharXiv (RQ)`: **71.7%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B)
+- `OCRBench v2`: **63.2%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B)
+- `OmniDocBench v1.5`: **81.2%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B)
+- `MMStar`: **74.9%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B)
+- `BLINK`: **68.8%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B)
+- `HallusionBench`: **63.7%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B)
+- `KMMMU`: **42.7%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B)
+- `K-Viscuit`: **80.1%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B)
+- `KRETA`: **91.9%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B)
+- `AIME 2025`: **92.9%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B)
+- `AIME 2026`: **92.6%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B)
+- `GPQA-Diamond`: **80.5%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B)
+- `LiveCodeBench v6`: **81.4%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B)
+- `MMLU-Pro`: **83.3%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B)
+- `τ 2 -Bench (Retail)`: **77.9%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B)
+- `τ 2 -Bench (Airline)`: **56.5%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B)
+- `τ 2 -Bench (Telecom)`: **73.0%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B)
+- `IFBench`: **62.6%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B)
+- `IFEval`: **89.6%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B)
+- `KMMLU-Pro`: **67.6%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B)
+- `KoBALT`: **52.1%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B)
+- 점수 메모: 공식 HF 모델 카드의 EXAONE 4.5 33B (Reasoning) 열 값. AA-LCR 50.6은 제3자(Artificial Analysis) 지표라 제외.
 - 모델 메모: Official model card and LG AI Research materials call this model EXAONE 4.5; the 33B designation is retained in the official model ID and parameter specification.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 047. 2026-04-16 — Qwen3.6-35B-A3B
 
@@ -1051,12 +1749,47 @@
 - 아키텍처: `미기재`
 - 공식 모델 ID: `Claude%20Opus%204.7%20System%20Card.pdf`
 - 오픈 웨이트: `아니오/호스팅`
-- 공식 모델 출처: [공식 1차 출처](https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf)
+- 공식 모델 출처: [공식 1차 출처](https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf), [Opus 4.8 시스템 카드 (Claude 패밀리 비교)](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `SWE-bench Verified`: **87.6%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `SWE-bench Pro`: **64.3%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `SWE-bench Multilingual`: **80.5%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `SWE-bench Multimodal`: **34.5%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `Terminal-Bench 2.1`: **66.1%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `Humanity's Last Exam (without tools)`: **46.9%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `Humanity's Last Exam (w/ tools)`: **54.7%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `BrowseComp`: **79.8%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `DeepSearchQA (F1)`: **89.4%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `GPQA Diamond`: **94.2%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `USAMO 2026`: **69.3%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `GraphWalks BFS 256K`: **76.9%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `GraphWalks BFS 1M`: **40.3%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `GraphWalks Parents 256K`: **93.6%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `GraphWalks Parents 1M`: **56.6%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `ChartQAPro (no tools)`: **67.6%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `ChartQAPro (w/ tools)`: **69.8%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `ChartMuseum (no tools)`: **70.3%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `ChartMuseum (w/ tools)`: **85.9%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `LAB-Bench FigQA (no tools)`: **79.3%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `LAB-Bench FigQA (w/ tools)`: **85.4%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `CharXiv Reasoning (no tools)`: **81.3%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `CharXiv Reasoning (w/ tools)`: **90.1%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `ScreenSpot-Pro (no tools)`: **79.5%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `ScreenSpot-Pro (w/ tools)`: **87.6%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `OSWorld-Verified`: **82.8%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `OfficeQA`: **76.3%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `OfficeQA Pro`: **65.0%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `Finance Agent v2`: **51.51%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `MCP-Atlas`: **79.1%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `Toolathlon (Pass@1)`: **59.3%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `Toolathlon (Pass@3)`: **66.7%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `Toolathlon (Pass³)`: **52.8%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `AutomationBench`: **9.9%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `HealthBench Professional`: **51.9%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- 점수 메모: Opus 4.8 시스템 카드의 Claude 패밀리 비교열에 게시된 Opus 4.7 재측정치(표준 설정: adaptive thinking·max effort·5회 평균). BrowseComp·OSWorld는 카드 각주의 신규 블록리스트·컨텍스트 압축·줌툴 버그 수정 반영 재측정값이라 구 카드와 상이. Terminal-Bench 2.1은 Harbor/Terminus-2 하네스. 비% 지표 제외·메모 기록: GDPval-AA Elo 1753, Vending-Bench 2 최종 잔고 $10,937(Max)/$7,971(High), FrontierSWE 종합 3위(mean@5 4.15·best@5 3.68), ProgramBench 에피소드 예산별 71~84% 범위, Finance Agent 구버전 v1.1 기준 63.4%(v2와 직접 비교 불가).
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 049. 2026-04-20 — Qwen3.6-Max-Preview
 
@@ -1074,8 +1807,17 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `SuperGPQA`: **73.9%** — [공식 출처](https://qwen.ai/blog?id=qwen3.6-max-preview)
+- `QwenChineseBench`: **84.0%** — [공식 출처](https://qwen.ai/blog?id=qwen3.6-max-preview)
+- `QwenClawBench`: **59.0%** — [공식 출처](https://qwen.ai/blog?id=qwen3.6-max-preview)
+- `SkillsBench`: **55.6%** — [공식 출처](https://qwen.ai/blog?id=qwen3.6-max-preview)
+- `ToolcallFormatIFBench`: **86.1%** — [공식 출처](https://qwen.ai/blog?id=qwen3.6-max-preview)
+- `SciCode`: **47.0%** — [공식 출처](https://qwen.ai/blog?id=qwen3.6-max-preview)
+- `NL2Repo`: **42.9%** — [공식 출처](https://qwen.ai/blog?id=qwen3.6-max-preview)
+- `Terminal-Bench 2.0 (Terminus-2)`: **65.4%** — [공식 출처](https://qwen.ai/blog?id=qwen3.6-max-preview)
+- `SWE-bench Pro`: **57.3%** — [공식 출처](https://qwen.ai/blog?id=qwen3.6-max-preview)
+- 점수 메모: 공식 Qwen 블로그의 평가 차트 이미지(qwen3.6_max_preview_score.png) 값. AA-Omniscience Index(10.0)·GDPval-AA(51.0)·QwenWebBench(Elo 1532)는 제3자 지표·레이팅이라 제외.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 050. 2026-04-20 — Kimi K2.6
 
@@ -1144,8 +1886,20 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `MiMo Coding Bench`: **71.8%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.5)
+- `Claw-Eval Text`: **62.3%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.5)
+- `Terminal-Bench 2.0`: **65.8%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.5)
+- `SWE-Bench Pro`: **56.1%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.5)
+- `CharXiv RQ`: **81.0%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.5)
+- `MMMU-Pro`: **77.9%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.5)
+- `HR-Bench (4k)`: **88.5%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.5)
+- `OmniDocBench`: **87.2%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.5)
+- `Claw-Eval Multimodal`: **23.8%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.5)
+- `Video-MME`: **87.7%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.5)
+- `DailyOmni`: **83.5%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.5)
+- `VideoHolmes`: **64.0%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.5)
+- 점수 메모: 공식 HF 모델 카드의 코딩/멀티모달 벤치마크 이미지(mimo-v2.5-multimodal-bench 등) 값.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 053. 2026-04-23 — MiMo-V2.5-Pro
 
@@ -1232,8 +1986,9 @@
 #### 공식 발표 벤치마크 점수
 
 - 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- 점수 메모: 공식 발표 페이지는 정성적 주장('오픈소스 SOTA' 등)만 게재, 수치 벤치마크 미공개 — 점수 미수록.
 - 모델 메모: A family announcement, not an additional third checkpoint; the two published sizes are listed explicitly.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 057. 2026-04-24 — DeepSeek-V4-Flash
 
@@ -1287,13 +2042,60 @@
 - 아키텍처: `Sparse MoE`
 - 공식 모델 ID: `tencent/Hy3-preview`
 - 오픈 웨이트: `예`
-- 공식 모델 출처: [공식 1차 출처](https://huggingface.co/tencent/Hy3-preview)
+- 공식 모델 출처: [공식 1차 출처](https://huggingface.co/tencent/Hy3-preview), [Hy3 모델 카드 (benchmark-appendix)](https://huggingface.co/tencent/Hy3)
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- `SWE-bench Multilingual`: **68.3%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `SWE-bench Verified`: **74.4%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `SWE-bench Pro`: **46.0%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `Terminal-Bench 2.1`: **58.0%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `NL2repo`: **35.3%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `DeepSWE`: **0.9%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `Hy-Backend 2.0 (internal)`: **12.2%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `Hy-SWE Max (internal)`: **30.0%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `Hy-CompanyBench (internal)`: **8.3%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `BrowseComp`: **67.1%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `WideSearch`: **67.8%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `DeepSearchQA`: **82.8%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `MCP Atlas (public)`: **66.1%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `Toolathlon`: **32.1%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `Apex-Agent (pass@1)`: **12.4%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `ClawEval (pass^3)`: **55.0%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `WildClawBench (35, text-only)`: **45.3%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `SkillsBench (79, text-only)`: **29.1%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `e-bench (internal)`: **10.9%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `Hy-FinModelBench (internal)`: **26.6%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `ProdBench (internal, pass^3)`: **10.3%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `Hy-SkillsWorld (internal)`: **26.4%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `HLE (w/ tools, text-only)`: **35.4%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `Hy-Euler pro (w/ tools, internal)`: **2.3%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `GPQA Diamond`: **87.2%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `HLE (no tools, text-only)`: **30.0%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `FrontierScience-Research`: **19.0%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `FrontierScience-Olympiad`: **70.0%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `USAMO 2026`: **37.3%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `MathArena Apex`: **12.6%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `ArxivMath`: **46.1%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `HorizonMath (pass@12)`: **1.8%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `Hy-Math (internal)`: **26.1%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `PHYBench`: **71.4%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `CMT-Benchmark`: **19.4%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `IMOAnswerBench`: **84.3%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `SuperChem`: **47.0%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `CL-bench`: **22.8%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `CL-bench life`: **15.7%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `Terminal-Bench 2.0`: **54.4%** — [공식 출처](https://huggingface.co/tencent/Hy3-preview)
+- `WideSearch (card chart)`: **70.2%** — [공식 출처](https://huggingface.co/tencent/Hy3-preview)
+- `AdvancedIF`: **79.5%** — [공식 출처](https://huggingface.co/tencent/Hy3-preview)
+- `LongBench v2`: **65.4%** — [공식 출처](https://huggingface.co/tencent/Hy3-preview)
+- `Hy-Backend (internal, v1)`: **54.7%** — [공식 출처](https://huggingface.co/tencent/Hy3-preview)
+- `Hy-Vibe (internal)`: **50.5%** — [공식 출처](https://huggingface.co/tencent/Hy3-preview)
+- `Tsinghua Qiuzhen Math PhD-qualifying (清华求真书院数学博资考)`: **88.4%** — [공식 출처](https://huggingface.co/tencent/Hy3-preview)
+- `CHSBO 2025`: **87.8%** — [공식 출처](https://huggingface.co/tencent/Hy3-preview)
+- 점수 메모: Hy3 카드 benchmark-appendix 표의 Hy3 preview 열(instruct) + Hy3-preview 카드 자체 차트 이미지 값 병합. WideSearch는 카드 차트 70.2 / 후속 부록 67.8로 평가 버전 상이 — 둘 다 표기. AA-LCR(66.3)은 제외. 카드의 Hy3 preview-Base 표(베이스 체크포인트 평가)는 별도 아티팩트라 미수록.
 - 모델 메모: MTP is reported separately from the 295B backbone.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 060. 2026-04-28 — Laguna M.1
 
@@ -1358,9 +2160,20 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- `CVBench2D`: **83.95%** — [공식 출처](https://huggingface.co/nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-FP8)
+- `OCRBenchV2 (EN)`: **67.04%** — [공식 출처](https://huggingface.co/nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-FP8)
+- `OSWorld`: **47.4%** — [공식 출처](https://huggingface.co/nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-FP8)
+- `Charxiv Reasoning`: **63.6%** — [공식 출처](https://huggingface.co/nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-FP8)
+- `MMlongBench Doc`: **57.5%** — [공식 출처](https://huggingface.co/nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-FP8)
+- `MathVista_MINI`: **82.8%** — [공식 출처](https://huggingface.co/nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-FP8)
+- `OCR_Reasoning`: **54.14%** — [공식 출처](https://huggingface.co/nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-FP8)
+- `Video MME`: **72.2%** — [공식 출처](https://huggingface.co/nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-FP8)
+- `World Sense`: **55.4%** — [공식 출처](https://huggingface.co/nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-FP8)
+- `Daily Omni`: **74.52%** — [공식 출처](https://huggingface.co/nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-FP8)
+- `Voice interaction`: **89.39%** — [공식 출처](https://huggingface.co/nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-FP8)
+- 점수 메모: 공식 HF 모델 카드의 Nemotron 3 Nano Omni 열(BF16 기준). 카드의 양자화 정밀도 비교표(FP8/NVFP4) 값은 별도 명기하지 않음 — BF16 기준치만 수록.
 - 모델 메모: The official checkpoint title says 30B-A3B; the card’s backbone metadata is about 31B.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 063. 2026-04-29 — Granite 4.1
 
@@ -1398,8 +2211,95 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `MMLU (3B)`: **67.02%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `MMLU-Pro (3B)`: **49.83%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `BBH (3B)`: **75.83%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `AGI EVAL (3B)`: **65.16%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `GPQA (3B)`: **31.7%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `SimpleQA (3B)`: **3.68%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `AlpacaEval 2.0 (3B)`: **38.57%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `IFEval Avg (3B)`: **82.3%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `ArenaHard (3B)`: **37.8%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `MTBench Avg (3B)`: **7.57%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `GSM8K (3B)`: **86.88%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `GSM Symbolic (3B)`: **81.32%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `Minerva Math (3B)`: **67.94%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `DeepMind Math (3B)`: **64.64%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `HumanEval (3B)`: **81.71%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `HumanEval+ (3B)`: **76.83%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `MBPP (3B)`: **71.16%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `MBPP+ (3B)`: **62.17%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `CRUXEval-O (3B)`: **40.75%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `BigCodeBench (3B)`: **32.19%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `MULTIPLE (3B)`: **52.54%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `Eval+ Avg (3B)`: **67.05%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `BFCL v3 (3B)`: **60.8%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `MMMLU (3B)`: **57.61%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `INCLUDE (3B)`: **52.05%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `MGSM (3B)`: **70.0%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `SALAD-Bench (3B)`: **93.95%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `AttaQ (3B)`: **81.88%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `Tulu3 Safety Eval Avg (3B)`: **66.84%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `MMLU (8B)`: **73.84%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `MMLU-Pro (8B)`: **55.99%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `BBH (8B)`: **80.51%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `AGI EVAL (8B)`: **72.43%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `GPQA (8B)`: **41.96%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `SimpleQA (8B)`: **4.82%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `AlpacaEval 2.0 (8B)`: **50.08%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `IFEval Avg (8B)`: **87.06%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `ArenaHard (8B)`: **68.98%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `MTBench Avg (8B)`: **8.61%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `GSM8K (8B)`: **92.49%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `GSM Symbolic (8B)`: **83.7%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `Minerva Math (8B)`: **80.1%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `DeepMind Math (8B)`: **80.07%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `HumanEval (8B)`: **85.37%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `HumanEval+ (8B)`: **79.88%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `MBPP (8B)`: **87.3%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `MBPP+ (8B)`: **73.81%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `CRUXEval-O (8B)`: **47.63%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `BigCodeBench (8B)`: **35.0%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `MULTIPLE (8B)`: **60.26%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `Eval+ Avg (8B)`: **80.21%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `BFCL v3 (8B)`: **68.27%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `MMMLU (8B)`: **64.84%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `INCLUDE (8B)`: **58.89%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `MGSM (8B)`: **82.32%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `SALAD-Bench (8B)`: **95.8%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `AttaQ (8B)`: **81.19%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `Tulu3 Safety Eval Avg (8B)`: **75.57%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `MMLU (30B)`: **80.16%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `MMLU-Pro (30B)`: **64.09%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `BBH (30B)`: **83.74%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `AGI EVAL (30B)`: **77.8%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `GPQA (30B)`: **45.76%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `SimpleQA (30B)`: **6.81%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `AlpacaEval 2.0 (30B)`: **56.16%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `IFEval Avg (30B)`: **89.65%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `ArenaHard (30B)`: **71.02%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `MTBench Avg (30B)`: **8.61%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `GSM8K (30B)`: **94.16%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `GSM Symbolic (30B)`: **75.7%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `Minerva Math (30B)`: **81.32%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `DeepMind Math (30B)`: **81.93%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `HumanEval (30B)`: **88.41%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `HumanEval+ (30B)`: **85.37%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `MBPP (30B)`: **85.45%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `MBPP+ (30B)`: **73.54%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `CRUXEval-O (30B)`: **55.75%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `BigCodeBench (30B)`: **38.77%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `MULTIPLE (30B)`: **62.31%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `Eval+ Avg (30B)`: **82.66%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `BFCL v3 (30B)`: **73.68%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `MMMLU (30B)`: **73.71%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `INCLUDE (30B)`: **67.26%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `MGSM (30B)`: **71.12%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `SALAD-Bench (30B)`: **96.41%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `AttaQ (30B)`: **85.76%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- `Tulu3 Safety Eval Avg (30B)`: **78.19%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.1-30b)
+- 점수 메모: 공식 HF 모델 카드(Granite 4.1 패밀리 표)의 3B/8B/30B Dense 열 값을 크기별로 전부 수록. MTBench Avg는 10점 척도 — 그대로 표기. AlpacaEval·MTBench는 % 아님에 주의.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 065. 2026-04-29 — Granite-Vision-4.1-4B
 
@@ -1417,8 +2317,9 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `Extraction benchmarks average (7 tasks)`: **86.5%** — [공식 출처](https://huggingface.co/ibm-granite/granite-vision-4.1-4b)
+- 점수 메모: 공식 HF 모델 카드 차트의 'Average Across 7 Extraction Benchmarks' 단일 종합값.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 066. 2026-05-09 — ERNIE 5.1
 
@@ -1436,9 +2337,10 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- `AIME 2026 (w/ tools)`: **99.6%** — [공식 출처](https://ernie.baidu.com/blog/posts/ernie-5.1-0508-release/)
+- 점수 메모: 공식 릴리스 페이지가 수치로 공개한 유일 벤치마크. 페이지의 리더보드 순위 주장(AI 종합 1위 등)은 제3자 순위 지표라 점수로 수록하지 않음.
 - 모델 메모: Relative size language is not converted into an invented absolute parameter count.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 067. 2026-05-19 — Gemini 3.5 Flash
 
@@ -1456,8 +2358,21 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `Terminal-bench 2.1 (Terminus-2)`: **76.2%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-5-flash/)
+- `SWE-Bench Pro (Public)`: **55.1%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-5-flash/)
+- `MCP Atlas`: **83.6%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-5-flash/)
+- `Toolathlon`: **56.5%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-5-flash/)
+- `OSWorld-Verified`: **78.4%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-5-flash/)
+- `Finance Agent v2`: **57.9%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-5-flash/)
+- `CharXiv Reasoning (no tools)`: **84.2%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-5-flash/)
+- `MMMU-Pro (no tools)`: **83.6%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-5-flash/)
+- `Blueprint-Bench 2`: **33.6%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-5-flash/)
+- `MRCR v2 8-needle (128k avg)`: **77.3%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-5-flash/)
+- `MRCR v2 8-needle (1M pointwise)`: **26.6%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-5-flash/)
+- `Humanity's Last Exam`: **40.2%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-5-flash/)
+- `ARC-AGI-2`: **72.1%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-5-flash/)
+- 점수 메모: 공식 모델 카드 평가 표의 Gemini 3.5 Flash 열 값. GDPval-AA(Elo 1656)는 제외. 카드 안전 평가는 'vs Gemini 3 Flash' 증감폭(pp)이라 절대점수 아님 — 미수록.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 068. 2026-05-20 — Qwen3.7-Max
 
@@ -1476,7 +2391,8 @@
 #### 공식 발표 벤치마크 점수
 
 - 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 점수 메모: 공식 QwenCloud 모델 페이지는 사양/가격 정보만 제공, 벤치마크 미게재 — 점수 미수록.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 069. 2026-05-20 — Command A+
 
@@ -1495,8 +2411,9 @@
 #### 공식 발표 벤치마크 점수
 
 - 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- 점수 메모: 공식 HF 모델 카드에 벤치마크 표 없음 — 점수 미수록.
 - 모델 메모: Official model card reports 218B total and 25B active.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 070. 2026-05-22 — Mistral Medium 3.5 128B
 
@@ -1531,12 +2448,59 @@
 - 아키텍처: `미기재`
 - 공식 모델 ID: `0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf`
 - 오픈 웨이트: `아니오/호스팅`
-- 공식 모델 출처: [공식 1차 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- 공식 모델 출처: [공식 1차 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf), [Claude Fable 5/Mythos 5 발표 비교표](https://www.anthropic.com/news/claude-fable-5-mythos-5)
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `SWE-bench Verified`: **88.6%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `SWE-bench Pro`: **69.2%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `SWE-bench Multilingual`: **84.4%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `SWE-bench Multimodal`: **38.4%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `Terminal-Bench 2.1`: **82.7%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `Humanity's Last Exam (without tools)`: **49.8%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `Humanity's Last Exam (w/ tools)`: **57.9%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `BrowseComp`: **84.3%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `BrowseComp (multi-agent)`: **88.5%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `DeepSearchQA (F1)`: **93.1%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `DRACO`: **80.4%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `GPQA Diamond`: **93.6%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `USAMO 2026`: **96.7%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `ArxivMath`: **71.82%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `GraphWalks BFS 256K`: **85.9%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `GraphWalks BFS 1M`: **68.1%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `GraphWalks Parents 256K`: **99.3%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `GraphWalks Parents 1M`: **83.3%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `ChartQAPro (no tools)`: **69.4%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `ChartQAPro (w/ tools)`: **72.3%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `ChartMuseum (no tools)`: **75.8%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `ChartMuseum (w/ tools)`: **89.7%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `LAB-Bench FigQA (no tools)`: **80.4%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `LAB-Bench FigQA (w/ tools)`: **87.3%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `CharXiv Reasoning (no tools)`: **80.5%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `CharXiv Reasoning (w/ tools)`: **89.9%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `ScreenSpot-Pro (no tools)`: **82.3%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `ScreenSpot-Pro (w/ tools)`: **87.9%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `OSWorld-Verified`: **83.4%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `OfficeQA`: **77.6%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `OfficeQA Pro`: **66.2%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `Finance Agent v2`: **53.92%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `Legal Agent Benchmark (all-pass)`: **9.62%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `Legal Agent Benchmark (criterion-pass)`: **89.01%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `MCP-Atlas`: **82.2%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `Toolathlon (Pass@1)`: **59.9%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `Toolathlon (Pass@3)`: **67.6%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `Toolathlon (Pass³)`: **48.1%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `AutomationBench`: **15.5%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `HealthBench Professional`: **55.8%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `GDPval-AA (pairwise win rate)`: **66.7%** — [공식 출처](https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf)
+- `FrontierCode (Diamond, xhigh)`: **13.4%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `GDP.pdf (no tools)`: **22.5%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `Blueprint-Bench 2`: **14.5%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `BioMysteryBench (hard)`: **40.0%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `BioMysteryBench (human solved)`: **80.4%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `ExploitBench (Cap%)`: **40.0%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- 점수 메모: Opus 4.8 시스템 카드 능력 평가 섹션 + Fable 5 발표 비교표 병합. 카드 표준 설정: adaptive thinking·max effort·5회 평균. Terminal-Bench 2.1은 비교표 82.7%를 수록 — 시스템 카드는 Harbor 리더보드 Terminus-2 하네스 기준 74.6%를 별도 보고(하네스 차이). Legal Agent Benchmark는 카드 기준 all-pass 9.62%/criterion-pass 89.01%(Fable 5 표엔 10.4%). HealthBench Professional은 카드 55.8%(Fable 5 표엔 56.9%). 비% 지표는 점수표 제외·메모 기록: GDPval-AA Elo 1890(GPT-5.5 대비 +121 Elo·쌍대 승률 66.7%), Vending-Bench 2 최종 잔고 $2,992(Max)/$5,787(High), FrontierSWE 종합 1위(mean@5 2.74·best@5 2.26), ProgramBench 에피소드 예산별 79~88% 범위.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 072. 2026-06-01 — MiniMax-M3
 
@@ -1554,9 +2518,40 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- `SWE-Bench Verified`: **80.5%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M3)
+- `SWE-Bench Pro`: **59.0%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M3)
+- `Terminal Bench 2.1`: **66.0%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M3)
+- `SWE Atlas-QnA`: **37.9%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M3)
+- `NL2Repo`: **42.1%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M3)
+- `SWE Atlas-Test Writing`: **30.8%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M3)
+- `SWE-fficiency`: **34.8%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M3)
+- `LiveSQLBench`: **40.2%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M3)
+- `CL-bench`: **20.5%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M3)
+- `VIBE-V2`: **50.1%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M3)
+- `SVG-Bench`: **63.7%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M3)
+- `PostTrainBench`: **37.1%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M3)
+- `KernelBench Hard`: **28.8%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M3)
+- `PaperBench`: **52.6%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M3)
+- `BrowseComp`: **83.5%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M3)
+- `DRACO`: **73.2%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M3)
+- `GDPval-rubrics`: **74.8%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M3)
+- `BankerToolBench`: **76.1%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M3)
+- `OfficeQA Pro`: **45.1%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M3)
+- `SpreadSheetBench-v1`: **89.4%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M3)
+- `LOCA-Bench (256k)`: **49.3%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M3)
+- `MCP Atlas`: **74.2%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M3)
+- `Apex-Agents`: **27.7%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M3)
+- `Claw-Eval`: **74.5%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M3)
+- `OSWorld-Verified`: **75.2%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M3)
+- `OmniDocBench`: **91.6%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M3)
+- `MMMU-Pro`: **78.1%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M3)
+- `Video-MMMU`: **84.6%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M3)
+- `VideoMME (w/ sub)`: **85.4%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M3)
+- `IMO 2025 (pts /42)`: **35.0%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M3)
+- `USAMO 2026 (pts /42)`: **36.0%** — [공식 출처](https://huggingface.co/MiniMaxAI/MiniMax-M3)
+- 점수 메모: 공식 HF 모델 카드의 벤치마크 이미지 표 값. IMO 2025·USAMO 2026은 /42 만점 점수(원점수 그대로 표기). YC-Bench(수익 $2.1M, 통화 지표)는 제외.
 - 모델 메모: Official model card uses approximately 23B for activation.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 073. 2026-06-02 — Qwen3.7-Plus
 
@@ -1575,7 +2570,8 @@
 #### 공식 발표 벤치마크 점수
 
 - 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 점수 메모: 공식 QwenCloud 모델 페이지는 사양/가격 정보만 제공, 벤치마크 미게재 — 점수 미수록.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 074. 2026-06-04 — Nemotron 3 Ultra
 
@@ -1615,12 +2611,32 @@
 - 아키텍처: `미기재`
 - 공식 모델 ID: `claude-fable-5-mythos-5`
 - 오픈 웨이트: `아니오/호스팅`
-- 공식 모델 출처: [공식 1차 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- 공식 모델 출처: [공식 1차 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5), [Claude Fable 5.1 제품 페이지 비교표](https://www.anthropic.com/claude/fable)
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `SWE-bench Pro`: **80.3%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `FrontierCode (Diamond, xhigh)`: **29.3%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `GDP.pdf (no tools)`: **29.8%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `Blueprint-Bench 2`: **38.6%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `AutomationBench`: **17.4%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `OSWorld-Verified`: **85.0%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `Legal Agent Benchmark`: **13.3%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `Humanity's Last Exam (without tools)`: **59.0%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `Humanity's Last Exam (w/ tools)`: **64.5%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `BioMysteryBench (hard)`: **46.1%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `BioMysteryBench (human solved)`: **83.9%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `Terminal-Bench 2.1`: **88.0%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `ExploitBench (Cap%)`: **78.0%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `HealthBench Professional`: **66.0%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `Terminal-Bench Science 0.1`: **24.7%** — [공식 출처](https://www.anthropic.com/claude/fable)
+- `Terminal-Bench 4.0`: **42.0%** — [공식 출처](https://www.anthropic.com/claude/fable)
+- `OSWorld 2.0 (partial)`: **72.9%** — [공식 출처](https://www.anthropic.com/claude/fable)
+- `OSWorld 2.0 (strict)`: **36.1%** — [공식 출처](https://www.anthropic.com/claude/fable)
+- `AutomationBench (Fable 5.1 시점 재측정)`: **17.1%** — [공식 출처](https://www.anthropic.com/claude/fable)
+- `CursorBench 3.2.0`: **70.5%** — [공식 출처](https://www.anthropic.com/claude/fable)
+- 점수 메모: Anthropic 공식 발표표 기준. 표는 Mythos 5/Fable 5 중 높은 값을 표시하며 대부분 1~3pp 차이. 별표(*) 항목(HLE 2종·BioMysteryBench 2종·Terminal-Bench 2.1·ExploitBench·HealthBench Professional)은 세이프가드 차단으로 Fable 5 단독 점수가 Opus 4.8 수준에 가까워져 큰 차이가 나며, 사실상 Mythos 5(세이프가드 해제) 수치. GDPval-AA 1932는 Elo형 척도라 % 점수표에서 제외. Fable 5.1 공식 비교표의 Fable 5 재측정 컬럼 병기: HLE는 57.8(no tools)/63.8(w tools)로 런칭표와 ±1~2pp 차이(세이프가드 개입 영향), OSWorld 2.0은 2026-08 태스크 릴리스 기준. GDPval-AA v2 1723은 Elo형이라 제외.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 076. 2026-06-09 — Claude Mythos 5
 
@@ -1638,8 +2654,22 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `SWE-bench Pro`: **80.3%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `FrontierCode (Diamond, xhigh)`: **29.3%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `GDP.pdf (no tools)`: **29.8%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `Blueprint-Bench 2`: **38.6%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `AutomationBench`: **17.4%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `OSWorld-Verified`: **85.0%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `Legal Agent Benchmark`: **13.3%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `Humanity's Last Exam (without tools)`: **59.0%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `Humanity's Last Exam (w/ tools)`: **64.5%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `BioMysteryBench (hard)`: **46.1%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `BioMysteryBench (human solved)`: **83.9%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `Terminal-Bench 2.1`: **88.0%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `ExploitBench (Cap%)`: **78.0%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- `HealthBench Professional`: **66.0%** — [공식 출처](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+- 점수 메모: Anthropic 공식 발표표의 'Mythos 5 / Fable 5' 공동 컬럼. 표는 두 모델 중 높은 값을 표시(비별표 항목 1~3pp 이내). 별표(*) 항목(HLE·BioMysteryBench·Terminal-Bench 2.1·ExploitBench·HealthBench Professional)은 Fable 5의 세이프가드 폴백으로 격차가 커 사실상 Mythos 5 수치에 가까움. GDPval-AA 1932는 Elo형 척도라 % 점수표에서 제외.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 077. 2026-06-09 — North Mini Code
 
@@ -1657,8 +2687,14 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `Terminal-Bench v2`: **36.0%** — [공식 출처](https://huggingface.co/CohereLabs/North-Mini-Code-1.0)
+- `Terminal-Bench Hard`: **31.1%** — [공식 출처](https://huggingface.co/CohereLabs/North-Mini-Code-1.0)
+- `SWE-Bench Verified`: **67.6%** — [공식 출처](https://huggingface.co/CohereLabs/North-Mini-Code-1.0)
+- `SWE-Bench Pro`: **40.2%** — [공식 출처](https://huggingface.co/CohereLabs/North-Mini-Code-1.0)
+- `SciCode`: **38.2%** — [공식 출처](https://huggingface.co/CohereLabs/North-Mini-Code-1.0)
+- `LiveCodeBench v6`: **70.3%** — [공식 출처](https://huggingface.co/CohereLabs/North-Mini-Code-1.0)
+- 점수 메모: 공식 HF 모델 카드 벤치마크 이미지의 North Mini Code 열 값.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 078. 2026-06-12 — Kimi K2.7 Code
 
@@ -1676,8 +2712,14 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `Kimi Code Bench v2`: **62.0%** — [공식 출처](https://huggingface.co/moonshotai/Kimi-K2.7-Code)
+- `Program Bench`: **53.6%** — [공식 출처](https://huggingface.co/moonshotai/Kimi-K2.7-Code)
+- `MLS Bench Lite`: **35.1%** — [공식 출처](https://huggingface.co/moonshotai/Kimi-K2.7-Code)
+- `Kimi Claw 24/7 Bench`: **46.9%** — [공식 출처](https://huggingface.co/moonshotai/Kimi-K2.7-Code)
+- `MCP Atlas`: **76.0%** — [공식 출처](https://huggingface.co/moonshotai/Kimi-K2.7-Code)
+- `MCP Mark Verified`: **81.1%** — [공식 출처](https://huggingface.co/moonshotai/Kimi-K2.7-Code)
+- 점수 메모: 공식 HF 모델 카드 비교표의 Kimi K2.7 Code 열 값.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 079. 2026-06-13~21 — Ling-2.6-1T
 
@@ -1695,9 +2737,17 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- `AIME26`: **87.4%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-2.6-1T)
+- `SWE-bench Verified (openhands)`: **72.2%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-2.6-1T)
+- `PinchBench (Avg Score)`: **87.4%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-2.6-1T)
+- `Claw-Eval (pass^3)`: **51.0%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-2.6-1T)
+- `BFCL-V4`: **70.64%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-2.6-1T)
+- `TAU2-Bench`: **78.36%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-2.6-1T)
+- `IFBench`: **57.0%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-2.6-1T)
+- `MRCR (16K-256K)`: **80.37%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-2.6-1T)
+- 점수 메모: 공식 HF 모델 카드 벤치마크 차트 이미지의 Non-Reasoning 막대 값. 카드의 AAII(Artificial Analysis Intelligence Index) 차트는 제3자 지표라 제외.
 - 모델 메모: The official card names the 1T family but does not state active parameters.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 080. 2026-06-13~21 — Ring-2.6-1T
 
@@ -1739,8 +2789,9 @@
 #### 공식 발표 벤치마크 점수
 
 - 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- 점수 메모: 공식 보도자료는 정성적 설명만 제공, 벤치마크 미게재 — 점수 미수록.
 - 모델 메모: The 8B figure is the teacher/reference model, not the released SEED checkpoint.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 082. 2026-06-16 — GLM-5.2
 
@@ -1808,8 +2859,13 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `SWE-bench Pro`: **63.2%** — [공식 출처](https://www.anthropic.com/news/claude-sonnet-5)
+- `Terminal-Bench 2.1`: **80.4%** — [공식 출처](https://www.anthropic.com/news/claude-sonnet-5)
+- `Humanity's Last Exam (without tools)`: **43.2%** — [공식 출처](https://www.anthropic.com/news/claude-sonnet-5)
+- `Humanity's Last Exam (w/ tools)`: **57.4%** — [공식 출처](https://www.anthropic.com/news/claude-sonnet-5)
+- `OSWorld-Verified`: **81.2%** — [공식 출처](https://www.anthropic.com/news/claude-sonnet-5)
+- 점수 메모: Anthropic 공식 발표표(Sonnet 5 / Sonnet 4.6 / Opus 4.8 참고 컬럼). GDPval-AA v2 1618은 Elo형 척도라 % 점수표에서 제외.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 085. 2026-07-02 — Laguna XS 2.1
 
@@ -1850,8 +2906,47 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `SWE-bench Multilingual`: **75.8%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `SWE-bench Verified`: **78.0%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `SWE-bench Pro`: **57.9%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `Terminal-Bench 2.1`: **71.7%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `NL2repo`: **45.6%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `DeepSWE`: **28.0%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `Hy-Backend 2.0 (internal)`: **25.0%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `Hy-SWE Max (internal)`: **49.0%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `Hy-CompanyBench (internal)`: **41.7%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `BrowseComp`: **84.2%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `WideSearch`: **76.4%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `DeepSearchQA`: **91.0%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `MCP Atlas (public)`: **79.1%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `Toolathlon`: **48.5%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `Apex-Agent (pass@1)`: **25.6%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `ClawEval (pass^3)`: **68.5%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `WildClawBench (35, text-only)`: **53.6%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `SkillsBench (79, text-only)`: **55.3%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `e-bench (internal)`: **50.2%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `Hy-FinModelBench (internal)`: **69.0%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `ProdBench (internal, pass^3)`: **23.0%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `Hy-SkillsWorld (internal)`: **45.8%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `HLE (w/ tools, text-only)`: **53.2%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `Hy-Euler pro (w/ tools, internal)`: **24.2%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `GPQA Diamond`: **90.4%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `HLE (no tools, text-only)`: **37.0%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `FrontierScience-Research`: **21.3%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `FrontierScience-Olympiad`: **74.8%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `USAMO 2026`: **72.0%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `MathArena Apex`: **38.7%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `ArxivMath`: **52.2%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `HorizonMath (pass@12)`: **7.1%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `Hy-Math (internal)`: **60.9%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `PHYBench`: **77.4%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `CMT-Benchmark`: **37.8%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `IMOAnswerBench`: **90.0%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `SuperChem`: **54.9%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `CL-bench`: **23.8%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- `CL-bench life`: **17.0%** — [공식 출처](https://huggingface.co/tencent/Hy3)
+- 점수 메모: 공식 HF 모델 카드 benchmark-appendix 표의 Hy3 열 값 전수 수록(사내 internal 지표·텍스트전용 부분집합 조건 포함해 명기). AA-LCR 73.4는 제3자 지표라 제외. 본문 차트는 동일 값의 시각화.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 087. 2026-07-08 — GPT-Live-1
 
@@ -1870,8 +2965,9 @@
 #### 공식 발표 벤치마크 점수
 
 - 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- 점수 메모: 공식 발표·배포 안전 문서 모두 능력 벤치마크 미게재 — 점수 미수록.
 - 모델 메모: ASR→LLM→TTS 캐스케이드가 아닌 단일 full-duplex 음성 모델이라 'ASR/TTS 음성 전용 제외' 규정에 해당하지 않는다고 판단해 수록했습니다. 검색·추론은 백그라운드에서 GPT-5.5에 위임합니다. 공식 발표문·시스템 카드에 수치 점수는 없고 인간 평점 선호도(Advanced Voice Mode 대비)와 내부 τ3-Voice Telecom 결과만 텍스트로 명시되어 점수 칸은 비워 두었습니다.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-08`
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 088. 2026-07-08 — GPT-Live-1 mini
 
@@ -1890,8 +2986,9 @@
 #### 공식 발표 벤치마크 점수
 
 - 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- 점수 메모: 공식 발표·배포 안전 문서 모두 능력 벤치마크 미게재 — 점수 미수록.
 - 모델 메모: GPT-Live-1과 같은 발표(2026-07-08)로 공개된 소형 티어이며 ChatGPT Voice Free 기본 모델입니다. GPT-Live-1 (instant)와 마찬가지로 백그라운드 추론에 GPT-5.5 Instant를 사용합니다. 공식 자료에 수치 점수가 없습니다.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-08`
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 089. 2026-07-09 — Muse Spark 1.1
 
@@ -1905,12 +3002,15 @@
 - 아키텍처: `미기재`
 - 공식 모델 ID: `introducing-muse-spark-meta-model-api`
 - 오픈 웨이트: `아니오/호스팅`
-- 공식 모델 출처: [공식 1차 출처](https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/)
+- 공식 모델 출처: [공식 1차 출처](https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/), [Muse Spark 1.2 발표 비교 차트](https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2)
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `Terminal-Bench 2.1 (mini-swe-agent)`: **76.2%** — [공식 출처](https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2)
+- `DeepSWE v1.1 (mini-swe-agent)`: **53.0%** — [공식 출처](https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2)
+- `Meta Internal Coding Bench`: **68.3%** — [공식 출처](https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2)
+- 점수 메모: Muse Spark 1.2 발표 비교 차트에 게시된 1.1 수치(xhigh, mini-swe-agent 하네스). Muse Spark 1.1 Evaluation Report는 안전·정향 평가(BioTIER·WMDP·AgentDojo·MASK 등) 중심으로 능력 점수표 미게시.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 090. 2026-07-09 — GPT-5.6 Sol
 
@@ -1998,8 +3098,9 @@
 #### 공식 발표 벤치마크 점수
 
 - 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- 점수 메모: 공식 발표 페이지에 GPT-5.6 본체 평가만 게재, Sol Pro 고유 수치 없음 — 점수 미수록.
 - 모델 메모: GPT-5.6 공식 발표문 Availability 절에 "Pro and Enterprise users can also select GPT-5.6 Sol Pro"로 명시된 상위 티어입니다. 발표문 벤치마크 표는 Sol / Sol Ultra / Terra / Luna 열로만 공개되어 Sol Pro 고유 점수는 기록하지 않았습니다. 표의 'Sol Ultra'는 별도 모델이 아니라 ultra effort(멀티에이전트) 설정으로 판단해 레코드로 만들지 않았습니다.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-08`
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 094. 2026-07-14 — Motif-3-Beta
 
@@ -2018,7 +3119,8 @@
 #### 공식 발표 벤치마크 점수
 
 - 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 점수 메모: 공식 HF 모델 카드가 AAII(Artificial Analysis Intelligence Index) 44만 게재 — 제3자 지표라 점수 미수록.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 095. 2026-07-15 — Inkling
 
@@ -2036,8 +3138,31 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `HLE (text only)`: **29.7%** — [공식 출처](https://thinkingmachines.ai/model-card/inkling/)
+- `HLE (w/ tools)`: **46.0%** — [공식 출처](https://thinkingmachines.ai/model-card/inkling/)
+- `AIME 2026`: **97.1%** — [공식 출처](https://thinkingmachines.ai/model-card/inkling/)
+- `GPQA Diamond`: **87.2%** — [공식 출처](https://thinkingmachines.ai/model-card/inkling/)
+- `SWE-Bench Verified`: **77.6%** — [공식 출처](https://thinkingmachines.ai/model-card/inkling/)
+- `SWE-Bench Pro (Public)`: **54.3%** — [공식 출처](https://thinkingmachines.ai/model-card/inkling/)
+- `Terminal Bench 2.1 (best harness)`: **63.8%** — [공식 출처](https://thinkingmachines.ai/model-card/inkling/)
+- `MCP Atlas`: **76.0%** — [공식 출처](https://thinkingmachines.ai/model-card/inkling/)
+- `Tau 3 Banking`: **23.7%** — [공식 출처](https://thinkingmachines.ai/model-card/inkling/)
+- `Toolathlon Verified`: **45.5%** — [공식 출처](https://thinkingmachines.ai/model-card/inkling/)
+- `BrowseComp (w/ context mgmt)`: **77.1%** — [공식 출처](https://thinkingmachines.ai/model-card/inkling/)
+- `SimpleQA Verified`: **43.9%** — [공식 출처](https://thinkingmachines.ai/model-card/inkling/)
+- `IFBench`: **79.8%** — [공식 출처](https://thinkingmachines.ai/model-card/inkling/)
+- `Global-MMLU-Lite`: **88.7%** — [공식 출처](https://thinkingmachines.ai/model-card/inkling/)
+- `MMMU Pro (Standard 10)`: **73.5%** — [공식 출처](https://thinkingmachines.ai/model-card/inkling/)
+- `CharXiv RQ`: **78.1%** — [공식 출처](https://thinkingmachines.ai/model-card/inkling/)
+- `CharXiv RQ (w/ Python)`: **82.0%** — [공식 출처](https://thinkingmachines.ai/model-card/inkling/)
+- `Audio MC`: **56.6%** — [공식 출처](https://thinkingmachines.ai/model-card/inkling/)
+- `MMAU`: **77.2%** — [공식 출처](https://thinkingmachines.ai/model-card/inkling/)
+- `VoiceBench`: **91.4%** — [공식 출처](https://thinkingmachines.ai/model-card/inkling/)
+- `FORTRESS Adversarial`: **78.0%** — [공식 출처](https://thinkingmachines.ai/model-card/inkling/)
+- `FORTRESS Benign`: **95.9%** — [공식 출처](https://thinkingmachines.ai/model-card/inkling/)
+- `StrongREJECT`: **98.6%** — [공식 출처](https://thinkingmachines.ai/model-card/inkling/)
+- 점수 메모: 공식 모델 카드 표의 Inkling 열 값. GDPVal-AA(Elo 1238)·AA Omniscience(2.1)은 제3자 지표라 제외.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 096. 2026-07-16 — Grok 4.5
 
@@ -2104,7 +3229,8 @@
 #### 공식 발표 벤치마크 점수
 
 - 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 점수 메모: 공식 출처가 QwenCloud 토큰 플랜 문서 — 벤치마크 미게재, 점수 미수록.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 099. 2026-07-21 — Gemini 3.6 Flash
 
@@ -2122,8 +3248,17 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `SWE-Bench Pro (Public)`: **58.7%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-6-flash/)
+- `DeepSWE v1.1`: **49.0%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-6-flash/)
+- `Terminal-bench 2.1 (Terminus-2)`: **78.0%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-6-flash/)
+- `MLE-Bench`: **63.9%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-6-flash/)
+- `OSWorld-Verified`: **83.0%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-6-flash/)
+- `CharXiv Reasoning (no tools)`: **85.2%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-6-flash/)
+- `CharXiv Reasoning (w/ tools)`: **89.4%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-6-flash/)
+- `GDM-MRCR v2 8-needle (128k avg)`: **91.8%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-6-flash/)
+- `GDM-MRCR v2 8-needle (1M pointwise)`: **54.0%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-6-flash/)
+- 점수 메모: 공식 모델 카드 평가 표의 Gemini 3.6 Flash 열 값. GDPVal-AA v2(Elo 1421)는 제외. 안전 평가는 증감폭(pp)이라 미수록.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 100. 2026-07-21 — Gemini 3.5 Flash-Lite
 
@@ -2141,8 +3276,16 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `SWE-Bench Pro (Public)`: **54.2%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-5-flash-lite/)
+- `Terminal-bench 2.1 (Terminus-2)`: **54.0%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-5-flash-lite/)
+- `MLE-Bench`: **39.2%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-5-flash-lite/)
+- `OSWorld-Verified`: **74.0%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-5-flash-lite/)
+- `CharXiv Reasoning (no tools)`: **74.5%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-5-flash-lite/)
+- `CharXiv Reasoning (w/ tools)`: **76.5%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-5-flash-lite/)
+- `GDM-MRCR v2 8-needle (128k avg)`: **72.2%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-5-flash-lite/)
+- `GDM-MRCR v2 8-needle (1M pointwise)`: **21.3%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-5-flash-lite/)
+- 점수 메모: 공식 모델 카드 평가 표의 Gemini 3.5 Flash-Lite 열 값. GDPVal-AA v2(Elo 1140)는 제외. 안전 평가는 증감폭(pp)이라 미수록.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 101. 2026-07-21 — Gemini 3.5 Flash Cyber
 
@@ -2161,7 +3304,8 @@
 #### 공식 발표 벤치마크 점수
 
 - 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 점수 메모: 공식 블로그가 CyberGym·Big Sleep·Chrome 커밋 스캔 평가를 차트로만 게재하고 수치는 미표기 — 정확한 값 판독 불가, 점수 미수록.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 102. 2026-07-21 — Laguna S 2.1
 
@@ -2225,12 +3369,20 @@
 - 아키텍처: `미기재`
 - 공식 모델 ID: `claude-opus-5`
 - 오픈 웨이트: `아니오/호스팅`
-- 공식 모델 출처: [공식 1차 출처](https://www.anthropic.com/news/claude-opus-5)
+- 공식 모델 출처: [공식 1차 출처](https://www.anthropic.com/news/claude-opus-5), [Claude Fable 5.1 제품 페이지 비교표](https://www.anthropic.com/claude/fable)
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `Terminal-Bench Science 0.1`: **29.0%** — [공식 출처](https://www.anthropic.com/claude/fable)
+- `Terminal-Bench 4.0`: **52.3%** — [공식 출처](https://www.anthropic.com/claude/fable)
+- `OSWorld 2.0 (partial)`: **75.4%** — [공식 출처](https://www.anthropic.com/claude/fable)
+- `OSWorld 2.0 (strict)`: **39.6%** — [공식 출처](https://www.anthropic.com/claude/fable)
+- `Humanity's Last Exam (without tools)`: **56.6%** — [공식 출처](https://www.anthropic.com/claude/fable)
+- `Humanity's Last Exam (w/ tools)`: **63.6%** — [공식 출처](https://www.anthropic.com/claude/fable)
+- `AutomationBench`: **26.9%** — [공식 출처](https://www.anthropic.com/claude/fable)
+- `CursorBench 3.2.0`: **70.0%** — [공식 출처](https://www.anthropic.com/claude/fable)
+- 점수 메모: Fable 5.1 공식 비교표의 Opus 5 컬럼(Anthropic 직접 측정·게시). Opus 5 발표문은 Frontier-Bench v0.1·CursorBench 3.2·ARC-AGI 3·DeepSearchQA·AutomationBench 등을 에포트-곡선 차트로만 게시해 단일 대표값 없음(차트 원문은 발표문 참조). Terminal-Bench Science 0.1은 SE ±3.5~4.5pt(공개 리더보드 30.0%와 재현 29.0%가 오차 내 일치). OSWorld 2.0은 2026-08 태스크 릴리스 기준. GDPval-AA v2 1824는 Elo형 척도라 % 점수표에서 제외.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 105. 2026-07-29 — A.X K2
 
@@ -2314,9 +3466,32 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- `MMLU-Pro`: **83.5%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B)
+- `GPQA-Diamond`: **82.2%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B)
+- `Humanity's Last Exam`: **18.3%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B)
+- `AIME 2026`: **92.3%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B)
+- `HMMT Feb 2026`: **78.4%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B)
+- `IMO Answer`: **78.6%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B)
+- `SciCode`: **37.4%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B)
+- `SWE Bench Verified`: **68.2%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B)
+- `Terminal-Bench 2.1`: **43.8%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B)
+- `τ 3 -Banking`: **14.2%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B)
+- `Claw-Eval`: **77.7%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B)
+- `IFEval`: **92.4%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B)
+- `IFBench`: **72.6%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B)
+- `OpenAI-MRCR`: **94.4%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B)
+- `Ko-LongBench`: **89.6%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B)
+- `KMMLU-Pro`: **69.1%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B)
+- `Click`: **84.2%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B)
+- `HRM8K-KSM`: **91.1%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B)
+- `MMMLU`: **86.6%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B)
+- `GlobalMMLU-Lite`: **86.6%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B)
+- `PolyMath`: **71.3%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B)
+- `KGC-Safety`: **99.8%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B)
+- `ROK-Fortress`: **89.5%** — [공식 출처](https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B)
+- 점수 메모: 공식 HF 모델 카드의 K-EXAONE 2.0 열 값. AA-LCR 56.2는 제3자 지표라 제외.
 - 모델 메모: Corrected from the unsupported ~260B/~28B estimate. The official model card reports 750B total / 37B active parameters.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 109. 2026-08-03 — Qwen3.8-Max
 
@@ -2335,7 +3510,8 @@
 #### 공식 발표 벤치마크 점수
 
 - 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 점수 메모: 공식 출처(Alibaba Group 문서)가 JS 렌더링 페이지로 벤치마크 데이터 미확인 — 점수 미수록.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 110. 2026-08-05 — Muse Spark 1.2
 
@@ -2349,13 +3525,26 @@
 - 아키텍처: `Hosted coding-focused model (Muse Code beta의 구동 모델)`
 - 공식 모델 ID: `introducing-muse-code-and-muse-spark-1-2`
 - 오픈 웨이트: `아니오/호스팅`
-- 공식 모델 출처: [Meta AI Research 공식 발표문](https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2), [Meta 평가·기술 포스트](https://research.meta.ai/blog/multimodal-intelligence-of-muse-spark-1-2)
+- 공식 모델 출처: [Meta AI Research 공식 발표문](https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2), [Meta 평가·기술 포스트](https://research.meta.ai/blog/multimodal-intelligence-of-muse-spark-1-2), [Muse Spark 1.3 스코어카드 비교 컬럼](https://research.meta.ai/blog/introducing-muse-spark-1-3)
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- `Terminal-Bench 2.1`: **82.9%** — [공식 출처](https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2)
+- `DeepSWE v1.1 (Muse Code)`: **59.3%** — [공식 출처](https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2)
+- `DeepSWE v1.1 (mini-swe-agent, Datacurve LB)`: **55.0%** — [공식 출처](https://research.meta.ai/blog/introducing-muse-spark-1-3)
+- `Meta Internal Coding Bench`: **70.6%** — [공식 출처](https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2)
+- `JobBench`: **61.6%** — [공식 출처](https://research.meta.ai/blog/introducing-muse-spark-1-3)
+- `OSWorld 2.0 (partial)`: **47.6%** — [공식 출처](https://research.meta.ai/blog/introducing-muse-spark-1-3)
+- `OSWorld 2.0 (binary)`: **17.9%** — [공식 출처](https://research.meta.ai/blog/introducing-muse-spark-1-3)
+- `DeepSearchQA`: **85.9%** — [공식 출처](https://research.meta.ai/blog/introducing-muse-spark-1-3)
+- `Agentic IF Index (Internal)`: **46.2%** — [공식 출처](https://research.meta.ai/blog/introducing-muse-spark-1-3)
+- `AutomationBench`: **38.2%** — [공식 출처](https://research.meta.ai/blog/introducing-muse-spark-1-3)
+- `OpenAI MRCR v2 8-needle 256K-512K`: **66.3%** — [공식 출처](https://research.meta.ai/blog/introducing-muse-spark-1-3)
+- `OpenAI MRCR v2 8-needle 512K-1M`: **55.5%** — [공식 출처](https://research.meta.ai/blog/introducing-muse-spark-1-3)
+- `SWE-Atlas-QnA`: **46.2%** — [공식 출처](https://research.meta.ai/blog/introducing-muse-spark-1-3)
+- 점수 메모: xhigh 에포트. TB 2.1·DeepSWE·MICB는 1.2 발표 차트(Muse Code 하네스), 나머지는 Muse Spark 1.3 스코어카드의 1.2 컬럼(공통 내부 프레임워크; OSWorld 2.0은 06.24 버전 — 다른 모델은 08.08). DeepSWE는 하네스별 2값: Muse Code 59.3 / Datacurve 리더보드 mini-swe-agent 55.0. GDPVal-AA v2 1615는 Elo형 척도라 % 점수표에서 제외.
 - 모델 메모: 2026-09-04 감사에서는 "공식 발표문을 확인하지 못한다"며 제외 원장(model-098)에 보류됐습니다. Meta AI Research 블로그(research.meta.ai)의 'Introducing Muse Code and Muse Spark 1.2'(2026-08-05)를 확인해 활성 레코드로 이관하고 구 model-098 제외 항목을 삭제했습니다. 모달리티 중 video는 Muse Code 데모(동영상 입력 해석) 근거이며, 파라미터는 1차 자료에 없습니다. 발표문 자체에 수치 점수가 없어 별도 평가 리포트의 값은 기록하지 않았습니다.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-08`
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 111. 2026-08-10 — Motif-3
 
@@ -2373,9 +3562,22 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- `GDPVal v2`: **38.7%** — [공식 출처](https://huggingface.co/Motif-Technologies/Motif-3)
+- `τ²-Bench Telecom`: **94.7%** — [공식 출처](https://huggingface.co/Motif-Technologies/Motif-3)
+- `τ³-Banking`: **35.3%** — [공식 출처](https://huggingface.co/Motif-Technologies/Motif-3)
+- `ITBench*`: **51.5%** — [공식 출처](https://huggingface.co/Motif-Technologies/Motif-3)
+- `SWE-Bench Verified`: **76.2%** — [공식 출처](https://huggingface.co/Motif-Technologies/Motif-3)
+- `Terminal-Bench 2.1`: **74.9%** — [공식 출처](https://huggingface.co/Motif-Technologies/Motif-3)
+- `SciCode`: **40.6%** — [공식 출처](https://huggingface.co/Motif-Technologies/Motif-3)
+- `IMOAnswerBench`: **83.2%** — [공식 출처](https://huggingface.co/Motif-Technologies/Motif-3)
+- `Apex-Shortlist`: **75.5%** — [공식 출처](https://huggingface.co/Motif-Technologies/Motif-3)
+- `GPQA Diamond`: **83.4%** — [공식 출처](https://huggingface.co/Motif-Technologies/Motif-3)
+- `HLE`: **37.0%** — [공식 출처](https://huggingface.co/Motif-Technologies/Motif-3)
+- `CritPt`: **6.6%** — [공식 출처](https://huggingface.co/Motif-Technologies/Motif-3)
+- `IFBench`: **78.2%** — [공식 출처](https://huggingface.co/Motif-Technologies/Motif-3)
+- 점수 메모: 공식 HF 모델 카드의 Motif 3 열 값. GDPVal v2는 카드 표기 그대로의 % 점수(38.7). AA 계열 지표(OmniScience Accuracy/Non-Hallucination)는 제3자 지표라 제외.
 - 모델 메모: The technical report/model card uses approximate values.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 112. 2026-08-10 — GPT-5.6-Cyber
 
@@ -2472,9 +3674,39 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- `Terminal Bench 2.1`: **86.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)
+- `SWE-bench Pro`: **67.7%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)
+- `DeepSWE 1.1`: **56.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)
+- `NL2Repo-Bench`: **55.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)
+- `FrontierSWE`: **73.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)
+- `MLS-Bench-Lite`: **41.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)
+- `PaperBench`: **93.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)
+- `AndroidBench`: **75.1%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)
+- `QwenSWEBench`: **80.7%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)
+- `QwenQoderBench`: **58.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)
+- `CoWorkBench`: **74.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)
+- `WorkSpaceBench`: **67.7%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)
+- `JobBench`: **53.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)
+- `SkillsBench`: **70.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)
+- `Automation-Bench (Pass@1)`: **27.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)
+- `Toolathlon Verified (Pass@1)`: **72.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)
+- `WideSearch`: **81.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)
+- `HLE w/ tools`: **56.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)
+- `GPQA Diamond`: **92.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)
+- `HLE`: **43.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)
+- `IFBench`: **82.8%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)
+- `HealthBench`: **60.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)
+- `PLawBench`: **73.2%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)
+- `PRBench-Legal`: **57.6%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)
+- `PRBench-Finance`: **58.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)
+- `MRCR v2 256K (8-needle)`: **92.9%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)
+- `LongBench v2`: **66.3%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)
+- `Agents' Last Exam (pass)`: **27.0%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)
+- `Agents' Last Exam (score)`: **52.4%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)
+- `OneMillion-Bench (expert score)`: **52.5%** — [공식 출처](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)
+- 점수 메모: 공식 HF 모델 카드 비교표의 Qwen3.8-Max 열 값(= 2.4T-A95B 오픈 체크포인트의 API 명칭). QwenReactBench 1724·QwenSVGBench 1713은 레이팅 척도(>100)라 제외.
 - 모델 메모: Official open checkpoint is Qwen3.8-2.4T-A95B.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 116. 2026-08-12 — Grok 4.6
 
@@ -2492,8 +3724,15 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `CursorBench v3.2`: **69.9%** — [공식 출처](https://x.ai/news/grok-4-6)
+- `DeepSWE v1.1`: **65.9%** — [공식 출처](https://x.ai/news/grok-4-6)
+- `FrontierCode v1.1 (Extended)`: **61.3%** — [공식 출처](https://x.ai/news/grok-4-6)
+- `APEX-Agents`: **57.5%** — [공식 출처](https://x.ai/news/grok-4-6)
+- `Terminal-Bench v3.0`: **26.0%** — [공식 출처](https://x.ai/news/grok-4-6)
+- `APEX-SWE`: **56.4%** — [공식 출처](https://x.ai/news/grok-4-6)
+- `Harvey LAB (Vals)`: **15.8%** — [공식 출처](https://x.ai/news/grok-4-6)
+- 점수 메모: xAI 공식 발표 페이지의 평가 표/차트 중 Grok 4.6 (High) 열 값. DeepSWE는 Datacurve가 수행한 mini-swe-agent 하네스. AA Intelligence Index(61)·GDPVal-AA v2(Elo 1753)·AA-Briefcase(1577)는 제3자 지표·레이팅이라 제외. 페이지 각주: 경쟁사 수치는 각 개발사 시스템 카드·공개 리더보드 인용.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 117. 2026-08-13 — DeepSeek-V4-Pro-0813
 
@@ -2535,8 +3774,25 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `FrontierCode 1.1`: **43.6%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-7-flash/)
+- `DeepSWE v1.1`: **65.3%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-7-flash/)
+- `Terminal-bench 2.1`: **85.8%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-7-flash/)
+- `Terminal-bench 3.0`: **14.9%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-7-flash/)
+- `AutomationBench (private set)`: **30.4%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-7-flash/)
+- `Harvey LAB-AA`: **90.7%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-7-flash/)
+- `GDP.pdf`: **34.0%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-7-flash/)
+- `CharXiv Reasoning (no tools)`: **84.5%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-7-flash/)
+- `CharXiv Reasoning (w/ tools)`: **88.7%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-7-flash/)
+- `LVBench`: **85.4%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-7-flash/)
+- `GDM-MRCR v2 8-needle (128k avg)`: **97.0%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-7-flash/)
+- `OSWorld-2.0`: **47.9%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-7-flash/)
+- `Agent's Last Exam (pass rate)`: **26.3%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-7-flash/)
+- `HLE-Verified`: **53.6%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-7-flash/)
+- `BioMysteryBench (human solvable)`: **87.1%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-7-flash/)
+- `BioMysteryBench (human difficult)`: **43.5%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-7-flash/)
+- `LABBench2`: **82.1%** — [공식 출처](https://deepmind.google/models/model-cards/gemini-3-7-flash/)
+- 점수 메모: 공식 모델 카드 평가 표의 Gemini 3.7 Flash 열 값. AA Intelligence Index(56)·Code Arena(Elo 1588)·GDPVal-AA v2(Elo 1525)는 제3자 지표·레이팅이라 제외. 안전 평가는 증감폭(pp)이라 미수록.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 119. 2026-08-14 — Qwen3.8-27B
 
@@ -2576,9 +3832,23 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- `Terminal Bench 2.1`: **88.2%** — [공식 출처](https://huggingface.co/zai-org/GLM-5.3)
+- `Terminal Bench 3.0`: **28.3%** — [공식 출처](https://huggingface.co/zai-org/GLM-5.3)
+- `DeepSWE (v1.1)`: **66.9%** — [공식 출처](https://huggingface.co/zai-org/GLM-5.3)
+- `NL2Repo`: **58.0%** — [공식 출처](https://huggingface.co/zai-org/GLM-5.3)
+- `ProgramBench (Almost Solved)`: **19.0%** — [공식 출처](https://huggingface.co/zai-org/GLM-5.3)
+- `FrontierSWE`: **78.1%** — [공식 출처](https://huggingface.co/zai-org/GLM-5.3)
+- `SWE-Marathon (v1.1)`: **42.5%** — [공식 출처](https://huggingface.co/zai-org/GLM-5.3)
+- `PostTrainBench`: **39.8%** — [공식 출처](https://huggingface.co/zai-org/GLM-5.3)
+- `CyberGym`: **84.5%** — [공식 출처](https://huggingface.co/zai-org/GLM-5.3)
+- `ExploitBench`: **54.4%** — [공식 출처](https://huggingface.co/zai-org/GLM-5.3)
+- `Toolathlon Verified`: **73.0%** — [공식 출처](https://huggingface.co/zai-org/GLM-5.3)
+- `AutomationBench (v1.0.6)`: **48.2%** — [공식 출처](https://huggingface.co/zai-org/GLM-5.3)
+- `Agents' Last Exam (ALE-CLI)`: **28.5%** — [공식 출처](https://huggingface.co/zai-org/GLM-5.3)
+- `HLE w/ Tools`: **62.5%** — [공식 출처](https://huggingface.co/zai-org/GLM-5.3)
+- 점수 메모: 공식 HF 모델 카드 비교표의 GLM-5.3 열 값. ExploitGym(2h/6h 시도 횟수, 비% 척도)과 GDPval-AA v2(Elo 1769)는 제외.
 - 모델 메모: GLM-5.2 계열이라는 이유로 GLM-5의 744B/40B 수치를 복사하지 않았습니다. 공식 카드의 model size도 총 파라미터 수로 간주하지 않습니다.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 121. 2026-08-21 — DeepSeek-V4-Flash-Vision-Exp
 
@@ -2621,8 +3891,19 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `BFCL-v4 (FC)`: **62.72%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-tiny)
+- `Terminal-Bench 2.1`: **27.7%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-tiny)
+- `ArtifactsBench`: **47.93%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-tiny)
+- `SciCode`: **24.2%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-tiny)
+- `GPQA Diamond`: **73.4%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-tiny)
+- `HLE`: **9.3%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-tiny)
+- `HMMT-Feb26`: **70.31%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-tiny)
+- `IMO-AnswerBench`: **71.03%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-tiny)
+- `IFBench`: **63.61%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-tiny)
+- `LIFEBench`: **62.3%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-tiny)
+- `Multi-IF`: **83.15%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-tiny)
+- 점수 메모: 공식 HF 모델 카드 벤치마크 이미지의 Ling-3.0-tiny (Thinking) 값. AA 계열(GDPval v2-AA Elo 772, AA-LCR 58.7, AA-Omniscience Accuracy 8.52 / Non-Hallucination 69.54, TAU3-Banking-AA 20.8)은 제3자 지표라 제외.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 123. 2026-08-21~22 — Ling-3.0-flash
 
@@ -2640,8 +3921,32 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `SWE-Bench Pro`: **56.6%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash)
+- `SWE-Bench Multilingual`: **72.4%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash)
+- `Terminal-Bench 2.1`: **57.0%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash)
+- `ArtifactsBench`: **77.0%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash)
+- `MiniAppBench`: **25.3%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash)
+- `AntSWEBench`: **52.2%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash)
+- `MCP-Atlas`: **65.5%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash)
+- `SkillsBench`: **44.8%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash)
+- `BFCL-v4`: **73.0%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash)
+- `WideSearch`: **73.6%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash)
+- `BrowseComp (w/ ctx mgmt)`: **72.2%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash)
+- `BrowseComp (multi-agent)`: **82.0%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash)
+- `Draco`: **70.4%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash)
+- `IFBench`: **74.5%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash)
+- `SysBench`: **93.6%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash)
+- `LIFEBench`: **77.3%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash)
+- `AIME26`: **93.2%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash)
+- `HMMT-Feb26`: **87.0%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash)
+- `IMO-AnswerBench`: **83.7%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash)
+- `HLE`: **22.7%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash)
+- `LiveCodeBench (2408-2505)`: **82.8%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash)
+- `MRCR 128K`: **90.8%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash)
+- `MRCR 256K`: **81.1%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash)
+- `Multi-IF`: **87.7%** — [공식 출처](https://huggingface.co/inclusionAI/Ling-3.0-flash)
+- 점수 메모: 공식 HF 모델 카드 벤치마크 이미지의 Ling-3.0-flash 열 값. AA 접미 지표(Tau3-banking-AA 28.0, GDPVal v2-AA Elo 1107, AA-LCR 65.1)는 제3자 지표라 제외. BrowseComp는 컨텍스트 관리/멀티에이전트 두 설정 병기.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 124. 2026-08-25 — Granite 4.2
 
@@ -2659,8 +3964,63 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `τ³-bench (3B)`: **50.99%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `τ³-bench (AVG) (3B)`: **45.78%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `BFCL (v4) (3B)`: **52.41%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `ProfBench (3B)`: **32.1%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `AIME25 (3B)`: **78.33%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `HMMT Feb25 (3B)`: **66.67%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `GPQA (3B)`: **54.8%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `LiveCodeBench v6 (3B)`: **69.71%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `SciCode (3B)`: **24.11%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `MMLU-Pro (3B)`: **67.84%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `MMLU-ProX lite (IBM) (3B)`: **27.78%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `Arena-Hard-V2 (3B)`: **34.96%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `IFBench (prompt) (3B)`: **74.33%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `RULER 64K (3B)`: **67.52%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `RULER 128K (3B)`: **55.3%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `SWE Bench Multilingual (8B)`: **30.78%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `SWE Bench Pro (8B)`: **19.11%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `SWE Bench Verified (8B)`: **47.67%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `Terminal-Bench 2.1 (8B)`: **20.56%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `τ³-bench (8B)`: **66.34%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `τ³-bench (AVG) (8B)`: **58.06%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `BFCL (v4) (8B)`: **52.39%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `ProfBench (8B)`: **41.2%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `BirdBench (8B)`: **41.07%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `AIME25 (8B)`: **86.67%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `HMMT Feb25 (8B)`: **78.33%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `GPQA (8B)`: **64.14%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `LiveCodeBench v6 (8B)`: **73.24%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `SciCode (8B)`: **36.09%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `MMLU-Pro (8B)`: **74.04%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `MMLU-ProX lite (IBM) (8B)`: **61.06%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `Arena-Hard-V2 (8B)`: **65.19%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `IFBench (prompt) (8B)`: **79.33%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `RULER 64K (8B)`: **80.99%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `RULER 128K (8B)`: **71.41%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `SWE Bench Multilingual (30B)`: **41.89%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `SWE Bench Pro (30B)`: **33.29%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `SWE Bench Verified (30B)`: **57.0%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `Terminal-Bench 2.1 (30B)`: **29.24%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `τ³-bench (30B)`: **68.05%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `τ³-bench (AVG) (30B)`: **62.0%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `BFCL (v4) (30B)`: **61.39%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `ProfBench (30B)`: **42.9%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `BirdBench (30B)`: **41.85%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `AIME25 (30B)`: **89.17%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `HMMT Feb25 (30B)`: **89.17%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `GPQA (30B)`: **66.41%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `LiveCodeBench v6 (30B)`: **75.77%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `SciCode (30B)`: **38.76%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `MMLU-Pro (30B)`: **77.6%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `MMLU-ProX lite (IBM) (30B)`: **66.64%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `Arena-Hard-V2 (30B)`: **67.93%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `IFBench (prompt) (30B)`: **77.17%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `RULER 64K (30B)`: **89.96%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- `RULER 128K (30B)`: **81.38%** — [공식 출처](https://huggingface.co/ibm-granite/granite-4.2-30b)
+- 점수 메모: 공식 HF 모델 카드(Granite 4.2 패밀리 표)의 3B/8B/30B 열 값을 크기별로 전부 수록. GDPval(Elo)은 제외. 3B는 SWE-Bench 계열 미평가(카드상 NA).
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 125. 2026-08-26 — Qwen3.8-Flash-Next
 
@@ -2703,9 +4063,14 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- `Terminal Bench 2.1`: **84.3%** — [공식 출처](https://huggingface.co/zai-org/GLM-5.3-Flash)
+- `DeepSWE (v1.1)`: **63.4%** — [공식 출처](https://huggingface.co/zai-org/GLM-5.3-Flash)
+- `Agents' Last Exam (ALE-CLI)`: **26.3%** — [공식 출처](https://huggingface.co/zai-org/GLM-5.3-Flash)
+- `AutomationBench`: **48.8%** — [공식 출처](https://huggingface.co/zai-org/GLM-5.3-Flash)
+- `HLE w/ Tools`: **55.3%** — [공식 출처](https://huggingface.co/zai-org/GLM-5.3-Flash)
+- 점수 메모: 공식 HF 모델 카드의 벤치마크 차트 이미지(bench_53.png) 값. GDPVal-AA v2(Elo 1773)는 제외.
 - 모델 메모: Corrected from the erroneous ~30B/~3B entry: the official card reports 320B total / 18B active.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 127. 2026-08-28 — Hy4-preview
 
@@ -2723,9 +4088,54 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- `SWE-bench Multilingual`: **82.9%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `SWE-bench Pro`: **65.7%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `DeepSWE`: **64.3%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `SWE Atlas - Codebase Q&A`: **64.0%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `SWE Atlas - Test Writing`: **57.8%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `SWE Atlas - Refactoring`: **53.3%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `SWE-Marathon`: **31.9%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `Terminal-Bench 2.1`: **85.4%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `NL2Repo-Bench`: **58.9%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `CyberGym`: **78.4%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `ProgramBench`: **17.5%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `PostTrainBench V1.1`: **35.6%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `Harbor-Index`: **39.6%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `Hy-Backend 2.0 (internal)`: **35.2%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `Hy-SWE Max Verified (internal)`: **64.2%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `Hy-CompanyBench V2 (internal)`: **62.4%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `WideSearch`: **83.9%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `OneMillionBench (w/ tools)`: **65.4%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `DRACO`: **77.2%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `Hy-LifeSearch (internal)`: **49.2%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `Hy-BrowseComp-Pro2 (internal)`: **56.1%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `OfficeQA Pro`: **66.2%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `MCP-Atlas (public)`: **83.7%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `Toolathlon-Verified`: **74.1%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `APEX-Agents (pass@1)`: **37.1%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `SkillsBench (79, text-only)`: **62.9%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `JobBench`: **61.7%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `WorkspaceBench`: **60.2%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `Agents' Last Exam (ALE-CLI)`: **22.8%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `AutomationBench (v1.0.6)`: **32.1%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `BankerToolBench`: **78.6%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `E-Bench (internal)`: **77.1%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `E-Bench-Code (internal)`: **79.0%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `Hy-FinAgentBench (internal)`: **79.7%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `Hy-FinmodelBench v2 (internal)`: **57.0%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `BioMysteryBench`: **71.3%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `HLE (w/ tools, text-only)`: **55.4%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `CritPt (official)`: **16.9%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `GPQA Diamond`: **92.3%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `HLE (no tools, text-only)`: **43.4%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `SUPERChem`: **66.4%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `ArXivMath`: **66.6%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `HorizonMath (pass@4)`: **8.8%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `MathArena Apex 2025`: **74.2%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- `BrokenArXiv`: **54.6%** — [공식 출처](https://huggingface.co/tencent/Hy4-preview)
+- 점수 메모: 공식 HF 모델 카드 benchmark.jpg/benchmark-appendix.jpg 표의 Hy4 preview 열 값 전수 수록. GDPval-AA V2(Elo 1678)는 제외. 사내 internal 지표는 명기.
 - 모델 메모: Backbone and MTP counts are reported separately in the official model card.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 128. 2026-09-01 — Claude Fable 5.1
 
@@ -2743,8 +4153,16 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `Terminal-Bench Science 0.1`: **52.6%** — [공식 출처](https://www.anthropic.com/claude/fable)
+- `Terminal-Bench 4.0`: **55.8%** — [공식 출처](https://www.anthropic.com/claude/fable)
+- `OSWorld 2.0 (partial)`: **77.9%** — [공식 출처](https://www.anthropic.com/claude/fable)
+- `OSWorld 2.0 (strict)`: **41.7%** — [공식 출처](https://www.anthropic.com/claude/fable)
+- `Humanity's Last Exam (without tools)`: **60.9%** — [공식 출처](https://www.anthropic.com/claude/fable)
+- `Humanity's Last Exam (w/ tools)`: **65.0%** — [공식 출처](https://www.anthropic.com/claude/fable)
+- `AutomationBench`: **31.4%** — [공식 출처](https://www.anthropic.com/claude/fable)
+- `CursorBench 3.2.0`: **73.4%** — [공식 출처](https://www.anthropic.com/claude/fable)
+- 점수 메모: Anthropic 공식 제품 페이지 기준. 프로덕션 세이프가드를 켠 상태로 평가 — 개입된 태스크는 OSWorld 2.0에서 Fable 5.1·Fable 5 모두 0점 처리(AutomationBench는 Fable 5가 0점), 그 외 사이버·바이오 태스크는 Opus 4.8/Opus 5가 대신 수행해 점수가 낮아질 수 있음. Terminal-Bench 4.0은 세이프가드 해제형 Mythos 5.1이 60.9%. Terminal-Bench Science 0.1은 SE ±3.5~4.5pt (공개 리더보드: Opus 5 30.0%, Fable 5 21.4% — Anthropic 재현 29.0%/24.7%). OSWorld 2.0은 2026년 8월 태스크 릴리스 기준이라 이전 공표값과 직접 비교 불가. GDPval-AA v2 1853은 Elo형 척도라 % 점수표에서 제외.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 129. 2026-09-01 — Claude Mythos 5.1
 
@@ -2762,8 +4180,9 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- `Terminal-Bench 4.0`: **60.9%** — [공식 출처](https://www.anthropic.com/claude/mythos)
+- 점수 메모: Fable 5.1과 동일 기반 모델(세이프가드 완화형). Anthropic Mythos 페이지 비교표에서 Mythos 5.1 고유 수치는 Terminal-Bench 4.0 60.9%만 병기됐고 나머지 행은 Fable 5.1 값이 게시됨(세이프가드 개입 차이 설명 각주).
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 130. 2026-09-02 — Qwen3.8-Max-0902
 
@@ -2782,8 +4201,9 @@
 #### 공식 발표 벤치마크 점수
 
 - 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- 점수 메모: 공식 QwenCloud 모델 페이지는 사양/가격 정보만 제공, 벤치마크 미게재 — 점수 미수록.
 - 모델 메모: 공식 QwenCloud 페이지의 0902 snapshot/API ID를 별도 레코드로 기록했습니다. Qwen3.8-Max 본체의 2.4T 수치를 이 snapshot에 자동 전이하지 않습니다.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-04`
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 131. 2026-09-02 — Muse Spark 1.3
 
@@ -2801,9 +4221,20 @@
 
 #### 공식 발표 벤치마크 점수
 
-- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- `JobBench`: **64.9%** — [공식 출처](https://research.meta.ai/blog/introducing-muse-spark-1-3)
+- `OSWorld 2.0 (partial)`: **66.9%** — [공식 출처](https://research.meta.ai/blog/introducing-muse-spark-1-3)
+- `OSWorld 2.0 (binary)`: **32.0%** — [공식 출처](https://research.meta.ai/blog/introducing-muse-spark-1-3)
+- `DeepSearchQA`: **90.3%** — [공식 출처](https://research.meta.ai/blog/introducing-muse-spark-1-3)
+- `Agentic IF Index (Internal)`: **57.8%** — [공식 출처](https://research.meta.ai/blog/introducing-muse-spark-1-3)
+- `AutomationBench`: **49.6%** — [공식 출처](https://research.meta.ai/blog/introducing-muse-spark-1-3)
+- `OpenAI MRCR v2 8-needle 256K-512K`: **98.5%** — [공식 출처](https://research.meta.ai/blog/introducing-muse-spark-1-3)
+- `OpenAI MRCR v2 8-needle 512K-1M`: **98.1%** — [공식 출처](https://research.meta.ai/blog/introducing-muse-spark-1-3)
+- `DeepSWE v1.1`: **75.4%** — [공식 출처](https://research.meta.ai/blog/introducing-muse-spark-1-3)
+- `SWE-Atlas-QnA`: **59.4%** — [공식 출처](https://research.meta.ai/blog/introducing-muse-spark-1-3)
+- `Terminal-Bench 2.1`: **88.8%** — [공식 출처](https://research.meta.ai/blog/introducing-muse-spark-1-3)
+- 점수 메모: 공식 스코어카드(max reasoning). OSWorld 2.0은 08.08 버전, AutomationBench는 public v3 태스크셋, MRCR은 o200k_base 재빈 8-needle 변형. methodology 문서: 리더보드·자사 모델카드 값을 포함해 '비교 가능한 최고 primary-metric' 보고. GDPVal-AA v2 1754는 Elo형 척도라 % 점수표에서 제외.
 - 모델 메모: 공식 발표문은 reasoning mode 중 max가 추가 안전 테스트 이후 제공된다고 명시했습니다 (max reasoning 실제 제공일은 2026-09-04). 총/활성 파라미터와 컨텍스트 윈도우는 1차 자료에 숫자로 명시되지 않아 비워 두었습니다. 이 모델은 2026-09-04 감사에서 '공식 발표문 미확인'으로 제외 원장(model-115)에 보류됐었으나, 2026-09-08에 Meta AI Research 블로그에서 1차 발표문을 확인해 활성 레코드로 되돌렸습니다 (구 model-115 제외 항목은 삭제).
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-08`
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 132. 2026-09-02 — Gemini 3.8 Flash
 
@@ -2902,8 +4333,9 @@
 #### 공식 발표 벤치마크 점수
 
 - 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- 점수 메모: 공식 발표 페이지에 정량 벤치마크 표 미게재(정성적 주장 중심) — 점수 미수록.
 - 모델 메모: 공식 발표문 Availability 절에 명시된 상위 변형입니다. 2026-09-08 기준으로 개발자 문서의 API 모델 목록에는 gpt-6-astra만 노출되어 개별 API 모델 ID와 고유 사양·점수는 기록하지 않았습니다.
-- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-08`
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
 ### 136. 2026-09-03 — K2-Horizon-375B-A23B
 
@@ -3435,6 +4867,7 @@
 #### 공식 발표 벤치마크 점수
 
 - 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- 점수 메모: 공식 발표가 '오류 1/3 수준' 등 정성적 주장만 — 정량 벤치마크 미공개, 점수 미수록.
 - 모델 메모: Salesforce의 첫 자체 추론 모델. 기술 보고서는 arXiv:2609.15066(비공식 호스트라 출처 미등록). 공식 발표는 'Salesforce CRM 벤치마크에서 선도 모델과 동등 이상, 오류 1/3 수준'이라고만 명시하고 정량 점수를 공개하지 않아 benchmarks는 비워 둡니다.
 - 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 
@@ -3455,6 +4888,7 @@
 #### 공식 발표 벤치마크 점수
 
 - 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- 점수 메모: 공식 페이지가 학습 검증 인프라 설명 위주, 표준 벤치마크 점수 미게재 — 점수 미수록.
 - 모델 메모: 학습 과정 전체를 독립 검증할 수 있는 첫 LM — 400B 토큰·80,957 옵티마이저 스텝의 데이터·코드·중간 체크포인트·스텝별 해시를 공개했습니다. 수록 레코드는 채팅 가능한 SFT 제품 모델이며 base/midtrained 체크포인트는 변형으로 묶습니다. 공식 카드에 벤치마크 점수는 없습니다.
 - 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-16`
 

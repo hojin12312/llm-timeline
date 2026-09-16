@@ -44,6 +44,7 @@ OFFICIAL_HOSTS = {
     # Gensyn open-1b verification record. Added 2026-09-16.
     "gensyn.ai",
     "huggingface.co",
+    "arxiv.org",
     # IFM / MBZUAI launch pages (K2 Horizon). Added 2026-09-08; the site serves a
     # JS challenge to HEAD requests but answers the validator's GET with HTTP 200.
     "ifm.ai",
@@ -75,11 +76,28 @@ FORBIDDEN_BENCHMARK_TERMS = (
     "codearena",
 )
 
-# Exact-name exceptions to the forbidden substrings. "MathArena Apex" is a fixed
-# evaluation suite published as a benchmark (not a crowdsourced leaderboard or
-# rating), so the bare "arena" substring must not block it. Added 2026-09-16 for
-# DeepSeek-V4.1-Flash's official model card.
-ALLOWED_BENCHMARK_NAMES = {"matharena apex (pass@1)"}
+# Exact-name exceptions to the forbidden substrings. "MathArena Apex" and
+# "WebArena-Verified" are fixed evaluation suites published as benchmarks (not
+# crowdsourced leaderboards or ratings), so the bare "arena" substring must not
+# block them. Added 2026-09-16 for DeepSeek-V4.1-Flash's model card and
+# OpenAI's GPT-5.4 announcement respectively.
+ALLOWED_BENCHMARK_NAMES = {
+    "matharena apex (pass@1)",
+    "webarena-verified",
+    # 고정 평가 스위트(리더보드가 아닌 수치 평가) — 정확 명칭 예외
+    "matharena apex",
+    "matharena apex 2025",
+    "arena hard (instruct)",
+    "arena hard (reasoning)",
+    "arena-hard-v2 (3b)",
+    "arena-hard-v2 (8b)",
+    "arena-hard-v2 (30b)",
+    "arenahard (3b)",
+    "arenahard (8b)",
+    "arenahard (30b)",
+    "marenahard-v2 (66 langs)",
+    "marenahard language-consistency pass rate",
+}
 
 STALE_TEXT = (
     "~30B",

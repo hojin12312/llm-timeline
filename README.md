@@ -10,6 +10,7 @@
 - 기간 내 누락 정정(2): ByteDance **Seed2.1 Pro · Seed2.1 Turbo**(6/23) — 이전 감사에서 누락된 플래그십 패밀리를 소급 수록
 - 이번 감사는 각 모델이 공식 카드·기술 보고서·발표문에 인쇄한 벤치마크 점수를 전부 수록하는 것을 기준으로 했습니다(신규 124개 점수 포함, 누적 444개). Elo·달러·레이팅 등 % 척도가 아닌 지표와 제3자 지표(AA 지수, Arena 순위)는 감사 원장 메모에 기록만 하고 점수 표에는 넣지 않았습니다.
 - 제외 원장 신규 기록(3): **Gemini Omni 1.1 Flash**(비디오 생성 전용), **GPT-Live-1 API 확장**(기존 모델의 배포 확장), **Gemini 3.5 Transcribe**(전사 전용)
+- **벤치마크 전면 감사(9/16):** 공식 점수가 비어 있던 모델의 1차 출처(모델 카드 표·기술 보고서·발표문 차트·SVG/이미지 표·arXiv 논문)를 일제 재확인해 **42개 모델에 1,400여 개 점수를 추가 수록**했습니다 — 누적 **128개 모델·1,854개 점수**. 대상: Anthropic 전 플래그십(Fable 5/5.1, Mythos 5, Opus 5/4.8/4.7, Sonnet 5), OpenAI(GPT-5.4/Pro), Meta Muse Spark 전 세대(1.1~1.3), Qwen3.5 전 변형·Qwen3.6-Max-Preview·Qwen3.8-2.4T-A95B, GLM-5.3/Flash, Granite 4.1/4.2, EXAONE 4.5·K-EXAONE 2.0, Motif-3, LongCat-Flash-Omni, Nemotron-3-Nano-Omni, Kimi K2.7 Code, MiniMax-M2.7/M3, MiMo-V2.5, Ling-2.6-1T/3.0-tiny/3.0-flash, Tencent Hy3/Hy3-preview/Hy4-preview, Mistral Small 4, North Mini Code, Tiny Aya 변형군, ERNIE 5.0/5.1, Grok 4.6, Inkling, Gemini 3.5/3.6/3.7 Flash·Flash-Lite, A.X K1. 수치가 아예 미공개이거나 출처가 사망(Seed 2.0 404)·게이트·이미지 한정 판독 불가인 모델은 빈 점수 사유를 각 원장 메모에 기록했습니다.
 
 **2026-09-08 감사 추가분 (18개):**
 - 신규 릴리스(5): OpenAI **GPT-6 Astra · GPT-6 Astra Pro**(9/3), Google DeepMind **Gemini 3.8 Flash · 3.8 Flash Cyber**(9/2), Meta **Muse Spark 1.3**(9/2)
@@ -62,7 +63,7 @@
 - **공식 벤치마크:** 모델 제공자가 공식 모델 카드·기술 보고서·공식 발표문에 직접 공개한 점수만 기록합니다. Chatbot Arena/ELO, Artificial Analysis, 제3자 리더보드, 역산·추정 점수는 표시하지 않습니다.
 - **조건 보존:** benchmark 버전, 데이터셋, 모드, 평가 조건이 공식 자료에 기재된 경우 모델별 감사 원장의 메모에 보존합니다. 서로 다른 프로토콜의 점수는 동일 순위로 비교하지 않습니다.
 - **출처 연결:** 출시일·파라미터·각 점수에 공식 1차 출처 URL을 따로 연결합니다. 공식 URL에 해당 수치가 직접 기재되지 않은 경우 그 수치는 넣지 않습니다.
-- **1차 도메인 목록:** `validate_data.py`의 `OFFICIAL_HOSTS`에 등록된 개발사 자체 도메인만 공식 출처로 인정합니다. 2026-09-08에 Meta AI Research 블로그(`research.meta.ai`)와 Google 공식 블로그(`blog.google`)를 추가했습니다 — Muse Spark 1.3과 Gemini 3.8 Flash Cyber는 `ai.meta.com`·`deepmind.google`이 아니라 그곳에만 1차 발표문이 있습니다. 같은 날 IFM(MBZUAI) 편입으로 `ifm.ai`를 추가했습니다. 2026-09-16에는 `cognition.com`(SWE-2), `salesforce.com`(Koa), `gensyn.ai`(open-1b 검증 레코드), `ai.google.dev`(Gemini Live API 모델 ID)를 추가했습니다.
+- **1차 도메인 목록:** `validate_data.py`의 `OFFICIAL_HOSTS`에 등록된 개발사 자체 도메인만 공식 출처로 인정합니다. 2026-09-08에 Meta AI Research 블로그(`research.meta.ai`)와 Google 공식 블로그(`blog.google`)를 추가했습니다 — Muse Spark 1.3과 Gemini 3.8 Flash Cyber는 `ai.meta.com`·`deepmind.google`이 아니라 그곳에만 1차 발표문이 있습니다. 같은 날 IFM(MBZUAI) 편입으로 `ifm.ai`를 추가했습니다. 2026-09-16에는 `cognition.com`(SWE-2), `salesforce.com`(Koa), `gensyn.ai`(open-1b 검증 레코드), `ai.google.dev`(Gemini Live API 모델 ID), 그리고 `arxiv.org`(개발사가 직접 게재한 공식 기술 보고서 — ERNIE 5.0, Tiny Aya)를 추가했습니다.
 - **재현 가능한 검증:** `validate_data.py`가 모든 점수의 출처·범위·금지된 제3자 지표·생성 파일의 SSOT 일치를 검사합니다.
 
 - **포함 대상:**
