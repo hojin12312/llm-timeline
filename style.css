@@ -27,6 +27,11 @@ body {
   color: #111827;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
 }
 
 body.modal-open {
@@ -198,7 +203,8 @@ body.modal-open {
 /* Timeline Canvas */
 .timeline-viewport {
   width: 100%;
-  min-height: calc(100vh - 120px);
+  flex: 1;
+  min-height: 0;
   overflow-x: auto;
   overflow-y: auto;
   background: #ffffff;
@@ -210,18 +216,14 @@ body.modal-open {
   position: relative;
   display: inline-flex;
   min-width: max-content;
-  padding: 60px 48px 80px 48px;
+  padding: 48px 48px 80px 48px;
 }
 
-/* Continuous Horizontal Line (가로줄) */
+/* Continuous Horizontal Line (가로줄) — desktop draws it per-column via
+   .date-head::before so it stays pinned with the sticky date header.
+   Mobile still renders this element as the vertical axis line. */
 .timeline-axis-line {
-  position: absolute;
-  top: 76px;
-  left: 24px;
-  right: 24px;
-  height: 3px;
-  background-color: #111827;
-  z-index: 1;
+  display: none;
 }
 
 /* Date Column */
@@ -234,6 +236,35 @@ body.modal-open {
   flex-shrink: 0;
   margin-right: 32px;
   z-index: 2;
+}
+
+/* Sticky date header: node + badge + count stay pinned while cards scroll */
+.date-head {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% + 32px);
+  margin-left: -16px;
+  margin-right: -16px;
+  padding-top: 12px;
+  background: #ffffff;
+}
+
+/* Horizontal axis segment: spans this column plus half of each 32px gap,
+   so segments join into one continuous line through the node centers. */
+.date-head::before {
+  content: '';
+  position: absolute;
+  top: 20px; /* 12px padding + 8px = center of the 16px station node */
+  left: 0;
+  right: 0;
+  height: 3px;
+  transform: translateY(-50%);
+  background-color: #111827;
+  z-index: -1;
 }
 
 /* Station Dot */
@@ -681,6 +712,8 @@ body.modal-open {
 
   body {
     min-width: 0;
+    height: auto;
+    overflow: visible;
     padding-bottom: calc(76px + env(safe-area-inset-bottom));
     background: #f6f8fb;
   }
@@ -843,6 +876,8 @@ body.modal-open {
   }
 
   .timeline-axis-line {
+    display: block;
+    position: absolute;
     top: 34px;
     right: auto;
     bottom: 40px;
@@ -850,6 +885,19 @@ body.modal-open {
     width: 2px;
     height: auto;
     background: #bfdbfe;
+  }
+
+  .date-head {
+    position: static;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 0;
+    background: transparent;
+  }
+
+  .date-head::before {
+    display: none;
   }
 
   .date-column {

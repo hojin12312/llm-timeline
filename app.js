@@ -174,9 +174,11 @@ function renderTimeline() {
     var month = date.slice(0, 7);
 
     html += '<div class="date-column" id="date-col-' + date + '" data-month="' + month + '">';
-    html += '  <div class="station-node" title="' + date + '"></div>';
-    html += '  <div class="date-badge">' + date + '</div>';
-    html += '  <div class="date-model-count">' + groupModels.length + '개 모델</div>';
+    html += '  <div class="date-head">';
+    html += '    <div class="station-node" title="' + date + '"></div>';
+    html += '    <div class="date-badge">' + date + '</div>';
+    html += '    <div class="date-model-count">' + groupModels.length + '개 모델</div>';
+    html += '  </div>';
     html += '  <div class="cards-stack">';
 
     groupModels.forEach(function(m) {
@@ -243,36 +245,57 @@ function setupScrollInteractions() {
   if (!container) return;
 
   var targetScrollLeft = container.scrollLeft;
+  var targetScrollTop = container.scrollTop;
   var isAnimating = false;
 
   // Smooth lerp animation loop
   function smoothScrollLoop() {
-    var diff = targetScrollLeft - container.scrollLeft;
-    if (Math.abs(diff) > 0.5) {
-      container.scrollLeft += diff * 0.18; // smooth easing
+    var diffX = targetScrollLeft - container.scrollLeft;
+    var diffY = targetScrollTop - container.scrollTop;
+    if (Math.abs(diffX) > 0.5 || Math.abs(diffY) > 0.5) {
+      container.scrollLeft += diffX * 0.18; // smooth easing
+      container.scrollTop += diffY * 0.18;
       requestAnimationFrame(smoothScrollLoop);
       isAnimating = true;
     } else {
       container.scrollLeft = targetScrollLeft;
+      container.scrollTop = targetScrollTop;
       isAnimating = false;
     }
   }
 
-  // Mouse wheel horizontal scroll with momentum
+  // Wheel: pointer at/above the time axis line -> horizontal time scroll.
+  // Pointer below the line -> vertical scroll of the model cards only
+  // (the sticky .date-head keeps node/date floating at the top).
   container.addEventListener('wheel', function(e) {
     // Mobile switches to a vertical timeline. Do not cancel the page's
     // vertical wheel/touch scrolling when there is no horizontal canvas.
     if (container.scrollWidth <= container.clientWidth + 1) return;
-    var delta = Math.abs(e.deltaY) >= Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
-    if (delta !== 0) {
+    var multiplier = (e.deltaMode === 1) ? 45 : 2.2;
+    var node = container.querySelector('.station-node');
+    var axisBottom = node
+      ? node.getBoundingClientRect().bottom + 6
+      : container.getBoundingClientRect().top + 80;
+
+    if (e.clientY <= axisBottom) {
+      var delta = Math.abs(e.deltaY) >= Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
+      if (delta === 0) return;
       e.preventDefault();
-      var multiplier = (e.deltaMode === 1) ? 45 : 2.2;
       var maxScroll = container.scrollWidth - container.clientWidth;
       targetScrollLeft = Math.max(0, Math.min(maxScroll, targetScrollLeft + delta * multiplier));
-      
-      if (!isAnimating) {
-        smoothScrollLoop();
+    } else {
+      if (e.deltaY === 0 && e.deltaX === 0) return;
+      e.preventDefault();
+      var maxTop = container.scrollHeight - container.clientHeight;
+      targetScrollTop = Math.max(0, Math.min(maxTop, targetScrollTop + e.deltaY * multiplier));
+      if (e.deltaX !== 0) {
+        var maxLeft = container.scrollWidth - container.clientWidth;
+        targetScrollLeft = Math.max(0, Math.min(maxLeft, targetScrollLeft + e.deltaX * multiplier));
       }
+    }
+
+    if (!isAnimating) {
+      smoothScrollLoop();
     }
   }, { passive: false });
 
@@ -280,6 +303,7 @@ function setupScrollInteractions() {
   container.addEventListener('scroll', function() {
     if (!isAnimating) {
       targetScrollLeft = container.scrollLeft;
+      targetScrollTop = container.scrollTop;
     }
   });
 
