@@ -267,15 +267,22 @@ function setupScrollInteractions() {
   // Wheel: pointer at/above the time axis line -> horizontal time scroll.
   // Pointer below the line -> vertical scroll of the model cards only
   // (the sticky .date-head keeps node/date floating at the top).
+  //
+  // Axis position is derived from layout constants instead of querying
+  // getBoundingClientRect() per wheel tick (which forces sync layout):
+  //   track padding-top 48 + head padding 12 + node half 8 = node center 68
+  //   head sticks when scrollTop >= 48, pinning node bottom+6 at +34px.
+  var containerTop = container.getBoundingClientRect().top;
+  window.addEventListener('resize', function() {
+    containerTop = container.getBoundingClientRect().top;
+  });
+
   container.addEventListener('wheel', function(e) {
     // Mobile switches to a vertical timeline. Do not cancel the page's
     // vertical wheel/touch scrolling when there is no horizontal canvas.
     if (container.scrollWidth <= container.clientWidth + 1) return;
     var multiplier = (e.deltaMode === 1) ? 45 : 2.2;
-    var node = container.querySelector('.station-node');
-    var axisBottom = node
-      ? node.getBoundingClientRect().bottom + 6
-      : container.getBoundingClientRect().top + 80;
+    var axisBottom = containerTop + Math.max(48 - container.scrollTop, 0) + 34;
 
     if (e.clientY <= axisBottom) {
       var delta = Math.abs(e.deltaY) >= Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
