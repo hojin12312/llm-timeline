@@ -238,11 +238,14 @@ body.modal-open {
   z-index: 2;
 }
 
-/* Skip rendering off-screen columns during scroll (desktop only) */
+/* Skip rendering off-screen card stacks during scroll (desktop only).
+   Applied to .cards-stack, not .date-column: content-visibility forces
+   paint containment, which would clip the axis segments that .date-head
+   draws 16px into each side gap and break the continuous line. */
 @media (min-width: 761px) {
-  .date-column {
+  .cards-stack {
     content-visibility: auto;
-    contain-intrinsic-size: 280px 700px;
+    contain-intrinsic-size: 280px 600px;
   }
 }
 
