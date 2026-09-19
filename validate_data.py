@@ -52,6 +52,9 @@ OFFICIAL_HOSTS = {
     # IFM / MBZUAI launch pages (K2 Horizon). Added 2026-09-08; the site serves a
     # JS challenge to HEAD requests but answers the validator's GET with HTTP 200.
     "ifm.ai",
+    # Moonshot AI official Kimi Code documentation (K2.8 Preview release notes
+    # and model configuration). Added 2026-09-19.
+    "kimi.com",
     "lgresearch.ai",
     "mimo.xiaomi.com",
     "navercorp.com",
@@ -110,6 +113,15 @@ ALLOWED_BENCHMARK_NAMES = {
     "arenahard (30b)",
     "marenahard-v2 (66 langs)",
     "marenahard language-consistency pass rate",
+    # GigaChat 3.5 Reasoning card (2026-09-10): publisher-run win-rate metrics
+    # with a stated judge (MiniMax-M2.7) and baseline (GPT-5.2), not crowdsourced
+    # leaderboards — the card footnote defines them as first-party evals.
+    "arena hard logs v3",
+    "arena hard ru",
+    "ru llm arena",
+    # WindowsAgentArena is a fixed Microsoft evaluation suite (like WebArena),
+    # not a crowdsourced leaderboard — Hunmin-397B-A17B-CUA card.
+    "windowsagentarena (153)",
 }
 
 STALE_TEXT = (

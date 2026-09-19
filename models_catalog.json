@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "as_of": "2026-09-16",
+  "as_of": "2026-09-19",
   "benchmark_policy": "공식 모델 카드·기술 보고서·개발사 공식 발표문에 모델 제공자가 직접 명시한 점수만 수록. Chatbot Arena/ELO, Artificial Analysis, 제3자 leaderboard, 추정·역산 점수는 제외.",
   "parameter_policy": "개발사가 명시한 총/활성 파라미터만 사용. 공개하지 않은 값은 정확한 수치 미공개로 표시하고, 모델 크기·가중치 파일 용량·양자화 크기를 파라미터 수로 대체하지 않음.",
   "models": [
@@ -13057,6 +13057,643 @@
         "reviewed_on": "2026-09-16",
         "policy": "official-primary-only"
       }
+    },
+    {
+      "id": "model-166",
+      "name": "GigaChat 3.5 Reasoning",
+      "date": "2026-09-10",
+      "sortDate": "2026-09-10",
+      "month": "2026-09",
+      "monthName": "September",
+      "company": "Sber",
+      "family": "GigaChat",
+      "type": "LLM / reasoning",
+      "category": "Reasoning",
+      "status": "GA",
+      "parameters": "432B total / 28B active (MoE)",
+      "architecture": "Hybrid MoE — MLA + GatedDeltaNet linear attention, GatedNorm, 3 MTP heads",
+      "modalities": [
+        "text"
+      ],
+      "focus": [
+        "Reasoning",
+        "Russian",
+        "Agentic Tool Use"
+      ],
+      "open_weights": true,
+      "license": "MIT",
+      "context": "262K tokens",
+      "languages": "Russian, English",
+      "variants": [
+        "GigaChat3.5-432B-A28B-Reasoning-bf16"
+      ],
+      "reasoning_effort": [],
+      "availability": "Hugging Face (ai-sage), giga.chat",
+      "note": "Sber의 첫 온라인 RL 추론 모델 — 6개 도메인 전문가를 독립 RL로 학습시킨 뒤 OPD(on-policy distillation)로 병합했습니다. 9/10 공식 발표(Habr 기업 블로그 habr.com/ru/companies/sberbank/articles/1080596)와 같은 날 HF 가중치가 공개됐습니다. 카드 열 이름은 'GigaChat 3.5 Ultra Reasoning'이고 배포 리포 표기는 GigaChat 3.5 Reasoning입니다. 기간 내(9/10) 릴리스인데 지난 감사에서 누락돼 소급 수록합니다.",
+      "benchmarks": {
+        "AIME 2025 (mean@32)": 89.0,
+        "AIME 2026 (mean@32)": 92.0,
+        "HMMT 2025 (mean@8)": 83.13,
+        "IMOAnswerBench": 73.0,
+        "GPQA-Diamond": 82.32,
+        "IFBench": 77.0,
+        "StructEval": 85.0,
+        "MERA-2.0": 42.3,
+        "Function Calling V4": 58.59,
+        "TAU3-bench": 47.8,
+        "Natural Plan": 80.19,
+        "Live Code Bench v6": 85.4,
+        "SWE-bench Verified": 64.7,
+        "Terminal-Bench 2": 30.3,
+        "Pollux": 67.9,
+        "Arena Hard Logs V3": 56.5,
+        "Arena Hard Ru": 60.7,
+        "Ru LLM Arena": 64.0
+      },
+      "official_id": "ai-sage/GigaChat3.5-432B-A28B-Reasoning",
+      "official_sources": [
+        {
+          "label": "공식 1차 출처",
+          "url": "https://huggingface.co/ai-sage/GigaChat3.5-432B-A28B-Reasoning"
+        }
+      ],
+      "release_date_source": "https://huggingface.co/ai-sage/GigaChat3.5-432B-A28B-Reasoning",
+      "parameter_source": "https://huggingface.co/ai-sage/GigaChat3.5-432B-A28B-Reasoning",
+      "benchmark_sources": {
+        "AIME 2025 (mean@32)": "https://huggingface.co/ai-sage/GigaChat3.5-432B-A28B-Reasoning",
+        "AIME 2026 (mean@32)": "https://huggingface.co/ai-sage/GigaChat3.5-432B-A28B-Reasoning",
+        "HMMT 2025 (mean@8)": "https://huggingface.co/ai-sage/GigaChat3.5-432B-A28B-Reasoning",
+        "IMOAnswerBench": "https://huggingface.co/ai-sage/GigaChat3.5-432B-A28B-Reasoning",
+        "GPQA-Diamond": "https://huggingface.co/ai-sage/GigaChat3.5-432B-A28B-Reasoning",
+        "IFBench": "https://huggingface.co/ai-sage/GigaChat3.5-432B-A28B-Reasoning",
+        "StructEval": "https://huggingface.co/ai-sage/GigaChat3.5-432B-A28B-Reasoning",
+        "MERA-2.0": "https://huggingface.co/ai-sage/GigaChat3.5-432B-A28B-Reasoning",
+        "Function Calling V4": "https://huggingface.co/ai-sage/GigaChat3.5-432B-A28B-Reasoning",
+        "TAU3-bench": "https://huggingface.co/ai-sage/GigaChat3.5-432B-A28B-Reasoning",
+        "Natural Plan": "https://huggingface.co/ai-sage/GigaChat3.5-432B-A28B-Reasoning",
+        "Live Code Bench v6": "https://huggingface.co/ai-sage/GigaChat3.5-432B-A28B-Reasoning",
+        "SWE-bench Verified": "https://huggingface.co/ai-sage/GigaChat3.5-432B-A28B-Reasoning",
+        "Terminal-Bench 2": "https://huggingface.co/ai-sage/GigaChat3.5-432B-A28B-Reasoning",
+        "Pollux": "https://huggingface.co/ai-sage/GigaChat3.5-432B-A28B-Reasoning",
+        "Arena Hard Logs V3": "https://huggingface.co/ai-sage/GigaChat3.5-432B-A28B-Reasoning",
+        "Arena Hard Ru": "https://huggingface.co/ai-sage/GigaChat3.5-432B-A28B-Reasoning",
+        "Ru LLM Arena": "https://huggingface.co/ai-sage/GigaChat3.5-432B-A28B-Reasoning"
+      },
+      "benchmark_note": "공식 HF 모델 카드 비교표의 'GigaChat 3.5 Ultra Reasoning' 열 전부 수록. Arena 블록(Pollux·Arena Hard Logs V3·Arena Hard Ru·Ru LLM Arena)은 카드 각주상 MiniMax-M2.7 심판·GPT-5.2 베이스라인으로 개발사가 직접 계산한 승률 지표이며 제3자 크라우드 리더보드가 아니므로 수록했습니다. 'Average' 행은 합산 행이라 제외, 추론 토큰 절감 표(27~41%)는 점수가 아니라 제외. IMOAnswerBench는 Qwen-3-235B-Instruct-2507 심판, TAU3는 4개 도메인 평균, SWE-bench Verified·Terminal-Bench 2는 mini-swe-agent 3시간 제한 조건입니다.",
+      "parameter_status": "verified",
+      "verification": {
+        "status": "reviewed",
+        "reviewed_on": "2026-09-19",
+        "policy": "official-primary-only"
+      }
+    },
+    {
+      "id": "model-167",
+      "name": "Kimi K2.8 Preview",
+      "date": "2026-09-11",
+      "sortDate": "2026-09-11",
+      "month": "2026-09",
+      "monthName": "September",
+      "company": "Moonshot AI",
+      "family": "Kimi",
+      "type": "MLLM / coding",
+      "category": "MLLM",
+      "status": "Preview",
+      "parameters": "정확한 수치 미공개",
+      "architecture": "Kimi K2.x 계열 독점 모델 (미공개)",
+      "modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "focus": [
+        "Agentic Coding",
+        "Long Context"
+      ],
+      "open_weights": false,
+      "license": "",
+      "context": "1M (1,048,576 tokens)",
+      "languages": "",
+      "variants": [],
+      "reasoning_effort": [
+        "low",
+        "high",
+        "max"
+      ],
+      "availability": "Kimi Code / Kimi API (model ID kimi-for-coding), all membership tiers",
+      "note": "Moonshot 공식 What's New 문서 기준 9/11에 Kimi Code의 kimi-for-coding 라우트가 K2.8 Preview로 인플레이스 업그레이드됐습니다. 공식 모델 구성 문서는 이미지·비디오 입력과 low/high/max(기본 max) reasoning_effort를 명시합니다. 기간 내(9/11) 릴리스인데 지난 감사에서 누락돼 소급 수록합니다.",
+      "benchmarks": {},
+      "official_id": "kimi-for-coding",
+      "official_sources": [
+        {
+          "label": "공식 출시 노트",
+          "url": "https://www.kimi.com/code/docs/en/kimi-code/whats-new.html"
+        },
+        {
+          "label": "공식 모델 구성 문서",
+          "url": "https://www.kimi.com/code/docs/en/kimi-code/models.html"
+        }
+      ],
+      "release_date_source": "https://www.kimi.com/code/docs/en/kimi-code/whats-new.html",
+      "parameter_source": "https://www.kimi.com/code/docs/en/kimi-code/models.html",
+      "benchmark_sources": {},
+      "benchmark_note": "공식 출시 노트·모델 구성 문서에 벤치마크 수치가 없습니다(제공사 정성 서술 'performance close to K3'·'K2.7 Code 대비 코딩·에이전트 개선'만 존재).",
+      "parameter_status": "undisclosed",
+      "verification": {
+        "status": "reviewed",
+        "reviewed_on": "2026-09-19",
+        "policy": "official-primary-only"
+      }
+    },
+    {
+      "id": "model-168",
+      "name": "Realtime-Venus-Omni",
+      "date": "2026-09-16",
+      "sortDate": "2026-09-16",
+      "month": "2026-09",
+      "monthName": "September",
+      "company": "Ant Group / InclusionAI",
+      "family": "Realtime-Venus",
+      "type": "MLLM / omni (full-duplex audio-visual)",
+      "category": "Omni",
+      "status": "GA",
+      "parameters": "9B",
+      "architecture": "MiniCPM-o 4.5 / Omni-Flow base — SigLIP2 vision + Whisper-Medium audio + Qwen3-8B LM + streaming flow-matching speech decoder",
+      "modalities": [
+        "text",
+        "image",
+        "audio",
+        "video"
+      ],
+      "focus": [
+        "Full-Duplex Interaction",
+        "Audio-Visual Understanding",
+        "Async Delegation"
+      ],
+      "open_weights": true,
+      "license": "Apache 2.0",
+      "context": "40,960 tokens",
+      "languages": "",
+      "variants": [],
+      "reasoning_effort": [],
+      "availability": "Hugging Face / ModelScope (inclusionAI/Realtime-Venus)",
+      "note": "Venus Team(Ant Group)·Tsinghua의 풀듀플렉스 옴니 프런트엔드. 발표 없이 arXiv 보고서(9/12)와 HF 체크포인트 저장소(9/16)만 공개된 조용한 릴리스로, 체크포인트 공개일 9/16을 릴리스일로 잡았습니다. Realtime-Venus-Harness의 비동기 위임(delegate)과 학습 없는 장기 비디오 메모리를 지원합니다.",
+      "benchmarks": {
+        "StreamingBench": 70.2,
+        "OVO-Bench": 64.7,
+        "ProactiveVideoQA (PAUC)": 46.2,
+        "OmniPro (probe)": 29.0,
+        "WorldSense": 54.0,
+        "Daily-Omni": 81.3,
+        "OmniVideoBench": 39.2,
+        "LVOmniBench": 38.9,
+        "MMAU": 76.9,
+        "MMAU-Pro": 62.0,
+        "MMAR": 65.2,
+        "MMSU": 64.6,
+        "Llama Questions (speech)": 83.3,
+        "Speech TriviaQA": 73.6,
+        "Speech CMMLU": 67.5,
+        "FDB-v1.5 interruption C_RESPOND↑": 60.0,
+        "FDB-v1.5 interruption C_RESUME↓": 37.0,
+        "FDB-v1.5 backchannel C_RESPOND↓": 2.0,
+        "FDB-v1.5 backchannel C_RESUME↑": 92.0,
+        "FDB-v1.5 others-directed C_RESPOND↓": 6.0,
+        "FDB-v1.5 others-directed C_RESUME↑": 90.0,
+        "FDB-v1.5 background C_RESPOND↓": 12.0,
+        "FDB-v1.5 background C_RESUME↑": 85.0,
+        "FDB-v3 tool selection F1": 86.0,
+        "FDB-v3 argument accuracy": 53.1,
+        "FDB-v3 Pass@1": 43.0,
+        "Delegate Benchmark (overall routing)": 75.93,
+        "Delegate Benchmark (external·delegation recall)": 68.33,
+        "Delegate Benchmark (routine·specificity)": 84.44,
+        "Delegate Benchmark (reasoning routing)": 75.0
+      },
+      "official_id": "inclusionAI/Realtime-Venus",
+      "official_sources": [
+        {
+          "label": "공식 1차 출처",
+          "url": "https://huggingface.co/inclusionAI/Realtime-Venus"
+        },
+        {
+          "label": "공식 기술 보고서(arXiv)",
+          "url": "https://arxiv.org/abs/2609.13814"
+        }
+      ],
+      "release_date_source": "https://huggingface.co/inclusionAI/Realtime-Venus",
+      "parameter_source": "https://huggingface.co/inclusionAI/Realtime-Venus",
+      "benchmark_sources": {
+        "StreamingBench": "https://arxiv.org/abs/2609.13814",
+        "OVO-Bench": "https://arxiv.org/abs/2609.13814",
+        "ProactiveVideoQA (PAUC)": "https://arxiv.org/abs/2609.13814",
+        "OmniPro (probe)": "https://arxiv.org/abs/2609.13814",
+        "WorldSense": "https://arxiv.org/abs/2609.13814",
+        "Daily-Omni": "https://arxiv.org/abs/2609.13814",
+        "OmniVideoBench": "https://arxiv.org/abs/2609.13814",
+        "LVOmniBench": "https://arxiv.org/abs/2609.13814",
+        "MMAU": "https://arxiv.org/abs/2609.13814",
+        "MMAU-Pro": "https://arxiv.org/abs/2609.13814",
+        "MMAR": "https://arxiv.org/abs/2609.13814",
+        "MMSU": "https://arxiv.org/abs/2609.13814",
+        "Llama Questions (speech)": "https://arxiv.org/abs/2609.13814",
+        "Speech TriviaQA": "https://arxiv.org/abs/2609.13814",
+        "Speech CMMLU": "https://arxiv.org/abs/2609.13814",
+        "FDB-v1.5 interruption C_RESPOND↑": "https://arxiv.org/abs/2609.13814",
+        "FDB-v1.5 interruption C_RESUME↓": "https://arxiv.org/abs/2609.13814",
+        "FDB-v1.5 backchannel C_RESPOND↓": "https://arxiv.org/abs/2609.13814",
+        "FDB-v1.5 backchannel C_RESUME↑": "https://arxiv.org/abs/2609.13814",
+        "FDB-v1.5 others-directed C_RESPOND↓": "https://arxiv.org/abs/2609.13814",
+        "FDB-v1.5 others-directed C_RESUME↑": "https://arxiv.org/abs/2609.13814",
+        "FDB-v1.5 background C_RESPOND↓": "https://arxiv.org/abs/2609.13814",
+        "FDB-v1.5 background C_RESUME↑": "https://arxiv.org/abs/2609.13814",
+        "FDB-v3 tool selection F1": "https://arxiv.org/abs/2609.13814",
+        "FDB-v3 argument accuracy": "https://arxiv.org/abs/2609.13814",
+        "FDB-v3 Pass@1": "https://arxiv.org/abs/2609.13814",
+        "Delegate Benchmark (overall routing)": "https://arxiv.org/abs/2609.13814",
+        "Delegate Benchmark (external·delegation recall)": "https://arxiv.org/abs/2609.13814",
+        "Delegate Benchmark (routine·specificity)": "https://arxiv.org/abs/2609.13814",
+        "Delegate Benchmark (reasoning routing)": "https://arxiv.org/abs/2609.13814"
+      },
+      "benchmark_note": "Realtime-Venus 기술 보고서(arXiv:2609.13814) Table 2·4·5·6·7·8 수치입니다. AlpacaEval judge 점수(4.75/5)는 % 척도가 아니라 제외, FDB-v1.5의 0~1 수치는 초록이 %로 환산한 값을 그대로 따랐습니다. Table 3의 메모리 증강(+memory) 구간별 수치는 별도 구성이라 합산 수록하지 않고 여기에만 기록합니다(LVOmniBench 60~90분 구간 47.06 등).",
+      "parameter_status": "verified",
+      "verification": {
+        "status": "reviewed",
+        "reviewed_on": "2026-09-19",
+        "policy": "official-primary-only"
+      }
+    },
+    {
+      "id": "model-169",
+      "name": "Realtime-Venus-Audio",
+      "date": "2026-09-16",
+      "sortDate": "2026-09-16",
+      "month": "2026-09",
+      "monthName": "September",
+      "company": "Ant Group / InclusionAI",
+      "family": "Realtime-Venus",
+      "type": "MLLM / omni (full-duplex voice)",
+      "category": "Omni",
+      "status": "GA",
+      "parameters": "9B",
+      "architecture": "MiniCPM-o 4.5 / Omni-Flow base — Whisper-Medium audio + Qwen3-8B LM + streaming flow-matching speech decoder (vision tower unused at inference)",
+      "modalities": [
+        "audio",
+        "text"
+      ],
+      "focus": [
+        "Full-Duplex Spoken Dialogue",
+        "Audio Understanding",
+        "Async Delegation"
+      ],
+      "open_weights": true,
+      "license": "Apache 2.0",
+      "context": "40,960 tokens",
+      "languages": "",
+      "variants": [],
+      "reasoning_effort": [],
+      "availability": "Hugging Face / ModelScope (inclusionAI/Realtime-Venus)",
+      "note": "Realtime-Venus의 오디오 전용 체크포인트(오디오·텍스트 입력 → 텍스트·음성 출력). Omni와 같은 스트리밍 백본에서 별도 학습됐습니다. 발표 없는 조용한 릴리스라 체크포인트 공개일 9/16을 릴리스일로 잡았습니다(기술 보고서 9/12).",
+      "benchmarks": {
+        "MMAU": 78.0,
+        "MMAU-Pro": 63.2,
+        "MMAR": 65.6,
+        "MMSU": 66.8,
+        "Llama Questions (speech)": 83.8,
+        "Speech TriviaQA": 75.7,
+        "Speech CMMLU": 67.8,
+        "FDB-v1.5 interruption C_RESPOND↑": 75.0,
+        "FDB-v1.5 interruption C_RESUME↓": 23.0,
+        "FDB-v1.5 backchannel C_RESPOND↓": 0.0,
+        "FDB-v1.5 backchannel C_RESUME↑": 97.0,
+        "FDB-v1.5 others-directed C_RESPOND↓": 11.0,
+        "FDB-v1.5 others-directed C_RESUME↑": 88.0,
+        "FDB-v1.5 background C_RESPOND↓": 11.0,
+        "FDB-v1.5 background C_RESUME↑": 86.0,
+        "FDB-v3 tool selection F1": 85.0,
+        "FDB-v3 argument accuracy": 54.2,
+        "FDB-v3 Pass@1": 48.0,
+        "Delegate Benchmark (overall routing)": 68.89,
+        "Delegate Benchmark (external·delegation recall)": 92.22,
+        "Delegate Benchmark (routine·specificity)": 39.44,
+        "Delegate Benchmark (reasoning routing)": 75.0
+      },
+      "official_id": "inclusionAI/Realtime-Venus",
+      "official_sources": [
+        {
+          "label": "공식 1차 출처",
+          "url": "https://huggingface.co/inclusionAI/Realtime-Venus"
+        },
+        {
+          "label": "공식 기술 보고서(arXiv)",
+          "url": "https://arxiv.org/abs/2609.13814"
+        }
+      ],
+      "release_date_source": "https://huggingface.co/inclusionAI/Realtime-Venus",
+      "parameter_source": "https://huggingface.co/inclusionAI/Realtime-Venus",
+      "benchmark_sources": {
+        "MMAU": "https://arxiv.org/abs/2609.13814",
+        "MMAU-Pro": "https://arxiv.org/abs/2609.13814",
+        "MMAR": "https://arxiv.org/abs/2609.13814",
+        "MMSU": "https://arxiv.org/abs/2609.13814",
+        "Llama Questions (speech)": "https://arxiv.org/abs/2609.13814",
+        "Speech TriviaQA": "https://arxiv.org/abs/2609.13814",
+        "Speech CMMLU": "https://arxiv.org/abs/2609.13814",
+        "FDB-v1.5 interruption C_RESPOND↑": "https://arxiv.org/abs/2609.13814",
+        "FDB-v1.5 interruption C_RESUME↓": "https://arxiv.org/abs/2609.13814",
+        "FDB-v1.5 backchannel C_RESPOND↓": "https://arxiv.org/abs/2609.13814",
+        "FDB-v1.5 backchannel C_RESUME↑": "https://arxiv.org/abs/2609.13814",
+        "FDB-v1.5 others-directed C_RESPOND↓": "https://arxiv.org/abs/2609.13814",
+        "FDB-v1.5 others-directed C_RESUME↑": "https://arxiv.org/abs/2609.13814",
+        "FDB-v1.5 background C_RESPOND↓": "https://arxiv.org/abs/2609.13814",
+        "FDB-v1.5 background C_RESUME↑": "https://arxiv.org/abs/2609.13814",
+        "FDB-v3 tool selection F1": "https://arxiv.org/abs/2609.13814",
+        "FDB-v3 argument accuracy": "https://arxiv.org/abs/2609.13814",
+        "FDB-v3 Pass@1": "https://arxiv.org/abs/2609.13814",
+        "Delegate Benchmark (overall routing)": "https://arxiv.org/abs/2609.13814",
+        "Delegate Benchmark (external·delegation recall)": "https://arxiv.org/abs/2609.13814",
+        "Delegate Benchmark (routine·specificity)": "https://arxiv.org/abs/2609.13814",
+        "Delegate Benchmark (reasoning routing)": "https://arxiv.org/abs/2609.13814"
+      },
+      "benchmark_note": "Realtime-Venus 기술 보고서(arXiv:2609.13814) Table 4·5·6·7·8 수치입니다. AlpacaEval judge 점수(4.81/5, MiniCPM-o 4.5와 동률)는 % 척도가 아니라 제외했습니다.",
+      "parameter_status": "verified",
+      "verification": {
+        "status": "reviewed",
+        "reviewed_on": "2026-09-19",
+        "policy": "official-primary-only"
+      }
+    },
+    {
+      "id": "model-170",
+      "name": "Hunmin-397B-A17B-CUA",
+      "date": "2026-09-18",
+      "sortDate": "2026-09-18",
+      "month": "2026-09",
+      "monthName": "September",
+      "company": "GenON",
+      "family": "Hunmin",
+      "type": "MLLM / computer-use agent",
+      "category": "MLLM",
+      "status": "GA",
+      "parameters": "397B total / 17B active (MoE)",
+      "architecture": "Qwen3.5-397B-A17B base + Qwen-CUA low-rank capability transfer + SFT & Agent RL (GRPO)",
+      "modalities": [
+        "text",
+        "image"
+      ],
+      "focus": [
+        "Computer Use",
+        "GUI Grounding",
+        "Korean"
+      ],
+      "open_weights": true,
+      "license": "Apache 2.0",
+      "context": "",
+      "languages": "Korean, English",
+      "variants": [
+        "Hunmin-397B-A17B-CUA-FP8"
+      ],
+      "reasoning_effort": [],
+      "availability": "Hugging Face (mncai/Hunmin-397B-A17B-CUA)",
+      "note": "제논(GenON, 구 마인즈앤컴퍼니 — 영문 보도는 Xenon으로 표기)의 컴퓨터 조작 특화 VLM. 공식 배포명은 '훈민 VLM 397B'이고 HF 리포·카드 표기는 Hunmin-397B-A17B-CUA입니다. B200 8장으로 FP8 QLoRA 후학습. HF 리포는 9/7에 조용히 올라왔고 회사의 공식 발표는 9/18이라 발표일을 릴리스일로 잡았습니다. FP8 리포(mncai/Hunmin-397B-A17B-CUA-FP8)는 양자화 변형으로 별도 모델로 세지 않습니다.",
+      "benchmarks": {
+        "ScreenSpot-Pro": 75.6,
+        "ScreenSpot-Pro (zoom-in)": 76.6,
+        "ScreenSpot-v2": 96.2,
+        "OSWorld-G": 79.9,
+        "OSWorld-G-R": 86.8,
+        "OSWorld (360)": 70.5,
+        "WindowsAgentArena (153)": 50.9,
+        "KMMLU-Redux": 81.4,
+        "KMMLU-Pro": 76.1,
+        "IFEval-Ko": 85.1,
+        "K-MMBench": 92.5,
+        "K-SEED": 81.5,
+        "K-MMStar": 80.3,
+        "K-DTCBench": 98.2
+      },
+      "official_id": "mncai/Hunmin-397B-A17B-CUA",
+      "official_sources": [
+        {
+          "label": "공식 1차 출처",
+          "url": "https://huggingface.co/mncai/Hunmin-397B-A17B-CUA"
+        },
+        {
+          "label": "공식 평가 방법론 리포트",
+          "url": "https://huggingface.co/mncai/Hunmin-397B-A17B-CUA/resolve/main/Hunmin-397B-A17B-CUA-methodology.pdf"
+        }
+      ],
+      "release_date_source": "https://huggingface.co/mncai/Hunmin-397B-A17B-CUA",
+      "parameter_source": "https://huggingface.co/mncai/Hunmin-397B-A17B-CUA",
+      "benchmark_sources": {
+        "ScreenSpot-Pro": "https://huggingface.co/mncai/Hunmin-397B-A17B-CUA",
+        "ScreenSpot-Pro (zoom-in)": "https://huggingface.co/mncai/Hunmin-397B-A17B-CUA",
+        "ScreenSpot-v2": "https://huggingface.co/mncai/Hunmin-397B-A17B-CUA",
+        "OSWorld-G": "https://huggingface.co/mncai/Hunmin-397B-A17B-CUA",
+        "OSWorld-G-R": "https://huggingface.co/mncai/Hunmin-397B-A17B-CUA",
+        "OSWorld (360)": "https://huggingface.co/mncai/Hunmin-397B-A17B-CUA",
+        "WindowsAgentArena (153)": "https://huggingface.co/mncai/Hunmin-397B-A17B-CUA",
+        "KMMLU-Redux": "https://huggingface.co/mncai/Hunmin-397B-A17B-CUA",
+        "KMMLU-Pro": "https://huggingface.co/mncai/Hunmin-397B-A17B-CUA",
+        "IFEval-Ko": "https://huggingface.co/mncai/Hunmin-397B-A17B-CUA",
+        "K-MMBench": "https://huggingface.co/mncai/Hunmin-397B-A17B-CUA",
+        "K-SEED": "https://huggingface.co/mncai/Hunmin-397B-A17B-CUA",
+        "K-MMStar": "https://huggingface.co/mncai/Hunmin-397B-A17B-CUA",
+        "K-DTCBench": "https://huggingface.co/mncai/Hunmin-397B-A17B-CUA"
+      },
+      "benchmark_note": "공식 HF 모델 카드 표 수치입니다. 카드 명시 조건: 컴퓨터 사용 평가는 모두 image_max=5이고 베이스라인은 개발사가 같은 환경에서 재현 측정한 값입니다. K-LLaVA-W judge 점수(128.0)는 % 척도가 아니라 제외했습니다.",
+      "parameter_status": "verified",
+      "verification": {
+        "status": "reviewed",
+        "reviewed_on": "2026-09-19",
+        "policy": "official-primary-only"
+      }
+    },
+    {
+      "id": "model-171",
+      "name": "Qwen3.8-Omni-Flash",
+      "date": "2026-09-18",
+      "sortDate": "2026-09-18",
+      "month": "2026-09",
+      "monthName": "September",
+      "company": "Alibaba",
+      "family": "Qwen3.8",
+      "type": "MLLM / omni",
+      "category": "Omni",
+      "status": "GA",
+      "parameters": "정확한 수치 미공개",
+      "architecture": "Native omni-modal on Qwen3.8-Flash-Next architecture",
+      "modalities": [
+        "text",
+        "image",
+        "audio",
+        "video"
+      ],
+      "focus": [
+        "Omni Understanding",
+        "Agentic AV Workflows",
+        "Tool Use"
+      ],
+      "open_weights": false,
+      "license": "",
+      "context": "1M (max input 991,808 / thinking 983,616, max output 131,072)",
+      "languages": "",
+      "variants": [],
+      "reasoning_effort": [],
+      "availability": "Qianwen AI Platform / QwenCloud / Alibaba Cloud Model Studio API (model ID qwen3.8-omni-flash)",
+      "note": "Qwen의 차세대 네이티브 옴니모달 모델 — 텍스트·이미지·오디오·비디오 입력, 텍스트 출력, 함수 호출·웹 검색 내장, 1M 컨텍스트. 공식 발표는 29개 평가 평균이 Qwen3.5-Omni-Plus 대비 25%+ 향상됐다고 보고합니다. 실시간 변형 qwen3.8-omni-flash-realtime과 Qwen-MM-Plugins·Qwen-Live Harness를 함께 공개했습니다.",
+      "benchmarks": {
+        "WildClawBench-MM": 71.0,
+        "UniClawBench": 69.6,
+        "AgenticVBench": 36.8,
+        "OmniGAIA": 74.0,
+        "DailyOmni": 85.1,
+        "WorldSense": 68.5,
+        "AVUT": 86.6,
+        "JoinAVBench": 75.9,
+        "OmniVideoBench": 63.4,
+        "Video-MME-v2": 65.0,
+        "LVOmniBench": 63.3,
+        "OmniCloze": 63.2,
+        "OmniCap-IF (CSR)": 80.6,
+        "OmniCap-IF (ISR)": 28.2,
+        "QIVD": 69.6,
+        "StreamingBench": 80.8,
+        "AliMeeting Test (DER↓)": 3.4,
+        "AliMeeting Test (cpWER↓)": 17.2,
+        "AISHELL-4 (DER↓)": 2.8,
+        "AISHELL-4 (cpWER↓)": 11.2,
+        "MagicData-RAMC (DER↓)": 5.7,
+        "MagicData-RAMC (cpWER↓)": 14.1,
+        "MLC-SLM en (DER↓)": 4.0,
+        "MLC-SLM en (cpWER↓)": 14.2,
+        "WenetSpeech Net (WER↓)": 4.8,
+        "WenetSpeech Meeting (WER↓)": 4.6,
+        "FLEURS-ASR (WER↓)": 9.3,
+        "FLEURS-S2TT (BLEU)": 31.8,
+        "SpotSoundBench": 67.2,
+        "MMAU": 81.8,
+        "MMAR": 79.8,
+        "MMSU": 82.1,
+        "LongAudioSpan (Accuracy)": 82.7,
+        "LongAudioSpan (Rubric)": 71.8,
+        "LongAudioSpan (Chain)": 48.2,
+        "MuchoMusic-RUL": 72.6,
+        "HumMusQA": 75.8,
+        "MusTBench": 50.6,
+        "Audio MultiChallenge": 71.5,
+        "WildSpeech": 74.3,
+        "VoiceBench": 91.6,
+        "DeepSWE 1.1": 57.8,
+        "SWE-bench Pro": 63.3,
+        "SWE-bench Multilingual": 80.5,
+        "NL2Repo-Bench": 48.9,
+        "CoWorkBench": 75.3,
+        "IFBench": 81.5,
+        "GPQA Diamond": 91.0,
+        "HLE": 36.5,
+        "LiveCodeBench v6": 92.6,
+        "ClawEval-MM (Pass@3)": 60.4,
+        "ClawEval-MM (Average)": 61.9,
+        "AndroidWorld": 87.1,
+        "Vision2Web": 62.9,
+        "ERQA": 71.0,
+        "LVBench": 76.9,
+        "RealWorldQA": 87.7,
+        "MathVision (without CI)": 91.8,
+        "MathVision (with CI)": 96.2,
+        "CharXiv-RQ (without CI)": 83.5,
+        "CharXiv-RQ (with CI)": 91.4,
+        "OmniVideoBench (Qwen Code)": 67.8,
+        "Video-MME-v2 (Qwen Code)": 71.3,
+        "LVOmniBench (Qwen Code)": 73.6
+      },
+      "official_id": "qwen3.8-omni-flash",
+      "official_sources": [
+        {
+          "label": "공식 출시 발표",
+          "url": "https://qwen.ai/blog?id=qwen3.8-omni-flash"
+        },
+        {
+          "label": "공식 모델 페이지",
+          "url": "https://www.qwencloud.com/models/qwen3.8-omni-flash"
+        }
+      ],
+      "release_date_source": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+      "parameter_source": "https://www.qwencloud.com/models/qwen3.8-omni-flash",
+      "benchmark_sources": {
+        "WildClawBench-MM": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "UniClawBench": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "AgenticVBench": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "OmniGAIA": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "DailyOmni": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "WorldSense": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "AVUT": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "JoinAVBench": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "OmniVideoBench": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "Video-MME-v2": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "LVOmniBench": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "OmniCloze": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "OmniCap-IF (CSR)": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "OmniCap-IF (ISR)": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "QIVD": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "StreamingBench": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "AliMeeting Test (DER↓)": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "AliMeeting Test (cpWER↓)": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "AISHELL-4 (DER↓)": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "AISHELL-4 (cpWER↓)": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "MagicData-RAMC (DER↓)": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "MagicData-RAMC (cpWER↓)": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "MLC-SLM en (DER↓)": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "MLC-SLM en (cpWER↓)": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "WenetSpeech Net (WER↓)": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "WenetSpeech Meeting (WER↓)": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "FLEURS-ASR (WER↓)": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "FLEURS-S2TT (BLEU)": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "SpotSoundBench": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "MMAU": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "MMAR": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "MMSU": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "LongAudioSpan (Accuracy)": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "LongAudioSpan (Rubric)": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "LongAudioSpan (Chain)": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "MuchoMusic-RUL": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "HumMusQA": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "MusTBench": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "Audio MultiChallenge": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "WildSpeech": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "VoiceBench": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "DeepSWE 1.1": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "SWE-bench Pro": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "SWE-bench Multilingual": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "NL2Repo-Bench": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "CoWorkBench": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "IFBench": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "GPQA Diamond": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "HLE": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "LiveCodeBench v6": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "ClawEval-MM (Pass@3)": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "ClawEval-MM (Average)": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "AndroidWorld": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "Vision2Web": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "ERQA": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "LVBench": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "RealWorldQA": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "MathVision (without CI)": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "MathVision (with CI)": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "CharXiv-RQ (without CI)": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "CharXiv-RQ (with CI)": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "OmniVideoBench (Qwen Code)": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "Video-MME-v2 (Qwen Code)": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "LVOmniBench (Qwen Code)": "https://qwen.ai/blog?id=qwen3.8-omni-flash"
+      },
+      "benchmark_note": "qwen.ai 공식 발표문(2026-09-18) 비교표의 Qwen3.8-Omni-Flash 열 전부 수록. DER·cpWER·WER는 낮을수록 좋은 지표라 ↓를 명기했습니다. Realtime API 지연 표(TPS·TTFT·RTF)는 % 점수가 아니라 제외, '(Qwen Code)' 접미 행은 같은 모델을 Qwen Code 에이전트 하네스로 돌린 발표문 별도 열입니다. 발표문 각주의 시간당 가격 절감(음성 -98%·AV -93%)은 가격 지표라 점수로 수록하지 않았습니다.",
+      "parameter_status": "undisclosed",
+      "verification": {
+        "status": "reviewed",
+        "reviewed_on": "2026-09-19",
+        "policy": "official-primary-only"
+      }
     }
   ],
   "excluded": [
@@ -13125,6 +13762,69 @@
       "original_name": "Gemini 3.5 Transcribe",
       "reason": "전사(transcription) 전용 모델로 ASR/TTS-only 제외 항목에 해당.",
       "source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/"
+    },
+    {
+      "id": "excluded-2026-09-19-1",
+      "name": "Bonsai 2 27B (Ternary)",
+      "original_name": "Ternary Bonsai 2 27B",
+      "reason": "Qwen3.8 27B를 테너리(~1.76bit/weight)로 변환한 배포용 체크포인트로, '단순 양자화 체크포인트' 제외 항목에 해당. 신규 능력이 아니라 기존 모델의 98.2% 보존 압축본.",
+      "source": "https://prismml.com/news/bonsai-2-27b"
+    },
+    {
+      "id": "excluded-2026-09-19-2",
+      "name": "DeepSeek-V4.1-Flash-NVFP4",
+      "original_name": "nvidia/DeepSeek-V4.1-Flash-NVFP4",
+      "reason": "2026-09-16 NVIDIA가 공개한 DeepSeek-V4.1-Flash의 NVFP4(4-bit) 변환본 — 모델 카드 자체도 재학습 없는 리패키징이라 명시. '단순 양자화 체크포인트' 제외 항목에 해당하며 원 모델은 model-160으로 수록됨.",
+      "source": "https://huggingface.co/nvidia/DeepSeek-V4.1-Flash-NVFP4"
+    },
+    {
+      "id": "excluded-2026-09-19-3",
+      "name": "Grok Voice Transcribe 2.0",
+      "original_name": "Grok Voice Transcribe 2.0",
+      "reason": "2026-09-18 공개된 xAI/SpaceXAI의 음성→텍스트 전사 전용 모델로 ASR/TTS-only 제외 항목에 해당.",
+      "source": "https://x.ai/news/grok-voice-transcribe-2"
+    },
+    {
+      "id": "excluded-2026-09-19-4",
+      "name": "Jev (TypeSafe AI)",
+      "original_name": "Jev",
+      "reason": "텍스트를 생성하지 않고 'calibrated decisions'(타입 결정+확률)만 반환하는 System One 모델 — LLM/MLLM 수록 범위 밖. 2026-09-15 스텔스 해제와 함께 얼리 액세스 공개.",
+      "source": "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
+    },
+    {
+      "id": "excluded-2026-09-19-5",
+      "name": "Odyssey-3",
+      "original_name": "Odyssey-3",
+      "reason": "로봇·차량·게임을 제어하는 물리 인텔리전스 월드모델(자기회귀 확산 트랜스포머) — LLM/MLLM 수록 범위 밖. 2026-09-15 프리뷰, 공개 배포는 수 주 후 예정.",
+      "source": "https://odyssey.systems/introducing-odyssey-3"
+    },
+    {
+      "id": "excluded-2026-09-19-6",
+      "name": "Astronex-World 1.0",
+      "original_name": "Astronex-World 1.0",
+      "reason": "텍스트·초기 프레임으로 미래 시각 상태를 생성하는 인터랙티브 비디오 월드모델 — video-generation-only 제외 항목에 해당.",
+      "source": "https://arxiv.org/abs/2609.20034"
+    },
+    {
+      "id": "excluded-2026-09-19-7",
+      "name": "NASA-IBM Lunar Foundation Model",
+      "original_name": "NASA-IBM Lunar Foundation Model",
+      "reason": "월면 관측 데이터(크레이터 탐지·얼음 매장량 등) 전용 과학 파운데이션 모델 — 범용 LLM/MLLM 수록 범위 밖.",
+      "source": "https://huggingface.co/nasa-ibm-ai4science/NASA-IBM-Lunar-Foundation-Model"
+    },
+    {
+      "id": "excluded-2026-09-19-8",
+      "name": "Kimi K3 on Amazon Bedrock",
+      "original_name": "Kimi K3 on Amazon Bedrock",
+      "reason": "기존 model-087 Kimi K3의 AWS Bedrock GA(9/19) — 신규 모델이 아니라 배포 채널 확장이라 중복 집계하지 않음. GPT-Live-1 API 확장(model-163)과 같은 사례.",
+      "source": "https://builder.aws.com/content/3JWn21K5S5mKNqS2V3g2lz9g2B3/getting-started-with-kimi-code-and-kimi-k3-on-amazon-bedrock"
+    },
+    {
+      "id": "excluded-2026-09-19-9",
+      "name": "Union Alpha (Pareto 26.9)",
+      "original_name": "Union Alpha / unbiased.ai Pareto 26.9",
+      "reason": "2026-09-16 OpenRouter에 개발사를 숨긴 스텔스 모델로 올라왔고 다음 날 unbiased.ai의 'Pareto 26.9'로 확인됐으나, 개발사가 공식 발표를 2026-10-10으로 예고해 정식 수록 조건(공식 출시·제품명·1차 출처)이 아직 충족되지 않아 보류. iFLYTEK Spark X2.5 선례와 같은 판정.",
+      "source": "https://openrouter.ai/stealth/union-alpha"
     }
   ],
   "company_meta": {
@@ -13361,6 +14061,18 @@
       "flag": "🇨🇳",
       "color": "from-red-500 to-rose-600",
       "badge": "bg-red-500/10 text-red-300 border-red-500/30"
+    },
+    "GenON": {
+      "country": "KR",
+      "flag": "🇰🇷",
+      "color": "from-emerald-600 to-teal-500",
+      "badge": "bg-teal-500/10 text-teal-300 border-teal-500/30"
+    },
+    "Sber": {
+      "country": "RU",
+      "flag": "🇷🇺",
+      "color": "from-green-500 to-emerald-600",
+      "badge": "bg-green-500/10 text-green-300 border-green-500/30"
     }
   },
   "family_flows": [
@@ -13371,7 +14083,8 @@
         "Qwen3.6",
         "Qwen3.7",
         "Qwen3.8",
-        "Qwen3.8-Flash-Next"
+        "Qwen3.8-Flash-Next",
+        "Qwen3.8-Omni-Flash"
       ]
     },
     {
@@ -13435,6 +14148,7 @@
         "Kimi K2.5",
         "Kimi K2.6",
         "Kimi K2.7 Code",
+        "Kimi K2.8 Preview",
         "Kimi K3"
       ]
     },
@@ -13519,7 +14233,7 @@
   ],
   "unconfirmed": [],
   "scope": {
-    "period": "2026-01-01 ~ 2026-09-16",
+    "period": "2026-01-01 ~ 2026-09-19",
     "scope": [
       "LLM (Large Language Models)",
       "MLLM / VLM / Omni foundation models"
@@ -13536,6 +14250,6 @@
     ],
     "benchmark_policy": "공식 모델 카드·기술 보고서·개발사 공식 발표문에 모델 제공자가 직접 명시한 점수만 수록. Chatbot Arena/ELO, Artificial Analysis, 제3자 leaderboard, 추정·역산 점수는 제외.",
     "parameter_policy": "개발사가 명시한 총/활성 파라미터만 사용. 공개하지 않은 값은 정확한 수치 미공개로 표시하고, 모델 크기·가중치 파일 용량·양자화 크기를 파라미터 수로 대체하지 않음.",
-    "reviewed_on": "2026-09-16"
+    "reviewed_on": "2026-09-19"
   }
 }
