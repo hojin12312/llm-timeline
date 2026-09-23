@@ -14639,6 +14639,115 @@ const TIMELINE_DATA = [
       "reviewed_on": "2026-09-23",
       "policy": "official-primary-only"
     }
+  },
+  {
+    "id": "model-184",
+    "name": "Jev",
+    "date": "2026-09-15",
+    "sortDate": "2026-09-15",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "TypeSafe AI",
+    "family": "System One",
+    "type": "System One / structured decision",
+    "category": "LLM",
+    "status": "Preview",
+    "parameters": "정확한 수치 미공개",
+    "parameter_status": "undisclosed",
+    "architecture": "",
+    "modalities": [
+      "text"
+    ],
+    "focus": [
+      "structured decisions",
+      "classification",
+      "routing",
+      "scoring",
+      "verification"
+    ],
+    "open_weights": false,
+    "license": "",
+    "context": "",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "TypeSafe API·Playground·Python SDK",
+    "note": "TypeSafe AI의 첫 공개 System One 모델(얼리 액세스). 텍스트 생성 없이 state+typed questions(choice/score/noul, 최대 255지선다)에 calibrated 확률·신뢰도를 반환하는 구조화 결정 모델 — 텍스트 미생성 모델이지만 독립 API 제품·별도 모델 ID로 공식 출시되어 수록. RLCD 학습·병렬 샘플링, POST /v1/systemone(모델 ID jev-latest, 스냅샷 jev-1.13.0), 입력 $0.042/1M·출력 무료, 70–500ms.",
+    "benchmarks": {},
+    "benchmark_sources": {},
+    "benchmark_note": "공식 발표문·문서에 % 단위 벤치마크 점수 미공개 — workflow evals는 기준 모델(GPT-6 Astra·Fable 5.1 평균) 대비 속도·비용 Pareto 차트로만 제시되어 점수 표 미수록.",
+    "official_id": "jev-latest",
+    "official_sources": [
+      {
+        "label": "공식 발표 블로그",
+        "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
+      },
+      {
+        "label": "공식 문서",
+        "url": "https://docs.typesafe.ai/introduction/quickstart"
+      }
+    ],
+    "release_date_source": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+    "parameter_source": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-23",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-185",
+    "name": "Solar Jev",
+    "date": "2026-09-22",
+    "sortDate": "2026-09-22",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "Upstage",
+    "family": "Solar",
+    "type": "System One / structured decision",
+    "category": "LLM",
+    "status": "Beta",
+    "parameters": "35B total / 3B active (Solar Mini 4 기반)",
+    "parameter_status": "verified",
+    "architecture": "",
+    "modalities": [
+      "text"
+    ],
+    "focus": [
+      "structured decisions",
+      "routing",
+      "classification",
+      "policy checks"
+    ],
+    "open_weights": false,
+    "license": "",
+    "context": "512K",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "Upstage Console API (POST /v1/systemone)",
+    "note": "Solar Mini 4를 System One 엔드포인트로 서빙하는 구조화 결정 모델(베타). Jev와 동일한 /v1/systemone 스키마로 choice/score/noul+확률을 반환하고 산문을 생성하지 않아 단일 forward pass·출력 토큰 무료. 512K 컨텍스트, 한국어 이해 강점. 텍스트 미생성 모델이지만 별도 모델 ID의 독립 API 제품으로 수록.",
+    "benchmarks": {},
+    "benchmark_sources": {},
+    "benchmark_note": "공식 문서에 벤치마크 점수 미공개(2026-09-23 확인, 베타 단계).",
+    "official_id": "solar-jev",
+    "official_sources": [
+      {
+        "label": "공식 모델 카탈로그",
+        "url": "https://console.upstage.ai/docs/models/history"
+      },
+      {
+        "label": "System One API 레퍼런스",
+        "url": "https://console.upstage.ai/api/systemone"
+      }
+    ],
+    "release_date_source": "https://console.upstage.ai/docs/models/history",
+    "parameter_source": "https://console.upstage.ai/docs/models/history",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-23",
+      "policy": "official-primary-only"
+    }
   }
 ];
 
@@ -14900,6 +15009,12 @@ const COMPANY_META = {
     "flag": "🇷🇺",
     "color": "from-red-500 to-amber-500",
     "badge": "bg-red-500/10 text-red-400 border-red-500/30"
+  },
+  "TypeSafe AI": {
+    "country": "US",
+    "flag": "🇺🇸",
+    "color": "from-indigo-500 to-violet-600",
+    "badge": "bg-indigo-500/10 text-indigo-300 border-indigo-500/30"
   }
 };
 
@@ -15201,13 +15316,6 @@ const AUDIT_EXCLUDED = [
     "source": "https://x.ai/news/grok-voice-transcribe-2"
   },
   {
-    "id": "excluded-2026-09-19-4",
-    "name": "Jev (TypeSafe AI)",
-    "original_name": "Jev",
-    "reason": "텍스트를 생성하지 않고 'calibrated decisions'(타입 결정+확률)만 반환하는 System One 모델 — LLM/MLLM 수록 범위 밖. 2026-09-15 스텔스 해제와 함께 얼리 액세스 공개.",
-    "source": "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
-  },
-  {
     "id": "excluded-2026-09-19-5",
     "name": "Odyssey-3",
     "original_name": "Odyssey-3",
@@ -15248,13 +15356,6 @@ const AUDIT_EXCLUDED = [
     "original_name": "GLM-5.3-FlashX (Z.ai)",
     "reason": "2026-09-18 Z.ai API에 추가된 GLM-5.3-Flash와 동일 가중치(320B/18B)의 고속 서빙 티어(~200 tok/s, 약 2.5× 가격). 신규 가중치·벤치마크 없이 서빙 옵션만 달라 별도 모델로 수록하지 않음 — 동일 가중치 서빙 변형 제외 규정.",
     "source": "https://docs.z.ai/guides/vlm/glm-5.3-flash"
-  },
-  {
-    "id": "excluded-2026-09-23-2",
-    "name": "Solar Jev",
-    "original_name": "Solar Jev (Upstage, POST /v1/systemone)",
-    "reason": "Solar Mini 4 기반 구조화 결정 모델 — choice/score/yes-no 판정만 반환하고 텍스트를 생성하지 않아 LLM 수록 범위 밖. Jev(TypeSafe AI)와 동일 분류.",
-    "source": "https://console.upstage.ai/docs/models/solar-jev"
   },
   {
     "id": "excluded-2026-09-23-3",

@@ -74,6 +74,9 @@ OFFICIAL_HOSTS = {
     "static.stepfun.com",
     "tech.meituan.com",
     "thinkingmachines.ai",
+    # TypeSafe AI official blog (typesafe.ai) and docs (docs.typesafe.ai)
+    # — Jev / System One launch. Added 2026-09-23.
+    "typesafe.ai",
     # Upstage official blog (upstage.ai) and Console docs (console.upstage.ai)
     # — Solar Pro 4 / Solar Mini 4 releases. Added 2026-09-23.
     "upstage.ai",

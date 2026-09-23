@@ -1,16 +1,17 @@
 # ⚡ 2026 LLM & MLLM Release Timeline
 
 > **2026년 주요 LLM / MLLM 파운데이션 모델 출시 타임라인 및 세대별 진화 계보**  
-> 기준 기간: **2026-01-01 ~ 2026-09-23** | 수록 모델: **173개** | 표기 조직: **41개**
+> 기준 기간: **2026-01-01 ~ 2026-09-23** | 수록 모델: **175개** | 표기 조직: **42개**
 
 본 레포지토리는 2026년에 발표된 전 세계 주요 LLM, MLLM, Omni 파운데이션 모델의 릴리즈 내역을 공식 1차 자료와 함께 구조화하여 인터랙티브한 웹 타임라인으로 제공하는 **GitHub Pages** 프로젝트입니다.
 
-**2026-09-23 감사 추가분 (12개):**
+**2026-09-23 감사 추가분 (14개):**
 - 신규 릴리스(8): xAI **Grok 4.7**(9/21, 더 큰 베이스+장기 RL, 500K 컨텍스트), Yandex **AliceAI-Foundation-80B-A3B-Base**(9/21, 80B-A3B 오픈가중치 파운데이션 — 신규 조직 🇷🇺), Anthropic **Claude Opus 5.5**(9/22, Claude 5.5 패밀리 첫 모델), OpenAI **GPT-6 Sol · GPT-6 Luna**(9/22, GPT-6 범용·고효율 티어 — API 가격 50% 인하), Xiaomi **MiMo-V2.6-Pro · MiMo-V2.6-Flash**(9/22, 1.02T-A42B / 309B-A15B 네이티브 옴니모달·1M 컨텍스트·MIT), Upstage **Solar Mini 4**(9/22, 35B-A3B·512K)
 - 기간 내 누락 정정(4): Upstage **Solar Pro 4**(8/6, `solar-pro4` 상용 에이전틱 플래그십 — 이전 감사 누락분 소급), Nex-AGI **Nex-N2.5-mini · Nex-N2.5-Pro · Nex-N2.5-Max**(9/8, 35B-A3B/397B-A17B 멀티모달 + 1.6T 텍스트 MoE 에이전틱 패밀리 — 신규 조직 🇨🇳, Apache 2.0)
-- 벤치마크: 공식 카드·발표문에 인쇄된 점수만 수록해 **신규 127개 점수**를 반영했습니다(누적 160개 모델·2,992개 점수). Solar Mini 4는 공식 문서에 수치가 없어 빈 점수로 두고 원장에 사유를 기록했습니다. Solar Pro 4 표에서 * 표시가 없는 값(Terminal-Bench v2.1·AA-LCR·τ³-Banking·GDPval-AA·GPQA)은 Artificial Analysis 등 외부 측정분이라 제외했고, GDPval-AA Elo 계열(Opus 5.5 1846, Nex·MiMo·Grok의 AA Briefcase류)과 Grok 4.7의 점수 척도 지표도 점수 표에서 제외했습니다.
-- 제외 원장 신규 기록(5): **GLM-5.3-FlashX**(GLM-5.3-Flash와 동일 가중치의 고속 서빙 티어), **Solar Jev**·**Laya**(텍스트를 생성하지 않는 비LLM 결정 모델), **Apollo**(고대그리스어 도메인 특화 프로젝트), **gpt-oss-120b/20b**(2025-08-05 출시 — 기간 외)
-- 1차 도메인 추가: `upstage.ai`(Upstage 공식 블로그·Console 문서 — Solar Pro 4/Solar Mini 4/Solar Jev), `nex-agi.com`(Nex-N2.5 패밀리 파라미터 공표)
+- 범위 재검토 수록(2): TypeSafe AI **Jev**(9/15, 최초의 System One 모델 — 얼리 액세스, `jev-latest`, 신규 조직 🇺🇸), Upstage **Solar Jev**(9/22, Solar Mini 4 기반 `/v1/systemone` 엔드포인트 — 베타, 512K). 산문을 생성하지 않고 choice/score/noul 결정+교정 확률만 반환하는 구조화 결정 모델이지만, 독립 API 제품·별도 모델 ID로 공식 출시되어 재검토 끝에 수록했습니다(되돌림 경위는 하단 각주 참조).
+- 벤치마크: 공식 카드·발표문에 인쇄된 점수만 수록해 **신규 127개 점수**를 반영했습니다(누적 160개 모델·2,992개 점수). Solar Mini 4·Jev·Solar Jev는 공식 문서에 % 수치가 없어 빈 점수로 두고 원장에 사유를 기록했습니다. Solar Pro 4 표에서 * 표시가 없는 값(Terminal-Bench v2.1·AA-LCR·τ³-Banking·GDPval-AA·GPQA)은 Artificial Analysis 등 외부 측정분이라 제외했고, GDPval-AA Elo 계열(Opus 5.5 1846, Nex·MiMo·Grok의 AA Briefcase류)과 Grok 4.7의 점수 척도 지표도 점수 표에서 제외했습니다.
+- 제외 원장 신규 기록(4): **GLM-5.3-FlashX**(GLM-5.3-Flash와 동일 가중치의 고속 서빙 티어), **Laya**(텍스트를 생성하지 않는 비LLM 결정 모델), **Apollo**(고대그리스어 도메인 특화 프로젝트), **gpt-oss-120b/20b**(2025-08-05 출시 — 기간 외)
+- 1차 도메인 추가: `upstage.ai`(Upstage 공식 블로그·Console 문서 — Solar Pro 4/Solar Mini 4/Solar Jev), `nex-agi.com`(Nex-N2.5 패밀리 파라미터 공표), `typesafe.ai`(TypeSafe AI 공식 블로그·문서 — Jev/System One)
 
 **2026-09-19 감사 추가분 (6개):**
 - 신규 릴리스(4): Ant Group/InclusionAI **Realtime-Venus-Omni · Realtime-Venus-Audio**(9/16, 풀듀플렉스 옴니·오디오 9B 체크포인트 2종, Apache 2.0), GenON **Hunmin-397B-A17B-CUA**(9/18, 397B-A17B 컴퓨터 사용 특화 VLM — 신규 조직 🇰🇷), Alibaba **Qwen3.8-Omni-Flash**(9/18, 네이티브 옴니·1M 컨텍스트·에이전틱 툴콜, API 전용)
@@ -94,16 +95,18 @@
   - 보상/가드레일 전용 모델
   - 단순 양자화 체크포인트 (FP8, NVFP4, INT4, GGUF 등)
   - 독립 제품을 대표하지 않는 중간/베이스 체크포인트
-- **포함 기업 (41개 표기 조직):**
-   - **미국 (US):** OpenAI, Anthropic, Google DeepMind, Meta, xAI, NVIDIA, IBM, Poolside, Thinking Machines Lab, Arcee AI, Motif Technologies, Cognition (SWE), Salesforce (Koa), Gensyn (open-1b), Accio-Lab (Occamy)
+- **포함 기업 (42개 표기 조직):**
+   - **미국 (US):** OpenAI, Anthropic, Google DeepMind, Meta, xAI, NVIDIA, IBM, Poolside, Thinking Machines Lab, Arcee AI, Motif Technologies, Cognition (SWE), Salesforce (Koa), Gensyn (open-1b), Accio-Lab (Occamy), TypeSafe AI (Jev)
    - **한국 (KR):** NAVER Cloud (HyperCLOVA X SEED 4B), Upstage (Solar), LG AI Research (EXAONE / K-EXAONE), SK Telecom (A.X), GenON (Hunmin)
   - **중국 (CN):** Alibaba (Qwen), DeepSeek, Baidu (ERNIE), ByteDance (Seed), Moonshot AI (Kimi), Z.ai (GLM), MiniMax, StepFun, Meituan (LongCat), Xiaomi (MiMo), Ant Group (Ling/Ring), Tencent (Hy), Shanghai Artificial Intelligence Laboratory (Atria), Nex-AGI (Nex)
    - **중동 (AE):** Institute of Foundation Models / MBZUAI (K2 Horizon)
    - **유럽/기타:** Mistral AI (프랑스), Cohere/Cohere Labs (캐나다), Sarvam AI (인도), Sber (러시아, GigaChat), Yandex (러시아, AliceAI)
 
-공식 점수가 확인되지 않은 모델은 빈 점수로 표시합니다. 이는 누락이 아니라 공식 발표 점수만 제공한다는 감사 정책의 결과입니다. 원래 목록에서 공식 출시 시점·공식 제품명·별도 모델 ID가 확인되지 않거나 중복인 5개 항목과, 2026-09-08 감사에서 1차 출처 미확보로 보류한 1개 항목(iFLYTEK Spark X2.5), 2026-09-16 감사에서 범위 제외로 판정한 3개 항목(Gemini Omni 1.1 Flash · GPT-Live-1 API 확장 · Gemini 3.5 Transcribe)과, 2026-09-19 감사에서 범위 제외·보류로 판정한 9개 항목(단순 양자화 2 · ASR 전용 1 · 비LLM/도메인 특화/월드모델 4 · 배포 확장 1 · 스텔스 보류 1), 2026-09-23 감사에서 범위 제외로 판정한 5개 항목(동일 가중치 서빙 티어 1 · 비LLM 결정 모델 2 · 도메인 특화 1 · 기간 외 1)까지 **23개 항목**은 [`조사 자료`](조사%20자료)의 제외 원장에 보존했습니다.
+공식 점수가 확인되지 않은 모델은 빈 점수로 표시합니다. 이는 누락이 아니라 공식 발표 점수만 제공한다는 감사 정책의 결과입니다. 원래 목록에서 공식 출시 시점·공식 제품명·별도 모델 ID가 확인되지 않거나 중복인 5개 항목과, 2026-09-08 감사에서 1차 출처 미확보로 보류한 1개 항목(iFLYTEK Spark X2.5), 2026-09-16 감사에서 범위 제외로 판정한 3개 항목(Gemini Omni 1.1 Flash · GPT-Live-1 API 확장 · Gemini 3.5 Transcribe)과, 2026-09-19 감사에서 범위 제외·보류로 판정한 8개 항목(단순 양자화 2 · ASR 전용 1 · 도메인 특화/월드모델 3 · 배포 확장 1 · 스텔스 보류 1), 2026-09-23 감사에서 범위 제외로 판정한 4개 항목(동일 가중치 서빙 티어 1 · 비LLM 결정 모델 1 · 도메인 특화 1 · 기간 외 1)까지 **21개 항목**은 [`조사 자료`](조사%20자료)의 제외 원장에 보존했습니다.
 
 > **2026-09-08 제외 원장 되돌림:** 2026-09-04 감사에서 "공식 발표문을 확인하지 못했다"며 보류했던 **Muse Spark 1.2**(구 `model-098`)와 **Muse Spark 1.3**(구 `model-115`)은, Meta의 1차 발표문이 `ai.meta.com`이 아니라 **Meta AI Research 블로그(`research.meta.ai`)** 에 있음을 확인하고 활성 레코드(`model-136`, `model-131`)로 이관했습니다. 제외 원장에서 두 항목을 삭제했고, 그 경위는 각 모델의 감사 원장 메모에 남아 있습니다.
+>
+> **2026-09-23 제외 원장 되돌림:** 2026-09-19·09-23 감사에서 "텍스트를 생성하지 않는 비LLM 결정 모델"로 제외했던 **Jev**(TypeSafe AI, 9/15)와 **Solar Jev**(Upstage, 9/22)를 재검토 끝에 활성 레코드(`model-184`, `model-185`)로 이관했습니다. 두 모델은 산문 생성 없이 choice/score/noul 결정+교정 확률만 반환하지만, 독립 API 제품·별도 모델 ID로 공식 출시된 신종 파운데이션 모델 부류(System One / structured decision)라는 판단입니다. 같은 부류로 제외 원장에 남은 **Laya**는 공식 출시 상세가 더 제한적이라 일단 원장에 유지했습니다.
 
 > **2026-09-08 신규 조직 편입 & 보류 각주:** IFM(MBZUAI) **K2 Horizon**은 "가장 큰 완전 오픈소스 릴리스"를 내건 신규 프론티어 랩이라 추적 조직에 편입했습니다(1차 출처: `ifm.ai`, `huggingface.co/IFM/*`). 반대로 **iFLYTEK Spark X2.5**(9/7, 보도 기준 293B-A30B MoE·256K)는 讯飞 공식 API 카탈로그 페이지가 JavaScript 셸만 응답해 파라미터·출시일을 1차 출처에서 인용할 수 없고, Hugging Face `XHToken`("SparkLLM Team")이 科大讯飞의 공식 조직인지도 확인하지 못해 제외 원장에 보류 기록으로 남겼습니다.
 
@@ -146,7 +149,7 @@ python3 -m http.server 8000
 llm-timeline/
 ├── index.html                       # 메인 인터랙티브 대시보드 웹 애플리케이션
 ├── models_catalog.json               # 모델명·파라미터·공식 점수·출처 SSOT
-├── data.js                          # SSOT에서 생성된 173개 모델 데이터셋
+├── data.js                          # SSOT에서 생성된 175개 모델 데이터셋
 ├── app.js                           # 검색, 다차원 필터, 뷰 전환, 모달 동작 로직
 ├── style.css                        # 타임라인 스파인, sticky 시간축 헤더, 반응형 모바일 레이아웃
 ├── build_data.py                    # models_catalog.json → data.js 생성기
@@ -154,7 +157,7 @@ llm-timeline/
 ├── .nojekyll                        # GitHub Pages 정적 자산 로딩 보장
 ├── .github/workflows/
 │   └── deploy-pages.yml             # GitHub Actions 자동 배포 워크플로우
-├── 조사 자료                         # 173개 모델별 공식 출처 감사 원장 (Markdown)
+├── 조사 자료                         # 175개 모델별 공식 출처 감사 원장 (Markdown)
 └── README.md                        # 프로젝트 설명 및 배포 안내 문서
 ```
 
