@@ -13692,6 +13692,953 @@ const TIMELINE_DATA = [
       "reviewed_on": "2026-09-19",
       "policy": "official-primary-only"
     }
+  },
+  {
+    "id": "model-172",
+    "name": "Solar Pro 4",
+    "date": "2026-08-06",
+    "sortDate": "2026-08-06",
+    "month": "2026-08",
+    "monthName": "August",
+    "company": "Upstage",
+    "family": "Solar",
+    "type": "LLM",
+    "category": "LLM",
+    "status": "GA",
+    "parameters": "정확한 수치 미공개",
+    "parameter_status": "undisclosed",
+    "architecture": "",
+    "modalities": [],
+    "focus": [
+      "agentic workflows",
+      "tool calling",
+      "long-document reasoning",
+      "terminal tasks"
+    ],
+    "open_weights": false,
+    "license": "",
+    "context": "512K (최대 출력 128K)",
+    "languages": "English, Korean, Japanese",
+    "variants": [],
+    "reasoning_effort": [
+      "low",
+      "high"
+    ],
+    "availability": "Upstage Console·SolarChat·OpenRouter·Hermes Agent",
+    "note": "Solar Pro 3 후속 상용 플래그십. 512K 컨텍스트·최대 128K 출력, EN/KO/JA 입출력, reasoning effort high/low. OpenAI 호환 API(모델 ID solar-pro4, 스냅샷 solar-pro4-260806), SolarChat·OpenRouter·Hermes Agent 제공. $0.30/$1.20 per 1M.",
+    "benchmarks": {
+      "BrowseComp": 49.2,
+      "SWE-bench Verified (openhands)": 70.6,
+      "MCP-Atlas": 61.4,
+      "APEX-Agents": 18.7,
+      "MMLU-Pro": 86.3,
+      "LiveCodeBench": 87.8,
+      "AIME 2026": 95.3,
+      "KMMLU-Pro": 79.2,
+      "KBL (law)": 77.5,
+      "KorMedMCQA (medicine)": 93.2,
+      "Ko-GDPval": 87.3,
+      "Arena-Hard v2 (Japanese)": 81.9,
+      "MMLU (Japanese)": 89.5,
+      "IFEval (Japanese)": 81.6
+    },
+    "benchmark_sources": {
+      "BrowseComp": "https://www.upstage.ai/blog/en/solar-pro-4",
+      "SWE-bench Verified (openhands)": "https://www.upstage.ai/blog/en/solar-pro-4",
+      "MCP-Atlas": "https://www.upstage.ai/blog/en/solar-pro-4",
+      "APEX-Agents": "https://www.upstage.ai/blog/en/solar-pro-4",
+      "MMLU-Pro": "https://www.upstage.ai/blog/en/solar-pro-4",
+      "LiveCodeBench": "https://www.upstage.ai/blog/en/solar-pro-4",
+      "AIME 2026": "https://www.upstage.ai/blog/en/solar-pro-4",
+      "KMMLU-Pro": "https://www.upstage.ai/blog/en/solar-pro-4",
+      "KBL (law)": "https://www.upstage.ai/blog/en/solar-pro-4",
+      "KorMedMCQA (medicine)": "https://www.upstage.ai/blog/en/solar-pro-4",
+      "Ko-GDPval": "https://www.upstage.ai/blog/en/solar-pro-4",
+      "Arena-Hard v2 (Japanese)": "https://www.upstage.ai/blog/en/solar-pro-4",
+      "MMLU (Japanese)": "https://www.upstage.ai/blog/en/solar-pro-4",
+      "IFEval (Japanese)": "https://www.upstage.ai/blog/en/solar-pro-4"
+    },
+    "benchmark_note": "Upstage 공식 블로그 비교표 중 * 표시(사내 평가 환경 자체 측정)만 수록. 비표시 값인 Terminal-Bench v2.1 57.0·GDPval-AA v2 38.8·τ³-Banking 23.0·AA-LCR 71.0·GPQA Diamond 89.0은 Artificial Analysis 등 외부 측정/제3자 지표라 제외. KBL=한국어 법률, KorMedMCQA=한국어 의료, Ko-GDPval=한국어 사무작업 자체 벤치마크.",
+    "official_id": "solar-pro4",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://www.upstage.ai/blog/en/solar-pro-4"
+      }
+    ],
+    "release_date_source": "https://www.upstage.ai/blog/en/solar-pro-4",
+    "parameter_source": "https://www.upstage.ai/blog/en/solar-pro-4",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-23",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-173",
+    "name": "Nex-N2.5-mini",
+    "date": "2026-09-08",
+    "sortDate": "2026-09-08",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "Nex-AGI",
+    "family": "Nex",
+    "type": "MLLM",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "35B total / 3B active (MoE)",
+    "parameter_status": "verified",
+    "architecture": "Qwen3.5 MoE 계열",
+    "modalities": [
+      "text",
+      "image"
+    ],
+    "focus": [
+      "agentic tasks",
+      "computer use",
+      "web browsing",
+      "long-horizon tasks"
+    ],
+    "open_weights": true,
+    "license": "Apache 2.0",
+    "context": "",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [
+      "none",
+      "medium",
+      "high"
+    ],
+    "availability": "Hugging Face·ModelScope·OpenRouter",
+    "note": "Qwen3.5 계열 멀티모달 베이스 위에서 컴퓨터 사용·웹브라우징·시각 기반 에이전트 능력을 강화한 에이전틱 모델. reasoning_effort none/medium(기본)/high, Apache 2.0, OpenRouter 제공.",
+    "benchmarks": {
+      "Terminal-Bench 2.1": 73.4,
+      "SWE-bench Pro": 43.8,
+      "DeepSWE v1.1": 36.1,
+      "AutomationBench (v1.0.6)": 32.3,
+      "Toolathlon Verified": 54.6,
+      "JobBench": 28.5,
+      "BrowseComp": 83.4,
+      "OSWorld-Verified": 71.2,
+      "OSWorld-2": 30.5,
+      "WebTest": 48.6,
+      "WebArena-Verified": 63.4,
+      "OSWorld-G": 82.9,
+      "Vision2Web": 52.9,
+      "SWE-MM": 25.5,
+      "OmniDoc": 89.7
+    },
+    "benchmark_sources": {
+      "Terminal-Bench 2.1": "https://huggingface.co/nex-agi/Nex-N2.5-mini",
+      "SWE-bench Pro": "https://huggingface.co/nex-agi/Nex-N2.5-mini",
+      "DeepSWE v1.1": "https://huggingface.co/nex-agi/Nex-N2.5-mini",
+      "AutomationBench (v1.0.6)": "https://huggingface.co/nex-agi/Nex-N2.5-mini",
+      "Toolathlon Verified": "https://huggingface.co/nex-agi/Nex-N2.5-mini",
+      "JobBench": "https://huggingface.co/nex-agi/Nex-N2.5-mini",
+      "BrowseComp": "https://huggingface.co/nex-agi/Nex-N2.5-mini",
+      "OSWorld-Verified": "https://huggingface.co/nex-agi/Nex-N2.5-mini",
+      "OSWorld-2": "https://huggingface.co/nex-agi/Nex-N2.5-mini",
+      "WebTest": "https://huggingface.co/nex-agi/Nex-N2.5-mini",
+      "WebArena-Verified": "https://huggingface.co/nex-agi/Nex-N2.5-mini",
+      "OSWorld-G": "https://huggingface.co/nex-agi/Nex-N2.5-mini",
+      "Vision2Web": "https://huggingface.co/nex-agi/Nex-N2.5-mini",
+      "SWE-MM": "https://huggingface.co/nex-agi/Nex-N2.5-mini",
+      "OmniDoc": "https://huggingface.co/nex-agi/Nex-N2.5-mini"
+    },
+    "benchmark_note": "Nex-AGI 공식 HF 카드의 비교표 중 Nex-N2.5-mini 열 값(개발사 직접 게시). GDPval-AA v2 1446은 Elo형 척도라 % 점수표에서 제외.",
+    "official_id": "nex-agi/Nex-N2.5-mini",
+    "official_sources": [
+      {
+        "label": "공식 모델 카드",
+        "url": "https://huggingface.co/nex-agi/Nex-N2.5-mini"
+      },
+      {
+        "label": "Nex-AGI 공식 사이트",
+        "url": "https://nex-agi.com/"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/nex-agi/Nex-N2.5-mini",
+    "parameter_source": "https://nex-agi.com/",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-23",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-174",
+    "name": "Nex-N2.5-Pro",
+    "date": "2026-09-08",
+    "sortDate": "2026-09-08",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "Nex-AGI",
+    "family": "Nex",
+    "type": "MLLM",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "397B total / 17B active (MoE)",
+    "parameter_status": "verified",
+    "architecture": "Qwen3.5 MoE 계열",
+    "modalities": [
+      "text",
+      "image"
+    ],
+    "focus": [
+      "agentic tasks",
+      "computer use",
+      "web browsing",
+      "long-horizon tasks"
+    ],
+    "open_weights": true,
+    "license": "Apache 2.0",
+    "context": "",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [
+      "none",
+      "medium",
+      "high"
+    ],
+    "availability": "Hugging Face·ModelScope·OpenRouter",
+    "note": "Qwen3.5 계열 멀티모달 베이스 위에서 컴퓨터 사용·웹브라우징·시각 기반 에이전트 능력을 강화한 에이전틱 모델. reasoning_effort none/medium(기본)/high, Apache 2.0, OpenRouter 제공.",
+    "benchmarks": {
+      "Terminal-Bench 2.1": 82.7,
+      "SWE-bench Pro": 61.2,
+      "DeepSWE v1.1": 55.8,
+      "AutomationBench (v1.0.6)": 44.2,
+      "Toolathlon Verified": 68.5,
+      "JobBench": 41.4,
+      "BrowseComp": 89.7,
+      "OSWorld-Verified": 82.2,
+      "OSWorld-2": 56.4,
+      "WebTest": 52.8,
+      "WebArena-Verified": 67.6,
+      "OSWorld-G": 87.4,
+      "Vision2Web": 68.2,
+      "SWE-MM": 38.2,
+      "OmniDoc": 92.2
+    },
+    "benchmark_sources": {
+      "Terminal-Bench 2.1": "https://huggingface.co/nex-agi/Nex-N2.5-Pro",
+      "SWE-bench Pro": "https://huggingface.co/nex-agi/Nex-N2.5-Pro",
+      "DeepSWE v1.1": "https://huggingface.co/nex-agi/Nex-N2.5-Pro",
+      "AutomationBench (v1.0.6)": "https://huggingface.co/nex-agi/Nex-N2.5-Pro",
+      "Toolathlon Verified": "https://huggingface.co/nex-agi/Nex-N2.5-Pro",
+      "JobBench": "https://huggingface.co/nex-agi/Nex-N2.5-Pro",
+      "BrowseComp": "https://huggingface.co/nex-agi/Nex-N2.5-Pro",
+      "OSWorld-Verified": "https://huggingface.co/nex-agi/Nex-N2.5-Pro",
+      "OSWorld-2": "https://huggingface.co/nex-agi/Nex-N2.5-Pro",
+      "WebTest": "https://huggingface.co/nex-agi/Nex-N2.5-Pro",
+      "WebArena-Verified": "https://huggingface.co/nex-agi/Nex-N2.5-Pro",
+      "OSWorld-G": "https://huggingface.co/nex-agi/Nex-N2.5-Pro",
+      "Vision2Web": "https://huggingface.co/nex-agi/Nex-N2.5-Pro",
+      "SWE-MM": "https://huggingface.co/nex-agi/Nex-N2.5-Pro",
+      "OmniDoc": "https://huggingface.co/nex-agi/Nex-N2.5-Pro"
+    },
+    "benchmark_note": "Nex-AGI 공식 HF 카드의 비교표 중 Nex-N2.5-Pro 열 값(개발사 직접 게시). GDPval-AA v2 1628은 Elo형 척도라 % 점수표에서 제외.",
+    "official_id": "nex-agi/Nex-N2.5-Pro",
+    "official_sources": [
+      {
+        "label": "공식 모델 카드",
+        "url": "https://huggingface.co/nex-agi/Nex-N2.5-Pro"
+      },
+      {
+        "label": "Nex-AGI 공식 사이트",
+        "url": "https://nex-agi.com/"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/nex-agi/Nex-N2.5-Pro",
+    "parameter_source": "https://nex-agi.com/",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-23",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-175",
+    "name": "Nex-N2.5-Max",
+    "date": "2026-09-08",
+    "sortDate": "2026-09-08",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "Nex-AGI",
+    "family": "Nex",
+    "type": "LLM",
+    "category": "LLM",
+    "status": "GA",
+    "parameters": "1.6T (MoE)",
+    "parameter_status": "publisher-partial",
+    "architecture": "DeepSeek-V4 계열 MoE",
+    "modalities": [
+      "text"
+    ],
+    "focus": [
+      "agentic tasks",
+      "computer use",
+      "web browsing",
+      "long-horizon tasks"
+    ],
+    "open_weights": true,
+    "license": "Apache 2.0",
+    "context": "",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [
+      "none",
+      "medium",
+      "high"
+    ],
+    "availability": "Hugging Face·ModelScope·OpenRouter",
+    "note": "DeepSeek-V4-Pro-Base 기반 1.6T MoE 텍스트 전용 모델 — 조 패밀리 최초 조 단위 post-training. reasoning_effort none/medium(기본)/high, Apache 2.0, OpenRouter 제공.",
+    "benchmarks": {
+      "Terminal-Bench 2.1": 86.1,
+      "SWE-bench Pro": 65.7,
+      "DeepSWE v1.1": 65.6,
+      "AutomationBench (v1.0.6)": 50.2,
+      "Toolathlon Verified": 74.7,
+      "JobBench": 53.6,
+      "BrowseComp": 92.6
+    },
+    "benchmark_sources": {
+      "Terminal-Bench 2.1": "https://huggingface.co/nex-agi/Nex-N2.5-Max",
+      "SWE-bench Pro": "https://huggingface.co/nex-agi/Nex-N2.5-Max",
+      "DeepSWE v1.1": "https://huggingface.co/nex-agi/Nex-N2.5-Max",
+      "AutomationBench (v1.0.6)": "https://huggingface.co/nex-agi/Nex-N2.5-Max",
+      "Toolathlon Verified": "https://huggingface.co/nex-agi/Nex-N2.5-Max",
+      "JobBench": "https://huggingface.co/nex-agi/Nex-N2.5-Max",
+      "BrowseComp": "https://huggingface.co/nex-agi/Nex-N2.5-Max"
+    },
+    "benchmark_note": "Nex-AGI 공식 HF 카드의 비교표 중 Nex-N2.5-Max 열 값(개발사 직접 게시). GDPval-AA v2 1713은 Elo형 척도라 % 점수표에서 제외.",
+    "official_id": "nex-agi/Nex-N2.5-Max",
+    "official_sources": [
+      {
+        "label": "공식 모델 카드",
+        "url": "https://huggingface.co/nex-agi/Nex-N2.5-Max"
+      },
+      {
+        "label": "Nex-AGI 공식 사이트",
+        "url": "https://nex-agi.com/"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/nex-agi/Nex-N2.5-Max",
+    "parameter_source": "https://nex-agi.com/",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-23",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-176",
+    "name": "Grok 4.7",
+    "date": "2026-09-21",
+    "sortDate": "2026-09-21",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "xAI / SpaceXAI",
+    "family": "Grok",
+    "type": "MLLM",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "정확한 수치 미공개",
+    "parameter_status": "undisclosed",
+    "architecture": "",
+    "modalities": [
+      "text",
+      "image"
+    ],
+    "focus": [
+      "long-running agents",
+      "coding",
+      "visual work",
+      "knowledge work"
+    ],
+    "open_weights": false,
+    "license": "",
+    "context": "500K",
+    "languages": "",
+    "variants": [
+      "grok-4.7-fast"
+    ],
+    "reasoning_effort": [],
+    "availability": "xAI API·Grok 앱",
+    "note": "Grok 4.6보다 큰 베이스 모델 + 더 긴 RL. 장시간 작업·자기 검증·긴 컨텍스트 개선. 500K 컨텍스트, 지식 컷오프 2026-05. API ID grok-4.7, $2/$6 per 1M(프롬프트 200K 초과 시 $4/$12), fast 변형은 2배 속도·2배 가격.",
+    "benchmarks": {
+      "DeepSWE v1.1": 71.0,
+      "EEBench": 64.0,
+      "CursorBench 4.0": 46.3,
+      "Terminal-Bench 4.0": 37.6,
+      "Harvey LAB (Vals)": 19.6,
+      "HealthBench Professional": 56.7,
+      "LatchBio Biosafety": 62.4,
+      "HackerBench v0.3 risky pass-through (↓)": 3.3
+    },
+    "benchmark_sources": {
+      "DeepSWE v1.1": "https://x.ai/news/grok-4-7",
+      "EEBench": "https://x.ai/news/grok-4-7",
+      "CursorBench 4.0": "https://x.ai/news/grok-4-7",
+      "Terminal-Bench 4.0": "https://x.ai/news/grok-4-7",
+      "Harvey LAB (Vals)": "https://x.ai/news/grok-4-7",
+      "HealthBench Professional": "https://x.ai/news/grok-4-7",
+      "LatchBio Biosafety": "https://x.ai/news/grok-4-7",
+      "HackerBench v0.3 risky pass-through (↓)": "https://x.ai/news/grok-4-7"
+    },
+    "benchmark_note": "xAI 공식 발표 평가 표 값(에포트별 최고값 기재; DeepSWE 71.0은 high effort 명시). AA Briefcase v1.1 1657은 %가 아닌 점수 척도라 제외. LatchBio Biosafety·HackerBench v0.3(↓ 위험 프롬프트 통과율, 낮을수록 우수)은 발표문에 함께 게시된 공식 안전성 평가.",
+    "official_id": "grok-4.7",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://x.ai/news/grok-4-7"
+      },
+      {
+        "label": "공식 모델 문서(컨텍스트·가격)",
+        "url": "https://docs.x.ai/developers/models"
+      }
+    ],
+    "release_date_source": "https://x.ai/news/grok-4-7",
+    "parameter_source": "https://docs.x.ai/developers/models",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-23",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-177",
+    "name": "AliceAI-Foundation-80B-A3B-Base",
+    "date": "2026-09-21",
+    "sortDate": "2026-09-21",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "Yandex",
+    "family": "AliceAI",
+    "type": "LLM",
+    "category": "LLM",
+    "status": "GA",
+    "parameters": "80B total / 3B active (MoE)",
+    "parameter_status": "verified",
+    "architecture": "Hybrid KDA + Gated Attention MoE",
+    "modalities": [
+      "text"
+    ],
+    "focus": [
+      "Russian language",
+      "factual knowledge",
+      "long context",
+      "open pretraining"
+    ],
+    "open_weights": true,
+    "license": "Apache 2.0",
+    "context": "262,144",
+    "languages": "Russian, English",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "Hugging Face·ModelScope",
+    "note": "처음부터 학습한 오픈가중치 파운데이션 베이스 모델 — 독립 공개 제품으로 수록(베이스 체크포인트 제외 규정의 'distinct product' 예외). 하이브리드 KDA+Gated Attention에 MoE 레이어 결합, 262,144 컨텍스트, RU/EN, Apache 2.0.",
+    "benchmarks": {
+      "WikiWebFacts": 86.5,
+      "HardMultiQA": 67.9,
+      "CultCat": 86.5,
+      "TriviaQA": 79.0,
+      "EduBench Russian": 74.2,
+      "EduBench Literature": 73.8,
+      "EduBench History": 82.0,
+      "EduBench English": 76.1,
+      "ExpertFactsQA Medicine": 63.6,
+      "ExpertFactsQA Law": 49.6,
+      "EGE CoT": 90.5,
+      "MMLU-Pro CoT": 66.8,
+      "SuperGPQA CoT": 44.3,
+      "MATH-500": 91.1,
+      "EduBench Math": 79.3,
+      "EduBench Math University": 70.1,
+      "BigCodeBench 1-shot pass@1": 48.3,
+      "LiveCodeBench v5-6 CoT 1-shot pass@1": 50.5,
+      "FinQA 128k": 74.1,
+      "LongMemEval 128k": 64.6,
+      "AIME 2026 pass@32": 96.7,
+      "IMO Answerbench pass@8": 88.7,
+      "LiveCodeBench v5-6 pass@1": 60.4
+    },
+    "benchmark_sources": {
+      "WikiWebFacts": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base",
+      "HardMultiQA": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base",
+      "CultCat": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base",
+      "TriviaQA": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base",
+      "EduBench Russian": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base",
+      "EduBench Literature": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base",
+      "EduBench History": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base",
+      "EduBench English": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base",
+      "ExpertFactsQA Medicine": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base",
+      "ExpertFactsQA Law": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base",
+      "EGE CoT": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base",
+      "MMLU-Pro CoT": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base",
+      "SuperGPQA CoT": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base",
+      "MATH-500": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base",
+      "EduBench Math": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base",
+      "EduBench Math University": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base",
+      "BigCodeBench 1-shot pass@1": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base",
+      "LiveCodeBench v5-6 CoT 1-shot pass@1": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base",
+      "FinQA 128k": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base",
+      "LongMemEval 128k": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base",
+      "AIME 2026 pass@32": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base",
+      "IMO Answerbench pass@8": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base",
+      "LiveCodeBench v5-6 pass@1": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base"
+    },
+    "benchmark_note": "Yandex 공식 HF 모델 카드의 비교 표 중 AliceAI-Foundation-80B-A3B-Base 열 값. pass@k·CoT·shot 조건은 벤치마크명에 보존. WikiWebFacts·HardMultiQA·CultCat·EduBench·ExpertFactsQA 등은 카드에 함께 공개된 자체 평가셋.",
+    "official_id": "yandex/AliceAI-Foundation-80B-A3B-Base",
+    "official_sources": [
+      {
+        "label": "공식 모델 카드",
+        "url": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base",
+    "parameter_source": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-23",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-178",
+    "name": "Claude Opus 5.5",
+    "date": "2026-09-22",
+    "sortDate": "2026-09-22",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "Anthropic",
+    "family": "Claude",
+    "type": "MLLM",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "정확한 수치 미공개",
+    "parameter_status": "undisclosed",
+    "architecture": "",
+    "modalities": [
+      "text",
+      "image"
+    ],
+    "focus": [
+      "agentic coding",
+      "computer use",
+      "knowledge work"
+    ],
+    "open_weights": false,
+    "license": "",
+    "context": "",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "Claude API·AWS Bedrock·Google Cloud Vertex AI·Microsoft Foundry",
+    "note": "Claude 5.5 패밀리 첫 모델. Fable 5.1급 성능에 Opus 5 대비 실행 비용 40% 절감·출력 30% 이상 향상. $4/$20 per 1M, 캐시 읽기 $0.20. Claude Platform·AWS·Google Cloud·Azure 제공, Sonnet/Haiku 5.5는 후속 예정.",
+    "benchmarks": {
+      "Terminal-Bench 4.0": 66.4,
+      "FrontierCode 1.1 Main": 54.4,
+      "CursorBench 4.0": 57.8,
+      "AutomationBench": 40.0,
+      "Humanity's Last Exam (w/ tools)": 67.7,
+      "Terminal-Bench Science 0.1": 58.7,
+      "OSWorld 2.0 (partial)": 81.8,
+      "Chartography (w/ tools)": 89.0
+    },
+    "benchmark_sources": {
+      "Terminal-Bench 4.0": "https://www.anthropic.com/claude-opus-5-5",
+      "FrontierCode 1.1 Main": "https://www.anthropic.com/claude-opus-5-5",
+      "CursorBench 4.0": "https://www.anthropic.com/claude-opus-5-5",
+      "AutomationBench": "https://www.anthropic.com/claude-opus-5-5",
+      "Humanity's Last Exam (w/ tools)": "https://www.anthropic.com/claude-opus-5-5",
+      "Terminal-Bench Science 0.1": "https://www.anthropic.com/claude-opus-5-5",
+      "OSWorld 2.0 (partial)": "https://www.anthropic.com/claude-opus-5-5",
+      "Chartography (w/ tools)": "https://www.anthropic.com/claude-opus-5-5"
+    },
+    "benchmark_note": "Anthropic 공식 발표 평가 표 값(명시 없는 한 adaptive thinking max effort; Terminal-Bench 4.0만 xhigh). 프로덕션 safeguard가 개입된 태스크는 Opus 4.8/5가 완료해 점수가 하향될 수 있음을 각주로 명시. AutomationBench는 Zapier가 측정·보고한 값을 Anthropic이 게시. GDPval-AA v2.1 1846은 Elo형 척도라 % 점수표에서 제외.",
+    "official_id": "claude-opus-5-5",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://www.anthropic.com/claude-opus-5-5"
+      }
+    ],
+    "release_date_source": "https://www.anthropic.com/claude-opus-5-5",
+    "parameter_source": "https://www.anthropic.com/claude-opus-5-5",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-23",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-179",
+    "name": "GPT-6 Sol",
+    "date": "2026-09-22",
+    "sortDate": "2026-09-22",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "OpenAI",
+    "family": "GPT",
+    "type": "MLLM",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "정확한 수치 미공개",
+    "parameter_status": "undisclosed",
+    "architecture": "",
+    "modalities": [
+      "text",
+      "image"
+    ],
+    "focus": [
+      "professional work",
+      "coding",
+      "computer use",
+      "agents"
+    ],
+    "open_weights": false,
+    "license": "",
+    "context": "1,050,000 (max input 922,000 / max output 128,000)",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [
+      "none",
+      "low",
+      "medium",
+      "high",
+      "xhigh",
+      "max"
+    ],
+    "availability": "ChatGPT Work·Codex·OpenAI API",
+    "note": "GPT-6 패밀리의 범용 티어. GPT-5.6 Sol 대비 API 가격 50% 인하($2/$10 per 1M, 캐시 읽기 90% 할인). 지식 컷오프 2026-04-20. ChatGPT Work·Codex·API(gpt-6-sol) 제공.",
+    "benchmarks": {
+      "AutomationBench": 33.2,
+      "Agents' Last Exam": 56.4,
+      "DeepSWE v1.1": 68.8,
+      "OSWorld 2.0 (partial)": 60.5
+    },
+    "benchmark_sources": {
+      "AutomationBench": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+      "Agents' Last Exam": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+      "DeepSWE v1.1": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+      "OSWorld 2.0 (partial)": "https://openai.com/index/introducing-gpt-6-sol-and-luna/"
+    },
+    "benchmark_note": "OpenAI 공식 발표문 명시 점수: AutomationBench 1.0.6 33.2%(xhigh), Agents' Last Exam V1 56.4%(max), DeepSWE v1.1 68.8%(max), OSWorld 2.0 offline partial 60.5%(xhigh). FrontierCode 개선 폭은 절대 점수 미표기라 미수록.",
+    "official_id": "gpt-6-sol",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/"
+      },
+      {
+        "label": "공식 모델 문서",
+        "url": "https://developers.openai.com/api/docs/models/gpt-6-sol"
+      }
+    ],
+    "release_date_source": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+    "parameter_source": "https://developers.openai.com/api/docs/models/gpt-6-sol",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-23",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-180",
+    "name": "GPT-6 Luna",
+    "date": "2026-09-22",
+    "sortDate": "2026-09-22",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "OpenAI",
+    "family": "GPT",
+    "type": "MLLM",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "정확한 수치 미공개",
+    "parameter_status": "undisclosed",
+    "architecture": "",
+    "modalities": [
+      "text",
+      "image"
+    ],
+    "focus": [
+      "high-volume tasks",
+      "cost-efficient agents",
+      "coding"
+    ],
+    "open_weights": false,
+    "license": "",
+    "context": "1,050,000 (max input 922,000 / max output 128,000)",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [
+      "none",
+      "low",
+      "medium",
+      "high",
+      "xhigh",
+      "max"
+    ],
+    "availability": "ChatGPT·Codex·OpenAI API",
+    "note": "GPT-6 패밀리의 고효율·고처리량 티어. GPT-5.6 Luna 대비 50% 인하($0.10/$0.50 per 1M). 지식 컷오프 2026-05-18. ChatGPT(무료·Go 포함 데스크톱 앱)·Codex·API(gpt-6-luna) 제공.",
+    "benchmarks": {
+      "DeepSWE v1.1": 66.6
+    },
+    "benchmark_sources": {
+      "DeepSWE v1.1": "https://openai.com/index/introducing-gpt-6-sol-and-luna/"
+    },
+    "benchmark_note": "OpenAI 공식 발표문에서 Luna의 절대 점수는 DeepSWE v1.1 66.6%(max)만 명시. AutomationBench high에서 GPT-5.6 Luna 대비 +5.4pt·OSWorld 2.0에서 GPT-5.6 Sol(medium) 상회 등 개선 서술은 절대값 미표기라 미수록.",
+    "official_id": "gpt-6-luna",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처",
+        "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/"
+      },
+      {
+        "label": "공식 모델 문서",
+        "url": "https://developers.openai.com/api/docs/models/gpt-6-luna"
+      }
+    ],
+    "release_date_source": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+    "parameter_source": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-23",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-181",
+    "name": "MiMo-V2.6-Pro",
+    "date": "2026-09-22",
+    "sortDate": "2026-09-22",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "Xiaomi",
+    "family": "MiMo",
+    "type": "MLLM",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "1.02T total / 42B active (MoE)",
+    "parameter_status": "verified",
+    "architecture": "Sparse MoE (hybrid SWA/GA) + omni encoders + MTP",
+    "modalities": [
+      "text",
+      "image",
+      "video",
+      "audio"
+    ],
+    "focus": [
+      "coding agents",
+      "general agents",
+      "cybersecurity",
+      "visual agents"
+    ],
+    "open_weights": true,
+    "license": "MIT",
+    "context": "1M (1,000,000 tokens)",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "Hugging Face·ModelScope·MiMo Studio·Xiaomi MiMo API·OpenRouter",
+    "note": "MiMo-V2.6 시리즈 플래그십 RL 체크포인트. 텍스트·이미지·비디오·오디오를 단일 모델로 처리하는 네이티브 옴니모달, 1M 컨텍스트, SWA/GA 하이브리드 + 5-layer MTP 추론 디코더. MIT 라이선스, SGLang/vLLM·MiMo Studio·Open Platform API 제공.",
+    "benchmarks": {
+      "DeepSWE v1.1": 71.9,
+      "ProgramBench": 26.5,
+      "MiMo Code Bench": 63.2,
+      "AutomationBench (v1.0.6)": 53.1,
+      "Toolathlon-Verified": 76.9,
+      "Agents' Last Exam": 31.6,
+      "Terminal-Bench 4.0": 34.9,
+      "Terminal-Bench 2.1": 89.9,
+      "OSWorld-Verified": 82.0,
+      "JobBench": 62.0,
+      "CyberGym": 94.0,
+      "MiMo Cyber Bench": 80.2,
+      "ExploitGym": 17.8,
+      "ExploitBench": 47.9,
+      "SEC-Bench Pro": 66.3,
+      "MiMo VisualCoding": 72.3
+    },
+    "benchmark_sources": {
+      "DeepSWE v1.1": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
+      "ProgramBench": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
+      "MiMo Code Bench": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
+      "AutomationBench (v1.0.6)": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
+      "Toolathlon-Verified": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
+      "Agents' Last Exam": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
+      "Terminal-Bench 4.0": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
+      "Terminal-Bench 2.1": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
+      "OSWorld-Verified": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
+      "JobBench": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
+      "CyberGym": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
+      "MiMo Cyber Bench": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
+      "ExploitGym": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
+      "ExploitBench": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
+      "SEC-Bench Pro": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
+      "MiMo VisualCoding": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL"
+    },
+    "benchmark_note": "Xiaomi MiMo 공식 HF 모델 카드의 비교 표 중 MiMo-V2.6-Pro 열 값(개발사 직접 게시). GDPval-AA 2.1 1673은 Elo형 척도라 제외.",
+    "official_id": "XiaomiMiMo/MiMo-V2.6-Pro-RL",
+    "official_sources": [
+      {
+        "label": "공식 모델 카드·기술 보고서",
+        "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL"
+      },
+      {
+        "label": "공식 블로그",
+        "url": "https://mimo.xiaomi.com/mimo-v2-6"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
+    "parameter_source": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-23",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-182",
+    "name": "MiMo-V2.6-Flash",
+    "date": "2026-09-22",
+    "sortDate": "2026-09-22",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "Xiaomi",
+    "family": "MiMo",
+    "type": "MLLM",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "309B total / 15B active (MoE)",
+    "parameter_status": "verified",
+    "architecture": "Sparse MoE (hybrid SWA/GA) + omni encoders + MTP",
+    "modalities": [
+      "text",
+      "image",
+      "video",
+      "audio"
+    ],
+    "focus": [
+      "coding agents",
+      "general agents",
+      "cybersecurity",
+      "visual agents"
+    ],
+    "open_weights": true,
+    "license": "MIT",
+    "context": "1M (1,000,000 tokens)",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "Hugging Face·ModelScope·MiMo Studio·Xiaomi MiMo API·OpenRouter",
+    "note": "MiMo-V2.6 시리즈 경량 티어. 텍스트·이미지·비디오·오디오를 단일 모델로 처리하는 네이티브 옴니모달, 1M 컨텍스트, SWA/GA 하이브리드 + 5-layer MTP 추론 디코더. MIT 라이선스, SGLang/vLLM·MiMo Studio·Open Platform API 제공.",
+    "benchmarks": {
+      "DeepSWE v1.1": 67.9,
+      "ProgramBench": 26.0,
+      "MiMo Code Bench": 61.2,
+      "AutomationBench (v1.0.6)": 52.3,
+      "Toolathlon-Verified": 73.6,
+      "Agents' Last Exam": 27.6,
+      "Terminal-Bench 4.0": 28.8,
+      "Terminal-Bench 2.1": 87.6,
+      "OSWorld-Verified": 80.8,
+      "JobBench": 61.2,
+      "CyberGym": 95.1,
+      "MiMo Cyber Bench": 77.2,
+      "ExploitGym": 6.0,
+      "ExploitBench": 25.3,
+      "SEC-Bench Pro": 47.5,
+      "MiMo VisualCoding": 71.5
+    },
+    "benchmark_sources": {
+      "DeepSWE v1.1": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL",
+      "ProgramBench": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL",
+      "MiMo Code Bench": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL",
+      "AutomationBench (v1.0.6)": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL",
+      "Toolathlon-Verified": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL",
+      "Agents' Last Exam": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL",
+      "Terminal-Bench 4.0": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL",
+      "Terminal-Bench 2.1": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL",
+      "OSWorld-Verified": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL",
+      "JobBench": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL",
+      "CyberGym": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL",
+      "MiMo Cyber Bench": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL",
+      "ExploitGym": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL",
+      "ExploitBench": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL",
+      "SEC-Bench Pro": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL",
+      "MiMo VisualCoding": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL"
+    },
+    "benchmark_note": "Xiaomi MiMo 공식 HF 모델 카드의 비교 표 중 MiMo-V2.6-Flash 열 값(개발사 직접 게시). Flash 열은 GDPval-AA 점수 미표기.",
+    "official_id": "XiaomiMiMo/MiMo-V2.6-Flash-RL",
+    "official_sources": [
+      {
+        "label": "공식 모델 카드·기술 보고서",
+        "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL"
+      },
+      {
+        "label": "공식 블로그",
+        "url": "https://mimo.xiaomi.com/mimo-v2-6"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL",
+    "parameter_source": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-23",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-183",
+    "name": "Solar Mini 4",
+    "date": "2026-09-22",
+    "sortDate": "2026-09-22",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "Upstage",
+    "family": "Solar",
+    "type": "LLM",
+    "category": "LLM",
+    "status": "GA",
+    "parameters": "35B total / 3B active",
+    "parameter_status": "verified",
+    "architecture": "",
+    "modalities": [
+      "text"
+    ],
+    "focus": [
+      "chat",
+      "reasoning",
+      "structured outputs",
+      "tool calling"
+    ],
+    "open_weights": false,
+    "license": "",
+    "context": "512K (최대 출력 128K)",
+    "languages": "English, Korean, Japanese",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "Upstage Console·Playground·on-premises",
+    "note": "Solar Mini 3 후속 경량 모델. 512K 컨텍스트·최대 128K 출력, EN/KO/JA, 학습 컷오프 2026-02. chat·reasoning·structured outputs·tool calling 지원. API ID solar-mini4(스냅샷 solar-mini4-260922).",
+    "benchmarks": {},
+    "benchmark_sources": {},
+    "benchmark_note": "Upstage 공식 모델 문서에 벤치마크 점수 미공개(2026-09-23 확인).",
+    "official_id": "solar-mini4",
+    "official_sources": [
+      {
+        "label": "공식 모델 문서",
+        "url": "https://console.upstage.ai/docs/models/solar-mini-4"
+      }
+    ],
+    "release_date_source": "https://console.upstage.ai/docs/models/solar-mini-4",
+    "parameter_source": "https://console.upstage.ai/docs/models/solar-mini-4",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-23",
+      "policy": "official-primary-only"
+    }
   }
 ];
 
@@ -13941,6 +14888,18 @@ const COMPANY_META = {
     "flag": "🇷🇺",
     "color": "from-green-500 to-emerald-600",
     "badge": "bg-green-500/10 text-green-300 border-green-500/30"
+  },
+  "Nex-AGI": {
+    "country": "CN",
+    "flag": "🇨🇳",
+    "color": "from-sky-500 to-indigo-600",
+    "badge": "bg-sky-500/10 text-sky-400 border-sky-500/30"
+  },
+  "Yandex": {
+    "country": "RU",
+    "flag": "🇷🇺",
+    "color": "from-red-500 to-amber-500",
+    "badge": "bg-red-500/10 text-red-400 border-red-500/30"
   }
 };
 
@@ -13976,7 +14935,8 @@ const FAMILY_FLOWS = [
       "Fable/Mythos 5",
       "Sonnet 5",
       "Opus 5",
-      "Fable/Mythos 5.1"
+      "Fable/Mythos 5.1",
+      "Opus 5.5"
     ]
   },
   {
@@ -13987,7 +14947,9 @@ const FAMILY_FLOWS = [
       "GPT-5.5",
       "GPT-5.6",
       "GPT-6 Astra",
-      "GPT-6 Astra Pro"
+      "GPT-6 Astra Pro",
+      "GPT-6 Sol",
+      "GPT-6 Luna"
     ]
   },
   {
@@ -14035,7 +14997,9 @@ const FAMILY_FLOWS = [
     "steps": [
       "MiMo-V2-Flash",
       "MiMo-V2.5",
-      "MiMo-V2.5-Pro"
+      "MiMo-V2.5-Pro",
+      "MiMo-V2.6-Pro",
+      "MiMo-V2.6-Flash"
     ]
   },
   {
@@ -14098,13 +15062,37 @@ const FAMILY_FLOWS = [
       "Ling-3.0-flash",
       "Ling-3.0-flash-VL"
     ]
+  },
+  {
+    "family": "Grok",
+    "steps": [
+      "Grok 4.5",
+      "Grok 4.6",
+      "Grok 4.7"
+    ]
+  },
+  {
+    "family": "Solar",
+    "steps": [
+      "Solar Open 2",
+      "Solar Pro 4",
+      "Solar Mini 4"
+    ]
+  },
+  {
+    "family": "Nex",
+    "steps": [
+      "Nex-N2.5-mini",
+      "Nex-N2.5-Pro",
+      "Nex-N2.5-Max"
+    ]
   }
 ];
 
 const UNCONFIRMED_DATA = [];
 
 const SCOPE_DATA = {
-  "period": "2026-01-01 ~ 2026-09-19",
+  "period": "2026-01-01 ~ 2026-09-23",
   "scope": [
     "LLM (Large Language Models)",
     "MLLM / VLM / Omni foundation models"
@@ -14121,7 +15109,7 @@ const SCOPE_DATA = {
   ],
   "benchmark_policy": "공식 모델 카드·기술 보고서·개발사 공식 발표문에 모델 제공자가 직접 명시한 점수만 수록. Chatbot Arena/ELO, Artificial Analysis, 제3자 leaderboard, 추정·역산 점수는 제외.",
   "parameter_policy": "개발사가 명시한 총/활성 파라미터만 사용. 공개하지 않은 값은 정확한 수치 미공개로 표시하고, 모델 크기·가중치 파일 용량·양자화 크기를 파라미터 수로 대체하지 않음.",
-  "reviewed_on": "2026-09-19"
+  "reviewed_on": "2026-09-23"
 };
 
 const AUDIT_EXCLUDED = [
@@ -14253,5 +15241,40 @@ const AUDIT_EXCLUDED = [
     "original_name": "Union Alpha / unbiased.ai Pareto 26.9",
     "reason": "2026-09-16 OpenRouter에 개발사를 숨긴 스텔스 모델로 올라왔고 다음 날 unbiased.ai의 'Pareto 26.9'로 확인됐으나, 개발사가 공식 발표를 2026-10-10으로 예고해 정식 수록 조건(공식 출시·제품명·1차 출처)이 아직 충족되지 않아 보류. iFLYTEK Spark X2.5 선례와 같은 판정.",
     "source": "https://openrouter.ai/stealth/union-alpha"
+  },
+  {
+    "id": "excluded-2026-09-23-1",
+    "name": "GLM-5.3-FlashX",
+    "original_name": "GLM-5.3-FlashX (Z.ai)",
+    "reason": "2026-09-18 Z.ai API에 추가된 GLM-5.3-Flash와 동일 가중치(320B/18B)의 고속 서빙 티어(~200 tok/s, 약 2.5× 가격). 신규 가중치·벤치마크 없이 서빙 옵션만 달라 별도 모델로 수록하지 않음 — 동일 가중치 서빙 변형 제외 규정.",
+    "source": "https://docs.z.ai/guides/vlm/glm-5.3-flash"
+  },
+  {
+    "id": "excluded-2026-09-23-2",
+    "name": "Solar Jev",
+    "original_name": "Solar Jev (Upstage, POST /v1/systemone)",
+    "reason": "Solar Mini 4 기반 구조화 결정 모델 — choice/score/yes-no 판정만 반환하고 텍스트를 생성하지 않아 LLM 수록 범위 밖. Jev(TypeSafe AI)와 동일 분류.",
+    "source": "https://console.upstage.ai/docs/models/solar-jev"
+  },
+  {
+    "id": "excluded-2026-09-23-3",
+    "name": "Laya",
+    "original_name": "Laya (Convai Innovations)",
+    "reason": "ModernBERT-large 기반 비자기회귀 System 1 결정 모델(421M, 2026-09-18 공개). 입력 상태+질문에 확률·판정만 반환하고 텍스트를 생성하지 않아 LLM 수록 범위 밖.",
+    "source": "https://huggingface.co/convaiinnovations/laya"
+  },
+  {
+    "id": "excluded-2026-09-23-4",
+    "name": "Apollo",
+    "original_name": "Apollo (Austrian Academy of Sciences × Mistral AI × Reply)",
+    "reason": "2026-09-23 발표된 고대그리스어 전용 도메인 특화 LLM 프로젝트(파피루스·비문 복원·검색 목적). 일반 목적 파운데이션 모델 출시가 아니며 공식 모델 ID·가중치·벤치마크가 공개되지 않아 수록 보류. OeAW 공식 페이지는 자동 검증에 403을 반환해 공동 개발사 Reply 보도자료를 확인 출처로 기록.",
+    "source": "https://www.reply.com/en/newsroom/news/austrian-academy-of-sciences-is-developing-the-ancient-greek-ai-apollo-with-mistral-ai-and-reply"
+  },
+  {
+    "id": "excluded-2026-09-23-5",
+    "name": "gpt-oss-120b / gpt-oss-20b",
+    "original_name": "OpenAI gpt-oss (2025-08-05 출시)",
+    "reason": "9월 중 일부 보도에서 재언급됐으나 실제 공식 출시는 2025-08-05로 본 타임라인 기간(2026년) 밖 — 기간 외 모델이라 미수록.",
+    "source": "https://openai.com/index/introducing-gpt-oss/"
   }
 ];

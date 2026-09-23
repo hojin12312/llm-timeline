@@ -1,6 +1,6 @@
 # 조사 자료 — 2026 LLM / MLLM 공개 기록 감사 원장
 
-> 최종 감사일: **2026-09-19** | 활성 레코드: **161개** | 제외 원장: **18개** | 공식 점수가 확인된 모델: **149개** | 공식 점수: **2865개**
+> 최종 감사일: **2026-09-23** | 활성 레코드: **173개** | 제외 원장: **23개** | 공식 점수가 확인된 모델: **160개** | 공식 점수: **2992개**
 >
 > 이 문서는 `models_catalog.json`에서 생성된 사람 검토용 감사 원장입니다. 브라우저용 `data.js`를 직접 수정하지 말고 SSOT를 수정한 뒤 `python3 build_data.py`로 재생성하세요.
 
@@ -6030,6 +6030,374 @@
 - 모델 메모: Qwen의 차세대 네이티브 옴니모달 모델 — 텍스트·이미지·오디오·비디오 입력, 텍스트 출력, 함수 호출·웹 검색 내장, 1M 컨텍스트. 공식 발표는 29개 평가 평균이 Qwen3.5-Omni-Plus 대비 25%+ 향상됐다고 보고합니다. 실시간 변형 qwen3.8-omni-flash-realtime과 Qwen-MM-Plugins·Qwen-Live Harness를 함께 공개했습니다.
 - 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-19`
 
+### 162. 2026-08-06 — Solar Pro 4
+
+- 레코드 ID: `model-172`
+- **공식 모델명:** `Solar Pro 4`
+- 제공사 / 패밀리: `Upstage` / `Solar`
+- 모델 유형 / 상태: `LLM` / `GA`
+- 공개일(레포 기준): `2026-08-06` — [출시일 공식 출처](https://www.upstage.ai/blog/en/solar-pro-4)
+- **파라미터:** `정확한 수치 미공개` — 공식 수치 미공개
+- 파라미터 출처: [공식 파라미터 출처](https://www.upstage.ai/blog/en/solar-pro-4)
+- 아키텍처: `미기재`
+- 공식 모델 ID: `solar-pro4`
+- 오픈 웨이트: `아니오/호스팅`
+- 공식 모델 출처: [공식 1차 출처](https://www.upstage.ai/blog/en/solar-pro-4)
+
+#### 공식 발표 벤치마크 점수
+
+- `BrowseComp`: **49.2%** — [공식 출처](https://www.upstage.ai/blog/en/solar-pro-4)
+- `SWE-bench Verified (openhands)`: **70.6%** — [공식 출처](https://www.upstage.ai/blog/en/solar-pro-4)
+- `MCP-Atlas`: **61.4%** — [공식 출처](https://www.upstage.ai/blog/en/solar-pro-4)
+- `APEX-Agents`: **18.7%** — [공식 출처](https://www.upstage.ai/blog/en/solar-pro-4)
+- `MMLU-Pro`: **86.3%** — [공식 출처](https://www.upstage.ai/blog/en/solar-pro-4)
+- `LiveCodeBench`: **87.8%** — [공식 출처](https://www.upstage.ai/blog/en/solar-pro-4)
+- `AIME 2026`: **95.3%** — [공식 출처](https://www.upstage.ai/blog/en/solar-pro-4)
+- `KMMLU-Pro`: **79.2%** — [공식 출처](https://www.upstage.ai/blog/en/solar-pro-4)
+- `KBL (law)`: **77.5%** — [공식 출처](https://www.upstage.ai/blog/en/solar-pro-4)
+- `KorMedMCQA (medicine)`: **93.2%** — [공식 출처](https://www.upstage.ai/blog/en/solar-pro-4)
+- `Ko-GDPval`: **87.3%** — [공식 출처](https://www.upstage.ai/blog/en/solar-pro-4)
+- `Arena-Hard v2 (Japanese)`: **81.9%** — [공식 출처](https://www.upstage.ai/blog/en/solar-pro-4)
+- `MMLU (Japanese)`: **89.5%** — [공식 출처](https://www.upstage.ai/blog/en/solar-pro-4)
+- `IFEval (Japanese)`: **81.6%** — [공식 출처](https://www.upstage.ai/blog/en/solar-pro-4)
+- 점수 메모: Upstage 공식 블로그 비교표 중 * 표시(사내 평가 환경 자체 측정)만 수록. 비표시 값인 Terminal-Bench v2.1 57.0·GDPval-AA v2 38.8·τ³-Banking 23.0·AA-LCR 71.0·GPQA Diamond 89.0은 Artificial Analysis 등 외부 측정/제3자 지표라 제외. KBL=한국어 법률, KorMedMCQA=한국어 의료, Ko-GDPval=한국어 사무작업 자체 벤치마크.
+- 모델 메모: Solar Pro 3 후속 상용 플래그십. 512K 컨텍스트·최대 128K 출력, EN/KO/JA 입출력, reasoning effort high/low. OpenAI 호환 API(모델 ID solar-pro4, 스냅샷 solar-pro4-260806), SolarChat·OpenRouter·Hermes Agent 제공. $0.30/$1.20 per 1M.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-23`
+
+### 163. 2026-09-08 — Nex-N2.5-mini
+
+- 레코드 ID: `model-173`
+- **공식 모델명:** `Nex-N2.5-mini`
+- 제공사 / 패밀리: `Nex-AGI` / `Nex`
+- 모델 유형 / 상태: `MLLM` / `GA`
+- 공개일(레포 기준): `2026-09-08` — [출시일 공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-mini)
+- **파라미터:** `35B total / 3B active (MoE)` — 공식 수치 확인
+- 파라미터 출처: [공식 파라미터 출처](https://nex-agi.com/)
+- 아키텍처: `Qwen3.5 MoE 계열`
+- 공식 모델 ID: `nex-agi/Nex-N2.5-mini`
+- 오픈 웨이트: `예`
+- 공식 모델 출처: [공식 모델 카드](https://huggingface.co/nex-agi/Nex-N2.5-mini), [Nex-AGI 공식 사이트](https://nex-agi.com/)
+
+#### 공식 발표 벤치마크 점수
+
+- `Terminal-Bench 2.1`: **73.4%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-mini)
+- `SWE-bench Pro`: **43.8%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-mini)
+- `DeepSWE v1.1`: **36.1%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-mini)
+- `AutomationBench (v1.0.6)`: **32.3%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-mini)
+- `Toolathlon Verified`: **54.6%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-mini)
+- `JobBench`: **28.5%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-mini)
+- `BrowseComp`: **83.4%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-mini)
+- `OSWorld-Verified`: **71.2%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-mini)
+- `OSWorld-2`: **30.5%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-mini)
+- `WebTest`: **48.6%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-mini)
+- `WebArena-Verified`: **63.4%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-mini)
+- `OSWorld-G`: **82.9%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-mini)
+- `Vision2Web`: **52.9%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-mini)
+- `SWE-MM`: **25.5%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-mini)
+- `OmniDoc`: **89.7%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-mini)
+- 점수 메모: Nex-AGI 공식 HF 카드의 비교표 중 Nex-N2.5-mini 열 값(개발사 직접 게시). GDPval-AA v2 1446은 Elo형 척도라 % 점수표에서 제외.
+- 모델 메모: Qwen3.5 계열 멀티모달 베이스 위에서 컴퓨터 사용·웹브라우징·시각 기반 에이전트 능력을 강화한 에이전틱 모델. reasoning_effort none/medium(기본)/high, Apache 2.0, OpenRouter 제공.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-23`
+
+### 164. 2026-09-08 — Nex-N2.5-Pro
+
+- 레코드 ID: `model-174`
+- **공식 모델명:** `Nex-N2.5-Pro`
+- 제공사 / 패밀리: `Nex-AGI` / `Nex`
+- 모델 유형 / 상태: `MLLM` / `GA`
+- 공개일(레포 기준): `2026-09-08` — [출시일 공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-Pro)
+- **파라미터:** `397B total / 17B active (MoE)` — 공식 수치 확인
+- 파라미터 출처: [공식 파라미터 출처](https://nex-agi.com/)
+- 아키텍처: `Qwen3.5 MoE 계열`
+- 공식 모델 ID: `nex-agi/Nex-N2.5-Pro`
+- 오픈 웨이트: `예`
+- 공식 모델 출처: [공식 모델 카드](https://huggingface.co/nex-agi/Nex-N2.5-Pro), [Nex-AGI 공식 사이트](https://nex-agi.com/)
+
+#### 공식 발표 벤치마크 점수
+
+- `Terminal-Bench 2.1`: **82.7%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-Pro)
+- `SWE-bench Pro`: **61.2%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-Pro)
+- `DeepSWE v1.1`: **55.8%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-Pro)
+- `AutomationBench (v1.0.6)`: **44.2%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-Pro)
+- `Toolathlon Verified`: **68.5%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-Pro)
+- `JobBench`: **41.4%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-Pro)
+- `BrowseComp`: **89.7%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-Pro)
+- `OSWorld-Verified`: **82.2%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-Pro)
+- `OSWorld-2`: **56.4%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-Pro)
+- `WebTest`: **52.8%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-Pro)
+- `WebArena-Verified`: **67.6%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-Pro)
+- `OSWorld-G`: **87.4%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-Pro)
+- `Vision2Web`: **68.2%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-Pro)
+- `SWE-MM`: **38.2%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-Pro)
+- `OmniDoc`: **92.2%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-Pro)
+- 점수 메모: Nex-AGI 공식 HF 카드의 비교표 중 Nex-N2.5-Pro 열 값(개발사 직접 게시). GDPval-AA v2 1628은 Elo형 척도라 % 점수표에서 제외.
+- 모델 메모: Qwen3.5 계열 멀티모달 베이스 위에서 컴퓨터 사용·웹브라우징·시각 기반 에이전트 능력을 강화한 에이전틱 모델. reasoning_effort none/medium(기본)/high, Apache 2.0, OpenRouter 제공.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-23`
+
+### 165. 2026-09-08 — Nex-N2.5-Max
+
+- 레코드 ID: `model-175`
+- **공식 모델명:** `Nex-N2.5-Max`
+- 제공사 / 패밀리: `Nex-AGI` / `Nex`
+- 모델 유형 / 상태: `LLM` / `GA`
+- 공개일(레포 기준): `2026-09-08` — [출시일 공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-Max)
+- **파라미터:** `1.6T (MoE)` — 개발사 공식 부분 공개
+- 파라미터 출처: [공식 파라미터 출처](https://nex-agi.com/)
+- 아키텍처: `DeepSeek-V4 계열 MoE`
+- 공식 모델 ID: `nex-agi/Nex-N2.5-Max`
+- 오픈 웨이트: `예`
+- 공식 모델 출처: [공식 모델 카드](https://huggingface.co/nex-agi/Nex-N2.5-Max), [Nex-AGI 공식 사이트](https://nex-agi.com/)
+
+#### 공식 발표 벤치마크 점수
+
+- `Terminal-Bench 2.1`: **86.1%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-Max)
+- `SWE-bench Pro`: **65.7%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-Max)
+- `DeepSWE v1.1`: **65.6%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-Max)
+- `AutomationBench (v1.0.6)`: **50.2%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-Max)
+- `Toolathlon Verified`: **74.7%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-Max)
+- `JobBench`: **53.6%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-Max)
+- `BrowseComp`: **92.6%** — [공식 출처](https://huggingface.co/nex-agi/Nex-N2.5-Max)
+- 점수 메모: Nex-AGI 공식 HF 카드의 비교표 중 Nex-N2.5-Max 열 값(개발사 직접 게시). GDPval-AA v2 1713은 Elo형 척도라 % 점수표에서 제외.
+- 모델 메모: DeepSeek-V4-Pro-Base 기반 1.6T MoE 텍스트 전용 모델 — 조 패밀리 최초 조 단위 post-training. reasoning_effort none/medium(기본)/high, Apache 2.0, OpenRouter 제공.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-23`
+
+### 166. 2026-09-21 — Grok 4.7
+
+- 레코드 ID: `model-176`
+- **공식 모델명:** `Grok 4.7`
+- 제공사 / 패밀리: `xAI / SpaceXAI` / `Grok`
+- 모델 유형 / 상태: `MLLM` / `GA`
+- 공개일(레포 기준): `2026-09-21` — [출시일 공식 출처](https://x.ai/news/grok-4-7)
+- **파라미터:** `정확한 수치 미공개` — 공식 수치 미공개
+- 파라미터 출처: [공식 파라미터 출처](https://docs.x.ai/developers/models)
+- 아키텍처: `미기재`
+- 공식 모델 ID: `grok-4.7`
+- 오픈 웨이트: `아니오/호스팅`
+- 공식 모델 출처: [공식 1차 출처](https://x.ai/news/grok-4-7), [공식 모델 문서(컨텍스트·가격)](https://docs.x.ai/developers/models)
+
+#### 공식 발표 벤치마크 점수
+
+- `DeepSWE v1.1`: **71.0%** — [공식 출처](https://x.ai/news/grok-4-7)
+- `EEBench`: **64.0%** — [공식 출처](https://x.ai/news/grok-4-7)
+- `CursorBench 4.0`: **46.3%** — [공식 출처](https://x.ai/news/grok-4-7)
+- `Terminal-Bench 4.0`: **37.6%** — [공식 출처](https://x.ai/news/grok-4-7)
+- `Harvey LAB (Vals)`: **19.6%** — [공식 출처](https://x.ai/news/grok-4-7)
+- `HealthBench Professional`: **56.7%** — [공식 출처](https://x.ai/news/grok-4-7)
+- `LatchBio Biosafety`: **62.4%** — [공식 출처](https://x.ai/news/grok-4-7)
+- `HackerBench v0.3 risky pass-through (↓)`: **3.3%** — [공식 출처](https://x.ai/news/grok-4-7)
+- 점수 메모: xAI 공식 발표 평가 표 값(에포트별 최고값 기재; DeepSWE 71.0은 high effort 명시). AA Briefcase v1.1 1657은 %가 아닌 점수 척도라 제외. LatchBio Biosafety·HackerBench v0.3(↓ 위험 프롬프트 통과율, 낮을수록 우수)은 발표문에 함께 게시된 공식 안전성 평가.
+- 모델 메모: Grok 4.6보다 큰 베이스 모델 + 더 긴 RL. 장시간 작업·자기 검증·긴 컨텍스트 개선. 500K 컨텍스트, 지식 컷오프 2026-05. API ID grok-4.7, $2/$6 per 1M(프롬프트 200K 초과 시 $4/$12), fast 변형은 2배 속도·2배 가격.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-23`
+
+### 167. 2026-09-21 — AliceAI-Foundation-80B-A3B-Base
+
+- 레코드 ID: `model-177`
+- **공식 모델명:** `AliceAI-Foundation-80B-A3B-Base`
+- 제공사 / 패밀리: `Yandex` / `AliceAI`
+- 모델 유형 / 상태: `LLM` / `GA`
+- 공개일(레포 기준): `2026-09-21` — [출시일 공식 출처](https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base)
+- **파라미터:** `80B total / 3B active (MoE)` — 공식 수치 확인
+- 파라미터 출처: [공식 파라미터 출처](https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base)
+- 아키텍처: `Hybrid KDA + Gated Attention MoE`
+- 공식 모델 ID: `yandex/AliceAI-Foundation-80B-A3B-Base`
+- 오픈 웨이트: `예`
+- 공식 모델 출처: [공식 모델 카드](https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base)
+
+#### 공식 발표 벤치마크 점수
+
+- `WikiWebFacts`: **86.5%** — [공식 출처](https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base)
+- `HardMultiQA`: **67.9%** — [공식 출처](https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base)
+- `CultCat`: **86.5%** — [공식 출처](https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base)
+- `TriviaQA`: **79.0%** — [공식 출처](https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base)
+- `EduBench Russian`: **74.2%** — [공식 출처](https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base)
+- `EduBench Literature`: **73.8%** — [공식 출처](https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base)
+- `EduBench History`: **82.0%** — [공식 출처](https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base)
+- `EduBench English`: **76.1%** — [공식 출처](https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base)
+- `ExpertFactsQA Medicine`: **63.6%** — [공식 출처](https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base)
+- `ExpertFactsQA Law`: **49.6%** — [공식 출처](https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base)
+- `EGE CoT`: **90.5%** — [공식 출처](https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base)
+- `MMLU-Pro CoT`: **66.8%** — [공식 출처](https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base)
+- `SuperGPQA CoT`: **44.3%** — [공식 출처](https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base)
+- `MATH-500`: **91.1%** — [공식 출처](https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base)
+- `EduBench Math`: **79.3%** — [공식 출처](https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base)
+- `EduBench Math University`: **70.1%** — [공식 출처](https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base)
+- `BigCodeBench 1-shot pass@1`: **48.3%** — [공식 출처](https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base)
+- `LiveCodeBench v5-6 CoT 1-shot pass@1`: **50.5%** — [공식 출처](https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base)
+- `FinQA 128k`: **74.1%** — [공식 출처](https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base)
+- `LongMemEval 128k`: **64.6%** — [공식 출처](https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base)
+- `AIME 2026 pass@32`: **96.7%** — [공식 출처](https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base)
+- `IMO Answerbench pass@8`: **88.7%** — [공식 출처](https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base)
+- `LiveCodeBench v5-6 pass@1`: **60.4%** — [공식 출처](https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base)
+- 점수 메모: Yandex 공식 HF 모델 카드의 비교 표 중 AliceAI-Foundation-80B-A3B-Base 열 값. pass@k·CoT·shot 조건은 벤치마크명에 보존. WikiWebFacts·HardMultiQA·CultCat·EduBench·ExpertFactsQA 등은 카드에 함께 공개된 자체 평가셋.
+- 모델 메모: 처음부터 학습한 오픈가중치 파운데이션 베이스 모델 — 독립 공개 제품으로 수록(베이스 체크포인트 제외 규정의 'distinct product' 예외). 하이브리드 KDA+Gated Attention에 MoE 레이어 결합, 262,144 컨텍스트, RU/EN, Apache 2.0.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-23`
+
+### 168. 2026-09-22 — Claude Opus 5.5
+
+- 레코드 ID: `model-178`
+- **공식 모델명:** `Claude Opus 5.5`
+- 제공사 / 패밀리: `Anthropic` / `Claude`
+- 모델 유형 / 상태: `MLLM` / `GA`
+- 공개일(레포 기준): `2026-09-22` — [출시일 공식 출처](https://www.anthropic.com/claude-opus-5-5)
+- **파라미터:** `정확한 수치 미공개` — 공식 수치 미공개
+- 파라미터 출처: [공식 파라미터 출처](https://www.anthropic.com/claude-opus-5-5)
+- 아키텍처: `미기재`
+- 공식 모델 ID: `claude-opus-5-5`
+- 오픈 웨이트: `아니오/호스팅`
+- 공식 모델 출처: [공식 1차 출처](https://www.anthropic.com/claude-opus-5-5)
+
+#### 공식 발표 벤치마크 점수
+
+- `Terminal-Bench 4.0`: **66.4%** — [공식 출처](https://www.anthropic.com/claude-opus-5-5)
+- `FrontierCode 1.1 Main`: **54.4%** — [공식 출처](https://www.anthropic.com/claude-opus-5-5)
+- `CursorBench 4.0`: **57.8%** — [공식 출처](https://www.anthropic.com/claude-opus-5-5)
+- `AutomationBench`: **40.0%** — [공식 출처](https://www.anthropic.com/claude-opus-5-5)
+- `Humanity's Last Exam (w/ tools)`: **67.7%** — [공식 출처](https://www.anthropic.com/claude-opus-5-5)
+- `Terminal-Bench Science 0.1`: **58.7%** — [공식 출처](https://www.anthropic.com/claude-opus-5-5)
+- `OSWorld 2.0 (partial)`: **81.8%** — [공식 출처](https://www.anthropic.com/claude-opus-5-5)
+- `Chartography (w/ tools)`: **89.0%** — [공식 출처](https://www.anthropic.com/claude-opus-5-5)
+- 점수 메모: Anthropic 공식 발표 평가 표 값(명시 없는 한 adaptive thinking max effort; Terminal-Bench 4.0만 xhigh). 프로덕션 safeguard가 개입된 태스크는 Opus 4.8/5가 완료해 점수가 하향될 수 있음을 각주로 명시. AutomationBench는 Zapier가 측정·보고한 값을 Anthropic이 게시. GDPval-AA v2.1 1846은 Elo형 척도라 % 점수표에서 제외.
+- 모델 메모: Claude 5.5 패밀리 첫 모델. Fable 5.1급 성능에 Opus 5 대비 실행 비용 40% 절감·출력 30% 이상 향상. $4/$20 per 1M, 캐시 읽기 $0.20. Claude Platform·AWS·Google Cloud·Azure 제공, Sonnet/Haiku 5.5는 후속 예정.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-23`
+
+### 169. 2026-09-22 — GPT-6 Sol
+
+- 레코드 ID: `model-179`
+- **공식 모델명:** `GPT-6 Sol`
+- 제공사 / 패밀리: `OpenAI` / `GPT`
+- 모델 유형 / 상태: `MLLM` / `GA`
+- 공개일(레포 기준): `2026-09-22` — [출시일 공식 출처](https://openai.com/index/introducing-gpt-6-sol-and-luna/)
+- **파라미터:** `정확한 수치 미공개` — 공식 수치 미공개
+- 파라미터 출처: [공식 파라미터 출처](https://developers.openai.com/api/docs/models/gpt-6-sol)
+- 아키텍처: `미기재`
+- 공식 모델 ID: `gpt-6-sol`
+- 오픈 웨이트: `아니오/호스팅`
+- 공식 모델 출처: [공식 1차 출처](https://openai.com/index/introducing-gpt-6-sol-and-luna/), [공식 모델 문서](https://developers.openai.com/api/docs/models/gpt-6-sol)
+
+#### 공식 발표 벤치마크 점수
+
+- `AutomationBench`: **33.2%** — [공식 출처](https://openai.com/index/introducing-gpt-6-sol-and-luna/)
+- `Agents' Last Exam`: **56.4%** — [공식 출처](https://openai.com/index/introducing-gpt-6-sol-and-luna/)
+- `DeepSWE v1.1`: **68.8%** — [공식 출처](https://openai.com/index/introducing-gpt-6-sol-and-luna/)
+- `OSWorld 2.0 (partial)`: **60.5%** — [공식 출처](https://openai.com/index/introducing-gpt-6-sol-and-luna/)
+- 점수 메모: OpenAI 공식 발표문 명시 점수: AutomationBench 1.0.6 33.2%(xhigh), Agents' Last Exam V1 56.4%(max), DeepSWE v1.1 68.8%(max), OSWorld 2.0 offline partial 60.5%(xhigh). FrontierCode 개선 폭은 절대 점수 미표기라 미수록.
+- 모델 메모: GPT-6 패밀리의 범용 티어. GPT-5.6 Sol 대비 API 가격 50% 인하($2/$10 per 1M, 캐시 읽기 90% 할인). 지식 컷오프 2026-04-20. ChatGPT Work·Codex·API(gpt-6-sol) 제공.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-23`
+
+### 170. 2026-09-22 — GPT-6 Luna
+
+- 레코드 ID: `model-180`
+- **공식 모델명:** `GPT-6 Luna`
+- 제공사 / 패밀리: `OpenAI` / `GPT`
+- 모델 유형 / 상태: `MLLM` / `GA`
+- 공개일(레포 기준): `2026-09-22` — [출시일 공식 출처](https://openai.com/index/introducing-gpt-6-sol-and-luna/)
+- **파라미터:** `정확한 수치 미공개` — 공식 수치 미공개
+- 파라미터 출처: [공식 파라미터 출처](https://developers.openai.com/api/docs/models/gpt-6-luna)
+- 아키텍처: `미기재`
+- 공식 모델 ID: `gpt-6-luna`
+- 오픈 웨이트: `아니오/호스팅`
+- 공식 모델 출처: [공식 1차 출처](https://openai.com/index/introducing-gpt-6-sol-and-luna/), [공식 모델 문서](https://developers.openai.com/api/docs/models/gpt-6-luna)
+
+#### 공식 발표 벤치마크 점수
+
+- `DeepSWE v1.1`: **66.6%** — [공식 출처](https://openai.com/index/introducing-gpt-6-sol-and-luna/)
+- 점수 메모: OpenAI 공식 발표문에서 Luna의 절대 점수는 DeepSWE v1.1 66.6%(max)만 명시. AutomationBench high에서 GPT-5.6 Luna 대비 +5.4pt·OSWorld 2.0에서 GPT-5.6 Sol(medium) 상회 등 개선 서술은 절대값 미표기라 미수록.
+- 모델 메모: GPT-6 패밀리의 고효율·고처리량 티어. GPT-5.6 Luna 대비 50% 인하($0.10/$0.50 per 1M). 지식 컷오프 2026-05-18. ChatGPT(무료·Go 포함 데스크톱 앱)·Codex·API(gpt-6-luna) 제공.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-23`
+
+### 171. 2026-09-22 — MiMo-V2.6-Pro
+
+- 레코드 ID: `model-181`
+- **공식 모델명:** `MiMo-V2.6-Pro`
+- 제공사 / 패밀리: `Xiaomi` / `MiMo`
+- 모델 유형 / 상태: `MLLM` / `GA`
+- 공개일(레포 기준): `2026-09-22` — [출시일 공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL)
+- **파라미터:** `1.02T total / 42B active (MoE)` — 공식 수치 확인
+- 파라미터 출처: [공식 파라미터 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL)
+- 아키텍처: `Sparse MoE (hybrid SWA/GA) + omni encoders + MTP`
+- 공식 모델 ID: `XiaomiMiMo/MiMo-V2.6-Pro-RL`
+- 오픈 웨이트: `예`
+- 공식 모델 출처: [공식 모델 카드·기술 보고서](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL), [공식 블로그](https://mimo.xiaomi.com/mimo-v2-6)
+
+#### 공식 발표 벤치마크 점수
+
+- `DeepSWE v1.1`: **71.9%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL)
+- `ProgramBench`: **26.5%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL)
+- `MiMo Code Bench`: **63.2%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL)
+- `AutomationBench (v1.0.6)`: **53.1%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL)
+- `Toolathlon-Verified`: **76.9%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL)
+- `Agents' Last Exam`: **31.6%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL)
+- `Terminal-Bench 4.0`: **34.9%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL)
+- `Terminal-Bench 2.1`: **89.9%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL)
+- `OSWorld-Verified`: **82.0%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL)
+- `JobBench`: **62.0%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL)
+- `CyberGym`: **94.0%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL)
+- `MiMo Cyber Bench`: **80.2%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL)
+- `ExploitGym`: **17.8%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL)
+- `ExploitBench`: **47.9%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL)
+- `SEC-Bench Pro`: **66.3%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL)
+- `MiMo VisualCoding`: **72.3%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL)
+- 점수 메모: Xiaomi MiMo 공식 HF 모델 카드의 비교 표 중 MiMo-V2.6-Pro 열 값(개발사 직접 게시). GDPval-AA 2.1 1673은 Elo형 척도라 제외.
+- 모델 메모: MiMo-V2.6 시리즈 플래그십 RL 체크포인트. 텍스트·이미지·비디오·오디오를 단일 모델로 처리하는 네이티브 옴니모달, 1M 컨텍스트, SWA/GA 하이브리드 + 5-layer MTP 추론 디코더. MIT 라이선스, SGLang/vLLM·MiMo Studio·Open Platform API 제공.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-23`
+
+### 172. 2026-09-22 — MiMo-V2.6-Flash
+
+- 레코드 ID: `model-182`
+- **공식 모델명:** `MiMo-V2.6-Flash`
+- 제공사 / 패밀리: `Xiaomi` / `MiMo`
+- 모델 유형 / 상태: `MLLM` / `GA`
+- 공개일(레포 기준): `2026-09-22` — [출시일 공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL)
+- **파라미터:** `309B total / 15B active (MoE)` — 공식 수치 확인
+- 파라미터 출처: [공식 파라미터 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL)
+- 아키텍처: `Sparse MoE (hybrid SWA/GA) + omni encoders + MTP`
+- 공식 모델 ID: `XiaomiMiMo/MiMo-V2.6-Flash-RL`
+- 오픈 웨이트: `예`
+- 공식 모델 출처: [공식 모델 카드·기술 보고서](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL), [공식 블로그](https://mimo.xiaomi.com/mimo-v2-6)
+
+#### 공식 발표 벤치마크 점수
+
+- `DeepSWE v1.1`: **67.9%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL)
+- `ProgramBench`: **26.0%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL)
+- `MiMo Code Bench`: **61.2%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL)
+- `AutomationBench (v1.0.6)`: **52.3%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL)
+- `Toolathlon-Verified`: **73.6%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL)
+- `Agents' Last Exam`: **27.6%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL)
+- `Terminal-Bench 4.0`: **28.8%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL)
+- `Terminal-Bench 2.1`: **87.6%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL)
+- `OSWorld-Verified`: **80.8%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL)
+- `JobBench`: **61.2%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL)
+- `CyberGym`: **95.1%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL)
+- `MiMo Cyber Bench`: **77.2%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL)
+- `ExploitGym`: **6.0%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL)
+- `ExploitBench`: **25.3%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL)
+- `SEC-Bench Pro`: **47.5%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL)
+- `MiMo VisualCoding`: **71.5%** — [공식 출처](https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL)
+- 점수 메모: Xiaomi MiMo 공식 HF 모델 카드의 비교 표 중 MiMo-V2.6-Flash 열 값(개발사 직접 게시). Flash 열은 GDPval-AA 점수 미표기.
+- 모델 메모: MiMo-V2.6 시리즈 경량 티어. 텍스트·이미지·비디오·오디오를 단일 모델로 처리하는 네이티브 옴니모달, 1M 컨텍스트, SWA/GA 하이브리드 + 5-layer MTP 추론 디코더. MIT 라이선스, SGLang/vLLM·MiMo Studio·Open Platform API 제공.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-23`
+
+### 173. 2026-09-22 — Solar Mini 4
+
+- 레코드 ID: `model-183`
+- **공식 모델명:** `Solar Mini 4`
+- 제공사 / 패밀리: `Upstage` / `Solar`
+- 모델 유형 / 상태: `LLM` / `GA`
+- 공개일(레포 기준): `2026-09-22` — [출시일 공식 출처](https://console.upstage.ai/docs/models/solar-mini-4)
+- **파라미터:** `35B total / 3B active` — 공식 수치 확인
+- 파라미터 출처: [공식 파라미터 출처](https://console.upstage.ai/docs/models/solar-mini-4)
+- 아키텍처: `미기재`
+- 공식 모델 ID: `solar-mini4`
+- 오픈 웨이트: `아니오/호스팅`
+- 공식 모델 출처: [공식 모델 문서](https://console.upstage.ai/docs/models/solar-mini-4)
+
+#### 공식 발표 벤치마크 점수
+
+- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- 점수 메모: Upstage 공식 모델 문서에 벤치마크 점수 미공개(2026-09-23 확인).
+- 모델 메모: Solar Mini 3 후속 경량 모델. 512K 컨텍스트·최대 128K 출력, EN/KO/JA, 학습 컷오프 2026-02. chat·reasoning·structured outputs·tool calling 지원. API ID solar-mini4(스냅샷 solar-mini4-260922).
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-23`
+
 ## 제외·보류한 기존 레코드
 
 ### `model-045` — LongCat-2.0 Preview
@@ -6140,17 +6508,47 @@
 - 제외 사유: 2026-09-16 OpenRouter에 개발사를 숨긴 스텔스 모델로 올라왔고 다음 날 unbiased.ai의 'Pareto 26.9'로 확인됐으나, 개발사가 공식 발표를 2026-10-10으로 예고해 정식 수록 조건(공식 출시·제품명·1차 출처)이 아직 충족되지 않아 보류. iFLYTEK Spark X2.5 선례와 같은 판정.
 - 확인 출처: [공식 1차 출처](https://openrouter.ai/stealth/union-alpha)
 
+### `excluded-2026-09-23-1` — GLM-5.3-FlashX
+
+- 원래 이름: `GLM-5.3-FlashX (Z.ai)`
+- 제외 사유: 2026-09-18 Z.ai API에 추가된 GLM-5.3-Flash와 동일 가중치(320B/18B)의 고속 서빙 티어(~200 tok/s, 약 2.5× 가격). 신규 가중치·벤치마크 없이 서빙 옵션만 달라 별도 모델로 수록하지 않음 — 동일 가중치 서빙 변형 제외 규정.
+- 확인 출처: [공식 1차 출처](https://docs.z.ai/guides/vlm/glm-5.3-flash)
+
+### `excluded-2026-09-23-2` — Solar Jev
+
+- 원래 이름: `Solar Jev (Upstage, POST /v1/systemone)`
+- 제외 사유: Solar Mini 4 기반 구조화 결정 모델 — choice/score/yes-no 판정만 반환하고 텍스트를 생성하지 않아 LLM 수록 범위 밖. Jev(TypeSafe AI)와 동일 분류.
+- 확인 출처: [공식 1차 출처](https://console.upstage.ai/docs/models/solar-jev)
+
+### `excluded-2026-09-23-3` — Laya
+
+- 원래 이름: `Laya (Convai Innovations)`
+- 제외 사유: ModernBERT-large 기반 비자기회귀 System 1 결정 모델(421M, 2026-09-18 공개). 입력 상태+질문에 확률·판정만 반환하고 텍스트를 생성하지 않아 LLM 수록 범위 밖.
+- 확인 출처: [공식 1차 출처](https://huggingface.co/convaiinnovations/laya)
+
+### `excluded-2026-09-23-4` — Apollo
+
+- 원래 이름: `Apollo (Austrian Academy of Sciences × Mistral AI × Reply)`
+- 제외 사유: 2026-09-23 발표된 고대그리스어 전용 도메인 특화 LLM 프로젝트(파피루스·비문 복원·검색 목적). 일반 목적 파운데이션 모델 출시가 아니며 공식 모델 ID·가중치·벤치마크가 공개되지 않아 수록 보류. OeAW 공식 페이지는 자동 검증에 403을 반환해 공동 개발사 Reply 보도자료를 확인 출처로 기록.
+- 확인 출처: [공식 1차 출처](https://www.reply.com/en/newsroom/news/austrian-academy-of-sciences-is-developing-the-ancient-greek-ai-apollo-with-mistral-ai-and-reply)
+
+### `excluded-2026-09-23-5` — gpt-oss-120b / gpt-oss-20b
+
+- 원래 이름: `OpenAI gpt-oss (2025-08-05 출시)`
+- 제외 사유: 9월 중 일부 보도에서 재언급됐으나 실제 공식 출시는 2025-08-05로 본 타임라인 기간(2026년) 밖 — 기간 외 모델이라 미수록.
+- 확인 출처: [공식 1차 출처](https://openai.com/index/introducing-gpt-oss/)
+
 ## 패밀리 흐름
 
 - **Qwen:** `Qwen3.5` → `Qwen3.6` → `Qwen3.7` → `Qwen3.8` → `Qwen3.8-Flash-Next` → `Qwen3.8-Omni-Flash`
 - **DeepSeek:** `DeepSeek-V4 Preview` → `DeepSeek-V4-Flash-0731` → `DeepSeek-V4-Pro-0813` → `DeepSeek-V4-Flash-Vision-Exp` → `DeepSeek-V4.1-Flash`
-- **Claude:** `Opus 4.6` → `Sonnet 4.6` → `Opus 4.7` → `Opus 4.8` → `Fable/Mythos 5` → `Sonnet 5` → `Opus 5` → `Fable/Mythos 5.1`
-- **GPT:** `GPT-5.3` → `GPT-5.4` → `GPT-5.5` → `GPT-5.6` → `GPT-6 Astra` → `GPT-6 Astra Pro`
+- **Claude:** `Opus 4.6` → `Sonnet 4.6` → `Opus 4.7` → `Opus 4.8` → `Fable/Mythos 5` → `Sonnet 5` → `Opus 5` → `Fable/Mythos 5.1` → `Opus 5.5`
+- **GPT:** `GPT-5.3` → `GPT-5.4` → `GPT-5.5` → `GPT-5.6` → `GPT-6 Astra` → `GPT-6 Astra Pro` → `GPT-6 Sol` → `GPT-6 Luna`
 - **Gemini:** `Gemini 3.5 Flash` → `Gemini 3.6 Flash` → `Gemini 3.7 Flash` → `Gemini 3.8 Flash` → `Gemini 3.8 Live` → `Gemini 3.8 Live Extended Thinking`
 - **GLM:** `GLM-5` → `GLM-5.1` → `GLM-5.2` → `GLM-5.3` → `GLM-5.3-Flash`
 - **Kimi:** `Kimi K2.5` → `Kimi K2.6` → `Kimi K2.7 Code` → `Kimi K2.8 Preview` → `Kimi K3`
 - **LongCat:** `LongCat-Flash-Thinking-2601` → `LongCat-Flash-Lite` → `LongCat-Flash-Omni` → `LongCat-2.0`
-- **MiMo:** `MiMo-V2-Flash` → `MiMo-V2.5` → `MiMo-V2.5-Pro`
+- **MiMo:** `MiMo-V2-Flash` → `MiMo-V2.5` → `MiMo-V2.5-Pro` → `MiMo-V2.6-Pro` → `MiMo-V2.6-Flash`
 - **Nemotron:** `Nemotron-3-Super-120B-A12B` → `Nemotron-3-Nano-Omni-30B-A3B-Reasoning` → `Nemotron-3-Ultra-550B-A55B` → `Nemotron-3.5-Lightning-30B-A3B`
 - **Granite:** `Granite 4.1` → `Granite 4.2`
 - **Laguna:** `Laguna M.1` → `Laguna XS.2` → `Laguna XS 2.1` → `Laguna S 2.1`
@@ -6158,6 +6556,9 @@
 - **K2 Horizon:** `K2-Horizon-0.9B` → `K2-Horizon-3.7B` → `K2-Horizon-7B` → `K2-Horizon-32B` → `K2-Horizon-MoVA-36B-A4B` → `K2-Horizon-375B-A23B`
 - **Seed / Doubao:** `Seed 2.0` → `Seed2.1 Pro` → `Seed2.1 Turbo`
 - **Ling 3.0:** `Ling-3.0-tiny` → `Ling-3.0-flash` → `Ling-3.0-flash-VL`
+- **Grok:** `Grok 4.5` → `Grok 4.6` → `Grok 4.7`
+- **Solar:** `Solar Open 2` → `Solar Pro 4` → `Solar Mini 4`
+- **Nex:** `Nex-N2.5-mini` → `Nex-N2.5-Pro` → `Nex-N2.5-Max`
 
 ## 재현 명령
 

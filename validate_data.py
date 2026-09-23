@@ -57,6 +57,9 @@ OFFICIAL_HOSTS = {
     "kimi.com",
     "lgresearch.ai",
     "mimo.xiaomi.com",
+    # Nex-AGI official site — Nex-N2.5 family parameter/base-model disclosure.
+    # Added 2026-09-23.
+    "nex-agi.com",
     "navercorp.com",
     "news.sktelecom.com",
     "openai.com",
@@ -71,6 +74,9 @@ OFFICIAL_HOSTS = {
     "static.stepfun.com",
     "tech.meituan.com",
     "thinkingmachines.ai",
+    # Upstage official blog (upstage.ai) and Console docs (console.upstage.ai)
+    # — Solar Pro 4 / Solar Mini 4 releases. Added 2026-09-23.
+    "upstage.ai",
     "x.ai",
 }
 
@@ -122,6 +128,10 @@ ALLOWED_BENCHMARK_NAMES = {
     # WindowsAgentArena is a fixed Microsoft evaluation suite (like WebArena),
     # not a crowdsourced leaderboard — Hunmin-397B-A17B-CUA card.
     "windowsagentarena (153)",
+    # Solar Pro 4 official blog (2026-09-23): the asterisked table footnote marks
+    # these as in-house evaluations under Upstage's internal harness, i.e.
+    # publisher-run fixed-suite scores, not the crowdsourced Chatbot Arena.
+    "arena-hard v2 (japanese)",
 }
 
 STALE_TEXT = (
