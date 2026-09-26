@@ -1,9 +1,15 @@
 # ⚡ 2026 LLM & MLLM Release Timeline
 
 > **2026년 주요 LLM / MLLM 파운데이션 모델 출시 타임라인 및 세대별 진화 계보**  
-> 기준 기간: **2026-01-01 ~ 2026-09-23** | 수록 모델: **175개** | 표기 조직: **42개**
+> 기준 기간: **2026-01-01 ~ 2026-09-27** | 수록 모델: **177개** | 표기 조직: **46개**
 
 본 레포지토리는 2026년에 발표된 전 세계 주요 LLM, MLLM, Omni 파운데이션 모델의 릴리즈 내역을 공식 1차 자료와 함께 구조화하여 인터랙티브한 웹 타임라인으로 제공하는 **GitHub Pages** 프로젝트입니다.
+
+**2026-09-27 감사 추가분 (2개):**
+- 신규 릴리스(2): Contrastive-LM **CLM-8B**(9/23, Stanford·NVIDIA Research의 System One 모델 — 텍스트 생성 없이 state+action 임베딩 유사도로 행동 선택, frozen Qwen3-8B backbone + 20M projection head ×2, Apache 2.0 — 신규 조직 🇺🇸), Apple **LensVLM-9B**(9/22, 9B VLM — 렌더링된 텍스트 이미지 스캔 후 학습된 도구로 관련 페이지만 선택적 확장, Qwen3.5-9B-Base 기반 — 신규 조직 🇺🇸)
+- 벤치마크: CLM-8B의 공식 GitHub README에 인쇄된 **신규 2개 점수**를 반영했습니다(누적 161개 모델·2,994개 점수). 두 점수 모두 lightweight fine-tuning된 projection head 기반 verifier 결과(38 held-out DeepSWE·30 held-out Terminal-Bench 2.1 tasks, H100 측정)이며 zero-shot CLM v0.1은 각각 79.78%·85.39%. LensVLM-9B는 공식 모델 카드·논문에 % 단위 공개 벤치마크 점수가 없어 빈 점수로 두고 원장에 사유를 기록했습니다.
+- 재조사 확인: Kimi K2.6(9/24 보도 기사 — 실제 출시 2026-04-20, 기존 model-044와 동일 모델의 재보도), Tencent Hy4-preview(9/25 보도 — 실제 출시 2026-08-28, 기존 model-112와 동일), DeepSeek-V3.1-Terminus(9/26 보도 — 실제 출시 2025-09-22, 기간 외), MiniMax-M1(9/26 보도 — 실제 출시 2025-06-16, 기간 외), Gemini 3.8 Live GA(9/24 — 기존 model-158의 배포 확장), Qwen 4 preview(9/22 알리바바 아프살라 컨퍼런스 — 미출시, 학습 중), Qwen3.8-Max-Prime(9/23 — 동일 가중치의 고속 서빙 티어, GLM-5.3-FlashX와 동일 패턴으로 제외)
+- 1차 도메인 추가: `github.com`(Contrastive-LM CLM-8B 공식 저장소), `machinelearning.apple.com`(Apple ML Research — LensVLM-9B 논문 페이지)
 
 **2026-09-23 감사 추가분 (14개):**
 - 신규 릴리스(8): xAI **Grok 4.7**(9/21, 더 큰 베이스+장기 RL, 500K 컨텍스트), Yandex **AliceAI-Foundation-80B-A3B-Base**(9/21, 80B-A3B 오픈가중치 파운데이션 — 신규 조직 🇷🇺), Anthropic **Claude Opus 5.5**(9/22, Claude 5.5 패밀리 첫 모델), OpenAI **GPT-6 Sol · GPT-6 Luna**(9/22, GPT-6 범용·고효율 티어 — API 가격 50% 인하), Xiaomi **MiMo-V2.6-Pro · MiMo-V2.6-Flash**(9/22, 1.02T-A42B / 309B-A15B 네이티브 옴니모달·1M 컨텍스트·MIT), Upstage **Solar Mini 4**(9/22, 35B-A3B·512K)
@@ -96,7 +102,7 @@
   - 단순 양자화 체크포인트 (FP8, NVFP4, INT4, GGUF 등)
   - 독립 제품을 대표하지 않는 중간/베이스 체크포인트
 - **포함 기업 (42개 표기 조직):**
-   - **미국 (US):** OpenAI, Anthropic, Google DeepMind, Meta, xAI, NVIDIA, IBM, Poolside, Thinking Machines Lab, Arcee AI, Motif Technologies, Cognition (SWE), Salesforce (Koa), Gensyn (open-1b), Accio-Lab (Occamy), TypeSafe AI (Jev)
+   - **미국 (US):** OpenAI, Anthropic, Google DeepMind, Meta, xAI, NVIDIA, IBM, Poolside, Thinking Machines Lab, Arcee AI, Motif Technologies, Cognition (SWE), Salesforce (Koa), Gensyn (open-1b), Accio-Lab (Occamy), TypeSafe AI (Jev), Contrastive-LM (CLM), Apple (LensVLM)
    - **한국 (KR):** NAVER Cloud (HyperCLOVA X SEED 4B), Upstage (Solar), LG AI Research (EXAONE / K-EXAONE), SK Telecom (A.X), GenON (Hunmin)
   - **중국 (CN):** Alibaba (Qwen), DeepSeek, Baidu (ERNIE), ByteDance (Seed), Moonshot AI (Kimi), Z.ai (GLM), MiniMax, StepFun, Meituan (LongCat), Xiaomi (MiMo), Ant Group (Ling/Ring), Tencent (Hy), Shanghai Artificial Intelligence Laboratory (Atria), Nex-AGI (Nex)
    - **중동 (AE):** Institute of Foundation Models / MBZUAI (K2 Horizon)
@@ -149,7 +155,7 @@ python3 -m http.server 8000
 llm-timeline/
 ├── index.html                       # 메인 인터랙티브 대시보드 웹 애플리케이션
 ├── models_catalog.json               # 모델명·파라미터·공식 점수·출처 SSOT
-├── data.js                          # SSOT에서 생성된 175개 모델 데이터셋
+├── data.js                          # SSOT에서 생성된 177개 모델 데이터셋
 ├── app.js                           # 검색, 다차원 필터, 뷰 전환, 모달 동작 로직
 ├── style.css                        # 타임라인 스파인, sticky 시간축 헤더, 반응형 모바일 레이아웃
 ├── build_data.py                    # models_catalog.json → data.js 생성기
@@ -157,7 +163,7 @@ llm-timeline/
 ├── .nojekyll                        # GitHub Pages 정적 자산 로딩 보장
 ├── .github/workflows/
 │   └── deploy-pages.yml             # GitHub Actions 자동 배포 워크플로우
-├── 조사 자료                         # 175개 모델별 공식 출처 감사 원장 (Markdown)
+├── 조사 자료                         # 177개 모델별 공식 출처 감사 원장 (Markdown)
 └── README.md                        # 프로젝트 설명 및 배포 안내 문서
 ```
 

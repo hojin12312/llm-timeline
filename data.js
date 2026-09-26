@@ -14748,6 +14748,126 @@ const TIMELINE_DATA = [
       "reviewed_on": "2026-09-23",
       "policy": "official-primary-only"
     }
+  },
+  {
+    "id": "model-186",
+    "name": "CLM-8B",
+    "date": "2026-09-23",
+    "sortDate": "2026-09-23",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "Contrastive-LM",
+    "family": "CLM",
+    "type": "System One / structured decision",
+    "category": "LLM",
+    "status": "GA",
+    "parameters": "8B (frozen Qwen3-8B backbone + 20M trainable projection head ×2)",
+    "parameter_status": "verified",
+    "architecture": "",
+    "modalities": [
+      "text"
+    ],
+    "focus": [
+      "structured decisions",
+      "classification",
+      "routing",
+      "scoring",
+      "verification"
+    ],
+    "open_weights": true,
+    "license": "Apache 2.0",
+    "context": "",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "GitHub·Hugging Face·TypeSafe-compatible API",
+    "note": "Stanford·NVIDIA Research의 Contrastive Language Models(CLM) 첫 공개 모델. 텍스트 생성 없이 state+action 임베딩 코사인 유사도로 후보 행동을 선택하는 System One 모델. frozen Qwen3-8B backbone + 20M projection head ×2, 60M Nemotron Q&A 쌍·30M 합성 하드 네거티브·1M 에이전트 궤적 학습. Jev 대비 최대 9× 낮은 레이턴시, fine-tuning 후 DeepSWE 81.6%·Terminal-Bench 2.1 87.6%.",
+    "benchmarks": {
+      "Terminal-Bench 2.1": 87.6,
+      "DeepSWE": 81.6
+    },
+    "benchmark_sources": {
+      "Terminal-Bench 2.1": "https://github.com/Contrastive-LM/CLM",
+      "DeepSWE": "https://github.com/Contrastive-LM/CLM"
+    },
+    "benchmark_note": "공식 GitHub README의 수치. 두 점수 모두 lightweight fine-tuning된 projection head 기반 verifier 결과(38 held-out DeepSWE·30 held-out Terminal-Bench 2.1 tasks, H100 측정)이며 zero-shot CLM v0.1은 각각 79.78%·85.39%.",
+    "official_id": "clm-latest",
+    "official_sources": [
+      {
+        "label": "공식 GitHub 저장소",
+        "url": "https://github.com/Contrastive-LM/CLM"
+      },
+      {
+        "label": "공식 모델 카드",
+        "url": "https://huggingface.co/Contrastive-LM/CLM-v0.1-8B"
+      }
+    ],
+    "release_date_source": "https://github.com/Contrastive-LM/CLM",
+    "parameter_source": "https://github.com/Contrastive-LM/CLM",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-27",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-187",
+    "name": "LensVLM-9B",
+    "date": "2026-09-22",
+    "sortDate": "2026-09-22",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "Apple",
+    "family": "LensVLM",
+    "type": "MLLM / VLM",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "9B",
+    "parameter_status": "verified",
+    "architecture": "",
+    "modalities": [
+      "image",
+      "text"
+    ],
+    "focus": [
+      "document understanding",
+      "long context",
+      "compression",
+      "selective expansion"
+    ],
+    "open_weights": true,
+    "license": "Apple Machine Learning Research Model License",
+    "context": "",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "Hugging Face·GitHub·vLLM·SGLang",
+    "note": "Apple의 9B VLM. 텍스트를 렌더링된 이미지로 스캔한 뒤 학습된 도구(learned tools)로 관련 페이지만 선택적으로 비압축 형태로 확장하는 LensVLM 프레임워크 적용. Qwen3.5-9B-Base 기반, 5×/10×/15× 압축 설정 지원. 4.3× 유효 압축에서 full-text 상한과 유사한 정확도 유지.",
+    "benchmarks": {},
+    "benchmark_sources": {},
+    "benchmark_note": "공식 모델 카드·논문에 % 단위 공개 벤치마크 점수 미게재 — 논문의 QA Acc(68.9% @5× 등)는 압축률별 내부 평가라 단일 수치로 표기하지 않음.",
+    "official_id": "apple/LensVLM-9B",
+    "official_sources": [
+      {
+        "label": "공식 모델 카드",
+        "url": "https://huggingface.co/apple/LensVLM-9B"
+      },
+      {
+        "label": "논문 (arXiv)",
+        "url": "https://arxiv.org/abs/2605.07019"
+      },
+      {
+        "label": "Apple ML Research",
+        "url": "https://machinelearning.apple.com/research/lensvlm-context-expansion"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/apple/LensVLM-9B",
+    "parameter_source": "https://huggingface.co/apple/LensVLM-9B",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-27",
+      "policy": "official-primary-only"
+    }
   }
 ];
 
@@ -15015,6 +15135,18 @@ const COMPANY_META = {
     "flag": "🇺🇸",
     "color": "from-indigo-500 to-violet-600",
     "badge": "bg-indigo-500/10 text-indigo-300 border-indigo-500/30"
+  },
+  "Contrastive-LM": {
+    "country": "US",
+    "flag": "🇺🇸",
+    "color": "from-violet-500 to-purple-600",
+    "badge": "bg-violet-500/10 text-violet-300 border-violet-500/30"
+  },
+  "Apple": {
+    "country": "US",
+    "flag": "🇺🇸",
+    "color": "from-gray-400 to-slate-500",
+    "badge": "bg-slate-400/10 text-slate-300 border-slate-400/30"
   }
 };
 
@@ -15207,7 +15339,7 @@ const FAMILY_FLOWS = [
 const UNCONFIRMED_DATA = [];
 
 const SCOPE_DATA = {
-  "period": "2026-01-01 ~ 2026-09-23",
+  "period": "2026-01-01 ~ 2026-09-27",
   "scope": [
     "LLM (Large Language Models)",
     "MLLM / VLM / Omni foundation models"
@@ -15224,7 +15356,7 @@ const SCOPE_DATA = {
   ],
   "benchmark_policy": "공식 모델 카드·기술 보고서·개발사 공식 발표문에 모델 제공자가 직접 명시한 점수만 수록. Chatbot Arena/ELO, Artificial Analysis, 제3자 leaderboard, 추정·역산 점수는 제외.",
   "parameter_policy": "개발사가 명시한 총/활성 파라미터만 사용. 공개하지 않은 값은 정확한 수치 미공개로 표시하고, 모델 크기·가중치 파일 용량·양자화 크기를 파라미터 수로 대체하지 않음.",
-  "reviewed_on": "2026-09-23"
+  "reviewed_on": "2026-09-27"
 };
 
 const AUDIT_EXCLUDED = [

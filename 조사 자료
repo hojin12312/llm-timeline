@@ -1,6 +1,6 @@
 # 조사 자료 — 2026 LLM / MLLM 공개 기록 감사 원장
 
-> 최종 감사일: **2026-09-23** | 활성 레코드: **175개** | 제외 원장: **21개** | 공식 점수가 확인된 모델: **160개** | 공식 점수: **2992개**
+> 최종 감사일: **2026-09-27** | 활성 레코드: **177개** | 제외 원장: **21개** | 공식 점수가 확인된 모델: **161개** | 공식 점수: **2994개**
 >
 > 이 문서는 `models_catalog.json`에서 생성된 사람 검토용 감사 원장입니다. 브라우저용 `data.js`를 직접 수정하지 말고 SSOT를 수정한 뒤 `python3 build_data.py`로 재생성하세요.
 
@@ -6439,6 +6439,49 @@
 - 점수 메모: 공식 문서에 벤치마크 점수 미공개(2026-09-23 확인, 베타 단계).
 - 모델 메모: Solar Mini 4를 System One 엔드포인트로 서빙하는 구조화 결정 모델(베타). Jev와 동일한 /v1/systemone 스키마로 choice/score/noul+확률을 반환하고 산문을 생성하지 않아 단일 forward pass·출력 토큰 무료. 512K 컨텍스트, 한국어 이해 강점. 텍스트 미생성 모델이지만 별도 모델 ID의 독립 API 제품으로 수록.
 - 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-23`
+
+### 176. 2026-09-23 — CLM-8B
+
+- 레코드 ID: `model-186`
+- **공식 모델명:** `CLM-8B`
+- 제공사 / 패밀리: `Contrastive-LM` / `CLM`
+- 모델 유형 / 상태: `System One / structured decision` / `GA`
+- 공개일(레포 기준): `2026-09-23` — [출시일 공식 출처](https://github.com/Contrastive-LM/CLM)
+- **파라미터:** `8B (frozen Qwen3-8B backbone + 20M trainable projection head ×2)` — 공식 수치 확인
+- 파라미터 출처: [공식 파라미터 출처](https://github.com/Contrastive-LM/CLM)
+- 아키텍처: `미기재`
+- 공식 모델 ID: `clm-latest`
+- 오픈 웨이트: `예`
+- 공식 모델 출처: [공식 GitHub 저장소](https://github.com/Contrastive-LM/CLM), [공식 모델 카드](https://huggingface.co/Contrastive-LM/CLM-v0.1-8B)
+
+#### 공식 발표 벤치마크 점수
+
+- `Terminal-Bench 2.1`: **87.6%** — [공식 출처](https://github.com/Contrastive-LM/CLM)
+- `DeepSWE`: **81.6%** — [공식 출처](https://github.com/Contrastive-LM/CLM)
+- 점수 메모: 공식 GitHub README의 수치. 두 점수 모두 lightweight fine-tuning된 projection head 기반 verifier 결과(38 held-out DeepSWE·30 held-out Terminal-Bench 2.1 tasks, H100 측정)이며 zero-shot CLM v0.1은 각각 79.78%·85.39%.
+- 모델 메모: Stanford·NVIDIA Research의 Contrastive Language Models(CLM) 첫 공개 모델. 텍스트 생성 없이 state+action 임베딩 코사인 유사도로 후보 행동을 선택하는 System One 모델. frozen Qwen3-8B backbone + 20M projection head ×2, 60M Nemotron Q&A 쌍·30M 합성 하드 네거티브·1M 에이전트 궤적 학습. Jev 대비 최대 9× 낮은 레이턴시, fine-tuning 후 DeepSWE 81.6%·Terminal-Bench 2.1 87.6%.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-27`
+
+### 177. 2026-09-22 — LensVLM-9B
+
+- 레코드 ID: `model-187`
+- **공식 모델명:** `LensVLM-9B`
+- 제공사 / 패밀리: `Apple` / `LensVLM`
+- 모델 유형 / 상태: `MLLM / VLM` / `GA`
+- 공개일(레포 기준): `2026-09-22` — [출시일 공식 출처](https://huggingface.co/apple/LensVLM-9B)
+- **파라미터:** `9B` — 공식 수치 확인
+- 파라미터 출처: [공식 파라미터 출처](https://huggingface.co/apple/LensVLM-9B)
+- 아키텍처: `미기재`
+- 공식 모델 ID: `apple/LensVLM-9B`
+- 오픈 웨이트: `예`
+- 공식 모델 출처: [공식 모델 카드](https://huggingface.co/apple/LensVLM-9B), [논문 (arXiv)](https://arxiv.org/abs/2605.07019), [Apple ML Research](https://machinelearning.apple.com/research/lensvlm-context-expansion)
+
+#### 공식 발표 벤치마크 점수
+
+- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- 점수 메모: 공식 모델 카드·논문에 % 단위 공개 벤치마크 점수 미게재 — 논문의 QA Acc(68.9% @5× 등)는 압축률별 내부 평가라 단일 수치로 표기하지 않음.
+- 모델 메모: Apple의 9B VLM. 텍스트를 렌더링된 이미지로 스캔한 뒤 학습된 도구(learned tools)로 관련 페이지만 선택적으로 비압축 형태로 확장하는 LensVLM 프레임워크 적용. Qwen3.5-9B-Base 기반, 5×/10×/15× 압축 설정 지원. 4.3× 유효 압축에서 full-text 상한과 유사한 정확도 유지.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-27`
 
 ## 제외·보류한 기존 레코드
 

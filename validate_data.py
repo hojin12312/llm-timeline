@@ -49,6 +49,10 @@ OFFICIAL_HOSTS = {
     "gensyn.ai",
     "huggingface.co",
     "arxiv.org",
+    # Contrastive-LM CLM-8B launch repo (System One model). Added 2026-09-27.
+    "github.com",
+    # Apple Machine Learning Research (LensVLM-9B paper page). Added 2026-09-27.
+    "machinelearning.apple.com",
     # IFM / MBZUAI launch pages (K2 Horizon). Added 2026-09-08; the site serves a
     # JS challenge to HEAD requests but answers the validator's GET with HTTP 200.
     "ifm.ai",
