@@ -2,7 +2,7 @@
 title: Overview
 type: overview
 status: current
-updated: 2026-09-23
+updated: 2026-09-29
 ---
 
 # Overview
@@ -50,9 +50,9 @@ updated: 2026-09-23
 ## Terminology
 
 - **SSOT**: `models_catalog.json` — 모델명·출시일·파라미터·공식 점수·출처의 단일 진실 공급원.
-- **제외 원장(excluded ledger)**: 수록 범위 밖으로 판정한 항목의 사유·출처 기록. 되돌림(reversal) 시 활성 레코드로 이관하고 README 각주에 경위를 남긴다(선례: Muse Spark 1.2/1.3, Jev·Solar Jev).
+- **제외 원장(excluded ledger)**: 수록 범위 밖으로 판정한 항목의 사유·출처 기록. 되돌림(reversal) 시 활성 레코드로 이관하고 README 각주에 경위를 남긴다(선례: Muse Spark 1.2/1.3, Jev·Solar Jev, Laya).
 - **parameter_status**: `verified` / `publisher-approximate` / `publisher-partial` / `undisclosed` — 파라미터 값의 공식 근거 수준.
-- **System One / structured decision**: 산문을 생성하지 않고 choice/score/noul 결정+확률만 반환하는 모델 부류(Jev, Solar Jev). 독립 API 제품·별도 모델 ID로 출시되면 수록한다는 재검토 판정이 있다.
+- **System One / structured decision**: 산문을 생성하지 않고 choice/score/noul 결정+확률만 반환하는 모델 부류(Jev, Solar Jev, Laya, JEV-9B/27B). 독립 API 제품·별도 모델 ID로 출시되면 수록한다는 재검토 판정이 있다.
 - **OFFICIAL_HOSTS / FORBIDDEN_BENCHMARK_TERMS / ALLOWED_BENCHMARK_NAMES / STALE_TEXT / BOT_PROTECTED_HOSTS**: `validate_data.py`의 검증 목록들.
 
 ## Quality Requirements

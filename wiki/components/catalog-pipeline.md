@@ -2,7 +2,7 @@
 title: Catalog Pipeline
 type: component
 status: current
-updated: 2026-09-23
+updated: 2026-09-29
 ---
 
 # Catalog Pipeline
@@ -35,7 +35,7 @@ updated: 2026-09-23
 - 신규 발행사 도메인을 출처로 쓰기 전에 `OFFICIAL_HOSTS`에 추가한다(서브도메인은 접미 일치로 자동 허용).
 - 제외 판정 항목은 삭제하지 않고 `excluded` 원장에 사유·공식 출처와 함께 보존한다. 되돌림 시 활성 레코드로 이관 + README 되돌림 각주.
 - 점수는 % 척도만. Elo·가격·속도 같은 비% 지표는 `note`/`benchmark_note`에 서술형으로만 기록.
-- **System One / structured decision 예외(2026-09-23 선례)**: 산문을 생성하지 않는 결정 모델도 독립 API 제품·별도 모델 ID로 공식 출시되면 수록 대상이다(Jev `model-184`, Solar Jev `model-185`). `type`에 `System One / structured decision`, `category: LLM`으로 분류했고, 같은 부류라도 출시 정보가 제한적인 모델(Laya)은 원장에 유지한다.
+- **System One / structured decision 예외(2026-09-23 선례)**: 산문을 생성하지 않는 결정 모델도 독립 API 제품·별도 모델 ID로 공식 출시되면 수록 대상이다(Jev `model-184`, Solar Jev `model-185`, Laya `model-188`, JEV-9B `model-189`, JEV-27B `model-197`). `type`에 `System One / structured decision`, `category: LLM`으로 분류한다. Laya는 2026-09-29 재검토로 되돌림 이관했다 — pip/npm 배포·self-host 서버·3종 공개 체크포인트를 갖춘 독립 제품이라고 판정.
 
 ## Relevant Paths
 
@@ -50,6 +50,7 @@ updated: 2026-09-23
 ## Known Limitations
 
 - `--check-urls`는 봇 챌린지를 쓰는 발행사 사이트에서 간헐 403을 낸다(경고 목록 참조). 자동 판정과 실제 링크 사망을 구분하려면 수동 확인이 필요하다.
+- HF 출처가 누적되면서 `--check-urls` 전수 스윕은 429 rate-limit 경고를 다수 낸다 — 경고는 실패가 아니다. 반면 gated 데이터셋(401)과 삭제된 HF 포럼 글(404)은 출처로 쓸 수 없다(2026-09-29 VeriLoop E2: 포럼 공지 삭제 → 릴리스 출처를 모델 카드로 교체, gated 평가 데이터셋 제외).
 - Upstage Console 문서처럼 JS 셸만 응답하는 공식 페이지는 정적 HTML에 내용이 없어, 페이지의 RSC/Next.js 페이로드를 파싱해야 실제 스펙을 읽을 수 있다(2026-09-23 Solar Jev 조사에서 사용).
 
 ## Related Pages
