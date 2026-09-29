@@ -1,6 +1,6 @@
 # 조사 자료 — 2026 LLM / MLLM 공개 기록 감사 원장
 
-> 최종 감사일: **2026-09-27** | 활성 레코드: **177개** | 제외 원장: **21개** | 공식 점수가 확인된 모델: **161개** | 공식 점수: **2994개**
+> 최종 감사일: **2026-09-29** | 활성 레코드: **187개** | 제외 원장: **24개** | 공식 점수가 확인된 모델: **168개** | 공식 점수: **3030개**
 >
 > 이 문서는 `models_catalog.json`에서 생성된 사람 검토용 감사 원장입니다. 브라우저용 `data.js`를 직접 수정하지 말고 SSOT를 수정한 뒤 `python3 build_data.py`로 재생성하세요.
 
@@ -6483,6 +6483,245 @@
 - 모델 메모: Apple의 9B VLM. 텍스트를 렌더링된 이미지로 스캔한 뒤 학습된 도구(learned tools)로 관련 페이지만 선택적으로 비압축 형태로 확장하는 LensVLM 프레임워크 적용. Qwen3.5-9B-Base 기반, 5×/10×/15× 압축 설정 지원. 4.3× 유효 압축에서 full-text 상한과 유사한 정확도 유지.
 - 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-27`
 
+### 178. 2026-09-18 — Laya
+
+- 레코드 ID: `model-188`
+- **공식 모델명:** `Laya`
+- 제공사 / 패밀리: `Convai Innovations` / `Laya`
+- 모델 유형 / 상태: `System One / structured decision` / `GA`
+- 공개일(레포 기준): `2026-09-18` — [출시일 공식 출처](https://huggingface.co/convaiinnovations/laya)
+- **파라미터:** `421M (laya-multilingual 322M·laya-typed-decisions 421M 형제 체크포인트)` — 공식 수치 확인
+- 파라미터 출처: [공식 파라미터 출처](https://huggingface.co/convaiinnovations/laya)
+- 아키텍처: `ModernBERT-large encoder + two-layer decision head (비자기회귀)`
+- 공식 모델 ID: `convaiinnovations/laya`
+- 오픈 웨이트: `예`
+- 공식 모델 출처: [공식 모델 카드](https://huggingface.co/convaiinnovations/laya), [공식 GitHub 저장소](https://github.com/NandhaKishorM/laya)
+
+#### 공식 발표 벤치마크 점수
+
+- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- 점수 메모: 공식 카드의 정확도는 0~1 분율 표기(typed-decisions 0.766·AG News 0.950·DAIR Emotion 0.595 등, routed 기준) — % 비환산 원칙에 따라 점수표에 미수록.
+- 모델 메모: Convai Innovations의 비자기회귀 System 1 결정 모델 — state+typed questions(choice/score/noul)를 단일 forward pass(테스트 환경 ~33ms)로 처리해 교정 확률을 반환. RLCD(엄밀 적절 스코어링 규칙 RL)로 학습, laya-typed-decisions는 개발사 비공개 데이터셋 사용. 9/23 감사에서 '텍스트 미생성'으로 제외됐으나 pip/npm 패키지·self-host HTTP 서버·3종 공개 체크포인트를 갖춘 독립 제품으로, System One 예외 규정(Jev·Solar Jev·CLM-8B 선례)에 따라 되돌림 수록.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-29`
+
+### 179. 2026-09-23 — JEV-9B
+
+- 레코드 ID: `model-189`
+- **공식 모델명:** `JEV-9B`
+- 제공사 / 패밀리: `AutoTrust AI` / `JEV`
+- 모델 유형 / 상태: `System One / structured decision` / `GA`
+- 공개일(레포 기준): `2026-09-23` — [출시일 공식 출처](https://huggingface.co/autotrust/JEV-9B)
+- **파라미터:** `9B (Qwen3.5-9B backbone + 40.2M trained System 1 params)` — 공식 수치 확인
+- 파라미터 출처: [공식 파라미터 출처](https://huggingface.co/autotrust/JEV-9B)
+- 아키텍처: `Blocks of Experts — frozen Qwen3.5-9B + detachable decision block`
+- 공식 모델 ID: `autotrust/JEV-9B`
+- 오픈 웨이트: `예`
+- 공식 모델 출처: [공식 모델 카드](https://huggingface.co/autotrust/JEV-9B)
+
+#### 공식 발표 벤치마크 점수
+
+- `HumanEval (System 2)`: **70.7%** — [공식 출처](https://huggingface.co/autotrust/JEV-9B)
+- `decision-models-under-pressure (16 options)`: **90.0%** — [공식 출처](https://huggingface.co/autotrust/JEV-9B)
+- 점수 메모: 공식 카드 인쇄값(AutoTrust 재측정). System 1 충실도 지표(KL≈0.019, noul AUROC 0.994 등)는 % 척도가 아니라 점수표 미수록. 6종 공개 결정 벤치마크(JevBench·Kev·OpenJev·Nimble·VitaminC·MASSIVE-en)는 JEV-9B 행 미측정.
+- 모델 메모: AutoTrust AI의 첫 System 1+System 2 통합 오픈 모델. 동일 가중치로 System 2(Qwen3.5-9B, bit-identical)와 System 1(40.2M 결정 블록, typed decisions)을 요청별 라우팅. TypeSafe Jev 1.13과 KL≈0.019로 분포 수준 구분 불가라고 발표. 후속 상위 모델 JEV-27B(9/28).
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-29`
+
+### 180. 2026-09-22 — VeriLoop E2
+
+- 레코드 ID: `model-190`
+- **공식 모델명:** `VeriLoop E2`
+- 제공사 / 패밀리: `Tsinghua SIGS Robot Lab` / `VeriLoop`
+- 모델 유형 / 상태: `MLLM / reasoning` / `GA`
+- 공개일(레포 기준): `2026-09-22` — [출시일 공식 출처](https://huggingface.co/tsinghua-sigs-robot-lab/VeriLoop-E2)
+- **파라미터:** `27B (Qwen3.8-27B post-trained)` — 공식 수치 확인
+- 파라미터 출처: [공식 파라미터 출처](https://huggingface.co/tsinghua-sigs-robot-lab/VeriLoop-E2)
+- 아키텍처: `Qwen3.8-27B post-trained — VeriLoop-Governed Recurrence(생성·검증 권한 분리) 대응 설계`
+- 공식 모델 ID: `tsinghua-sigs-robot-lab/VeriLoop-E2`
+- 오픈 웨이트: `예`
+- 공식 모델 출처: [공식 모델 카드](https://huggingface.co/tsinghua-sigs-robot-lab/VeriLoop-E2)
+
+#### 공식 발표 벤치마크 점수
+
+- `SWE-bench Pro`: **76.2%** — [공식 출처](https://huggingface.co/tsinghua-sigs-robot-lab/VeriLoop-E2)
+- `Terminal-Bench 2.1`: **88.8%** — [공식 출처](https://huggingface.co/tsinghua-sigs-robot-lab/VeriLoop-E2)
+- `Terminal-Bench 3.0`: **29.7%** — [공식 출처](https://huggingface.co/tsinghua-sigs-robot-lab/VeriLoop-E2)
+- `Terminal-Bench 4.0`: **37.9%** — [공식 출처](https://huggingface.co/tsinghua-sigs-robot-lab/VeriLoop-E2)
+- `DeepSWE v1.1`: **64.6%** — [공식 출처](https://huggingface.co/tsinghua-sigs-robot-lab/VeriLoop-E2)
+- `SWE-Marathon v1.1`: **45.0%** — [공식 출처](https://huggingface.co/tsinghua-sigs-robot-lab/VeriLoop-E2)
+- `AIME 2026`: **98.3%** — [공식 출처](https://huggingface.co/tsinghua-sigs-robot-lab/VeriLoop-E2)
+- `GPQA Diamond`: **93.9%** — [공식 출처](https://huggingface.co/tsinghua-sigs-robot-lab/VeriLoop-E2)
+- `MathArena Apex 2025`: **89.6%** — [공식 출처](https://huggingface.co/tsinghua-sigs-robot-lab/VeriLoop-E2)
+- 점수 메모: 공식 모델 카드 인쇄값.
+- 모델 메모: Tsinghua SIGS Robot Lab의 27B 포스트트레인 모델 — 1,841,831 레코드로 학습. VGR 프레임워크는 생성과 검증 권한을 분리하고 외부 Harness가 증거 수용·롤백·완료 판정을 관리(모델은 Verifiable Action Protocol로 행동). 9종 공개 벤치 평가와 평가 증거 데이터셋을 함께 공개(데이터셋은 gated).
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-29`
+
+### 181. 2026-09-25 — Perceptron Mk1.5
+
+- 레코드 ID: `model-191`
+- **공식 모델명:** `Perceptron Mk1.5`
+- 제공사 / 패밀리: `Perceptron` / `Perceptron Mk`
+- 모델 유형 / 상태: `MLLM` / `GA`
+- 공개일(레포 기준): `2026-09-25` — [출시일 공식 출처](https://www.perceptron.inc/blog/introducing-perceptron-mk1-5)
+- **파라미터:** `정확한 수치 미공개` — 공식 수치 미공개
+- 파라미터 출처: [공식 파라미터 출처](https://www.perceptron.inc/blog/introducing-perceptron-mk1-5)
+- 아키텍처: `미기재`
+- 공식 모델 ID: `perceptron-mk1.5`
+- 오픈 웨이트: `아니오/호스팅`
+- 공식 모델 출처: [공식 발표](https://www.perceptron.inc/blog/introducing-perceptron-mk1-5)
+
+#### 공식 발표 벤치마크 점수
+
+- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- 점수 메모: 공식 발표의 벤치마크는 차트 이미지로만 게시(비디오 트래킹·에고센트릭 비디오·오디오비주얼·검색 툴 비교 표)돼 인쇄 % 수치를 확인할 수 없어 점수표 미수록.
+- 모델 메모: Perceptron의 embodied agent 제어 MLLM — 텍스트·이미지·비디오·오디오 입력을 텍스트와 좌표(points/boxes/polygons)·clips·object tracks로 출력. Mk1 대비 네이티브 오디오·비디오 트래킹·웹검색·서브에이전트 호출 추가, 종단간 2~5× 단축을 공식 주장. API ID perceptron-mk1.5, $0.15/$1.50 per 1M 토큰.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-29`
+
+### 182. 2026-09-27 — MiniMax M3.1-Flash-Preview
+
+- 레코드 ID: `model-192`
+- **공식 모델명:** `MiniMax M3.1-Flash-Preview`
+- 제공사 / 패밀리: `MiniMax` / `MiniMax M`
+- 모델 유형 / 상태: `MLLM` / `Preview`
+- 공개일(레포 기준): `2026-09-27` — [출시일 공식 출처](https://platform.minimax.io/docs/guides/models-intro)
+- **파라미터:** `정확한 수치 미공개` — 공식 수치 미공개
+- 파라미터 출처: [공식 파라미터 출처](https://platform.minimax.io/docs/guides/models-intro)
+- 아키텍처: `미기재`
+- 공식 모델 ID: `MiniMax-M3.1-Flash-Preview`
+- 오픈 웨이트: `아니오/호스팅`
+- 공식 모델 출처: [공식 모델 문서](https://platform.minimax.io/docs/guides/models-intro)
+
+#### 공식 발표 벤치마크 점수
+
+- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- 점수 메모: 모델 카드·공식 벤치마크 미공개 — 공식 문서에 사양(1M 컨텍스트·멀티모달·thinking depth)만 기재.
+- 모델 메모: MiniMax의 최신 텍스트 생성 모델 — 9/27 MiniMax Code에 선공개 후 9/28 공개 테스트. 네이티브 멀티모달 입력(텍스트·이미지·비디오, 텍스트 출력)·1M 컨텍스트·5단계 thinking depth. 현재 MiniMax Code·Token Plan에서만 제공(종량제 API 미오픈). 개발자 커뮤니티는 OpenRouter 스텔스 'Space Bunny Alpha'와 동일 모델 가능성을 추정했으나 공식 확인 없음(제외 원장 참조).
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-29`
+
+### 183. 2026-09-28 — Claude Sonnet 5.5
+
+- 레코드 ID: `model-193`
+- **공식 모델명:** `Claude Sonnet 5.5`
+- 제공사 / 패밀리: `Anthropic` / `Claude`
+- 모델 유형 / 상태: `MLLM` / `GA`
+- 공개일(레포 기준): `2026-09-28` — [출시일 공식 출처](https://www.anthropic.com/claude-sonnet-5-5)
+- **파라미터:** `정확한 수치 미공개` — 공식 수치 미공개
+- 파라미터 출처: [공식 파라미터 출처](https://www.anthropic.com/claude-sonnet-5-5)
+- 아키텍처: `미기재`
+- 공식 모델 ID: `claude-sonnet-5-5`
+- 오픈 웨이트: `아니오/호스팅`
+- 공식 모델 출처: [공식 모델 페이지](https://www.anthropic.com/claude-sonnet-5-5)
+
+#### 공식 발표 벤치마크 점수
+
+- `Terminal-Bench 4.0`: **70.6%** — [공식 출처](https://www.anthropic.com/claude-sonnet-5-5)
+- `FrontierCode 1.1 Main (Max)`: **46.2%** — [공식 출처](https://www.anthropic.com/claude-sonnet-5-5)
+- `FrontierCode 1.1 Main (Xhigh)`: **52.1%** — [공식 출처](https://www.anthropic.com/claude-sonnet-5-5)
+- `CursorBench 4.0`: **55.5%** — [공식 출처](https://www.anthropic.com/claude-sonnet-5-5)
+- `Humanity's Last Exam (w/ tools)`: **64.5%** — [공식 출처](https://www.anthropic.com/claude-sonnet-5-5)
+- `OSWorld 2.1 (partial)`: **80.1%** — [공식 출처](https://www.anthropic.com/claude-sonnet-5-5)
+- `Chartography (no tools)`: **61.6%** — [공식 출처](https://www.anthropic.com/claude-sonnet-5-5)
+- 점수 메모: Anthropic 공식 발표 표 값. FrontierCode는 effort 열별(Max 46.2/Xhigh 52.1) 병기 — 공식 각주에 따르면 Max에서는 코드리뷰 스킬 기동으로 하향. GDPval-AA v2.1 1844·AA-Briefcase v1.1 1811은 Artificial Analysis가 사전 배포본을 측정한 비% 지표라 점수표에서 제외.
+- 모델 메모: Claude 5.5 패밀리 두 번째 모델 — Sonnet 5 대비 출력 30%+ 고속·작업당 최대 30% 저렴($2/$10 per 1M 유지), Max effort에서 Opus 5.5와 FrontierCode 동률. Anthropic 최초로 실시간 사이버 리스크 분류·고위험 요청 Sonnet 5 폴백·추론 추출 차단 세이프가드를 탑재한 Sonnet. API ID claude-sonnet-5-5; Haiku 5.5는 후속 예정.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-29`
+
+### 184. 2026-09-28 — Holo4-27B
+
+- 레코드 ID: `model-194`
+- **공식 모델명:** `Holo4-27B`
+- 제공사 / 패밀리: `H Company` / `Holo4`
+- 모델 유형 / 상태: `MLLM / computer-use agent` / `GA`
+- 공개일(레포 기준): `2026-09-28` — [출시일 공식 출처](https://huggingface.co/blog/Hcompany/holo4)
+- **파라미터:** `27B (dense)` — 공식 수치 확인
+- 파라미터 출처: [공식 파라미터 출처](https://huggingface.co/Hcompany/Holo4-27B)
+- 아키텍처: `Qwen3.8-27B 기반 dense`
+- 공식 모델 ID: `Hcompany/Holo4-27B`
+- 오픈 웨이트: `예`
+- 공식 모델 출처: [공식 모델 카드](https://huggingface.co/Hcompany/Holo4-27B), [공식 발표 (HF Blog)](https://huggingface.co/blog/Hcompany/holo4)
+
+#### 공식 발표 벤치마크 점수
+
+- `OSWorld`: **85.2%** — [공식 출처](https://huggingface.co/Hcompany/Holo4-27B)
+- `OSWorld 2.0`: **61.7%** — [공식 출처](https://huggingface.co/Hcompany/Holo4-27B)
+- `AutomationBench`: **45.4%** — [공식 출처](https://huggingface.co/Hcompany/Holo4-27B)
+- 점수 메모: 공식 모델 카드·블로그 인쇄값. 비교 대상 모델 전체 표는 이미지로 게시돼 텍스트 인쇄분만 수록.
+- 모델 메모: H Company의 컴퓨터유스 VLM — GUI·코드·MCP·API 인터페이스를 단일 모델로 사용해 데스크톱·웹·Android·샌드박스를 구동. Qwen3.8-27B 기반 27B dense, SFT+RL(Agentic Task Factory 환경 생성)로 학습, 평가 트라젝토리 전량 공개. OSWorld 85.2%는 $0.08/task, OSWorld 2.0 61.7%는 $1.22/task 설정 측정. 비상업 라이선스.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-29`
+
+### 185. 2026-09-28 — Holo4-35B-A3B
+
+- 레코드 ID: `model-195`
+- **공식 모델명:** `Holo4-35B-A3B`
+- 제공사 / 패밀리: `H Company` / `Holo4`
+- 모델 유형 / 상태: `MLLM / computer-use agent` / `GA`
+- 공개일(레포 기준): `2026-09-28` — [출시일 공식 출처](https://huggingface.co/blog/Hcompany/holo4)
+- **파라미터:** `35B-A3B (MoE)` — 공식 수치 확인
+- 파라미터 출처: [공식 파라미터 출처](https://huggingface.co/Hcompany/Holo4-35B-A3B)
+- 아키텍처: `Qwen3.6-35B-A3B 기반 MoE`
+- 공식 모델 ID: `Hcompany/Holo4-35B-A3B`
+- 오픈 웨이트: `예`
+- 공식 모델 출처: [공식 모델 카드](https://huggingface.co/Hcompany/Holo4-35B-A3B), [공식 발표 (HF Blog)](https://huggingface.co/blog/Hcompany/holo4)
+
+#### 공식 발표 벤치마크 점수
+
+- `OSWorld 2.0`: **30.9%** — [공식 출처](https://huggingface.co/Hcompany/Holo4-35B-A3B)
+- `AutomationBench`: **34.5%** — [공식 출처](https://huggingface.co/Hcompany/Holo4-35B-A3B)
+- 점수 메모: 공식 모델 카드·블로그 인쇄값. 비교 대상 모델 전체 표는 이미지로 게시돼 텍스트 인쇄분만 수록.
+- 모델 메모: H Company의 컴퓨터유스 VLM — Qwen3.6-35B-A3B 기반 MoE로 활성 파라미터가 작아 서빙 효율을 노린 Apache 2.0 개방 가중치. 같은 Holo4 포스트트레이닝(SFT+RL)·262K 컨텍스트·4종 인터페이스(GUI/코드/MCP/API) 지원.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-29`
+
+### 186. 2026-09-28 — Holotron4-30B-A3B
+
+- 레코드 ID: `model-196`
+- **공식 모델명:** `Holotron4-30B-A3B`
+- 제공사 / 패밀리: `H Company` / `Holo4`
+- 모델 유형 / 상태: `MLLM / computer-use agent` / `GA`
+- 공개일(레포 기준): `2026-09-28` — [출시일 공식 출처](https://huggingface.co/blog/Hcompany/holo4)
+- **파라미터:** `30B-A3B` — 공식 수치 확인
+- 파라미터 출처: [공식 파라미터 출처](https://huggingface.co/Hcompany/Holotron4-30B-A3B)
+- 아키텍처: `NemotronH Nano Omni(NVIDIA Nemotron 3 Nano Omni) 기반`
+- 공식 모델 ID: `Hcompany/Holotron4-30B-A3B`
+- 오픈 웨이트: `예`
+- 공식 모델 출처: [공식 모델 카드](https://huggingface.co/Hcompany/Holotron4-30B-A3B), [공식 발표 (HF Blog)](https://huggingface.co/blog/Hcompany/holo4)
+
+#### 공식 발표 벤치마크 점수
+
+- `OSWorld`: **76.3%** — [공식 출처](https://huggingface.co/Hcompany/Holotron4-30B-A3B)
+- `OSWorld 2.0`: **7.9%** — [공식 출처](https://huggingface.co/Hcompany/Holotron4-30B-A3B)
+- `AutomationBench`: **35.6%** — [공식 출처](https://huggingface.co/Hcompany/Holotron4-30B-A3B)
+- `PinchBench`: **88.6%** — [공식 출처](https://huggingface.co/Hcompany/Holotron4-30B-A3B)
+- `ALE (Linux, code)`: **8.5%** — [공식 출처](https://huggingface.co/Hcompany/Holotron4-30B-A3B)
+- 점수 메모: 공식 모델 카드·블로그 인쇄값. 비교 대상 모델 전체 표는 이미지로 게시돼 텍스트 인쇄분만 수록.
+- 모델 메모: H Company의 Holotron4 Nano — 자사 Holo4 포스트트레이닝 스택을 Nemotron 3 Nano Omni에 적용해 만든 30B-A3B 컴퓨터유스 VLM(NVIDIA Nemotron Coalition 협업). GUI 워크플로·MCP/API/코드 샌드박스 환경에서 베이스 대비 절대 %p 개선을 공식 보고.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-29`
+
+### 187. 2026-09-28 — JEV-27B
+
+- 레코드 ID: `model-197`
+- **공식 모델명:** `JEV-27B`
+- 제공사 / 패밀리: `AutoTrust AI` / `JEV`
+- 모델 유형 / 상태: `System One / structured decision` / `GA`
+- 공개일(레포 기준): `2026-09-28` — [출시일 공식 출처](https://huggingface.co/autotrust/JEV-27B)
+- **파라미터:** `27B (Qwen3.8-27B backbone + 108.9M trained System 1 params)` — 공식 수치 확인
+- 파라미터 출처: [공식 파라미터 출처](https://huggingface.co/autotrust/JEV-27B)
+- 아키텍처: `Blocks of Experts — frozen Qwen3.8-27B + detachable decision block`
+- 공식 모델 ID: `autotrust/JEV-27B`
+- 오픈 웨이트: `예`
+- 공식 모델 출처: [공식 모델 카드](https://huggingface.co/autotrust/JEV-27B), [공식 데모 (HF Spaces)](https://huggingface.co/spaces/autotrust/JEV-27B-Demo)
+
+#### 공식 발표 벤치마크 점수
+
+- `JevBench`: **88.7%** — [공식 출처](https://huggingface.co/autotrust/JEV-27B)
+- `Kev`: **83.75%** — [공식 출처](https://huggingface.co/autotrust/JEV-27B)
+- `OpenJev text`: **73.89%** — [공식 출처](https://huggingface.co/autotrust/JEV-27B)
+- `Nimble`: **92.91%** — [공식 출처](https://huggingface.co/autotrust/JEV-27B)
+- `VitaminC`: **77.46%** — [공식 출처](https://huggingface.co/autotrust/JEV-27B)
+- `MASSIVE-en`: **87.71%** — [공식 출처](https://huggingface.co/autotrust/JEV-27B)
+- `Six-group mean`: **84.07%** — [공식 출처](https://huggingface.co/autotrust/JEV-27B)
+- `HumanEval (System 2)`: **78.0%** — [공식 출처](https://huggingface.co/autotrust/JEV-27B)
+- 점수 메모: 공식 카드가 AutoTrust 자체 측정으로 게시한 값(2026-09-27 카드 업데이트). System 1 충실도(KL≈0.017)·지연·처리량 등 비% 지표는 점수표 제외.
+- 모델 메모: AutoTrust AI의 2세대 System 1+System 2 통합 오픈 모델 — 동일 가중치 하나로 typed decisions(System 1, choice/score/noul+교정확률)와 일반 생성(System 2, 미수정 Qwen3.8-27B)을 요청별 라우팅. 6종 공개 결정 벤치마크 평균에서 TypeSafe Jev 1.13 대비 +0.22pt를 자체 측정치로 보고.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-29`
+
 ## 제외·보류한 기존 레코드
 
 ### `model-045` — LongCat-2.0 Preview
@@ -6593,12 +6832,6 @@
 - 제외 사유: 2026-09-18 Z.ai API에 추가된 GLM-5.3-Flash와 동일 가중치(320B/18B)의 고속 서빙 티어(~200 tok/s, 약 2.5× 가격). 신규 가중치·벤치마크 없이 서빙 옵션만 달라 별도 모델로 수록하지 않음 — 동일 가중치 서빙 변형 제외 규정.
 - 확인 출처: [공식 1차 출처](https://docs.z.ai/guides/vlm/glm-5.3-flash)
 
-### `excluded-2026-09-23-3` — Laya
-
-- 원래 이름: `Laya (Convai Innovations)`
-- 제외 사유: ModernBERT-large 기반 비자기회귀 System 1 결정 모델(421M, 2026-09-18 공개). 입력 상태+질문에 확률·판정만 반환하고 텍스트를 생성하지 않아 LLM 수록 범위 밖.
-- 확인 출처: [공식 1차 출처](https://huggingface.co/convaiinnovations/laya)
-
 ### `excluded-2026-09-23-4` — Apollo
 
 - 원래 이름: `Apollo (Austrian Academy of Sciences × Mistral AI × Reply)`
@@ -6611,11 +6844,35 @@
 - 제외 사유: 9월 중 일부 보도에서 재언급됐으나 실제 공식 출시는 2025-08-05로 본 타임라인 기간(2026년) 밖 — 기간 외 모델이라 미수록.
 - 확인 출처: [공식 1차 출처](https://openai.com/index/introducing-gpt-oss/)
 
+### `excluded-2026-09-29-1` — Aion 3.5 / Aion 3.5 Mini
+
+- 원래 이름: `aion-labs/aion-3.5, aion-labs/aion-3.5-mini`
+- 제외 사유: GLM 계열 모델들이 응답 하나를 협업 생성하는 멀티모델 롤플레잉·스토리텔링 시스템 — 단일 파운데이션 모델 가중치가 아니라 모델 조합/라우팅 제품이라 수록 범위 밖.
+- 확인 출처: [공식 1차 출처](https://www.aionlabs.ai/docs/models/)
+
+### `excluded-2026-09-29-2` — Ember-1
+
+- 원래 이름: `fireworks/ember-1`
+- 제외 사유: Moonshot Kimi K3(model-087)를 Fireworks가 포스트트레인한 연구 프리뷰 — 기본 K3 옆의 서버리스 서빙 옵션(2주 한정, 수요에 따라 상시화)으로 자체 가중치 공개·정식 출시 조건이 아직 충족되지 않아 보류.
+- 확인 출처: [공식 1차 출처](https://fireworks.ai/blog/ember-1)
+
+### `excluded-2026-09-29-3` — Jev Router
+
+- 원래 이름: `typesafe/jev-router`
+- 제외 사유: TypeSafe의 OpenRouter 라우팅 엔드포인트 — 기존 model-184 Jev가 요청별 모델·effort를 선택하는 제품 계층으로 별도 신규 파운데이션 모델이 아니므로 미수록.
+- 확인 출처: [공식 1차 출처](https://openrouter.ai/typesafe/jev-router)
+
+### `excluded-2026-09-29-4` — Space Bunny Alpha
+
+- 원래 이름: `stealth/space-bunny-alpha`
+- 제외 사유: 2026-09-23 OpenRouter에 등장한 익명 스텔스 모델 — 커뮤니티 토크나이저 핑거프린팅이 MiniMax M3.1-Flash-Preview(model-192) 연계를 추정했으나 개발사의 공식 확인이 없어 보류. Union Alpha와 동일 판정.
+- 확인 출처: [공식 1차 출처](https://openrouter.ai/stealth/space-bunny-alpha)
+
 ## 패밀리 흐름
 
 - **Qwen:** `Qwen3.5` → `Qwen3.6` → `Qwen3.7` → `Qwen3.8` → `Qwen3.8-Flash-Next` → `Qwen3.8-Omni-Flash`
 - **DeepSeek:** `DeepSeek-V4 Preview` → `DeepSeek-V4-Flash-0731` → `DeepSeek-V4-Pro-0813` → `DeepSeek-V4-Flash-Vision-Exp` → `DeepSeek-V4.1-Flash`
-- **Claude:** `Opus 4.6` → `Sonnet 4.6` → `Opus 4.7` → `Opus 4.8` → `Fable/Mythos 5` → `Sonnet 5` → `Opus 5` → `Fable/Mythos 5.1` → `Opus 5.5`
+- **Claude:** `Opus 4.6` → `Sonnet 4.6` → `Opus 4.7` → `Opus 4.8` → `Fable/Mythos 5` → `Sonnet 5` → `Opus 5` → `Fable/Mythos 5.1` → `Opus 5.5` → `Sonnet 5.5`
 - **GPT:** `GPT-5.3` → `GPT-5.4` → `GPT-5.5` → `GPT-5.6` → `GPT-6 Astra` → `GPT-6 Astra Pro` → `GPT-6 Sol` → `GPT-6 Luna`
 - **Gemini:** `Gemini 3.5 Flash` → `Gemini 3.6 Flash` → `Gemini 3.7 Flash` → `Gemini 3.8 Flash` → `Gemini 3.8 Live` → `Gemini 3.8 Live Extended Thinking`
 - **GLM:** `GLM-5` → `GLM-5.1` → `GLM-5.2` → `GLM-5.3` → `GLM-5.3-Flash`
@@ -6632,6 +6889,7 @@
 - **Grok:** `Grok 4.5` → `Grok 4.6` → `Grok 4.7`
 - **Solar:** `Solar Open 2` → `Solar Pro 4` → `Solar Mini 4`
 - **Nex:** `Nex-N2.5-mini` → `Nex-N2.5-Pro` → `Nex-N2.5-Max`
+- **JEV:** `JEV-9B` → `JEV-27B`
 
 ## 재현 명령
 

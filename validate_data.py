@@ -61,12 +61,17 @@ OFFICIAL_HOSTS = {
     "kimi.com",
     "lgresearch.ai",
     "mimo.xiaomi.com",
+    # MiniMax developer docs (platform.minimax.io) — M3.1-Flash-Preview spec
+    # sheet. Added 2026-09-29.
+    "minimax.io",
     # Nex-AGI official site — Nex-N2.5 family parameter/base-model disclosure.
     # Added 2026-09-23.
     "nex-agi.com",
     "navercorp.com",
     "news.sktelecom.com",
     "openai.com",
+    # Perceptron official blog — Mk1.5 launch post. Added 2026-09-29.
+    "perceptron.inc",
     "poolside.ai",
     "qwen.ai",
     "qwencloud.com",

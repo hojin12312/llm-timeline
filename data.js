@@ -14868,6 +14868,653 @@ const TIMELINE_DATA = [
       "reviewed_on": "2026-09-27",
       "policy": "official-primary-only"
     }
+  },
+  {
+    "id": "model-188",
+    "name": "Laya",
+    "date": "2026-09-18",
+    "sortDate": "2026-09-18",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "Convai Innovations",
+    "family": "Laya",
+    "type": "System One / structured decision",
+    "category": "LLM",
+    "status": "GA",
+    "parameters": "421M (laya-multilingual 322M·laya-typed-decisions 421M 형제 체크포인트)",
+    "parameter_status": "verified",
+    "architecture": "ModernBERT-large encoder + two-layer decision head (비자기회귀)",
+    "modalities": [
+      "text"
+    ],
+    "focus": [
+      "structured decisions",
+      "classification",
+      "routing",
+      "scoring",
+      "guardrails"
+    ],
+    "open_weights": true,
+    "license": "Apache 2.0",
+    "context": "512 (multilingual 1,024, max_len 8,192 지원)",
+    "languages": "English (다국어 체크포인트 100+ 언어)",
+    "variants": [
+      "laya",
+      "laya-multilingual",
+      "laya-typed-decisions"
+    ],
+    "reasoning_effort": [],
+    "availability": "Hugging Face·PyPI·npm·GitHub·laya-serve/MCP",
+    "note": "Convai Innovations의 비자기회귀 System 1 결정 모델 — state+typed questions(choice/score/noul)를 단일 forward pass(테스트 환경 ~33ms)로 처리해 교정 확률을 반환. RLCD(엄밀 적절 스코어링 규칙 RL)로 학습, laya-typed-decisions는 개발사 비공개 데이터셋 사용. 9/23 감사에서 '텍스트 미생성'으로 제외됐으나 pip/npm 패키지·self-host HTTP 서버·3종 공개 체크포인트를 갖춘 독립 제품으로, System One 예외 규정(Jev·Solar Jev·CLM-8B 선례)에 따라 되돌림 수록.",
+    "benchmarks": {},
+    "benchmark_sources": {},
+    "benchmark_note": "공식 카드의 정확도는 0~1 분율 표기(typed-decisions 0.766·AG News 0.950·DAIR Emotion 0.595 등, routed 기준) — % 비환산 원칙에 따라 점수표에 미수록.",
+    "official_id": "convaiinnovations/laya",
+    "official_sources": [
+      {
+        "label": "공식 모델 카드",
+        "url": "https://huggingface.co/convaiinnovations/laya"
+      },
+      {
+        "label": "공식 GitHub 저장소",
+        "url": "https://github.com/NandhaKishorM/laya"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/convaiinnovations/laya",
+    "parameter_source": "https://huggingface.co/convaiinnovations/laya",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-29",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-189",
+    "name": "JEV-9B",
+    "date": "2026-09-23",
+    "sortDate": "2026-09-23",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "AutoTrust AI",
+    "family": "JEV",
+    "type": "System One / structured decision",
+    "category": "LLM",
+    "status": "GA",
+    "parameters": "9B (Qwen3.5-9B backbone + 40.2M trained System 1 params)",
+    "parameter_status": "verified",
+    "architecture": "Blocks of Experts — frozen Qwen3.5-9B + detachable decision block",
+    "modalities": [
+      "text"
+    ],
+    "focus": [
+      "structured decisions",
+      "routing",
+      "classification",
+      "agentic workflows"
+    ],
+    "open_weights": true,
+    "license": "Apache 2.0",
+    "context": "",
+    "languages": "English",
+    "variants": [],
+    "reasoning_effort": [
+      "enable_thinking on/off (System 2)"
+    ],
+    "availability": "Hugging Face·vLLM (OpenAI-compatible)",
+    "note": "AutoTrust AI의 첫 System 1+System 2 통합 오픈 모델. 동일 가중치로 System 2(Qwen3.5-9B, bit-identical)와 System 1(40.2M 결정 블록, typed decisions)을 요청별 라우팅. TypeSafe Jev 1.13과 KL≈0.019로 분포 수준 구분 불가라고 발표. 후속 상위 모델 JEV-27B(9/28).",
+    "benchmarks": {
+      "HumanEval (System 2)": 70.7,
+      "decision-models-under-pressure (16 options)": 90.0
+    },
+    "benchmark_sources": {
+      "HumanEval (System 2)": "https://huggingface.co/autotrust/JEV-9B",
+      "decision-models-under-pressure (16 options)": "https://huggingface.co/autotrust/JEV-9B"
+    },
+    "benchmark_note": "공식 카드 인쇄값(AutoTrust 재측정). System 1 충실도 지표(KL≈0.019, noul AUROC 0.994 등)는 % 척도가 아니라 점수표 미수록. 6종 공개 결정 벤치마크(JevBench·Kev·OpenJev·Nimble·VitaminC·MASSIVE-en)는 JEV-9B 행 미측정.",
+    "official_id": "autotrust/JEV-9B",
+    "official_sources": [
+      {
+        "label": "공식 모델 카드",
+        "url": "https://huggingface.co/autotrust/JEV-9B"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/autotrust/JEV-9B",
+    "parameter_source": "https://huggingface.co/autotrust/JEV-9B",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-29",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-190",
+    "name": "VeriLoop E2",
+    "date": "2026-09-22",
+    "sortDate": "2026-09-22",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "Tsinghua SIGS Robot Lab",
+    "family": "VeriLoop",
+    "type": "MLLM / reasoning",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "27B (Qwen3.8-27B post-trained)",
+    "parameter_status": "verified",
+    "architecture": "Qwen3.8-27B post-trained — VeriLoop-Governed Recurrence(생성·검증 권한 분리) 대응 설계",
+    "modalities": [
+      "text",
+      "image"
+    ],
+    "focus": [
+      "code agents",
+      "mathematics",
+      "scientific reasoning",
+      "long-horizon verifiable problem solving"
+    ],
+    "open_weights": true,
+    "license": "Apache 2.0",
+    "context": "262,144",
+    "languages": "",
+    "variants": [
+      "BF16",
+      "GGUF (BF16→IQ1_M ladder)"
+    ],
+    "reasoning_effort": [],
+    "availability": "Hugging Face·vLLM·llama.cpp(GGUF)",
+    "note": "Tsinghua SIGS Robot Lab의 27B 포스트트레인 모델 — 1,841,831 레코드로 학습. VGR 프레임워크는 생성과 검증 권한을 분리하고 외부 Harness가 증거 수용·롤백·완료 판정을 관리(모델은 Verifiable Action Protocol로 행동). 9종 공개 벤치 평가와 평가 증거 데이터셋을 함께 공개(데이터셋은 gated).",
+    "benchmarks": {
+      "SWE-bench Pro": 76.2,
+      "Terminal-Bench 2.1": 88.8,
+      "Terminal-Bench 3.0": 29.7,
+      "Terminal-Bench 4.0": 37.9,
+      "DeepSWE v1.1": 64.6,
+      "SWE-Marathon v1.1": 45.0,
+      "AIME 2026": 98.3,
+      "GPQA Diamond": 93.9,
+      "MathArena Apex 2025": 89.6
+    },
+    "benchmark_sources": {
+      "SWE-bench Pro": "https://huggingface.co/tsinghua-sigs-robot-lab/VeriLoop-E2",
+      "Terminal-Bench 2.1": "https://huggingface.co/tsinghua-sigs-robot-lab/VeriLoop-E2",
+      "Terminal-Bench 3.0": "https://huggingface.co/tsinghua-sigs-robot-lab/VeriLoop-E2",
+      "Terminal-Bench 4.0": "https://huggingface.co/tsinghua-sigs-robot-lab/VeriLoop-E2",
+      "DeepSWE v1.1": "https://huggingface.co/tsinghua-sigs-robot-lab/VeriLoop-E2",
+      "SWE-Marathon v1.1": "https://huggingface.co/tsinghua-sigs-robot-lab/VeriLoop-E2",
+      "AIME 2026": "https://huggingface.co/tsinghua-sigs-robot-lab/VeriLoop-E2",
+      "GPQA Diamond": "https://huggingface.co/tsinghua-sigs-robot-lab/VeriLoop-E2",
+      "MathArena Apex 2025": "https://huggingface.co/tsinghua-sigs-robot-lab/VeriLoop-E2"
+    },
+    "benchmark_note": "공식 모델 카드 인쇄값.",
+    "official_id": "tsinghua-sigs-robot-lab/VeriLoop-E2",
+    "official_sources": [
+      {
+        "label": "공식 모델 카드",
+        "url": "https://huggingface.co/tsinghua-sigs-robot-lab/VeriLoop-E2"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/tsinghua-sigs-robot-lab/VeriLoop-E2",
+    "parameter_source": "https://huggingface.co/tsinghua-sigs-robot-lab/VeriLoop-E2",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-29",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-191",
+    "name": "Perceptron Mk1.5",
+    "date": "2026-09-25",
+    "sortDate": "2026-09-25",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "Perceptron",
+    "family": "Perceptron Mk",
+    "type": "MLLM",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "정확한 수치 미공개",
+    "parameter_status": "undisclosed",
+    "architecture": "",
+    "modalities": [
+      "text",
+      "image",
+      "video",
+      "audio"
+    ],
+    "focus": [
+      "embodied agents",
+      "object tracking",
+      "egocentric video",
+      "tool use",
+      "sub-agents",
+      "visual reasoning"
+    ],
+    "open_weights": false,
+    "license": "",
+    "context": "32K (멀티모달)",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "Perceptron Platform·SDK(pip)·OpenRouter",
+    "note": "Perceptron의 embodied agent 제어 MLLM — 텍스트·이미지·비디오·오디오 입력을 텍스트와 좌표(points/boxes/polygons)·clips·object tracks로 출력. Mk1 대비 네이티브 오디오·비디오 트래킹·웹검색·서브에이전트 호출 추가, 종단간 2~5× 단축을 공식 주장. API ID perceptron-mk1.5, $0.15/$1.50 per 1M 토큰.",
+    "benchmarks": {},
+    "benchmark_sources": {},
+    "benchmark_note": "공식 발표의 벤치마크는 차트 이미지로만 게시(비디오 트래킹·에고센트릭 비디오·오디오비주얼·검색 툴 비교 표)돼 인쇄 % 수치를 확인할 수 없어 점수표 미수록.",
+    "official_id": "perceptron-mk1.5",
+    "official_sources": [
+      {
+        "label": "공식 발표",
+        "url": "https://www.perceptron.inc/blog/introducing-perceptron-mk1-5"
+      }
+    ],
+    "release_date_source": "https://www.perceptron.inc/blog/introducing-perceptron-mk1-5",
+    "parameter_source": "https://www.perceptron.inc/blog/introducing-perceptron-mk1-5",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-29",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-192",
+    "name": "MiniMax M3.1-Flash-Preview",
+    "date": "2026-09-27",
+    "sortDate": "2026-09-27",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "MiniMax",
+    "family": "MiniMax M",
+    "type": "MLLM",
+    "category": "MLLM",
+    "status": "Preview",
+    "parameters": "정확한 수치 미공개",
+    "parameter_status": "undisclosed",
+    "architecture": "",
+    "modalities": [
+      "text",
+      "image",
+      "video"
+    ],
+    "focus": [
+      "coding",
+      "bug fixing",
+      "feature development",
+      "regression testing"
+    ],
+    "open_weights": false,
+    "license": "",
+    "context": "1M (1,000,000 tokens)",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [
+      "low",
+      "medium",
+      "high",
+      "xhigh",
+      "max"
+    ],
+    "availability": "MiniMax Code·Token Plan",
+    "note": "MiniMax의 최신 텍스트 생성 모델 — 9/27 MiniMax Code에 선공개 후 9/28 공개 테스트. 네이티브 멀티모달 입력(텍스트·이미지·비디오, 텍스트 출력)·1M 컨텍스트·5단계 thinking depth. 현재 MiniMax Code·Token Plan에서만 제공(종량제 API 미오픈). 개발자 커뮤니티는 OpenRouter 스텔스 'Space Bunny Alpha'와 동일 모델 가능성을 추정했으나 공식 확인 없음(제외 원장 참조).",
+    "benchmarks": {},
+    "benchmark_sources": {},
+    "benchmark_note": "모델 카드·공식 벤치마크 미공개 — 공식 문서에 사양(1M 컨텍스트·멀티모달·thinking depth)만 기재.",
+    "official_id": "MiniMax-M3.1-Flash-Preview",
+    "official_sources": [
+      {
+        "label": "공식 모델 문서",
+        "url": "https://platform.minimax.io/docs/guides/models-intro"
+      }
+    ],
+    "release_date_source": "https://platform.minimax.io/docs/guides/models-intro",
+    "parameter_source": "https://platform.minimax.io/docs/guides/models-intro",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-29",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-193",
+    "name": "Claude Sonnet 5.5",
+    "date": "2026-09-28",
+    "sortDate": "2026-09-28",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "Anthropic",
+    "family": "Claude",
+    "type": "MLLM",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "정확한 수치 미공개",
+    "parameter_status": "undisclosed",
+    "architecture": "",
+    "modalities": [
+      "text",
+      "image"
+    ],
+    "focus": [
+      "agentic coding",
+      "computer use",
+      "knowledge work"
+    ],
+    "open_weights": false,
+    "license": "",
+    "context": "",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "Claude apps·Claude API·AWS Bedrock·Google Cloud Vertex AI·Microsoft Foundry",
+    "note": "Claude 5.5 패밀리 두 번째 모델 — Sonnet 5 대비 출력 30%+ 고속·작업당 최대 30% 저렴($2/$10 per 1M 유지), Max effort에서 Opus 5.5와 FrontierCode 동률. Anthropic 최초로 실시간 사이버 리스크 분류·고위험 요청 Sonnet 5 폴백·추론 추출 차단 세이프가드를 탑재한 Sonnet. API ID claude-sonnet-5-5; Haiku 5.5는 후속 예정.",
+    "benchmarks": {
+      "Terminal-Bench 4.0": 70.6,
+      "FrontierCode 1.1 Main (Max)": 46.2,
+      "FrontierCode 1.1 Main (Xhigh)": 52.1,
+      "CursorBench 4.0": 55.5,
+      "Humanity's Last Exam (w/ tools)": 64.5,
+      "OSWorld 2.1 (partial)": 80.1,
+      "Chartography (no tools)": 61.6
+    },
+    "benchmark_sources": {
+      "Terminal-Bench 4.0": "https://www.anthropic.com/claude-sonnet-5-5",
+      "FrontierCode 1.1 Main (Max)": "https://www.anthropic.com/claude-sonnet-5-5",
+      "FrontierCode 1.1 Main (Xhigh)": "https://www.anthropic.com/claude-sonnet-5-5",
+      "CursorBench 4.0": "https://www.anthropic.com/claude-sonnet-5-5",
+      "Humanity's Last Exam (w/ tools)": "https://www.anthropic.com/claude-sonnet-5-5",
+      "OSWorld 2.1 (partial)": "https://www.anthropic.com/claude-sonnet-5-5",
+      "Chartography (no tools)": "https://www.anthropic.com/claude-sonnet-5-5"
+    },
+    "benchmark_note": "Anthropic 공식 발표 표 값. FrontierCode는 effort 열별(Max 46.2/Xhigh 52.1) 병기 — 공식 각주에 따르면 Max에서는 코드리뷰 스킬 기동으로 하향. GDPval-AA v2.1 1844·AA-Briefcase v1.1 1811은 Artificial Analysis가 사전 배포본을 측정한 비% 지표라 점수표에서 제외.",
+    "official_id": "claude-sonnet-5-5",
+    "official_sources": [
+      {
+        "label": "공식 모델 페이지",
+        "url": "https://www.anthropic.com/claude-sonnet-5-5"
+      }
+    ],
+    "release_date_source": "https://www.anthropic.com/claude-sonnet-5-5",
+    "parameter_source": "https://www.anthropic.com/claude-sonnet-5-5",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-29",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-194",
+    "name": "Holo4-27B",
+    "date": "2026-09-28",
+    "sortDate": "2026-09-28",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "H Company",
+    "family": "Holo4",
+    "type": "MLLM / computer-use agent",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "27B (dense)",
+    "parameter_status": "verified",
+    "architecture": "Qwen3.8-27B 기반 dense",
+    "modalities": [
+      "image",
+      "text"
+    ],
+    "focus": [
+      "computer use",
+      "GUI grounding",
+      "tool calls",
+      "agentic workflows"
+    ],
+    "open_weights": true,
+    "license": "CC BY-NC 4.0",
+    "context": "262,144",
+    "languages": "",
+    "variants": [
+      "BF16",
+      "FP8",
+      "NVFP4",
+      "Q4 GGUF"
+    ],
+    "reasoning_effort": [],
+    "availability": "H Models API·Hugging Face·vLLM·SGLang",
+    "note": "H Company의 컴퓨터유스 VLM — GUI·코드·MCP·API 인터페이스를 단일 모델로 사용해 데스크톱·웹·Android·샌드박스를 구동. Qwen3.8-27B 기반 27B dense, SFT+RL(Agentic Task Factory 환경 생성)로 학습, 평가 트라젝토리 전량 공개. OSWorld 85.2%는 $0.08/task, OSWorld 2.0 61.7%는 $1.22/task 설정 측정. 비상업 라이선스.",
+    "benchmarks": {
+      "OSWorld": 85.2,
+      "OSWorld 2.0": 61.7,
+      "AutomationBench": 45.4
+    },
+    "benchmark_sources": {
+      "OSWorld": "https://huggingface.co/Hcompany/Holo4-27B",
+      "OSWorld 2.0": "https://huggingface.co/Hcompany/Holo4-27B",
+      "AutomationBench": "https://huggingface.co/Hcompany/Holo4-27B"
+    },
+    "benchmark_note": "공식 모델 카드·블로그 인쇄값. 비교 대상 모델 전체 표는 이미지로 게시돼 텍스트 인쇄분만 수록.",
+    "official_id": "Hcompany/Holo4-27B",
+    "official_sources": [
+      {
+        "label": "공식 모델 카드",
+        "url": "https://huggingface.co/Hcompany/Holo4-27B"
+      },
+      {
+        "label": "공식 발표 (HF Blog)",
+        "url": "https://huggingface.co/blog/Hcompany/holo4"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/blog/Hcompany/holo4",
+    "parameter_source": "https://huggingface.co/Hcompany/Holo4-27B",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-29",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-195",
+    "name": "Holo4-35B-A3B",
+    "date": "2026-09-28",
+    "sortDate": "2026-09-28",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "H Company",
+    "family": "Holo4",
+    "type": "MLLM / computer-use agent",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "35B-A3B (MoE)",
+    "parameter_status": "verified",
+    "architecture": "Qwen3.6-35B-A3B 기반 MoE",
+    "modalities": [
+      "image",
+      "text"
+    ],
+    "focus": [
+      "computer use",
+      "GUI grounding",
+      "tool calls",
+      "agentic workflows"
+    ],
+    "open_weights": true,
+    "license": "Apache 2.0",
+    "context": "262,144",
+    "languages": "",
+    "variants": [
+      "BF16",
+      "FP8"
+    ],
+    "reasoning_effort": [],
+    "availability": "H Models API·Hugging Face·vLLM·SGLang",
+    "note": "H Company의 컴퓨터유스 VLM — Qwen3.6-35B-A3B 기반 MoE로 활성 파라미터가 작아 서빙 효율을 노린 Apache 2.0 개방 가중치. 같은 Holo4 포스트트레이닝(SFT+RL)·262K 컨텍스트·4종 인터페이스(GUI/코드/MCP/API) 지원.",
+    "benchmarks": {
+      "OSWorld 2.0": 30.9,
+      "AutomationBench": 34.5
+    },
+    "benchmark_sources": {
+      "OSWorld 2.0": "https://huggingface.co/Hcompany/Holo4-35B-A3B",
+      "AutomationBench": "https://huggingface.co/Hcompany/Holo4-35B-A3B"
+    },
+    "benchmark_note": "공식 모델 카드·블로그 인쇄값. 비교 대상 모델 전체 표는 이미지로 게시돼 텍스트 인쇄분만 수록.",
+    "official_id": "Hcompany/Holo4-35B-A3B",
+    "official_sources": [
+      {
+        "label": "공식 모델 카드",
+        "url": "https://huggingface.co/Hcompany/Holo4-35B-A3B"
+      },
+      {
+        "label": "공식 발표 (HF Blog)",
+        "url": "https://huggingface.co/blog/Hcompany/holo4"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/blog/Hcompany/holo4",
+    "parameter_source": "https://huggingface.co/Hcompany/Holo4-35B-A3B",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-29",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-196",
+    "name": "Holotron4-30B-A3B",
+    "date": "2026-09-28",
+    "sortDate": "2026-09-28",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "H Company",
+    "family": "Holo4",
+    "type": "MLLM / computer-use agent",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "30B-A3B",
+    "parameter_status": "verified",
+    "architecture": "NemotronH Nano Omni(NVIDIA Nemotron 3 Nano Omni) 기반",
+    "modalities": [
+      "image",
+      "text"
+    ],
+    "focus": [
+      "computer use",
+      "GUI grounding",
+      "tool calls",
+      "agentic workflows"
+    ],
+    "open_weights": true,
+    "license": "NVIDIA Open Model Agreement",
+    "context": "262,144",
+    "languages": "",
+    "variants": [
+      "BF16",
+      "FP8"
+    ],
+    "reasoning_effort": [],
+    "availability": "H Models API·Hugging Face·vLLM·SGLang",
+    "note": "H Company의 Holotron4 Nano — 자사 Holo4 포스트트레이닝 스택을 Nemotron 3 Nano Omni에 적용해 만든 30B-A3B 컴퓨터유스 VLM(NVIDIA Nemotron Coalition 협업). GUI 워크플로·MCP/API/코드 샌드박스 환경에서 베이스 대비 절대 %p 개선을 공식 보고.",
+    "benchmarks": {
+      "OSWorld": 76.3,
+      "OSWorld 2.0": 7.9,
+      "AutomationBench": 35.6,
+      "PinchBench": 88.6,
+      "ALE (Linux, code)": 8.5
+    },
+    "benchmark_sources": {
+      "OSWorld": "https://huggingface.co/Hcompany/Holotron4-30B-A3B",
+      "OSWorld 2.0": "https://huggingface.co/Hcompany/Holotron4-30B-A3B",
+      "AutomationBench": "https://huggingface.co/Hcompany/Holotron4-30B-A3B",
+      "PinchBench": "https://huggingface.co/Hcompany/Holotron4-30B-A3B",
+      "ALE (Linux, code)": "https://huggingface.co/Hcompany/Holotron4-30B-A3B"
+    },
+    "benchmark_note": "공식 모델 카드·블로그 인쇄값. 비교 대상 모델 전체 표는 이미지로 게시돼 텍스트 인쇄분만 수록.",
+    "official_id": "Hcompany/Holotron4-30B-A3B",
+    "official_sources": [
+      {
+        "label": "공식 모델 카드",
+        "url": "https://huggingface.co/Hcompany/Holotron4-30B-A3B"
+      },
+      {
+        "label": "공식 발표 (HF Blog)",
+        "url": "https://huggingface.co/blog/Hcompany/holo4"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/blog/Hcompany/holo4",
+    "parameter_source": "https://huggingface.co/Hcompany/Holotron4-30B-A3B",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-29",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-197",
+    "name": "JEV-27B",
+    "date": "2026-09-28",
+    "sortDate": "2026-09-28",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "AutoTrust AI",
+    "family": "JEV",
+    "type": "System One / structured decision",
+    "category": "LLM",
+    "status": "GA",
+    "parameters": "27B (Qwen3.8-27B backbone + 108.9M trained System 1 params)",
+    "parameter_status": "verified",
+    "architecture": "Blocks of Experts — frozen Qwen3.8-27B + detachable decision block",
+    "modalities": [
+      "text"
+    ],
+    "focus": [
+      "structured decisions",
+      "routing",
+      "classification",
+      "fraud screening",
+      "agentic workflows"
+    ],
+    "open_weights": true,
+    "license": "Apache 2.0",
+    "context": "",
+    "languages": "English",
+    "variants": [],
+    "reasoning_effort": [
+      "enable_thinking on/off (System 2)"
+    ],
+    "availability": "Hugging Face·vLLM (OpenAI-compatible)·HF Space 데모",
+    "note": "AutoTrust AI의 2세대 System 1+System 2 통합 오픈 모델 — 동일 가중치 하나로 typed decisions(System 1, choice/score/noul+교정확률)와 일반 생성(System 2, 미수정 Qwen3.8-27B)을 요청별 라우팅. 6종 공개 결정 벤치마크 평균에서 TypeSafe Jev 1.13 대비 +0.22pt를 자체 측정치로 보고.",
+    "benchmarks": {
+      "JevBench": 88.7,
+      "Kev": 83.75,
+      "OpenJev text": 73.89,
+      "Nimble": 92.91,
+      "VitaminC": 77.46,
+      "MASSIVE-en": 87.71,
+      "Six-group mean": 84.07,
+      "HumanEval (System 2)": 78.0
+    },
+    "benchmark_sources": {
+      "JevBench": "https://huggingface.co/autotrust/JEV-27B",
+      "Kev": "https://huggingface.co/autotrust/JEV-27B",
+      "OpenJev text": "https://huggingface.co/autotrust/JEV-27B",
+      "Nimble": "https://huggingface.co/autotrust/JEV-27B",
+      "VitaminC": "https://huggingface.co/autotrust/JEV-27B",
+      "MASSIVE-en": "https://huggingface.co/autotrust/JEV-27B",
+      "Six-group mean": "https://huggingface.co/autotrust/JEV-27B",
+      "HumanEval (System 2)": "https://huggingface.co/autotrust/JEV-27B"
+    },
+    "benchmark_note": "공식 카드가 AutoTrust 자체 측정으로 게시한 값(2026-09-27 카드 업데이트). System 1 충실도(KL≈0.017)·지연·처리량 등 비% 지표는 점수표 제외.",
+    "official_id": "autotrust/JEV-27B",
+    "official_sources": [
+      {
+        "label": "공식 모델 카드",
+        "url": "https://huggingface.co/autotrust/JEV-27B"
+      },
+      {
+        "label": "공식 데모 (HF Spaces)",
+        "url": "https://huggingface.co/spaces/autotrust/JEV-27B-Demo"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/autotrust/JEV-27B",
+    "parameter_source": "https://huggingface.co/autotrust/JEV-27B",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-29",
+      "policy": "official-primary-only"
+    }
   }
 ];
 
@@ -15147,6 +15794,36 @@ const COMPANY_META = {
     "flag": "🇺🇸",
     "color": "from-gray-400 to-slate-500",
     "badge": "bg-slate-400/10 text-slate-300 border-slate-400/30"
+  },
+  "Convai Innovations": {
+    "country": "IN",
+    "flag": "🇮🇳",
+    "gradient": "linear-gradient(135deg,#f97316,#38bdf8)",
+    "badge": "PyPI·npm 생태계의 System One 결정 모델"
+  },
+  "Tsinghua SIGS Robot Lab": {
+    "country": "CN",
+    "flag": "🇨🇳",
+    "gradient": "linear-gradient(135deg,#7c3aed,#06b6d4)",
+    "badge": "칭화대 심천 국제대학원 로봇 연구실"
+  },
+  "Perceptron": {
+    "country": "US",
+    "flag": "🇺🇸",
+    "gradient": "linear-gradient(135deg,#0ea5e9,#a855f7)",
+    "badge": "Embodied agent 제어 MLLM"
+  },
+  "H Company": {
+    "country": "FR",
+    "flag": "🇫🇷",
+    "gradient": "linear-gradient(135deg,#2563eb,#f59e0b)",
+    "badge": "Computer-use 에이전트 모델"
+  },
+  "AutoTrust AI": {
+    "country": "SG",
+    "flag": "🇸🇬",
+    "gradient": "linear-gradient(135deg,#10b981,#6366f1)",
+    "badge": "System 1+System 2 통합 오픈 모델"
   }
 };
 
@@ -15183,7 +15860,8 @@ const FAMILY_FLOWS = [
       "Sonnet 5",
       "Opus 5",
       "Fable/Mythos 5.1",
-      "Opus 5.5"
+      "Opus 5.5",
+      "Sonnet 5.5"
     ]
   },
   {
@@ -15333,13 +16011,20 @@ const FAMILY_FLOWS = [
       "Nex-N2.5-Pro",
       "Nex-N2.5-Max"
     ]
+  },
+  {
+    "family": "JEV",
+    "steps": [
+      "JEV-9B",
+      "JEV-27B"
+    ]
   }
 ];
 
 const UNCONFIRMED_DATA = [];
 
 const SCOPE_DATA = {
-  "period": "2026-01-01 ~ 2026-09-27",
+  "period": "2026-01-01 ~ 2026-09-29",
   "scope": [
     "LLM (Large Language Models)",
     "MLLM / VLM / Omni foundation models"
@@ -15356,7 +16041,7 @@ const SCOPE_DATA = {
   ],
   "benchmark_policy": "공식 모델 카드·기술 보고서·개발사 공식 발표문에 모델 제공자가 직접 명시한 점수만 수록. Chatbot Arena/ELO, Artificial Analysis, 제3자 leaderboard, 추정·역산 점수는 제외.",
   "parameter_policy": "개발사가 명시한 총/활성 파라미터만 사용. 공개하지 않은 값은 정확한 수치 미공개로 표시하고, 모델 크기·가중치 파일 용량·양자화 크기를 파라미터 수로 대체하지 않음.",
-  "reviewed_on": "2026-09-27"
+  "reviewed_on": "2026-09-29"
 };
 
 const AUDIT_EXCLUDED = [
@@ -15490,13 +16175,6 @@ const AUDIT_EXCLUDED = [
     "source": "https://docs.z.ai/guides/vlm/glm-5.3-flash"
   },
   {
-    "id": "excluded-2026-09-23-3",
-    "name": "Laya",
-    "original_name": "Laya (Convai Innovations)",
-    "reason": "ModernBERT-large 기반 비자기회귀 System 1 결정 모델(421M, 2026-09-18 공개). 입력 상태+질문에 확률·판정만 반환하고 텍스트를 생성하지 않아 LLM 수록 범위 밖.",
-    "source": "https://huggingface.co/convaiinnovations/laya"
-  },
-  {
     "id": "excluded-2026-09-23-4",
     "name": "Apollo",
     "original_name": "Apollo (Austrian Academy of Sciences × Mistral AI × Reply)",
@@ -15509,5 +16187,45 @@ const AUDIT_EXCLUDED = [
     "original_name": "OpenAI gpt-oss (2025-08-05 출시)",
     "reason": "9월 중 일부 보도에서 재언급됐으나 실제 공식 출시는 2025-08-05로 본 타임라인 기간(2026년) 밖 — 기간 외 모델이라 미수록.",
     "source": "https://openai.com/index/introducing-gpt-oss/"
+  },
+  {
+    "id": "excluded-2026-09-29-1",
+    "name": "Aion 3.5 / Aion 3.5 Mini",
+    "original_name": "aion-labs/aion-3.5, aion-labs/aion-3.5-mini",
+    "date": "2026-09-23",
+    "company": "AionLabs",
+    "reason": "GLM 계열 모델들이 응답 하나를 협업 생성하는 멀티모델 롤플레잉·스토리텔링 시스템 — 단일 파운데이션 모델 가중치가 아니라 모델 조합/라우팅 제품이라 수록 범위 밖.",
+    "source": "https://www.aionlabs.ai/docs/models/",
+    "reviewed_on": "2026-09-29"
+  },
+  {
+    "id": "excluded-2026-09-29-2",
+    "name": "Ember-1",
+    "original_name": "fireworks/ember-1",
+    "date": "2026-09-23",
+    "company": "Fireworks AI",
+    "reason": "Moonshot Kimi K3(model-087)를 Fireworks가 포스트트레인한 연구 프리뷰 — 기본 K3 옆의 서버리스 서빙 옵션(2주 한정, 수요에 따라 상시화)으로 자체 가중치 공개·정식 출시 조건이 아직 충족되지 않아 보류.",
+    "source": "https://fireworks.ai/blog/ember-1",
+    "reviewed_on": "2026-09-29"
+  },
+  {
+    "id": "excluded-2026-09-29-3",
+    "name": "Jev Router",
+    "original_name": "typesafe/jev-router",
+    "date": "2026-09-25",
+    "company": "TypeSafe AI",
+    "reason": "TypeSafe의 OpenRouter 라우팅 엔드포인트 — 기존 model-184 Jev가 요청별 모델·effort를 선택하는 제품 계층으로 별도 신규 파운데이션 모델이 아니므로 미수록.",
+    "source": "https://openrouter.ai/typesafe/jev-router",
+    "reviewed_on": "2026-09-29"
+  },
+  {
+    "id": "excluded-2026-09-29-4",
+    "name": "Space Bunny Alpha",
+    "original_name": "stealth/space-bunny-alpha",
+    "date": "2026-09-23",
+    "company": "익명 (MiniMax 연계 추정)",
+    "reason": "2026-09-23 OpenRouter에 등장한 익명 스텔스 모델 — 커뮤니티 토크나이저 핑거프린팅이 MiniMax M3.1-Flash-Preview(model-192) 연계를 추정했으나 개발사의 공식 확인이 없어 보류. Union Alpha와 동일 판정.",
+    "source": "https://openrouter.ai/stealth/space-bunny-alpha",
+    "reviewed_on": "2026-09-29"
   }
 ];
