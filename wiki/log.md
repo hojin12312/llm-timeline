@@ -46,3 +46,20 @@ Open:
 - 라이브 GitHub Pages 배포 상태는 이번 런에서 확인하지 않음(레포 밖 대상)
 - 1차 출처 미확보 후보 재조사: Ling 3.1 Flash · Kimi K3.1 · GPT-6.1 Astra
 - SCHEMA 0.3.1 → 0.4.0 마이그레이션(언어 정책 문단) 제안 — 승인 대기
+
+## [2026-09-30] update | 9/30 감사 wiki 정합 점검 (CI 게이트 이상 발견)
+
+Source HEAD: a4d3652ad7b29ce2f1fba396ae3d8242672781eb
+Wiki:
+- updated current.md — CI 검증 게이트가 2026-09-20 이후 실행되지 않는 사실을 Active Risks에 기록(관측 근거 포함), 배포 관측(라이브 data.js 바이트 동일) 추가, Working·Next Logical Work 재분류
+- updated components/catalog-pipeline.md — CI 불변식이 "선언"과 "실제 실행"을 구분하도록 qualify
+- updated runbooks/audit-update.md — openai.com RSC 차트 페이로드·`*.github.io` React 번들 추출 절차와 차트 전용 벤치마크 처리, 푸시 전 로컬 검증 강의를 Failure Modes와 절차 8단계에 추가
+- reviewed the hand-written 2026-09-30 log entry above (left as written)
+- reviewed wiki/overview.md as changed in `1b1fd1a` inside this range — Laya·JEV-9B/27B 관련 편집이 카탈로그의 `type: System One / structured decision`과 일치해 그대로 유지
+Validation:
+- python3 <skill-dir>/core/scripts/wiki_lint.py . — PASS (0 errors, 1 warning: schema-version 0.3.1 vs template 0.4.0)
+- python3 <skill-dir>/core/scripts/wiki_state.py budget . — current 1903/2000, bootstrap 3314/6000 (추정치, 모델 토크나이저 기준 아님)
+Open:
+- `deploy-pages.yml`의 `deploy` job이 2026-09-23T13:56Z부터 `waiting`인 원인은 미확인(환경 승인/규칙 추정). 게이트 복구 전까지 푸시 전 로컬 `validate_data.py`가 유일한 게이트
+- 1차 출처 미확보 후보 재조사: Ling 3.1 Flash · Kimi K3.1 · GPT-6.1 Astra
+- SCHEMA 0.3.1 → 0.4.0 마이그레이션(언어 정책 문단) — 사용자 승인 대기, 매 런 Open에 유지

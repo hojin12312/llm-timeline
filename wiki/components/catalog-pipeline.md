@@ -26,7 +26,7 @@ updated: 2026-09-30
 - `FORBIDDEN_BENCHMARK_TERMS`(`arena`, `elo`, `artificial analysis`, `aaii`, `codearena` 등)가 벤치마크명에 포함되면 `ALLOWED_BENCHMARK_NAMES` 정확 명칭 예외가 없는 한 오류.
 - `STALE_TEXT`: 과거 정정된 잘못된 표기(예: `~30B`, `MiMo-V2-Pro`)가 활성 레코드/생성물에 재등장하면 오류.
 - `check_urls`: 호스트별 직렬화 + 재시도. 429·503은 경고, `BOT_PROTECTED_HOSTS`(`ifm.ai`, `openai.com`)의 지속 403도 경고, 그 외 호스트의 지속 403과 404/410은 실패.
-- CI: `deploy-pages.yml`이 push마다 `python3 validate_data.py`를 실행.
+- CI: `deploy-pages.yml`이 push마다 `python3 validate_data.py`를 실행하도록 선언돼 있다(워크플로 파일은 `c2de7f5` 이후 변경 없음). 선언과 실제 실행은 다르므로 현재 게이트가 돌고 있는지는 `current.md`를 볼 것.
 
 ## Important Invariants
 
