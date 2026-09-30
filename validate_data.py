@@ -51,6 +51,12 @@ OFFICIAL_HOSTS = {
     "arxiv.org",
     # Contrastive-LM CLM-8B launch repo (System One model). Added 2026-09-27.
     "github.com",
+    # GitHub Pages project sites (own-org `*.github.io`), used when a lab keeps
+    # its technical report and printed benchmark table on a project page rather
+    # than in the model card. Added 2026-09-30 for iquestlab.github.io
+    # (IQuest-Q1). Not the same registrable domain as github.com, so it needs
+    # its own entry.
+    "github.io",
     # Apple Machine Learning Research (LensVLM-9B paper page). Added 2026-09-27.
     "machinelearning.apple.com",
     # IFM / MBZUAI launch pages (K2 Horizon). Added 2026-09-08; the site serves a

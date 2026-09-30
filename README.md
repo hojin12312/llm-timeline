@@ -1,9 +1,15 @@
 # ⚡ 2026 LLM & MLLM Release Timeline
 
 > **2026년 주요 LLM / MLLM 파운데이션 모델 출시 타임라인 및 세대별 진화 계보**  
-> 기준 기간: **2026-01-01 ~ 2026-09-29** | 수록 모델: **187개** | 표기 조직: **51개**
+> 기준 기간: **2026-01-01 ~ 2026-09-30** | 수록 모델: **189개** | 표기 조직: **52개**
 
 본 레포지토리는 2026년에 발표된 전 세계 주요 LLM, MLLM, Omni 파운데이션 모델의 릴리즈 내역을 공식 1차 자료와 함께 구조화하여 인터랙티브한 웹 타임라인으로 제공하는 **GitHub Pages** 프로젝트입니다.
+
+**2026-09-30 감사 추가분 (2개):**
+- 신규 릴리스(2): OpenAI **GPT-6.1 Sol**(9/29, DevDay 2026 발표 — GPT-6 Sol 대비 에이전틱 코딩·컴퓨터 유스·전문 업무 성능 격상, Astra 표준 토큰 가격의 1/5 수준($2/$10 per 1M, 캐시 읽기 $0.10 — GPT-6 Sol 대비 50% 추가 인하), 1,050,000 컨텍스트·지식 컷오프 2026-04-30), IQuest **IQuest-Q1**(9/28, 320B-A15B 스파스 MoE CLI 에이전트 파운데이션 모델·524,288 컨텍스트·MOPD+모델 머징 후학습 — 신규 조직 🌐 국가 미공개)
+- 벤치마크: 공식 발표문 차트·시스템 카드 애드endum·프로젝트 사이트 차트의 인쇄 점수만 수록해 **신규 19개 점수**를 반영했습니다(누적 170개 모델·3,049개 점수). GPT-6.1 Sol의 발표문 본문은 절대값 대신 개선폭만 서술하므로 effort별 수치는 발표문 차트 데이터에서, HealthBench 4종은 시스템 카드 애드endum Table 7에서 확인했습니다. 사실 오류 응답 비율(Low effort 7.7% vs GPT-6 Sol 11.4%)·작업당 실행 비용은 % 척도 성능 지표가 아니므로 제외했습니다. IQuest-Q1의 8개 점수는 프로젝트 사이트(React 셸)를 `assets/App-*.js` 번들에서 추출해 확인했으며, 비교 모델 점수는 '공개 보고값·자체 측정' 혼용 표기라 인용하지 않았습니다.
+- 재조사 확인: **GLM-5.3-FlashX**(docs.z.ai에 별도 모델 코드로 등재되나 동일 가중치 고속 서빙 티어 — 2026-09-23 감사 원장 판정 유지), **Qwen3.8-Max-Prime**(동일 패턴), **Ling 3.1 Flash**(API 게이트웨이 목록에만 등장, InclusionAI 1차 발표·모델 카드 미확보), **Kimi K3.1**(API 레지스트리 식별자 유출 — 공식 발표 없음), **Qwen-Audio-3.1 / Gemini 3.8 Flash TTS**(ASR·TTS 음성 전용 — 범위 제외 기준), **Bongard-Mini**(T5-Gemma 2 4B 기반 분류 체크포인트, 독립 API 제품 아님 — 범위 제외 기준), **GPT-6.1 Astra**(안전성 검토 연기 보도만 있고 공식 발표 없음)
+- 1차 도메인 추가: `github.io`(IQuest 공식 프로젝트 사이트 — 기술 보고서·평가 차트)
 
 **2026-09-29 감사 추가분 (10개):**
 - 신규 릴리스(10): Anthropic **Claude Sonnet 5.5**(9/28, Claude 5.5 패밀리 두 번째 — Sonnet 5 대비 출력 30%+ 고속·사이버 세이프가드 첫 탑재), H Company **Holo4-27B · Holo4-35B-A3B · Holotron4-30B-A3B**(9/28, 컴퓨터유스 VLM 패밀리 — 신규 조직 🇫🇷), Tsinghua SIGS Robot Lab **VeriLoop E2**(9/22, Qwen3.8-27B 포스트트레인 27B — 신규 조직 🇨🇳), AutoTrust AI **JEV-9B · JEV-27B**(9/23·9/28, System One 부류 — 신규 조직 🇸🇬), MiniMax **M3.1-Flash-Preview**(9/27, 1M 컨텍스트·멀티모달 입력 프리뷰), Perceptron **Mk1.5**(9/25, embodied agent 제어 MLLM — 신규 조직 🇺🇸), Convai Innovations **Laya**(9/18 — 제외 원장 되돌림 이관, 신규 조직 🇮🇳)
@@ -59,7 +65,7 @@
 ## ✨ 핵심 기능
 
 1. **⏱️ 인터랙티브 타임라인 (단일 뷰)**
-   - 2026년 1월부터 9월 23일까지의 출시 내역을 월별·일자별 수직 스파인으로 시각화
+   - 2026년 1월부터 9월 30일까지의 출시 내역을 월별·일자별 수직 스파인으로 시각화
    - 날짜 노드(원)·날짜·모델 수는 sticky 헤더로 상단에 고정되고, 모델 카드만 세로로 스크롤 — 화면 밖 모델을 볼 때도 시간축이 그대로 유지
    - 마우스 위치로 스크롤 축을 분리: 가로 시간축 라인 위/부근에서 휠 = 좌우 시간축 스크롤, 그 아래에서 휠 = 모델 카드 세로 스크롤
    - 각 모델의 기업 태그(국가 플래그), 아키텍처, 파라미터, 모달리티, 타겟 포커스 표시
@@ -93,7 +99,7 @@
 - **공식 벤치마크:** 모델 제공자가 공식 모델 카드·기술 보고서·공식 발표문에 직접 공개한 점수만 기록합니다. Chatbot Arena/ELO, Artificial Analysis, 제3자 리더보드, 역산·추정 점수는 표시하지 않습니다.
 - **조건 보존:** benchmark 버전, 데이터셋, 모드, 평가 조건이 공식 자료에 기재된 경우 모델별 감사 원장의 메모에 보존합니다. 서로 다른 프로토콜의 점수는 동일 순위로 비교하지 않습니다.
 - **출처 연결:** 출시일·파라미터·각 점수에 공식 1차 출처 URL을 따로 연결합니다. 공식 URL에 해당 수치가 직접 기재되지 않은 경우 그 수치는 넣지 않습니다.
-- **1차 도메인 목록:** `validate_data.py`의 `OFFICIAL_HOSTS`에 등록된 개발사 자체 도메인만 공식 출처로 인정합니다. 2026-09-08에 Meta AI Research 블로그(`research.meta.ai`)와 Google 공식 블로그(`blog.google`)를 추가했습니다 — Muse Spark 1.3과 Gemini 3.8 Flash Cyber는 `ai.meta.com`·`deepmind.google`이 아니라 그곳에만 1차 발표문이 있습니다. 같은 날 IFM(MBZUAI) 편입으로 `ifm.ai`를 추가했습니다. 2026-09-16에는 `cognition.com`(SWE-2), `salesforce.com`(Koa), `gensyn.ai`(open-1b 검증 레코드), `ai.google.dev`(Gemini Live API 모델 ID), 그리고 `arxiv.org`(개발사가 직접 게재한 공식 기술 보고서 — ERNIE 5.0, Tiny Aya)를 추가했습니다. 2026-09-19에는 `kimi.com`(Kimi Code 문서), 2026-09-23에는 `upstage.ai`(Solar Pro 4/Solar Mini 4 블로그·Console 문서)와 `nex-agi.com`(Nex-N2.5 파라미터 공표)을, 2026-09-29에는 `minimax.io`(MiniMax 개발자 문서)와 `perceptron.inc`(Perceptron 공식 블로그)를 추가했습니다.
+- **1차 도메인 목록:** `validate_data.py`의 `OFFICIAL_HOSTS`에 등록된 개발사 자체 도메인만 공식 출처로 인정합니다. 2026-09-08에 Meta AI Research 블로그(`research.meta.ai`)와 Google 공식 블로그(`blog.google`)를 추가했습니다 — Muse Spark 1.3과 Gemini 3.8 Flash Cyber는 `ai.meta.com`·`deepmind.google`이 아니라 그곳에만 1차 발표문이 있습니다. 같은 날 IFM(MBZUAI) 편입으로 `ifm.ai`를 추가했습니다. 2026-09-16에는 `cognition.com`(SWE-2), `salesforce.com`(Koa), `gensyn.ai`(open-1b 검증 레코드), `ai.google.dev`(Gemini Live API 모델 ID), 그리고 `arxiv.org`(개발사가 직접 게재한 공식 기술 보고서 — ERNIE 5.0, Tiny Aya)를 추가했습니다. 2026-09-19에는 `kimi.com`(Kimi Code 문서), 2026-09-23에는 `upstage.ai`(Solar Pro 4/Solar Mini 4 블로그·Console 문서)와 `nex-agi.com`(Nex-N2.5 파라미터 공표)을, 2026-09-29에는 `minimax.io`(MiniMax 개발자 문서)와 `perceptron.inc`(Perceptron 공식 블로그)를, 2026-09-30에는 `github.io`(자체 조직의 GitHub Pages 프로젝트 사이트 — IQuest-Q1 기술 보고서)를 추가했습니다.
 - **재현 가능한 검증:** `validate_data.py`가 모든 점수의 출처·범위·금지된 제3자 지표·생성 파일의 SSOT 일치를 검사합니다.
 
 - **포함 대상:**
@@ -107,12 +113,13 @@
   - 보상/가드레일 전용 모델
   - 단순 양자화 체크포인트 (FP8, NVFP4, INT4, GGUF 등)
   - 독립 제품을 대표하지 않는 중간/베이스 체크포인트
-- **포함 기업 (49개 표기 조직):**
+- **포함 기업 (50개 표기 조직):**
    - **미국 (US):** OpenAI, Anthropic, Google DeepMind, Meta, xAI, NVIDIA, IBM, Poolside, Thinking Machines Lab, Arcee AI, Motif Technologies, Cognition (SWE), Salesforce (Koa), Gensyn (open-1b), Accio-Lab (Occamy), TypeSafe AI (Jev), Contrastive-LM (CLM), Apple (LensVLM), Perceptron (Mk1.5)
    - **한국 (KR):** NAVER Cloud (HyperCLOVA X SEED 4B), Upstage (Solar), LG AI Research (EXAONE / K-EXAONE), SK Telecom (A.X), GenON (Hunmin)
   - **중국 (CN):** Alibaba (Qwen), DeepSeek, Baidu (ERNIE), ByteDance (Seed), Moonshot AI (Kimi), Z.ai (GLM), MiniMax, StepFun, Meituan (LongCat), Xiaomi (MiMo), Ant Group (Ling/Ring), Tencent (Hy), Shanghai Artificial Intelligence Laboratory (Atria), Nex-AGI (Nex), Tsinghua SIGS Robot Lab (VeriLoop)
    - **중동 (AE):** Institute of Foundation Models / MBZUAI (K2 Horizon)
    - **유럽/기타:** Mistral AI (프랑스), H Company (프랑스, Holo4), Cohere/Cohere Labs (캐나다), Sarvam AI (인도), Convai Innovations (인도, Laya), AutoTrust AI (싱가포르, JEV), Sber (러시아, GigaChat), Yandex (러시아, AliceAI)
+   - **국적 미공개:** IQuest (IQuest-Q1) — 모델 카드 언어가 영어·중국어이고 공식 출처에 본사·국적 표기가 없어 추정하지 않고 미상으로 두었습니다.
 
 공식 점수가 확인되지 않은 모델은 빈 점수로 표시합니다. 이는 누락이 아니라 공식 발표 점수만 제공한다는 감사 정책의 결과입니다. 원래 목록에서 공식 출시 시점·공식 제품명·별도 모델 ID가 확인되지 않거나 중복인 5개 항목과, 2026-09-08 감사에서 1차 출처 미확보로 보류한 1개 항목(iFLYTEK Spark X2.5), 2026-09-16 감사에서 범위 제외로 판정한 3개 항목(Gemini Omni 1.1 Flash · GPT-Live-1 API 확장 · Gemini 3.5 Transcribe)과, 2026-09-19 감사에서 범위 제외·보류로 판정한 8개 항목(단순 양자화 2 · ASR 전용 1 · 도메인 특화/월드모델 3 · 배포 확장 1 · 스텔스 보류 1), 2026-09-23 감사에서 범위 제외로 판정해 원장에 남은 3개 항목(동일 가중치 서빙 티어 1 · 도메인 특화 1 · 기간 외 1 — 비LLM 결정 모델로 분류됐던 Laya는 09-29 되돌림으로 이관)과, 2026-09-29 감사에서 범위 제외·보류로 판정한 4개 항목(멀티모델 협업 시스템 1 · 포스트트레인 연구 프리뷰 1 · 라우팅 엔드포인트 1 · 스텔스 보류 1)까지 **24개 항목**은 [`조사 자료`](조사%20자료)의 제외 원장에 보존했습니다.
 
@@ -163,7 +170,7 @@ python3 -m http.server 8000
 llm-timeline/
 ├── index.html                       # 메인 인터랙티브 대시보드 웹 애플리케이션
 ├── models_catalog.json               # 모델명·파라미터·공식 점수·출처 SSOT
-├── data.js                          # SSOT에서 생성된 187개 모델 데이터셋
+├── data.js                          # SSOT에서 생성된 189개 모델 데이터셋
 ├── app.js                           # 검색, 다차원 필터, 뷰 전환, 모달 동작 로직
 ├── style.css                        # 타임라인 스파인, sticky 시간축 헤더, 반응형 모바일 레이아웃
 ├── build_data.py                    # models_catalog.json → data.js 생성기
@@ -171,7 +178,7 @@ llm-timeline/
 ├── .nojekyll                        # GitHub Pages 정적 자산 로딩 보장
 ├── .github/workflows/
 │   └── deploy-pages.yml             # GitHub Actions 자동 배포 워크플로우
-├── 조사 자료                         # 187개 모델별 공식 출처 감사 원장 (Markdown)
+├── 조사 자료                         # 189개 모델별 공식 출처 감사 원장 (Markdown)
 └── README.md                        # 프로젝트 설명 및 배포 안내 문서
 ```
 

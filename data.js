@@ -15515,6 +15515,171 @@ const TIMELINE_DATA = [
       "reviewed_on": "2026-09-29",
       "policy": "official-primary-only"
     }
+  },
+  {
+    "id": "model-198",
+    "name": "GPT-6.1 Sol",
+    "date": "2026-09-29",
+    "sortDate": "2026-09-29",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "OpenAI",
+    "family": "GPT",
+    "type": "MLLM",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "정확한 수치 미공개",
+    "parameter_status": "undisclosed",
+    "architecture": "",
+    "modalities": [
+      "text",
+      "image"
+    ],
+    "focus": [
+      "agentic coding",
+      "computer use",
+      "professional work",
+      "scientific research"
+    ],
+    "open_weights": false,
+    "license": "",
+    "context": "1,050,000 (max input 922,000 / max output 128,000)",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [
+      "low",
+      "medium",
+      "high",
+      "xhigh",
+      "max"
+    ],
+    "availability": "ChatGPT Work·Codex·OpenAI API (Responses API)",
+    "note": "GPT-6 Sol의 업그레이드로, 에이전틱 코딩·컴퓨터 유스·전문 업무에서 GPT-6 Astra에 근접한 지능을 Astra 표준 입력·출력 토큰 가격의 1/5 수준($2/$10 per 1M, 캐시 읽기 $0.10 — GPT-6 Sol 대비 50% 추가 인하) 에서 제공. 지식 컷오프 2026-04-30. ChatGPT Work·Codex·API(gpt-6.1-sol)에 발표 당일부터 제공되며 ChatGPT Chat는 미지원. 도구 호출은 Responses API가 필요하고 Chat Completions는 도구 호출 미지원. US·EU 데이터 레지덴시를 지원하되 EU에서는 Fast mode 불가. reasoning effort는 low·medium(기본)·high·xhigh·max를 지원하고 none·minimal은 미지원. Preparedness Framework 기준 사이버 Critical·생물/화학 High 등급으로, Astra와 동일한 세이프가드 스택을 적용한다. Codex용 Ultrafast 티어는 발표 후 수일 내 제공 예정.",
+    "benchmarks": {
+      "DeepSWE v1.1 (High)": 75.2,
+      "DeepSWE v1.1 (Max)": 71.9,
+      "GDP.pdf (High)": 32.0,
+      "AutomationBench 1.0.6 (Medium)": 31.7,
+      "AutomationBench 1.0.6 (Max)": 36.1,
+      "OSWorld 2.0 offline partial (Max)": 71.4,
+      "Terminal-Bench Science 0.1 (Max)": 57.0,
+      "HealthBench Professional (length-adjusted)": 64.2,
+      "HealthBench (length-adjusted)": 58.5,
+      "HealthBench Hard (length-adjusted)": 36.2,
+      "HealthBench Consensus (length-adjusted)": 96.0
+    },
+    "benchmark_sources": {
+      "DeepSWE v1.1 (High)": "https://openai.com/index/introducing-gpt-6-1-sol",
+      "DeepSWE v1.1 (Max)": "https://openai.com/index/introducing-gpt-6-1-sol",
+      "GDP.pdf (High)": "https://openai.com/index/introducing-gpt-6-1-sol",
+      "AutomationBench 1.0.6 (Medium)": "https://openai.com/index/introducing-gpt-6-1-sol",
+      "AutomationBench 1.0.6 (Max)": "https://openai.com/index/introducing-gpt-6-1-sol",
+      "OSWorld 2.0 offline partial (Max)": "https://openai.com/index/introducing-gpt-6-1-sol",
+      "Terminal-Bench Science 0.1 (Max)": "https://openai.com/index/introducing-gpt-6-1-sol",
+      "HealthBench Professional (length-adjusted)": "https://deploymentsafety.openai.com/gpt-6-1-sol",
+      "HealthBench (length-adjusted)": "https://deploymentsafety.openai.com/gpt-6-1-sol",
+      "HealthBench Hard (length-adjusted)": "https://deploymentsafety.openai.com/gpt-6-1-sol",
+      "HealthBench Consensus (length-adjusted)": "https://deploymentsafety.openai.com/gpt-6-1-sol"
+    },
+    "benchmark_note": "DeepSWE v1.1·GDP.pdf·AutomationBench 1.0.6·OSWorld 2.0·Terminal-Bench Science 0.1은 공식 발표문 차트의 effort별 데이터 값이고, HealthBench 4종은 시스템 카드 애드endum Table 7의 length-adjusted 값이다. 발표문 본문은 절대값 대신 개선폭만 서술하므로 수치는 발표문 차트 데이터에서 확인했다(DeepSWE High 75.2 = GPT-6 Sol 최고 68.8 대비 +6.4p, OSWorld Max 71.4 = GPT-6 Sol 64.4 대비 +7.0p). OSWorld 2.0은 v2026.08.08 릴리스 오프라인 세트 partial reward, AutomationBench는 47개 도구 기반 업무 워크플로다. 사실 오류 응답 비율(Low effort 7.7%, GPT-6 Sol 11.4%)·작업당 실행 비용(DeepSWE High $0.65, Terminal-Bench Science Max $5.47)은 % 척도 성능 지표가 아니므로 점수 표에서 제외했다.",
+    "official_id": "gpt-6.1-sol",
+    "official_sources": [
+      {
+        "label": "공식 1차 출처 (발표문)",
+        "url": "https://openai.com/index/introducing-gpt-6-1-sol"
+      },
+      {
+        "label": "공식 모델 문서",
+        "url": "https://developers.openai.com/api/docs/models/gpt-6.1-sol"
+      },
+      {
+        "label": "GPT-6.1 Sol 시스템 카드 애드endum",
+        "url": "https://deploymentsafety.openai.com/gpt-6-1-sol"
+      }
+    ],
+    "release_date_source": "https://openai.com/index/introducing-gpt-6-1-sol",
+    "parameter_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-30",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-199",
+    "name": "IQuest-Q1",
+    "date": "2026-09-28",
+    "sortDate": "2026-09-28",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "IQuest",
+    "family": "IQuest",
+    "type": "LLM / agentic coding",
+    "category": "LLM",
+    "status": "GA",
+    "parameters": "320B total / 15B active (MoE, 256 experts 중 8개 활성)",
+    "parameter_status": "publisher-approximate",
+    "architecture": "Sparse MoE — 88 transformer layers, hidden 3,072, Q/KV heads 48/8, 3 SWA + 1 FA 하이브리드 어텐션(sliding window 4,096), partial RoPE 32차원, MTP",
+    "modalities": [
+      "text"
+    ],
+    "focus": [
+      "agentic coding",
+      "CLI agents",
+      "multi-step tool use",
+      "reasoning"
+    ],
+    "open_weights": true,
+    "license": "iquest-q1 (모델 카드 선언형 비표준 라이선스)",
+    "context": "524,288",
+    "languages": "English, Chinese",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "Hugging Face 가중치·SGLang·vLLM·Claude Code(Anthropic Messages 게이트웨이)·Codex(OpenAI Responses 게이트웨이)",
+    "note": "CLI 에이전트 특화 오픈 소스 스파스 MoE. 합성 환경에서 만든 과제·환경 쌍(실제 API·MCP 서버·워크스페이스 파일, 저장소 실행 환경)으로 사전·미드트레이닝한 뒤 여러 하네스의 도구·컨텍스트 관리를 유지한 단일 정책 RL을 수행하고, MOPD(multi-teacher on-policy distillation)와 단계·expert 간 안정적 모델 머징으로 RL에서 나온 4개 expert를 하나로 통합했다. 카드 권장 샘플링은 temperature 1.0·top-p 0.95·top-k 20. 가중치는 SGLang·vLLM으로 직접 서빙하는 오픈 가중치 제품이며, 멀티모달 입력은 미지원이다.",
+    "benchmarks": {
+      "DeepSWE v1.1": 64.6,
+      "NL2Repo": 63.0,
+      "Terminal-Bench 2.1": 83.2,
+      "JobBench": 55.7,
+      "CyberGym": 84.5,
+      "Agents' Last Exam": 29.6,
+      "Humanity's Last Exam (no tools)": 39.2,
+      "IQuest-CLIBench": 53.7
+    },
+    "benchmark_sources": {
+      "DeepSWE v1.1": "https://iquestlab.github.io/",
+      "NL2Repo": "https://iquestlab.github.io/",
+      "Terminal-Bench 2.1": "https://iquestlab.github.io/",
+      "JobBench": "https://iquestlab.github.io/",
+      "CyberGym": "https://iquestlab.github.io/",
+      "Agents' Last Exam": "https://iquestlab.github.io/",
+      "Humanity's Last Exam (no tools)": "https://iquestlab.github.io/",
+      "IQuest-CLIBench": "https://iquestlab.github.io/"
+    },
+    "benchmark_note": "공식 프로젝트 사이트(iquestlab.github.io) 평가 차트에 인쇄된 IQuest-Q1 수치. 사이트 정적 HTML이 React 셸이라 본문을 assets/App-*.js 번들에서 추출해 확인했다. 수치는 temperature 1.0·top-p 0.95·top-k 20 기준이며, DeepSWE v1.1은 mini-SWE-agent, 그 외 벤치마크는 Claude Code 하네스, Agents' Last Exam은 Claude Code 2.1.258, CyberGym은 6시간·Terminal-Bench 2.1은 8시간 제한 조건이다. IQuest-CLIBench는 IQuest 자체 인하우스 벤치마크, Humanity's Last Exam은 도구 없이 측정했다. 사이트는 비교 모델 점수를 '공개 보고값 우선, 없을 경우 자체 측정'으로 혼용하므로 다른 모델의 수치는 인용하지 않았다. Hugging Face 모델 카드는 동일 표를 이미지로만 제공해 텍스트 인용은 프로젝트 사이트를 출처로 삼았다.",
+    "official_id": "IQuestLab/IQuest-Q1",
+    "official_sources": [
+      {
+        "label": "공식 모델 카드",
+        "url": "https://huggingface.co/IQuestLab/IQuest-Q1"
+      },
+      {
+        "label": "공식 프로젝트 사이트 (기술 보고서)",
+        "url": "https://iquestlab.github.io/"
+      },
+      {
+        "label": "공식 저장소",
+        "url": "https://github.com/IQuestLab/IQuest-Q1"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/IQuestLab/IQuest-Q1",
+    "parameter_source": "https://huggingface.co/IQuestLab/IQuest-Q1",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-09-30",
+      "policy": "official-primary-only"
+    }
   }
 ];
 
@@ -15824,6 +15989,12 @@ const COMPANY_META = {
     "flag": "🇸🇬",
     "gradient": "linear-gradient(135deg,#10b981,#6366f1)",
     "badge": "System 1+System 2 통합 오픈 모델"
+  },
+  "IQuest": {
+    "country": "미공개",
+    "flag": "🌐",
+    "gradient": "linear-gradient(135deg,#0ea5e9,#6366f1)",
+    "badge": "CLI 에이전트 특화 오픈 소스 MoE"
   }
 };
 
@@ -15874,7 +16045,8 @@ const FAMILY_FLOWS = [
       "GPT-6 Astra",
       "GPT-6 Astra Pro",
       "GPT-6 Sol",
-      "GPT-6 Luna"
+      "GPT-6 Luna",
+      "GPT-6.1 Sol"
     ]
   },
   {
@@ -16024,7 +16196,7 @@ const FAMILY_FLOWS = [
 const UNCONFIRMED_DATA = [];
 
 const SCOPE_DATA = {
-  "period": "2026-01-01 ~ 2026-09-29",
+  "period": "2026-01-01 ~ 2026-09-30",
   "scope": [
     "LLM (Large Language Models)",
     "MLLM / VLM / Omni foundation models"
@@ -16041,7 +16213,7 @@ const SCOPE_DATA = {
   ],
   "benchmark_policy": "공식 모델 카드·기술 보고서·개발사 공식 발표문에 모델 제공자가 직접 명시한 점수만 수록. Chatbot Arena/ELO, Artificial Analysis, 제3자 leaderboard, 추정·역산 점수는 제외.",
   "parameter_policy": "개발사가 명시한 총/활성 파라미터만 사용. 공개하지 않은 값은 정확한 수치 미공개로 표시하고, 모델 크기·가중치 파일 용량·양자화 크기를 파라미터 수로 대체하지 않음.",
-  "reviewed_on": "2026-09-29"
+  "reviewed_on": "2026-09-30"
 };
 
 const AUDIT_EXCLUDED = [

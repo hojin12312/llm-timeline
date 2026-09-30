@@ -1,6 +1,6 @@
 # 조사 자료 — 2026 LLM / MLLM 공개 기록 감사 원장
 
-> 최종 감사일: **2026-09-29** | 활성 레코드: **187개** | 제외 원장: **24개** | 공식 점수가 확인된 모델: **168개** | 공식 점수: **3030개**
+> 최종 감사일: **2026-09-30** | 활성 레코드: **189개** | 제외 원장: **24개** | 공식 점수가 확인된 모델: **170개** | 공식 점수: **3049개**
 >
 > 이 문서는 `models_catalog.json`에서 생성된 사람 검토용 감사 원장입니다. 브라우저용 `data.js`를 직접 수정하지 말고 SSOT를 수정한 뒤 `python3 build_data.py`로 재생성하세요.
 
@@ -6722,6 +6722,65 @@
 - 모델 메모: AutoTrust AI의 2세대 System 1+System 2 통합 오픈 모델 — 동일 가중치 하나로 typed decisions(System 1, choice/score/noul+교정확률)와 일반 생성(System 2, 미수정 Qwen3.8-27B)을 요청별 라우팅. 6종 공개 결정 벤치마크 평균에서 TypeSafe Jev 1.13 대비 +0.22pt를 자체 측정치로 보고.
 - 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-29`
 
+### 188. 2026-09-29 — GPT-6.1 Sol
+
+- 레코드 ID: `model-198`
+- **공식 모델명:** `GPT-6.1 Sol`
+- 제공사 / 패밀리: `OpenAI` / `GPT`
+- 모델 유형 / 상태: `MLLM` / `GA`
+- 공개일(레포 기준): `2026-09-29` — [출시일 공식 출처](https://openai.com/index/introducing-gpt-6-1-sol)
+- **파라미터:** `정확한 수치 미공개` — 공식 수치 미공개
+- 파라미터 출처: [공식 파라미터 출처](https://developers.openai.com/api/docs/models/gpt-6.1-sol)
+- 아키텍처: `미기재`
+- 공식 모델 ID: `gpt-6.1-sol`
+- 오픈 웨이트: `아니오/호스팅`
+- 공식 모델 출처: [공식 1차 출처 (발표문)](https://openai.com/index/introducing-gpt-6-1-sol), [공식 모델 문서](https://developers.openai.com/api/docs/models/gpt-6.1-sol), [GPT-6.1 Sol 시스템 카드 애드endum](https://deploymentsafety.openai.com/gpt-6-1-sol)
+
+#### 공식 발표 벤치마크 점수
+
+- `DeepSWE v1.1 (High)`: **75.2%** — [공식 출처](https://openai.com/index/introducing-gpt-6-1-sol)
+- `DeepSWE v1.1 (Max)`: **71.9%** — [공식 출처](https://openai.com/index/introducing-gpt-6-1-sol)
+- `GDP.pdf (High)`: **32.0%** — [공식 출처](https://openai.com/index/introducing-gpt-6-1-sol)
+- `AutomationBench 1.0.6 (Medium)`: **31.7%** — [공식 출처](https://openai.com/index/introducing-gpt-6-1-sol)
+- `AutomationBench 1.0.6 (Max)`: **36.1%** — [공식 출처](https://openai.com/index/introducing-gpt-6-1-sol)
+- `OSWorld 2.0 offline partial (Max)`: **71.4%** — [공식 출처](https://openai.com/index/introducing-gpt-6-1-sol)
+- `Terminal-Bench Science 0.1 (Max)`: **57.0%** — [공식 출처](https://openai.com/index/introducing-gpt-6-1-sol)
+- `HealthBench Professional (length-adjusted)`: **64.2%** — [공식 출처](https://deploymentsafety.openai.com/gpt-6-1-sol)
+- `HealthBench (length-adjusted)`: **58.5%** — [공식 출처](https://deploymentsafety.openai.com/gpt-6-1-sol)
+- `HealthBench Hard (length-adjusted)`: **36.2%** — [공식 출처](https://deploymentsafety.openai.com/gpt-6-1-sol)
+- `HealthBench Consensus (length-adjusted)`: **96.0%** — [공식 출처](https://deploymentsafety.openai.com/gpt-6-1-sol)
+- 점수 메모: DeepSWE v1.1·GDP.pdf·AutomationBench 1.0.6·OSWorld 2.0·Terminal-Bench Science 0.1은 공식 발표문 차트의 effort별 데이터 값이고, HealthBench 4종은 시스템 카드 애드endum Table 7의 length-adjusted 값이다. 발표문 본문은 절대값 대신 개선폭만 서술하므로 수치는 발표문 차트 데이터에서 확인했다(DeepSWE High 75.2 = GPT-6 Sol 최고 68.8 대비 +6.4p, OSWorld Max 71.4 = GPT-6 Sol 64.4 대비 +7.0p). OSWorld 2.0은 v2026.08.08 릴리스 오프라인 세트 partial reward, AutomationBench는 47개 도구 기반 업무 워크플로다. 사실 오류 응답 비율(Low effort 7.7%, GPT-6 Sol 11.4%)·작업당 실행 비용(DeepSWE High $0.65, Terminal-Bench Science Max $5.47)은 % 척도 성능 지표가 아니므로 점수 표에서 제외했다.
+- 모델 메모: GPT-6 Sol의 업그레이드로, 에이전틱 코딩·컴퓨터 유스·전문 업무에서 GPT-6 Astra에 근접한 지능을 Astra 표준 입력·출력 토큰 가격의 1/5 수준($2/$10 per 1M, 캐시 읽기 $0.10 — GPT-6 Sol 대비 50% 추가 인하) 에서 제공. 지식 컷오프 2026-04-30. ChatGPT Work·Codex·API(gpt-6.1-sol)에 발표 당일부터 제공되며 ChatGPT Chat는 미지원. 도구 호출은 Responses API가 필요하고 Chat Completions는 도구 호출 미지원. US·EU 데이터 레지덴시를 지원하되 EU에서는 Fast mode 불가. reasoning effort는 low·medium(기본)·high·xhigh·max를 지원하고 none·minimal은 미지원. Preparedness Framework 기준 사이버 Critical·생물/화학 High 등급으로, Astra와 동일한 세이프가드 스택을 적용한다. Codex용 Ultrafast 티어는 발표 후 수일 내 제공 예정.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-30`
+
+### 189. 2026-09-28 — IQuest-Q1
+
+- 레코드 ID: `model-199`
+- **공식 모델명:** `IQuest-Q1`
+- 제공사 / 패밀리: `IQuest` / `IQuest`
+- 모델 유형 / 상태: `LLM / agentic coding` / `GA`
+- 공개일(레포 기준): `2026-09-28` — [출시일 공식 출처](https://huggingface.co/IQuestLab/IQuest-Q1)
+- **파라미터:** `320B total / 15B active (MoE, 256 experts 중 8개 활성)` — 개발사 공식 근사치
+- 파라미터 출처: [공식 파라미터 출처](https://huggingface.co/IQuestLab/IQuest-Q1)
+- 아키텍처: `Sparse MoE — 88 transformer layers, hidden 3,072, Q/KV heads 48/8, 3 SWA + 1 FA 하이브리드 어텐션(sliding window 4,096), partial RoPE 32차원, MTP`
+- 공식 모델 ID: `IQuestLab/IQuest-Q1`
+- 오픈 웨이트: `예`
+- 공식 모델 출처: [공식 모델 카드](https://huggingface.co/IQuestLab/IQuest-Q1), [공식 프로젝트 사이트 (기술 보고서)](https://iquestlab.github.io/), [공식 저장소](https://github.com/IQuestLab/IQuest-Q1)
+
+#### 공식 발표 벤치마크 점수
+
+- `DeepSWE v1.1`: **64.6%** — [공식 출처](https://iquestlab.github.io/)
+- `NL2Repo`: **63.0%** — [공식 출처](https://iquestlab.github.io/)
+- `Terminal-Bench 2.1`: **83.2%** — [공식 출처](https://iquestlab.github.io/)
+- `JobBench`: **55.7%** — [공식 출처](https://iquestlab.github.io/)
+- `CyberGym`: **84.5%** — [공식 출처](https://iquestlab.github.io/)
+- `Agents' Last Exam`: **29.6%** — [공식 출처](https://iquestlab.github.io/)
+- `Humanity's Last Exam (no tools)`: **39.2%** — [공식 출처](https://iquestlab.github.io/)
+- `IQuest-CLIBench`: **53.7%** — [공식 출처](https://iquestlab.github.io/)
+- 점수 메모: 공식 프로젝트 사이트(iquestlab.github.io) 평가 차트에 인쇄된 IQuest-Q1 수치. 사이트 정적 HTML이 React 셸이라 본문을 assets/App-*.js 번들에서 추출해 확인했다. 수치는 temperature 1.0·top-p 0.95·top-k 20 기준이며, DeepSWE v1.1은 mini-SWE-agent, 그 외 벤치마크는 Claude Code 하네스, Agents' Last Exam은 Claude Code 2.1.258, CyberGym은 6시간·Terminal-Bench 2.1은 8시간 제한 조건이다. IQuest-CLIBench는 IQuest 자체 인하우스 벤치마크, Humanity's Last Exam은 도구 없이 측정했다. 사이트는 비교 모델 점수를 '공개 보고값 우선, 없을 경우 자체 측정'으로 혼용하므로 다른 모델의 수치는 인용하지 않았다. Hugging Face 모델 카드는 동일 표를 이미지로만 제공해 텍스트 인용은 프로젝트 사이트를 출처로 삼았다.
+- 모델 메모: CLI 에이전트 특화 오픈 소스 스파스 MoE. 합성 환경에서 만든 과제·환경 쌍(실제 API·MCP 서버·워크스페이스 파일, 저장소 실행 환경)으로 사전·미드트레이닝한 뒤 여러 하네스의 도구·컨텍스트 관리를 유지한 단일 정책 RL을 수행하고, MOPD(multi-teacher on-policy distillation)와 단계·expert 간 안정적 모델 머징으로 RL에서 나온 4개 expert를 하나로 통합했다. 카드 권장 샘플링은 temperature 1.0·top-p 0.95·top-k 20. 가중치는 SGLang·vLLM으로 직접 서빙하는 오픈 가중치 제품이며, 멀티모달 입력은 미지원이다.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-09-30`
+
 ## 제외·보류한 기존 레코드
 
 ### `model-045` — LongCat-2.0 Preview
@@ -6873,7 +6932,7 @@
 - **Qwen:** `Qwen3.5` → `Qwen3.6` → `Qwen3.7` → `Qwen3.8` → `Qwen3.8-Flash-Next` → `Qwen3.8-Omni-Flash`
 - **DeepSeek:** `DeepSeek-V4 Preview` → `DeepSeek-V4-Flash-0731` → `DeepSeek-V4-Pro-0813` → `DeepSeek-V4-Flash-Vision-Exp` → `DeepSeek-V4.1-Flash`
 - **Claude:** `Opus 4.6` → `Sonnet 4.6` → `Opus 4.7` → `Opus 4.8` → `Fable/Mythos 5` → `Sonnet 5` → `Opus 5` → `Fable/Mythos 5.1` → `Opus 5.5` → `Sonnet 5.5`
-- **GPT:** `GPT-5.3` → `GPT-5.4` → `GPT-5.5` → `GPT-5.6` → `GPT-6 Astra` → `GPT-6 Astra Pro` → `GPT-6 Sol` → `GPT-6 Luna`
+- **GPT:** `GPT-5.3` → `GPT-5.4` → `GPT-5.5` → `GPT-5.6` → `GPT-6 Astra` → `GPT-6 Astra Pro` → `GPT-6 Sol` → `GPT-6 Luna` → `GPT-6.1 Sol`
 - **Gemini:** `Gemini 3.5 Flash` → `Gemini 3.6 Flash` → `Gemini 3.7 Flash` → `Gemini 3.8 Flash` → `Gemini 3.8 Live` → `Gemini 3.8 Live Extended Thinking`
 - **GLM:** `GLM-5` → `GLM-5.1` → `GLM-5.2` → `GLM-5.3` → `GLM-5.3-Flash`
 - **Kimi:** `Kimi K2.5` → `Kimi K2.6` → `Kimi K2.7 Code` → `Kimi K2.8 Preview` → `Kimi K3`
