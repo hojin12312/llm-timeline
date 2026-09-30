@@ -32,3 +32,17 @@ Validation:
 Open:
 - 라이브 GitHub Pages 배포 상태는 이번 런에서 확인하지 않음(레포 밖 대상)
 - SCHEMA 0.3.1 → 0.4.0 마이그레이션(언어 정책 문단) 제안 — 승인 대기
+
+## [2026-09-30] update | 9/30 감사 반영 (GPT-6.1 Sol·IQuest-Q1 신규 2종)
+
+Source HEAD: b0c0b49911faf43f9df2395a540112d1f9d600ce
+Wiki:
+- updated current.md — 활성 모델 187→189, 조직 51→52, 공식 점수 168→170개 모델·3,030→3,049점, as_of 2026-09-30, 최근 수록·리스크·다음 작업 갱신
+- updated components/catalog-pipeline.md — openai.com RSC 차트 페이로드와 `*.github.io` React 셸의 JS 번해 추출 방법을 Important Invariants에, 고속 서빙 티어 재판정과 국적 미공개 `company_meta` 관례를 Known Limitations에 기록
+Validation:
+- python3 validate_data.py — PASS (OK: 189 models, 24 excluded, 170 with official scores)
+- python3 validate_data.py --check-urls — PASS (257 URL, HF 429·ifm.ai 403 경고만, 실패 없음)
+Open:
+- 라이브 GitHub Pages 배포 상태는 이번 런에서 확인하지 않음(레포 밖 대상)
+- 1차 출처 미확보 후보 재조사: Ling 3.1 Flash · Kimi K3.1 · GPT-6.1 Astra
+- SCHEMA 0.3.1 → 0.4.0 마이그레이션(언어 정책 문단) 제안 — 승인 대기
