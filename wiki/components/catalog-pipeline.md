@@ -2,7 +2,7 @@
 title: Catalog Pipeline
 type: component
 status: current
-updated: 2026-09-30
+updated: 2026-10-01
 ---
 
 # Catalog Pipeline
@@ -26,7 +26,7 @@ updated: 2026-09-30
 - `FORBIDDEN_BENCHMARK_TERMS`(`arena`, `elo`, `artificial analysis`, `aaii`, `codearena` 등)가 벤치마크명에 포함되면 `ALLOWED_BENCHMARK_NAMES` 정확 명칭 예외가 없는 한 오류.
 - `STALE_TEXT`: 과거 정정된 잘못된 표기(예: `~30B`, `MiMo-V2-Pro`)가 활성 레코드/생성물에 재등장하면 오류.
 - `check_urls`: 호스트별 직렬화 + 재시도. 429·503은 경고, `BOT_PROTECTED_HOSTS`(`ifm.ai`, `openai.com`)의 지속 403도 경고, 그 외 호스트의 지속 403과 404/410은 실패.
-- CI: `deploy-pages.yml`이 push마다 `python3 validate_data.py`를 실행하도록 선언돼 있다(워크플로 파일은 `c2de7f5` 이후 변경 없음). 선언과 실제 실행은 다르므로 현재 게이트가 돌고 있는지는 `current.md`를 볼 것.
+- CI: `deploy-pages.yml`이 push마다 `python3 validate_data.py`를 실행하도록 선언돼 있다(워크플로 파일은 `c2de7f5` 이후 변경 없음). 선언과 실제 실행은 다르다 — 2026-09-19 이후 이 워크플로의 `deploy` job은 2026-09-23 실행이 동시성 그룹 `pages`를 붙잡은 `waiting`(0 step) 상태로 남아 다시 돌지 않고, 이후 실행은 대기하다 취소되거나 `pending`에 머문다. 그래서 이 게이트는 실행되지 않고 사이트 반영은 네이티브 `pages build and deployment`가 처리한다(관측 2026-10-01, host local, `gh run list`; 상세·미확인 사유는 `current.md` Active Risks).
 
 ## Important Invariants
 
@@ -55,6 +55,7 @@ updated: 2026-09-30
 - HF 출처가 누적되면서 `--check-urls` 전수 스윕은 429 rate-limit 경고를 다수 낸다 — 경고는 실패가 아니다. 반면 gated 데이터셋(401)과 삭제된 HF 포럼 글(404)은 출처로 쓸 수 없다(2026-09-29 VeriLoop E2: 포럼 공지 삭제 → 릴리스 출처를 모델 카드로 교체, gated 평가 데이터셋 제외).
 - Upstage Console 문서처럼 JS 셸만 응답하는 공식 페이지는 정적 HTML에 내용이 없어, 페이지의 RSC/Next.js 페이로드를 파싱해야 실제 스펙을 읽을 수 있다(2026-09-23 Solar Jev 조사에서 사용). 같은 이유로 openai.com 발표문 차트와 `*.github.io` 프로젝트 사이트는 `assets/*.js` 번들을 파싱한다(2026-09-30 GPT-6.1 Sol·IQuest-Q1 조사).
 - `company_meta.country`는 ISO 국가 코드로만 채운 관례가 있었으나, 2026-09-30에 IQuest를 `country: "미공개"`·`flag: "🌐"`로 추가했다 — 1차 출처에 본사가 없는 조직은 추정하지 않고 미상으로 둔다.
+- 공식 모델 카드·API 문서보다 발표문이 먼저 나오는 릴리스가 있다 — Gemini 4 Argon(2026-09-30)은 2026-10-01 확인 시점에 `deepmind.google` 모델 카드와 Gemini API·Vertex AI 문서에 미등재여서 발표문(`blog.google`)이 유일한 1차 출처였다. 이 경우 `release_date_source`·`parameter_source`도 발표문으로 두고, 카드가 공개되면 재확인한다.
 
 ## Related Pages
 

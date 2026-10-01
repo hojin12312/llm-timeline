@@ -2,7 +2,7 @@
 title: Overview
 type: overview
 status: current
-updated: 2026-09-29
+updated: 2026-10-01
 ---
 
 # Overview
@@ -26,7 +26,7 @@ updated: 2026-09-29
 - 공식 1차 출처만 인용한다: `validate_data.py`의 `OFFICIAL_HOSTS`에 등록된 개발사 자체 도메인만 출처 URL로 허용. 신규 발행사 도메인은 목록에 추가해야 검증을 통과한다.
 - `models_catalog.json`이 유일한 SSOT다. `data.js`와 `조사 자료`는 `python3 build_data.py`로만 재생성하며 직접 편집하지 않는다.
 - 파라미터·벤치마크는 공식 자료에 인쇄된 값만 기록한다. 미공개는 `정확한 수치 미공개`로 표시하고, 빈 점수에는 `benchmark_note`로 사유를 남긴다.
-- 배포 파이프라인(`deploy-pages.yml`)이 push 시 `validate_data.py`를 실행하므로 검증 실패 커밋은 배포를 막는다.
+- 배포 파이프라인(`deploy-pages.yml`)은 push 시 `validate_data.py`를 실행하도록 선언돼 있지만, 커스텀 워크플로의 `deploy` job이 `waiting`에 멈춰 있어 이 게이트는 실행되지 않는다(2026-10-01 관측) — 푸시 전 로컬 `validate_data.py`가 유일한 게이트이고, 사이트 반영은 네이티브 `pages build and deployment`가 처리한다(`current.md` Active Risks).
 
 ## Canonical References
 

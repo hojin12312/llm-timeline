@@ -2,7 +2,7 @@
 title: Audit Update
 type: runbook
 status: current
-updated: 2026-09-30
+updated: 2026-10-01
 ---
 
 # Runbook: Audit Update
@@ -29,6 +29,7 @@ updated: 2026-09-30
    - `release_date_source`·`parameter_source`는 반드시 `official_sources`에도 나열.
    - 신규 조직은 `company_meta`에 `country`/`flag`/`color`/`badge` 추가(뒤에 append 관례). 검색 별칭이 필요하면 `app.js`의 한국어 alias 맵도 갱신.
    - 패밀리 세대 진전이 있으면 `family_flows` 갱신. `as_of`, `scope.reviewed_on` 갱신.
+   - 기간의 새 월(예: `2026-10`)에 첫 모델을 수록하면 `index.html` 월 버튼과 `app.js` `months` 배열에 그 월을 함께 추가한다. 대상 컬럼 없는 빈 월 칩은 `jumpToMonth`가 active 표시만 남기므로 모델보다 먼저 넣지 않는다.
 5. **호스트 등록**: 새로 인용하는 발행사 도메인이 `validate_data.py`의 `OFFICIAL_HOSTS`에 없으면 추가.
 6. **재생성·검증**: `python3 build_data.py` → `python3 validate_data.py`. 가능하면 `python3 validate_data.py --check-urls`까지.
 7. **README 갱신**: 헤더 통계(모델 수·조직 수), 감사 추가분 절, 제외 원장 카운트, 조직 목록, 되돌림 각주.
@@ -54,6 +55,8 @@ updated: 2026-09-30
 - **차트만 있고 인쇄 표가 없음**: 벤치마크가 차트 이미지로만 제공되면 점수를 추측하지 말고 빈 점수 + `benchmark_note` 사유로 남긴다. 반대로 차트 JSON이 텍스트로 있으면 그 값을 1차 출처로 인용한다.
 - **금지 지표**: `FORBIDDEN_BENCHMARK_TERMS`에 걸리는 벤치마크명은 점수 표에 넣지 않고 `note`/`benchmark_note`에 서술. 고정 평가 스위트면 `ALLOWED_BENCHMARK_NAMES`에 정확 명칭 예외를 추가.
 - **검증 실패 커밋**: 워크플로는 배포 차단으로 선언돼 있으나 실제 게이트가 멈춘 적이 있다(2026-09-30 기준, 사실은 `current.md` 참조) — 무조건 push 전에 로컬 검증을 통과시킨다. 검증 실패를 CI에 맡기지 않는다.
+- **1차 출처 URL이 아직 없는 릴리스**: 공개 발표는 있지만 공식 문서·모델 카드·가중치가 모두 없으면 수록하지 않고 `excluded[]`에 보류로 기록한다(선례: Ling-3.1-flash 2026-09-30 — Ant Ling 공식 문서·가격표 미등재, iFLYTEK Spark X2.5 2026-09-07). 공식 페이지가 나오면 재조사한다.
+- **릴리스 날짜의 1차 출처가 없음**: 모델 카드에 날짜 표기가 없고 저장소 생성일과 발표일이 어긋나면 날짜를 확정하지 않고 보류한다(선례: OpenCSG Agentic-27B — Hugging Face 저장소 2026-09-11 vs 발표 2026-09-30). 저장소 공개일을 `date`로 쓰는 경우는 그 근거(Hugging Face API `createdAt`)를 `note`에 남긴다(선례: Darwin-180B-RSI `model-200`).
 
 ## Relevant Files
 

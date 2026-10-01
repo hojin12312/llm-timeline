@@ -2,7 +2,7 @@
 title: Web Dashboard
 type: component
 status: current
-updated: 2026-09-23
+updated: 2026-10-01
 ---
 
 # Web Dashboard
@@ -46,7 +46,7 @@ updated: 2026-09-23
 ## Known Limitations
 
 - `FAMILY_FLOWS` 데이터는 주입되지만 그리는 뷰가 없다(README도 미구현으로 명시). Generational Flow/Grid/Matrix 뷰, CSV 내보내기, 기업/유형/상태/오픈웨이트 필터 미구현.
-- 월 목록이 `index.html` 버튼과 `app.js` `months` 배열에 2026-01~09로 하드코딩 — 기간 외 월 추가 시 두 곳 수정 필요.
+- 월 목록이 `index.html` 버튼과 `app.js` `months` 배열에 2026-01~09로 하드코딩 — 기간 외 월 추가 시 두 곳 수정 필요. 날짜 모델 없이 월을 먼저 넣으면 `jumpToMonth`가 대상 컬럼을 찾지 못해 해당 버튼에 active 표시만 남는다(`jumpToMonth`가 `targetCol` null일 때 아무 것도 하지 않음).
 - 한국어 별칭 검색은 회사별 수동 맵이라 신규 조직 추가 시 alias를 손으로 넣어야 검색이 걸린다.
 
 ## Related Pages

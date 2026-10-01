@@ -63,3 +63,22 @@ Open:
 - `deploy-pages.yml`의 `deploy` job이 2026-09-23T13:56Z부터 `waiting`인 원인은 미확인(환경 승인/규칙 추정). 게이트 복구 전까지 푸시 전 로컬 `validate_data.py`가 유일한 게이트
 - 1차 출처 미확보 후보 재조사: Ling 3.1 Flash · Kimi K3.1 · GPT-6.1 Astra
 - SCHEMA 0.3.1 → 0.4.0 마이그레이션(언어 정책 문단) — 사용자 승인 대기, 매 런 Open에 유지
+
+## [2026-10-01] update | 10/1 감사 반영 (Gemini 4 Argon·Index-Translate·Darwin-180B-RSI 신규 3종)
+
+Source HEAD: 02bfe54c91629d2cc6452b23e41b101c819eb9ba
+Wiki:
+- updated current.md — 활성 모델 189→192, 제외 원장 24→29, 표기 조직 52→54, 공식 점수 170→173개 모델·3,049→3,065점, as_of·범위 2026-10-01, 최근 수록·배포 관측·리스크·다음 작업 재계산
+- updated components/catalog-pipeline.md — CI 게이트 정지 메커니즘(동시성 그룹 `pages`의 `waiting` job)을 선언/실제 실행 구분에 기록, 모델 카드 없이 발표문이 유일한 1차 출처인 릴리스(Gemini 4 Argon)를 Known Limitations에 추가
+- updated runbooks/audit-update.md — Failure Modes에 "1차 출처 URL이 아직 없는 릴리스"·"릴리스 날짜 근거 불일치" 보류 규칙을 추가하고, 절차 4단계에 새 월 첫 수록 시 월 칩 동시 갱신 규칙 추가
+- updated components/web-dashboard.md — 날짜 모델 없는 빈 월 칩의 `jumpToMonth` 동작(active 표시만 남음) 기록
+- updated overview.md — 배포 게이트 hard constraint를 선언/실제 상태로 qualify
+Validation:
+- python3 validate_data.py — PASS (OK: 192 models, 29 excluded, 173 with official scores; 10/1 감사 작업 단위에서 실행)
+- python3 validate_data.py --check-urls — PASS (268 URL 스윕, HF 429 rate-limit 25건·ifm.ai 봇 보호 403 2건 경고만, 실패 없음; 같은 작업 단위에서 실행)
+- python3 <skill-dir>/core/scripts/wiki_lint.py . — PASS (0 errors, 1 warning: schema-version 0.3.1 vs template 0.4.0)
+Open:
+- 라이브 배포는 이번 작업 단위(감사·푸시)에서 확인함 — `hojin12312.github.io/llm-timeline/data.js`가 로컬과 바이트 동일(192개 모델, 2026-10-01 관측). 이 wiki 런은 네트워크 확인을 새로 수행하지 않았다. 커스텀 `Deploy GitHub Pages`는 이 푸시에도 `pending` — 게이트 복구는 `current.md` Next Logical Work
+- 보류 3종 재조사: Ling-3.1-flash(Ant Ling 문서·가격표 미등재) · OpenCSG Agentic-27B(날짜 근거 불일치) · Heimr 570M(가중치·API 미공개)
+- 미등록 후보: ZGCM-1(arXiv v1 2026-09-11 — 이번 창구 밖) · Kimi K3.1 · GPT-6.1 Astra · 스텔스 Space Bunny Alpha·Union Alpha/Pareto 26.9(10/10 발표 예고)
+- SCHEMA 0.3.1 → 0.4.0 마이그레이션(언어 정책 문단) — 사용자 승인 대기, 매 런 Open에 유지
