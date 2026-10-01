@@ -15680,6 +15680,217 @@ const TIMELINE_DATA = [
       "reviewed_on": "2026-09-30",
       "policy": "official-primary-only"
     }
+  },
+  {
+    "id": "model-200",
+    "name": "Darwin-180B-RSI",
+    "date": "2026-09-28",
+    "sortDate": "2026-09-28",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "VIDRAFT",
+    "family": "Darwin",
+    "type": "MLLM",
+    "category": "MLLM",
+    "status": "GA",
+    "parameters": "180B total / 512 routed experts 중 10 활성 (MoE; 활성 파라미터 수 미공개)",
+    "parameter_status": "publisher-partial",
+    "architecture": "MoE + 하이브리드 어텐션(linear 36 + full 12 layers), 48 layers, 512 routed experts(10 active) + shared expert",
+    "modalities": [
+      "text",
+      "image"
+    ],
+    "focus": [
+      "추론",
+      "수학·과학",
+      "법률(LEXam)",
+      "재귀적 자기개선(RSI)"
+    ],
+    "open_weights": true,
+    "license": "Qwen Community License 1.0 (Qwen3.8-Flash-Next 파생)",
+    "context": "262,144",
+    "languages": "Korean / English",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "Hugging Face 오픈 웨이트 (FINAL-Bench/Darwin-180B-RSI)",
+    "note": "VIDRAFT(KR)의 Darwin 패밀리 플래그십 추론 모델. 부모 모델 Qwen3.8-Flash-Next의 512개 라우티드 expert·라우터·비전 인코더를 그대로 유지한 채 선택적 병합과 검증된 자체 답 재학습(RSI)만 적용했고, 모델 내부 상태에서 정답 확률을 토큰 생성 없이 1회 판독하는 ZTC(Zero-Token Confidence) 프러브를 함께 배포합니다. 모델 카드에 릴리스 날짜 표기가 없어 Hugging Face 저장소 공개일(2026-09-28, Hugging Face API createdAt)을 date로 사용했고 같은 날 국내 보도가 나갔습니다.",
+    "benchmarks": {
+      "AIME 2026": 100.0,
+      "HMMT Feb 2026": 100.0,
+      "GPQA Diamond": 94.44,
+      "MMLU-Pro": 88.12,
+      "MMMU-Pro": 79.48,
+      "LEXam": 68.94,
+      "LEXam-hard": 45.72
+    },
+    "official_id": "FINAL-Bench/Darwin-180B-RSI",
+    "official_sources": [
+      {
+        "label": "공식 모델 카드",
+        "url": "https://huggingface.co/FINAL-Bench/Darwin-180B-RSI"
+      },
+      {
+        "label": "Darwin 패밀리 논문 (MRI trust-weighted merging)",
+        "url": "https://arxiv.org/abs/2605.14386"
+      }
+    ],
+    "release_date_source": "https://huggingface.co/FINAL-Bench/Darwin-180B-RSI",
+    "parameter_source": "https://huggingface.co/FINAL-Bench/Darwin-180B-RSI",
+    "benchmark_sources": {
+      "AIME 2026": "https://huggingface.co/FINAL-Bench/Darwin-180B-RSI",
+      "HMMT Feb 2026": "https://huggingface.co/FINAL-Bench/Darwin-180B-RSI",
+      "GPQA Diamond": "https://huggingface.co/FINAL-Bench/Darwin-180B-RSI",
+      "MMLU-Pro": "https://huggingface.co/FINAL-Bench/Darwin-180B-RSI",
+      "MMMU-Pro": "https://huggingface.co/FINAL-Bench/Darwin-180B-RSI",
+      "LEXam": "https://huggingface.co/FINAL-Bench/Darwin-180B-RSI",
+      "LEXam-hard": "https://huggingface.co/FINAL-Bench/Darwin-180B-RSI"
+    },
+    "benchmark_note": "모델 카드 Results 표에 인쇄된 자체 측정값입니다. AIME 2026·HMMT Feb 2026는 16샘플 다수결(평균 98.75·96.59), GPQA Diamond는 최대 16샘플 다수결, MMMU-Pro는 maj@3, MMLU-Pro는 단일 샘플, LEXam은 maj@4(단일 샘플 60.54), LEXam-hard는 단일 샘플(심판 DeepSeek-R1-0528)입니다. 공통 조건은 thinking budget 131,072 토큰(LEXam 계열 32,768)·temperature 1.0·top_p 0.95·bf16·vLLM TP8이며, 카드는 이 값들을 Hugging Face 공식 벤치마크 리더보드 게재값으로 소개합니다. ZTC 프러브 AUROC 0.64와 추론 길이·서빙 비용류 지표는 % 척도 성능 지표가 아니므로 점수 표에서 제외했습니다.",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-10-01",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-201",
+    "name": "Index-Translate",
+    "date": "2026-09-30",
+    "sortDate": "2026-09-30",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "Bilibili",
+    "family": "Index-Translate",
+    "type": "LLM / translation-specialized",
+    "category": "LLM",
+    "status": "GA (35B-A3B는 preview)",
+    "parameters": "2B / 9B dense + 35B total·3B active (MoE, preview)",
+    "parameter_status": "verified",
+    "architecture": "Qwen3.5 기반 (2B·9B dense, 35B-A3B MoE)",
+    "modalities": [
+      "text"
+    ],
+    "focus": [
+      "기계 번역(150개 언어)",
+      "번역 지시 수행(용어·형식·구조·스타일)",
+      "저자원 언어 번역"
+    ],
+    "open_weights": true,
+    "license": "Apache-2.0",
+    "context": "262,144 (max_position_embeddings; 권장 서빙 32,768)",
+    "languages": "150개 언어",
+    "variants": [
+      "Index-Translate-2B",
+      "Index-Translate-9B",
+      "Index-Translate-35B-A3B-preview"
+    ],
+    "reasoning_effort": [],
+    "availability": "Hugging Face·ModelScope 오픈 웨이트(Apache-2.0), 온라인 데모",
+    "note": "Bilibili Index LLM 팀의 다국어 번역 모델 패밀리(150개 언어). 텍스트 번역 3종과 함께 음성→자막(Index-Echo S2TT)·음성→음성(S2ST)·음절 수 제어 더빙(Index-Homura)·장문 번역(Index-NativeLong, 모델 ID는 Index-Nailong) 체크포인트를 같은 컬렉션으로 공개했습니다. 단일 목적 모델이지만 LLM 계열로 분류해 수록하는 선례(Cohere North Small Translate)를 따랐습니다.",
+    "benchmarks": {
+      "C-Eval": 77.6,
+      "GPQA-Diamond": 49.1,
+      "INCLUDE": 68.8,
+      "MMMLU": 71.9,
+      "WMT26 Judge": 76.76
+    },
+    "official_id": "IndexTeam/Index-Translate-35B-A3B-preview",
+    "official_sources": [
+      {
+        "label": "공식 모델 카드 (35B-A3B preview)",
+        "url": "https://huggingface.co/IndexTeam/Index-Translate-35B-A3B-preview"
+      },
+      {
+        "label": "공식 기술 보고서",
+        "url": "https://arxiv.org/abs/2609.40181"
+      },
+      {
+        "label": "공식 저장소",
+        "url": "https://github.com/bilibili/Index-Translate"
+      }
+    ],
+    "release_date_source": "https://arxiv.org/abs/2609.40181",
+    "parameter_source": "https://huggingface.co/IndexTeam/Index-Translate-35B-A3B-preview",
+    "benchmark_sources": {
+      "C-Eval": "https://huggingface.co/IndexTeam/Index-Translate-35B-A3B-preview",
+      "GPQA-Diamond": "https://huggingface.co/IndexTeam/Index-Translate-35B-A3B-preview",
+      "INCLUDE": "https://huggingface.co/IndexTeam/Index-Translate-35B-A3B-preview",
+      "MMMLU": "https://huggingface.co/IndexTeam/Index-Translate-35B-A3B-preview",
+      "WMT26 Judge": "https://huggingface.co/IndexTeam/Index-Translate-35B-A3B-preview"
+    },
+    "benchmark_note": "기술 보고서와 모델 카드의 35B-A3B preview 열에 인쇄된 값입니다. C-Eval·GPQA-Diamond·INCLUDE·MMMLU는 번역 체크포인트의 일반 능력을 본 매칭 평가 서브셋 정답률(%)이고, WMT26 Judge는 0~100 척도 reference-free GPT-5.6-Sol 심판 점수(20개 대상 언어 평균)입니다. 주력 번역 지표인 FLORES COMET-22 0.8794·WMT24++ COMET-22 0.8586·instTrans 품질/IF 0.6901/0.8336·저자원 페어 off-target 2.4%는 0~1 척도이거나 낮을수록 좋은 지표라 점수 표에 넣지 않았습니다.",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-10-01",
+      "policy": "official-primary-only"
+    }
+  },
+  {
+    "id": "model-202",
+    "name": "Gemini 4 Argon",
+    "date": "2026-09-30",
+    "sortDate": "2026-09-30",
+    "month": "2026-09",
+    "monthName": "September",
+    "company": "Google DeepMind",
+    "family": "Gemini",
+    "type": "MLLM",
+    "category": "MLLM",
+    "status": "Limited release (Fairwind Program)",
+    "parameters": "정확한 수치 미공개",
+    "parameter_status": "undisclosed",
+    "architecture": "",
+    "modalities": [
+      "text",
+      "image",
+      "video"
+    ],
+    "focus": [
+      "장기 호라이즌 추론",
+      "실무 소프트웨어 엔지니어링",
+      "법률·금융 지식 업무",
+      "사이버 방어",
+      "창작 글쓰기"
+    ],
+    "open_weights": false,
+    "license": "",
+    "context": "최대 출력 1M 토큰 (이전 세대 64K; 입력 컨텍스트 미공개)",
+    "languages": "",
+    "variants": [],
+    "reasoning_effort": [],
+    "availability": "Fairwind Program 신뢰 사이버 방어자 한정 단계적 배포(사이버 가드레일 없는 버전 제공) — 이후 유료 API 고객·Google AI Ultra 구독자. 도입가 $2/$10 per 1M(캐시 입력 95% 할인), 도입 기간 종료 후 $4/$20",
+    "note": "2026-02 Gemini 3.1 Pro 이후 7개월 만의 Google 플래그십이자 Gemini 4 세대의 첫 모델입니다. 미국 정부의 사전 접근(pre-release) 절차에 참여하며 Fairwind Program의 신뢰된 사이버 방어자에게 먼저 배포하고, 이후 유료 API 고객·Google AI Ultra 구독자로 확대할 예정입니다. 출력 상한을 이전 세대 64K에서 1M 토큰으로 확대했고, 발표문은 내부 사용 사례(양자 서브루틴 최적화 40% 개선, 데이터센터 메모리 300 TiB 이상 회수, C/C++→Rust 대규모 마이그레이션)와 안전 조치(오남용 거부·내부 활성 모니터링·간접 프롬프트 인젝션 방어·CoT/행동 모니터링)를 설명합니다. deepmind.google 모델 카드와 Gemini API·Vertex AI 문서에는 아직 등재되지 않아(2026-10-01 확인) 발표문이 유일한 1차 출처입니다.",
+    "benchmarks": {
+      "DeepSWE v1.1": 77.9,
+      "AutomationBench": 51.3,
+      "LVBench": 91.7,
+      "CWE-bench v1": 68.0
+    },
+    "official_id": "gemini-4-argon",
+    "official_sources": [
+      {
+        "label": "Google 공식 발표문",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+      },
+      {
+        "label": "Fairwind Program 공식 안내",
+        "url": "https://deepmind.google/fairwind-program/"
+      }
+    ],
+    "release_date_source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+    "parameter_source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+    "benchmark_sources": {
+      "DeepSWE v1.1": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "AutomationBench": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "LVBench": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "CWE-bench v1": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+    },
+    "benchmark_note": "발표문 본문에 수치로 인쇄된 네 점수만 기록했습니다: DeepSWE v1.1 77.9%(SOTA 주장)·AutomationBench(Zapier) 51.3%·LVBench(장영상 이해) 91.7%·CWE-bench v1 68%(1위 동률). Vals Index·Vals Finance Agent v2·Harvey Legal Agent Benchmark·Gray Swan IPI 벤치마크는 우위 서술만 있고 절대값이 차트 이미지로만 제공되어 점수를 넣지 않았고, 제3자 보도의 수치도 인용하지 않았습니다.",
+    "verification": {
+      "status": "reviewed",
+      "reviewed_on": "2026-10-01",
+      "policy": "official-primary-only"
+    }
   }
 ];
 
@@ -15995,6 +16206,18 @@ const COMPANY_META = {
     "flag": "🌐",
     "gradient": "linear-gradient(135deg,#0ea5e9,#6366f1)",
     "badge": "CLI 에이전트 특화 오픈 소스 MoE"
+  },
+  "Bilibili": {
+    "country": "CN",
+    "flag": "🇨🇳",
+    "gradient": "linear-gradient(135deg,#fb7299,#38bdf8)",
+    "badge": "Index LLM 번역 특화 패밀리"
+  },
+  "VIDRAFT": {
+    "country": "KR",
+    "flag": "🇰🇷",
+    "gradient": "linear-gradient(135deg,#6366f1,#f43f5e)",
+    "badge": "Darwin RSI 추론 패밀리"
   }
 };
 
@@ -16057,7 +16280,8 @@ const FAMILY_FLOWS = [
       "Gemini 3.7 Flash",
       "Gemini 3.8 Flash",
       "Gemini 3.8 Live",
-      "Gemini 3.8 Live Extended Thinking"
+      "Gemini 3.8 Live Extended Thinking",
+      "Gemini 4 Argon"
     ]
   },
   {
@@ -16196,7 +16420,7 @@ const FAMILY_FLOWS = [
 const UNCONFIRMED_DATA = [];
 
 const SCOPE_DATA = {
-  "period": "2026-01-01 ~ 2026-09-30",
+  "period": "2026-01-01 ~ 2026-10-01",
   "scope": [
     "LLM (Large Language Models)",
     "MLLM / VLM / Omni foundation models"
@@ -16213,7 +16437,7 @@ const SCOPE_DATA = {
   ],
   "benchmark_policy": "공식 모델 카드·기술 보고서·개발사 공식 발표문에 모델 제공자가 직접 명시한 점수만 수록. Chatbot Arena/ELO, Artificial Analysis, 제3자 leaderboard, 추정·역산 점수는 제외.",
   "parameter_policy": "개발사가 명시한 총/활성 파라미터만 사용. 공개하지 않은 값은 정확한 수치 미공개로 표시하고, 모델 크기·가중치 파일 용량·양자화 크기를 파라미터 수로 대체하지 않음.",
-  "reviewed_on": "2026-09-30"
+  "reviewed_on": "2026-10-01"
 };
 
 const AUDIT_EXCLUDED = [
@@ -16399,5 +16623,55 @@ const AUDIT_EXCLUDED = [
     "reason": "2026-09-23 OpenRouter에 등장한 익명 스텔스 모델 — 커뮤니티 토크나이저 핑거프린팅이 MiniMax M3.1-Flash-Preview(model-192) 연계를 추정했으나 개발사의 공식 확인이 없어 보류. Union Alpha와 동일 판정.",
     "source": "https://openrouter.ai/stealth/space-bunny-alpha",
     "reviewed_on": "2026-09-29"
+  },
+  {
+    "id": "excluded-2026-10-01-1",
+    "name": "Ling-3.1-flash",
+    "original_name": "inclusionAI/ling-3.1-flash (Vercel AI Gateway·OpenRouter 유통 ID)",
+    "date": "2026-09-30",
+    "company": "Ant Group / InclusionAI",
+    "reason": "2026-09-30 공개(약 560B 총 파라미터·약 25B 활성 MoE·최대 1M 컨텍스트, 2주 무료 체험은 256K)가 보도됐으나, 공식 문서(developer.ant-ling.com, 2026-09-23 갱신)의 모델 목록·가격표에 등재되지 않았고 Hugging Face 저장소·모델 카드·가중치도 아직 없어 출시일·파라미터·점수를 인용할 1차 출처 URL을 확보하지 못했습니다. 오픈소스는 체험 기간 종료 후 예고 상태입니다. 공식 문서·모델 카드가 나오면 재조사합니다.",
+    "source": "https://developer.ant-ling.com/en/docs/models/ling/",
+    "reviewed_on": "2026-10-01"
+  },
+  {
+    "id": "excluded-2026-10-01-2",
+    "name": "OpenCSG Agentic-27B",
+    "original_name": "OpenCSG/Agentic-27B (이전 공개판 Agentic-30B-A3B 계열)",
+    "date": "2026-09-30 (보도) / 2026-09-11 (Hugging Face 저장소 생성)",
+    "company": "OpenCSG",
+    "reason": "2026-09-30 공개 발표(Qwen3.8-27B 기반 LoRA DPO·27.36B dense·BF16·262,144 설정, Agentic Eval 평균 0.828·Arena-Hard-v2.0 hard_prompt 57.68)가 있었으나, 공식 Hugging Face 모델 카드에 릴리스 날짜 표기가 없고 저장소 생성일(2026-09-11)과 발표일(2026-09-30)이 불일치해 출시일을 1차 출처로 확정할 수 없어 보류했습니다. OpenCSG 자체 모델 페이지는 JavaScript 셸만 응답합니다. 날짜 근거가 확보되면 수록을 재검토합니다.",
+    "source": "https://huggingface.co/opencsg/Agentic-27B",
+    "reviewed_on": "2026-10-01"
+  },
+  {
+    "id": "excluded-2026-10-01-3",
+    "name": "Heimr 570M",
+    "original_name": "Heimr 570M (Sevren)",
+    "date": "2026-09-30",
+    "company": "Sevren",
+    "reason": "덴마크 Sevren의 실험 단계 로컬 모델 연구 공지(2.7B 총/570M 활성, Mamba-3 + Heimr attention 하이브리드 MoE, 64K 컨텍스트, DCLM CORE 0.411)로 공식 블로그에 사양·베이스 평가표를 공개했으나 가중치·API가 공개되지 않아 공개 릴리스로 볼 수 없습니다. 가중치가 공개되면 재조사합니다.",
+    "source": "https://sevren.ai/blog/heimr-570m",
+    "reviewed_on": "2026-10-01"
+  },
+  {
+    "id": "excluded-2026-10-01-4",
+    "name": "NVIDIA Kumo Tabular (Small/Medium/Large)",
+    "original_name": "nvidia/Kumo-Tabular",
+    "date": "2026-09-29",
+    "company": "NVIDIA",
+    "reason": "표 형식(tabular) 데이터용 파운데이션 모델 3종(약 28M~215M) — LLM/MLLM 수록 범위 밖입니다.",
+    "source": "https://huggingface.co/nvidia/Kumo-Tabular",
+    "reviewed_on": "2026-10-01"
+  },
+  {
+    "id": "excluded-2026-10-01-5",
+    "name": "EEVE ROSETTA (YanoljaNEXT-Rosetta-4B-2510·2511)",
+    "original_name": "yanolja/YanoljaNEXT-Rosetta-4B-2511 (EEVE ROSETTA 계열)",
+    "date": "2025-10 ~ 2025-11 (기간 외)",
+    "company": "Yanolja NEXT",
+    "reason": "2026-09-30 국내 보도는 2025년 EEVE ROSETTA 발표와 2025-10·11 Hugging Face 공개분(Gemma-3-4B 기반 4B 번역 특화)의 재보도로, 본 타임라인 기간(2026년) 밖입니다.",
+    "source": "https://huggingface.co/yanolja/YanoljaNEXT-Rosetta-4B-2511",
+    "reviewed_on": "2026-10-01"
   }
 ];

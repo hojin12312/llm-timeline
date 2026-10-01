@@ -1,9 +1,15 @@
 # ⚡ 2026 LLM & MLLM Release Timeline
 
 > **2026년 주요 LLM / MLLM 파운데이션 모델 출시 타임라인 및 세대별 진화 계보**  
-> 기준 기간: **2026-01-01 ~ 2026-09-30** | 수록 모델: **189개** | 표기 조직: **52개**
+> 기준 기간: **2026-01-01 ~ 2026-10-01** | 수록 모델: **192개** | 표기 조직: **54개**
 
 본 레포지토리는 2026년에 발표된 전 세계 주요 LLM, MLLM, Omni 파운데이션 모델의 릴리즈 내역을 공식 1차 자료와 함께 구조화하여 인터랙티브한 웹 타임라인으로 제공하는 **GitHub Pages** 프로젝트입니다.
+
+**2026-10-01 감사 추가분 (3개):**
+- 신규 릴리스(3): Google DeepMind **Gemini 4 Argon**(9/30, Gemini 4 세대 첫 프론티어 모델 — Fairwind Program 신뢰 사이버 방어자 한정 단계적 배포·미국 정부 사전 접근 절차 참여, 출력 상한 64K→1M 토큰, 도입가 $2/$10 per 1M(이후 $4/$20), DeepSWE v1.1 77.9%·AutomationBench 51.3%·LVBench 91.7%·CWE-bench v1 68%), Bilibili **Index-Translate**(9/30, 150개 언어 번역 특화 패밀리 — 2B·9B dense + 35B-A3B preview MoE, Apache 2.0, 음성·더빙·장문 체크포인트 동시 공개 — 신규 조직 🇨🇳), VIDRAFT **Darwin-180B-RSI**(9/28, Qwen3.8-Flash-Next 기반 180B MoE(512 experts 중 10 활성)·262,144 컨텍스트·검증된 자체 답 재학습 RSI + ZTC 신뢰도 프러브 — 신규 조직 🇰🇷, 9/30 감사 누락분 소급)
+- 벤치마크: 공식 카드·발표문 인쇄 점수만 수록해 **신규 16개 점수**를 반영했습니다(누적 173개 모델·3,065개 점수). Gemini 4 Argon은 발표문 본문에 수치로 인쇄된 4개만 기록하고 Vals Index·Harvey Legal Agent Benchmark·Gray Swan IPI(차트 이미지 한정)와 제3자 보도 수치는 제외했으며, Index-Translate는 0~1 척도 COMET-22 계열을 점수 표에서 빼고 0~100 척도 WMT26 Judge와 일반 능력 정답률만 수록했고, Darwin-180B-RSI는 다수결·thinking budget 등 평가 조건을 원장 메모에 보존했습니다.
+- 제외 원장 신규 기록(5): **Ling-3.1-flash**(약 560B-A25B·1M 컨텍스트 공개 보도 — Ant Ling 공식 문서·모델 카드·가중치 미등재로 1차 출처 미확보, 보류), **OpenCSG Agentic-27B**(27.36B dense LoRA DPO — 모델 카드에 날짜 표기 없음·저장소 생성일(9/11)과 발표일(9/30) 불일치로 보류), **Heimr 570M**(Sevren 실험 모델 연구 공지 — 가중치·API 미공개), **NVIDIA Kumo Tabular**(표 형식 데이터 파운데이션 모델 3종 — 범위 밖), **EEVE ROSETTA**(2025-10·11 공개분의 재보도 — 기간 외)
+- 재조사 확인: **ZGCM-1**(중관춘학원 7B 완전 오픈 — arXiv v1 2026-09-11로 이번 창구 밖, 차기 감사 재검토), **Solar Mini 4**(10/1 국내 보도 — 기존 model-183의 재보도, AAII 지수는 인용 불가 지표), **TypeSafe AI Jev**(10/1 InfoQ 보도 — 기존 model-184의 재보도), **Meta-SecAlign-8B/70B**(2026-07 공개 — 기간 외), **OpenAI Dots**(DevDay 개인 에이전트 제품 — 모델 아님)
 
 **2026-09-30 감사 추가분 (2개):**
 - 신규 릴리스(2): OpenAI **GPT-6.1 Sol**(9/29, DevDay 2026 발표 — GPT-6 Sol 대비 에이전틱 코딩·컴퓨터 유스·전문 업무 성능 격상, Astra 표준 토큰 가격의 1/5 수준($2/$10 per 1M, 캐시 읽기 $0.10 — GPT-6 Sol 대비 50% 추가 인하), 1,050,000 컨텍스트·지식 컷오프 2026-04-30), IQuest **IQuest-Q1**(9/28, 320B-A15B 스파스 MoE CLI 에이전트 파운데이션 모델·524,288 컨텍스트·MOPD+모델 머징 후학습 — 신규 조직 🌐 국가 미공개)
@@ -113,15 +119,15 @@
   - 보상/가드레일 전용 모델
   - 단순 양자화 체크포인트 (FP8, NVFP4, INT4, GGUF 등)
   - 독립 제품을 대표하지 않는 중간/베이스 체크포인트
-- **포함 기업 (50개 표기 조직):**
+- **포함 기업 (54개 표기 조직):**
    - **미국 (US):** OpenAI, Anthropic, Google DeepMind, Meta, xAI, NVIDIA, IBM, Poolside, Thinking Machines Lab, Arcee AI, Motif Technologies, Cognition (SWE), Salesforce (Koa), Gensyn (open-1b), Accio-Lab (Occamy), TypeSafe AI (Jev), Contrastive-LM (CLM), Apple (LensVLM), Perceptron (Mk1.5)
-   - **한국 (KR):** NAVER Cloud (HyperCLOVA X SEED 4B), Upstage (Solar), LG AI Research (EXAONE / K-EXAONE), SK Telecom (A.X), GenON (Hunmin)
-  - **중국 (CN):** Alibaba (Qwen), DeepSeek, Baidu (ERNIE), ByteDance (Seed), Moonshot AI (Kimi), Z.ai (GLM), MiniMax, StepFun, Meituan (LongCat), Xiaomi (MiMo), Ant Group (Ling/Ring), Tencent (Hy), Shanghai Artificial Intelligence Laboratory (Atria), Nex-AGI (Nex), Tsinghua SIGS Robot Lab (VeriLoop)
+   - **한국 (KR):** NAVER Cloud (HyperCLOVA X SEED 4B), Upstage (Solar), LG AI Research (EXAONE / K-EXAONE), SK Telecom (A.X), GenON (Hunmin), VIDRAFT (Darwin)
+  - **중국 (CN):** Alibaba (Qwen), DeepSeek, Baidu (ERNIE), ByteDance (Seed), Moonshot AI (Kimi), Z.ai (GLM), MiniMax, StepFun, Meituan (LongCat), Xiaomi (MiMo), Ant Group (Ling/Ring), Tencent (Hy), Shanghai Artificial Intelligence Laboratory (Atria), Nex-AGI (Nex), Tsinghua SIGS Robot Lab (VeriLoop), Bilibili (Index-Translate)
    - **중동 (AE):** Institute of Foundation Models / MBZUAI (K2 Horizon)
    - **유럽/기타:** Mistral AI (프랑스), H Company (프랑스, Holo4), Cohere/Cohere Labs (캐나다), Sarvam AI (인도), Convai Innovations (인도, Laya), AutoTrust AI (싱가포르, JEV), Sber (러시아, GigaChat), Yandex (러시아, AliceAI)
    - **국적 미공개:** IQuest (IQuest-Q1) — 모델 카드 언어가 영어·중국어이고 공식 출처에 본사·국적 표기가 없어 추정하지 않고 미상으로 두었습니다.
 
-공식 점수가 확인되지 않은 모델은 빈 점수로 표시합니다. 이는 누락이 아니라 공식 발표 점수만 제공한다는 감사 정책의 결과입니다. 원래 목록에서 공식 출시 시점·공식 제품명·별도 모델 ID가 확인되지 않거나 중복인 5개 항목과, 2026-09-08 감사에서 1차 출처 미확보로 보류한 1개 항목(iFLYTEK Spark X2.5), 2026-09-16 감사에서 범위 제외로 판정한 3개 항목(Gemini Omni 1.1 Flash · GPT-Live-1 API 확장 · Gemini 3.5 Transcribe)과, 2026-09-19 감사에서 범위 제외·보류로 판정한 8개 항목(단순 양자화 2 · ASR 전용 1 · 도메인 특화/월드모델 3 · 배포 확장 1 · 스텔스 보류 1), 2026-09-23 감사에서 범위 제외로 판정해 원장에 남은 3개 항목(동일 가중치 서빙 티어 1 · 도메인 특화 1 · 기간 외 1 — 비LLM 결정 모델로 분류됐던 Laya는 09-29 되돌림으로 이관)과, 2026-09-29 감사에서 범위 제외·보류로 판정한 4개 항목(멀티모델 협업 시스템 1 · 포스트트레인 연구 프리뷰 1 · 라우팅 엔드포인트 1 · 스텔스 보류 1)까지 **24개 항목**은 [`조사 자료`](조사%20자료)의 제외 원장에 보존했습니다.
+공식 점수가 확인되지 않은 모델은 빈 점수로 표시합니다. 이는 누락이 아니라 공식 발표 점수만 제공한다는 감사 정책의 결과입니다. 원래 목록에서 공식 출시 시점·공식 제품명·별도 모델 ID가 확인되지 않거나 중복인 5개 항목과, 2026-09-08 감사에서 1차 출처 미확보로 보류한 1개 항목(iFLYTEK Spark X2.5), 2026-09-16 감사에서 범위 제외로 판정한 3개 항목(Gemini Omni 1.1 Flash · GPT-Live-1 API 확장 · Gemini 3.5 Transcribe)과, 2026-09-19 감사에서 범위 제외·보류로 판정한 8개 항목(단순 양자화 2 · ASR 전용 1 · 도메인 특화/월드모델 3 · 배포 확장 1 · 스텔스 보류 1), 2026-09-23 감사에서 범위 제외로 판정해 원장에 남은 3개 항목(동일 가중치 서빙 티어 1 · 도메인 특화 1 · 기간 외 1 — 비LLM 결정 모델로 분류됐던 Laya는 09-29 되돌림으로 이관)과, 2026-09-29 감사에서 범위 제외·보류로 판정한 4개 항목(멀티모델 협업 시스템 1 · 포스트트레인 연구 프리뷰 1 · 라우팅 엔드포인트 1 · 스텔스 보류 1), 2026-10-01 감사에서 1차 출처 미확보·날짜 근거 미확보·범위 제외로 판정한 5개 항목(1차 출처 미확보 1 · 날짜 근거 미확보 1 · 비공개 연구 모델 1 · 범위 밖 1 · 기간 외 1)까지 **29개 항목**은 [`조사 자료`](조사%20자료)의 제외 원장에 보존했습니다.
 
 > **2026-09-08 제외 원장 되돌림:** 2026-09-04 감사에서 "공식 발표문을 확인하지 못했다"며 보류했던 **Muse Spark 1.2**(구 `model-098`)와 **Muse Spark 1.3**(구 `model-115`)은, Meta의 1차 발표문이 `ai.meta.com`이 아니라 **Meta AI Research 블로그(`research.meta.ai`)** 에 있음을 확인하고 활성 레코드(`model-136`, `model-131`)로 이관했습니다. 제외 원장에서 두 항목을 삭제했고, 그 경위는 각 모델의 감사 원장 메모에 남아 있습니다.
 >
@@ -170,7 +176,7 @@ python3 -m http.server 8000
 llm-timeline/
 ├── index.html                       # 메인 인터랙티브 대시보드 웹 애플리케이션
 ├── models_catalog.json               # 모델명·파라미터·공식 점수·출처 SSOT
-├── data.js                          # SSOT에서 생성된 189개 모델 데이터셋
+├── data.js                          # SSOT에서 생성된 192개 모델 데이터셋
 ├── app.js                           # 검색, 다차원 필터, 뷰 전환, 모달 동작 로직
 ├── style.css                        # 타임라인 스파인, sticky 시간축 헤더, 반응형 모바일 레이아웃
 ├── build_data.py                    # models_catalog.json → data.js 생성기
@@ -178,7 +184,7 @@ llm-timeline/
 ├── .nojekyll                        # GitHub Pages 정적 자산 로딩 보장
 ├── .github/workflows/
 │   └── deploy-pages.yml             # GitHub Actions 자동 배포 워크플로우
-├── 조사 자료                         # 189개 모델별 공식 출처 감사 원장 (Markdown)
+├── 조사 자료                         # 192개 모델별 공식 출처 감사 원장 (Markdown)
 └── README.md                        # 프로젝트 설명 및 배포 안내 문서
 ```
 
