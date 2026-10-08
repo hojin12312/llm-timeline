@@ -72,7 +72,7 @@ window.addEventListener('resize', function() {
 function renderMonthButtons() {
   var container = document.querySelector('.month-buttons');
   if (!container) return;
-  var months = ['2026-01', '2026-02', '2026-03', '2026-04', '2026-05', '2026-06', '2026-07', '2026-08', '2026-09'];
+  var months = ['2026-01', '2026-02', '2026-03', '2026-04', '2026-05', '2026-06', '2026-07', '2026-08', '2026-09', '2026-10'];
   if (sortOrder === 'desc') {
     months.reverse();
   }
@@ -91,7 +91,7 @@ function toggleSortOrder() {
   var icon = document.getElementById('sort-toggle-icon');
   var label = document.getElementById('sort-toggle-label');
   if (label) {
-    label.textContent = (sortOrder === 'desc') ? '최신순 (9월→1월)' : '과거순 (1월→9월)';
+    label.textContent = (sortOrder === 'desc') ? '최신순 (10월→1월)' : '과거순 (1월→10월)';
   }
   if (icon) {
     icon.textContent = (sortOrder === 'desc') ? '↓' : '↑';

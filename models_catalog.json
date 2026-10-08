@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "as_of": "2026-10-01",
+  "as_of": "2026-10-08",
   "benchmark_policy": "공식 모델 카드·기술 보고서·개발사 공식 발표문에 모델 제공자가 직접 명시한 점수만 수록. Chatbot Arena/ELO, Artificial Analysis, 제3자 leaderboard, 추정·역산 점수는 제외.",
   "parameter_policy": "개발사가 명시한 총/활성 파라미터만 사용. 공개하지 않은 값은 정확한 수치 미공개로 표시하고, 모델 크기·가중치 파일 용량·양자화 크기를 파라미터 수로 대체하지 않음.",
   "models": [
@@ -15893,6 +15893,534 @@
         "reviewed_on": "2026-10-01",
         "policy": "official-primary-only"
       }
+    },
+    {
+      "id": "model-203",
+      "name": "Strands Decider 2B",
+      "date": "2026-10-01",
+      "sortDate": "2026-10-01",
+      "month": "2026-10",
+      "monthName": "October",
+      "company": "AWS Strands Labs",
+      "family": "Strands Decider",
+      "type": "System One / structured decision",
+      "category": "LLM",
+      "status": "GA",
+      "parameters": "2B (Qwen3.5-2B-Base torso + rank-16 LoRA + ~1M pointer head)",
+      "parameter_status": "verified",
+      "architecture": "Qwen3.5-2B 텍스트 디코더 torso에 rank-16 LoRA 어댑터 + typed-decision pointer head(choice/score/noul 옵션 스코어링)",
+      "modalities": [
+        "text"
+      ],
+      "focus": [
+        "structured decisions",
+        "classification",
+        "routing",
+        "scoring",
+        "guardrails"
+      ],
+      "open_weights": true,
+      "license": "Apache 2.0",
+      "context": "",
+      "languages": "",
+      "variants": [],
+      "reasoning_effort": [],
+      "availability": "Hugging Face 오픈 가중치(Apache 2.0)·pip 패키지(strands-decider) CLI·/v1/systemone 로컬 HTTP 서버",
+      "note": "AWS Strands Labs의 첫 System One(structured decision) 오픈 모델 — 산문을 생성하지 않고 typed questions(choice/score/noul)의 옵션별 교정 확률을 반환하는 v19 체크포인트. 소비자 GPU 중앙값 ~115ms·로컬 구동 가능. 코드·학습 레시피·데이터 인벤토리·평가는 GitHub 리포에 동일 Apache 2.0으로 공개. 공개일 2026-10-01(HF 리포는 9/30 생성 후 10/1 공개 전환 — 카드에 날짜 미표기로 공개일 근거를 여기에 기록).",
+      "benchmarks": {},
+      "benchmark_sources": {},
+      "benchmark_note": "공식 카드의 JevBench 공개 과제는 167/231 분수·Brier 0.348·ECE 0.050으로, 내부 평가 정확도는 0~1 분율(held-out short 0.641·contractnli 0.872·musique 0.884 등)로 표기 — % 비환산 원칙에 따라 점수표 미수록.",
+      "official_id": "StrandsAgents/strands-decider-2B-hobson-v19",
+      "official_sources": [
+        {
+          "label": "공식 모델 카드",
+          "url": "https://huggingface.co/StrandsAgents/strands-decider-2B-hobson-v19"
+        },
+        {
+          "label": "공식 코드·레시피 리포지토리",
+          "url": "https://github.com/strands-labs/strands-decider"
+        }
+      ],
+      "release_date_source": "https://huggingface.co/StrandsAgents/strands-decider-2B-hobson-v19",
+      "parameter_source": "https://huggingface.co/StrandsAgents/strands-decider-2B-hobson-v19",
+      "verification": {
+        "status": "reviewed",
+        "reviewed_on": "2026-10-08",
+        "policy": "official-primary-only"
+      }
+    },
+    {
+      "id": "model-204",
+      "name": "Clef",
+      "date": "2026-10-01",
+      "sortDate": "2026-10-01",
+      "month": "2026-10",
+      "monthName": "October",
+      "company": "Cloudflare",
+      "family": "Clef",
+      "type": "System One / structured decision",
+      "category": "LLM",
+      "status": "GA",
+      "parameters": "27B (Qwen3.8-27B 포스트트레인 + joint schema head)",
+      "parameter_status": "verified",
+      "architecture": "Qwen3.8-27B backbone(비전 인코더 유지) + joint schema head — 모든 질문·옵션을 단일 forward pass로 스코어링",
+      "modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "focus": [
+        "structured decisions",
+        "classification",
+        "routing",
+        "scoring",
+        "agentic workflows"
+      ],
+      "open_weights": true,
+      "license": "Apache 2.0",
+      "context": "64K",
+      "languages": "",
+      "variants": [],
+      "reasoning_effort": [],
+      "availability": "Cloudflare Workers AI(@cf/cloudflare/clef)·Hugging Face 오픈 가중치(Apache 2.0)·Jev/SystemOne 호환 API",
+      "note": "Cloudflare Workers AI 팀이 직접 학습한 첫 모델 — 27B 멀티모달 System One 결정 모델. 텍스트·JSON·이미지·비디오 state를 받아 typed questions 옵션별 확률을 반환하고 Jev/SystemOne API와 완전 호환. 64K 컨텍스트(Jev 32K의 2배), 자체 Jev Decision Index 평가에서 비교군 1위, 중앙값 지연 209.3ms(Jev 524.1ms 대비). Clef 도메인 분류를 Cloudflare Threat Intelligence에 자체 적용 중. 고객 데이터로 Clef를 파인튜닝하는 FDE·RL 플랫폼도 함께 발표.",
+      "benchmarks": {
+        "BFCL (case exact)": 98.47,
+        "ToolRet (nDCG@10)": 69.19,
+        "API-Bank (accuracy)": 91.93,
+        "Home appliances (case exact)": 82.95,
+        "When2Call (accuracy)": 72.37,
+        "BANKING77 (macro-F1)": 94.2,
+        "CLINC150+OOS (macro-F1)": 97.43,
+        "BRIGHT (nDCG@10)": 45.91,
+        "Amazon ESCI (macro-F1)": 57.48,
+        "PhishNChips (accuracy)": 79.6,
+        "Invoice processing (workflow)": 64.7,
+        "Customer service (workflow)": 76.3,
+        "Security incidents (workflow)": 62.9,
+        "Agent trace observability (workflow)": 68.5
+      },
+      "benchmark_sources": {
+        "BFCL (case exact)": "https://blog.cloudflare.com/clef-decision-models/",
+        "ToolRet (nDCG@10)": "https://blog.cloudflare.com/clef-decision-models/",
+        "API-Bank (accuracy)": "https://blog.cloudflare.com/clef-decision-models/",
+        "Home appliances (case exact)": "https://blog.cloudflare.com/clef-decision-models/",
+        "When2Call (accuracy)": "https://blog.cloudflare.com/clef-decision-models/",
+        "BANKING77 (macro-F1)": "https://blog.cloudflare.com/clef-decision-models/",
+        "CLINC150+OOS (macro-F1)": "https://blog.cloudflare.com/clef-decision-models/",
+        "BRIGHT (nDCG@10)": "https://blog.cloudflare.com/clef-decision-models/",
+        "Amazon ESCI (macro-F1)": "https://blog.cloudflare.com/clef-decision-models/",
+        "PhishNChips (accuracy)": "https://blog.cloudflare.com/clef-decision-models/",
+        "Invoice processing (workflow)": "https://blog.cloudflare.com/clef-decision-models/",
+        "Customer service (workflow)": "https://blog.cloudflare.com/clef-decision-models/",
+        "Security incidents (workflow)": "https://blog.cloudflare.com/clef-decision-models/",
+        "Agent trace observability (workflow)": "https://blog.cloudflare.com/clef-decision-models/"
+      },
+      "benchmark_note": "공식 발표문의 Jev Decision Index 평가표·TypeSafe workflow evals 인쇄값(Cloudflare 자체 측정). 지연(중앙값 209.3ms·p95 238.6ms)은 비% 지표라 점수표 제외.",
+      "official_id": "Cloudflare/clef",
+      "official_sources": [
+        {
+          "label": "공식 발표문",
+          "url": "https://blog.cloudflare.com/clef-decision-models/"
+        },
+        {
+          "label": "공식 모델 카드",
+          "url": "https://huggingface.co/Cloudflare/clef"
+        }
+      ],
+      "release_date_source": "https://blog.cloudflare.com/clef-decision-models/",
+      "parameter_source": "https://huggingface.co/Cloudflare/clef",
+      "verification": {
+        "status": "reviewed",
+        "reviewed_on": "2026-10-08",
+        "policy": "official-primary-only"
+      }
+    },
+    {
+      "id": "model-205",
+      "name": "Clef-flash",
+      "date": "2026-10-01",
+      "sortDate": "2026-10-01",
+      "month": "2026-10",
+      "monthName": "October",
+      "company": "Cloudflare",
+      "family": "Clef",
+      "type": "System One / structured decision",
+      "category": "LLM",
+      "status": "GA",
+      "parameters": "9B (Qwen3.5-9B 포스트트레인 + joint schema head)",
+      "parameter_status": "verified",
+      "architecture": "Qwen3.5-9B backbone(비전 인코더 유지) + joint schema head — Clef의 저지연 경량형",
+      "modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "focus": [
+        "structured decisions",
+        "classification",
+        "routing",
+        "scoring",
+        "agentic workflows"
+      ],
+      "open_weights": true,
+      "license": "Apache 2.0",
+      "context": "64K",
+      "languages": "",
+      "variants": [],
+      "reasoning_effort": [],
+      "availability": "Cloudflare Workers AI(@cf/cloudflare/clef-flash)·Hugging Face 오픈 가중치(Apache 2.0)·Jev/SystemOne 호환 API",
+      "note": "Clef의 지연 중시 변형 — 9B(Qwen3.5-9B 포스트트레인)로 중앙값 지연 38.8ms·p95 122.4ms라 에이전트 핫패스용. Jev Decision Index 대부분 행에서 Clef·Jev를 앞서거나 근접(BFCL case exact 98.76·Home appliances 97.73·API-Bank 93.11로 비교군 최고).",
+      "benchmarks": {
+        "BFCL (case exact)": 98.76,
+        "ToolRet (nDCG@10)": 66.43,
+        "API-Bank (accuracy)": 93.11,
+        "Home appliances (case exact)": 97.73,
+        "When2Call (accuracy)": 65.58,
+        "BANKING77 (macro-F1)": 90.93,
+        "CLINC150+OOS (macro-F1)": 66.77,
+        "BRIGHT (nDCG@10)": 39.26,
+        "Amazon ESCI (macro-F1)": 57.39,
+        "PhishNChips (accuracy)": 75.05,
+        "Invoice processing (workflow)": 57.1,
+        "Customer service (workflow)": 77.0,
+        "Security incidents (workflow)": 61.7,
+        "Agent trace observability (workflow)": 69.8
+      },
+      "benchmark_sources": {
+        "BFCL (case exact)": "https://blog.cloudflare.com/clef-decision-models/",
+        "ToolRet (nDCG@10)": "https://blog.cloudflare.com/clef-decision-models/",
+        "API-Bank (accuracy)": "https://blog.cloudflare.com/clef-decision-models/",
+        "Home appliances (case exact)": "https://blog.cloudflare.com/clef-decision-models/",
+        "When2Call (accuracy)": "https://blog.cloudflare.com/clef-decision-models/",
+        "BANKING77 (macro-F1)": "https://blog.cloudflare.com/clef-decision-models/",
+        "CLINC150+OOS (macro-F1)": "https://blog.cloudflare.com/clef-decision-models/",
+        "BRIGHT (nDCG@10)": "https://blog.cloudflare.com/clef-decision-models/",
+        "Amazon ESCI (macro-F1)": "https://blog.cloudflare.com/clef-decision-models/",
+        "PhishNChips (accuracy)": "https://blog.cloudflare.com/clef-decision-models/",
+        "Invoice processing (workflow)": "https://blog.cloudflare.com/clef-decision-models/",
+        "Customer service (workflow)": "https://blog.cloudflare.com/clef-decision-models/",
+        "Security incidents (workflow)": "https://blog.cloudflare.com/clef-decision-models/",
+        "Agent trace observability (workflow)": "https://blog.cloudflare.com/clef-decision-models/"
+      },
+      "benchmark_note": "공식 발표문의 Jev Decision Index 평가표·TypeSafe workflow evals 인쇄값(Cloudflare 자체 측정). 지연(중앙값 38.8ms·p95 122.4ms)은 비% 지표라 점수표 제외.",
+      "official_id": "Cloudflare/clef-flash",
+      "official_sources": [
+        {
+          "label": "공식 발표문",
+          "url": "https://blog.cloudflare.com/clef-decision-models/"
+        },
+        {
+          "label": "공식 모델 카드",
+          "url": "https://huggingface.co/Cloudflare/clef-flash"
+        }
+      ],
+      "release_date_source": "https://blog.cloudflare.com/clef-decision-models/",
+      "parameter_source": "https://huggingface.co/Cloudflare/clef-flash",
+      "verification": {
+        "status": "reviewed",
+        "reviewed_on": "2026-10-08",
+        "policy": "official-primary-only"
+      }
+    },
+    {
+      "id": "model-206",
+      "name": "Kolibri-1",
+      "date": "2026-10-03",
+      "sortDate": "2026-10-03",
+      "month": "2026-10",
+      "monthName": "October",
+      "company": "Aleph Alpha",
+      "family": "Kolibri",
+      "type": "LLM",
+      "category": "LLM",
+      "status": "GA",
+      "parameters": "78.1B (78,103,074,560) 총 / 3.46B (3,457,573,120) 활성",
+      "parameter_status": "verified",
+      "architecture": "MoE Transformer — 50층·384 experts(토큰당 6 활성)·공유 expert 1·FP8 가중치(~78GB, 임베딩·LM head·norm·라우터는 BF16)",
+      "modalities": [
+        "text"
+      ],
+      "focus": [
+        "multilingual reasoning",
+        "German-English",
+        "agentic tool use",
+        "on-prem sovereign deployment"
+      ],
+      "open_weights": true,
+      "license": "Apache 2.0",
+      "context": "1,048,576 (권장 ≤262,144)",
+      "languages": "German, English",
+      "variants": [],
+      "reasoning_effort": [
+        "none",
+        "low",
+        "medium",
+        "high"
+      ],
+      "availability": "Hugging Face 오픈 가중치(FP8 + BF16 변형, Apache 2.0)·aleph-alpha-inference vLLM 플러그인·컨테이너 이미지",
+      "note": "Aleph Alpha의 독일어·영어 소버린 MoE 추론 모델 — 독일 통일의 날(10/3)에 맞춰 Apache 2.0 가중치 공개. Kolibri Origin(30B·65K, 미공개)과 같은 Model Factory 파이프라인에서 78B·1M 컨텍스트로 확장, 20T 토큰 사전학습(영어 43.4%·독일어 23.4%). 명시적 추론 모드 none~high 4단계·툴 호출 지원, 규제 산업·공공 온프레미스용. Apache 2.0 범위는 가중치·설정 파일에 한정하고 코드·아키텍처·학습법은 제외라고 카드에 명시. HF 리포 생성 10/2·공식 출시일 10/3(블로그 명기).",
+      "benchmarks": {
+        "Overall (EN)": 75.5,
+        "Overall (DE)": 70.8,
+        "GPQA Diamond (EN)": 84.3,
+        "GPQA Diamond (DE)": 81.3,
+        "Humanity's Last Exam (EN)": 21.5,
+        "Humanity's Last Exam (DE)": 15.9,
+        "MMLU-Pro CoT (EN)": 80.0,
+        "MMLU-ProX CoT (DE)": 75.5,
+        "AIME 2025 (EN)": 96.9,
+        "AIME 2026 (EN)": 96.0,
+        "TerminalBench 2.1": 27.7,
+        "SWE-Bench Verified": 66.4,
+        "LiveCodeBench v6": 85.9,
+        "HumanEval+": 92.7,
+        "BrowseComp": 29.4,
+        "IFBench (loose-prompt)": 78.1,
+        "Tau2-Bench (Telecom)": 94.7,
+        "BFCL v4 (overall)": 61.4
+      },
+      "benchmark_sources": {
+        "Overall (EN)": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+        "Overall (DE)": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+        "GPQA Diamond (EN)": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+        "GPQA Diamond (DE)": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+        "Humanity's Last Exam (EN)": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+        "Humanity's Last Exam (DE)": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+        "MMLU-Pro CoT (EN)": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+        "MMLU-ProX CoT (DE)": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+        "AIME 2025 (EN)": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+        "AIME 2026 (EN)": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+        "TerminalBench 2.1": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+        "SWE-Bench Verified": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+        "LiveCodeBench v6": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+        "HumanEval+": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+        "BrowseComp": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+        "IFBench (loose-prompt)": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+        "Tau2-Bench (Telecom)": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+        "BFCL v4 (overall)": "https://huggingface.co/Aleph-Alpha/Kolibri-1"
+      },
+      "benchmark_note": "공식 HF 카드 Post-training 평가표 인쇄값(Kolibri는 reasoning effort high로 측정, 카테고리 평균은 비가중 평균). EN/DE는 영어·독일어 프롬프트 평가. AA-Omniscience Accuracy 14.8·Index −32.8·Honeypot 80.8·Tau2 Retail/Airline·Tau3 Banking·BFCL 세부 스플릿·Grounding/Agentic Retrieval/Industry RAG·장문 섹션 등 나머지 행은 카드 원문 참조.",
+      "official_id": "Aleph-Alpha/Kolibri-1",
+      "official_sources": [
+        {
+          "label": "공식 모델 카드",
+          "url": "https://huggingface.co/Aleph-Alpha/Kolibri-1"
+        },
+        {
+          "label": "공식 블로그",
+          "url": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/"
+        }
+      ],
+      "release_date_source": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/",
+      "parameter_source": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+      "verification": {
+        "status": "reviewed",
+        "reviewed_on": "2026-10-08",
+        "policy": "official-primary-only"
+      }
+    },
+    {
+      "id": "model-207",
+      "name": "Mistral Large 4",
+      "date": "2026-10-06",
+      "sortDate": "2026-10-06",
+      "month": "2026-10",
+      "monthName": "October",
+      "company": "Mistral AI",
+      "family": "Mistral Large",
+      "type": "MLLM",
+      "category": "MLLM",
+      "status": "Preview",
+      "parameters": "1.05T (52B 활성) + 1.6B 비전 인코더",
+      "parameter_status": "verified",
+      "architecture": "granular MoE 네이티브 멀티모달 — 1.05T 총·52B 활성·1.6B 비전 인코더, 3,800× NVIDIA Grace Blackwell(자체 유럽 데이터센터)에서 스크래치 학습",
+      "modalities": [
+        "text",
+        "image"
+      ],
+      "focus": [
+        "agentic coding",
+        "cybersecurity",
+        "enterprise knowledge work",
+        "visual grounding",
+        "multilingual"
+      ],
+      "open_weights": false,
+      "license": "",
+      "context": "1M",
+      "languages": "160+ 언어(EU 전 공식 언어 포함)",
+      "variants": [],
+      "reasoning_effort": [],
+      "availability": "Mistral Studio 퍼블릭 프리뷰 API(v26.10 — 입력 $1.36·출력 $4.18/1M, 도입 할인 $0.68/$2.09)·Apache 계열 가중치 이달 말 공개 예정",
+      "note": "Mistral의 최대 모델(별칭 ML4/le Chonk) — 10/6 Mistral Studio 퍼블릭 프리뷰 API로 출시, 가중치는 파트너·당국 대상 레드팀 후 이달 말 공개 예정이라 open_weights=false로 기록. hybrid instruct-and-reasoning 통합 모델, 160+ 언어 학습 데이터. 사이버(Cybench 93·Lakera B3 93.3 방어)·금융·법률 수직에서 오픈웨이트 SOTA 주장, RL 런은 3k GPU·일 33B 토큰 규모로 진행 중이라 성능 상승 지속 예고.",
+      "benchmarks": {
+        "Cybench": 93,
+        "B3 Attack Resistance": 93.3,
+        "DeepSWE v1.1": 61.7,
+        "SWE-Atlas-QnA": 59.4,
+        "Terminal-Bench 4.0": 28.3,
+        "AutomationBench": 59.9,
+        "Dense 200": 42,
+        "Coding Agent Index": 49.8
+      },
+      "benchmark_sources": {
+        "Cybench": "https://mistral.ai/news/mistral-large-4/",
+        "B3 Attack Resistance": "https://mistral.ai/news/mistral-large-4/",
+        "DeepSWE v1.1": "https://mistral.ai/news/mistral-large-4/",
+        "SWE-Atlas-QnA": "https://mistral.ai/news/mistral-large-4/",
+        "Terminal-Bench 4.0": "https://mistral.ai/news/mistral-large-4/",
+        "AutomationBench": "https://mistral.ai/news/mistral-large-4/",
+        "Dense 200": "https://mistral.ai/news/mistral-large-4/",
+        "Coding Agent Index": "https://mistral.ai/news/mistral-large-4/"
+      },
+      "benchmark_note": "공식 발표문 본문 인쇄값. 취약점 재현+패치 테스트 82%는 발표문이 테스트명을 적지 않아(차트 목록에 CyberGym-E2E만 존재) 명칭 확정 보류로 원장에만 기록. AA-Briefcase 1,393 Elo·AA Cyber Index·KORA Bench 1.691/2·Surge AI 블라인드 인간평가 3.74/5 등 비%·제3자 지표는 점수표 제외. Finance Agent·Harvey's Legal Agent·ChartQA Pro·GDP.pdf·SciCode-Verified·Cyber Refusal Rate는 차트 이미지로만 제시.",
+      "official_id": "mistral-large-4",
+      "official_sources": [
+        {
+          "label": "공식 발표문",
+          "url": "https://mistral.ai/news/mistral-large-4/"
+        },
+        {
+          "label": "공식 모델 문서",
+          "url": "https://docs.mistral.ai/models/mistral-large-4-0"
+        }
+      ],
+      "release_date_source": "https://mistral.ai/news/mistral-large-4/",
+      "parameter_source": "https://docs.mistral.ai/models/mistral-large-4-0",
+      "verification": {
+        "status": "reviewed",
+        "reviewed_on": "2026-10-08",
+        "policy": "official-primary-only"
+      }
+    },
+    {
+      "id": "model-208",
+      "name": "Tiny Aya L2-Thinker",
+      "date": "2026-10-06",
+      "sortDate": "2026-10-06",
+      "month": "2026-10",
+      "monthName": "October",
+      "company": "Cohere Labs",
+      "family": "Aya",
+      "type": "LLM",
+      "category": "LLM",
+      "status": "GA",
+      "parameters": "3.35B",
+      "parameter_status": "verified",
+      "architecture": "Multilingual Dense Transformer — Tiny Aya base(32K)에 데이터 혼합 3원칙으로 in-language(L2) 추론 포스트트레인",
+      "modalities": [
+        "text"
+      ],
+      "focus": [
+        "multilingual reasoning",
+        "in-language thinking",
+        "math/science reasoning",
+        "instruction following"
+      ],
+      "open_weights": true,
+      "license": "CC-BY-NC-4.0",
+      "context": "32K (input + output)",
+      "languages": "44개 언어+영어 추론 지원·60개 언어 커버리지(비추론 지시 데이터 포함)",
+      "variants": [],
+      "reasoning_effort": [
+        "enable_thinking on/off (chat template)"
+      ],
+      "availability": "Hugging Face 오픈 가중치(CC-BY-NC, 조건 동의 필요)·다국어 추론 학습 데이터 동시 공개",
+      "note": "Cohere Labs의 in-language(L2) 추론 연구 릴리스 — 프롬프트 언어 그대로 추론하는 3.35B. 영어로만 생각하는 Tiny Aya En-Thinker의 형제 모델로, 60개 언어에서 93%+ in-language 추론·저자원 언어 유지·추론 토큰 절감을 보고. 듀얼모드(기본 thinking·/no_think). arXiv 2609.10445.",
+      "benchmarks": {},
+      "benchmark_sources": {},
+      "benchmark_note": "공식 카드에 점수 표 미게재. 공식 블로그는 60개 언어에서 in-language reasoning 비율 93%+·정확도 손실 최소·추론 토큰 절감을 기술하나 정확 수치 미표기 — arXiv 2609.10445 원문 참조.",
+      "official_id": "CohereLabs/tiny-aya-l2-thinker",
+      "official_sources": [
+        {
+          "label": "공식 모델 카드",
+          "url": "https://huggingface.co/CohereLabs/tiny-aya-l2-thinker"
+        },
+        {
+          "label": "공식 블로그",
+          "url": "https://cohere.com/blog/building-multilingual-bridges"
+        },
+        {
+          "label": "공식 논문 (arXiv)",
+          "url": "https://arxiv.org/abs/2609.10445"
+        }
+      ],
+      "release_date_source": "https://cohere.com/blog/building-multilingual-bridges",
+      "parameter_source": "https://huggingface.co/CohereLabs/tiny-aya-l2-thinker",
+      "verification": {
+        "status": "reviewed",
+        "reviewed_on": "2026-10-08",
+        "policy": "official-primary-only"
+      }
+    },
+    {
+      "id": "model-209",
+      "name": "Claude Haiku 5.5",
+      "date": "2026-10-07",
+      "sortDate": "2026-10-07",
+      "month": "2026-10",
+      "monthName": "October",
+      "company": "Anthropic",
+      "family": "Claude",
+      "type": "MLLM",
+      "category": "MLLM",
+      "status": "GA",
+      "parameters": "정확한 수치 미공개",
+      "parameter_status": "undisclosed",
+      "architecture": "",
+      "modalities": [
+        "text",
+        "image"
+      ],
+      "focus": [
+        "agentic coding",
+        "subagent tasks",
+        "classification",
+        "computer use",
+        "high-volume workloads"
+      ],
+      "open_weights": false,
+      "license": "",
+      "context": "",
+      "languages": "",
+      "variants": [],
+      "reasoning_effort": [
+        "adaptive thinking — effort 조절(기본 medium)"
+      ],
+      "availability": "Claude apps·Claude API(claude-haiku-5-5)·AWS Bedrock·Google Cloud·Microsoft Foundry·Azure",
+      "note": "Claude 5.5 패밀리 세 번째·Haiku급 첫 모델 — Anthropic 역대 최속·최저가(Haiku 4.5 대비 평균 ~75% 절감: 10만 토큰 이하 프롬프트 입력 90%↓·초과분 50%↓, $0.10~0.50 입력·$0.50~2.50 출력/1M). Haiku급 최초 effort 조절 지원(기본 medium). 컨텍스트 1M·출력 상한 128K(Haiku 4.5의 200K/64K에서 확대), Claude 4.7+ 신형 토크나이저(동일 텍스트 ~30% 토큰 증가). 사이버 세이프가드는 Sonnet 5.5보다 방어 작업 허용 범위가 넓고 바이오는 Sonnet 5/5.5·Opus 5와 동일. Devin Fusion 사이드킥으로도 채택(Cognition 인용).",
+      "benchmarks": {
+        "Terminal-Bench 4.0": 39.2,
+        "FrontierCode 1.1 Main": 46.4,
+        "OSWorld 2.1 (partial)": 72.4,
+        "Humanity's Last Exam (no tools)": 45.9,
+        "Humanity's Last Exam (w/ tools)": 57.4,
+        "Chartography (no tools)": 46.4
+      },
+      "benchmark_sources": {
+        "Terminal-Bench 4.0": "https://www.anthropic.com/claude-haiku-5-5",
+        "FrontierCode 1.1 Main": "https://www.anthropic.com/claude-haiku-5-5",
+        "OSWorld 2.1 (partial)": "https://www.anthropic.com/claude-haiku-5-5",
+        "Humanity's Last Exam (no tools)": "https://www.anthropic.com/claude-haiku-5-5",
+        "Humanity's Last Exam (w/ tools)": "https://www.anthropic.com/claude-haiku-5-5",
+        "Chartography (no tools)": "https://www.anthropic.com/claude-haiku-5-5"
+      },
+      "benchmark_note": "Anthropic 공식 발표 표 값 — 발표문이 OSWorld를 'Offline subset'으로 표기. GDPval-AA v2.1 1620·AA-Briefcase v1.1 1578은 Artificial Analysis 비% 지표라 점수표에서 제외(Sonnet 5.5 레코드와 동일 처리).",
+      "official_id": "claude-haiku-5-5",
+      "official_sources": [
+        {
+          "label": "공식 모델 페이지",
+          "url": "https://www.anthropic.com/claude-haiku-5-5"
+        }
+      ],
+      "release_date_source": "https://www.anthropic.com/claude-haiku-5-5",
+      "parameter_source": "https://www.anthropic.com/claude-haiku-5-5",
+      "verification": {
+        "status": "reviewed",
+        "reviewed_on": "2026-10-08",
+        "policy": "official-primary-only"
+      }
     }
   ],
   "excluded": [
@@ -16128,6 +16656,46 @@
       "reason": "2026-09-30 국내 보도는 2025년 EEVE ROSETTA 발표와 2025-10·11 Hugging Face 공개분(Gemma-3-4B 기반 4B 번역 특화)의 재보도로, 본 타임라인 기간(2026년) 밖입니다.",
       "source": "https://huggingface.co/yanolja/YanoljaNEXT-Rosetta-4B-2511",
       "reviewed_on": "2026-10-01"
+    },
+    {
+      "id": "excluded-2026-10-08-1",
+      "name": "Reflection AI Beam",
+      "original_name": "Beam (Reflection AI 첫 오픈웨이트 모델)",
+      "date": "2026-10-05 (발표만, 가중치 미공개)",
+      "company": "Reflection AI",
+      "reason": "10/5 공식 발표문과 자체 벤치마크 표(501B-A23B MoE·1M 컨텍스트)는 공개됐으나, 가중치·기술 보고서·모델 카드·공개 API가 모두 없고 얼리 액세스 웨이트리스트만 운영 — '1차 출처 URL이 아직 없는 릴리스' 보류 판정(Ling-3.1-flash 선례). 이달 말 Apache 2.0 가중치 공개 시 재조사해 수록 판정.",
+      "source": "https://reflection.ai/blog/introducing-beam",
+      "reviewed_on": "2026-10-08"
+    },
+    {
+      "id": "excluded-2026-10-08-2",
+      "name": "OpenAI Decisions API",
+      "original_name": "POST /v1/decisions (model: gpt-6-luna)",
+      "date": "2026-10-06 (퍼블릭 베타)",
+      "company": "OpenAI",
+      "reason": "DevDay(9/29) 발표 후 10/6 퍼블릭 베타가 된 전용 /v1/decisions 엔드포인트 — 기존 model-180 GPT-6 Luna 가중치로 predicate/choice/score 결정을 반환하는 제품 계층으로 별도 모델 ID가 없어 신규 모델로 집계하지 않음(Jev Router·GPT-Live-1 API 확장과 동일 판정). 전용 결정 모델 ID가 생기면 재검토.",
+      "source": "https://developers.openai.com/api/docs/guides/decisions",
+      "reviewed_on": "2026-10-08"
+    },
+    {
+      "id": "excluded-2026-10-08-3",
+      "name": "EmbeddingGemma 2",
+      "original_name": "google/embeddinggemma-2",
+      "date": "2026-10-06",
+      "company": "Google DeepMind",
+      "reason": "텍스트·코드·이미지·비디오·오디오를 단일 768차원 공간에 매핑하는 멀티모달 임베딩 전용 모델(740M, Gemma 4 기반, Apache 2.0) — embedding/reranker-only 수록 제외 항목에 해당.",
+      "source": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/",
+      "reviewed_on": "2026-10-08"
+    },
+    {
+      "id": "excluded-2026-10-08-4",
+      "name": "GPT-6 Sol / GPT-6 Luna (October 2026 update)",
+      "original_name": "GPT-6 Sol (October) · GPT-6 Luna (October)",
+      "date": "2026-10-07",
+      "company": "OpenAI",
+      "reason": "10/7 ChatGPT 전면 배포(GPT-6 + Intelligent UI)와 함께 반영된 기존 model-179/180의 ChatGPT 버전 갱신 — 시스템 카드가 안전 학습 업데이트된 'October' 버전으로 구분하지만, 별도 모델 ID·신규 능력 점수가 없는 배포 업데이트라 중복 집계하지 않음(Kimi K3 on Bedrock 선례).",
+      "source": "https://deploymentsafety.openai.com/gpt-6-october/model-safety-training-and-evaluation",
+      "reviewed_on": "2026-10-08"
     }
   ],
   "company_meta": {
@@ -16454,6 +17022,24 @@
       "flag": "🇰🇷",
       "gradient": "linear-gradient(135deg,#6366f1,#f43f5e)",
       "badge": "Darwin RSI 추론 패밀리"
+    },
+    "AWS Strands Labs": {
+      "country": "US",
+      "flag": "🇺🇸",
+      "color": "from-amber-600 to-orange-500",
+      "badge": "bg-orange-500/10 text-orange-400 border-orange-500/30"
+    },
+    "Cloudflare": {
+      "country": "US",
+      "flag": "🇺🇸",
+      "color": "from-orange-400 to-amber-400",
+      "badge": "bg-amber-500/10 text-amber-400 border-amber-500/30"
+    },
+    "Aleph Alpha": {
+      "country": "DE",
+      "flag": "🇩🇪",
+      "color": "from-sky-600 to-cyan-500",
+      "badge": "bg-cyan-500/10 text-cyan-400 border-cyan-500/30"
     }
   },
   "family_flows": [
@@ -16490,7 +17076,8 @@
         "Opus 5",
         "Fable/Mythos 5.1",
         "Opus 5.5",
-        "Sonnet 5.5"
+        "Sonnet 5.5",
+        "Haiku 5.5"
       ]
     },
     {
@@ -16653,7 +17240,7 @@
   ],
   "unconfirmed": [],
   "scope": {
-    "period": "2026-01-01 ~ 2026-10-01",
+    "period": "2026-01-01 ~ 2026-10-08",
     "scope": [
       "LLM (Large Language Models)",
       "MLLM / VLM / Omni foundation models"
@@ -16670,6 +17257,6 @@
     ],
     "benchmark_policy": "공식 모델 카드·기술 보고서·개발사 공식 발표문에 모델 제공자가 직접 명시한 점수만 수록. Chatbot Arena/ELO, Artificial Analysis, 제3자 leaderboard, 추정·역산 점수는 제외.",
     "parameter_policy": "개발사가 명시한 총/활성 파라미터만 사용. 공개하지 않은 값은 정확한 수치 미공개로 표시하고, 모델 크기·가중치 파일 용량·양자화 크기를 파라미터 수로 대체하지 않음.",
-    "reviewed_on": "2026-10-01"
+    "reviewed_on": "2026-10-08"
   }
 }

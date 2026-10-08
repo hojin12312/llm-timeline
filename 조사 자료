@@ -1,6 +1,6 @@
 # 조사 자료 — 2026 LLM / MLLM 공개 기록 감사 원장
 
-> 최종 감사일: **2026-10-01** | 활성 레코드: **192개** | 제외 원장: **29개** | 공식 점수가 확인된 모델: **173개** | 공식 점수: **3065개**
+> 최종 감사일: **2026-10-08** | 활성 레코드: **199개** | 제외 원장: **33개** | 공식 점수가 확인된 모델: **178개** | 공식 점수: **3125개**
 >
 > 이 문서는 `models_catalog.json`에서 생성된 사람 검토용 감사 원장입니다. 브라우저용 `data.js`를 직접 수정하지 말고 SSOT를 수정한 뒤 `python3 build_data.py`로 재생성하세요.
 
@@ -6857,6 +6857,208 @@
 - 모델 메모: 2026-02 Gemini 3.1 Pro 이후 7개월 만의 Google 플래그십이자 Gemini 4 세대의 첫 모델입니다. 미국 정부의 사전 접근(pre-release) 절차에 참여하며 Fairwind Program의 신뢰된 사이버 방어자에게 먼저 배포하고, 이후 유료 API 고객·Google AI Ultra 구독자로 확대할 예정입니다. 출력 상한을 이전 세대 64K에서 1M 토큰으로 확대했고, 발표문은 내부 사용 사례(양자 서브루틴 최적화 40% 개선, 데이터센터 메모리 300 TiB 이상 회수, C/C++→Rust 대규모 마이그레이션)와 안전 조치(오남용 거부·내부 활성 모니터링·간접 프롬프트 인젝션 방어·CoT/행동 모니터링)를 설명합니다. deepmind.google 모델 카드와 Gemini API·Vertex AI 문서에는 아직 등재되지 않아(2026-10-01 확인) 발표문이 유일한 1차 출처입니다.
 - 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-10-01`
 
+### 193. 2026-10-01 — Strands Decider 2B
+
+- 레코드 ID: `model-203`
+- **공식 모델명:** `Strands Decider 2B`
+- 제공사 / 패밀리: `AWS Strands Labs` / `Strands Decider`
+- 모델 유형 / 상태: `System One / structured decision` / `GA`
+- 공개일(레포 기준): `2026-10-01` — [출시일 공식 출처](https://huggingface.co/StrandsAgents/strands-decider-2B-hobson-v19)
+- **파라미터:** `2B (Qwen3.5-2B-Base torso + rank-16 LoRA + ~1M pointer head)` — 공식 수치 확인
+- 파라미터 출처: [공식 파라미터 출처](https://huggingface.co/StrandsAgents/strands-decider-2B-hobson-v19)
+- 아키텍처: `Qwen3.5-2B 텍스트 디코더 torso에 rank-16 LoRA 어댑터 + typed-decision pointer head(choice/score/noul 옵션 스코어링)`
+- 공식 모델 ID: `StrandsAgents/strands-decider-2B-hobson-v19`
+- 오픈 웨이트: `예`
+- 공식 모델 출처: [공식 모델 카드](https://huggingface.co/StrandsAgents/strands-decider-2B-hobson-v19), [공식 코드·레시피 리포지토리](https://github.com/strands-labs/strands-decider)
+
+#### 공식 발표 벤치마크 점수
+
+- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- 점수 메모: 공식 카드의 JevBench 공개 과제는 167/231 분수·Brier 0.348·ECE 0.050으로, 내부 평가 정확도는 0~1 분율(held-out short 0.641·contractnli 0.872·musique 0.884 등)로 표기 — % 비환산 원칙에 따라 점수표 미수록.
+- 모델 메모: AWS Strands Labs의 첫 System One(structured decision) 오픈 모델 — 산문을 생성하지 않고 typed questions(choice/score/noul)의 옵션별 교정 확률을 반환하는 v19 체크포인트. 소비자 GPU 중앙값 ~115ms·로컬 구동 가능. 코드·학습 레시피·데이터 인벤토리·평가는 GitHub 리포에 동일 Apache 2.0으로 공개. 공개일 2026-10-01(HF 리포는 9/30 생성 후 10/1 공개 전환 — 카드에 날짜 미표기로 공개일 근거를 여기에 기록).
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-10-08`
+
+### 194. 2026-10-01 — Clef
+
+- 레코드 ID: `model-204`
+- **공식 모델명:** `Clef`
+- 제공사 / 패밀리: `Cloudflare` / `Clef`
+- 모델 유형 / 상태: `System One / structured decision` / `GA`
+- 공개일(레포 기준): `2026-10-01` — [출시일 공식 출처](https://blog.cloudflare.com/clef-decision-models/)
+- **파라미터:** `27B (Qwen3.8-27B 포스트트레인 + joint schema head)` — 공식 수치 확인
+- 파라미터 출처: [공식 파라미터 출처](https://huggingface.co/Cloudflare/clef)
+- 아키텍처: `Qwen3.8-27B backbone(비전 인코더 유지) + joint schema head — 모든 질문·옵션을 단일 forward pass로 스코어링`
+- 공식 모델 ID: `Cloudflare/clef`
+- 오픈 웨이트: `예`
+- 공식 모델 출처: [공식 발표문](https://blog.cloudflare.com/clef-decision-models/), [공식 모델 카드](https://huggingface.co/Cloudflare/clef)
+
+#### 공식 발표 벤치마크 점수
+
+- `BFCL (case exact)`: **98.47%** — [공식 출처](https://blog.cloudflare.com/clef-decision-models/)
+- `ToolRet (nDCG@10)`: **69.19%** — [공식 출처](https://blog.cloudflare.com/clef-decision-models/)
+- `API-Bank (accuracy)`: **91.93%** — [공식 출처](https://blog.cloudflare.com/clef-decision-models/)
+- `Home appliances (case exact)`: **82.95%** — [공식 출처](https://blog.cloudflare.com/clef-decision-models/)
+- `When2Call (accuracy)`: **72.37%** — [공식 출처](https://blog.cloudflare.com/clef-decision-models/)
+- `BANKING77 (macro-F1)`: **94.2%** — [공식 출처](https://blog.cloudflare.com/clef-decision-models/)
+- `CLINC150+OOS (macro-F1)`: **97.43%** — [공식 출처](https://blog.cloudflare.com/clef-decision-models/)
+- `BRIGHT (nDCG@10)`: **45.91%** — [공식 출처](https://blog.cloudflare.com/clef-decision-models/)
+- `Amazon ESCI (macro-F1)`: **57.48%** — [공식 출처](https://blog.cloudflare.com/clef-decision-models/)
+- `PhishNChips (accuracy)`: **79.6%** — [공식 출처](https://blog.cloudflare.com/clef-decision-models/)
+- `Invoice processing (workflow)`: **64.7%** — [공식 출처](https://blog.cloudflare.com/clef-decision-models/)
+- `Customer service (workflow)`: **76.3%** — [공식 출처](https://blog.cloudflare.com/clef-decision-models/)
+- `Security incidents (workflow)`: **62.9%** — [공식 출처](https://blog.cloudflare.com/clef-decision-models/)
+- `Agent trace observability (workflow)`: **68.5%** — [공식 출처](https://blog.cloudflare.com/clef-decision-models/)
+- 점수 메모: 공식 발표문의 Jev Decision Index 평가표·TypeSafe workflow evals 인쇄값(Cloudflare 자체 측정). 지연(중앙값 209.3ms·p95 238.6ms)은 비% 지표라 점수표 제외.
+- 모델 메모: Cloudflare Workers AI 팀이 직접 학습한 첫 모델 — 27B 멀티모달 System One 결정 모델. 텍스트·JSON·이미지·비디오 state를 받아 typed questions 옵션별 확률을 반환하고 Jev/SystemOne API와 완전 호환. 64K 컨텍스트(Jev 32K의 2배), 자체 Jev Decision Index 평가에서 비교군 1위, 중앙값 지연 209.3ms(Jev 524.1ms 대비). Clef 도메인 분류를 Cloudflare Threat Intelligence에 자체 적용 중. 고객 데이터로 Clef를 파인튜닝하는 FDE·RL 플랫폼도 함께 발표.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-10-08`
+
+### 195. 2026-10-01 — Clef-flash
+
+- 레코드 ID: `model-205`
+- **공식 모델명:** `Clef-flash`
+- 제공사 / 패밀리: `Cloudflare` / `Clef`
+- 모델 유형 / 상태: `System One / structured decision` / `GA`
+- 공개일(레포 기준): `2026-10-01` — [출시일 공식 출처](https://blog.cloudflare.com/clef-decision-models/)
+- **파라미터:** `9B (Qwen3.5-9B 포스트트레인 + joint schema head)` — 공식 수치 확인
+- 파라미터 출처: [공식 파라미터 출처](https://huggingface.co/Cloudflare/clef-flash)
+- 아키텍처: `Qwen3.5-9B backbone(비전 인코더 유지) + joint schema head — Clef의 저지연 경량형`
+- 공식 모델 ID: `Cloudflare/clef-flash`
+- 오픈 웨이트: `예`
+- 공식 모델 출처: [공식 발표문](https://blog.cloudflare.com/clef-decision-models/), [공식 모델 카드](https://huggingface.co/Cloudflare/clef-flash)
+
+#### 공식 발표 벤치마크 점수
+
+- `BFCL (case exact)`: **98.76%** — [공식 출처](https://blog.cloudflare.com/clef-decision-models/)
+- `ToolRet (nDCG@10)`: **66.43%** — [공식 출처](https://blog.cloudflare.com/clef-decision-models/)
+- `API-Bank (accuracy)`: **93.11%** — [공식 출처](https://blog.cloudflare.com/clef-decision-models/)
+- `Home appliances (case exact)`: **97.73%** — [공식 출처](https://blog.cloudflare.com/clef-decision-models/)
+- `When2Call (accuracy)`: **65.58%** — [공식 출처](https://blog.cloudflare.com/clef-decision-models/)
+- `BANKING77 (macro-F1)`: **90.93%** — [공식 출처](https://blog.cloudflare.com/clef-decision-models/)
+- `CLINC150+OOS (macro-F1)`: **66.77%** — [공식 출처](https://blog.cloudflare.com/clef-decision-models/)
+- `BRIGHT (nDCG@10)`: **39.26%** — [공식 출처](https://blog.cloudflare.com/clef-decision-models/)
+- `Amazon ESCI (macro-F1)`: **57.39%** — [공식 출처](https://blog.cloudflare.com/clef-decision-models/)
+- `PhishNChips (accuracy)`: **75.05%** — [공식 출처](https://blog.cloudflare.com/clef-decision-models/)
+- `Invoice processing (workflow)`: **57.1%** — [공식 출처](https://blog.cloudflare.com/clef-decision-models/)
+- `Customer service (workflow)`: **77.0%** — [공식 출처](https://blog.cloudflare.com/clef-decision-models/)
+- `Security incidents (workflow)`: **61.7%** — [공식 출처](https://blog.cloudflare.com/clef-decision-models/)
+- `Agent trace observability (workflow)`: **69.8%** — [공식 출처](https://blog.cloudflare.com/clef-decision-models/)
+- 점수 메모: 공식 발표문의 Jev Decision Index 평가표·TypeSafe workflow evals 인쇄값(Cloudflare 자체 측정). 지연(중앙값 38.8ms·p95 122.4ms)은 비% 지표라 점수표 제외.
+- 모델 메모: Clef의 지연 중시 변형 — 9B(Qwen3.5-9B 포스트트레인)로 중앙값 지연 38.8ms·p95 122.4ms라 에이전트 핫패스용. Jev Decision Index 대부분 행에서 Clef·Jev를 앞서거나 근접(BFCL case exact 98.76·Home appliances 97.73·API-Bank 93.11로 비교군 최고).
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-10-08`
+
+### 196. 2026-10-03 — Kolibri-1
+
+- 레코드 ID: `model-206`
+- **공식 모델명:** `Kolibri-1`
+- 제공사 / 패밀리: `Aleph Alpha` / `Kolibri`
+- 모델 유형 / 상태: `LLM` / `GA`
+- 공개일(레포 기준): `2026-10-03` — [출시일 공식 출처](https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/)
+- **파라미터:** `78.1B (78,103,074,560) 총 / 3.46B (3,457,573,120) 활성` — 공식 수치 확인
+- 파라미터 출처: [공식 파라미터 출처](https://huggingface.co/Aleph-Alpha/Kolibri-1)
+- 아키텍처: `MoE Transformer — 50층·384 experts(토큰당 6 활성)·공유 expert 1·FP8 가중치(~78GB, 임베딩·LM head·norm·라우터는 BF16)`
+- 공식 모델 ID: `Aleph-Alpha/Kolibri-1`
+- 오픈 웨이트: `예`
+- 공식 모델 출처: [공식 모델 카드](https://huggingface.co/Aleph-Alpha/Kolibri-1), [공식 블로그](https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/)
+
+#### 공식 발표 벤치마크 점수
+
+- `Overall (EN)`: **75.5%** — [공식 출처](https://huggingface.co/Aleph-Alpha/Kolibri-1)
+- `Overall (DE)`: **70.8%** — [공식 출처](https://huggingface.co/Aleph-Alpha/Kolibri-1)
+- `GPQA Diamond (EN)`: **84.3%** — [공식 출처](https://huggingface.co/Aleph-Alpha/Kolibri-1)
+- `GPQA Diamond (DE)`: **81.3%** — [공식 출처](https://huggingface.co/Aleph-Alpha/Kolibri-1)
+- `Humanity's Last Exam (EN)`: **21.5%** — [공식 출처](https://huggingface.co/Aleph-Alpha/Kolibri-1)
+- `Humanity's Last Exam (DE)`: **15.9%** — [공식 출처](https://huggingface.co/Aleph-Alpha/Kolibri-1)
+- `MMLU-Pro CoT (EN)`: **80.0%** — [공식 출처](https://huggingface.co/Aleph-Alpha/Kolibri-1)
+- `MMLU-ProX CoT (DE)`: **75.5%** — [공식 출처](https://huggingface.co/Aleph-Alpha/Kolibri-1)
+- `AIME 2025 (EN)`: **96.9%** — [공식 출처](https://huggingface.co/Aleph-Alpha/Kolibri-1)
+- `AIME 2026 (EN)`: **96.0%** — [공식 출처](https://huggingface.co/Aleph-Alpha/Kolibri-1)
+- `TerminalBench 2.1`: **27.7%** — [공식 출처](https://huggingface.co/Aleph-Alpha/Kolibri-1)
+- `SWE-Bench Verified`: **66.4%** — [공식 출처](https://huggingface.co/Aleph-Alpha/Kolibri-1)
+- `LiveCodeBench v6`: **85.9%** — [공식 출처](https://huggingface.co/Aleph-Alpha/Kolibri-1)
+- `HumanEval+`: **92.7%** — [공식 출처](https://huggingface.co/Aleph-Alpha/Kolibri-1)
+- `BrowseComp`: **29.4%** — [공식 출처](https://huggingface.co/Aleph-Alpha/Kolibri-1)
+- `IFBench (loose-prompt)`: **78.1%** — [공식 출처](https://huggingface.co/Aleph-Alpha/Kolibri-1)
+- `Tau2-Bench (Telecom)`: **94.7%** — [공식 출처](https://huggingface.co/Aleph-Alpha/Kolibri-1)
+- `BFCL v4 (overall)`: **61.4%** — [공식 출처](https://huggingface.co/Aleph-Alpha/Kolibri-1)
+- 점수 메모: 공식 HF 카드 Post-training 평가표 인쇄값(Kolibri는 reasoning effort high로 측정, 카테고리 평균은 비가중 평균). EN/DE는 영어·독일어 프롬프트 평가. AA-Omniscience Accuracy 14.8·Index −32.8·Honeypot 80.8·Tau2 Retail/Airline·Tau3 Banking·BFCL 세부 스플릿·Grounding/Agentic Retrieval/Industry RAG·장문 섹션 등 나머지 행은 카드 원문 참조.
+- 모델 메모: Aleph Alpha의 독일어·영어 소버린 MoE 추론 모델 — 독일 통일의 날(10/3)에 맞춰 Apache 2.0 가중치 공개. Kolibri Origin(30B·65K, 미공개)과 같은 Model Factory 파이프라인에서 78B·1M 컨텍스트로 확장, 20T 토큰 사전학습(영어 43.4%·독일어 23.4%). 명시적 추론 모드 none~high 4단계·툴 호출 지원, 규제 산업·공공 온프레미스용. Apache 2.0 범위는 가중치·설정 파일에 한정하고 코드·아키텍처·학습법은 제외라고 카드에 명시. HF 리포 생성 10/2·공식 출시일 10/3(블로그 명기).
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-10-08`
+
+### 197. 2026-10-06 — Mistral Large 4
+
+- 레코드 ID: `model-207`
+- **공식 모델명:** `Mistral Large 4`
+- 제공사 / 패밀리: `Mistral AI` / `Mistral Large`
+- 모델 유형 / 상태: `MLLM` / `Preview`
+- 공개일(레포 기준): `2026-10-06` — [출시일 공식 출처](https://mistral.ai/news/mistral-large-4/)
+- **파라미터:** `1.05T (52B 활성) + 1.6B 비전 인코더` — 공식 수치 확인
+- 파라미터 출처: [공식 파라미터 출처](https://docs.mistral.ai/models/mistral-large-4-0)
+- 아키텍처: `granular MoE 네이티브 멀티모달 — 1.05T 총·52B 활성·1.6B 비전 인코더, 3,800× NVIDIA Grace Blackwell(자체 유럽 데이터센터)에서 스크래치 학습`
+- 공식 모델 ID: `mistral-large-4`
+- 오픈 웨이트: `아니오/호스팅`
+- 공식 모델 출처: [공식 발표문](https://mistral.ai/news/mistral-large-4/), [공식 모델 문서](https://docs.mistral.ai/models/mistral-large-4-0)
+
+#### 공식 발표 벤치마크 점수
+
+- `Cybench`: **93%** — [공식 출처](https://mistral.ai/news/mistral-large-4/)
+- `B3 Attack Resistance`: **93.3%** — [공식 출처](https://mistral.ai/news/mistral-large-4/)
+- `DeepSWE v1.1`: **61.7%** — [공식 출처](https://mistral.ai/news/mistral-large-4/)
+- `SWE-Atlas-QnA`: **59.4%** — [공식 출처](https://mistral.ai/news/mistral-large-4/)
+- `Terminal-Bench 4.0`: **28.3%** — [공식 출처](https://mistral.ai/news/mistral-large-4/)
+- `AutomationBench`: **59.9%** — [공식 출처](https://mistral.ai/news/mistral-large-4/)
+- `Dense 200`: **42%** — [공식 출처](https://mistral.ai/news/mistral-large-4/)
+- `Coding Agent Index`: **49.8%** — [공식 출처](https://mistral.ai/news/mistral-large-4/)
+- 점수 메모: 공식 발표문 본문 인쇄값. 취약점 재현+패치 테스트 82%는 발표문이 테스트명을 적지 않아(차트 목록에 CyberGym-E2E만 존재) 명칭 확정 보류로 원장에만 기록. AA-Briefcase 1,393 Elo·AA Cyber Index·KORA Bench 1.691/2·Surge AI 블라인드 인간평가 3.74/5 등 비%·제3자 지표는 점수표 제외. Finance Agent·Harvey's Legal Agent·ChartQA Pro·GDP.pdf·SciCode-Verified·Cyber Refusal Rate는 차트 이미지로만 제시.
+- 모델 메모: Mistral의 최대 모델(별칭 ML4/le Chonk) — 10/6 Mistral Studio 퍼블릭 프리뷰 API로 출시, 가중치는 파트너·당국 대상 레드팀 후 이달 말 공개 예정이라 open_weights=false로 기록. hybrid instruct-and-reasoning 통합 모델, 160+ 언어 학습 데이터. 사이버(Cybench 93·Lakera B3 93.3 방어)·금융·법률 수직에서 오픈웨이트 SOTA 주장, RL 런은 3k GPU·일 33B 토큰 규모로 진행 중이라 성능 상승 지속 예고.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-10-08`
+
+### 198. 2026-10-06 — Tiny Aya L2-Thinker
+
+- 레코드 ID: `model-208`
+- **공식 모델명:** `Tiny Aya L2-Thinker`
+- 제공사 / 패밀리: `Cohere Labs` / `Aya`
+- 모델 유형 / 상태: `LLM` / `GA`
+- 공개일(레포 기준): `2026-10-06` — [출시일 공식 출처](https://cohere.com/blog/building-multilingual-bridges)
+- **파라미터:** `3.35B` — 공식 수치 확인
+- 파라미터 출처: [공식 파라미터 출처](https://huggingface.co/CohereLabs/tiny-aya-l2-thinker)
+- 아키텍처: `Multilingual Dense Transformer — Tiny Aya base(32K)에 데이터 혼합 3원칙으로 in-language(L2) 추론 포스트트레인`
+- 공식 모델 ID: `CohereLabs/tiny-aya-l2-thinker`
+- 오픈 웨이트: `예`
+- 공식 모델 출처: [공식 모델 카드](https://huggingface.co/CohereLabs/tiny-aya-l2-thinker), [공식 블로그](https://cohere.com/blog/building-multilingual-bridges), [공식 논문 (arXiv)](https://arxiv.org/abs/2609.10445)
+
+#### 공식 발표 벤치마크 점수
+
+- 이 감사 원장에 기록한 공식 1차 출처 공개 점수 없음. 추정치·제3자 점수는 표시하지 않음.
+- 점수 메모: 공식 카드에 점수 표 미게재. 공식 블로그는 60개 언어에서 in-language reasoning 비율 93%+·정확도 손실 최소·추론 토큰 절감을 기술하나 정확 수치 미표기 — arXiv 2609.10445 원문 참조.
+- 모델 메모: Cohere Labs의 in-language(L2) 추론 연구 릴리스 — 프롬프트 언어 그대로 추론하는 3.35B. 영어로만 생각하는 Tiny Aya En-Thinker의 형제 모델로, 60개 언어에서 93%+ in-language 추론·저자원 언어 유지·추론 토큰 절감을 보고. 듀얼모드(기본 thinking·/no_think). arXiv 2609.10445.
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-10-08`
+
+### 199. 2026-10-07 — Claude Haiku 5.5
+
+- 레코드 ID: `model-209`
+- **공식 모델명:** `Claude Haiku 5.5`
+- 제공사 / 패밀리: `Anthropic` / `Claude`
+- 모델 유형 / 상태: `MLLM` / `GA`
+- 공개일(레포 기준): `2026-10-07` — [출시일 공식 출처](https://www.anthropic.com/claude-haiku-5-5)
+- **파라미터:** `정확한 수치 미공개` — 공식 수치 미공개
+- 파라미터 출처: [공식 파라미터 출처](https://www.anthropic.com/claude-haiku-5-5)
+- 아키텍처: `미기재`
+- 공식 모델 ID: `claude-haiku-5-5`
+- 오픈 웨이트: `아니오/호스팅`
+- 공식 모델 출처: [공식 모델 페이지](https://www.anthropic.com/claude-haiku-5-5)
+
+#### 공식 발표 벤치마크 점수
+
+- `Terminal-Bench 4.0`: **39.2%** — [공식 출처](https://www.anthropic.com/claude-haiku-5-5)
+- `FrontierCode 1.1 Main`: **46.4%** — [공식 출처](https://www.anthropic.com/claude-haiku-5-5)
+- `OSWorld 2.1 (partial)`: **72.4%** — [공식 출처](https://www.anthropic.com/claude-haiku-5-5)
+- `Humanity's Last Exam (no tools)`: **45.9%** — [공식 출처](https://www.anthropic.com/claude-haiku-5-5)
+- `Humanity's Last Exam (w/ tools)`: **57.4%** — [공식 출처](https://www.anthropic.com/claude-haiku-5-5)
+- `Chartography (no tools)`: **46.4%** — [공식 출처](https://www.anthropic.com/claude-haiku-5-5)
+- 점수 메모: Anthropic 공식 발표 표 값 — 발표문이 OSWorld를 'Offline subset'으로 표기. GDPval-AA v2.1 1620·AA-Briefcase v1.1 1578은 Artificial Analysis 비% 지표라 점수표에서 제외(Sonnet 5.5 레코드와 동일 처리).
+- 모델 메모: Claude 5.5 패밀리 세 번째·Haiku급 첫 모델 — Anthropic 역대 최속·최저가(Haiku 4.5 대비 평균 ~75% 절감: 10만 토큰 이하 프롬프트 입력 90%↓·초과분 50%↓, $0.10~0.50 입력·$0.50~2.50 출력/1M). Haiku급 최초 effort 조절 지원(기본 medium). 컨텍스트 1M·출력 상한 128K(Haiku 4.5의 200K/64K에서 확대), Claude 4.7+ 신형 토크나이저(동일 텍스트 ~30% 토큰 증가). 사이버 세이프가드는 Sonnet 5.5보다 방어 작업 허용 범위가 넓고 바이오는 Sonnet 5/5.5·Opus 5와 동일. Devin Fusion 사이드킥으로도 채택(Cognition 인용).
+- 검증 상태: `reviewed` / 정책 `official-primary-only` / 검토일 `2026-10-08`
+
 ## 제외·보류한 기존 레코드
 
 ### `model-045` — LongCat-2.0 Preview
@@ -7033,11 +7235,35 @@
 - 제외 사유: 2026-09-30 국내 보도는 2025년 EEVE ROSETTA 발표와 2025-10·11 Hugging Face 공개분(Gemma-3-4B 기반 4B 번역 특화)의 재보도로, 본 타임라인 기간(2026년) 밖입니다.
 - 확인 출처: [공식 1차 출처](https://huggingface.co/yanolja/YanoljaNEXT-Rosetta-4B-2511)
 
+### `excluded-2026-10-08-1` — Reflection AI Beam
+
+- 원래 이름: `Beam (Reflection AI 첫 오픈웨이트 모델)`
+- 제외 사유: 10/5 공식 발표문과 자체 벤치마크 표(501B-A23B MoE·1M 컨텍스트)는 공개됐으나, 가중치·기술 보고서·모델 카드·공개 API가 모두 없고 얼리 액세스 웨이트리스트만 운영 — '1차 출처 URL이 아직 없는 릴리스' 보류 판정(Ling-3.1-flash 선례). 이달 말 Apache 2.0 가중치 공개 시 재조사해 수록 판정.
+- 확인 출처: [공식 1차 출처](https://reflection.ai/blog/introducing-beam)
+
+### `excluded-2026-10-08-2` — OpenAI Decisions API
+
+- 원래 이름: `POST /v1/decisions (model: gpt-6-luna)`
+- 제외 사유: DevDay(9/29) 발표 후 10/6 퍼블릭 베타가 된 전용 /v1/decisions 엔드포인트 — 기존 model-180 GPT-6 Luna 가중치로 predicate/choice/score 결정을 반환하는 제품 계층으로 별도 모델 ID가 없어 신규 모델로 집계하지 않음(Jev Router·GPT-Live-1 API 확장과 동일 판정). 전용 결정 모델 ID가 생기면 재검토.
+- 확인 출처: [공식 1차 출처](https://developers.openai.com/api/docs/guides/decisions)
+
+### `excluded-2026-10-08-3` — EmbeddingGemma 2
+
+- 원래 이름: `google/embeddinggemma-2`
+- 제외 사유: 텍스트·코드·이미지·비디오·오디오를 단일 768차원 공간에 매핑하는 멀티모달 임베딩 전용 모델(740M, Gemma 4 기반, Apache 2.0) — embedding/reranker-only 수록 제외 항목에 해당.
+- 확인 출처: [공식 1차 출처](https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/)
+
+### `excluded-2026-10-08-4` — GPT-6 Sol / GPT-6 Luna (October 2026 update)
+
+- 원래 이름: `GPT-6 Sol (October) · GPT-6 Luna (October)`
+- 제외 사유: 10/7 ChatGPT 전면 배포(GPT-6 + Intelligent UI)와 함께 반영된 기존 model-179/180의 ChatGPT 버전 갱신 — 시스템 카드가 안전 학습 업데이트된 'October' 버전으로 구분하지만, 별도 모델 ID·신규 능력 점수가 없는 배포 업데이트라 중복 집계하지 않음(Kimi K3 on Bedrock 선례).
+- 확인 출처: [공식 1차 출처](https://deploymentsafety.openai.com/gpt-6-october/model-safety-training-and-evaluation)
+
 ## 패밀리 흐름
 
 - **Qwen:** `Qwen3.5` → `Qwen3.6` → `Qwen3.7` → `Qwen3.8` → `Qwen3.8-Flash-Next` → `Qwen3.8-Omni-Flash`
 - **DeepSeek:** `DeepSeek-V4 Preview` → `DeepSeek-V4-Flash-0731` → `DeepSeek-V4-Pro-0813` → `DeepSeek-V4-Flash-Vision-Exp` → `DeepSeek-V4.1-Flash`
-- **Claude:** `Opus 4.6` → `Sonnet 4.6` → `Opus 4.7` → `Opus 4.8` → `Fable/Mythos 5` → `Sonnet 5` → `Opus 5` → `Fable/Mythos 5.1` → `Opus 5.5` → `Sonnet 5.5`
+- **Claude:** `Opus 4.6` → `Sonnet 4.6` → `Opus 4.7` → `Opus 4.8` → `Fable/Mythos 5` → `Sonnet 5` → `Opus 5` → `Fable/Mythos 5.1` → `Opus 5.5` → `Sonnet 5.5` → `Haiku 5.5`
 - **GPT:** `GPT-5.3` → `GPT-5.4` → `GPT-5.5` → `GPT-5.6` → `GPT-6 Astra` → `GPT-6 Astra Pro` → `GPT-6 Sol` → `GPT-6 Luna` → `GPT-6.1 Sol`
 - **Gemini:** `Gemini 3.5 Flash` → `Gemini 3.6 Flash` → `Gemini 3.7 Flash` → `Gemini 3.8 Flash` → `Gemini 3.8 Live` → `Gemini 3.8 Live Extended Thinking` → `Gemini 4 Argon`
 - **GLM:** `GLM-5` → `GLM-5.1` → `GLM-5.2` → `GLM-5.3` → `GLM-5.3-Flash`

@@ -1,9 +1,16 @@
 # ⚡ 2026 LLM & MLLM Release Timeline
 
 > **2026년 주요 LLM / MLLM 파운데이션 모델 출시 타임라인 및 세대별 진화 계보**  
-> 기준 기간: **2026-01-01 ~ 2026-10-01** | 수록 모델: **192개** | 표기 조직: **54개**
+> 기준 기간: **2026-01-01 ~ 2026-10-08** | 수록 모델: **199개** | 표기 조직: **57개**
 
 본 레포지토리는 2026년에 발표된 전 세계 주요 LLM, MLLM, Omni 파운데이션 모델의 릴리즈 내역을 공식 1차 자료와 함께 구조화하여 인터랙티브한 웹 타임라인으로 제공하는 **GitHub Pages** 프로젝트입니다.
+
+**2026-10-08 감사 추가분 (7개):**
+- 신규 릴리스(7): AWS Strands Labs **Strands Decider 2B**(10/1, Qwen3.5-2B torso+LoRA+pointer head — AWS 산하 첫 System One 오픈 모델, 신규 조직 🇺🇸), Cloudflare **Clef · Clef-flash**(10/1, Workers AI 팀 첫 자체 모델 — 27B·9B 멀티모달 System One 결정 모델, Jev/SystemOne 호환 API, 신규 조직 🇺🇸), Aleph Alpha **Kolibri-1**(10/3, 78.1B-A3.46B MoE 독일어·영어 소버린 추론·1M 컨텍스트·Apache 2.0 — 신규 조직 🇩🇪), Mistral AI **Mistral Large 4**(10/6, 1.05T-A52B 네이티브 멀티모달 granular MoE·1M 컨텍스트, Mistral Studio 퍼블릭 프리뷰), Cohere Labs **Tiny Aya L2-Thinker**(10/6, 3.35B in-language(L2) 추론 연구 릴리스 — 60개 언어 93%+ 프롬프트 언어 추론·다국어 추론 데이터 동시 공개), Anthropic **Claude Haiku 5.5**(10/7, Claude 5.5 패밀리 세 번째·Haiku급 첫 모델 — Haiku 4.5 대비 평균 ~75% 절감·1M 컨텍스트·128K 출력·effort 조절)
+- 벤치마크: 공식 발표문·모델 카드에 인쇄된 점수만 수록해 **신규 60개 점수**를 반영했습니다(누적 178개 모델·3,125개 점수). Haiku 5.5의 GDPval-AA·AA-Briefcase는 Artificial Analysis 비% 지표라 제외했고, Strands Decider는 분수·0~1 분율 평가만 공개돼 빈 점수로 두고 사유를 원장에 기록했으며, Tiny Aya L2-Thinker는 공식 카드에 점수 표가 없어 마찬가지로 처리했습니다. Mistral Large 4의 AA-Briefcase Elo·인간평가 평점 등 비% 지표도 점수 표에서 제외했습니다.
+- 제외 원장 신규 기록(4): **Reflection AI Beam**(10/5 공식 발표된 501B-A23B MoE — 가중치·기술 보고서·모델 카드·공개 API가 없고 웨이트리스트만 운영해 보류, 이달 말 가중치 공개 시 재검토), **OpenAI Decisions API**(10/6 퍼블릭 베타 `/v1/decisions` — `gpt-6-luna` 가중치의 제품 계층으로 별도 모델 ID 없음), **EmbeddingGemma 2**(740M 멀티모달 임베딩 전용 — 범위 밖), **GPT-6 Sol/Luna October 업데이트**(10/7 ChatGPT 전면 배포와 함께 반영된 기존 model-179/180의 배포 갱신 — 별도 모델 ID·신규 점수 없음)
+- 1차 도메인 추가: `aleph-alpha.com`(Kolibri-1 발표), `cloudflare.com`(Clef 발표·Workers AI changelog), `mistral.ai`(Mistral Large 4 발표·공식 문서), `reflection.ai`(Beam 발표 — 제외 원장 출처)
+- 기타: 첫 10월 모델 등장에 따라 `index.html`·`app.js`에 `2026-10` 월 칩을 추가하고 정렬 라벨을 10월 기준으로 갱신했습니다.
 
 **2026-10-01 감사 추가분 (3개):**
 - 신규 릴리스(3): Google DeepMind **Gemini 4 Argon**(9/30, Gemini 4 세대 첫 프론티어 모델 — Fairwind Program 신뢰 사이버 방어자 한정 단계적 배포·미국 정부 사전 접근 절차 참여, 출력 상한 64K→1M 토큰, 도입가 $2/$10 per 1M(이후 $4/$20), DeepSWE v1.1 77.9%·AutomationBench 51.3%·LVBench 91.7%·CWE-bench v1 68%), Bilibili **Index-Translate**(9/30, 150개 언어 번역 특화 패밀리 — 2B·9B dense + 35B-A3B preview MoE, Apache 2.0, 음성·더빙·장문 체크포인트 동시 공개 — 신규 조직 🇨🇳), VIDRAFT **Darwin-180B-RSI**(9/28, Qwen3.8-Flash-Next 기반 180B MoE(512 experts 중 10 활성)·262,144 컨텍스트·검증된 자체 답 재학습 RSI + ZTC 신뢰도 프러브 — 신규 조직 🇰🇷, 9/30 감사 누락분 소급)
@@ -71,14 +78,14 @@
 ## ✨ 핵심 기능
 
 1. **⏱️ 인터랙티브 타임라인 (단일 뷰)**
-   - 2026년 1월부터 9월 30일까지의 출시 내역을 월별·일자별 수직 스파인으로 시각화
+   - 2026년 1월부터 10월 8일까지의 출시 내역을 월별·일자별 수직 스파인으로 시각화
    - 날짜 노드(원)·날짜·모델 수는 sticky 헤더로 상단에 고정되고, 모델 카드만 세로로 스크롤 — 화면 밖 모델을 볼 때도 시간축이 그대로 유지
    - 마우스 위치로 스크롤 축을 분리: 가로 시간축 라인 위/부근에서 휠 = 좌우 시간축 스크롤, 그 아래에서 휠 = 모델 카드 세로 스크롤
    - 각 모델의 기업 태그(국가 플래그), 아키텍처, 파라미터, 모달리티, 타겟 포커스 표시
    - 모바일에서는 고정 폭 수평 캔버스 대신 터치 친화적인 세로 릴리즈 스트림으로 자동 전환
 2. **🔎 실시간 검색 · 월 필터 · 정렬 전환**
    - 단축키 `/`로 통합 검색 (모델명·제공사·패밀리·한국어 별칭 매칭)
-   - `전체 (N)` 카운트 칩 + 1~9월 월 칩, `좌우 이동` 스크롤 버튼
+   - `전체 (N)` 카운트 칩 + 1~10월 월 칩, `좌우 이동` 스크롤 버튼
    - 최신순 ⇄ 과거순 토글 (월 칩 순서도 함께 반전)
 3. **📋 모델 상세 인스펙터 모달**
    - 세부 아키텍처(MoE, MLA, GDLA, MTP 등), 총/활성 파라미터, 지원 모달리티, 컨텍스트 윈도우, 라이선스·오픈웨이트·변형·가용성 상세
@@ -105,7 +112,7 @@
 - **공식 벤치마크:** 모델 제공자가 공식 모델 카드·기술 보고서·공식 발표문에 직접 공개한 점수만 기록합니다. Chatbot Arena/ELO, Artificial Analysis, 제3자 리더보드, 역산·추정 점수는 표시하지 않습니다.
 - **조건 보존:** benchmark 버전, 데이터셋, 모드, 평가 조건이 공식 자료에 기재된 경우 모델별 감사 원장의 메모에 보존합니다. 서로 다른 프로토콜의 점수는 동일 순위로 비교하지 않습니다.
 - **출처 연결:** 출시일·파라미터·각 점수에 공식 1차 출처 URL을 따로 연결합니다. 공식 URL에 해당 수치가 직접 기재되지 않은 경우 그 수치는 넣지 않습니다.
-- **1차 도메인 목록:** `validate_data.py`의 `OFFICIAL_HOSTS`에 등록된 개발사 자체 도메인만 공식 출처로 인정합니다. 2026-09-08에 Meta AI Research 블로그(`research.meta.ai`)와 Google 공식 블로그(`blog.google`)를 추가했습니다 — Muse Spark 1.3과 Gemini 3.8 Flash Cyber는 `ai.meta.com`·`deepmind.google`이 아니라 그곳에만 1차 발표문이 있습니다. 같은 날 IFM(MBZUAI) 편입으로 `ifm.ai`를 추가했습니다. 2026-09-16에는 `cognition.com`(SWE-2), `salesforce.com`(Koa), `gensyn.ai`(open-1b 검증 레코드), `ai.google.dev`(Gemini Live API 모델 ID), 그리고 `arxiv.org`(개발사가 직접 게재한 공식 기술 보고서 — ERNIE 5.0, Tiny Aya)를 추가했습니다. 2026-09-19에는 `kimi.com`(Kimi Code 문서), 2026-09-23에는 `upstage.ai`(Solar Pro 4/Solar Mini 4 블로그·Console 문서)와 `nex-agi.com`(Nex-N2.5 파라미터 공표)을, 2026-09-29에는 `minimax.io`(MiniMax 개발자 문서)와 `perceptron.inc`(Perceptron 공식 블로그)를, 2026-09-30에는 `github.io`(자체 조직의 GitHub Pages 프로젝트 사이트 — IQuest-Q1 기술 보고서)를 추가했습니다.
+- **1차 도메인 목록:** `validate_data.py`의 `OFFICIAL_HOSTS`에 등록된 개발사 자체 도메인만 공식 출처로 인정합니다. 2026-09-08에 Meta AI Research 블로그(`research.meta.ai`)와 Google 공식 블로그(`blog.google`)를 추가했습니다 — Muse Spark 1.3과 Gemini 3.8 Flash Cyber는 `ai.meta.com`·`deepmind.google`이 아니라 그곳에만 1차 발표문이 있습니다. 같은 날 IFM(MBZUAI) 편입으로 `ifm.ai`를 추가했습니다. 2026-09-16에는 `cognition.com`(SWE-2), `salesforce.com`(Koa), `gensyn.ai`(open-1b 검증 레코드), `ai.google.dev`(Gemini Live API 모델 ID), 그리고 `arxiv.org`(개발사가 직접 게재한 공식 기술 보고서 — ERNIE 5.0, Tiny Aya)를 추가했습니다. 2026-09-19에는 `kimi.com`(Kimi Code 문서), 2026-09-23에는 `upstage.ai`(Solar Pro 4/Solar Mini 4 블로그·Console 문서)와 `nex-agi.com`(Nex-N2.5 파라미터 공표)을, 2026-09-29에는 `minimax.io`(MiniMax 개발자 문서)와 `perceptron.inc`(Perceptron 공식 블로그)를, 2026-09-30에는 `github.io`(자체 조직의 GitHub Pages 프로젝트 사이트 — IQuest-Q1 기술 보고서)를 추가했습니다. 2026-10-08에는 `aleph-alpha.com`(Kolibri-1 발표), `cloudflare.com`(Clef 발표·Workers AI changelog), `mistral.ai`(Mistral Large 4 발표·공식 문서), `reflection.ai`(Beam 발표 — 제외 원장 출처)를 추가했습니다.
 - **재현 가능한 검증:** `validate_data.py`가 모든 점수의 출처·범위·금지된 제3자 지표·생성 파일의 SSOT 일치를 검사합니다.
 
 - **포함 대상:**
@@ -119,15 +126,15 @@
   - 보상/가드레일 전용 모델
   - 단순 양자화 체크포인트 (FP8, NVFP4, INT4, GGUF 등)
   - 독립 제품을 대표하지 않는 중간/베이스 체크포인트
-- **포함 기업 (54개 표기 조직):**
-   - **미국 (US):** OpenAI, Anthropic, Google DeepMind, Meta, xAI, NVIDIA, IBM, Poolside, Thinking Machines Lab, Arcee AI, Motif Technologies, Cognition (SWE), Salesforce (Koa), Gensyn (open-1b), Accio-Lab (Occamy), TypeSafe AI (Jev), Contrastive-LM (CLM), Apple (LensVLM), Perceptron (Mk1.5)
+- **포함 기업 (57개 표기 조직):**
+   - **미국 (US):** OpenAI, Anthropic, Google DeepMind, Meta, xAI, NVIDIA, IBM, Poolside, Thinking Machines Lab, Arcee AI, Motif Technologies, Cognition (SWE), Salesforce (Koa), Gensyn (open-1b), Accio-Lab (Occamy), TypeSafe AI (Jev), Contrastive-LM (CLM), Apple (LensVLM), Perceptron (Mk1.5), AWS Strands Labs (Strands Decider), Cloudflare (Clef)
    - **한국 (KR):** NAVER Cloud (HyperCLOVA X SEED 4B), Upstage (Solar), LG AI Research (EXAONE / K-EXAONE), SK Telecom (A.X), GenON (Hunmin), VIDRAFT (Darwin)
   - **중국 (CN):** Alibaba (Qwen), DeepSeek, Baidu (ERNIE), ByteDance (Seed), Moonshot AI (Kimi), Z.ai (GLM), MiniMax, StepFun, Meituan (LongCat), Xiaomi (MiMo), Ant Group (Ling/Ring), Tencent (Hy), Shanghai Artificial Intelligence Laboratory (Atria), Nex-AGI (Nex), Tsinghua SIGS Robot Lab (VeriLoop), Bilibili (Index-Translate)
    - **중동 (AE):** Institute of Foundation Models / MBZUAI (K2 Horizon)
-   - **유럽/기타:** Mistral AI (프랑스), H Company (프랑스, Holo4), Cohere/Cohere Labs (캐나다), Sarvam AI (인도), Convai Innovations (인도, Laya), AutoTrust AI (싱가포르, JEV), Sber (러시아, GigaChat), Yandex (러시아, AliceAI)
+   - **유럽/기타:** Mistral AI (프랑스), H Company (프랑스, Holo4), Aleph Alpha (독일, Kolibri), Cohere/Cohere Labs (캐나다), Sarvam AI (인도), Convai Innovations (인도, Laya), AutoTrust AI (싱가포르, JEV), Sber (러시아, GigaChat), Yandex (러시아, AliceAI)
    - **국적 미공개:** IQuest (IQuest-Q1) — 모델 카드 언어가 영어·중국어이고 공식 출처에 본사·국적 표기가 없어 추정하지 않고 미상으로 두었습니다.
 
-공식 점수가 확인되지 않은 모델은 빈 점수로 표시합니다. 이는 누락이 아니라 공식 발표 점수만 제공한다는 감사 정책의 결과입니다. 원래 목록에서 공식 출시 시점·공식 제품명·별도 모델 ID가 확인되지 않거나 중복인 5개 항목과, 2026-09-08 감사에서 1차 출처 미확보로 보류한 1개 항목(iFLYTEK Spark X2.5), 2026-09-16 감사에서 범위 제외로 판정한 3개 항목(Gemini Omni 1.1 Flash · GPT-Live-1 API 확장 · Gemini 3.5 Transcribe)과, 2026-09-19 감사에서 범위 제외·보류로 판정한 8개 항목(단순 양자화 2 · ASR 전용 1 · 도메인 특화/월드모델 3 · 배포 확장 1 · 스텔스 보류 1), 2026-09-23 감사에서 범위 제외로 판정해 원장에 남은 3개 항목(동일 가중치 서빙 티어 1 · 도메인 특화 1 · 기간 외 1 — 비LLM 결정 모델로 분류됐던 Laya는 09-29 되돌림으로 이관)과, 2026-09-29 감사에서 범위 제외·보류로 판정한 4개 항목(멀티모델 협업 시스템 1 · 포스트트레인 연구 프리뷰 1 · 라우팅 엔드포인트 1 · 스텔스 보류 1), 2026-10-01 감사에서 1차 출처 미확보·날짜 근거 미확보·범위 제외로 판정한 5개 항목(1차 출처 미확보 1 · 날짜 근거 미확보 1 · 비공개 연구 모델 1 · 범위 밖 1 · 기간 외 1)까지 **29개 항목**은 [`조사 자료`](조사%20자료)의 제외 원장에 보존했습니다.
+공식 점수가 확인되지 않은 모델은 빈 점수로 표시합니다. 이는 누락이 아니라 공식 발표 점수만 제공한다는 감사 정책의 결과입니다. 원래 목록에서 공식 출시 시점·공식 제품명·별도 모델 ID가 확인되지 않거나 중복인 5개 항목과, 2026-09-08 감사에서 1차 출처 미확보로 보류한 1개 항목(iFLYTEK Spark X2.5), 2026-09-16 감사에서 범위 제외로 판정한 3개 항목(Gemini Omni 1.1 Flash · GPT-Live-1 API 확장 · Gemini 3.5 Transcribe)과, 2026-09-19 감사에서 범위 제외·보류로 판정한 8개 항목(단순 양자화 2 · ASR 전용 1 · 도메인 특화/월드모델 3 · 배포 확장 1 · 스텔스 보류 1), 2026-09-23 감사에서 범위 제외로 판정해 원장에 남은 3개 항목(동일 가중치 서빙 티어 1 · 도메인 특화 1 · 기간 외 1 — 비LLM 결정 모델로 분류됐던 Laya는 09-29 되돌림으로 이관)과, 2026-09-29 감사에서 범위 제외·보류로 판정한 4개 항목(멀티모델 협업 시스템 1 · 포스트트레인 연구 프리뷰 1 · 라우팅 엔드포인트 1 · 스텔스 보류 1), 2026-10-01 감사에서 1차 출처 미확보·날짜 근거 미확보·범위 제외로 판정한 5개 항목(1차 출처 미확보 1 · 날짜 근거 미확보 1 · 비공개 연구 모델 1 · 범위 밖 1 · 기간 외 1)과, 2026-10-08 감사에서 보류·범위 제외·중복 배포로 판정한 4개 항목(아티팩트 미공개 보류 1 · 기존 모델 API 계층 1 · 임베딩 전용 1 · 기존 모델 배포 갱신 1)까지 **33개 항목**은 [`조사 자료`](조사%20자료)의 제외 원장에 보존했습니다.
 
 > **2026-09-08 제외 원장 되돌림:** 2026-09-04 감사에서 "공식 발표문을 확인하지 못했다"며 보류했던 **Muse Spark 1.2**(구 `model-098`)와 **Muse Spark 1.3**(구 `model-115`)은, Meta의 1차 발표문이 `ai.meta.com`이 아니라 **Meta AI Research 블로그(`research.meta.ai`)** 에 있음을 확인하고 활성 레코드(`model-136`, `model-131`)로 이관했습니다. 제외 원장에서 두 항목을 삭제했고, 그 경위는 각 모델의 감사 원장 메모에 남아 있습니다.
 >
@@ -176,7 +183,7 @@ python3 -m http.server 8000
 llm-timeline/
 ├── index.html                       # 메인 인터랙티브 대시보드 웹 애플리케이션
 ├── models_catalog.json               # 모델명·파라미터·공식 점수·출처 SSOT
-├── data.js                          # SSOT에서 생성된 192개 모델 데이터셋
+├── data.js                          # SSOT에서 생성된 199개 모델 데이터셋
 ├── app.js                           # 검색, 다차원 필터, 뷰 전환, 모달 동작 로직
 ├── style.css                        # 타임라인 스파인, sticky 시간축 헤더, 반응형 모바일 레이아웃
 ├── build_data.py                    # models_catalog.json → data.js 생성기
@@ -184,7 +191,7 @@ llm-timeline/
 ├── .nojekyll                        # GitHub Pages 정적 자산 로딩 보장
 ├── .github/workflows/
 │   └── deploy-pages.yml             # GitHub Actions 자동 배포 워크플로우
-├── 조사 자료                         # 192개 모델별 공식 출처 감사 원장 (Markdown)
+├── 조사 자료                         # 199개 모델별 공식 출처 감사 원장 (Markdown)
 └── README.md                        # 프로젝트 설명 및 배포 안내 문서
 ```
 

@@ -23,12 +23,17 @@ DATA_JS = ROOT / "data.js"
 OFFICIAL_HOSTS = {
     "ai.google.dev",
     "ai.meta.com",
+    # Aleph Alpha official blog — Kolibri-1 launch post. Added 2026-10-08.
+    "aleph-alpha.com",
     "alibabagroup.com",
     "anthropic.com",
     # ByteDance static CDN — hosts the official Seed2.0 model-card PDF.
     "bytednsdoc.com",
     # NAVER CLOVA tech blog — official HyperCLOVA X SEED 4B benchmarks.
     "clova.ai",
+    # Cloudflare blog & developers changelog — Clef/Clef-flash launch (Workers AI).
+    # Added 2026-10-08.
+    "cloudflare.com",
     "api-docs.deepseek.com",
     # 1st-party vendor research/newsroom domains (Meta AI Research blog, Google
     # official blog). Added 2026-09-08 because Muse Spark 1.3 and Gemini 3.8
@@ -70,6 +75,9 @@ OFFICIAL_HOSTS = {
     # MiniMax developer docs (platform.minimax.io) — M3.1-Flash-Preview spec
     # sheet. Added 2026-09-29.
     "minimax.io",
+    # Mistral AI official site (announcement + docs.mistral.ai model pages) —
+    # Mistral Large 4 public preview. Added 2026-10-08.
+    "mistral.ai",
     # Nex-AGI official site — Nex-N2.5 family parameter/base-model disclosure.
     # Added 2026-09-23.
     "nex-agi.com",
@@ -81,6 +89,9 @@ OFFICIAL_HOSTS = {
     "poolside.ai",
     "qwen.ai",
     "qwencloud.com",
+    # Reflection AI official blog — Beam announcement (excluded-ledger source,
+    # weights pending). Added 2026-10-08.
+    "reflection.ai",
     "research.meta.ai",
     # Salesforce newsroom (Koa reasoning model announcement). Added 2026-09-16.
     "salesforce.com",
